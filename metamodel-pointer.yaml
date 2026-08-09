@@ -13,7 +13,7 @@ metamodel:
   viewer_url: "https://technehub-labs.github.io/metamodel/?entity=BusinessCapability"
 
 catalog:
-  name: Business Capabilitys
+  name: Business Capabilities
   repo: technehub-labs/dea-catalog-business-capabilities
   status: planned
 
@@ -24,3 +24,4 @@ links:
   metamodel_repo: https://github.com/technehub-labs/dea-metamodel
   viewer: "https://technehub-labs.github.io/metamodel/?entity=BusinessCapability"
   github: https://github.com/technehub-labs/dea-catalog-business-capabilities
+
