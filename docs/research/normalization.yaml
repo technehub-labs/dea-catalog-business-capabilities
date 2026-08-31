@@ -1,6 +1,6 @@
-register_version: 0.1.0
+register_version: 0.2.0
 cr: CR-DEA-BC-02 (section 20; deliverable section 33 item 5)
-compiled: '2026-08-31'
+compiled: '2026-09-01 (v0.2: aggregate decisions N-007/N-008; N-003 re-test closed as N-009)'
 status: candidate-not-canonical; decisions are research decisions, subject to review
 inputs:
   candidates: docs/research/candidates.yaml
@@ -107,8 +107,60 @@ decisions:
   outcome: Retained as first-order candidate with ECF mapping legitimately absent (section 38 clause)
   action: overlay entry confirmed unmapped-by-rule; candidates.yaml annotated
   confidence: medium
+- id: N-007
+  question: 'CAND-004 Stakeholder Relationship Management: aggregate candidate, parents-only, or dissolve'
+  candidates:
+  - CAND-004
+  - CAND-005
+  - CAND-006
+  - CAND-007
+  - CAND-008
+  evidence:
+  - SRC-001
+  - SRC-004
+  - SRC-006
+  analysis: 'The business object Stakeholder is an abstraction over the relationship objects of the children (Customer,
+    Citizen, Supplier, Partner). Stakeholder-level abilities exist in the corpus (stakeholder mapping, engagement planning
+    in governance contexts), but the admission-gate boundary test fails: no boundary can be drawn for the aggregate that
+    is not exactly the union of its children. As an ability it adds no distinct outcome; as a structure it carries the
+    documented common relationship pattern that the section 29 specialization path and the deferred CAND-005/CAND-006
+    unification decision both need.'
+  outcome: Parents-only; retained as structural grouping parent, withdrawn from the first-order admission track
+  action: 'CAND-004 marked status grouping_parent in candidates.yaml; children keep their parent pointer; boundary gap
+    in the admission pre-check resolved by reclassification'
+  confidence: medium
+- id: N-008
+  question: 'CAND-011 Value Delivery: aggregate candidate, parents-only, or dissolve'
+  candidates:
+  - CAND-011
+  - CAND-012
+  evidence:
+  - SRC-001
+  - SRC-004
+  analysis: 'The business object Outcome fails the noun-anchor test: an outcome is a property of every capability, not
+    a business object an ability can be anchored on. CR section 15 warned this aggregate is too broad if held as the
+    candidate. The durable abilities sit one level down: Operations, Service Delivery, Fulfilment, Production. Unlike
+    CAND-004, no distinct grouping pattern is lost by removal: the family is the operations chain itself.'
+  outcome: Dissolved as a first-order candidate; documented as a rejected aggregate (section 39 rejected/deferred record)
+  action: 'CAND-011 marked status dissolved in candidates.yaml; CAND-012 Operations re-rooted as first-order; Service
+    Delivery, Fulfilment, Production re-attached as candidate children of CAND-012; boundary gap resolved by dissolution'
+  confidence: medium
+- id: N-009
+  question: 'N-003 re-test (trigger fired: enterprise-generality matrix complete): Analytics standalone or child of
+    Information Management'
+  candidates:
+  - CAND-017
+  - CAND-018
+  evidence:
+  - SRC-002
+  - SRC-006
+  analysis: 'The generality matrix shows Analytics and Intelligence demonstrated across enterprise types, which removes
+    the generality objection to standalone treatment. The blocker remains corpus treatment: vendor and reference models
+    split between theme, fold-in, and standalone, and evidence stays E3 at low confidence. Splitting to standalone
+    first-order would outrun the evidence. The boundary gap on CAND-018 is carried, not resolved.'
+  outcome: Parent-Child retained (CAND-017 -> CAND-018); re-test trigger closed
+  action: No structural change; CAND-018 remains on the admission track with boundary_defensible gap carried
+  confidence: low
 deferred:
 - item: Citizen/Member Relationship (CAND-006) vs Customer Management unification
   trigger: government reference models (gap G5)
-- item: Analytics standalone re-test (N-003)
-  trigger: enterprise-generality matrix

@@ -1,6 +1,6 @@
-universe_version: 0.1.0
+universe_version: 0.2.0
 cr: CR-DEA-BC-02
-compiled: '2026-08-31'
+compiled: '2026-09-01 (v0.2: normalization N-007/N-008 applied; CAND-004 grouping parent, CAND-011 dissolved, CAND-012 re-rooted)'
 status: candidate-not-canonical
 evidence_register: docs/research/evidence-register.yaml
 classification_taxonomy:
@@ -111,6 +111,7 @@ candidates:
 - id: CAND-004
   name: Stakeholder Relationship Management
   classification: CAPABILITY
+  status: grouping_parent
   confidence: medium
   evidence_strength: E3
   business_object_hypothesis: Stakeholder
@@ -126,9 +127,11 @@ candidates:
   - SRC-006
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 Stakeholder Relationship; common-level candidate
+  notes: Theme section 30 Stakeholder Relationship; grouping parent only (normalization N-007); withdrawn from the
+    first-order admission track
   rationale: Aggregation over customers, citizens, partners, suppliers, regulators; carries the business-object focus on the
-    relationship itself
+    relationship itself. No boundary independent of the union of children; retained for the common relationship pattern
+    and the deferred CAND-005/CAND-006 unification decision
   provenance:
     research_artifact: true
     canonical: false
@@ -278,23 +281,21 @@ candidates:
 - id: CAND-011
   name: Value Delivery
   classification: CAPABILITY
+  status: dissolved
   confidence: medium
   evidence_strength: E3
   business_object_hypothesis: Outcome
   parent_candidates: []
-  child_candidates:
-  - CAND-011a Operations
-  - CAND-011b Service Delivery
-  - CAND-011c Fulfilment
-  - CAND-011d Production
+  child_candidates: []
   sources:
   - SRC-001
   - SRC-004
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 Value Delivery
-  rationale: Aggregate capability; section 15 warns this is too broad if held as the candidate, so it carries decomposition
-    immediately
+  notes: Theme section 30 Value Delivery; dissolved as first-order candidate (normalization N-008); rejected aggregate,
+    recorded per section 39
+  rationale: Business object Outcome fails the noun-anchor test; the durable abilities are the children. Operations
+    re-rooted as first-order; Service Delivery, Fulfilment, Production re-attached under CAND-012
   provenance:
     research_artifact: true
     canonical: false
@@ -306,17 +307,20 @@ candidates:
   confidence: medium
   evidence_strength: E4
   business_object_hypothesis: Operation
-  parent_candidates:
-  - CAND-011
-  child_candidates: []
+  parent_candidates: []
+  child_candidates:
+  - CAND-012a Service Delivery
+  - CAND-012b Fulfilment
+  - CAND-012c Production
   sources:
-  - CAND-011
+  - SRC-001
   - SRC-002
   - SRC-004
   - SRC-006
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Common-level across industries
+  notes: Common-level across industries; re-rooted as first-order after CAND-011 dissolution (normalization N-008);
+    inherits the former CAND-011 children
   rationale: Universal in any enterprise that produces goods/services; abstraction test passes when restricted to recurring
     operational abilities
   provenance:
