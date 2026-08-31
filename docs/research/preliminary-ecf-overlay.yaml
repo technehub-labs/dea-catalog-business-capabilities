@@ -1,0 +1,329 @@
+overlay_version: 0.1.0
+cr: CR-DEA-BC-02
+compiled: '2026-08-31'
+status: candidate-not-canonical
+inputs:
+  candidates: docs/research/candidates.yaml
+  evidence_register: docs/research/evidence-register.yaml
+rules:
+  primary: earliest legitimate initiation (FOUNDATIONS section 11)
+  secondary: legitimate participation only
+  no_forced_coverage: empty cells are valid results (CR section 27)
+  conflicts: flagged, not smoothed (CR section 26)
+overlays:
+- candidate: CAND-001
+  name: Strategy
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+  - domain: governance-existence
+    stage: improve
+  confidence: high
+  conflict: null
+- candidate: CAND-002
+  name: Strategic Planning
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary: []
+  confidence: high
+  conflict: null
+- candidate: CAND-003
+  name: Enterprise Governance
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  - domain: governance-existence
+    stage: improve
+  confidence: high
+  conflict: null
+- candidate: CAND-004
+  name: Stakeholder Relationship Management
+  primary:
+    domain: customer-demand
+    stage: conceive
+  secondary:
+  - domain: customer-demand
+    stage: operate
+  - domain: customer-demand
+    stage: improve
+  confidence: medium
+  conflict: null
+- candidate: CAND-005
+  name: Customer Management
+  primary:
+    domain: customer-demand
+    stage: operate
+  secondary:
+  - domain: customer-demand
+    stage: conceive
+  - domain: customer-demand
+    stage: improve
+  - domain: customer-demand
+    stage: retire
+  confidence: high
+  conflict: null
+  note: 'follows FOUNDATIONS section 11 example: earliest legitimate initiation is operate (customers are managed once they
+    exist)'
+- candidate: CAND-006
+  name: Citizen / Member Relationship
+  primary:
+    domain: customer-demand
+    stage: operate
+  secondary:
+  - domain: customer-demand
+    stage: improve
+  confidence: low
+  conflict: null
+- candidate: CAND-007
+  name: Supplier Management
+  primary:
+    domain: supply-resources
+    stage: build
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  - domain: supply-resources
+    stage: improve
+  confidence: medium
+  conflict: null
+- candidate: CAND-008
+  name: Partner Management
+  primary:
+    domain: customer-demand
+    stage: conceive
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  confidence: low
+  conflict: partners sit between supply-resources (they supply) and customer-demand (they co-create demand); weak mapping
+    flagged
+- candidate: CAND-009
+  name: Offering Management
+  primary:
+    domain: product-offering
+    stage: conceive
+  secondary:
+  - domain: product-offering
+    stage: design
+  - domain: product-offering
+    stage: build
+  - domain: product-offering
+    stage: improve
+  - domain: product-offering
+    stage: retire
+  confidence: high
+  conflict: null
+- candidate: CAND-010
+  name: Marketing
+  primary:
+    domain: customer-demand
+    stage: conceive
+  secondary:
+  - domain: customer-demand
+    stage: operate
+  confidence: medium
+  conflict: 'pending normalization: Marketing under Customer (CAND-005) vs under Offering (CAND-009) shifts the primary domain'
+- candidate: CAND-011
+  name: Value Delivery
+  primary:
+    domain: operations-delivery
+    stage: activate
+  secondary:
+  - domain: operations-delivery
+    stage: operate
+  confidence: medium
+  conflict: null
+- candidate: CAND-012
+  name: Operations
+  primary:
+    domain: operations-delivery
+    stage: operate
+  secondary:
+  - domain: operations-delivery
+    stage: improve
+  confidence: high
+  conflict: null
+- candidate: CAND-013
+  name: Financial Stewardship
+  primary:
+    domain: finance-value
+    stage: conceive
+  secondary:
+  - domain: finance-value
+    stage: operate
+  confidence: high
+  conflict: null
+- candidate: CAND-014
+  name: Financial Management
+  primary:
+    domain: finance-value
+    stage: operate
+  secondary:
+  - domain: finance-value
+    stage: conceive
+  confidence: high
+  conflict: null
+- candidate: CAND-015
+  name: People / Workforce Management
+  primary:
+    domain: people-organization
+    stage: build
+  secondary:
+  - domain: people-organization
+    stage: operate
+  - domain: people-organization
+    stage: improve
+  confidence: high
+  conflict: null
+- candidate: CAND-016
+  name: Workforce Planning
+  primary:
+    domain: people-organization
+    stage: design
+  secondary:
+  - domain: people-organization
+    stage: build
+  confidence: medium
+  conflict: null
+- candidate: CAND-017
+  name: Information Management
+  primary:
+    domain: operations-delivery
+    stage: operate
+  secondary: []
+  confidence: low
+  conflict: information spans all domains; if the span is legitimate, secondary coordinates grow; if not, the candidate may
+    be cross-cutting (compare CAND-019)
+- candidate: CAND-018
+  name: Analytics and Intelligence
+  primary:
+    domain: operations-delivery
+    stage: operate
+  secondary: []
+  confidence: low
+  conflict: same span question as CAND-017
+- candidate: CAND-019
+  name: Technology Management
+  primary: null
+  secondary: []
+  confidence: low
+  conflict: 'HELD UNMAPPED: no ECF domain carries technology (technology is an L5 layer concern, not a domain); open question
+    carried to normalization: business capability with a domain, or cross-cutting governance concern?'
+- candidate: CAND-020
+  name: Risk Management
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  - domain: governance-existence
+    stage: improve
+  confidence: high
+  conflict: null
+- candidate: CAND-021
+  name: Compliance Management
+  primary:
+    domain: governance-existence
+    stage: activate
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  confidence: high
+  conflict: null
+- candidate: CAND-022
+  name: Legal Management
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  confidence: high
+  conflict: null
+- candidate: CAND-023
+  name: Resilience Management
+  primary:
+    domain: governance-existence
+    stage: design
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  confidence: low
+  conflict: null
+- candidate: CAND-024
+  name: Security Management
+  primary:
+    domain: governance-existence
+    stage: design
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  confidence: medium
+  conflict: null
+- candidate: CAND-025
+  name: Sourcing and Procurement
+  primary:
+    domain: supply-resources
+    stage: build
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  confidence: high
+  conflict: null
+- candidate: CAND-026
+  name: Asset Management
+  primary:
+    domain: supply-resources
+    stage: build
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  - domain: supply-resources
+    stage: retire
+  confidence: medium
+  conflict: null
+- candidate: CAND-027
+  name: Facility Management
+  primary:
+    domain: supply-resources
+    stage: activate
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  confidence: medium
+  conflict: null
+- candidate: CAND-028
+  name: Change Management
+  primary:
+    domain: governance-existence
+    stage: improve
+  secondary: []
+  confidence: low
+  conflict: stage-anchored (improve) but cross-domain by nature; may not own a domain
+- candidate: CAND-029
+  name: Innovation Management
+  primary:
+    domain: product-offering
+    stage: conceive
+  secondary:
+  - domain: product-offering
+    stage: design
+  confidence: low
+  conflict: null
+empty_cells_legitimate:
+- governance-existence x build, activate
+- finance-value x design, build, activate, retire (primary)
+- people-organization x conceive, retire (primary)
+conflicts_open:
+- CAND-008
+- CAND-010
+- CAND-017
+- CAND-018
+- CAND-019
+- CAND-028
