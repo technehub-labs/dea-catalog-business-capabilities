@@ -1,0 +1,403 @@
+matrix_version: 0.1.0
+cr: CR-DEA-BC-02 (sections 8-9; deliverable section 33 item 6)
+compiled: '2026-08-31'
+status: candidate-not-canonical; analytical evidence, not the catalog
+enterprise_types:
+- commercial
+- professional-services
+- manufacturing
+- retail
+- financial-services
+- healthcare
+- technology
+- infrastructure
+- government
+- non-profit
+cell_values:
+  strong: ability recurs in this type per corpus evidence
+  moderate: recurs with materially different shape or frequency
+  sector: exists mainly as industry-specific form
+  none: not evidenced; legitimately absent
+generality_rule: demonstrated when strong in 7+ of 10 types; partial when strong+moderate in 7+; else sector-bound
+rows:
+- candidate: CAND-001
+  name: Strategy
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-002
+  name: Strategic Planning
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-003
+  name: Enterprise Governance
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-004
+  name: Stakeholder Relationship Mgmt
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: strong
+  enterprise_generality: demonstrated
+- candidate: CAND-005
+  name: Customer Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: moderate
+  government: moderate
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-006
+  name: Citizen / Member Relationship
+  commercial: none
+  professional-services: none
+  manufacturing: none
+  retail: none
+  financial-services: none
+  healthcare: moderate
+  technology: none
+  infrastructure: none
+  government: strong
+  non-profit: strong
+  enterprise_generality: sector-bound
+- candidate: CAND-007
+  name: Supplier Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-008
+  name: Partner Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: moderate
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: moderate
+  non-profit: strong
+  enterprise_generality: demonstrated
+- candidate: CAND-009
+  name: Offering Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: moderate
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-010
+  name: Marketing
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: moderate
+  government: moderate
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-011
+  name: Value Delivery
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: strong
+  enterprise_generality: demonstrated
+- candidate: CAND-012
+  name: Operations
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: strong
+  enterprise_generality: demonstrated
+- candidate: CAND-013
+  name: Financial Stewardship
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: strong
+  enterprise_generality: demonstrated
+- candidate: CAND-014
+  name: Financial Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: strong
+  enterprise_generality: demonstrated
+- candidate: CAND-015
+  name: Workforce Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: strong
+  enterprise_generality: demonstrated
+- candidate: CAND-016
+  name: Workforce Planning
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-017
+  name: Information Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: strong
+  enterprise_generality: demonstrated
+- candidate: CAND-018
+  name: Analytics and Intelligence
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: moderate
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-019
+  name: Technology Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: strong
+  enterprise_generality: demonstrated
+- candidate: CAND-020
+  name: Risk Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-021
+  name: Compliance Management
+  commercial: strong
+  professional-services: moderate
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-022
+  name: Legal Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-023
+  name: Resilience Management
+  commercial: moderate
+  professional-services: moderate
+  manufacturing: strong
+  retail: moderate
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: partial
+- candidate: CAND-024
+  name: Security Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-025
+  name: Sourcing and Procurement
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: strong
+  enterprise_generality: demonstrated
+- candidate: CAND-026
+  name: Asset Management
+  commercial: strong
+  professional-services: moderate
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-027
+  name: Facility Management
+  commercial: strong
+  professional-services: moderate
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-028
+  name: Change Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+- candidate: CAND-029
+  name: Innovation Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: moderate
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: moderate
+  government: moderate
+  non-profit: moderate
+  enterprise_generality: partial
+summary:
+  demonstrated: 26
+  partial: 2
+  sector_bound: 1
