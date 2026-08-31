@@ -1,0 +1,845 @@
+universe_version: 0.1.0
+cr: CR-DEA-BC-02
+compiled: '2026-08-31'
+status: candidate-not-canonical
+evidence_register: docs/research/evidence-register.yaml
+classification_taxonomy:
+- CAPABILITY
+- PROCESS
+- FUNCTION
+- ACTOR
+- SERVICE
+- OUTCOME
+- RESOURCE
+- INFORMATION
+- SYSTEM
+- TECHNOLOGY
+- POLICY
+- RULE
+- SPECIALIZATION
+- ORGANIZATION
+- DUPLICATE
+- UNRESOLVED
+evidence_ratings:
+- E0
+- E1
+- E2
+- E3
+- E4
+- E5
+counts:
+  total: 35
+  CAPABILITY: 29
+  SPECIALIZATION: 1
+  PROCESS: 1
+  ORGANIZATION: 1
+  ACTOR: 1
+  SYSTEM: 1
+  UNRESOLVED: 1
+candidates:
+- id: CAND-001
+  name: Strategy
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Enterprise
+  parent_candidates: []
+  child_candidates:
+  - CAND-001a Strategic Planning
+  - CAND-001b Enterprise Governance
+  sources:
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Enterprise Direction; first-order candidate
+  rationale: Multiple sources identify direction-setting as a recurring enterprise ability; the noun Strategy is a stable
+    business-object-anchored capability name
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-002
+  name: Strategic Planning
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Plan
+  parent_candidates:
+  - CAND-001
+  child_candidates: []
+  sources:
+  - CAND-001
+  - SRC-001
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Sub-capability of CAND-001
+  rationale: Sub-capability under Strategy; planning is the disciplined work that produces strategic direction
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-003
+  name: Enterprise Governance
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Decision
+  parent_candidates:
+  - CAND-001
+  child_candidates:
+  - CAND-003a Decision Rights
+  - CAND-003b Policy
+  sources:
+  - CAND-001
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Sub-capability of CAND-001; PCAOB/CoSO line of evidence
+  rationale: Decision authority plus oversight as distinct from strategic direction
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-004
+  name: Stakeholder Relationship Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Stakeholder
+  parent_candidates: []
+  child_candidates:
+  - CAND-005
+  - CAND-006
+  - CAND-007
+  - CAND-008
+  sources:
+  - SRC-001
+  - SRC-004
+  - SRC-006
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Stakeholder Relationship; common-level candidate
+  rationale: Aggregation over customers, citizens, partners, suppliers, regulators; carries the business-object focus on the
+    relationship itself
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-005
+  name: Customer Management
+  classification: CAPABILITY
+  confidence: high
+  evidence_strength: E5
+  business_object_hypothesis: Customer
+  parent_candidates:
+  - CAND-004
+  child_candidates: []
+  sources:
+  - CAND-004
+  - SRC-001
+  - SRC-002
+  - SRC-003
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Highest convergence in the corpus; BIZBOK exemplar
+  rationale: 'The canonical BIZBOK Customer Management decomposition: children stay on Customer (CRM, account, lifecycle,
+    service); business-object focus preserved'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-006
+  name: Citizen / Member Relationship
+  classification: CAPABILITY
+  confidence: low
+  evidence_strength: E2
+  business_object_hypothesis: Citizen
+  parent_candidates:
+  - CAND-004
+  child_candidates: []
+  sources:
+  - CAND-004
+  - SRC-008
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Public-sector / non-profit specialization arm
+  rationale: Distinct from Customer Management by business object; may unify with CAND-005 in normalization, or stay separate
+    as a specialization
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-007
+  name: Supplier Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E4
+  business_object_hypothesis: Supplier
+  parent_candidates:
+  - CAND-004
+  child_candidates: []
+  sources:
+  - CAND-004
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Supplier
+  rationale: Distinct business object (Supplier vs Customer); common across manufacturing, retail, healthcare
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-008
+  name: Partner Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Partner
+  parent_candidates:
+  - CAND-004
+  child_candidates: []
+  sources:
+  - CAND-004
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Partner
+  rationale: Lower convergence than Supplier/Customer; partner relationship is structurally different from supply relationships
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-009
+  name: Offering Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Offering
+  parent_candidates: []
+  child_candidates:
+  - CAND-009a Product/Service Development
+  - CAND-009b Lifecycle Management
+  - CAND-009c Portfolio
+  sources:
+  - SRC-001
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Offering
+  rationale: Aggregates product/service development, lifecycle, portfolio; multiple sources converge on the offering-as-aggregate
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-010
+  name: Marketing
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E4
+  business_object_hypothesis: Market/Customer
+  parent_candidates:
+  - CAND-009
+  child_candidates: []
+  sources:
+  - CAND-009
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 sales/marketing; high frequency
+  rationale: Often listed separately from Customer Management in vendor lists; deserves normalization test (does Marketing
+    belong under Customer or Offering?)
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-011
+  name: Value Delivery
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Outcome
+  parent_candidates: []
+  child_candidates:
+  - CAND-011a Operations
+  - CAND-011b Service Delivery
+  - CAND-011c Fulfilment
+  - CAND-011d Production
+  sources:
+  - SRC-001
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Value Delivery
+  rationale: Aggregate capability; section 15 warns this is too broad if held as the candidate, so it carries decomposition
+    immediately
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-012
+  name: Operations
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E4
+  business_object_hypothesis: Operation
+  parent_candidates:
+  - CAND-011
+  child_candidates: []
+  sources:
+  - CAND-011
+  - SRC-002
+  - SRC-004
+  - SRC-006
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Common-level across industries
+  rationale: Universal in any enterprise that produces goods/services; abstraction test passes when restricted to recurring
+    operational abilities
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-013
+  name: Financial Stewardship
+  classification: CAPABILITY
+  confidence: high
+  evidence_strength: E5
+  business_object_hypothesis: Financial Resource
+  parent_candidates: []
+  child_candidates:
+  - CAND-013a Financial Management
+  - CAND-013b Accounting
+  - CAND-013c Treasury
+  - CAND-013d Financial Planning
+  sources:
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Financial Stewardship; high convergence
+  rationale: Highest frequency plus semantic validity across the corpus; accounting plus treasury plus planning are durable
+    children
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-014
+  name: Financial Management
+  classification: CAPABILITY
+  confidence: high
+  evidence_strength: E4
+  business_object_hypothesis: Financial Resource
+  parent_candidates:
+  - CAND-013
+  child_candidates: []
+  sources:
+  - CAND-013
+  - SRC-001
+  - SRC-002
+  - SRC-006
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 finance
+  rationale: Sub-capability of stewardship; immediate children (accounting, treasury, planning) follow
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-015
+  name: People / Workforce Management
+  classification: CAPABILITY
+  confidence: high
+  evidence_strength: E5
+  business_object_hypothesis: Workforce
+  parent_candidates: []
+  child_candidates:
+  - CAND-015a Workforce Lifecycle
+  - CAND-015b Talent
+  - CAND-015c Organization
+  sources:
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 People; highest convergence cluster
+  rationale: Sources variously name it Human Capital Management or HR; normalization test (which name carries which meaning?)
+    recorded for section 20 pass
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-016
+  name: Workforce Planning
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Workforce Plan
+  parent_candidates:
+  - CAND-015
+  child_candidates: []
+  sources:
+  - CAND-015
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Sub-capability of People
+  rationale: Distinct from Talent Acquisition; about the organization shape
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-017
+  name: Information Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E4
+  business_object_hypothesis: Information
+  parent_candidates: []
+  child_candidates:
+  - CAND-017a Data Management
+  - CAND-017b Knowledge
+  - CAND-017c Analytics/Intelligence
+  sources:
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Information
+  rationale: 'Includes data, knowledge, analytics; analytics flagged as potential specialization (different context: data
+    product vs analytical insight)'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-018
+  name: Analytics and Intelligence
+  classification: CAPABILITY
+  confidence: low
+  evidence_strength: E3
+  business_object_hypothesis: Insight
+  parent_candidates:
+  - CAND-017
+  child_candidates: []
+  sources:
+  - CAND-017
+  - SRC-002
+  - SRC-006
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 analytics; potential specialization
+  rationale: Borderline first-order; many vendor models treat it as a distinct theme. Hold as candidate pending normalization
+    (cross-reference with CAND-017 vs standalone)
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-019
+  name: Technology Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E4
+  business_object_hypothesis: Technology
+  parent_candidates: []
+  child_candidates:
+  - CAND-019a Digital Enablement
+  - CAND-019b Technology Operations
+  - CAND-019c Technology Governance
+  sources:
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Technology; distinct from SystemCapability per ADR-015
+  rationale: As a Business Capability, this is the ability to govern/manage technology. Realized via SystemCapability/InfrastructureCapability
+    kinds (ADR-015)
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-020
+  name: Risk Management
+  classification: CAPABILITY
+  confidence: high
+  evidence_strength: E4
+  business_object_hypothesis: Risk
+  parent_candidates: []
+  child_candidates:
+  - CAND-020a Enterprise Risk
+  - CAND-020b Operational Risk
+  sources:
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Risk and Assurance
+  rationale: Independent of compliance; owns the identify-assess-treat-mitigate life-cycle
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-021
+  name: Compliance Management
+  classification: CAPABILITY
+  confidence: high
+  evidence_strength: E4
+  business_object_hypothesis: Regulation
+  parent_candidates:
+  - CAND-020
+  child_candidates: []
+  sources:
+  - CAND-020
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 compliance
+  rationale: 'Distinct from Risk: risk equals uncertainty treatment; compliance equals adherence to obligation'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-022
+  name: Legal Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Legal Matter
+  parent_candidates:
+  - CAND-020
+  child_candidates: []
+  sources:
+  - CAND-020
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 legal
+  rationale: 'Distinct from Compliance: legal equals rights/obligations/counsel; compliance equals obligation adherence'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-023
+  name: Resilience Management
+  classification: CAPABILITY
+  confidence: low
+  evidence_strength: E2
+  business_object_hypothesis: Continuity
+  parent_candidates:
+  - CAND-020
+  child_candidates: []
+  sources:
+  - CAND-020
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 resilience
+  rationale: Lower frequency than Risk/Compliance; hold as candidate pending cross-industry check
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-024
+  name: Security Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Asset/Information
+  parent_candidates:
+  - CAND-020
+  child_candidates: []
+  sources:
+  - CAND-020
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 security
+  rationale: 'Distinct from SystemCapability for Information Security: this is the Business Capability to govern security
+    posture'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-025
+  name: Sourcing and Procurement
+  classification: CAPABILITY
+  confidence: high
+  evidence_strength: E4
+  business_object_hypothesis: Purchase Order
+  parent_candidates: []
+  child_candidates:
+  - CAND-025a Strategic Sourcing
+  - CAND-025b Procurement Operations
+  sources:
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Sourcing and External Provision
+  rationale: 'Distinct from Supplier Management: sourcing equals buying; supplier management equals ongoing supplier relationship'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-026
+  name: Asset Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Asset
+  parent_candidates: []
+  child_candidates:
+  - CAND-026a Physical Asset
+  - CAND-026b Facility
+  - CAND-026c Intangible
+  sources:
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Assets and Resources
+  rationale: Aggregate over physical/facility/intangible; durability well-attested
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-027
+  name: Facility Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Facility
+  parent_candidates:
+  - CAND-026
+  child_candidates: []
+  sources:
+  - CAND-026
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 facilities
+  rationale: Distinct from Real Estate as Industry specialization; carries ongoing operations
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-028
+  name: Change Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E3
+  business_object_hypothesis: Change
+  parent_candidates: []
+  child_candidates:
+  - CAND-028a Transformation
+  - CAND-028b Improvement
+  - CAND-028c Innovation
+  sources:
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 Change and Improvement
+  rationale: 'Distinct from a dea ChangeInitiative (metamodel level): this is the Business Capability; metamodel entity is
+    the instance'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-029
+  name: Innovation Management
+  classification: CAPABILITY
+  confidence: low
+  evidence_strength: E2
+  business_object_hypothesis: Idea
+  parent_candidates:
+  - CAND-028
+  child_candidates: []
+  sources:
+  - CAND-028
+  - SRC-002
+  - SRC-004
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Theme section 30 innovation
+  rationale: Low frequency, hold as candidate; not universally necessary
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-030
+  name: Finance Department
+  classification: ORGANIZATION
+  confidence: n/a
+  evidence_strength: E0
+  business_object_hypothesis: n/a
+  parent_candidates: []
+  child_candidates: []
+  sources:
+  - SRC-006
+  durable: n/a
+  implementation_independent: n/a
+  notes: Vendor model lists this as a capability; here it is the organization that realizes Financial Stewardship
+  rationale: 'Disambiguation section 19: an organization is not a capability'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-031
+  name: Invoice Processing
+  classification: PROCESS
+  confidence: high
+  evidence_strength: E3
+  business_object_hypothesis: Invoice
+  parent_candidates: []
+  child_candidates: []
+  sources:
+  - SRC-004
+  durable: n/a
+  implementation_independent: n/a
+  notes: APQC recurring process; evidence of underlying Financial Stewardship capability, not itself a capability
+  rationale: 'Disambiguation section 19: a process is not a capability'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-032
+  name: CRM System
+  classification: SYSTEM
+  confidence: n/a
+  evidence_strength: E0
+  business_object_hypothesis: n/a
+  parent_candidates: []
+  child_candidates: []
+  sources:
+  - SRC-006
+  durable: n/a
+  implementation_independent: n/a
+  notes: Realization artifact, not a capability
+  rationale: 'Disambiguation section 19: a system is not a capability'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-033
+  name: Customer Service Team
+  classification: ACTOR
+  confidence: n/a
+  evidence_strength: E0
+  business_object_hypothesis: n/a
+  parent_candidates: []
+  child_candidates: []
+  sources:
+  - SRC-006
+  durable: n/a
+  implementation_independent: n/a
+  notes: Actor realizing Customer Management
+  rationale: 'Disambiguation section 19: an actor is not a capability'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-034
+  name: Telecom Customer Management
+  classification: SPECIALIZATION
+  confidence: medium
+  evidence_strength: E4
+  business_object_hypothesis: Subscriber
+  parent_candidates:
+  - CAND-005
+  child_candidates: []
+  sources:
+  - CAND-005
+  - SRC-006
+  - SRC-007
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: Industry specialization (telecom); recorded per section 29; never enters first-order set
+  rationale: 'Specialization register: BIAN plus Capstera evidence for telecom adaptations'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
+- id: CAND-035
+  name: Common Good Production
+  classification: UNRESOLVED
+  confidence: low
+  evidence_strength: E1
+  business_object_hypothesis: Public Benefit
+  parent_candidates: []
+  child_candidates: []
+  sources:
+  - SRC-008
+  durable: unknown
+  implementation_independent: unknown
+  notes: Non-profit/government sector needs investigation
+  rationale: Section 8 enterprise diversity test requires explicit study of non-profit/government contexts; current coverage
+    thin
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-08-31'
+    evidence_register: docs/research/evidence-register.yaml
