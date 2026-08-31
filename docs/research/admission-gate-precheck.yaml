@@ -1,13 +1,12 @@
-version: 0.1.0
+version: 0.2.0
 cr: CR-DEA-BC-02 section 38 (dry run)
-compiled: '2026-08-31'
+compiled: '2026-08-31 (v0.2: generality axis resolved by enterprise-generality-matrix.yaml)'
 status: pre-check only; no candidate admitted; final admission remains subject to review (section 38)
 legend:
   met: criterion satisfied on current evidence
   gap: criterion evaluated and not yet satisfied; work item identified
   untested: criterion not yet evaluated; the artifact that tests it is pending
 pending_artifacts:
-  enterprise_generality: generality matrix (section 33 item 6)
   distinctness: normalization coverage beyond the six decided pairs
 evaluations:
 - candidate: CAND-001
@@ -15,7 +14,7 @@ evaluations:
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -25,14 +24,13 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-002
   name: Strategic Planning
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -42,14 +40,13 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-003
   name: Enterprise Governance
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -59,14 +56,13 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-004
   name: Stakeholder Relationship Management
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -77,7 +73,6 @@ evaluations:
   gaps:
   - boundary_defensible
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-005
   name: Customer Management
@@ -99,7 +94,7 @@ evaluations:
   criteria:
     evidence_ge_E3: gap
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: gap
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -110,6 +105,7 @@ evaluations:
   gaps:
   - evidence_ge_E3
   - boundary_defensible
+  - enterprise_generality
   untested:
   - enterprise_generality
   - distinctness
@@ -118,7 +114,7 @@ evaluations:
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -127,14 +123,13 @@ evaluations:
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - enterprise_generality
+  untested: []
 - candidate: CAND-008
   name: Partner Management
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -144,14 +139,13 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-009
   name: Offering Management
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -161,14 +155,13 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-010
   name: Marketing
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -177,14 +170,13 @@ evaluations:
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - enterprise_generality
+  untested: []
 - candidate: CAND-011
   name: Value Delivery
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -195,14 +187,13 @@ evaluations:
   gaps:
   - boundary_defensible
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-012
   name: Operations
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -212,7 +203,6 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-013
   name: Financial Stewardship
@@ -235,7 +225,7 @@ evaluations:
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -245,7 +235,6 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-015
   name: People / Workforce Management
@@ -268,7 +257,7 @@ evaluations:
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -278,14 +267,13 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-017
   name: Information Management
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -295,14 +283,13 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-018
   name: Analytics and Intelligence
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -313,14 +300,13 @@ evaluations:
   gaps:
   - boundary_defensible
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-019
   name: Technology Management
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -330,7 +316,6 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-020
   name: Risk Management
@@ -367,7 +352,7 @@ evaluations:
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -376,14 +361,13 @@ evaluations:
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - enterprise_generality
+  untested: []
 - candidate: CAND-023
   name: Resilience Management
   criteria:
     evidence_ge_E3: gap
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: gap
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -394,6 +378,7 @@ evaluations:
   gaps:
   - evidence_ge_E3
   - boundary_defensible
+  - enterprise_generality
   untested:
   - enterprise_generality
   - distinctness
@@ -402,7 +387,7 @@ evaluations:
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -412,7 +397,6 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-025
   name: Sourcing and Procurement
@@ -434,7 +418,7 @@ evaluations:
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -444,14 +428,13 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-027
   name: Facility Management
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -461,14 +444,13 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-028
   name: Change Management
   criteria:
     evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -478,14 +460,13 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-029
   name: Innovation Management
   criteria:
     evidence_ge_E3: gap
     classification_capability: met
-    enterprise_generality: untested
+    enterprise_generality: gap
     durability: met
     implementation_independence: met
     outcome_identifiable: met
@@ -496,6 +477,7 @@ evaluations:
   gaps:
   - evidence_ge_E3
   - boundary_defensible
+  - enterprise_generality
   untested:
   - enterprise_generality
   - distinctness
