@@ -177,7 +177,9 @@ definition:
 purpose:
 outcome:
 business_object:
-capability_type:
+capability_layer:   # optional; governed enum: strategic | operational | support (dea-metamodel ADR-015).
+                    # capability_type is deprecated upstream (CR-016): kind is the entity type
+                    # (dea:BusinessCapability), not a per-entry field. See CR-DEA-BC-02.
 status:
 maturity:
 ecf:
