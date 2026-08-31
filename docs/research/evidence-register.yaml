@@ -1,23 +1,17 @@
-# Evidence Register v0.1 (CR-DEA-BC-02)
-# Structured record of sources and observations. Research artifact; NOT canonical.
-# Every observation is evidence for analysis; no source is normative for DEA (CR-DEA-BC-02 section 5).
-register_version: 0.1.0
+register_version: 0.2.0
 cr: CR-DEA-BC-02
-compiled: 2026-08-31
+compiled: '2026-08-31 (v0.2: gap-closure pass)'
 compiled_by: Coder (for eaojnr)
 status: draft-for-review
-
-source_classes:  # per CR-DEA-BC-02 section 6
-  - business-architecture
-  - enterprise-architecture
-  - cross-industry-process
-  - industry-specific
-  - government-guidance
-  - commercial-capability-models
-  - internal-baseline
-
+source_classes:
+- business-architecture
+- enterprise-architecture
+- cross-industry-process
+- industry-specific
+- government-guidance
+- commercial-capability-models
+- internal-baseline
 sources:
-
 - id: SRC-001
   name: Business Architecture Guild / BIZBOK Guide
   class: business-architecture
@@ -25,32 +19,43 @@ sources:
   retrieved: 2026-08-31
   retrieval: indirect (quoted definitions via practitioner literature; primary BIZBOK text is membership-gated)
   observations:
-    - observation: 'Capability defined as: a particular ability or capacity that a business may possess or exchange to achieve a specific purpose or outcome'
-      supports: [CR-6.1 capability identity]
-      implication: Possess-or-exchange phrasing corroborates the required/possessed/sourced/realized distinction (CR-17)
-    - observation: 'Capability map should be: a concise, non-redundant, complete, business-centric view of the business'
-      supports: [CR-15 abstraction test, CR-31 no predetermined number]
-      implication: Non-redundancy aligns with normalization discipline (CR-20)
-    - observation: Capability decomposition retains business-object focus (Customer Management children stay concerned with the Customer)
-      supports: [CR-14 business-object focus]
-      implication: Business-object anchor becomes a classification test for candidates
+  - observation: 'Capability defined as: a particular ability or capacity that a business may possess or exchange to achieve
+      a specific purpose or outcome'
+    supports:
+    - CR-6.1 capability identity
+    implication: Possess-or-exchange phrasing corroborates the required/possessed/sourced/realized distinction (CR-17)
+  - observation: 'Capability map should be: a concise, non-redundant, complete, business-centric view of the business'
+    supports:
+    - CR-15 abstraction test
+    - CR-31 no predetermined number
+    implication: Non-redundancy aligns with normalization discipline (CR-20)
+  - observation: Capability decomposition retains business-object focus (Customer Management children stay concerned with
+      the Customer)
+    supports:
+    - CR-14 business-object focus
+    implication: Business-object anchor becomes a classification test for candidates
   evidence_note: Strong semantic authority for capability identity; names never to be copied (CR-5)
-
 - id: SRC-002
   name: The Open Group / TOGAF Business Capabilities Guide (V2) and Capability-Based Planning
   class: enterprise-architecture
-  reference: https://www.businessarchitecture.info/how-to-build-a-grounded-capability-model (quoting TOGAF); Open Group Business Capabilities Guide 2016
+  reference: https://www.businessarchitecture.info/how-to-build-a-grounded-capability-model (quoting TOGAF); Open Group Business
+    Capabilities Guide 2016
   retrieved: 2026-08-31
   retrieval: indirect (quoted via businessarchitecture.info; Open Group publications page identified)
   observations:
-    - observation: 'A business capability is a particular ability that a business may possess or exchange to achieve a specific purpose; delimits what, not how, why, or where'
-      supports: [CR-15, CR-19 classification tests]
-      implication: Independent convergence with BIZBOK phrasing; definition stability across sources
-    - observation: Capabilities are stable over time and serve as the anchor for planning ecosystems; cross-mappable to at least 10 domains of interest
-      supports: [CR-16 durability, CR-25/26 ECF mapping as overlay]
-      implication: Stability property justifies first-order catalog longevity
+  - observation: A business capability is a particular ability that a business may possess or exchange to achieve a specific
+      purpose; delimits what, not how, why, or where
+    supports:
+    - CR-15
+    - CR-19 classification tests
+    implication: Independent convergence with BIZBOK phrasing; definition stability across sources
+  - observation: Capabilities are stable over time and serve as the anchor for planning ecosystems; cross-mappable to at least
+      10 domains of interest
+    supports:
+    - CR-16 durability
+    - CR-25/26 ECF mapping as overlay
+    implication: Stability property justifies first-order catalog longevity
   evidence_note: Second independent definition source; convergence with SRC-001 strengthens semantic baseline
-
 - id: SRC-003
   name: SAP LeanIX business capability guidance
   class: enterprise-architecture
@@ -58,47 +63,89 @@ sources:
   retrieved: 2026-08-31
   retrieval: direct
   observations:
-    - observation: Business capability is a representation of the business anchor model independent of organization structure, processes, people, domains; outcome-oriented, stable over time
-      supports: [CR-6.2 durability, implementation independence]
-      implication: Vendor-independent EA practice corroborates implementation independence
-    - observation: 'Best practice BP-1 (do not overlap): capabilities mutually exclusive; test is unambiguous Level-2 assignment'
-      supports: [CR-20 normalization, CR-38 distinctness gate]
-      implication: Mutual exclusivity operationalizable as the distinctness admission criterion
-    - observation: Capabilities describe what the business must be able to do, keeping maps stable as processes, teams, applications change
-      supports: [CR-16, CR-32 lifecycle participation]
-      implication: Implementation independence test formulation
+  - observation: Business capability is a representation of the business anchor model independent of organization structure,
+      processes, people, domains; outcome-oriented, stable over time
+    supports:
+    - CR-6.2 durability
+    - implementation independence
+    implication: Vendor-independent EA practice corroborates implementation independence
+  - observation: 'Best practice BP-1 (do not overlap): capabilities mutually exclusive; test is unambiguous Level-2 assignment'
+    supports:
+    - CR-20 normalization
+    - CR-38 distinctness gate
+    implication: Mutual exclusivity operationalizable as the distinctness admission criterion
+  - observation: Capabilities describe what the business must be able to do, keeping maps stable as processes, teams, applications
+      change
+    supports:
+    - CR-16
+    - CR-32 lifecycle participation
+    implication: Implementation independence test formulation
   evidence_note: Practice-tested guidance; also warns generic lists are starting points, not answers
-
 - id: SRC-004
   name: APQC Process Classification Framework (PCF) v8.0, Cross-Industry
   class: cross-industry-process
   reference: https://www.apqc.org/resource-library/resource-collection/pcf-version-80-process-definitions-and-key-measures-collection
   retrieved: 2026-08-31
-  retrieval: direct (listing and descriptions; full Excel/PDF download behind APQC form)
+  retrieval: direct (framing confirmed from APQC resource listing; category structure from APQC listings; full Excel behind
+    form)
   observations:
-    - observation: PCF is explicitly a taxonomy of business processes for benchmarking; 13 enterprise-level categories, 1000+ processes with definitions and measures
-      supports: [CR-6.3, CR-37 negative finding]
-      implication: Process categories are discovery input for underlying abilities, never capability names (CR-6.3)
-    - observation: APQC maintains cross-industry and industry-specific PCFs
-      supports: [CR-7 analytical separation]
-      implication: Cross-industry recurrence feeds first-order hypotheses; industry variants feed the specialization register
-    - observation: Category 13.0 is Develop and Manage Business Capabilities; categories span vision/strategy, products/services, marketing/sales, delivery, supply chain, HR, IT, financial resources, assets, risk/compliance/resilience, external relationships
-      supports: [CR-12 preliminary cross-source signal, CR-30 hypothesis map]
-      implication: Recurring work classes to test for underlying durable abilities
+  - observation: PCF is explicitly a taxonomy of business processes for benchmarking; 13 enterprise-level categories, 1000+
+      processes with definitions and measures
+    supports:
+    - CR-6.3
+    - CR-37 negative finding
+    implication: Process categories are discovery input for underlying abilities, never capability names (CR-6.3)
+  - observation: APQC maintains cross-industry and industry-specific PCFs
+    supports:
+    - CR-7 analytical separation
+    implication: Cross-industry recurrence feeds first-order hypotheses; industry variants feed the specialization register
+  - observation: Category 13.0 is Develop and Manage Business Capabilities; categories span vision/strategy, products/services,
+      marketing/sales, delivery, supply chain, HR, IT, financial resources, assets, risk/compliance/resilience, external relationships
+    supports:
+    - CR-12 preliminary cross-source signal
+    - CR-30 hypothesis map
+    implication: Recurring work classes to test for underlying durable abilities
+  - observation: APQC states the PCF does not list all processes within a specific organization, and every process listed
+      does not exist in all organizations; the framework explains a business in horizontal processes rather than vertical
+      functions
+    supports:
+    - CR-16 universal necessity nuance
+    - CR-27 no forced coverage
+    implication: Recurrence is statistical, not universal; the universality axis of CR-16 must be argued per candidate, not
+      assumed from PCF membership
+  - observation: 'PCF v8.0 cross-industry 13 categories: 1.0 Develop Vision and Strategy; 2.0 Develop and Manage Products
+      and Services; 3.0 Market and Sell Products and Services; 4.0 Deliver Physical Products; 5.0 Deliver Services; 6.0 Manage
+      Customer Service; 7.0 Develop and Manage Human Capital; 8.0 Manage Information Technology; 9.0 Manage Financial Resources;
+      10.0 Acquire, Construct, and Manage Assets; 11.0 Manage Enterprise Risk, Compliance, Remediation, and Resiliency; 12.0
+      Manage External Relationships; 13.0 Develop and Manage Business Capabilities'
+    supports:
+    - CR-12 cross-source signal
+    - CR-30 hypothesis map
+    implication: Category-level recurrence map for the candidate pass; category 13.0 self-references capability development,
+      which is process-work about capabilities, not a capability
   evidence_note: Largest cross-industry recurrence corpus; contamination guard active (process taxonomy)
-
 - id: SRC-005
   name: IF4IT capability model guidance
   class: business-architecture
   reference: if4it.com (cited in CR-DEA-BC-02 section 12)
   retrieved: pending
-  retrieval: pending (direct page retrieval not yet completed in this pass)
+  retrieval: partial (site live; discipline pages reachable; the capability-model page cited in CR-DEA-BC-02 section 12 not
+    located in this pass)
   observations:
-    - observation: Per CR-DEA-BC-02 section 12, IF4IT identifies common enterprise capabilities (Finance, Human Capital Management, Legal, Procurement, Risk, Compliance, Sales, Marketing, Customer Management) distinct from IT capabilities and industry-specific capabilities
-      supports: [CR-12 frequency signal, CR-7 common layer vs industry layer]
-      implication: Frequency evidence only; semantic validity untested (CR-13)
-  evidence_note: 'Register gap G1: complete direct retrieval and archive the specific page in the next pass'
-
+  - observation: Per CR-DEA-BC-02 section 12, IF4IT identifies common enterprise capabilities (Finance, Human Capital Management,
+      Legal, Procurement, Risk, Compliance, Sales, Marketing, Customer Management) distinct from IT capabilities and industry-specific
+      capabilities
+    supports:
+    - CR-12 frequency signal
+    - CR-7 common layer vs industry layer
+    implication: Frequency evidence only; semantic validity untested (CR-13)
+  - observation: 'IF4IT discipline pages define Business Capabilities as: a set of Capabilities needed and/or offered by a
+      Business'
+    supports:
+    - CR-17 possession spectrum
+    implication: Needed-and/or-offered phrasing independently corroborates the required/possessed/sourced spectrum
+  evidence_note: 'Gap G1 partially closed: site confirmed live and definition retrieved; the specific capability-model page
+    cited in the CR remains unlocated, citation-of-record retained at E1'
 - id: SRC-006
   name: Commercial capability model vendors (Capstera, Ciopages)
   class: commercial-capability-models
@@ -106,17 +153,20 @@ sources:
   retrieved: 2026-08-31
   retrieval: direct
   observations:
-    - observation: 'Common Level-1 lists recur across vendors: Customer, Finance, HR, Marketing, Supply Chain, Digital, Data Analytics/BI'
-      supports: [CR-12 frequency signal]
-      implication: Frequency evidence for hypothesis families; no semantic authority
-    - observation: Vendors themselves warn generic lists are not fit for purpose without enterprise deliberation and alignment
-      supports: [CR-13 commonality is not sufficient]
-      implication: Corroborates the two-evidence-forms rule from an unexpected source class
-    - observation: 'Industry-specific models exist for automotive, hospital, medical devices, P&C insurance, retail banking'
-      supports: [CR-29 industry specialization analysis]
-      implication: Candidate sources for the specialization register
+  - observation: 'Common Level-1 lists recur across vendors: Customer, Finance, HR, Marketing, Supply Chain, Digital, Data
+      Analytics/BI'
+    supports:
+    - CR-12 frequency signal
+    implication: Frequency evidence for hypothesis families; no semantic authority
+  - observation: Vendors themselves warn generic lists are not fit for purpose without enterprise deliberation and alignment
+    supports:
+    - CR-13 commonality is not sufficient
+    implication: Corroborates the two-evidence-forms rule from an unexpected source class
+  - observation: Industry-specific models exist for automotive, hospital, medical devices, P&C insurance, retail banking
+    supports:
+    - CR-29 industry specialization analysis
+    implication: Candidate sources for the specialization register
   evidence_note: Frequency evidence class; commercial bias acknowledged
-
 - id: SRC-007
   name: BIAN Service Landscape (banking industry reference model)
   class: industry-specific
@@ -124,23 +174,38 @@ sources:
   retrieved: 2026-08-31
   retrieval: direct
   observations:
-    - observation: Service domains are discrete non-overlapping building blocks of business capacity exchanging services; a capability landscape sits above; current release 14.0 (2026-02)
-      supports: [CR-7, CR-29]
-      implication: Mature industry-specific layering over common capabilities; models the specialization path DEA defers to
+  - observation: Service domains are discrete non-overlapping building blocks of business capacity exchanging services; a
+      capability landscape sits above; current release 14.0 (2026-02)
+    supports:
+    - CR-7
+    - CR-29
+    implication: Mature industry-specific layering over common capabilities; models the specialization path DEA defers to
   evidence_note: Exemplar for industry specialization, not first-order input
-
 - id: SRC-008
   name: UK government guidance (DfE business architecture; Government Service Standard ecosystem)
   class: government-guidance
   reference: https://deliver-good-services.education.gov.uk/guides/business-architecture
   retrieved: 2026-08-31
-  retrieval: direct (page confirmed; detailed extraction pending)
+  retrieval: direct (full page extracted 2026-08-31)
   observations:
-    - observation: Public-sector guidance warns against capabilities too broad to be useful and emphasizes unambiguous boundaries
-      supports: [CR-15 abstraction test]
-      implication: Government context coverage for the enterprise diversity test (CR-8)
-  evidence_note: 'Register gap G2: extract the full guidance page next pass; add GRM/GSRM as government reference candidates'
-
+  - observation: DfE categorizes capabilities as strategic, core, or enabling
+    supports:
+    - CR-19 classification
+    - ADR-015 capability_layer
+    implication: Independent government convergence with the ADR-015 layer attribute (strategic/operational/support vs DfE
+      strategic/core/enabling); a normalization candidate for the layer enumeration
+  - observation: 'DfE levelling guidance: level 1 broad/stable/cross-cutting; level 2 operational/actionable; level 3 process-or-task
+      focused and subject to regular change'
+    supports:
+    - CR-15 abstraction test
+    - CR-28 recursive decomposition
+    implication: L1 stability criterion aligns with first-order semantics; L3 drift boundary aligns with the process cut-line
+  - observation: 'DfE scope warning with examples: delivering customer services, managing financial operations, developing
+      products and services are too broad to be useful'
+    supports:
+    - CR-15 abstraction test
+    implication: Verb-first formulations fail the test; strengthens the Noun-anchored naming heuristic (SRC-009)
+  evidence_note: 'Gap G2 closed: full extract archived; GRM/GSRM still open as government reference candidates (new gap G5)'
 - id: SRC-009
   name: The Essential Project capability modelling guidance
   class: enterprise-architecture
@@ -148,11 +213,13 @@ sources:
   retrieved: 2026-08-31
   retrieval: direct
   observations:
-    - observation: 'Naming discipline: capabilities Noun/Verb (Credit Management); processes Verb/Noun (Manage Credit); capabilities realized by processes'
-      supports: [CR-19 classification, CR-20 normalization]
-      implication: A cheap first-pass heuristic signal for candidate classification; heuristic only, never decisive
+  - observation: 'Naming discipline: capabilities Noun/Verb (Credit Management); processes Verb/Noun (Manage Credit); capabilities
+      realized by processes'
+    supports:
+    - CR-19 classification
+    - CR-20 normalization
+    implication: A cheap first-pass heuristic signal for candidate classification; heuristic only, never decisive
   evidence_note: Practitioner heuristic; useful tooling for the classification pass
-
 - id: SRC-010
   name: Repository internal baseline (README, FOUNDATIONS, CR-DEA-BC-01A)
   class: internal-baseline
@@ -160,31 +227,70 @@ sources:
   retrieved: 2026-08-31
   retrieval: direct
   observations:
-    - observation: 'Eight tenets and twelve decision points already govern: evidence ladder, capability precedes coordinate, possession spectrum, recursion over hierarchy'
-      supports: [CR-3 baseline, CR-17]
-      implication: The investigation operationalizes existing tenets; no methodology conflict found
-    - observation: Record shape reconciled with dea-metamodel ADR-015 (kind by specialization, governed capability_layer)
-      supports: [CR-22 evidence record schema]
-      implication: Candidate records can carry capability_layer hypotheses without schema change
+  - observation: 'Eight tenets and twelve decision points already govern: evidence ladder, capability precedes coordinate,
+      possession spectrum, recursion over hierarchy'
+    supports:
+    - CR-3 baseline
+    - CR-17
+    implication: The investigation operationalizes existing tenets; no methodology conflict found
+  - observation: Record shape reconciled with dea-metamodel ADR-015 (kind by specialization, governed capability_layer)
+    supports:
+    - CR-22 evidence record schema
+    implication: Candidate records can carry capability_layer hypotheses without schema change
   evidence_note: Internal authority; the semantic model remains authoritative over all external sources (CR-5)
-
+- id: SRC-011
+  name: Avolution capability model guidance
+  class: enterprise-architecture
+  reference: https://www.avolutionsoftware.com/our-resources/business-capability-models-enterprise-architects
+  retrieved: '2026-08-31'
+  retrieval: direct
+  observations:
+  - observation: 'Practitioner core capability list: customer management, product management, claims management, risk management,
+      financial management, supplier management, information/digital enablement'
+    supports:
+    - CR-12 frequency signal
+    implication: Frequency corroboration from EA tooling practice; note claims management is industry-flavored (insurance)
+      and belongs to specialization analysis
+  evidence_note: Additional independent EA practice source
+- id: SRC-012
+  name: ACORD Capability Model (insurance)
+  class: industry-specific
+  reference: https://www.acord.org/ACORD-about/acord-news/2025/05/21/acord-reference-architecture-updates-capability-model-business-glossary
+  retrieved: '2026-08-31'
+  retrieval: direct
+  observations:
+  - observation: ACORD maintains an insurance industry capability model covering ten high-level areas, updated 2025
+    supports:
+    - CR-7
+    - CR-29
+    implication: Second industry-specific reference model (with BIAN); specialization register candidate source
+  evidence_note: Insurance counterpart to BIAN for the specialization register
 register_gaps:
-  - id: G1
-    gap: IF4IT direct page retrieval pending (SRC-005)
-    action: locate and archive the specific IF4IT capability model page
-  - id: G2
-    gap: DfE guidance detailed extraction pending (SRC-008)
-    action: full-page extract; add government reference models (GRM, GSRM) as candidate sources
-  - id: G3
-    gap: APQC PCF full element list behind download form (SRC-004)
-    action: obtain PCF 8.0 Excel for the recurrence analysis pass
-  - id: G4
-    gap: primary BIZBOK text membership-gated (SRC-001)
-    action: proceed on quoted definitions; note if Guild access becomes available
-
+- id: G1
+  gap: IF4IT capability-model page cited in CR section 12 not located; site and definition confirmed
+  action: retain citation-of-record at E1; revisit if the page resurfaces
+  status: partially-closed
+- id: G2
+  gap: DfE guidance detailed extraction
+  action: done 2026-08-31 (full extract in SRC-008)
+  status: closed
+- id: G3
+  gap: APQC PCF full element list behind download form
+  action: category structure captured from APQC listings; element-level recurrence analysis deferred until the Excel is obtained
+  status: partially-closed
+- id: G4
+  gap: primary BIZBOK text membership-gated
+  action: 'decision recorded: proceed on quoted definitions (SRC-001/SRC-002 convergence); revisit if Guild access becomes
+    available'
+  status: closed-by-decision
+- id: G5
+  gap: government reference models (GRM, GSRM) not yet retrieved
+  action: add for the section 8 government diversity arm
+  status: open
 corpus_assessment:
   source_classes_covered: 7 of 7
-  independent_definition_sources: 3 (SRC-001 BIZBOK via citation, SRC-002 TOGAF via citation, SRC-003 SAP LeanIX direct)
+  independent_definition_sources: 4 (SRC-001 BIZBOK via citation, SRC-002 TOGAF via citation, SRC-003 SAP LeanIX direct, SRC-005
+    IF4IT partial direct)
   definition_convergence: high (possess-or-exchange ability; what-not-how; stable; non-redundant)
   ready_for: candidate universe construction (CR-DEA-BC-02 sections 21, 30)
   not_ready_for: canonical admission (no candidate evaluated yet; admission gate per section 38 untouched)
