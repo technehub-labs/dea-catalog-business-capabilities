@@ -179,7 +179,7 @@ outcome:
 business_object:
 capability_layer:   # optional; governed enum: strategic | operational | support (dea-metamodel ADR-015).
                     # capability_type is deprecated upstream (CR-016): kind is the entity type
-                    # (dea:BusinessCapability), not a per-entry field. See CR-DEA-BC-02.
+                    # (dea:BusinessCapability), not a per-entry field. See CR-DEA-BC-01A.
 status:
 maturity:
 ecf:
@@ -281,11 +281,15 @@ Not built yet: population, schema, and CI changes all follow CR-DEA-BC-01.
 ```
 CR-DEA-BC-01  First-Order Business Capability Method
         ↓
-Evidence Investigation
+CR-DEA-BC-01A Capability classification reconciliation (dea-metamodel ADR-015; done 2026-08-31)
+        ↓
+CR-DEA-BC-02  Evidence-Based First-Order Capability Investigation
         ↓
 Candidate Capability Universe
         ↓
 Normalization
+        ↓
+CR-DEA-BC-03  First-Order Capability Canonicalization
         ↓
 Canonical First-Order Set
         ↓
