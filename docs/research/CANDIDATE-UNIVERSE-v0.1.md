@@ -58,10 +58,10 @@ Each is recorded with the source that conflated it with a capability and the cla
 
 | Rating | Count | Notes |
 |---|---|---|
-| E5 | 2 | Customer Management, People/Workforce Management — highest convergence |
+| E5 | 2 | Customer Management, People/Workforce Management: highest convergence |
 | E4 | 7 | Financial Stewardship, Operations, Sourcing/Procurement, Compliance, Risk, Marketing, Information, Asset |
 | E3 | 11 | Strategy, Strategic Planning, Enterprise Governance, Stakeholder Relationship Management, Supplier Management, Partner Management, Workforce Planning, Workforce Planning, Legal, Security, Change, Asset, Facility |
-| E2 | 3 | Citizen/Member, Resilience, Innovation — lower frequency; held as candidates pending cross-industry check |
+| E2 | 3 | Citizen/Member, Resilience, Innovation: lower frequency; held as candidates pending cross-industry check |
 
 The E0 entries (CAND-030/032/033) are the disambiguation list: cited only to record that the source listed them as capabilities, not to assert capability status.
 
@@ -83,7 +83,7 @@ Every first-order candidate has been assessed against §16: would a bounded valu
 ## Carry-forward list (next pass)
 
 1. **Normalization decisions** for the candidate pairs that vendors/sources name differently: People/Workforce Management (Human Capital Management vs Workforce vs HR); Marketing (under Customer vs Offering); Analytics and Intelligence (under Information vs standalone); Sourcing and Procurement (vs Supplier Management).
-2. **ECF overlay** for the E4+ first-order candidates (§25–§28).
+2. **ECF overlay** for the E4+ first-order candidates (§25 to §28).
 3. **Enterprise-generality matrix** (§33 item 6) built from the §8 diversity list.
 4. **Gate-close per candidate** against §38 admission rules.
 5. **Rejections and deferrals register** (per CR §33 item 13: rejected and deferred candidates documented).

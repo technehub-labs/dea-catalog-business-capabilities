@@ -1,0 +1,114 @@
+register_version: 0.1.0
+cr: CR-DEA-BC-02 (section 20; deliverable section 33 item 5)
+compiled: '2026-08-31'
+status: candidate-not-canonical; decisions are research decisions, subject to review
+inputs:
+  candidates: docs/research/candidates.yaml
+  evidence_register: docs/research/evidence-register.yaml
+rule: No merge occurs solely because names are similar (CR section 20).
+decisions:
+- id: N-001
+  question: 'People cluster: Workforce Management vs Human Capital Management vs HR vs People Management'
+  candidates:
+  - CAND-015
+  evidence:
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  analysis: 'APQC v8.0 names the category Develop and Manage Human Capital; IF4IT cites Human Capital Management; vendor lists
+    say HR or Human Resources. HR/Human Resources names the function or organization (already classified ORGANIZATION in the
+    disambiguation pattern of CAND-030) and fails the noun-anchor test as a capability name. Human Capital Management frames
+    people as a capital asset: defensible, but it narrows the business object to the economic view of people. Workforce Management
+    names the durable ability over the workforce business object without the asset framing.'
+  outcome: Synonyms (Human Capital Management = Workforce Management); HR rejected as a capability name (names the function)
+  action: 'CAND-015 renamed to Workforce Management; aliases recorded: Human Capital Management, People Management; rejected-name:
+    Human Resources (function name)'
+  confidence: medium
+- id: N-002
+  question: 'Marketing placement: under Customer Management or under Offering Management'
+  candidates:
+  - CAND-005
+  - CAND-009
+  - CAND-010
+  evidence:
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  analysis: 'APQC places Market and Sell as its own category, sibling to customer service and product development. The business
+    object of Marketing is demand creation in a market, not the customer relationship (Customer Management) and not the offering
+    itself (Offering Management). Marketing is therefore Distinct from both. Its first-order standing survives only if the
+    abstraction test passes; it does: Marketing Management is a durable ability across commercial enterprises. Government
+    and non-profit equivalents (outreach, enrollment communication) are noted as the diversity-test edge.'
+  outcome: Distinct; standalone first-order candidate; parent chain cleared (no parent pending admission)
+  action: CAND-010 parent_candidates cleared; overlay primary stays customer-demand x conceive
+  confidence: medium
+- id: N-003
+  question: 'Analytics and Intelligence: child of Information Management or standalone'
+  candidates:
+  - CAND-017
+  - CAND-018
+  evidence:
+  - SRC-002
+  - SRC-006
+  analysis: 'Analytics consumes information but its business object is the insight, not the information. The ability to produce
+    decision-grade intelligence is distinguishable from the ability to steward data. However the corpus treats it inconsistently:
+    some vendor models make it a theme, others fold it into information or digital. Evidence is E3 with low confidence; splitting
+    now would outrun the evidence.'
+  outcome: Parent-Child retained provisionally (CAND-017 -> CAND-018); flagged for re-test after the enterprise-generality
+    matrix
+  action: No structural change; re-test trigger recorded
+  confidence: low
+- id: N-004
+  question: 'Sourcing and Procurement vs Supplier Management: merge or distinct'
+  candidates:
+  - CAND-007
+  - CAND-025
+  evidence:
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  analysis: 'Different business objects: the purchase/acquisition versus the supplier relationship. An enterprise can procure
+    without managing supplier relationships (spot buying) and can manage supplier relationships beyond active procurement
+    (strategic alliances with no current spend). APQC separates sourcing/procurement work from external relationship management.
+    Distinctness is demonstrated, not merely nominal.'
+  outcome: Distinct; no merge; both retained as first-order candidates
+  action: No structural change
+  confidence: high
+- id: N-005
+  question: Customer Management vs Customer Relationship Management vs Customer Administration (CR section 20 example)
+  candidates:
+  - CAND-005
+  evidence:
+  - SRC-001
+  - SRC-003
+  - SRC-006
+  analysis: 'Customer Relationship Management is the market-dominant name for the same construct (and a system category; see
+    CAND-032 disambiguation). Customer Administration narrows the object to account maintenance and is Overlapping: a child-scope
+    fragment, not a synonym. Per the section 20 rule, the name merge happens only because the constructs coincide, not because
+    the names are similar.'
+  outcome: Synonyms (Customer Relationship Management = Customer Management); Overlapping (Customer Administration = child-scope
+    fragment)
+  action: 'CAND-005 aliases recorded: Customer Relationship Management; Customer Administration logged as overlapping fragment'
+  confidence: high
+- id: N-006
+  question: 'CAND-019 Technology Management: business capability with a domain, or cross-cutting concern (carried from ECF
+    overlay conflict)'
+  candidates:
+  - CAND-019
+  evidence:
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  analysis: 'APQC carries Manage Information Technology as a category; IF4IT separates IT capabilities from common enterprise
+    capabilities. The business object (Technology) is real and durable; what fails is the ECF domain assignment, because the
+    ECF domains are business-semantic and technology is an L5 layer concern. The admission gate (section 38) explicitly allows
+    ECF Mapping to be legitimately absent. Decision: the capability stands; the coordinate does not.'
+  outcome: Retained as first-order candidate with ECF mapping legitimately absent (section 38 clause)
+  action: overlay entry confirmed unmapped-by-rule; candidates.yaml annotated
+  confidence: medium
+deferred:
+- item: Citizen/Member Relationship (CAND-006) vs Customer Management unification
+  trigger: government reference models (gap G5)
+- item: Analytics standalone re-test (N-003)
+  trigger: enterprise-generality matrix
