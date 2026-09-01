@@ -1,0 +1,63 @@
+id: dea:capability-financial-stewardship
+type: BusinessCapability
+name: Financial Stewardship
+definition: 'The ability to hold the enterprise''s financial resources in trust: policy, structure, and long-horizon financial
+  position.'
+version: 1.0.0
+lifecycle_status: active
+capability_layer: strategic
+outcome: The enterprise's financial position is deliberate, funded, and answerable over horizons beyond the operating cycle.
+business_object: Financial Resource
+ecf:
+  primary:
+    domain: finance-value
+    stage: conceive
+  secondary:
+  - domain: finance-value
+    stage: operate
+related_capabilities:
+- dea:capability-financial-management
+evidence:
+  sources:
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  rationale: Enterprise-generality demonstrated at E5; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
+    distinctness-sweep, admission-gate-closeout).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+  - stage: normalized
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: 'E5; distinct from Financial Management (the operating cycle) by the sweep: stewardship sets the financial
+  constitution, management runs it.'
+ecf_rationale: Primary conceive in finance-value (financial position is constituted deliberately); exercised at operate.
+boundary: Stewards financial position; does not run the accounting cycle or execute transactions (Financial Management).
+non_examples:
+- A ledger (the object of Financial Management)
+- A treasury desk (an organization)
+specialization_boundary: Instruments and capital structures vary by sector; the ability to steward financial position does
+  not.
