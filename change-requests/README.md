@@ -10,6 +10,12 @@ Change requests for the Business Capability catalog. CRs land verbatim on accept
 | CR-DEA-BC-03 | Catalog Schema and CI Reconciliation | Landed | PR #21 (2026-09-01) | `schemas/entity.schema.json` + entry CI reconciled with dea-metamodel (ADR-015 lineage) and the catalog-wide CI conventions (D8 correction recorded below). Ships no entries. |
 | CR-DEA-BC-04 | Industry Specialization Framework and First View (MCSP) | Proposed | This PR | Views as mapping artifacts; SPEC-NNN record shape; version pinning; view schema + CI; evidence discipline; ECF inheritance; MCSP proving instance. No view content in this PR. |
 
+## Conformance Gate series (cross-repo, CG-001..006 anchor in dea-metaframework)
+
+| CR | Title | Status | Notes |
+|----|-------|--------|-------|
+| [CR-ECF-CG-003](CR-ECF-CG-003.md) | Business Capability Catalog Conformance | Proposed (this PR) | Catalog is the validation-and-correction target, not a redesign. Mandates Capability Identity ≠ ECF Coordinate; preserves multiple contextual coordinates; ratifies 26-entry plus MCSP view conformance via a new `ecfConformance` block. |
+
 ## Numbering
 
 - The series tag is `CR-DEA-BC` (DEA Business Capability).
