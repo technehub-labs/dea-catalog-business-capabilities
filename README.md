@@ -29,9 +29,11 @@ This repository also hosts **specialization views** for specific enterprise type
 
 ## Status
 
-**Scaffold.** Methodology before population: the first implementation increment establishes the First-Order Business Capability Catalog Method (admission criteria, evidence process, ECF overlay rules, specialization boundary) via **CR-DEA-BC-01**. Canonical capability entries follow only after that method is accepted.
+**Scaffold.** Methodology before population: the first implementation increment establishes the First-Order Business Capability Catalog Method (admission criteria, evidence process, ECF overlay rules, specialization boundary) via **CR-DEA-BC-01** ([`change-requests/CR-DEA-BC-01.md`](change-requests/CR-DEA-BC-01.md)). Canonical capability entries follow only after that method is accepted.
 
-The evidence-based investigation that builds the candidate universe (evidence corpus, classification, normalization, enterprise-generality matrix, preliminary ECF overlay) is defined by **CR-DEA-BC-02** ([`change-requests/CR-DEA-BC-02.md`](change-requests/CR-DEA-BC-02.md)); canonicalization of the resulting first-order set follows via CR-DEA-BC-03. The record shape is already reconciled with dea-metamodel ADR-015 via **CR-DEA-BC-01A** (capability kind by entity specialization; `capability_type` deprecated; governed `capability_layer`).
+The evidence-based investigation that builds the candidate universe (evidence corpus, classification, normalization, enterprise-generality matrix, preliminary ECF overlay) is defined by **CR-DEA-BC-02** ([`change-requests/CR-DEA-BC-02.md`](change-requests/CR-DEA-BC-02.md)); canonicalization of the resulting first-order set follows via CR-DEA-BC-03. The record shape is already reconciled with dea-metamodel ADR-015 via **CR-DEA-BC-01A** ([`change-requests/CR-DEA-BC-01A.md`](change-requests/CR-DEA-BC-01A.md)) (capability kind by entity specialization; `capability_type` deprecated; governed `capability_layer`).
+
+Change request index: [`change-requests/README.md`](change-requests/README.md).
 
 Guiding principles and decision points: [`docs/FOUNDATIONS.md`](docs/FOUNDATIONS.md).
 
