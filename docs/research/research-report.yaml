@@ -1,0 +1,67 @@
+report_version: 0.1.0
+cr: CR-DEA-BC-02 (section 33 item 10; structure per section 34)
+compiled: '2026-09-01'
+status: candidate-not-canonical; synthesis and recommendation only; admission subject to review (section 38)
+document: docs/research/RESEARCH-REPORT-v0.1.md
+sections:
+- Research Purpose
+- Capability Semantics
+- Evidence Method
+- Source Corpus
+- Enterprise Comparison
+- Candidate Universe
+- Classification
+- Normalization
+- Capability Boundaries
+- Enterprise-General Findings
+- ECF Overlay
+- Specialization Findings
+- Rejected Candidates
+- Unresolved Candidates
+- Preliminary First-Order Set
+- Open Questions
+- Recommendations
+inputs:
+- evidence-register.yaml (v0.2)
+- candidates.yaml (v0.2)
+- normalization.yaml (v0.2)
+- enterprise-generality-matrix.yaml (v0.1)
+- preliminary-ecf-overlay.yaml (v0.1)
+- distinctness-sweep.yaml (v0.1)
+- admission-gate-closeout.yaml (v0.1)
+- specialization-register.yaml (v0.1)
+key_results:
+  universe_total: 35
+  capability_classified: 29
+  recommended_for_admission: 23
+  deferred: 4
+  removed_from_track: 2
+  rejected_non_capability: 4
+  specialized: 1
+  unresolved: 1
+  generality:
+    demonstrated: 26
+    partial: 2
+    sector_bound: 1
+  distinctness:
+    pairs: 351
+    demonstrated_of_27: 26
+    deferred_pair: CAND-005/CAND-006
+  ecf:
+    mapped: 28
+    held_unmapped_legitimately_absent: 1
+    conflict_flags_open: 6
+    forced_coverage: 0
+  sources: 12
+  register_gaps:
+  - G1
+  - G2
+  - G3
+  - G4
+  - G5
+dod_rows_closed:
+- unresolved questions documented (section 39)
+- research report published (section 39; section 33 item 10)
+dod_rows_remaining:
+- visual research artifacts (section 35)
+- OTCHERE examples and no-ACME verification (section 39)
