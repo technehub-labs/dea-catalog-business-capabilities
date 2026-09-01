@@ -1,0 +1,869 @@
+sweep_version: 0.1.0
+cr: CR-DEA-BC-02 (section 20 distinctness; deliverable section 33 item 5 continuation; gate section 38)
+compiled: '2026-09-01'
+status: candidate-not-canonical; research decisions, subject to review
+inputs:
+  candidates: docs/research/candidates.yaml (v0.2.0)
+  normalization: docs/research/normalization.yaml (v0.2.0)
+  generality_matrix: docs/research/enterprise-generality-matrix.yaml (v0.1.0)
+scope:
+  on_track_candidates: 27
+  pairs_evaluated: 351
+  excluded:
+  - candidate: CAND-004
+    reason: reclassified grouping parent (normalization N-007); not on the admission track
+  - candidate: CAND-011
+    reason: dissolved as first-order candidate (normalization N-008)
+method:
+  primary_test: business-object distinctness; two candidates anchored on different durable business objects are distinct abilities (CR section 19 capability semantics, section 30 business-object focus)
+  partition_rule: candidates are partitioned by business-object family; all cross-family pairs classify Distinct unless an explicit decision below overrides
+  within_family_rule: pairs inside one family require an explicit decision (parent-child, synonym, overlap, or distinct); no pair may rest on name similarity alone (CR section 20)
+  vocabulary: [Synonyms, Parent-Child, Related, Overlapping, Distinct, Implementation Variants, Industry Specializations]
+object_families:
+- family: enterprise-direction
+  members: [CAND-001, CAND-002, CAND-003]
+  objects: [Enterprise, Plan, Decision]
+- family: external-relationship
+  members: [CAND-005, CAND-006, CAND-007, CAND-008]
+  objects: [Customer, Citizen, Supplier, Partner]
+- family: offering-market
+  members: [CAND-009, CAND-010]
+  objects: [Offering, Market/Customer]
+- family: delivery
+  members: [CAND-012]
+  objects: [Operation]
+- family: financial
+  members: [CAND-013, CAND-014]
+  objects: [Financial Resource, Financial Resource]
+- family: workforce
+  members: [CAND-015, CAND-016]
+  objects: [Workforce, Workforce Plan]
+- family: information
+  members: [CAND-017, CAND-018]
+  objects: [Information, Insight]
+- family: technology
+  members: [CAND-019]
+  objects: [Technology]
+- family: assurance
+  members: [CAND-020, CAND-021, CAND-022, CAND-023, CAND-024]
+  objects: [Risk, Regulation, Legal Matter, Continuity, Asset/Information]
+- family: acquisition
+  members: [CAND-025]
+  objects: [Purchase Order]
+- family: assets
+  members: [CAND-026, CAND-027]
+  objects: [Asset, Facility]
+- family: change
+  members: [CAND-028, CAND-029]
+  objects: [Change, Idea]
+explicit_decisions:
+- pair: [CAND-001, CAND-002]
+  relationship: Parent-Child
+  basis: Strategy anchors the Enterprise; Strategic Planning anchors the Plan produced under it
+- pair: [CAND-001, CAND-003]
+  relationship: Parent-Child
+  basis: Governance anchors decision authority under direction-setting
+- pair: [CAND-005, CAND-006]
+  relationship: deferred
+  basis: 'unification decision deferred (trigger: government reference models, evidence gap G5); CAND-006 tracked as sector-bound specialization arm'
+- pair: [CAND-005, CAND-007]
+  relationship: Distinct
+  basis: Customer vs Supplier business objects; opposite sides of the exchange relationship
+- pair: [CAND-005, CAND-008]
+  relationship: Distinct
+  basis: Customer vs Partner; revenue relationship vs alliance relationship
+- pair: [CAND-007, CAND-008]
+  relationship: Distinct
+  basis: Supplier (provision) vs Partner (shared enterprise); structurally different relationship objects
+- pair: [CAND-005, CAND-010]
+  relationship: Distinct
+  basis: normalization N-002; demand creation in a market vs customer relationship stewardship
+- pair: [CAND-009, CAND-010]
+  relationship: Distinct
+  basis: normalization N-002; the offering itself vs demand creation
+- pair: [CAND-005, CAND-009]
+  relationship: Distinct
+  basis: relationship object vs offering object; sell-to vs build/manage
+- pair: [CAND-007, CAND-025]
+  relationship: Distinct
+  basis: normalization N-004 (high confidence); the purchase vs the supplier relationship
+- pair: [CAND-009, CAND-012]
+  relationship: Distinct
+  basis: offering lifecycle (what is sold) vs operations (producing and delivering); build vs run
+- pair: [CAND-009, CAND-028]
+  relationship: Distinct
+  basis: offering object vs change object; portfolio evolution vs enterprise change ability
+- pair: [CAND-012, CAND-025]
+  relationship: Distinct
+  basis: running the operation vs acquiring inputs; different objects, different outcomes
+- pair: [CAND-012, CAND-026]
+  relationship: Distinct
+  basis: operations employ assets; the ability to run vs the ability to steward the asset base
+- pair: [CAND-012, CAND-027]
+  relationship: Distinct
+  basis: operations occur in facilities; running vs facility stewardship
+- pair: [CAND-013, CAND-014]
+  relationship: Parent-Child
+  basis: shared object (Financial Resource); stewardship (governance of the resource) over management (its operation)
+- pair: [CAND-013, CAND-020]
+  relationship: Distinct
+  basis: financial resource stewardship vs uncertainty treatment; financial risk is a specialization of risk, not a merge point
+- pair: [CAND-013, CAND-025]
+  relationship: Distinct
+  basis: stewarding money vs spending it on acquisition; treasury boundary vs purchase order
+- pair: [CAND-015, CAND-016]
+  relationship: Parent-Child
+  basis: Workforce vs Workforce Plan; planning is a disciplined child ability
+- pair: [CAND-017, CAND-018]
+  relationship: Parent-Child
+  basis: normalization N-003 confirmed at re-test (N-009); insight vs information, corpus treatment still inconsistent
+- pair: [CAND-017, CAND-019]
+  relationship: Distinct
+  basis: information stewardship vs technology stewardship; classic separation attested across corpus
+- pair: [CAND-017, CAND-024]
+  relationship: Distinct
+  basis: stewarding information vs protecting it; security overlays information and assets but owns protection posture
+- pair: [CAND-002, CAND-016]
+  relationship: Distinct
+  basis: name similarity only (planning); objects differ (enterprise Plan vs Workforce Plan); CR section 20 rule applied
+- pair: [CAND-003, CAND-020]
+  relationship: Distinct
+  basis: decision authority vs uncertainty treatment; governance sets risk appetite but does not manage risk
+- pair: [CAND-020, CAND-021]
+  relationship: Parent-Child
+  basis: uncertainty treatment vs obligation adherence; distinct objects, assurance hierarchy retained
+- pair: [CAND-020, CAND-022]
+  relationship: Parent-Child
+  basis: risk treatment vs legal rights/counsel
+- pair: [CAND-020, CAND-023]
+  relationship: Parent-Child
+  basis: continuity under disruption sits under the assurance umbrella; object Continuity distinct from Risk
+- pair: [CAND-020, CAND-024]
+  relationship: Parent-Child
+  basis: protection posture under the assurance umbrella; Asset/Information protection vs uncertainty treatment
+- pair: [CAND-021, CAND-022]
+  relationship: Distinct
+  basis: obligation adherence vs rights/obligations/counsel; sibling distinct under assurance
+- pair: [CAND-023, CAND-024]
+  relationship: Distinct
+  basis: continuity of operation vs protection of assets; a breach can be survived (resilience) or prevented (security)
+- pair: [CAND-024, CAND-026]
+  relationship: Distinct
+  basis: protecting assets vs stewarding the asset lifecycle; different outcomes
+- pair: [CAND-026, CAND-027]
+  relationship: Parent-Child
+  basis: Asset aggregate over Facility; facility carries ongoing operations
+- pair: [CAND-028, CAND-029]
+  relationship: Parent-Child
+  basis: Change aggregate over Idea; innovation is the origination child of enterprise change
+results:
+  parent_child: 11
+  distinct_explicit: 21
+  distinct_partition: 318
+  deferred: 1
+  synonyms_unresolved: 0
+  overlaps_unresolved: 0
+verdict: Distinctness demonstrated for 26 of 27 on-track candidates; one pair deferred (CAND-005/CAND-006 unification). No unresolved synonyms or overlaps.
+enumeration:
+  - pair: [CAND-001, CAND-002]
+    relationship: parent_child
+  - pair: [CAND-001, CAND-003]
+    relationship: parent_child
+  - pair: [CAND-001, CAND-005]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-006]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-007]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-008]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-009]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-010]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-012]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-013]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-014]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-001, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-003]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-005]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-006]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-007]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-008]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-009]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-010]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-012]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-013]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-014]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-016]
+    relationship: distinct_explicit
+  - pair: [CAND-002, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-002, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-005]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-006]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-007]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-008]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-009]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-010]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-012]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-013]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-014]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-020]
+    relationship: distinct_explicit
+  - pair: [CAND-003, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-003, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-006]
+    relationship: deferred
+  - pair: [CAND-005, CAND-007]
+    relationship: distinct_explicit
+  - pair: [CAND-005, CAND-008]
+    relationship: distinct_explicit
+  - pair: [CAND-005, CAND-009]
+    relationship: distinct_explicit
+  - pair: [CAND-005, CAND-010]
+    relationship: distinct_explicit
+  - pair: [CAND-005, CAND-012]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-013]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-014]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-005, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-007]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-008]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-009]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-010]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-012]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-013]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-014]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-006, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-008]
+    relationship: distinct_explicit
+  - pair: [CAND-007, CAND-009]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-010]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-012]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-013]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-014]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-025]
+    relationship: distinct_explicit
+  - pair: [CAND-007, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-007, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-009]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-010]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-012]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-013]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-014]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-008, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-010]
+    relationship: distinct_explicit
+  - pair: [CAND-009, CAND-012]
+    relationship: distinct_explicit
+  - pair: [CAND-009, CAND-013]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-014]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-009, CAND-028]
+    relationship: distinct_explicit
+  - pair: [CAND-009, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-012]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-013]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-014]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-010, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-013]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-014]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-025]
+    relationship: distinct_explicit
+  - pair: [CAND-012, CAND-026]
+    relationship: distinct_explicit
+  - pair: [CAND-012, CAND-027]
+    relationship: distinct_explicit
+  - pair: [CAND-012, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-012, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-014]
+    relationship: parent_child
+  - pair: [CAND-013, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-020]
+    relationship: distinct_explicit
+  - pair: [CAND-013, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-025]
+    relationship: distinct_explicit
+  - pair: [CAND-013, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-013, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-015]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-016]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-014, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-016]
+    relationship: parent_child
+  - pair: [CAND-015, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-015, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-017]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-018]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-016, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-017, CAND-018]
+    relationship: parent_child
+  - pair: [CAND-017, CAND-019]
+    relationship: distinct_explicit
+  - pair: [CAND-017, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-017, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-017, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-017, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-017, CAND-024]
+    relationship: distinct_explicit
+  - pair: [CAND-017, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-017, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-017, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-017, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-017, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-019]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-018, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-019, CAND-020]
+    relationship: distinct_partition
+  - pair: [CAND-019, CAND-021]
+    relationship: distinct_partition
+  - pair: [CAND-019, CAND-022]
+    relationship: distinct_partition
+  - pair: [CAND-019, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-019, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-019, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-019, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-019, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-019, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-019, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-020, CAND-021]
+    relationship: parent_child
+  - pair: [CAND-020, CAND-022]
+    relationship: parent_child
+  - pair: [CAND-020, CAND-023]
+    relationship: parent_child
+  - pair: [CAND-020, CAND-024]
+    relationship: parent_child
+  - pair: [CAND-020, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-020, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-020, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-020, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-020, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-021, CAND-022]
+    relationship: distinct_explicit
+  - pair: [CAND-021, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-021, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-021, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-021, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-021, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-021, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-021, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-022, CAND-023]
+    relationship: distinct_partition
+  - pair: [CAND-022, CAND-024]
+    relationship: distinct_partition
+  - pair: [CAND-022, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-022, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-022, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-022, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-022, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-023, CAND-024]
+    relationship: distinct_explicit
+  - pair: [CAND-023, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-023, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-023, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-023, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-023, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-024, CAND-025]
+    relationship: distinct_partition
+  - pair: [CAND-024, CAND-026]
+    relationship: distinct_explicit
+  - pair: [CAND-024, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-024, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-024, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-025, CAND-026]
+    relationship: distinct_partition
+  - pair: [CAND-025, CAND-027]
+    relationship: distinct_partition
+  - pair: [CAND-025, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-025, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-026, CAND-027]
+    relationship: parent_child
+  - pair: [CAND-026, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-026, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-027, CAND-028]
+    relationship: distinct_partition
+  - pair: [CAND-027, CAND-029]
+    relationship: distinct_partition
+  - pair: [CAND-028, CAND-029]
+    relationship: parent_child

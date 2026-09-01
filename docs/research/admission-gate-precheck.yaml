@@ -1,13 +1,20 @@
-version: 0.2.0
+version: 0.3.0
 cr: CR-DEA-BC-02 section 38 (dry run)
-compiled: '2026-08-31 (v0.2: generality axis resolved by enterprise-generality-matrix.yaml)'
+compiled: '2026-09-01 (v0.3: distinctness axis resolved by distinctness-sweep.yaml; aggregate decisions N-007/N-008 applied)'
 status: pre-check only; no candidate admitted; final admission remains subject to review (section 38)
 legend:
   met: criterion satisfied on current evidence
   gap: criterion evaluated and not yet satisfied; work item identified
-  untested: criterion not yet evaluated; the artifact that tests it is pending
+  untested: criterion not yet evaluated; the artifact or decision that tests it is pending
 pending_artifacts:
-  distinctness: normalization coverage beyond the six decided pairs
+  distinctness: 'CAND-005/CAND-006 unification decision (deferred; trigger: government reference models, gap G5)'
+removed:
+- candidate: CAND-004
+  name: Stakeholder Relationship Management
+  disposition: reclassified grouping parent (normalization N-007); withdrawn from the admission track; boundary gap resolved by reclassification
+- candidate: CAND-011
+  name: Value Delivery
+  disposition: dissolved as first-order candidate (normalization N-008); rejected aggregate; boundary gap resolved by dissolution
 evaluations:
 - candidate: CAND-001
   name: Strategy
@@ -19,12 +26,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-002
   name: Strategic Planning
   criteria:
@@ -35,12 +41,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-003
   name: Enterprise Governance
   criteria:
@@ -51,29 +56,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
-- candidate: CAND-004
-  name: Stakeholder Relationship Management
-  criteria:
-    evidence_ge_E3: met
-    classification_capability: met
-    enterprise_generality: met
-    durability: met
-    implementation_independence: met
-    outcome_identifiable: met
-    boundary_defensible: gap
-    distinctness: untested
-    specialization_not_required: met
-    ecf_mapping: met
-  gaps:
-  - boundary_defensible
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-005
   name: Customer Management
   criteria:
@@ -107,7 +94,6 @@ evaluations:
   - boundary_defensible
   - enterprise_generality
   untested:
-  - enterprise_generality
   - distinctness
 - candidate: CAND-007
   name: Supplier Management
@@ -134,12 +120,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-009
   name: Offering Management
   criteria:
@@ -150,12 +135,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-010
   name: Marketing
   criteria:
@@ -171,23 +155,6 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested: []
-- candidate: CAND-011
-  name: Value Delivery
-  criteria:
-    evidence_ge_E3: met
-    classification_capability: met
-    enterprise_generality: met
-    durability: met
-    implementation_independence: met
-    outcome_identifiable: met
-    boundary_defensible: gap
-    distinctness: untested
-    specialization_not_required: met
-    ecf_mapping: met
-  gaps:
-  - boundary_defensible
-  untested:
-  - distinctness
 - candidate: CAND-012
   name: Operations
   criteria:
@@ -198,12 +165,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-013
   name: Financial Stewardship
   criteria:
@@ -214,12 +180,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-014
   name: Financial Management
   criteria:
@@ -230,14 +195,13 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-015
-  name: People / Workforce Management
+  name: Workforce Management
   criteria:
     evidence_ge_E3: met
     classification_capability: met
@@ -246,12 +210,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-016
   name: Workforce Planning
   criteria:
@@ -262,12 +225,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-017
   name: Information Management
   criteria:
@@ -278,12 +240,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-018
   name: Analytics and Intelligence
   criteria:
@@ -294,13 +255,12 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: gap
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps:
   - boundary_defensible
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-019
   name: Technology Management
   criteria:
@@ -311,12 +271,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-020
   name: Risk Management
   criteria:
@@ -372,16 +331,14 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: gap
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps:
   - evidence_ge_E3
   - boundary_defensible
   - enterprise_generality
-  untested:
-  - enterprise_generality
-  - distinctness
+  untested: []
 - candidate: CAND-024
   name: Security Management
   criteria:
@@ -392,12 +349,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-025
   name: Sourcing and Procurement
   criteria:
@@ -423,12 +379,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-027
   name: Facility Management
   criteria:
@@ -439,12 +394,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-028
   name: Change Management
   criteria:
@@ -455,12 +409,11 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: met
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps: []
-  untested:
-  - distinctness
+  untested: []
 - candidate: CAND-029
   name: Innovation Management
   criteria:
@@ -471,17 +424,16 @@ evaluations:
     implementation_independence: met
     outcome_identifiable: met
     boundary_defensible: gap
-    distinctness: untested
+    distinctness: met
     specialization_not_required: met
     ecf_mapping: met
   gaps:
   - evidence_ge_E3
   - boundary_defensible
   - enterprise_generality
-  untested:
-  - enterprise_generality
-  - distinctness
+  untested: []
 summary:
-  candidates: 29
+  candidates_on_track: 27
   clean_except_pending_artifacts: 23
-  with_gaps: 6
+  with_gaps: 4
+  removed: 2
