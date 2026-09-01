@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://technehub-labs.github.io/dea-catalog-business-capabilities/schemas/specialization-view.schema.json",
+  "title": "Specialization View",
+  "description": "A derived, version-pinned consumer of the first-order catalog (CR-DEA-BC-04; TAXONOMY.md section 4). Views reference parents by id; they never modify or replace L1 entries.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["view_id", "name", "level", "sector", "catalog_baseline", "specializations"],
+  "properties": {
+    "view_id": { "type": "string", "pattern": "^view-[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "level": { "enum": ["L2", "L3"], "description": "L2 enterprise/domain or L3 industry/sector view (TAXONOMY.md section 4)." },
+    "sector": { "type": "string" },
+    "catalog_baseline": { "type": "string", "description": "The catalog set the view was built against (version pinning, D3). Compatibility is stated, never enforced upward." },
+    "specializations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "parent", "level", "name", "definition_delta", "evidence", "status"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^SPEC-[0-9]{3}$" },
+          "parent": { "type": "string", "description": "A canonical capability id (dea:capability-...) or a parent specialization id (SPEC-NNN). Referential integrity checked by CI." },
+          "level": { "enum": ["L2", "L3"] },
+          "sector": { "type": "string" },
+          "name": { "type": "string", "description": "Industry vocabulary permitted below L1 (TAXONOMY.md section 1 rule 5 governs L1 only)." },
+          "definition_delta": { "type": "string", "description": "What the sector narrows or adds relative to the parent definition." },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sources", "rating"],
+            "properties": {
+              "sources": { "type": "array", "items": { "type": "string" }, "minItems": 1, "description": "Sector references (evidence, not authority: EVIDENCE.md stance)." },
+              "rating": { "enum": ["E1", "E2", "E3", "E4", "E5"] }
+            }
+          },
+          "status": { "enum": ["candidate", "admitted"] },
+          "aliases": { "type": "array", "items": { "type": "string" } },
+          "ecf_note": { "type": "string", "description": "Industry-specific participation note. Never contradicts the parent mapping (D6)." }
+        }
+      }
+    },
+    "inherited": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Canonical capability ids the view adopts unchanged (inheritance only, no delta)."
+    },
+    "rejected": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "reason"],
+        "properties": {
+          "name": { "type": "string" },
+          "reason": { "type": "string", "description": "Why the candidate specialization fails (typically the business-object test, D7)." }
+        }
+      }
+    },
+    "deferred": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "reason"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^SPEC-[A-Z0-9-]+$" },
+          "reason": { "type": "string" }
+        }
+      }
+    }
+  }
+}
