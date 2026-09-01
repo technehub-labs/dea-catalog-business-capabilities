@@ -1,0 +1,74 @@
+closeout_version: 0.1.0
+cr: CR-DEA-BC-02 (section 39 Definition of Done verification)
+compiled: '2026-09-01'
+status: CR-DEA-BC-02 execution complete; deliverables landed on main; admission recommendations await review (section 38)
+verification: each row checked programmatically against landed artifacts on main (2026-09-01)
+dod_ledger:
+- row: Evidence corpus established
+  result: 12 sources, 7 classes
+  evidence: evidence-register.yaml v0.2
+- row: Evidence register established
+  result: register + review summary
+  evidence: EVIDENCE-REGISTER-v0.1.md; register v0.2
+- row: Candidate universe established
+  result: 35 classified entries
+  evidence: candidates.yaml v0.2; CANDIDATE-UNIVERSE-v0.1.md
+- row: Candidate classification completed
+  result: 16-class taxonomy applied to all 35
+  evidence: candidates.yaml v0.2
+- row: Candidate normalization completed
+  result: 9 decisions + 1 deferred (G5 trigger)
+  evidence: normalization.yaml v0.2; NORMALIZATION-v0.1.md
+- row: Enterprise-generality comparison completed
+  result: 26 demonstrated / 2 partial / 1 sector-bound
+  evidence: enterprise-generality-matrix.yaml v0.1
+- row: Capability boundaries documented
+  result: 351 pairs; distinctness 26/27
+  evidence: distinctness-sweep.yaml v0.1; report section 9
+- row: Non-capability candidates identified
+  result: 4 rejected with correct-home referrals
+  evidence: admission-gate-closeout.yaml v0.1
+- row: Industry-specialization candidates identified
+  result: SPEC-001..003 + boundary evidence
+  evidence: specialization-register.yaml v0.1
+- row: Preliminary ECF overlay completed
+  result: 28 mapped; 1 held unmapped (legitimately absent)
+  evidence: preliminary-ecf-overlay.yaml v0.1
+- row: ECF gaps and empty cells documented without forced filling
+  result: 'empty_cells_legitimate recorded; forced coverage: 0'
+  evidence: overlay v0.1; v09 coverage map
+- row: Preliminary first-order set identified
+  result: 23 candidates, all 10 axes met
+  evidence: admission-gate-closeout.yaml v0.1
+- row: Canonical admission recommendations documented
+  result: recommends only; admits nothing
+  evidence: ADMISSION-GATE-CLOSEOUT-v0.1.md
+- row: Rejected and deferred candidates documented
+  result: 4 rejected, 4 deferred with triggers, 2 removed
+  evidence: gate close-out v0.1
+- row: Unresolved questions documented
+  result: 7 open items with triggers
+  evidence: RESEARCH-REPORT-v0.1.md section 16
+- row: Research report published
+  result: 17 sections per section 34
+  evidence: RESEARCH-REPORT-v0.1.md + research-report.yaml
+- row: Visual research artifacts published
+  result: 9 of 9, data-derived SVG
+  evidence: VISUALS-v0.1.md + visuals.yaml
+- row: OTCHERE Inc / OTCHERE and Kwesi used for all canonical examples
+  result: OTCHERE present; zero placeholder orgs (grep-verified)
+  evidence: docs/ sweep 2026-09-01
+- row: No ACME examples introduced
+  result: zero non-meta occurrences (grep-verified)
+  evidence: docs/ sweep 2026-09-01
+open_items_forwarded:
+- Review of the 23-candidate recommendation set (semantic then architectural gate, METHODOLOGY.md section 12)
+- 'G5 corpus gap: government reference models (gates CAND-005/006 unification; moves CAND-023/029/035)'
+- CAND-018 boundary delineation vs CAND-017 (targeted decision, not a research phase)
+- 'Six ECF conflict flags (CAND-008/010/017/018/019/028): review-time decisions'
+- 'N-006 carried question: Technology Management as domain capability vs cross-cutting concern'
+- Overlay regeneration to v0.2 post-review (applies N-007/N-008 to the map)
+- 'Numbering reconciliation: CR-DEA-BC-02 section 40 names BC-03 as canonicalization; CR-DEA-BC-01 (accepted later) names
+  BC-03 as schema + CI and treats canonical admission as BC-02 execution. Decision needed before the next CR opens.'
+next_gate: 'CR-DEA-BC-03 (per CR-DEA-BC-01 phase plan: schema + CI reconciliation with dea-metamodel), after the numbering
+  reconciliation'
