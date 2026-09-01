@@ -44,30 +44,36 @@ Specializations reference parents; they never modify or replace them. A speciali
 | Research candidates | `CAND-NNN` (candidate universe; never reused) |
 | Sources | `SRC-NNN` (evidence register) |
 | Normalization decisions | `N-NNN` (normalization register) |
-| Canonical entries | ID assigned at admission; one file per entry, `entities/v1-alpha/capability-<slug>.yaml` (per CR-DEA-BC-03 schema, when landed) |
+| Canonical entries | ID `dea:capability-<slug>`; one file per entry, `entities/v1-alpha/capability-<slug>.yaml` (CR-DEA-BC-03 schema) |
+| Specializations | `SPEC-NNN` (three digits, sequential; register: `docs/research/specialization-register.yaml`); exist only inside views |
+| Specialization views | `mappings/specializations/view-<sector>-<name>.yaml`; view id `view-<sector>-<name>` (CR-DEA-BC-04) |
 | Research artifacts | Dual delivery: YAML register + Markdown summary, versioned together |
 
 ## 6. Repository structure
 
-Current (post CR-DEA-BC-01 Phase 1):
+Current (post CR-DEA-BC-04 Phase 1):
 
 ```
 dea-catalog-business-capabilities/
 ├── metamodel-pointer.yaml     ← allocation (auto-generated, do not edit)
 ├── README.md
-├── METHODOLOGY.md             ← the method (this Phase 1 set)
+├── METHODOLOGY.md             ← the method set (CR-DEA-BC-01 Phase 1)
 ├── EVIDENCE.md
 ├── GOVERNANCE.md
 ├── TAXONOMY.md
 ├── change-requests/           ← landed CRs + index
+├── schemas/                   ← entity + specialization-view schemas, fixtures (CR-DEA-BC-03/04)
+├── entities/v1-alpha/         ← the canonical 23 (admitted 2026-09-01)
+├── mappings/specializations/  ← views (CR-DEA-BC-04; first: MCSP)
 ├── docs/
 │   ├── FOUNDATIONS.md         ← rationale and decision register
 │   └── research/              ← CR-DEA-BC-02 artifacts (YAML + MD)
 └── .github/workflows/
-    └── validate-allocation.yml
+    ├── validate-allocation.yml
+    └── validate-entries.yml   ← entries, views, fixtures, referential integrity
 ```
 
-Planned (later phases, indicative): `entities/v1-alpha/`, `schemas/`, `mappings/ecf/`, `mappings/specializations/`, `mappings/synonyms/`. Adoption is reconciled with catalog-wide conventions before any directory is created; nothing here pre-empts CR-DEA-BC-03.
+Still planned, indicative: `mappings/ecf/`, `mappings/synonyms/`. Adopted only when a CR creates them.
 
 ## 7. References
 

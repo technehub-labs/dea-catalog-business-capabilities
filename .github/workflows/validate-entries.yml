@@ -50,4 +50,18 @@ jobs:
         with:
           schema: schemas/entity.schema.json
           files: |
-            schemas/fixtures/**/*.yaml
+            schemas/fixtures/example-valid.yaml
+
+      - name: Validate specialization views against the view schema
+        uses: dsanders11/json-schema-validate-action@v2.1.0
+        with:
+          schema: schemas/specialization-view.schema.json
+          files: |
+            mappings/specializations/view-*.yaml
+            schemas/fixtures/example-view-valid.yaml
+
+      - name: Install referential-integrity checker dependencies
+        run: pip install pyyaml
+
+      - name: Check view referential integrity (parents resolve)
+        run: python scripts/check_view_refs.py 'mappings/specializations/view-*.yaml'

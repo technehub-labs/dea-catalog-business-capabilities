@@ -1,0 +1,30 @@
+# Fixture: specialization-view schema self-exercise. NOT a real view.
+# Lives outside mappings/ so it can never be mistaken for an adopted view.
+view_id: view-fixture-sector
+name: Fixture Sector View (not real)
+level: L3
+sector: Fixture
+catalog_baseline: "fixture"
+
+specializations:
+  - id: SPEC-001
+    parent: dea:capability-customer-management
+    level: L3
+    sector: Fixture
+    name: Fixture Customer Management
+    definition_delta: Fixture delta exercising the record shape.
+    evidence:
+      sources: [fixture sector reference]
+      rating: E2
+    status: candidate
+
+inherited:
+  - dea:capability-operations
+
+rejected:
+  - name: Fixture Impostor
+    reason: Fails the business-object test (fixture).
+
+deferred:
+  - id: SPEC-009
+    reason: Fixture deferral exercising the deferred block.
