@@ -1,0 +1,65 @@
+id: dea:capability-resilience-management
+type: BusinessCapability
+name: Resilience Management
+definition: The ability to continue delivering products and services at an acceptable predefined capacity during disruption, and to recover.
+version: 1.0.0
+lifecycle_status: active
+capability_layer: support
+outcome: Delivery continues at acceptable predefined capacity through disruption; response and recovery are prepared, exercised, and validated.
+business_object: Continuity
+ecf:
+  primary:
+    domain: governance-existence
+    stage: design
+  secondary:
+  - domain: governance-existence
+    stage: operate
+related_capabilities:
+- dea:capability-risk-management
+- dea:capability-security-management
+evidence:
+  sources:
+  - SRC-002
+  - SRC-004
+  - SRC-013
+  - SRC-014
+  rationale: Enterprise-generality demonstrated at E4 after the corpus patch (SRC-013 ISO 22301, SRC-014 BCI GPG 7.0);
+    evidence trail in docs/research (evidence-register v0.3, enterprise-generality-matrix v0.2, distinctness-sweep,
+    admission-gate-closeout, admission-review-supplementary).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix v0.1/v0.2 (PRs #11, #28)'
+  - stage: normalized
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay + gate close-out v0.1 (PRs #7, #15)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), supplementary admission review v0.1 (PR #30; R-006)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: E4; the continuity business object and the boundary against Risk and Security are drawn by ISO 22301,
+  not by assertion; BCI GPG 7.0 carries an explicit all-sector applicability claim.
+ecf_rationale: Primary governance-existence x design (continuity posture is designed into the enterprise); operated
+  continuously through disruption response.
+boundary: Manages continuity of delivery through disruption; does not treat uncertainty (Risk Management) or apply
+  protective control (Security Management).
+non_examples:
+- A business continuity plan (an artifact)
+- A crisis management team (an organization)
+specialization_boundary: Sector continuity regimes (financial operational resilience under DORA, clinical service
+  continuity) are specialization; the ability to continue delivery is not.
