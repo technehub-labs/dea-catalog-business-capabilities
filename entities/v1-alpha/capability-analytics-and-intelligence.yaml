@@ -1,7 +1,8 @@
 id: dea:capability-analytics-and-intelligence
 type: BusinessCapability
 name: Analytics and Intelligence
-definition: The ability to derive decision-grade insight from information the enterprise stewards or acquires.
+definition: The ability to derive decision-grade insight from information the enterprise
+  stewards or acquires.
 version: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -18,9 +19,10 @@ evidence:
   sources:
   - SRC-002
   - SRC-006
-  rationale: 'E3; boundary settled by boundary-decision-cand-018 v0.1 (PR #29); evidence trail in docs/research
-    (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout,
-    boundary-decision-cand-018, admission-review-supplementary v0.2).'
+  rationale: 'E3; boundary settled by boundary-decision-cand-018 v0.1 (PR #29); evidence
+    trail in docs/research (evidence-register, enterprise-generality-matrix, distinctness-sweep,
+    admission-gate-closeout, boundary-decision-cand-018, admission-review-supplementary
+    v0.2).'
 provenance:
   ladder_passage:
   - stage: candidate
@@ -34,10 +36,12 @@ provenance:
     actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
   - stage: normalized
     date: '2026-09-01'
-    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12; N-003/N-009)'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8,
+      #12; N-003/N-009)'
   - stage: ecf-mapped
     date: '2026-09-01'
-    actor: 'Coder (for eaojnr), placement decided at the supplementary review gate (PR #31; R-008)'
+    actor: 'Coder (for eaojnr), placement decided at the supplementary review gate
+      (PR #31; R-008)'
   - stage: reviewed
     date: '2026-09-01'
     actor: 'Coder (for eaojnr), supplementary admission review v0.2 (PR #31; R-008)'
@@ -47,15 +51,62 @@ provenance:
 specialization:
   allowed: true
   industry_examples: []
-why_capability: 'E3; the object and outcome tests carry the decision (Insight is a produced thing with its own
-  lifecycle; decisions informed is an outcome distinct from information stewarded); vendor-heavy support noted and
-  not load-bearing (boundary decision v0.1).'
-ecf_rationale: 'R-008: operations-delivery x operate; the span of analytics across domains is a property of the
-  Insight object (R-003 parity), so secondaries stay empty per honest-not-exhaustive.'
-boundary: Derives insight; does not steward information (Information Management). Stewardship ends where derivation
-  begins (boundary decision v0.1).
+why_capability: E3; the object and outcome tests carry the decision (Insight is a
+  produced thing with its own lifecycle; decisions informed is an outcome distinct
+  from information stewarded); vendor-heavy support noted and not load-bearing (boundary
+  decision v0.1).
+ecf_rationale: 'R-008: operations-delivery x operate; the span of analytics across
+  domains is a property of the Insight object (R-003 parity), so secondaries stay
+  empty per honest-not-exhaustive.'
+boundary: Derives insight; does not steward information (Information Management).
+  Stewardship ends where derivation begins (boundary decision v0.1).
 non_examples:
 - A dashboard (a system artifact)
 - A data science team (an organization)
-specialization_boundary: Sector analytics (clinical, actuarial, fraud) are specialization; the ability to derive
-  insight is not.
+specialization_boundary: Sector analytics (clinical, actuarial, fraud) are specialization;
+  the ability to derive insight is not.
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: mapped
+  canonicalReferences:
+  - kind: coordinate
+    domain: OperationsAndDelivery
+    stage: Operate
+    identifier: ecf:operationsDelivery.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: primary
+  extensions:
+  - name: kebab-case-domain-vocabulary
+    kind: display-vocabulary
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven
+      ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums
+      for the gate.
+    doesNotRedefine: true
+    mapping:
+      governance-existence: GovernanceAndExistence
+      supply-resources: SupplyAndResources
+      people-organization: PeopleAndOrganization
+      customer-demand: CustomerAndDemand
+      product-offering: ProductAndOffering
+      operations-delivery: OperationsAndDelivery
+      finance-value: FinanceAndValue
+      _stage_conceive: Conceive
+      _stage_design: Design
+      _stage_build: Build
+      _stage_activate: Activate
+      _stage_operate: Operate
+      _stage_improve: Improve
+      _stage_retire: Retire
+  - name: multiple-contextual-coordinates
+    kind: catalog-specific-relation
+    description: A capability may have one primary and zero-or-more secondary canonical
+      coordinates without identity duplication (CG-003 §5).
+    doesNotRedefine: true
+  - name: held-unmapped
+    kind: classification-state
+    description: State for capabilities with no ECF affiliation by design (N-006);
+      does not appear on this entry because primary is set.
+    doesNotRedefine: true

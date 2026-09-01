@@ -2,83 +2,122 @@ view_id: view-telecom-mcsp
 name: Mobile Communications Service Provider
 level: L3
 sector: Telecommunications (mobile services)
-catalog_baseline: "v1-alpha admission set of 2026-09-01 (23 canonical first-order capabilities)"
-
+catalog_baseline: v1-alpha admission set of 2026-09-01 (23 canonical first-order capabilities)
 specializations:
-  - id: SPEC-001
-    parent: dea:capability-customer-management
-    level: L3
-    sector: Telecommunications (mobile services)
-    name: Telecom Customer Management
-    definition_delta: "The customer is a subscriber; the relationship is anchored in a subscription, a number, and a device. Lifecycle events carry sector-specific weight: activation, port-in and port-out, SIM change, churn windows set by contract terms."
-    evidence:
-      sources: [TM Forum business frameworks, BIAN service landscape, sector operator annual reports]
-      rating: E3
-    status: admitted
-    aliases: [Subscriber Management]
-    ecf_note: "Inherits customer-demand x operate; sector practice adds deliberate conceive (proposition design) and retire (churn and port-out) participation already covered by the parent secondary coordinates."
-
-  - id: SPEC-004
-    parent: dea:capability-offering-management
-    level: L3
-    sector: Telecommunications (mobile services)
-    name: Tariff and Bundle Management
-    definition_delta: "Offerings are tariffs, bundles, and add-ons priced against usage dimensions (data, voice, messaging, roaming). The offering lifecycle includes regulatory notification duties in most jurisdictions."
-    evidence:
-      sources: [TM Forum product catalog practice, sector operator published tariff structures]
-      rating: E3
-    status: admitted
-    aliases: [Product Catalog Management]
-
-  - id: SPEC-005
-    parent: dea:capability-partner-management
-    level: L3
-    sector: Telecommunications (mobile services)
-    name: Roaming and Interconnect Management
-    definition_delta: "Peer relationships are other operators; the agreements are roaming and interconnect, with wholesale rates, settlement, and coverage footprints as the managed objects."
-    evidence:
-      sources: [GSMA standard roaming and wholesale agreement practice, sector interconnect regulation]
-      rating: E3
-    status: admitted
-
-  - id: SPEC-006
-    parent: dea:capability-compliance-management
-    level: L3
-    sector: Telecommunications (mobile services)
-    name: Telecom Regulatory Compliance
-    definition_delta: "The obligation set is sector-specific; license conditions, lawful intercept, emergency services access, number portability duties, universal service obligations, and spectrum usage conditions."
-    evidence:
-      sources: [sector telecommunications acts and regulator license frameworks, ITU practice]
-      rating: E3
-    status: admitted
-
+- id: SPEC-001
+  parent: dea:capability-customer-management
+  level: L3
+  sector: Telecommunications (mobile services)
+  name: Telecom Customer Management
+  definition_delta: 'The customer is a subscriber; the relationship is anchored in
+    a subscription, a number, and a device. Lifecycle events carry sector-specific
+    weight: activation, port-in and port-out, SIM change, churn windows set by contract
+    terms.'
+  evidence:
+    sources:
+    - TM Forum business frameworks
+    - BIAN service landscape
+    - sector operator annual reports
+    rating: E3
+  status: admitted
+  aliases:
+  - Subscriber Management
+  ecf_note: Inherits customer-demand x operate; sector practice adds deliberate conceive
+    (proposition design) and retire (churn and port-out) participation already covered
+    by the parent secondary coordinates.
+- id: SPEC-004
+  parent: dea:capability-offering-management
+  level: L3
+  sector: Telecommunications (mobile services)
+  name: Tariff and Bundle Management
+  definition_delta: Offerings are tariffs, bundles, and add-ons priced against usage
+    dimensions (data, voice, messaging, roaming). The offering lifecycle includes
+    regulatory notification duties in most jurisdictions.
+  evidence:
+    sources:
+    - TM Forum product catalog practice
+    - sector operator published tariff structures
+    rating: E3
+  status: admitted
+  aliases:
+  - Product Catalog Management
+- id: SPEC-005
+  parent: dea:capability-partner-management
+  level: L3
+  sector: Telecommunications (mobile services)
+  name: Roaming and Interconnect Management
+  definition_delta: Peer relationships are other operators; the agreements are roaming
+    and interconnect, with wholesale rates, settlement, and coverage footprints as
+    the managed objects.
+  evidence:
+    sources:
+    - GSMA standard roaming and wholesale agreement practice
+    - sector interconnect regulation
+    rating: E3
+  status: admitted
+- id: SPEC-006
+  parent: dea:capability-compliance-management
+  level: L3
+  sector: Telecommunications (mobile services)
+  name: Telecom Regulatory Compliance
+  definition_delta: The obligation set is sector-specific; license conditions, lawful
+    intercept, emergency services access, number portability duties, universal service
+    obligations, and spectrum usage conditions.
+  evidence:
+    sources:
+    - sector telecommunications acts and regulator license frameworks
+    - ITU practice
+    rating: E3
+  status: admitted
 inherited:
-  - dea:capability-strategy
-  - dea:capability-strategic-planning
-  - dea:capability-enterprise-governance
-  - dea:capability-supplier-management
-  - dea:capability-marketing
-  - dea:capability-operations
-  - dea:capability-financial-stewardship
-  - dea:capability-financial-management
-  - dea:capability-workforce-management
-  - dea:capability-workforce-planning
-  - dea:capability-information-management
-  - dea:capability-technology-management
-  - dea:capability-risk-management
-  - dea:capability-legal-management
-  - dea:capability-security-management
-  - dea:capability-sourcing-and-procurement
-  - dea:capability-asset-management
-  - dea:capability-facility-management
-  - dea:capability-change-management
-
+- dea:capability-strategy
+- dea:capability-strategic-planning
+- dea:capability-enterprise-governance
+- dea:capability-supplier-management
+- dea:capability-marketing
+- dea:capability-operations
+- dea:capability-financial-stewardship
+- dea:capability-financial-management
+- dea:capability-workforce-management
+- dea:capability-workforce-planning
+- dea:capability-information-management
+- dea:capability-technology-management
+- dea:capability-risk-management
+- dea:capability-legal-management
+- dea:capability-security-management
+- dea:capability-sourcing-and-procurement
+- dea:capability-asset-management
+- dea:capability-facility-management
+- dea:capability-change-management
 rejected:
-  - name: Network Management
-    reason: "Fails the business-object test (D7): the object is technology (the network), not a business object. Technology estate stewardship is already canonical (dea:capability-technology-management); network operations belong to the L5 realization concern, not to a business capability view."
-
+- name: Network Management
+  reason: 'Fails the business-object test (D7): the object is technology (the network),
+    not a business object. Technology estate stewardship is already canonical (dea:capability-technology-management);
+    network operations belong to the L5 realization concern, not to a business capability
+    view.'
 deferred:
-  - id: SPEC-002
-    reason: "Citizen/Member Relationship stays gated on the G5 corpus gap (government reference models), per the specialization register; a telecom view does not move it."
-  - id: SPEC-003
-    reason: "Claims Management parent undetermined; this view does not force a parent."
+- id: SPEC-002
+  reason: Citizen/Member Relationship stays gated on the G5 corpus gap (government
+    reference models), per the specialization register; a telecom view does not move
+    it.
+- id: SPEC-003
+  reason: Claims Management parent undetermined; this view does not force a parent.
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: inherits-catalog
+  canonicalReferences:
+  - kind: baseline-catalog
+    baselineVersion: v1-alpha admission set of 2026-09-01 (23 canonical first-order
+      capabilities)
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: inherited-baseline
+  extensions:
+  - name: sector-context
+    kind: view-specific-relation
+    description: The view carries sector context (Telecommunications mobile services)
+      on top of the catalog baseline. Sector context is not a substitute for canonical
+      ECF references; the underlying entries retain their canonical affiliations.
+    doesNotRedefine: true

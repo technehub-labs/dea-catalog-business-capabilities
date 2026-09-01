@@ -1,16 +1,19 @@
 id: dea:capability-technology-management
 type: BusinessCapability
 name: Technology Management
-definition: The ability to direct, invest in, and steward the enterprise's technology estate.
+definition: The ability to direct, invest in, and steward the enterprise's technology
+  estate.
 version: 1.0.0
 lifecycle_status: active
 capability_layer: support
-outcome: Technology choices are deliberate, funded, lifecycle-managed, and answerable to strategy.
+outcome: Technology choices are deliberate, funded, lifecycle-managed, and answerable
+  to strategy.
 business_object: Technology
 ecf:
   held_unmapped: true
-  note: 'Held unmapped per admission review R-004: no ECF domain carries technology (an L5 concern in OpenDEAM layering).
-    Revisit if the metaframework gains a technology-bearing domain.'
+  note: 'Held unmapped per admission review R-004: no ECF domain carries technology
+    (an L5 concern in OpenDEAM layering). Revisit if the metaframework gains a technology-bearing
+    domain.'
 related_capabilities:
 - dea:capability-information-management
 evidence:
@@ -18,8 +21,8 @@ evidence:
   - SRC-002
   - SRC-004
   - SRC-005
-  rationale: Enterprise-generality demonstrated at E4; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
-    distinctness-sweep, admission-gate-closeout).
+  rationale: Enterprise-generality demonstrated at E4; evidence trail in docs/research
+    (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
 provenance:
   ladder_passage:
   - stage: candidate
@@ -33,7 +36,8 @@ provenance:
     actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
   - stage: normalized
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8,
+      #12)'
   - stage: ecf-mapped
     date: '2026-08-31'
     actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
@@ -46,12 +50,42 @@ provenance:
 specialization:
   allowed: true
   industry_examples: []
-why_capability: 'E4; N-006 resolved at review (R-004): a business capability whose object is Technology, not a cross-cutting
-  concern. ECF legitimately absent: no ECF domain carries technology (an L5 layer concern).'
-ecf_rationale: 'R-004: held unmapped with recorded reason; the section 38 legitimately-absent clause applies.'
-boundary: Stewards the technology estate; does not manage the information it carries (Information Management) or operate delivery
-  (Operations).
+why_capability: 'E4; N-006 resolved at review (R-004): a business capability whose
+  object is Technology, not a cross-cutting concern. ECF legitimately absent: no ECF
+  domain carries technology (an L5 layer concern).'
+ecf_rationale: 'R-004: held unmapped with recorded reason; the section 38 legitimately-absent
+  clause applies.'
+boundary: Stewards the technology estate; does not manage the information it carries
+  (Information Management) or operate delivery (Operations).
 non_examples:
 - An IT department (an organization)
 - A specific platform (a system)
-specialization_boundary: Technology domains (network, cloud, OT) are specialization of the estate, not of the ability.
+specialization_boundary: Technology domains (network, cloud, OT) are specialization
+  of the estate, not of the ability.
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: held-unmapped
+  rationaleRef: N-006
+  canonicalReferences: []
+  extensions:
+  - name: held-unmapped
+    kind: classification-state
+    description: Capability legitimately carries no ECF Coordinate; the catalog-specific
+      held-unmapped state is documented in METHODOLOGY.md and REVIEW-LOG (N-006).
+    doesNotRedefine: true
+  - name: kebab-case-domain-vocabulary
+    kind: display-vocabulary
+    description: Catalog-side kebab-case labels for the seven ECF Domains (see mapping).
+      Display-only; resolves to canonical PascalCase enums for the gate.
+    doesNotRedefine: true
+    mapping:
+      governance-existence: GovernanceAndExistence
+      supply-resources: SupplyAndResources
+      people-organization: PeopleAndOrganization
+      customer-demand: CustomerAndDemand
+      product-offering: ProductAndOffering
+      operations-delivery: OperationsAndDelivery
+      finance-value: FinanceAndValue

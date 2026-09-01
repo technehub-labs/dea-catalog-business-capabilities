@@ -1,11 +1,13 @@
 id: dea:capability-customer-management
 type: BusinessCapability
 name: Customer Management
-definition: The ability to establish, develop, and end relationships with those the enterprise serves.
+definition: The ability to establish, develop, and end relationships with those the
+  enterprise serves.
 version: 1.0.0
 lifecycle_status: active
 capability_layer: operational
-outcome: A known, managed customer base whose lifecycle is deliberate rather than accidental.
+outcome: A known, managed customer base whose lifecycle is deliberate rather than
+  accidental.
 business_object: Customer
 ecf:
   primary:
@@ -29,8 +31,8 @@ evidence:
   - SRC-004
   - SRC-005
   - SRC-006
-  rationale: Enterprise-generality demonstrated at E5; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
-    distinctness-sweep, admission-gate-closeout).
+  rationale: Enterprise-generality demonstrated at E5; evidence trail in docs/research
+    (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
 provenance:
   ladder_passage:
   - stage: candidate
@@ -44,7 +46,8 @@ provenance:
     actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
   - stage: normalized
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8,
+      #12)'
   - stage: ecf-mapped
     date: '2026-08-31'
     actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
@@ -59,14 +62,78 @@ specialization:
   industry_examples:
   - Telecom Customer Management (SPEC-001)
   - Citizen/Member Relationship (SPEC-002, deferred)
-why_capability: 'The strongest-converged capability in the corpus (E5): every source class carries it under various names.'
-ecf_rationale: Primary operate in customer-demand (the relationship lives in operation); conceived, improved, and retired
-  deliberately.
-boundary: Manages the customer relationship; does not create demand (Marketing), manage partners (Partner Management), or
-  manage the workforce (Workforce Management).
+why_capability: 'The strongest-converged capability in the corpus (E5): every source
+  class carries it under various names.'
+ecf_rationale: Primary operate in customer-demand (the relationship lives in operation);
+  conceived, improved, and retired deliberately.
+boundary: Manages the customer relationship; does not create demand (Marketing), manage
+  partners (Partner Management), or manage the workforce (Workforce Management).
 non_examples:
 - A CRM system
 - A sales call (an activity)
 - Customer Service Team (an actor)
-specialization_boundary: Who the customer is (subscriber, citizen, member, patient, policyholder) is specialization; the ability
-  to manage the relationship is not.
+specialization_boundary: Who the customer is (subscriber, citizen, member, patient,
+  policyholder) is specialization; the ability to manage the relationship is not.
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: mapped
+  canonicalReferences:
+  - kind: coordinate
+    domain: CustomerAndDemand
+    stage: Operate
+    identifier: ecf:customerDemand.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: primary
+  - kind: coordinate
+    domain: CustomerAndDemand
+    stage: Conceive
+    identifier: ecf:customerDemand.conceive
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  - kind: coordinate
+    domain: CustomerAndDemand
+    stage: Improve
+    identifier: ecf:customerDemand.improve
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  - kind: coordinate
+    domain: CustomerAndDemand
+    stage: Retire
+    identifier: ecf:customerDemand.retire
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  extensions:
+  - name: kebab-case-domain-vocabulary
+    kind: display-vocabulary
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven
+      ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums
+      for the gate.
+    doesNotRedefine: true
+    mapping:
+      governance-existence: GovernanceAndExistence
+      supply-resources: SupplyAndResources
+      people-organization: PeopleAndOrganization
+      customer-demand: CustomerAndDemand
+      product-offering: ProductAndOffering
+      operations-delivery: OperationsAndDelivery
+      finance-value: FinanceAndValue
+      _stage_conceive: Conceive
+      _stage_design: Design
+      _stage_build: Build
+      _stage_activate: Activate
+      _stage_operate: Operate
+      _stage_improve: Improve
+      _stage_retire: Retire
+  - name: multiple-contextual-coordinates
+    kind: catalog-specific-relation
+    description: A capability may have one primary and zero-or-more secondary canonical
+      coordinates without identity duplication (CG-003 §5).
+    doesNotRedefine: true
+  - name: held-unmapped
+    kind: classification-state
+    description: State for capabilities with no ECF affiliation by design (N-006);
+      does not appear on this entry because primary is set.
+    doesNotRedefine: true

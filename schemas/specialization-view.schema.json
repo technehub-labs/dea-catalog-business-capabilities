@@ -68,6 +68,19 @@
           "reason": { "type": "string" }
         }
       }
+    },
+    "ecfConformance": {
+      "type": "object",
+      "description": "ECF Conformance Gate manifest inherited from the catalog baseline (CR-ECF-CG-001..003). The view declares its conformance by inheritance. Optional at schema level; scripts/check_ecf_conformance.py enforces presence on views.",
+      "properties": {
+        "framework": { "type": "string", "const": "EnterpriseConceptFramework" },
+        "contractVersion": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "profile": { "type": "string", "pattern": "^dea:ecf@\\d+\\.\\d+\\.\\d+$" },
+        "status": { "type": "string", "enum": ["conformant", "conformant-with-extension", "non-conformant", "not-yet-assessed"] },
+        "affiliation": { "type": "string", "enum": ["mapped", "held-unmapped", "inherits-catalog"] },
+        "canonicalReferences": { "type": "array" },
+        "extensions": { "type": "array" }
+      }
     }
   }
 }
