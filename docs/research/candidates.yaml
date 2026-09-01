@@ -1,6 +1,6 @@
-universe_version: 0.2.0
+universe_version: 0.3.0
 cr: CR-DEA-BC-02
-compiled: '2026-09-01 (v0.2: normalization N-007/N-008 applied; CAND-004 grouping parent, CAND-011 dissolved, CAND-012 re-rooted)'
+compiled: '2026-09-01 (v0.3: corpus patch applied; CAND-023/CAND-029 evidence E2 -> E4, boundary and generality re-evaluated)'
 status: candidate-not-canonical
 evidence_register: docs/research/evidence-register.yaml
 classification_taxonomy:
@@ -573,8 +573,8 @@ candidates:
 - id: CAND-023
   name: Resilience Management
   classification: CAPABILITY
-  confidence: low
-  evidence_strength: E2
+  confidence: medium
+  evidence_strength: E4
   business_object_hypothesis: Continuity
   parent_candidates:
   - CAND-020
@@ -583,10 +583,14 @@ candidates:
   - CAND-020
   - SRC-002
   - SRC-004
+  - SRC-013
+  - SRC-014
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 resilience
-  rationale: Lower frequency than Risk/Compliance; hold as candidate pending cross-industry check
+  notes: Theme section 30 resilience; evidence upgraded E2 -> E4 by corpus patch (SRC-013 ISO 22301, SRC-014 BCI GPG 7.0)
+  rationale: Continuity of delivery at acceptable predefined capacity during disruption (ISO 22301); boundary against
+    Risk (uncertainty treatment) and Security (protection) drawn by standard text; generality re-scored demonstrated
+    in matrix v0.2 (8 of 10 strong)
   provenance:
     research_artifact: true
     canonical: false
@@ -710,8 +714,8 @@ candidates:
 - id: CAND-029
   name: Innovation Management
   classification: CAPABILITY
-  confidence: low
-  evidence_strength: E2
+  confidence: medium
+  evidence_strength: E4
   business_object_hypothesis: Idea
   parent_candidates:
   - CAND-028
@@ -720,10 +724,15 @@ candidates:
   - CAND-028
   - SRC-002
   - SRC-004
+  - SRC-015
+  - SRC-016
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 innovation
-  rationale: Low frequency, hold as candidate; not universally necessary
+  notes: Theme section 30 innovation; evidence upgraded E2 -> E4 by corpus patch (SRC-015 ISO 56002, SRC-016 Oslo Manual
+    2018)
+  rationale: Repeatable organization-wide idea-to-value ability (ISO 56002); outcome identifiable and measured by
+    national statistical agencies (Oslo Manual); boundary against Change Management drawn (originates vs
+    institutionalizes); generality re-scored demonstrated in matrix v0.2 (8 of 10 strong)
   provenance:
     research_artifact: true
     canonical: false
