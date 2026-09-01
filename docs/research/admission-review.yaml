@@ -1,0 +1,467 @@
+register_version: 0.1.0
+cr: 'CR-DEA-BC-02 execution: admission review gates (METHODOLOGY.md section 12)'
+compiled: '2026-09-01 (v0.1: both gates executed on the 23-candidate recommendation set; conflict flags R-001..R-005 resolved)'
+status: review record; canonical transition executes in the admission PR after steward acceptance
+inputs:
+- docs/research/admission-gate-closeout.yaml (v0.1)
+- docs/research/preliminary-ecf-overlay.yaml (v0.1)
+- METHODOLOGY.md (sections 4, 5, 8, 12)
+- TAXONOMY.md (section 1)
+- schemas/entity.schema.json (CR-DEA-BC-03)
+conflict_resolutions:
+- candidate: CAND-008
+  id: R-001
+  decision: mapping defensible as recorded
+  rationale: The partnering ability is first initiated when the enterprise conceives its demand-side relationships (customer-demand
+    x conceive); supply-side operation is legitimate participation (secondary). The dual-home tension is inherent to partnering
+    and is expressed, not smoothed.
+- candidate: CAND-010
+  id: R-002
+  decision: mapping defensible as recorded
+  rationale: N-002 settled the normalization question (Marketing stands distinct from Customer Management and Offering Management);
+    with the blocker removed, primary customer-demand x conceive (marketing conceives demand) with secondary operate is honest.
+- candidate: CAND-017
+  id: R-003
+  decision: mapping defensible as recorded; secondaries deliberately empty
+  rationale: The span of information across domains is a property of the business object, not of the capability initiation.
+    Enumerating every domain as secondary would violate the honest-not-exhaustive rule; placement at operations-delivery x
+    operate distorts neither model.
+- candidate: CAND-019
+  id: R-004
+  decision: 'N-006 resolved: business capability with business object Technology; ECF legitimately absent'
+  rationale: 'Technology Management is enterprise-general (every enterprise manages technology investment, lifecycle and sourcing
+    regardless of industry). The apparent cross-cuttingness was a mapping symptom: no ECF domain carries technology (an L5
+    layer concern). The section 38 legitimately-absent clause and the FOUNDATIONS section 1 general rule (catalogs contribute
+    where semantics legitimately intersect) cover this case exactly. Admission not blocked; entry carries held_unmapped with
+    note.'
+- candidate: CAND-028
+  id: R-005
+  decision: mapping defensible as recorded
+  rationale: 'Earliest initiation is governance-existence x improve: the ability is first exercised when the enterprise deliberately
+    improves itself. Cross-domain applicability is a property of the change object (anything may change), not a mapping defect;
+    secondaries stay empty per honest-not-exhaustive.'
+out_of_scope_flags:
+- candidate: CAND-018
+  note: ECF conflict flag owned by its deferral (boundary delineation vs CAND-017); not in the recommendation set, not reviewed
+    here
+reviews:
+- candidate: CAND-001
+  name: Strategy
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-002
+  name: Strategic Planning
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-003
+  name: Enterprise Governance
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-005
+  name: Customer Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-007
+  name: Supplier Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-008
+  name: Partner Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: 'R-001: mapping defensible as recorded'
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-009
+  name: Offering Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-010
+  name: Marketing
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: 'R-002: mapping defensible as recorded'
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-012
+  name: Operations
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-013
+  name: Financial Stewardship
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-014
+  name: Financial Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-015
+  name: Workforce Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-016
+  name: Workforce Planning
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-017
+  name: Information Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: 'R-003: mapping defensible as recorded; secondaries deliberately empty'
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-019
+  name: Technology Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: 'R-004: N-006 resolved: business capability with business object Technology; ECF legitimately absent'
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-020
+  name: Risk Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-021
+  name: Compliance Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-022
+  name: Legal Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-024
+  name: Security Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-025
+  name: Sourcing and Procurement
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-026
+  name: Asset Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-027
+  name: Facility Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per overlay v0.1 accepted
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-028
+  name: Change Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (gate close-out v0.1)
+  architectural_gate:
+    verdict: pass
+    ecf: 'R-005: mapping defensible as recorded'
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+summary:
+  reviewed: 23
+  cleared: 23
+  held: 0
+  conflict_flags_resolved: 5
+  flags_out_of_scope: 1
