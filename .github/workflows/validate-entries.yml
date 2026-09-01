@@ -1,0 +1,50 @@
+name: validate-entries
+
+# Validates catalog entries and the schema fixture against
+# schemas/entity.schema.json (CR-DEA-BC-03, D8). Complements the allocation
+# validator (validate-allocation.yml); entries appear only via admission PRs
+# after the method review gates (METHODOLOGY.md section 12).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect entity files
+        id: detect
+        run: |
+          if compgen -G "entities/v1-alpha/capability-*.yaml" > /dev/null || compgen -G "entities/v1-alpha/capability-*.json" > /dev/null; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate YAML entries against the catalog schema
+        if: steps.detect.outputs.present == 'true'
+        uses: ajvdotpy/ajv-py-action@v1
+        with:
+          schema: schemas/entity.schema.json
+          glob: 'entities/**/*.yaml'
+          fail-on-error: true
+
+      - name: Validate JSON entries against the catalog schema
+        if: steps.detect.outputs.present == 'true'
+        uses: ajvdotpy/ajv-py-action@v1
+        with:
+          schema: schemas/entity.schema.json
+          glob: 'entities/**/*.json'
+          fail-on-error: true
+
+      - name: Validate schema fixture (schema self-exercise)
+        uses: ajvdotpy/ajv-py-action@v1
+        with:
+          schema: schemas/entity.schema.json
+          glob: 'schemas/fixtures/**/*.yaml'
+          fail-on-error: true
