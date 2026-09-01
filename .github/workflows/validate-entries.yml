@@ -5,10 +5,10 @@ name: validate-entries
 # validator (validate-allocation.yml); entries appear only via admission PRs
 # after the method review gates (METHODOLOGY.md section 12).
 #
-# Implementation note: the catalog-wide precedent referenced the
-# ajvdotpy/ajv-py-action GitHub Action, which no longer resolves (repository
-# not found, 2026-09-01). This workflow uses scripts/validate_entries.py
-# (jsonschema draft-07) instead: same contract, no third-party action risk.
+# Convention: dsanders11/json-schema-validate-action@v2.1.0 with the
+# empty-entities skip guard, matching the catalog-wide pattern
+# (dea-catalog-actors/processes/stakeholders). The fixture step is this
+# catalog's addition: it keeps the schema exercised while entities/ is empty.
 
 on:
   push:
@@ -22,15 +22,32 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      - name: Check for catalog entries
+        id: check
+        run: |
+          shopt -s nullglob globstar
+          count=0
+          for f in entities/**/*.yaml entities/**/*.json; do
+            [ -f "$f" ] && count=$((count + 1))
+          done
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          if [ "$count" -eq 0 ]; then
+            echo "No catalog entries to validate (admission gates not started). Skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
 
-      - name: Install validator dependencies
-        run: pip install jsonschema pyyaml
+      - name: Validate catalog entries against the Business Capability schema
+        if: steps.check.outputs.skip != 'true'
+        uses: dsanders11/json-schema-validate-action@v2.1.0
+        with:
+          schema: schemas/entity.schema.json
+          files: |
+            entities/**/*.yaml
+            entities/**/*.json
 
       - name: Validate schema fixture (schema self-exercise)
-        run: python scripts/validate_entries.py schemas/entity.schema.json 'schemas/fixtures/**/*.yaml'
-
-      - name: Validate catalog entries (if any exist)
-        run: python scripts/validate_entries.py schemas/entity.schema.json 'entities/**/*.yaml' 'entities/**/*.json'
+        uses: dsanders11/json-schema-validate-action@v2.1.0
+        with:
+          schema: schemas/entity.schema.json
+          files: |
+            schemas/fixtures/**/*.yaml

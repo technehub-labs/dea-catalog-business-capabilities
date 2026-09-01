@@ -16,6 +16,12 @@ Change requests for the Business Capability catalog. CRs land verbatim on accept
 - Successors are parked, not scheduled: CR-DEA-BC-03 (schema + CI reconciliation with dea-metamodel), CR-DEA-BC-04 (industry specialization framework; first view: Mobile Communications Service Provider).
 - **Decision 2026-09-01 (numbering reconciliation):** CR-DEA-BC-02 section 40 (authored before the method CR) named BC-03 as "First-Order Capability Canonicalization"; CR-DEA-BC-01 (accepted later) names BC-03 as schema + CI and treats canonical admission as BC-02's own execution through the section 38 gate and the method review gates. Decided: **the CR-DEA-BC-01 assignment holds.** Canonical admission of the recommended set is method execution (METHODOLOGY.md section 12), not a separate CR; CR-DEA-BC-03 is the schema + CI reconciliation. Recorded per the renumbering convention (GOVERNANCE.md section 2).
 
+## Corrections to landed CRs
+
+Landed CRs are immutable; corrections are recorded here.
+
+- **CR-DEA-BC-03, decision D8 (2026-09-01):** the CR cites "the actors pattern: ajv-py-action" as the CI mechanism. That action name was a phantom: it never existed on GitHub and had been replaced org-wide on 2026-08-09 (dea-catalog-actors PR #2). The citation came from a stale local checkout of dea-catalog-actors. The implemented and accepted mechanism is `dsanders11/json-schema-validate-action@v2.1.0` with the empty-entities skip guard (the true catalog-wide pattern), plus this catalog's fixture self-exercise step. Decision D8 stands with that substitution.
+
 ## Ordering note
 
 CR-DEA-BC-02 executes ahead of CR-DEA-BC-01 by design: the investigation produces raw material; the method CR defines how that material is judged. Acceptance of CR-DEA-BC-01 does not retro-invalidate the research artifacts; it gates their promotion. Nothing becomes canonical until it passes the method.
