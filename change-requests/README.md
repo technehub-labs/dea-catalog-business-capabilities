@@ -7,7 +7,8 @@ Change requests for the Business Capability catalog. CRs land verbatim on accept
 | CR-DEA-BC-01 | First-Order Business Capability Method | Landed | PR #13 (2026-09-01) | Method and documentation only: semantics, admission criteria, evidence lifecycle, ECF overlay rules, governance. Phase 1 method documents landed via PR #14. |
 | CR-DEA-BC-01A | Capability classification reconciliation: ADR-015 alignment | Landed | PR #3 (2026-08-31) | Record shape: kind by entity specialization, governed `capability_layer`, `capability_type` deprecated. Constrains one record field, not the method. |
 | CR-DEA-BC-02 | Evidence-Based First-Order Capability Investigation | Landed, execution complete | PR #4 (2026-08-31) | Evidence corpus, candidate universe, normalization, generality matrix, distinctness sweep, admission. Research artifacts under `docs/research/`; close-out: 19/19 DoD rows verified (PR #19). |
-| CR-DEA-BC-03 | Catalog Schema and CI Reconciliation | Proposed | This PR | `schemas/entity.schema.json` + entry CI reconciled with dea-metamodel (ADR-015 lineage) and the catalog-wide CI conventions. Ships no entries. |
+| CR-DEA-BC-03 | Catalog Schema and CI Reconciliation | Landed | PR #21 (2026-09-01) | `schemas/entity.schema.json` + entry CI reconciled with dea-metamodel (ADR-015 lineage) and the catalog-wide CI conventions (D8 correction recorded below). Ships no entries. |
+| CR-DEA-BC-04 | Industry Specialization Framework and First View (MCSP) | Proposed | This PR | Views as mapping artifacts; SPEC-NNN record shape; version pinning; view schema + CI; evidence discipline; ECF inheritance; MCSP proving instance. No view content in this PR. |
 
 ## Numbering
 
