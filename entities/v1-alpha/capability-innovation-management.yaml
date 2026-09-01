@@ -1,0 +1,67 @@
+id: dea:capability-innovation-management
+type: BusinessCapability
+name: Innovation Management
+definition: The ability to originate, develop, and realize new or improved products, services, processes, and models into value.
+version: 1.0.0
+lifecycle_status: active
+capability_layer: strategic
+outcome: Innovations are introduced to the market or brought into use, not merely ideated.
+business_object: Idea
+ecf:
+  primary:
+    domain: product-offering
+    stage: conceive
+  secondary:
+  - domain: product-offering
+    stage: design
+related_capabilities:
+- dea:capability-change-management
+- dea:capability-offering-management
+evidence:
+  sources:
+  - SRC-002
+  - SRC-004
+  - SRC-015
+  - SRC-016
+  rationale: Enterprise-generality demonstrated at E4 after the corpus patch (SRC-015 ISO 56002, SRC-016 Oslo Manual
+    2018); evidence trail in docs/research (evidence-register v0.3, enterprise-generality-matrix v0.2,
+    distinctness-sweep, admission-gate-closeout, admission-review-supplementary).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix v0.1/v0.2 (PRs #11, #28)'
+  - stage: normalized
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay + gate close-out v0.1 (PRs #7, #15)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), supplementary admission review v0.1 (PR #30; R-007)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: E4; repeatable organization-wide idea-to-value ability (ISO 56002); the outcome is identifiable and
+  measured by national statistical agencies (Oslo Manual 2018 names innovation management as a distinct activity
+  class).
+ecf_rationale: Primary product-offering x conceive (the ability is first exercised where the new is conceived);
+  design participation follows; boundary against Change Management drawn by standard text (originates vs
+  institutionalizes).
+boundary: Originates the new; does not institutionalize enterprise change (Change Management) or manage the offering
+  lifecycle (Offering Management).
+non_examples:
+- An ideas portal (a system)
+- An R&D lab (an organization)
+specialization_boundary: Innovation kinds (product, process, business model) and sector programs are specialization;
+  the ability to innovate is not.

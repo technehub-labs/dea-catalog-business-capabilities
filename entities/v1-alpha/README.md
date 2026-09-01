@@ -1,6 +1,6 @@
 # v1-alpha Catalog Entries
 
-This directory holds the canonical first-order Business Capability entries: 23 capabilities admitted 2026-09-01 via the method lifecycle (METHODOLOGY.md section 12 gates; recommendation set from admission-gate-closeout v0.1; review record admission-review v0.1).
+This directory holds the canonical first-order Business Capability entries: 26 capabilities (23 admitted 2026-09-01 via the method lifecycle, METHODOLOGY.md section 12 gates, recommendation set from admission-gate-closeout v0.1, review record admission-review v0.1; plus Resilience Management, Innovation Management and Analytics and Intelligence admitted via supplementary admission review v0.2 after the corpus patch and the CAND-018 boundary decision).
 
 ## Entry conventions
 
