@@ -94,15 +94,21 @@ dea-catalog-business-capabilities/
 ├── GOVERNANCE.md                 ← change control, roles, acceptance
 ├── TAXONOMY.md                   ← structure, naming, alias policy
 ├── change-requests/              ← landed CRs + series index
+├── schemas/
+│   ├── entity.schema.json        ← entry schema (CR-DEA-BC-03; mirrors dea-metamodel capability.json)
+│   └── fixtures/                 ← schema self-exercise (non-canonical; keeps CI honest)
+├── entities/
+│   └── v1-alpha/                 ← canonical entries land here via admission PRs (empty until then)
 ├── docs/
 │   ├── FOUNDATIONS.md            ← principles, decision points register
 │   └── research/                 ← CR-DEA-BC-02 artifacts (YAML registers + MD summaries)
 └── .github/
     └── workflows/
-        └── validate-allocation.yml   ← pins pointer against OpenDEAM (reusable validator)
+        ├── validate-allocation.yml   ← pins pointer against OpenDEAM (reusable validator)
+        └── validate-entries.yml      ← validates entries + fixture against the schema
 ```
 
-Planned (CR-DEA-BC-03 and later, indicative): `entities/v1-alpha/`, `schemas/`, `evidence/`, `mappings/ecf/`, `mappings/specializations/`, `mappings/synonyms/`. The final structure is reconciled with the catalog-wide conventions before adoption; nothing here pre-empts the CR.
+Planned (CR-DEA-BC-04 and later, indicative): `evidence/`, `mappings/ecf/`, `mappings/specializations/`, `mappings/synonyms/`. The final structure is reconciled with the catalog-wide conventions before adoption; nothing here pre-empts the CR.
 
 ## Change Control
 

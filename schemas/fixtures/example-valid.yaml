@@ -1,0 +1,64 @@
+# Fixture: schema self-exercise. NOT a catalog entry.
+# Lives outside entities/ so it can never be mistaken for canonical content.
+# CI validates this file against schemas/entity.schema.json so the schema
+# is never untested while entities/ awaits admission PRs.
+id: dea:capability-fixture-example
+type: BusinessCapability
+name: Fixture Capability (not canonical)
+definition: >-
+  A synthetic ability existing only to exercise every required block of the
+  catalog schema. Carries no catalog semantics.
+purpose: Schema exercise only.
+outcome: A validated schema.
+business_object: Fixture
+version: 1.0.0
+capability_layer: operational
+lifecycle_status: proposed
+ecf:
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+    - domain: governance-existence
+      stage: improve
+parents: []
+children: []
+related_capabilities: []
+realization:
+  processes: []
+  actors: []
+  resources: []
+  systems: []
+  information: []
+evidence:
+  sources:
+    - SRC-010
+  rationale: >-
+    Fixture citing the internal baseline source; real entries cite their
+    evidence register sources.
+specialization:
+  allowed: false
+  industry_examples: []
+aliases:
+  - Schema Fixture
+provenance:
+  candidate_ref: CAND-001
+  normalization_refs:
+    - N-001
+  ladder_passage:
+    - { stage: candidate, date: "2026-09-01", actor: fixture }
+    - { stage: observed, date: "2026-09-01", actor: fixture }
+    - { stage: corroborated, date: "2026-09-01", actor: fixture }
+    - { stage: normalized, date: "2026-09-01", actor: fixture }
+    - { stage: ecf-mapped, date: "2026-09-01", actor: fixture }
+    - { stage: reviewed, date: "2026-09-01", actor: fixture }
+    - { stage: canonical, date: "2026-09-01", actor: fixture }
+why_capability: Fixture; demonstrates the narrative field shape.
+ecf_rationale: Fixture; demonstrates the rationale field shape.
+boundary: Includes schema exercise; excludes any catalog meaning.
+non_examples:
+  - Any real capability
+specialization_boundary: None; fixtures never specialize.
+metadata:
+  fixture: true
+  note: Not canonical; never copy into entities/.

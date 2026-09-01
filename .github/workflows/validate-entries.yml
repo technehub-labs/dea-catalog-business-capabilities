@@ -1,0 +1,36 @@
+name: validate-entries
+
+# Validates catalog entries and the schema fixture against
+# schemas/entity.schema.json (CR-DEA-BC-03, D8). Complements the allocation
+# validator (validate-allocation.yml); entries appear only via admission PRs
+# after the method review gates (METHODOLOGY.md section 12).
+#
+# Implementation note: the catalog-wide precedent referenced the
+# ajvdotpy/ajv-py-action GitHub Action, which no longer resolves (repository
+# not found, 2026-09-01). This workflow uses scripts/validate_entries.py
+# (jsonschema draft-07) instead: same contract, no third-party action risk.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validator dependencies
+        run: pip install jsonschema pyyaml
+
+      - name: Validate schema fixture (schema self-exercise)
+        run: python scripts/validate_entries.py schemas/entity.schema.json 'schemas/fixtures/**/*.yaml'
+
+      - name: Validate catalog entries (if any exist)
+        run: python scripts/validate_entries.py schemas/entity.schema.json 'entities/**/*.yaml' 'entities/**/*.json'
