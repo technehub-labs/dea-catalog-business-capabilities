@@ -1,0 +1,426 @@
+register_version: 0.1.0
+cr: CR-DEA-BC-02 section 38 (canonical admission gate close-out)
+compiled: '2026-09-01 (v0.1: gate-close against pre-check v0.3, overlay v0.1, generality matrix v0.1, distinctness sweep v0.1,
+  normalization v0.2)'
+status: candidate-not-canonical; recommendations only; no candidate is admitted by this artifact; final admission remains
+  subject to review (section 38)
+supersedes: admission-gate-precheck.yaml as the section 38 record; the pre-check remains the dry-run history
+inputs:
+- docs/research/admission-gate-precheck.yaml (v0.3)
+- docs/research/preliminary-ecf-overlay.yaml (v0.1)
+- docs/research/enterprise-generality-matrix.yaml (v0.1)
+- docs/research/distinctness-sweep.yaml (v0.1)
+- docs/research/normalization.yaml (v0.2)
+- docs/research/candidates.yaml (v0.2)
+- docs/research/evidence-register.yaml (v0.2)
+gate:
+  reference: CR-DEA-BC-02 section 38
+  axes:
+  - evidence_ge_E3
+  - classification_capability
+  - enterprise_generality
+  - durability
+  - implementation_independence
+  - outcome_identifiable
+  - boundary_defensible
+  - distinctness
+  - specialization_not_required
+  - ecf_mapping
+  rule: a candidate may be recommended only if all ten axes pass; the gate-close recommends, review admits
+recommendations:
+- candidate: CAND-001
+  name: Strategy
+  ecf_primary:
+    domain: governance-existence
+    stage: conceive
+  ecf_secondary:
+  - domain: governance-existence
+    stage: improve
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-002
+  name: Strategic Planning
+  ecf_primary:
+    domain: governance-existence
+    stage: conceive
+  ecf_secondary: []
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-003
+  name: Enterprise Governance
+  ecf_primary:
+    domain: governance-existence
+    stage: conceive
+  ecf_secondary:
+  - domain: governance-existence
+    stage: operate
+  - domain: governance-existence
+    stage: improve
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-005
+  name: Customer Management
+  ecf_primary:
+    domain: customer-demand
+    stage: operate
+  ecf_secondary:
+  - domain: customer-demand
+    stage: conceive
+  - domain: customer-demand
+    stage: improve
+  - domain: customer-demand
+    stage: retire
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-007
+  name: Supplier Management
+  ecf_primary:
+    domain: supply-resources
+    stage: build
+  ecf_secondary:
+  - domain: supply-resources
+    stage: operate
+  - domain: supply-resources
+    stage: improve
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-008
+  name: Partner Management
+  ecf_primary:
+    domain: customer-demand
+    stage: conceive
+  ecf_secondary:
+  - domain: supply-resources
+    stage: operate
+  ecf_conflict_flag: true
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-009
+  name: Offering Management
+  ecf_primary:
+    domain: product-offering
+    stage: conceive
+  ecf_secondary:
+  - domain: product-offering
+    stage: design
+  - domain: product-offering
+    stage: build
+  - domain: product-offering
+    stage: improve
+  - domain: product-offering
+    stage: retire
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-010
+  name: Marketing
+  ecf_primary:
+    domain: customer-demand
+    stage: conceive
+  ecf_secondary:
+  - domain: customer-demand
+    stage: operate
+  ecf_conflict_flag: true
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-012
+  name: Operations
+  ecf_primary:
+    domain: operations-delivery
+    stage: operate
+  ecf_secondary:
+  - domain: operations-delivery
+    stage: improve
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-013
+  name: Financial Stewardship
+  ecf_primary:
+    domain: finance-value
+    stage: conceive
+  ecf_secondary:
+  - domain: finance-value
+    stage: operate
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-014
+  name: Financial Management
+  ecf_primary:
+    domain: finance-value
+    stage: operate
+  ecf_secondary:
+  - domain: finance-value
+    stage: conceive
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-015
+  name: Workforce Management
+  ecf_primary:
+    domain: people-organization
+    stage: build
+  ecf_secondary:
+  - domain: people-organization
+    stage: operate
+  - domain: people-organization
+    stage: improve
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-016
+  name: Workforce Planning
+  ecf_primary:
+    domain: people-organization
+    stage: design
+  ecf_secondary:
+  - domain: people-organization
+    stage: build
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-017
+  name: Information Management
+  ecf_primary:
+    domain: operations-delivery
+    stage: operate
+  ecf_secondary: []
+  ecf_conflict_flag: true
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-019
+  name: Technology Management
+  ecf_primary: null
+  ecf_secondary: []
+  ecf_conflict_flag: true
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-020
+  name: Risk Management
+  ecf_primary:
+    domain: governance-existence
+    stage: conceive
+  ecf_secondary:
+  - domain: governance-existence
+    stage: operate
+  - domain: governance-existence
+    stage: improve
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-021
+  name: Compliance Management
+  ecf_primary:
+    domain: governance-existence
+    stage: activate
+  ecf_secondary:
+  - domain: governance-existence
+    stage: operate
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-022
+  name: Legal Management
+  ecf_primary:
+    domain: governance-existence
+    stage: conceive
+  ecf_secondary:
+  - domain: governance-existence
+    stage: operate
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-024
+  name: Security Management
+  ecf_primary:
+    domain: governance-existence
+    stage: design
+  ecf_secondary:
+  - domain: governance-existence
+    stage: operate
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-025
+  name: Sourcing and Procurement
+  ecf_primary:
+    domain: supply-resources
+    stage: build
+  ecf_secondary:
+  - domain: supply-resources
+    stage: operate
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-026
+  name: Asset Management
+  ecf_primary:
+    domain: supply-resources
+    stage: build
+  ecf_secondary:
+  - domain: supply-resources
+    stage: operate
+  - domain: supply-resources
+    stage: retire
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-027
+  name: Facility Management
+  ecf_primary:
+    domain: supply-resources
+    stage: activate
+  ecf_secondary:
+  - domain: supply-resources
+    stage: operate
+  ecf_conflict_flag: false
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+- candidate: CAND-028
+  name: Change Management
+  ecf_primary:
+    domain: governance-existence
+    stage: improve
+  ecf_secondary: []
+  ecf_conflict_flag: true
+  recommendation: recommend_admission
+  basis: all ten section 38 axes met on current evidence (pre-check v0.3); final admission remains subject to review
+deferrals:
+- candidate: CAND-006
+  name: Citizen / Member Relationship
+  ecf_primary:
+    domain: customer-demand
+    stage: operate
+  ecf_secondary:
+  - domain: customer-demand
+    stage: improve
+  ecf_conflict_flag: false
+  disposition: deferred
+  carried_gaps:
+  - evidence_ge_E3
+  - enterprise_generality
+  - boundary_defensible
+  - distinctness (pending unification decision)
+  trigger: 'government reference models (gap G5): CAND-005/CAND-006 unification decision deferred; evidence below E3 and enterprise-generality
+    undemonstrated on the current corpus'
+  note: not recommended in this pass; gaps carried, not resolved (conservative re-test rule)
+- candidate: CAND-018
+  name: Analytics and Intelligence
+  ecf_primary:
+    domain: operations-delivery
+    stage: operate
+  ecf_secondary: []
+  ecf_conflict_flag: true
+  disposition: deferred
+  carried_gaps:
+  - boundary_defensible
+  trigger: boundary delineation decision against CAND-017 Information Management; N-009 re-test closed confirming status quo,
+    boundary objection carried not resolved
+  note: not recommended in this pass; gaps carried, not resolved (conservative re-test rule)
+- candidate: CAND-023
+  name: Resilience Management
+  ecf_primary:
+    domain: governance-existence
+    stage: design
+  ecf_secondary:
+  - domain: governance-existence
+    stage: operate
+  ecf_conflict_flag: false
+  disposition: deferred
+  carried_gaps:
+  - evidence_ge_E3
+  - enterprise_generality
+  - boundary_defensible
+  trigger: cross-industry corpus expansion (government, non-profit, infrastructure reference models); E2 evidence held pending
+    cross-industry check
+  note: not recommended in this pass; gaps carried, not resolved (conservative re-test rule)
+- candidate: CAND-029
+  name: Innovation Management
+  ecf_primary:
+    domain: product-offering
+    stage: conceive
+  ecf_secondary:
+  - domain: product-offering
+    stage: design
+  ecf_conflict_flag: false
+  disposition: deferred
+  carried_gaps:
+  - evidence_ge_E3
+  - enterprise_generality
+  - boundary_defensible
+  trigger: cross-industry corpus expansion (government, non-profit, infrastructure reference models); E2 evidence held pending
+    cross-industry check
+  note: not recommended in this pass; gaps carried, not resolved (conservative re-test rule)
+removed:
+- candidate: CAND-004
+  name: Stakeholder Relationship Management
+  disposition: reclassified grouping parent (normalization N-007); withdrawn from the admission track; boundary gap resolved
+    by reclassification
+- candidate: CAND-011
+  name: Value Delivery
+  disposition: dissolved as first-order candidate (normalization N-008); rejected aggregate; boundary gap resolved by dissolution
+rejections:
+- candidate: CAND-030
+  name: Finance Department
+  classification: ORGANIZATION
+  disposition: rejected_as_capability
+  correct_home: organization constructs (actor catalogs)
+  rationale: 'names an organizational grouping, not an implementation-independent ability (anti-invention test: describes
+    an organizational grouping)'
+- candidate: CAND-031
+  name: Invoice Processing
+  classification: PROCESS
+  disposition: rejected_as_capability
+  correct_home: dea-catalog-processes
+  rationale: describes work, not enduring ability (capability vs process distinction; Ability hard gate)
+- candidate: CAND-032
+  name: CRM System
+  classification: SYSTEM
+  disposition: rejected_as_capability
+  correct_home: system catalog
+  rationale: names a technological mechanism (anti-invention test); systems realize capabilities, they are not capabilities
+- candidate: CAND-033
+  name: Customer Service Team
+  classification: ACTOR
+  disposition: rejected_as_capability
+  correct_home: dea-catalog-actors
+  rationale: names a performer grouping (actor), not an ability
+specialized:
+- candidate: CAND-034
+  name: Telecom Customer Management
+  classification: SPECIALIZATION
+  disposition: specialized
+  correct_home: 'industry specialization view (CR-DEA-BC-04; parent: CAND-005 Customer Management)'
+  rationale: industry qualifier fails first-order anti-invention test; industry forms never enter the first-order set
+unresolved:
+- candidate: CAND-035
+  name: Common Good Production
+  classification: UNRESOLVED
+  disposition: deferred
+  trigger: non-profit and government reference models; classification unresolved between capability and outcome
+  note: carried to the research report open-questions section
+open_items:
+  ecf_conflicts_flagged_not_smoothed:
+  - CAND-008
+  - CAND-010
+  - CAND-017
+  - CAND-018
+  - CAND-019
+  - CAND-028
+  note: ECF conflicts ride into the review package per CR section 26; they do not block recommendation where the mapping is
+    defensible
+summary:
+  admission_track_candidates: 27
+  recommended_for_admission: 23
+  deferred: 4
+  removed_from_track: 2
+  rejected_non_capability: 4
+  specialized: 1
+  unresolved: 1
+  universe_total: 35
