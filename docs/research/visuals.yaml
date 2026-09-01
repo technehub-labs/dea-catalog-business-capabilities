@@ -1,0 +1,58 @@
+manifest_version: 0.1.0
+cr: 'CR-DEA-BC-02 (section 35: visual research assets)'
+compiled: '2026-09-01'
+status: candidate-not-canonical; derived views of research data
+generation_rule: re-derived from registers on version bump; never hand-edited
+artifacts:
+- id: V1
+  title: Evidence to Candidate Pipeline
+  file: visuals/v01-evidence-candidate-pipeline.svg
+  source_data:
+  - evidence-register.yaml
+  - candidates.yaml
+  - admission-gate-closeout.yaml
+- id: V2
+  title: Candidate Universe Map
+  file: visuals/v02-candidate-universe-map.svg
+  source_data:
+  - candidates.yaml
+  - admission-gate-closeout.yaml
+- id: V3
+  title: Enterprise Comparison Matrix
+  file: visuals/v03-enterprise-comparison-matrix.svg
+  source_data:
+  - enterprise-generality-matrix.yaml
+- id: V4
+  title: Capability / Process Boundary
+  file: visuals/v04-capability-process-boundary.svg
+  source_data:
+  - FOUNDATIONS.md section 4
+  - candidates.yaml (CAND-031)
+- id: V5
+  title: Capability / Outcome Relationship
+  file: visuals/v05-capability-outcome-relationship.svg
+  source_data:
+  - METHODOLOGY.md section 3
+- id: V6
+  title: Capability / Business Object Relationship
+  file: visuals/v06-capability-business-object.svg
+  source_data:
+  - METHODOLOGY.md section 4
+  - normalization.yaml (N-008)
+- id: V7
+  title: First-Order / Specialization Pyramid
+  file: visuals/v07-first-order-specialization-pyramid.svg
+  source_data:
+  - TAXONOMY.md section 4
+  - specialization-register.yaml
+- id: V8
+  title: Capability to ECF Overlay
+  file: visuals/v08-capability-ecf-overlay.svg
+  source_data:
+  - preliminary-ecf-overlay.yaml (CAND-005)
+- id: V9
+  title: ECF Coverage Map
+  file: visuals/v09-ecf-coverage-map.svg
+  source_data:
+  - preliminary-ecf-overlay.yaml
+dod_row_closed: 'visual research artifacts published (section 39; section 35 complete: 9 of 9)'
