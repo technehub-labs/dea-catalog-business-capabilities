@@ -1,0 +1,78 @@
+register_version: 0.1.0
+cr: 'CR-DEA-BC-02 (section 33 item 9: specialization register; section 29 industry specialization analysis)'
+compiled: '2026-09-01 (v0.1: specialization candidates and boundary evidence from evidence register v0.2, generality matrix
+  v0.1, gate close-out v0.1)'
+status: candidate-not-canonical; subject to review; nothing here enters the first-order set
+inputs:
+- docs/research/evidence-register.yaml (v0.2)
+- docs/research/enterprise-generality-matrix.yaml (v0.1)
+- docs/research/admission-gate-closeout.yaml (v0.1)
+- docs/research/candidates.yaml (v0.2)
+rules:
+- Specializations reference parents; they never modify or replace them (CR-DEA-BC-01 component 14).
+- A specialized capability retains traceability to its parent (CR section 29).
+- Industry-specific material evidences specialization boundaries, never first-order membership (EVIDENCE.md section 2).
+- 'Levels: L2 enterprise/domain, L3 industry/sector (specialization views), L4 organization-specific (adopting enterprise).'
+- 'First specialization view: Mobile Communications Service Provider (CR-DEA-BC-04, parked).'
+specialization_candidates:
+- id: SPEC-001
+  source_candidate: CAND-034
+  name: Telecom Customer Management
+  level: L3 (industry/sector)
+  parent: CAND-005 Customer Management
+  industry: telecommunications
+  target_view: Mobile Communications Service Provider (CR-DEA-BC-04)
+  evidence:
+  - 'anti-invention test classification (candidates.yaml v0.2): industry qualifier fails first-order test'
+  - 'gate close-out v0.1: disposition specialized'
+  disposition: deferred to CR-DEA-BC-04
+- id: SPEC-002
+  source_candidate: CAND-006
+  name: Citizen / Member Relationship
+  level: L3 (industry/sector) if confirmed as specialization
+  parent: CAND-005 Customer Management (hypothesis; unification decision deferred)
+  industry: government, non-profit
+  evidence:
+  - 'generality matrix v0.1: sector-bound (strong: government, non-profit; moderate: healthcare; none: commercial and other
+    types)'
+  - 'gate close-out v0.1: deferred; trigger government reference models (gap G5)'
+  readings:
+  - (a) sector specialization of CAND-005 Customer Management (unification hypothesis)
+  - (b) standalone sector-bound capability outside the first-order set
+  disposition: 'deferred; decision trigger: government reference models (evidence register gap G5)'
+- id: SPEC-003
+  source_candidate: null
+  name: Claims Management
+  level: L3 (industry/sector)
+  parent: undetermined (Customer Management vs Operations adjacency; parent hypothesis required before view work)
+  industry: insurance
+  evidence:
+  - 'SRC-011 (Avolution): practitioner core list flags claims management as industry-flavored (insurance), belongs to specialization
+    analysis'
+  - 'SRC-012 (ACORD): insurance industry capability model corroborates the domain'
+  note: Recorded directly from evidence; never entered the candidate universe as a first-order candidate
+  disposition: deferred to specialization framework (CR-DEA-BC-04)
+boundary_evidence:
+- source: SRC-007 BIAN Service Landscape (banking)
+  observation: capability landscape above discrete non-overlapping service domains; release 14.0 (2026-02)
+  value: mature industry layering over common capabilities; models the specialization path this catalog defers to; exemplar,
+    not first-order input
+- source: SRC-012 ACORD Capability Model (insurance)
+  observation: insurance industry capability model covering ten high-level areas, updated 2025
+  value: second industry reference model (with BIAN); candidate source for insurance specialization work
+- source: SRC-004 APQC PCF
+  observation: APQC maintains cross-industry and industry-specific PCF variants
+  value: industry variants feed this register; cross-industry recurrence feeds first-order hypotheses; process taxonomy, never
+    a capability template
+- source: SRC-006 commercial capability model vendors
+  observation: industry-specific models exist for automotive, hospital, medical devices, P&C insurance, retail banking
+  value: candidate sources for future specialization views; commercial bias acknowledged
+deferred_decisions:
+- id: SPEC-D1
+  question: 'CAND-005/CAND-006 unification: is Citizen / Member Relationship a specialization of Customer Management?'
+  trigger: government reference models (evidence register gap G5)
+  cross_ref: normalization register deferred list; gate close-out v0.1 deferral CAND-006
+summary:
+  specialization_candidates: 3
+  boundary_evidence_sources: 4
+  deferred_decisions: 1
