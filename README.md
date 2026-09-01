@@ -12,7 +12,7 @@ The canonical catalog of **first-order business capabilities**: abilities suffic
 
 The catalog answers one question:
 
-> What enduring abilities does an enterprise need to possess or establish to perform as an enterprise?
+> What enduring abilities does an enterprise need to possess or establish to perform its stated business as an enterprise?
 
 The [ECF](https://github.com/technehub-labs/dea-metaframework) (Enterprise Composition Framework, 7 Domains × 7 Stages) answers a different question: where a capability primarily operates within the enterprise's domain/lifecycle structure. ECF coordinates are classification context, not capability identity.
 
