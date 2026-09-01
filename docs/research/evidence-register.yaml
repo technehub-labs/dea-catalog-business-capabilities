@@ -1,6 +1,6 @@
-register_version: 0.2.0
+register_version: 0.3.0
 cr: CR-DEA-BC-02
-compiled: '2026-08-31 (v0.2: gap-closure pass)'
+compiled: '2026-09-01 (v0.3: corpus patch; continuity and innovation source classes added for CAND-023/CAND-029 fair run)'
 compiled_by: Coder (for eaojnr)
 status: draft-for-review
 source_classes:
@@ -11,6 +11,8 @@ source_classes:
 - government-guidance
 - commercial-capability-models
 - internal-baseline
+- standards-body
+- professional-body
 sources:
 - id: SRC-001
   name: Business Architecture Guild / BIZBOK Guide
@@ -265,6 +267,102 @@ sources:
     - CR-29
     implication: Second industry-specific reference model (with BIAN); specialization register candidate source
   evidence_note: Insurance counterpart to BIAN for the specialization register
+- id: SRC-013
+  name: ISO 22301:2019 Security and resilience; Business continuity management systems; Requirements
+  class: standards-body
+  reference: https://www.iso.org/obp/ui#iso:std:iso:22301:ed-2:v1:en
+  retrieved: 2026-09-01
+  retrieval: direct (scope and clause structure from the ISO Online Browsing Platform; full normative text paywalled)
+  observations:
+  - observation: 'The standard specifies requirements to protect against, reduce the likelihood of, prepare for, respond
+      to and recover from disruptions; the organization needs to be able to continue to deliver products and services
+      at an acceptable predefined capacity during a disruption, and to enhance its resilience through the effective
+      application of the BCMS'
+    supports:
+    - CAND-023 capability identity and outcome
+    implication: Continuity of delivery at predefined capacity is an identifiable outcome, distinguishable from risk
+      treatment (uncertainty) and from protection (security); the boundary between Resilience Management and Risk
+      Management is drawn by an international standard, not by assertion
+  - observation: 'BCMS is an organization-wide management system (context, leadership, planning, support, operation,
+      evaluation, improvement clauses); the standard is written for any organization, and sector regulators adopt it
+      (EU DORA operational resilience in financial services, in force 2025)'
+    supports:
+    - CAND-023 durability and implementation independence
+    - CAND-023 enterprise generality
+    implication: Management-system framing is implementation-independent by construction; regulatory adoption
+      corroborates generality in financial services
+  evidence_note: Standards-body authority for the continuity business object; first source in the standards-body class
+- id: SRC-014
+  name: Business Continuity Institute Good Practice Guidelines (GPG) Edition 7.0
+  class: professional-body
+  reference: https://www.thebci.org/certification-training/good-practice-guidelines.html
+  retrieved: 2026-09-01
+  retrieval: direct (BCI publication page and edition notes)
+  observations:
+  - observation: 'GPG 7.0 structures business continuity as six professional practices over a Business Continuity
+      Management System (PP1 establishing, PP2 embracing, PP3 analysis, PP4 solutions design, PP5 enabling solutions,
+      PP6 validation); the methodology is designed to be applicable to all organizations regardless of size, industry
+      sector, or geography'
+    supports:
+    - CAND-023 enterprise generality
+    - CR-16
+    implication: An explicit cross-sector applicability claim from the professional body of the discipline; direct
+      evidence for the generality axis, independent of vendor framing
+  - observation: The 7.0 edition replaced the BCM lifecycle framing with the management-system framing, converging
+      with ISO 22301
+    supports:
+    - CAND-023 durability
+    implication: Two independent authorities converging on the same construct strengthens the durability claim
+  evidence_note: Professional-body practitioner corpus; independent of ISO yet convergent
+- id: SRC-015
+  name: ISO 56002:2019 Innovation management; Innovation management system; Guidance
+  class: standards-body
+  reference: https://www.iso.org/obp/ui#iso:std:iso:56002:ed-1:v1:en ; preview at cdn.standards.iteh.ai
+  retrieved: 2026-09-01
+  retrieval: direct (scope, principles, and clause structure from ISO OBP and the standards preview)
+  observations:
+  - observation: 'The standard guides establishment of an innovation management system applicable to all types of
+      organizations regardless of type, sector, or size; all types of innovation (product, service, process, model,
+      method; incremental to radical); all approaches (internal, open, user-, market-, technology-, design-driven)'
+    supports:
+    - CAND-029 enterprise generality
+    - CAND-029 durability
+    implication: Explicit cross-sector applicability claim from a standards body; innovation management is framed as a
+      repeatable organization-wide ability, not an episodic activity
+  - observation: 'An innovation management system guides the organization to determine its innovation vision, strategy,
+      policy, and objectives; principles include realization of value, exploiting insights, managing uncertainty,
+      adaptability, systems approach'
+    supports:
+    - CAND-029 capability identity and outcome
+    implication: The business object is the idea-to-value stream; realization of value is the identifiable outcome.
+      Distinct from Change Management (which executes enterprise change); innovation originates the new, change
+      institutionalizes it
+  evidence_note: Standards-body authority for the innovation business object; boundary with Change Management arguable
+    from standard text
+- id: SRC-016
+  name: OECD/Eurostat Oslo Manual 2018 (business innovation measurement standard)
+  class: government-guidance
+  reference: https://www.oecd.org/en/publications/2018/10/oslo-manual-2018_g1g9373b.html
+  retrieved: 2026-09-01
+  retrieval: direct (OECD full-report chapters extracted)
+  observations:
+  - observation: 'A business innovation is a new or improved product or business process that differs significantly
+      from the firm''s previous products or processes and that has been introduced on the market or brought into use;
+      innovation activities include all developmental, financial and commercial activities intended to result in an
+      innovation'
+    supports:
+    - CAND-029 capability identity
+    - CR-19 classification
+    implication: Intergovernmental statistical definition; the outcome (introduced on market or brought into use) is
+      identifiable and measurable, which is why national statistical agencies can survey it
+  - observation: 'The manual names innovation management activities as a distinct activity class alongside R&D,
+      engineering, IP, training, software development; it also notes governments and other sectors undertake innovation'
+    supports:
+    - CAND-029 enterprise generality
+    - CAND-029 boundary
+    implication: Innovation management named as its own activity class in a measurement standard used by national
+      statistics agencies (NSF/NCSES adoption in the US); cross-sector note covers the government arm
+  evidence_note: Intergovernmental measurement authority; complements ISO 56002 with an outcome-anchored definition
 register_gaps:
 - id: G1
   gap: IF4IT capability-model page cited in CR section 12 not located; site and definition confirmed
@@ -288,9 +386,12 @@ register_gaps:
   action: add for the section 8 government diversity arm
   status: open
 corpus_assessment:
-  source_classes_covered: 7 of 7
+  source_classes_covered: 9 of 9
   independent_definition_sources: 4 (SRC-001 BIZBOK via citation, SRC-002 TOGAF via citation, SRC-003 SAP LeanIX direct, SRC-005
     IF4IT partial direct)
   definition_convergence: high (possess-or-exchange ability; what-not-how; stable; non-redundant)
+  v03_patch: 'continuity sources (SRC-013 ISO 22301, SRC-014 BCI GPG 7.0) and innovation sources (SRC-015 ISO 56002,
+    SRC-016 Oslo Manual 2018) added; CAND-023/CAND-029 fair run executed: evidence E2 -> E4 for both, boundary now
+    arguable from standard text, generality re-scored in enterprise-generality-matrix.yaml v0.2'
   ready_for: candidate universe construction (CR-DEA-BC-02 sections 21, 30)
-  not_ready_for: canonical admission (no candidate evaluated yet; admission gate per section 38 untouched)
+  not_ready_for: canonical admission (no candidate admitted; admission gate per section 38 remains a pre-check)

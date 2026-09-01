@@ -1,6 +1,7 @@
-matrix_version: 0.1.0
+matrix_version: 0.2.0
 cr: CR-DEA-BC-02 (sections 8-9; deliverable section 33 item 6)
-compiled: '2026-08-31'
+compiled: '2026-09-01 (v0.2: CAND-023/CAND-029 rows re-scored after corpus patch; CAND-004/CAND-011 rows retained for comparability, both off
+  the admission track per N-007/N-008)'
 status: candidate-not-canonical; analytical evidence, not the catalog
 enterprise_types:
 - commercial
@@ -72,6 +73,7 @@ rows:
   government: strong
   non-profit: strong
   enterprise_generality: demonstrated
+  note: 'off admission track: grouping parent per normalization N-007 (2026-09-01)'
 - candidate: CAND-005
   name: Customer Management
   commercial: strong
@@ -163,6 +165,7 @@ rows:
   government: strong
   non-profit: strong
   enterprise_generality: demonstrated
+  note: 'off admission track: dissolved per normalization N-008 (2026-09-01)'
 - candidate: CAND-012
   name: Operations
   commercial: strong
@@ -309,16 +312,18 @@ rows:
 - candidate: CAND-023
   name: Resilience Management
   commercial: moderate
-  professional-services: moderate
+  professional-services: strong
   manufacturing: strong
-  retail: moderate
+  retail: strong
   financial-services: strong
   healthcare: strong
   technology: strong
   infrastructure: strong
   government: strong
   non-profit: moderate
-  enterprise_generality: partial
+  enterprise_generality: demonstrated
+  v02_delta: 'retail and professional-services moderate -> strong: BCI GPG 7.0 explicit all-sector applicability (SRC-014); APQC 11.0 cross-industry
+    resiliency category (SRC-004); DORA-style operational resilience cascading to service providers'
 - candidate: CAND-024
   name: Security Management
   commercial: strong
@@ -389,15 +394,18 @@ rows:
   commercial: strong
   professional-services: strong
   manufacturing: strong
-  retail: moderate
+  retail: strong
   financial-services: strong
   healthcare: strong
   technology: strong
   infrastructure: moderate
-  government: moderate
+  government: strong
   non-profit: moderate
-  enterprise_generality: partial
+  enterprise_generality: demonstrated
+  v02_delta: 'government and retail moderate -> strong: ISO 56002 all-sectors applicability (SRC-015); Oslo Manual cross-sector note incl. government
+    innovation (SRC-016)'
 summary:
-  demonstrated: 26
-  partial: 2
+  demonstrated: 28
+  partial: 0
   sector_bound: 1
+  note: 28 of 29 rows demonstrated; CAND-006 sector-bound (specialization path); 2 rows off admission track per N-007/N-008

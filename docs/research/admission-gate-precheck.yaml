@@ -1,6 +1,6 @@
-version: 0.3.0
+version: 0.4.0
 cr: CR-DEA-BC-02 section 38 (dry run)
-compiled: '2026-09-01 (v0.3: distinctness axis resolved by distinctness-sweep.yaml; aggregate decisions N-007/N-008 applied)'
+compiled: '2026-09-01 (v0.4: CAND-023/CAND-029 fair run after corpus patch; evidence, generality, boundary closed for both)'
 status: pre-check only; no candidate admitted; final admission remains subject to review (section 38)
 legend:
   met: criterion satisfied on current evidence
@@ -324,20 +324,17 @@ evaluations:
 - candidate: CAND-023
   name: Resilience Management
   criteria:
-    evidence_ge_E3: gap
+    evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: gap
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
-    boundary_defensible: gap
+    boundary_defensible: met
     distinctness: met
     specialization_not_required: met
     ecf_mapping: met
-  gaps:
-  - evidence_ge_E3
-  - boundary_defensible
-  - enterprise_generality
+  gaps: []
   untested: []
 - candidate: CAND-024
   name: Security Management
@@ -417,23 +414,20 @@ evaluations:
 - candidate: CAND-029
   name: Innovation Management
   criteria:
-    evidence_ge_E3: gap
+    evidence_ge_E3: met
     classification_capability: met
-    enterprise_generality: gap
+    enterprise_generality: met
     durability: met
     implementation_independence: met
     outcome_identifiable: met
-    boundary_defensible: gap
+    boundary_defensible: met
     distinctness: met
     specialization_not_required: met
     ecf_mapping: met
-  gaps:
-  - evidence_ge_E3
-  - boundary_defensible
-  - enterprise_generality
+  gaps: []
   untested: []
 summary:
   candidates_on_track: 27
-  clean_except_pending_artifacts: 23
-  with_gaps: 4
+  clean_except_pending_artifacts: 25
+  with_gaps: 2
   removed: 2
