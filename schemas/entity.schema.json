@@ -204,6 +204,21 @@
       "maxLength": 1000,
       "description": "What industry specializations may legitimately refine (TAXONOMY.md section 4)."
     },
+    "ecfConformance": {
+      "type": "object",
+      "description": "ECF Conformance Gate manifest (CR-ECF-CG-001..003). Declares the catalog's CONFORMANT-WITH-EXTENSION status, the canonical ECF references that resolve, and the catalog-specific extensions (kebab-case display vocabulary, multiple contextual coordinates, held-unmapped state). Schema-level shape is permissive; scripts/check_ecf_conformance.py enforces the contract.",
+      "required": ["framework", "contractVersion", "profile", "status", "affiliation"],
+      "properties": {
+        "framework": { "type": "string", "const": "EnterpriseConceptFramework" },
+        "contractVersion": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "profile": { "type": "string", "pattern": "^dea:ecf@\\d+\\.\\d+\\.\\d+$" },
+        "status": { "type": "string", "enum": ["conformant", "conformant-with-extension", "non-conformant", "not-yet-assessed"] },
+        "affiliation": { "type": "string", "enum": ["mapped", "held-unmapped", "inherits-catalog"] },
+        "rationaleRef": { "type": "string" },
+        "canonicalReferences": { "type": "array" },
+        "extensions": { "type": "array" }
+      }
+    },
     "external_references": {
       "type": "array",
       "description": "Identifiers in external systems. Never a substitute for the OpenDEA id.",

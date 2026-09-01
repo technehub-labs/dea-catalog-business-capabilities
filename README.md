@@ -37,6 +37,8 @@ Change request index: [`change-requests/README.md`](change-requests/README.md).
 
 Guiding principles and decision points: [`docs/FOUNDATIONS.md`](docs/FOUNDATIONS.md).
 
+**ECF Conformance Profile**: `dea:ecf@1.0.0`. The catalog declares CONFORMANT-WITH-EXTENSION status (CG-001 §4) because it specializes ECF semantics for its own classification domain (kebab-case display vocabulary, multiple contextual coordinates, held-unmapped state). The extensions do not redefine any ECF Domain, Stage, or Coordinate (CG-003 §6). Conformance gate: `scripts/check_ecf_conformance.py` (CR-ECF-CG-003).
+
 ## Entity Definition
 
 | Field | Value |

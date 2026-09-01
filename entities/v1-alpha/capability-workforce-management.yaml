@@ -1,11 +1,13 @@
 id: dea:capability-workforce-management
 type: BusinessCapability
 name: Workforce Management
-definition: The ability to acquire, develop, deploy, and release the enterprise's people.
+definition: The ability to acquire, develop, deploy, and release the enterprise's
+  people.
 version: 1.0.0
 lifecycle_status: active
 capability_layer: support
-outcome: The enterprise has the people it needs, developing, with deliberate entry and exit.
+outcome: The enterprise has the people it needs, developing, with deliberate entry
+  and exit.
 business_object: Workforce
 ecf:
   primary:
@@ -24,8 +26,8 @@ evidence:
   - SRC-004
   - SRC-005
   - SRC-006
-  rationale: Enterprise-generality demonstrated at E5; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
-    distinctness-sweep, admission-gate-closeout).
+  rationale: Enterprise-generality demonstrated at E5; evidence trail in docs/research
+    (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
 provenance:
   ladder_passage:
   - stage: candidate
@@ -39,7 +41,8 @@ provenance:
     actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
   - stage: normalized
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8,
+      #12)'
   - stage: ecf-mapped
     date: '2026-08-31'
     actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
@@ -52,15 +55,74 @@ provenance:
 specialization:
   allowed: true
   industry_examples: []
-why_capability: E5; N-001 settled the name (Workforce Management; "People Management" carried as alias).
-ecf_rationale: Primary build in people-organization (the workforce is built, then operated and improved); conceive and retire
-  are legitimately empty at first order.
-boundary: Manages the workforce; does not plan its shape (Workforce Planning) or govern the enterprise (Enterprise Governance).
+why_capability: E5; N-001 settled the name (Workforce Management; "People Management"
+  carried as alias).
+ecf_rationale: Primary build in people-organization (the workforce is built, then
+  operated and improved); conceive and retire are legitimately empty at first order.
+boundary: Manages the workforce; does not plan its shape (Workforce Planning) or govern
+  the enterprise (Enterprise Governance).
 non_examples:
 - An HRIS (a system)
 - An HR department (an organization)
-specialization_boundary: Workforce forms (employees, contractors, volunteers, uniformed service) are specialization; the ability
-  to manage a workforce is not.
+specialization_boundary: Workforce forms (employees, contractors, volunteers, uniformed
+  service) are specialization; the ability to manage a workforce is not.
 aliases:
 - People Management
 - People / Workforce Management
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: mapped
+  canonicalReferences:
+  - kind: coordinate
+    domain: PeopleAndOrganization
+    stage: Build
+    identifier: ecf:peopleOrganization.build
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: primary
+  - kind: coordinate
+    domain: PeopleAndOrganization
+    stage: Operate
+    identifier: ecf:peopleOrganization.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  - kind: coordinate
+    domain: PeopleAndOrganization
+    stage: Improve
+    identifier: ecf:peopleOrganization.improve
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  extensions:
+  - name: kebab-case-domain-vocabulary
+    kind: display-vocabulary
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven
+      ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums
+      for the gate.
+    doesNotRedefine: true
+    mapping:
+      governance-existence: GovernanceAndExistence
+      supply-resources: SupplyAndResources
+      people-organization: PeopleAndOrganization
+      customer-demand: CustomerAndDemand
+      product-offering: ProductAndOffering
+      operations-delivery: OperationsAndDelivery
+      finance-value: FinanceAndValue
+      _stage_conceive: Conceive
+      _stage_design: Design
+      _stage_build: Build
+      _stage_activate: Activate
+      _stage_operate: Operate
+      _stage_improve: Improve
+      _stage_retire: Retire
+  - name: multiple-contextual-coordinates
+    kind: catalog-specific-relation
+    description: A capability may have one primary and zero-or-more secondary canonical
+      coordinates without identity duplication (CG-003 §5).
+    doesNotRedefine: true
+  - name: held-unmapped
+    kind: classification-state
+    description: State for capabilities with no ECF affiliation by design (N-006);
+      does not appear on this entry because primary is set.
+    doesNotRedefine: true

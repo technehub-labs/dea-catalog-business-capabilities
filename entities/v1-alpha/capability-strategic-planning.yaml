@@ -1,11 +1,13 @@
 id: dea:capability-strategic-planning
 type: BusinessCapability
 name: Strategic Planning
-definition: The ability to translate enterprise direction into an ordered set of intents, horizons, and resource postures.
+definition: The ability to translate enterprise direction into an ordered set of intents,
+  horizons, and resource postures.
 version: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
-outcome: A maintained plan that operationalizes strategy into choices the enterprise can govern and fund.
+outcome: A maintained plan that operationalizes strategy into choices the enterprise
+  can govern and fund.
 business_object: Plan
 ecf:
   primary:
@@ -18,8 +20,8 @@ evidence:
   sources:
   - SRC-001
   - SRC-004
-  rationale: Enterprise-generality demonstrated at E3; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
-    distinctness-sweep, admission-gate-closeout).
+  rationale: Enterprise-generality demonstrated at E3; evidence trail in docs/research
+    (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
 provenance:
   ladder_passage:
   - stage: candidate
@@ -33,7 +35,8 @@ provenance:
     actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
   - stage: normalized
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8,
+      #12)'
   - stage: ecf-mapped
     date: '2026-08-31'
     actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
@@ -46,13 +49,60 @@ provenance:
 specialization:
   allowed: true
   industry_examples: []
-why_capability: 'Distinct from Strategy (the sweep demonstrated partition: Strategy sets direction, Strategic Planning sequences
-  its pursuit); recorded in every strategy-bearing corpus source.'
-ecf_rationale: Planning begins at conceive in governance-existence, immediately downstream of Strategy.
-boundary: Plans the pursuit of direction; does not set direction (Strategy) or manage the resulting change portfolio (Change
-  Management).
+why_capability: 'Distinct from Strategy (the sweep demonstrated partition: Strategy
+  sets direction, Strategic Planning sequences its pursuit); recorded in every strategy-bearing
+  corpus source.'
+ecf_rationale: Planning begins at conceive in governance-existence, immediately downstream
+  of Strategy.
+boundary: Plans the pursuit of direction; does not set direction (Strategy) or manage
+  the resulting change portfolio (Change Management).
 non_examples:
 - An annual budget cycle (Financial Management)
 - A project plan (a process artifact, not this ability)
-specialization_boundary: Planning cadences and frameworks (rolling, scenario, Hoshin) are implementation choices, not specializations
-  of the ability.
+specialization_boundary: Planning cadences and frameworks (rolling, scenario, Hoshin)
+  are implementation choices, not specializations of the ability.
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: mapped
+  canonicalReferences:
+  - kind: coordinate
+    domain: GovernanceAndExistence
+    stage: Conceive
+    identifier: ecf:governanceExistence.conceive
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: primary
+  extensions:
+  - name: kebab-case-domain-vocabulary
+    kind: display-vocabulary
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven
+      ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums
+      for the gate.
+    doesNotRedefine: true
+    mapping:
+      governance-existence: GovernanceAndExistence
+      supply-resources: SupplyAndResources
+      people-organization: PeopleAndOrganization
+      customer-demand: CustomerAndDemand
+      product-offering: ProductAndOffering
+      operations-delivery: OperationsAndDelivery
+      finance-value: FinanceAndValue
+      _stage_conceive: Conceive
+      _stage_design: Design
+      _stage_build: Build
+      _stage_activate: Activate
+      _stage_operate: Operate
+      _stage_improve: Improve
+      _stage_retire: Retire
+  - name: multiple-contextual-coordinates
+    kind: catalog-specific-relation
+    description: A capability may have one primary and zero-or-more secondary canonical
+      coordinates without identity duplication (CG-003 §5).
+    doesNotRedefine: true
+  - name: held-unmapped
+    kind: classification-state
+    description: State for capabilities with no ECF affiliation by design (N-006);
+      does not appear on this entry because primary is set.
+    doesNotRedefine: true
