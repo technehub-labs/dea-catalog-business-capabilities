@@ -1,0 +1,82 @@
+register_version: 0.1.0
+cr: 'CR-DEA-BC-02 execution: supplementary admission review (METHODOLOGY.md section 12) for CAND-023/CAND-029 after corpus patch'
+compiled: '2026-09-01'
+status: review record; supplements admission-review.yaml v0.1; canonical transition executes in the admission PR after steward acceptance
+trigger:
+  source: 'admission-gate-closeout.yaml v0.1 (deferred CAND-023/CAND-029; trigger was cross-industry corpus expansion)'
+  executed_by: 'corpus patch v0.1 (PR #28; SRC-013 ISO 22301, SRC-014 BCI GPG 7.0, SRC-015 ISO 56002, SRC-016 Oslo Manual 2018)'
+  note: the named trigger also listed government/non-profit/infrastructure reference models; the gaps closed on
+    standards-body applicability claims instead. CAND-006 still requires government reference models proper (gap G5).
+inputs:
+- docs/research/admission-gate-closeout.yaml (v0.1)
+- docs/research/admission-gate-precheck.yaml (v0.4)
+- docs/research/evidence-register.yaml (v0.3)
+- docs/research/enterprise-generality-matrix.yaml (v0.2)
+- docs/research/preliminary-ecf-overlay.yaml (v0.1)
+- METHODOLOGY.md (sections 4, 5, 8, 12)
+- TAXONOMY.md (section 1)
+- schemas/entity.schema.json (CR-DEA-BC-03)
+conflict_resolutions:
+- candidate: CAND-023
+  id: R-006
+  decision: deferral lifted; corpus-expansion trigger executed
+  rationale: 'The close-out deferred CAND-023 at E2 with boundary and generality gaps pending corpus expansion. PR #28
+    executed the expansion: ISO 22301 supplies identity, outcome and boundary (continuity of delivery at acceptable
+    predefined capacity during disruption, distinct from risk treatment and from protection); BCI GPG 7.0 supplies an
+    explicit all-sector applicability claim. Evidence E4, generality demonstrated (8 of 10 strong), boundary met.
+    Pre-check v0.4 records all axes met.'
+- candidate: CAND-029
+  id: R-007
+  decision: deferral lifted; corpus-expansion trigger executed
+  rationale: 'The close-out deferred CAND-029 at E2 with boundary and generality gaps. PR #28 executed the expansion:
+    ISO 56002 supplies identity and boundary (idea-to-value stream; innovation originates the new, change
+    institutionalizes it) and an explicit all-sectors applicability claim; Oslo Manual 2018 supplies an
+    outcome-anchored, nationally surveyed definition and names innovation management as a distinct activity class.
+    Evidence E4, generality demonstrated (8 of 10 strong), boundary met. Pre-check v0.4 records all axes met.'
+reviews:
+- candidate: CAND-023
+  name: Resilience Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (pre-check v0.4 after corpus patch; R-006)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per close-out v0.1 accepted (governance-existence x design primary; operate secondary; no conflict flag)
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+- candidate: CAND-029
+  name: Innovation Management
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (pre-check v0.4 after corpus patch; R-007)
+  architectural_gate:
+    verdict: pass
+    ecf: mapping per close-out v0.1 accepted (product-offering x conceive primary; design secondary; no conflict flag)
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
+summary:
+  reviewed: 2
+  cleared: 2
+  held: 0
+  recommendation_set_after_acceptance: 25
+  still_deferred:
+  - candidate: CAND-006
+    trigger: government reference models (gap G5)
+  - candidate: CAND-018
+    trigger: boundary delineation vs CAND-017 (N-009 carried)
