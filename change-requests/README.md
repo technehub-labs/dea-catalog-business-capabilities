@@ -13,6 +13,7 @@ Change requests for the Business Capability catalog. CRs land verbatim on accept
 - The series tag is `CR-DEA-BC` (DEA Business Capability).
 - CR-DEA-BC-01 is the method CR; CR-DEA-BC-01A was renumbered from an early CR-DEA-BC-02 allocation (2026-08-31) when the number was yielded to the evidence-investigation CR.
 - Successors are parked, not scheduled: CR-DEA-BC-03 (schema + CI reconciliation with dea-metamodel), CR-DEA-BC-04 (industry specialization framework; first view: Mobile Communications Service Provider).
+- **Decision 2026-09-01 (numbering reconciliation):** CR-DEA-BC-02 section 40 (authored before the method CR) named BC-03 as "First-Order Capability Canonicalization"; CR-DEA-BC-01 (accepted later) names BC-03 as schema + CI and treats canonical admission as BC-02's own execution through the section 38 gate and the method review gates. Decided: **the CR-DEA-BC-01 assignment holds.** Canonical admission of the recommended set is method execution (METHODOLOGY.md section 12), not a separate CR; CR-DEA-BC-03 is the schema + CI reconciliation. Recorded per the renumbering convention (GOVERNANCE.md section 2).
 
 ## Ordering note
 
