@@ -1,0 +1,66 @@
+id: dea:capability-workforce-management
+type: BusinessCapability
+name: Workforce Management
+definition: The ability to acquire, develop, deploy, and release the enterprise's people.
+version: 1.0.0
+lifecycle_status: active
+capability_layer: support
+outcome: The enterprise has the people it needs, developing, with deliberate entry and exit.
+business_object: Workforce
+ecf:
+  primary:
+    domain: people-organization
+    stage: build
+  secondary:
+  - domain: people-organization
+    stage: operate
+  - domain: people-organization
+    stage: improve
+related_capabilities:
+- dea:capability-workforce-planning
+evidence:
+  sources:
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  rationale: Enterprise-generality demonstrated at E5; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
+    distinctness-sweep, admission-gate-closeout).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+  - stage: normalized
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: E5; N-001 settled the name (Workforce Management; "People Management" carried as alias).
+ecf_rationale: Primary build in people-organization (the workforce is built, then operated and improved); conceive and retire
+  are legitimately empty at first order.
+boundary: Manages the workforce; does not plan its shape (Workforce Planning) or govern the enterprise (Enterprise Governance).
+non_examples:
+- An HRIS (a system)
+- An HR department (an organization)
+specialization_boundary: Workforce forms (employees, contractors, volunteers, uniformed service) are specialization; the ability
+  to manage a workforce is not.
+aliases:
+- People Management
+- People / Workforce Management

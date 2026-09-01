@@ -1,0 +1,58 @@
+id: dea:capability-strategic-planning
+type: BusinessCapability
+name: Strategic Planning
+definition: The ability to translate enterprise direction into an ordered set of intents, horizons, and resource postures.
+version: 1.0.0
+lifecycle_status: active
+capability_layer: strategic
+outcome: A maintained plan that operationalizes strategy into choices the enterprise can govern and fund.
+business_object: Plan
+ecf:
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary: []
+related_capabilities:
+- dea:capability-strategy
+evidence:
+  sources:
+  - SRC-001
+  - SRC-004
+  rationale: Enterprise-generality demonstrated at E3; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
+    distinctness-sweep, admission-gate-closeout).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+  - stage: normalized
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: 'Distinct from Strategy (the sweep demonstrated partition: Strategy sets direction, Strategic Planning sequences
+  its pursuit); recorded in every strategy-bearing corpus source.'
+ecf_rationale: Planning begins at conceive in governance-existence, immediately downstream of Strategy.
+boundary: Plans the pursuit of direction; does not set direction (Strategy) or manage the resulting change portfolio (Change
+  Management).
+non_examples:
+- An annual budget cycle (Financial Management)
+- A project plan (a process artifact, not this ability)
+specialization_boundary: Planning cadences and frameworks (rolling, scenario, Hoshin) are implementation choices, not specializations
+  of the ability.

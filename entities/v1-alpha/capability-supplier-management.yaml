@@ -1,0 +1,64 @@
+id: dea:capability-supplier-management
+type: BusinessCapability
+name: Supplier Management
+definition: The ability to establish, maintain, and end relationships with those who supply the enterprise.
+version: 1.0.0
+lifecycle_status: active
+capability_layer: operational
+outcome: A managed supply base whose performance, risk, and lifecycle are deliberate.
+business_object: Supplier
+ecf:
+  primary:
+    domain: supply-resources
+    stage: build
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  - domain: supply-resources
+    stage: improve
+related_capabilities:
+- dea:capability-partner-management
+- dea:capability-sourcing-and-procurement
+evidence:
+  sources:
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  rationale: Enterprise-generality demonstrated at E4; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
+    distinctness-sweep, admission-gate-closeout).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+  - stage: normalized
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: Enterprise-general across all corpus classes; distinct from Sourcing and Procurement (the act of acquiring)
+  by the sweep.
+ecf_rationale: Primary build in supply-resources (the supply base is built before it is operated); operated and improved thereafter.
+boundary: Manages the supplier relationship; does not execute acquisition (Sourcing and Procurement) or manage alliances of
+  equals (Partner Management).
+non_examples:
+- A purchase order (the object of Sourcing and Procurement)
+- A vendor portal (a system)
+specialization_boundary: What is supplied (spectrum, labor, cloud capacity) is specialization; the ability to manage suppliers
+  is not.

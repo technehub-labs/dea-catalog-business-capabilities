@@ -1,0 +1,67 @@
+id: dea:capability-risk-management
+type: BusinessCapability
+name: Risk Management
+definition: The ability to identify, assess, treat, and monitor what could prevent the enterprise from achieving its outcomes.
+version: 1.0.0
+lifecycle_status: active
+capability_layer: support
+outcome: Exposures are known, owned, treated to appetite, and monitored.
+business_object: Risk
+ecf:
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  - domain: governance-existence
+    stage: improve
+related_capabilities:
+- dea:capability-compliance-management
+- dea:capability-legal-management
+- dea:capability-security-management
+evidence:
+  sources:
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  rationale: Enterprise-generality demonstrated at E4; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
+    distinctness-sweep, admission-gate-closeout).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+  - stage: normalized
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: E4; parent of the governance triad relationship set (Compliance, Legal, Security relate through it) per the
+  sweep.
+ecf_rationale: Primary conceive in governance-existence (risk posture is constituted with direction); operated and improved
+  continuously.
+boundary: Manages exposure; does not manage obligation conformance (Compliance), legal matters (Legal), or protective control
+  (Security).
+non_examples:
+- A risk register (an artifact)
+- A risk function (an organization)
+specialization_boundary: Risk classes (credit, operational, safety, cyber) are specialization; the ability to manage risk
+  is not.

@@ -1,0 +1,72 @@
+id: dea:capability-customer-management
+type: BusinessCapability
+name: Customer Management
+definition: The ability to establish, develop, and end relationships with those the enterprise serves.
+version: 1.0.0
+lifecycle_status: active
+capability_layer: operational
+outcome: A known, managed customer base whose lifecycle is deliberate rather than accidental.
+business_object: Customer
+ecf:
+  primary:
+    domain: customer-demand
+    stage: operate
+  secondary:
+  - domain: customer-demand
+    stage: conceive
+  - domain: customer-demand
+    stage: improve
+  - domain: customer-demand
+    stage: retire
+related_capabilities:
+- dea:capability-partner-management
+- dea:capability-marketing
+evidence:
+  sources:
+  - SRC-001
+  - SRC-002
+  - SRC-003
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  rationale: Enterprise-generality demonstrated at E5; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
+    distinctness-sweep, admission-gate-closeout).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+  - stage: normalized
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples:
+  - Telecom Customer Management (SPEC-001)
+  - Citizen/Member Relationship (SPEC-002, deferred)
+why_capability: 'The strongest-converged capability in the corpus (E5): every source class carries it under various names.'
+ecf_rationale: Primary operate in customer-demand (the relationship lives in operation); conceived, improved, and retired
+  deliberately.
+boundary: Manages the customer relationship; does not create demand (Marketing), manage partners (Partner Management), or
+  manage the workforce (Workforce Management).
+non_examples:
+- A CRM system
+- A sales call (an activity)
+- Customer Service Team (an actor)
+specialization_boundary: Who the customer is (subscriber, citizen, member, patient, policyholder) is specialization; the ability
+  to manage the relationship is not.

@@ -1,0 +1,57 @@
+id: dea:capability-workforce-planning
+type: BusinessCapability
+name: Workforce Planning
+definition: The ability to determine what workforce the enterprise will need and when.
+version: 1.0.0
+lifecycle_status: active
+capability_layer: support
+outcome: A maintained view of future workforce demand and supply, feeding Workforce Management.
+business_object: Workforce Plan
+ecf:
+  primary:
+    domain: people-organization
+    stage: design
+  secondary:
+  - domain: people-organization
+    stage: build
+related_capabilities:
+- dea:capability-workforce-management
+evidence:
+  sources:
+  - SRC-002
+  - SRC-004
+  rationale: Enterprise-generality demonstrated at E3; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
+    distinctness-sweep, admission-gate-closeout).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+  - stage: normalized
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: E3; distinct from Workforce Management (execution) per the sweep; planning object is the Workforce Plan.
+ecf_rationale: Primary design in people-organization (workforce shape is designed before it is built).
+boundary: Plans the workforce; does not acquire, develop, or release people (Workforce Management).
+non_examples:
+- A hiring requisition (an artifact of execution)
+- A skills database (a system)
+specialization_boundary: Planning horizons and models vary by sector; the ability to plan a workforce does not.

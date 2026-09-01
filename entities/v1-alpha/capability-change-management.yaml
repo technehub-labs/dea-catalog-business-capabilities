@@ -1,0 +1,59 @@
+id: dea:capability-change-management
+type: BusinessCapability
+name: Change Management
+definition: The ability to move the enterprise deliberately from one state to another.
+version: 1.0.0
+lifecycle_status: active
+capability_layer: strategic
+outcome: Change is initiated, sequenced, landed, and its effects verified, rather than merely happening.
+business_object: Change
+ecf:
+  primary:
+    domain: governance-existence
+    stage: improve
+  secondary: []
+related_capabilities:
+- dea:capability-enterprise-governance
+evidence:
+  sources:
+  - SRC-002
+  - SRC-004
+  rationale: Enterprise-generality demonstrated at E3; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
+    distinctness-sweep, admission-gate-closeout).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+  - stage: normalized
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: E3; stage-anchored at improve; cross-domain applicability resolved at review (R-005) as an object property,
+  not a mapping defect.
+ecf_rationale: 'R-005: primary governance-existence x improve (the ability is first exercised when the enterprise deliberately
+  improves itself); secondaries empty per honest-not-exhaustive.'
+boundary: Manages change; does not set direction (Strategy), govern the enterprise (Enterprise Governance), or operate steady-state
+  delivery (Operations).
+non_examples:
+- A change request ticket (an artifact)
+- A transformation office (an organization)
+specialization_boundary: Change kinds (organizational, technology, regulatory response) are specialization; the ability to
+  change is not.

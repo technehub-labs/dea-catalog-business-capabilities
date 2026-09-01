@@ -1,6 +1,6 @@
 # v1-alpha Catalog Entries
 
-This directory holds Business Capability catalog entries. **It is empty until the first admission PR**: entries appear only after a candidate passes the review gates (METHODOLOGY.md section 12) on the recommendation set produced by CR-DEA-BC-02 (gate close-out v0.1).
+This directory holds the canonical first-order Business Capability entries: 23 capabilities admitted 2026-09-01 via the method lifecycle (METHODOLOGY.md section 12 gates; recommendation set from admission-gate-closeout v0.1; review record admission-review v0.1).
 
 ## Entry conventions
 

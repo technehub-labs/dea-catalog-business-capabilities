@@ -1,0 +1,66 @@
+id: dea:capability-enterprise-governance
+type: BusinessCapability
+name: Enterprise Governance
+definition: 'The ability to direct and control the enterprise: decision rights, accountability, oversight, and policy across
+  the whole.'
+version: 1.0.0
+lifecycle_status: active
+capability_layer: strategic
+outcome: Decisions are made by the right authority, recorded, and enforced; the enterprise remains answerable to its principals.
+business_object: Decision
+ecf:
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  - domain: governance-existence
+    stage: improve
+related_capabilities:
+- dea:capability-strategy
+- dea:capability-risk-management
+evidence:
+  sources:
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  rationale: Enterprise-generality demonstrated at E3; evidence trail in docs/research (evidence-register, enterprise-generality-matrix,
+    distinctness-sweep, admission-gate-closeout).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+  - stage: normalized
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+  - stage: ecf-mapped
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: Governance of the enterprise-as-a-whole is enterprise-general and implementation-independent; distinct from
+  Risk, Compliance, and Legal by the distinctness sweep.
+ecf_rationale: Primary conceive in governance-existence (governance is constituted with the enterprise); exercised continuously
+  at operate and improve.
+boundary: Governs the enterprise; does not manage specific obligation classes (Compliance, Legal), exposure (Risk), or change
+  (Change Management).
+non_examples:
+- A board meeting (an event)
+- A policy document (an artifact)
+specialization_boundary: Governance instruments (boards, councils, assemblies) vary by sector and ownership form; the ability
+  to govern does not.
