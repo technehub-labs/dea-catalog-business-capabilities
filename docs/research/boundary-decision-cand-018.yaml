@@ -1,0 +1,50 @@
+register_version: 0.1.0
+cr: "CR-DEA-BC-02 execution (carry-forward: CAND-018 boundary delineation)"
+compiled: "2026-09-01"
+status: decision record; admission of CAND-018 (if the verdict holds through the review gates) is a separate step
+
+subject:
+  candidate: CAND-018
+  name: Analytics and Intelligence
+  deferral_trigger: "boundary vs CAND-017 Information Management (gate close-out v0.1)"
+  evidence_strength: E3
+  business_object_hypothesis: Insight
+
+counterpart:
+  candidate: CAND-017
+  name: Information Management
+  status: canonical (dea:capability-information-management)
+  business_object: Information
+
+readings_considered:
+  - id: A
+    reading: "Analytics and Intelligence is a distinct first-order capability"
+  - id: B
+    reading: "Analytics is a specialization of Information Management (the analytical context; raised in CAND-017's own rationale)"
+
+discriminating_tests:
+  business_object:
+    result: distinct
+    detail: "CAND-017's object is Information (what is stewarded). CAND-018's object is Insight (what is derived). An insight is a produced thing with its own lifecycle, by parity with Plan (CAND-002), not a property of information."
+  ability:
+    result: distinct
+    detail: "Stewardship verbs (govern, structure, retain, dispose) vs derivation verbs (model, analyze, predict, interpret). No shared verb set."
+  outcome:
+    result: distinct
+    detail: "CAND-017's outcome: information is findable, trustworthy, retained correctly. CAND-018's outcome: decisions are informed by derived intelligence. Neither implies the other."
+  partition:
+    result: holds
+    detail: "Coherent enterprises exist with strong information stewardship and no analytics (records-driven institutions), and with strong analytics on information they do not steward (external-data analysis). The abilities vary independently."
+  anti_invention:
+    result: passes
+    detail: "Analytics/intelligence recurs across the corpus (SRC-002, SRC-006; vendor models treat it as a distinct theme). The E-rating stands at E3; vendor-heavy support is noted and does not carry the decision alone (the object and outcome tests do)."
+
+verdict:
+  decision: reading A adopted; CAND-018 is a distinct first-order capability
+  boundary_statement: "Information Management stewards information; Analytics and Intelligence derives insight from information (the enterprise's own or external). The boundary is the business object: stewardship ends where derivation begins."
+  specialization_reading: "Reading B rejected: it would require Insight to be a kind of Information, which the object test contradicts; the analytical context changes the ability exercised, not merely the vocabulary."
+
+consequence:
+  recommendation: "Move CAND-018 from deferred to recommended; run the section 12 review gates; admission PR follows steward acceptance."
+  catalog_impact: "If admitted: 24 canonical capabilities; MCSP view gains one inherited entry (view review per CR-DEA-BC-04 D3, minor catalog bump); overlay regeneration v0.2 records the CAND-018 mapping (the open conflict flag is resolved by this decision's boundary statement)."
+  review_flags_carried: "CAND-018's ECF conflict flag resolves: with the boundary settled, the mapping question reduces to placement, decided at the review gate."
