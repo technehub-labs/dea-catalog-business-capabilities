@@ -1,6 +1,6 @@
-register_version: 0.1.0
-cr: 'CR-DEA-BC-02 execution: supplementary admission review (METHODOLOGY.md section 12) for CAND-023/CAND-029 after corpus patch'
-compiled: '2026-09-01'
+register_version: 0.2.0
+cr: 'CR-DEA-BC-02 execution: supplementary admission review (METHODOLOGY.md section 12) for CAND-023/CAND-029 after corpus patch; v0.2 adds CAND-018 after the boundary decision'
+compiled: '2026-09-01 (v0.2: CAND-018 reviewed after boundary-decision v0.1, PR #29; R-008 recorded)'
 status: review record; supplements admission-review.yaml v0.1; canonical transition executes in the admission PR after steward acceptance
 trigger:
   source: 'admission-gate-closeout.yaml v0.1 (deferred CAND-023/CAND-029; trigger was cross-industry corpus expansion)'
@@ -33,7 +33,33 @@ conflict_resolutions:
     institutionalizes it) and an explicit all-sectors applicability claim; Oslo Manual 2018 supplies an
     outcome-anchored, nationally surveyed definition and names innovation management as a distinct activity class.
     Evidence E4, generality demonstrated (8 of 10 strong), boundary met. Pre-check v0.4 records all axes met.'
+- candidate: CAND-018
+  id: R-008
+  decision: deferral lifted; boundary settled; ECF conflict flag resolved to placement
+  rationale: 'boundary-decision-cand-018 v0.1 (PR #29) adopted reading A: Analytics and Intelligence is a distinct
+    first-order capability; the boundary is the business object (stewardship ends where derivation begins). With the
+    boundary settled, the ECF conflict flag reduces to placement: operations-delivery x operate accepted; the span of
+    analytics across domains is a property of the Insight object (R-003 parity), so secondaries stay empty per
+    honest-not-exhaustive.'
 reviews:
+- candidate: CAND-018
+  name: Analytics and Intelligence
+  semantic_gate:
+    verdict: pass
+    hard_gates:
+      ability: met
+      outcome: met
+      implementation_independence: met
+    naming: 'conformant (TAXONOMY.md section 1: ability noun phrase, industry-free, implementation-free)'
+    anti_invention: first-order confirmed (boundary decision v0.1, PR #29; R-008)
+  architectural_gate:
+    verdict: pass
+    ecf: placement decided at this gate per the decision consequence (operations-delivery x operate; secondaries empty)
+    record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
+    layering: no WSF/metaframework/metamodel boundary violation
+  overall: cleared_for_admission
+  reviewer: Coder (for eaojnr)
+  acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-023
   name: Resilience Management
   semantic_gate:
@@ -71,12 +97,10 @@ reviews:
   reviewer: Coder (for eaojnr)
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 summary:
-  reviewed: 2
-  cleared: 2
+  reviewed: 3
+  cleared: 3
   held: 0
-  recommendation_set_after_acceptance: 25
+  recommendation_set_after_acceptance: 26
   still_deferred:
   - candidate: CAND-006
     trigger: government reference models (gap G5)
-  - candidate: CAND-018
-    trigger: boundary delineation vs CAND-017 (N-009 carried)
