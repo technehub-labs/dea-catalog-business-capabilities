@@ -29,7 +29,7 @@ This repository also hosts **specialization views** for specific enterprise type
 
 ## Status
 
-**Scaffold.** Methodology before population: the first implementation increment establishes the First-Order Business Capability Catalog Method (admission criteria, evidence process, ECF overlay rules, specialization boundary) via **CR-DEA-BC-01** ([`change-requests/CR-DEA-BC-01.md`](change-requests/CR-DEA-BC-01.md)). Canonical capability entries follow only after that method is accepted.
+**Scaffold, method established.** The First-Order Business Capability Catalog Method is accepted via **CR-DEA-BC-01** ([`change-requests/CR-DEA-BC-01.md`](change-requests/CR-DEA-BC-01.md)) and normative in the method documents: [`METHODOLOGY.md`](METHODOLOGY.md) (semantics, admission, lifecycle, review), [`EVIDENCE.md`](EVIDENCE.md) (evidence methodology, source stances, provenance), [`GOVERNANCE.md`](GOVERNANCE.md) (change control, roles), [`TAXONOMY.md`](TAXONOMY.md) (structure, naming, alias policy). Canonical capability entries follow the evidence ladder and review gates defined there.
 
 The evidence-based investigation that builds the candidate universe (evidence corpus, classification, normalization, enterprise-generality matrix, preliminary ECF overlay) is defined by **CR-DEA-BC-02** ([`change-requests/CR-DEA-BC-02.md`](change-requests/CR-DEA-BC-02.md)); canonicalization of the resulting first-order set follows via CR-DEA-BC-03. The record shape is already reconciled with dea-metamodel ADR-015 via **CR-DEA-BC-01A** ([`change-requests/CR-DEA-BC-01A.md`](change-requests/CR-DEA-BC-01A.md)) (capability kind by entity specialization; `capability_type` deprecated; governed `capability_layer`).
 
@@ -84,19 +84,25 @@ Normalization → Canonical Capability → ECF Mapping (Domain × Stage)
 
 ## Repository Structure
 
-Current (scaffold):
+Current (method established, population pending):
 
 ```
 dea-catalog-business-capabilities/
 ├── metamodel-pointer.yaml        ← entity allocation (auto-generated, do not edit)
+├── METHODOLOGY.md                ← the method: semantics, admission, lifecycle, review
+├── EVIDENCE.md                   ← evidence methodology, source stances, provenance
+├── GOVERNANCE.md                 ← change control, roles, acceptance
+├── TAXONOMY.md                   ← structure, naming, alias policy
+├── change-requests/              ← landed CRs + series index
 ├── docs/
-│   └── FOUNDATIONS.md            ← principles, decision points, method direction
+│   ├── FOUNDATIONS.md            ← principles, decision points register
+│   └── research/                 ← CR-DEA-BC-02 artifacts (YAML registers + MD summaries)
 └── .github/
     └── workflows/
         └── validate-allocation.yml   ← pins pointer against OpenDEAM (reusable validator)
 ```
 
-Planned (post CR-DEA-BC-01, indicative): `entities/v1-alpha/`, `schemas/`, `evidence/`, `mappings/ecf/`, `mappings/specializations/`, `mappings/synonyms/`. The final structure is reconciled with the catalog-wide conventions before adoption; nothing here pre-empts the CR.
+Planned (CR-DEA-BC-03 and later, indicative): `entities/v1-alpha/`, `schemas/`, `evidence/`, `mappings/ecf/`, `mappings/specializations/`, `mappings/synonyms/`. The final structure is reconciled with the catalog-wide conventions before adoption; nothing here pre-empts the CR.
 
 ## Change Control
 
@@ -108,4 +114,4 @@ Planned (post CR-DEA-BC-01, indicative): `entities/v1-alpha/`, `schemas/`, `evid
 
 ## Contributing
 
-Population is gated on CR-DEA-BC-01. Until then, contributions take the form of evidence, candidate analysis, and method critique rather than capability entries. See [`docs/FOUNDATIONS.md`](docs/FOUNDATIONS.md) and the [DEA Architecture Framework](https://github.com/technehub-labs/dea-architecture-framework).
+Population is gated on the method documents above and the CR-DEA-BC-02 admission stages. Until the first candidate passes the ladder, contributions take the form of evidence, candidate analysis, and method critique rather than capability entries. See [`docs/FOUNDATIONS.md`](docs/FOUNDATIONS.md) and the [DEA Architecture Framework](https://github.com/technehub-labs/dea-architecture-framework).
