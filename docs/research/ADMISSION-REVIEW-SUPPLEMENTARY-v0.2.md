@@ -1,7 +1,8 @@
-# Supplementary Admission Review v0.1: CAND-023 and CAND-029
+# Supplementary Admission Review v0.2: CAND-018, CAND-023 and CAND-029
 
 CR-DEA-BC-02 execution; METHODOLOGY.md section 12 gates. Date: 2026-09-01.
-Machine-readable: `admission-review-supplementary.yaml`. Supplements `admission-review.yaml` v0.1; review record, not a canonical transition.
+Machine-readable: `admission-review-supplementary.yaml` v0.2. Supplements `admission-review.yaml` v0.1; review record, not a canonical transition.
+v0.2 adds CAND-018 after the boundary decision (PR #29) resolved its deferral trigger.
 
 ## Why this review exists
 
@@ -28,12 +29,16 @@ Honesty note: the named trigger also listed government, non-profit, and infrastr
 - **R-006** (CAND-023): deferral lifted; ISO 22301 draws the boundary against Risk (uncertainty treatment) and Security (protection); BCI GPG 7.0 carries the all-sector applicability claim; evidence E4, generality 8/10 strong
 - **R-007** (CAND-029): deferral lifted; ISO 56002 draws the boundary against Change Management (innovation originates the new; change institutionalizes it); Oslo Manual 2018 names innovation management as a distinct activity class; evidence E4, generality 8/10 strong
 
+## CAND-018 (added in v0.2)
+
+The boundary decision (boundary-decision-cand-018 v0.1, PR #29) adopted reading A: Analytics and Intelligence is a distinct first-order capability; stewardship ends where derivation begins. Both section 12 gates pass: semantic (ability, outcome, implementation independence, naming, anti-invention all met at E3) and architectural (ECF placement decided at the gate: operations-delivery x operate, secondaries empty per honest-not-exhaustive with R-003 parity; record shape conforms; no layering violation). R-008 records the deferral lift and resolves the ECF conflict flag to a placement decision.
+
 ## Effect
 
-- Recommendation set grows from 23 to **25** pending steward acceptance
-- Still deferred: CAND-006 (trigger: gap G5, government reference models) and CAND-018 (trigger: boundary delineation vs CAND-017, carried per N-009)
+- Recommendation set grows from 23 to **26** pending steward acceptance (23 + CAND-018 + CAND-023 + CAND-029)
+- Still deferred: CAND-006 only (trigger: gap G5, government reference models)
 - The landed close-out v0.1 and admission review v0.1 stand unamended as historical records; this register supplements them
 
 ## Next
 
-The admission PR for catalog entries 24 (Resilience Management) and 25 (Innovation Management) under the CR-DEA-BC-03 schema, citing this register and the full evidence trail (METHODOLOGY.md section 12: acceptance is recorded in the promotion PR).
+The admission PR for catalog entries 24 (Resilience Management), 25 (Innovation Management), and 26 (Analytics and Intelligence) under the CR-DEA-BC-03 schema, citing this register and the full evidence trail (METHODOLOGY.md section 12: acceptance is recorded in the promotion PR).
