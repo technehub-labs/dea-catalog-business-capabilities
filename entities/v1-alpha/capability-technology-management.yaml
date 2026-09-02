@@ -4,6 +4,7 @@ name: Technology Management
 definition: The ability to direct, invest in, and steward the enterprise's technology
   estate.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: Technology choices are deliberate, funded, lifecycle-managed, and answerable

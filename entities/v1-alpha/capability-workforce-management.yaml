@@ -4,6 +4,7 @@ name: Workforce Management
 definition: The ability to acquire, develop, deploy, and release the enterprise's
   people.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: The enterprise has the people it needs, developing, with deliberate entry

@@ -4,6 +4,7 @@ name: Analytics and Intelligence
 definition: The ability to derive decision-grade insight from information the enterprise
   stewards or acquires.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: Decisions are informed by derived intelligence.

@@ -4,6 +4,7 @@ name: Information Management
 definition: The ability to govern, structure, and steward the enterprise's information
   across its lifecycle.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: Information is findable, trustworthy, retained correctly, and disposed of

@@ -4,6 +4,7 @@ name: Compliance Management
 definition: The ability to know the enterprise's obligations and to conform to them
   demonstrably.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: Obligations are identified, interpreted, met, and the conformance is provable.

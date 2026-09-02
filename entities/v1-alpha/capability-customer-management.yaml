@@ -4,6 +4,7 @@ name: Customer Management
 definition: The ability to establish, develop, and end relationships with those the
   enterprise serves.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
 outcome: A known, managed customer base whose lifecycle is deliberate rather than

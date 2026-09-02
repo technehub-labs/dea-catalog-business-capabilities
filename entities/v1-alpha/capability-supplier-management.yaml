@@ -4,6 +4,7 @@ name: Supplier Management
 definition: The ability to establish, maintain, and end relationships with those who
   supply the enterprise.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
 outcome: A managed supply base whose performance, risk, and lifecycle are deliberate.

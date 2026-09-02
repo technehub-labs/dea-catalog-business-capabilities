@@ -4,6 +4,7 @@ name: Innovation Management
 definition: The ability to originate, develop, and realize new or improved products,
   services, processes, and models into value.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
 outcome: Innovations are introduced to the market or brought into use, not merely

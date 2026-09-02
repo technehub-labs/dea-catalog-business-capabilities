@@ -4,6 +4,7 @@ name: Enterprise Governance
 definition: 'The ability to direct and control the enterprise: decision rights, accountability,
   oversight, and policy across the whole.'
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
 outcome: Decisions are made by the right authority, recorded, and enforced; the enterprise

@@ -4,6 +4,7 @@ name: Legal Management
 definition: 'The ability to conduct the enterprise''s legal work: counsel, contracts,
   disputes, and legal position.'
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: The enterprise's legal matters are conducted deliberately and its legal position

@@ -3,6 +3,7 @@ type: BusinessCapability
 name: Facility Management
 definition: The ability to provide and operate the enterprise's physical places.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: Places are available, safe, fit for purpose, and cost-deliberate.

@@ -4,6 +4,7 @@ name: Financial Management
 definition: The ability to plan, record, control, and report the enterprise's money
   in the operating cycle.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
 outcome: Money is accounted for, budgets hold, and financial reporting is accurate

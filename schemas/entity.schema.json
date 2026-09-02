@@ -233,7 +233,12 @@
     },
     "tags": { "type": "array", "items": { "type": "string" } },
     "metadata": { "type": "object" },
-    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" }
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "metamodel_pin": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Pins the entry to a specific dea-metamodel version (CR-DEA-BC-05 section 4.4). Optional for backwards compatibility with pre-v1-alpha.0 entries; the CI version guard (scripts/check_versions.py, C4) requires the field on every entry under v1-alpha onward."
+    }
   },
   "definitions": {
     "ecf_coordinate": {

@@ -4,6 +4,7 @@ name: Partner Management
 definition: The ability to establish and maintain relationships with entities the
   enterprise cooperates with as peers.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
 outcome: A deliberate portfolio of alliances, channels, and ecosystem relationships.

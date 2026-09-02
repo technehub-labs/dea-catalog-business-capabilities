@@ -4,6 +4,7 @@ name: Financial Stewardship
 definition: 'The ability to hold the enterprise''s financial resources in trust: policy,
   structure, and long-horizon financial position.'
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
 outcome: The enterprise's financial position is deliberate, funded, and answerable
