@@ -71,3 +71,9 @@ jobs:
 
       - name: Run ECF conformance gate (CR-ECF-CG-003)
         run: python scripts/check_ecf_conformance.py
+
+      - name: Install catalog version guard dependencies
+        run: pip install pyyaml
+
+      - name: Run catalog version guard (CR-DEA-BC-05)
+        run: python scripts/check_versions.py

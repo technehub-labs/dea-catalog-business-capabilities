@@ -4,6 +4,7 @@ name: Asset Management
 definition: The ability to steward the enterprise's non-financial, non-workforce assets
   across their lifecycle.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: Assets are known, maintained, utilized, and retired deliberately.

@@ -4,6 +4,7 @@ name: Offering Management
 definition: The ability to conceive, design, build, evolve, and retire what the enterprise
   offers.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
 outcome: A deliberate offering portfolio whose lifecycle is managed end to end.

@@ -4,6 +4,7 @@ name: Security Management
 definition: The ability to protect the enterprise's people, assets, and information
   from harm.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: Protective posture is deliberate, proportionate, and demonstrably operating.

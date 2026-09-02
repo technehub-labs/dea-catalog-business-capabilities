@@ -4,6 +4,7 @@ name: Risk Management
 definition: The ability to identify, assess, treat, and monitor what could prevent
   the enterprise from achieving its outcomes.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: Exposures are known, owned, treated to appetite, and monitored.

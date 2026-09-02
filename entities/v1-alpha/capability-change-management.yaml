@@ -3,6 +3,7 @@ type: BusinessCapability
 name: Change Management
 definition: The ability to move the enterprise deliberately from one state to another.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
 outcome: Change is initiated, sequenced, landed, and its effects verified, rather

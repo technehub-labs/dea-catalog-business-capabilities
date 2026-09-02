@@ -4,6 +4,7 @@ name: Operations
 definition: The ability to run the enterprise's day-to-day production and delivery
   of value.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
 outcome: Offerings are delivered, continuously, at the quality the enterprise commits

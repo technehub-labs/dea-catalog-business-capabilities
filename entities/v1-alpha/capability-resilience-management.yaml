@@ -4,6 +4,7 @@ name: Resilience Management
 definition: The ability to continue delivering products and services at an acceptable
   predefined capacity during disruption, and to recover.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: Delivery continues at acceptable predefined capacity through disruption;

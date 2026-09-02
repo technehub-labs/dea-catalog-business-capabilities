@@ -4,6 +4,7 @@ name: Strategic Planning
 definition: The ability to translate enterprise direction into an ordered set of intents,
   horizons, and resource postures.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
 outcome: A maintained plan that operationalizes strategy into choices the enterprise

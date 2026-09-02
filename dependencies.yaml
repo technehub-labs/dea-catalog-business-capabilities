@@ -1,0 +1,29 @@
+# Catalog dependency manifest (CR-DEA-BC-05).
+#
+# This file declares the catalog's pins to upstream contracts. It is the
+# catalog's own manifest; consumers of this catalog declare parallel
+# `dependencies.yaml` files in their own repositories to pin back to it.
+#
+# Schema (informative):
+#   ecf_contract:  string, e.g. dea:ecf@1.0.0      (required, hard pin)
+#   metamodel_pin: string, e.g. 1.0.0               (required, hard pin)
+#   catalogs:      list of catalog pin entries     (zero or more)
+#   catalogs[].id:     string, catalog id
+#   catalogs[].version: string, catalog version label
+#   catalogs[].ref:    optional git ref (tag, SHA, branch)
+#
+# Pin selection guidance (see docs/VERSIONING.md section 3):
+# - Tier 1 (ECF contract): strongest guarantee, content-agnostic.
+# - Tier 2 (catalog version label): recommended default.
+# - Tier 3 (git ref): exact pin for reproducibility.
+
+ecf_contract: dea:ecf@1.0.0
+metamodel_pin: 1.0.0
+
+# Catalog self-reference. The catalog pins to its own current version label
+# so consumers can pin to dea:catalog/business-capabilities@v1-alpha and
+# always resolve to the current v1-alpha.<P> baseline.
+catalogs:
+- id: dea:catalog/business-capabilities
+  version: v1-alpha
+  ref: v1-alpha.0

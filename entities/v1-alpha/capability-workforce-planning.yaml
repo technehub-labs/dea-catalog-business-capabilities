@@ -3,6 +3,7 @@ type: BusinessCapability
 name: Workforce Planning
 definition: The ability to determine what workforce the enterprise will need and when.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: A maintained view of future workforce demand and supply, feeding Workforce

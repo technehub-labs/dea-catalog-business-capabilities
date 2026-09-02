@@ -4,6 +4,7 @@ name: Marketing
 definition: The ability to understand markets and create demand for the enterprise's
   offerings.
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
 outcome: Demand exists and is measurable; the enterprise is known to those it intends

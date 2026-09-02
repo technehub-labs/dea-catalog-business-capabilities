@@ -4,6 +4,7 @@ name: Strategy
 definition: 'The ability to set the enterprise''s direction: where it will compete,
   what it will become, and what it will not do.'
 version: 1.0.0
+metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
 outcome: An explicit, current statement of enterprise direction that constrains and
