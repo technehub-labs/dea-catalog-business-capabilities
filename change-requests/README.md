@@ -9,7 +9,8 @@ Change requests for the Business Capability catalog. CRs land verbatim on accept
 | CR-DEA-BC-02 | Evidence-Based First-Order Capability Investigation | Landed, execution complete | PR #4 (2026-08-31) | Evidence corpus, candidate universe, normalization, generality matrix, distinctness sweep, admission. Research artifacts under `docs/research/`; close-out: 19/19 DoD rows verified (PR #19). |
 | CR-DEA-BC-03 | Catalog Schema and CI Reconciliation | Landed | PR #21 (2026-09-01) | `schemas/entity.schema.json` + entry CI reconciled with dea-metamodel (ADR-015 lineage) and the catalog-wide CI conventions (D8 correction recorded below). Ships no entries. |
 | CR-DEA-BC-04 | Industry Specialization Framework and First View (MCSP) | Landed | PR #27 (2026-09-01) | Views as mapping artifacts; SPEC-NNN record shape; version pinning; view schema + CI; evidence discipline; ECF inheritance; MCSP proving instance. |
-| CR-DEA-BC-05 | Catalogue Versioning and Change Procedure | Proposed | This PR | Three-tier pin scheme (ECF contract, catalog version label, git ref); bump rules (major/minor/patch); change procedure; tag format `v<N>-<word>.<P>`; CHANGELOG from merged PRs. No code changes in this PR; implementation PRs follow. |
+| CR-DEA-BC-05 | Catalogue Versioning and Change Procedure | Landed | PR #39 (2026-09-02) | Three-tier pin scheme (ECF contract, catalog version label, git ref); bump rules (major/minor/patch); change procedure; tag format `v<N>-<word>.<P>`; CHANGELOG from merged PRs. |
+| CR-DEA-BC-06 | Publication Pipeline and Versioned Artifacts | Proposed | This PR | Three artifacts per tag (poster, map, catalog); Node + D3.js generation; GitHub Pages + Releases + semantic-data endpoints; two-trigger pipeline (push-to-main + tag-push). No code in this PR; mockups in `business-capabilities/18_publication/`. |
 
 ## Conformance Gate series (cross-repo, CG-001..006 anchor in dea-metaframework)
 
