@@ -2,7 +2,7 @@ view_id: view-telecom-mcsp
 name: Mobile Communications Service Provider
 level: L3
 sector: Telecommunications (mobile services)
-catalog_baseline: v1-alpha admission set of 2026-09-01 (23 canonical first-order capabilities)
+catalog_baseline: v1-alpha admission set of 2026-09-02 (26 canonical first-order capabilities; PR #32 added CAND-018 Analytics and Intelligence, CAND-023 Resilience, CAND-029 Innovation)
 specializations:
 - id: SPEC-001
   parent: dea:capability-customer-management
@@ -81,14 +81,17 @@ inherited:
 - dea:capability-workforce-management
 - dea:capability-workforce-planning
 - dea:capability-information-management
+- dea:capability-analytics-and-intelligence
 - dea:capability-technology-management
 - dea:capability-risk-management
 - dea:capability-legal-management
 - dea:capability-security-management
+- dea:capability-resilience-management
 - dea:capability-sourcing-and-procurement
 - dea:capability-asset-management
 - dea:capability-facility-management
 - dea:capability-change-management
+- dea:capability-innovation-management
 rejected:
 - name: Network Management
   reason: 'Fails the business-object test (D7): the object is technology (the network),
