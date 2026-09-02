@@ -1,0 +1,507 @@
+overlay_version: 0.2.0
+cr: CR-DEA-BC-04
+compiled: '2026-09-02'
+status: admitted-canonical-overlay
+inputs:
+  preliminary_overlay: docs/research/preliminary-ecf-overlay.yaml (v0.1)
+  normalization_register: docs/research/normalization.yaml
+  admission_review: docs/research/admission-review.yaml (v0.1)
+  admission_review_supplementary: docs/research/admission-review-supplementary.yaml (v0.2)
+  boundary_decision_cand_018: docs/research/boundary-decision-cand-018.yaml
+  corpus_patch: docs/research/evidence-register.yaml v0.3 (SRC-013..016)
+  catalog_entities: entities/v1-alpha/
+rules:
+  primary: earliest legitimate initiation (FOUNDATIONS section 11)
+  secondary: legitimate participation only
+  no_forced_coverage: empty cells are valid results (CR section 27)
+  conflicts: flagged, not smoothed (CR section 26)
+applied_decisions:
+  normalization:
+    N-001: People cluster -> Workforce Management (CAND-015)
+    N-002: Marketing is distinct, not a child (CAND-010)
+    N-003: Analytics stays a provisional child of Information Management (later resolved by R-008 as distinct)
+    N-004: Sourcing/Procurement and Supplier Management are distinct (CAND-025 vs CAND-007)
+    N-005: Section 20 example resolved
+    N-006: Technology Management stands; its coordinate does not (held_unmapped)
+  review_decisions:
+  - id: R-001
+    candidate: CAND-008
+    topic: Partner Management dual-home tension
+    verdict: defensible-as-recorded
+    rationale: "Partnering initiated at customer-demand \xD7 conceive; supply-side operation is legitimate participation;\
+      \ dual-home tension expressed, not smoothed."
+  - id: R-002
+    candidate: CAND-010
+    topic: Marketing placement
+    verdict: defensible-as-recorded
+    rationale: "N-002 settled Marketing distinct from Customer and Offering; primary customer-demand \xD7 conceive is honest."
+  - id: R-003
+    candidate: CAND-017
+    topic: Information Management span
+    verdict: defensible-secondaries-deliberately-empty
+    rationale: The span of information across domains is a property of the business object, not of initiation; enumerating
+      all domains would violate honest-not-exhaustive.
+  - id: R-004
+    candidate: CAND-019
+    topic: Technology Management unmapped
+    verdict: N-006-resolved
+    rationale: Business capability, business object Technology; ECF legitimately absent (L5 concern, no domain carries technology).
+      Section 38 legitimately-absent clause applies.
+  - id: R-005
+    candidate: CAND-028
+    topic: Change Management cross-domain
+    verdict: defensible-as-recorded
+    rationale: "Earliest initiation governance-existence \xD7 improve; cross-domain applicability is an object property, not\
+      \ a mapping defect."
+  - id: R-006
+    candidate: CAND-023
+    topic: Resilience boundary vs Risk/Security
+    verdict: deferral-lifted; admitted-at-PR-32
+    rationale: ISO 22301 draws the boundary against Risk (uncertainty treatment) and Security (protection); BCI GPG 7.0 carries
+      the all-sector applicability claim; evidence E4, generality 8/10 strong.
+  - id: R-007
+    candidate: CAND-029
+    topic: Innovation boundary vs Change
+    verdict: deferral-lifted; admitted-at-PR-32
+    rationale: ISO 56002 draws the boundary against Change Management (innovation originates the new; change institutionalizes
+      it); Oslo Manual 2018 names innovation management as a distinct activity class; evidence E4, generality 8/10 strong.
+  - id: R-008
+    candidate: CAND-018
+    topic: Analytics boundary vs Information
+    verdict: distinct-first-order; admitted-at-PR-32
+    rationale: "Reading A: stewardship ends where derivation begins; operations-delivery \xD7 operate (primary), secondaries\
+      \ empty per R-003 parity; record shape conforms; no layering violation. Boundary decision: docs/research/boundary-decision-cand-018\
+      \ v0.1, PR #29."
+  - id: N-007
+    candidate: CAND-004
+    topic: Stakeholder Relationship Mgmt grouping
+    verdict: reclassified-as-grouping-parent; withdrawn-from-admission
+    rationale: Aggregate parent; children admitted separately (CAND-005 Customer Mgmt, CAND-006 Citizen/Member, CAND-007 Supplier
+      Mgmt, CAND-008 Partner Mgmt). Non-redundancy rule (BIZBOK SRC-001) applies.
+  - id: N-008
+    candidate: CAND-011
+    topic: Value Delivery aggregate
+    verdict: dissolved-as-first-order
+    rationale: Aggregate candidate; boundary dissolved when children admitted (CAND-012 Operations is the first-order child
+      that survives).
+overlays:
+- candidate: CAND-001
+  name: Strategy
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+  - domain: governance-existence
+    stage: improve
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-002
+  name: Strategic Planning
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary: []
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-003
+  name: Enterprise Governance
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  - domain: governance-existence
+    stage: improve
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-005
+  name: Customer Management
+  primary:
+    domain: customer-demand
+    stage: operate
+  secondary:
+  - domain: customer-demand
+    stage: conceive
+  - domain: customer-demand
+    stage: improve
+  - domain: customer-demand
+    stage: retire
+  confidence: high
+  conflict: null
+  note: 'follows FOUNDATIONS section 11 example: earliest legitimate initiation is operate (customers are managed once they
+    exist)'
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-006
+  name: Citizen / Member Relationship
+  primary:
+    domain: customer-demand
+    stage: operate
+  secondary:
+  - domain: customer-demand
+    stage: improve
+  confidence: low
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-007
+  name: Supplier Management
+  primary:
+    domain: supply-resources
+    stage: build
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  - domain: supply-resources
+    stage: improve
+  confidence: medium
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-008
+  name: Partner Management
+  primary:
+    domain: customer-demand
+    stage: conceive
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  confidence: low
+  conflict: partners sit between supply-resources (they supply) and customer-demand (they co-create demand); weak mapping
+    flagged
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-009
+  name: Offering Management
+  primary:
+    domain: product-offering
+    stage: conceive
+  secondary:
+  - domain: product-offering
+    stage: design
+  - domain: product-offering
+    stage: build
+  - domain: product-offering
+    stage: improve
+  - domain: product-offering
+    stage: retire
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-010
+  name: Marketing
+  primary:
+    domain: customer-demand
+    stage: conceive
+  secondary:
+  - domain: customer-demand
+    stage: operate
+  confidence: medium
+  conflict: 'pending normalization: Marketing under Customer (CAND-005) vs under Offering (CAND-009) shifts the primary domain'
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-012
+  name: Operations
+  primary:
+    domain: operations-delivery
+    stage: operate
+  secondary:
+  - domain: operations-delivery
+    stage: improve
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-013
+  name: Financial Stewardship
+  primary:
+    domain: finance-value
+    stage: conceive
+  secondary:
+  - domain: finance-value
+    stage: operate
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-014
+  name: Financial Management
+  primary:
+    domain: finance-value
+    stage: operate
+  secondary:
+  - domain: finance-value
+    stage: conceive
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-015
+  name: People / Workforce Management
+  primary:
+    domain: people-organization
+    stage: build
+  secondary:
+  - domain: people-organization
+    stage: operate
+  - domain: people-organization
+    stage: improve
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-016
+  name: Workforce Planning
+  primary:
+    domain: people-organization
+    stage: design
+  secondary:
+  - domain: people-organization
+    stage: build
+  confidence: medium
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-017
+  name: Information Management
+  primary:
+    domain: operations-delivery
+    stage: operate
+  secondary: []
+  confidence: low
+  conflict: information spans all domains; if the span is legitimate, secondary coordinates grow; if not, the candidate may
+    be cross-cutting (compare CAND-019)
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-018
+  name: Analytics and Intelligence
+  primary:
+    domain: operations-delivery
+    stage: operate
+  secondary: []
+  confidence: low
+  conflict: same span question as CAND-017
+  status: admitted-at-PR-32
+  admission_pr: 32
+  admission_cr: CR-DEA-BC-04 (boundary decision)
+- candidate: CAND-019
+  name: Technology Management
+  primary: null
+  secondary: []
+  confidence: low
+  conflict: 'HELD UNMAPPED: no ECF domain carries technology (technology is an L5 layer concern, not a domain); open question
+    carried to normalization: business capability with a domain, or cross-cutting governance concern?'
+  status: admitted-with-held-unmapped
+  held_unmapped_rationale: 'N-006: business capability stands; ECF legitimately absent'
+- candidate: CAND-020
+  name: Risk Management
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  - domain: governance-existence
+    stage: improve
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-021
+  name: Compliance Management
+  primary:
+    domain: governance-existence
+    stage: activate
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-022
+  name: Legal Management
+  primary:
+    domain: governance-existence
+    stage: conceive
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-023
+  name: Resilience Management
+  primary:
+    domain: governance-existence
+    stage: design
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  confidence: low
+  conflict: null
+  status: admitted-at-PR-32
+  admission_pr: 32
+  admission_cr: CR-DEA-BC-04 (corpus patch)
+- candidate: CAND-024
+  name: Security Management
+  primary:
+    domain: governance-existence
+    stage: design
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  confidence: medium
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-025
+  name: Sourcing and Procurement
+  primary:
+    domain: supply-resources
+    stage: build
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-026
+  name: Asset Management
+  primary:
+    domain: supply-resources
+    stage: build
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  - domain: supply-resources
+    stage: retire
+  confidence: medium
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-027
+  name: Facility Management
+  primary:
+    domain: supply-resources
+    stage: activate
+  secondary:
+  - domain: supply-resources
+    stage: operate
+  confidence: medium
+  conflict: null
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-028
+  name: Change Management
+  primary:
+    domain: governance-existence
+    stage: improve
+  secondary: []
+  confidence: low
+  conflict: stage-anchored (improve) but cross-domain by nature; may not own a domain
+  status: admitted
+  admission_pr: 25
+  admission_cr: CR-DEA-BC-04
+- candidate: CAND-029
+  name: Innovation Management
+  primary:
+    domain: product-offering
+    stage: conceive
+  secondary:
+  - domain: product-offering
+    stage: design
+  confidence: low
+  conflict: null
+  status: admitted-at-PR-32
+  admission_pr: 32
+  admission_cr: CR-DEA-BC-04 (corpus patch)
+coverage:
+  canonical_coordinates_total: 49
+  canonical_coordinates_referenced:
+  - customer-demand.conceive
+  - customer-demand.improve
+  - customer-demand.operate
+  - customer-demand.retire
+  - finance-value.conceive
+  - finance-value.operate
+  - governance-existence.activate
+  - governance-existence.conceive
+  - governance-existence.design
+  - governance-existence.improve
+  - governance-existence.operate
+  - operations-delivery.improve
+  - operations-delivery.operate
+  - people-organization.build
+  - people-organization.design
+  - people-organization.improve
+  - people-organization.operate
+  - product-offering.build
+  - product-offering.conceive
+  - product-offering.design
+  - product-offering.improve
+  - product-offering.retire
+  - supply-resources.activate
+  - supply-resources.build
+  - supply-resources.improve
+  - supply-resources.operate
+  - supply-resources.retire
+  canonical_coordinates_referenced_count: 27
+  canonical_coordinates_unreferenced_count: 22
+  note: Per CG-005 Invariant 7, unreferenced coordinates are legitimate; the catalog is not required to populate all 49.
+admission_summary:
+  candidates_in_overlay_v01: 29
+  candidates_in_overlay_v02: 27
+  withdrawn:
+  - CAND-004
+  - CAND-011
+  admitted_total: 26
+  held_unmapped:
+  - CAND-019
+  admitted_at_pr_32:
+  - CAND-018
+  - CAND-023
+  - CAND-029
+empty_cells_legitimate:
+- governance-existence x build, activate
+- finance-value x design, build, activate, retire (primary)
+- people-organization x conceive, retire (primary)
+conflicts_open:
+- CAND-008
+- CAND-010
+- CAND-017
+- CAND-018
+- CAND-019
+- CAND-028
