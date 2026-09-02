@@ -2,7 +2,7 @@
 
 The catalog method established by **CR-DEA-BC-01** (accepted 2026-09-01, PR #13). This document is normative: admission, promotion, and review decisions are made against it. [`docs/FOUNDATIONS.md`](docs/FOUNDATIONS.md) retains the rationale and the decision points register (D1 to D12) behind these rules; where the two differ, this document governs.
 
-Companion documents: [`EVIDENCE.md`](EVIDENCE.md) (evidence methodology and provenance), [`GOVERNANCE.md`](GOVERNANCE.md) (change control and roles), [`TAXONOMY.md`](TAXONOMY.md) (structure, naming, alias policy).
+Companion documents: [`EVIDENCE.md`](EVIDENCE.md) (evidence methodology and provenance), [`GOVERNANCE.md`](GOVERNANCE.md) (change control and roles), [`TAXONOMY.md`](TAXONOMY.md) (structure, naming, alias policy). Versioning and change procedure: [`docs/VERSIONING.md`](docs/VERSIONING.md) (CR-DEA-BC-05); bump tier, three-tier consumer pin scheme, tag format `v<N>-<word>.<P>`.
 
 ---
 
