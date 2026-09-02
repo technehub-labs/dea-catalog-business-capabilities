@@ -6,7 +6,7 @@ Principles, decision points, and method direction for `dea-catalog-business-capa
 
 ## 1. The foundational rule: catalog ≠ matrix
 
-The Business Capability Catalog and the Enterprise Composition Framework (ECF) answer different questions.
+The Business Capability Catalog and the Enterprise Concept Framework (ECF) answer different questions.
 
 | Artifact | Question answered |
 |---|---|
