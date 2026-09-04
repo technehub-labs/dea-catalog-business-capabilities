@@ -1,0 +1,16 @@
+# Build artifacts
+out/
+node_modules/
+.npm/
+.cache/
+
+# Test artifacts
+coverage/
+*.log
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.bak

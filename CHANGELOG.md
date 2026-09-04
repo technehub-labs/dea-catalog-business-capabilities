@@ -9,6 +9,30 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [Unreleased] - 2026-09-04
+
+### Publication pipeline live
+
+The catalog now publishes per-version artifacts (poster.svg + .png, map.svg +
+.png, catalog.svg + .png, catalog.csv) plus semantic-data endpoints
+(catalog.json, overlay.json, overlay.yaml, dependencies.yaml) to GitHub
+Pages via the central aggregator dispatch pattern (CR-DEA-BC-06).
+
+- `scripts/publish.js` generates the four artifacts from the live catalog
+  state. Generation is pure-SVG-string composition plus `sharp` rasterisation
+  (300 / 96 / 150 DPI for poster / map / catalog respectively).
+- Three publication destinations: GitHub Pages (`/latest/`, `/<version>/`),
+  GitHub Release (zip attached on tag pushes), semantic-data endpoints.
+- Triggers: push to `main` (latest artifacts, mutable) + tag push matching
+  `v*` (versioned artifacts, immutable).
+- Provenance: CR-DEA-BC-06 (proposal md5 `8f460bcc53e776230724c523d4fa205f`;
+  see `docs/publication-pipeline.md` for operations and `decisions.md` for
+  the five recorded implementation decisions).
+- First retroactive publish: `v1-alpha.0` at `4be5d7e1` lands on first
+  invocation of the `publish-versioned` workflow (AC8).
+- Scope of this entry: documentation + scripts + workflows. No entity,
+  overlay, or dependencies change.
+
 ## [v1-alpha.0] - 2026-09-02
 
 ### Initial v1-alpha baseline
