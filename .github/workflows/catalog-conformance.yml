@@ -1,0 +1,57 @@
+name: catalog-conformance
+
+# CR-CATALOG-STRUCT-03a: catalog repository standard conformance gate.
+# Runs the standard's regenerator + gate + cross-repo conformance suite
+# (CST-001..CST-016) on every PR. Vendored scripts are preferred over the
+# dea-metaframework fetch (per the process catalog's STRUCT-02 pattern).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  catalog-conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install pyyaml jsonschema pytest
+
+      - name: Fetch catalog index machinery from dea-metaframework (if not vendored)
+        uses: actions/checkout@v4
+        with:
+          repository: technehub-labs/dea-metaframework
+          path: .metaframework
+
+      - name: Install regenerator + gate + schema (prefer vendored copies)
+        run: |
+          mkdir -p scripts catalog-index-schema
+          if [ ! -f scripts/regenerate_catalog.py ]; then
+            cp .metaframework/tools/regenerate_catalog.py scripts/
+          fi
+          if [ ! -f scripts/check_catalog_index.py ]; then
+            cp .metaframework/tools/check_catalog_index.py scripts/
+          fi
+          if [ ! -f catalog-index-schema/catalog-index-schema.json ]; then
+            cp .metaframework/tools/catalog-index-schema.json catalog-index-schema/
+          fi
+
+      - name: Set canonical git origin URL (regenerator reads it)
+        run: |
+          git remote set-url origin "https://github.com/${GITHUB_REPOSITORY}.git"
+
+      - name: CATALOG.yaml must match regenerator output
+        run: python scripts/regenerate_catalog.py --check --schema catalog-index-schema/catalog-index-schema.json
+
+      - name: Validate CATALOG.yaml (CR-CATALOG-STRUCT-01 §8 gate)
+        run: python scripts/check_catalog_index.py --strict --schema catalog-index-schema/catalog-index-schema.json
+
+      - name: Run cross-repo conformance suite (CR-CATALOG-STRUCT-01 §11)
+        run: |
+          python .metaframework/tools/conformance_test_catalog_structure.py \
+              --catalog-root . \
+              --template-root .metaframework/tools/catalog-repo-template \
+              --strict

@@ -9,6 +9,51 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [Unreleased] - 2026-09-05
+
+### CR-CATALOG-STRUCT-03a: catalog repository standard adoption (layout + index)
+
+First half of the Business Capability catalog's adoption of the
+catalog repository standard (CR-CATALOG-STRUCT-01). Brings the catalog
+to "conforming-but-research-not-distributed"; CR-CATALOG-STRUCT-03b
+distributes the 33 research files into per-entity subtrees.
+
+Step 1 (layout):
+- 26 canonical entities moved from flat `entities/v1-alpha/capability-*.yaml`
+  to per-entity subtrees `entities/v1-alpha/dea:capability-<name>/`.
+- Each subtree has empty `research/`, `candidates/.gitkeep`, `retired/.gitkeep`
+  state directories per the standard's section 5.
+
+Catalog index + CI gate:
+- `CATALOG.yaml` (machine-generated, ~7 KB) committed.
+- `TEMPLATE_VERSION` (`0.1.0`) written; matches the canonical template.
+- `scripts/regenerate_catalog.py`, `scripts/check_catalog_index.py`, and
+  `catalog-index-schema/catalog-index-schema.json` vendored from
+  `dea-metaframework/tools/` (CST-013/CST-014).
+- New CI workflow `.github/workflows/catalog-conformance.yml` runs the
+  standard's regenerator check, gate (--strict), and cross-repo
+  conformance suite (CST-001..CST-016). The five existing workflows
+  (`validate-entries`, `validate-allocation`, `ecf-conformance-consumer`,
+  `publish-versioned`, `publish-latest`) are unchanged.
+- `metamodel-pointer.yaml` extended with additive top-level catalog
+  identity block (id/name/abbreviation/version/status/metamodel_version/owner).
+  Existing nested `metamodel:` and `catalog:` blocks plus the existing
+  root-level `description:` are untouched.
+
+Bug fixes:
+- `scripts/check_ecf_conformance.py` and `scripts/check_versions.py` now
+  walk the subtree layout recursively and skip files under
+  `research/`, `candidates/`, `retired/` per the standard's section 5.
+- Empty `classifications/` and `contributions/` directories created
+  with `.gitkeep` so the gate's cross-cutting sanity check passes.
+
+Verification:
+- All 3 catalog validators PASS (`check_ecf_conformance`: 26 entries,
+  `check_versions`: 26 entries C0..C5, `check_view_refs`: no errors).
+- Regenerator --check exits 0.
+- Gate --strict exits 0.
+- Conformance --strict: 16/16 CSTs passed, 0 warnings.
+
 ## [Unreleased] - 2026-09-04
 
 ### Publication pipeline live
