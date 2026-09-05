@@ -11,6 +11,48 @@ regime) and `v<N>.<M>` semver from v2 onward. See
 
 ## [Unreleased] - 2026-09-05
 
+### CR-CATALOG-STRUCT-03b: catalog repository standard adoption (research distribution)
+
+Second half of the Business Capability catalog's adoption of the
+catalog repository standard (CR-CATALOG-STRUCT-01). Completes the
+migration by distributing the 33 research files formerly under
+`docs/research/` into per-entity subtrees, `catalog-research/`, and
+`visuals/`. After this CR, the BC catalog is fully `conforming`.
+
+Distribution:
+- 2 files (CAND-018 boundary decision, YAML + MD) move to
+  `entities/v1-alpha/dea:capability-analytics-and-intelligence/research/`.
+  The decision is the canonical evidence for analytics-and-intelligence.
+- 31 catalog-wide files (CR-DEA-BC-02 execution artifacts: admission
+  gates, evidence corpus, candidates, distinctness sweep, ECF overlay,
+  corpus patch, normalization, specialization register, BC-02
+  close-out, research report) move to a new top-level
+  `catalog-research/` directory.
+- 9 SVG visuals + 1 manifest move to a new top-level `visuals/`
+  directory, separate from `docs/`. The manifest travels with the
+  assets as `visuals/MANIFEST.yaml`.
+
+Provenance:
+- Per-entity `research/README.md` records the CAND-018 decision's origin.
+- `catalog-research/README.md` documents the 8 research categories.
+- `visuals/README.md` documents the 9 visual artifacts.
+
+Directory cleanup:
+- `docs/research/` becomes empty after all moves and is removed.
+
+Catalog index:
+- `CATALOG.yaml` regenerated; `research_registers[].files` for
+  `dea:capability-analytics-and-intelligence` now lists the
+  boundary decision + provenance README.
+
+Verification:
+- All 3 catalogue validators PASS.
+- Regenerator --check exits 0.
+- Gate --strict exits 0.
+- Conformance --strict: 16/16 CSTs passed, 0 warnings.
+
+## [Unreleased] - 2026-09-05
+
 ### CR-CATALOG-STRUCT-03a: catalog repository standard adoption (layout + index)
 
 First half of the Business Capability catalog's adoption of the

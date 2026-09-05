@@ -27,23 +27,82 @@ jobs:
         run: |
           shopt -s nullglob globstar
           count=0
-          for f in entities/**/*.yaml entities/**/*.json; do
-            [ -f "$f" ] && count=$((count + 1))
-          done
+          # Per CR-CATALOG-STRUCT-01 §5: only files at the root of each
+          # entity subtree are catalog entries. Per-entity state
+          # directories (research/, candidates/, retired/) hold research
+          # artifacts, candidate records, and retired copies, none of
+          # which are validated against the entry schema.
+          while IFS= read -r f; do
+            count=$((count + 1))
+          done < <(find entities -type f \( -name '*.yaml' -o -name '*.json' \) \
+              -not -path '*/research/*' -not -path '*/candidates/*' -not -path '*/retired/*')
           echo "count=$count" >> "$GITHUB_OUTPUT"
           if [ "$count" -eq 0 ]; then
             echo "No catalog entries to validate (admission gates not started). Skipping."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Build canonical-files list for schema validation
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          # Per CR-CATALOG-STRUCT-01 §5: only files at the root of each
+          # entity subtree are catalog entries. State directories
+          # (research/, candidates/, retired/) hold research artifacts,
+          # candidate records, and retired copies; they are not validated
+          # against the entry schema.
+          {
+            for entity_subtree in entities/v1-alpha/dea:capability-*; do
+              [ -d "$entity_subtree" ] || continue
+              for f in "$entity_subtree"/*.yaml "$entity_subtree"/*.json; do
+                [ -f "$f" ] && echo "$f"
+              done
+            done
+          } > canonical_files.txt
+          echo "canonical entries to validate: $(wc -l < canonical_files.txt)"
+
       - name: Validate catalog entries against the Business Capability schema
         if: steps.check.outputs.skip != 'true'
-        uses: dsanders11/json-schema-validate-action@v2.1.0
-        with:
-          schema: schemas/entity.schema.json
-          files: |
-            entities/**/*.yaml
-            entities/**/*.json
+        run: |
+          # dsanders11/json-schema-validate-action@v2.1.0 only supports
+          # a multiline `files` glob, with no exclude mechanism; that
+          # made it pick up state-directory files (research/, candidates/,
+          # retired/) that are not catalog entries. We replaced that
+          # step with this Python validator, which reads canonical_files.txt
+          # (built by the step above) and validates each against
+          # schemas/entity.schema.json using jsonschema + pyyaml.
+          set -e
+          pip install --quiet pyyaml jsonschema
+          python - <<'PY'
+          import json, sys
+          import yaml
+          from jsonschema import Draft7Validator
+          schema = json.load(open("schemas/entity.schema.json"))
+          validator = Draft7Validator(schema)
+          errors: list[str] = []
+          count = 0
+          for line in open("canonical_files.txt"):
+              path = line.strip()
+              if not path:
+                  continue
+              count += 1
+              try:
+                  doc = yaml.safe_load(open(path))
+              except yaml.YAMLError as e:
+                  errors.append(f"{path}: YAML parse error: {e}")
+                  continue
+              if not isinstance(doc, dict):
+                  errors.append(f"{path}: not a mapping")
+                  continue
+              for err in sorted(validator.iter_errors(doc), key=lambda e: e.path):
+                  loc = ".".join(str(p) for p in err.absolute_path) or "<root>"
+                  errors.append(f"{path}: {loc}: {err.message}")
+          if errors:
+              print(f"FAIL: {len(errors)} schema violation(s):", file=sys.stderr)
+              for e in errors:
+                  print(f"  - {e}", file=sys.stderr)
+              sys.exit(1)
+          print(f"PASS: {count} entries conform to schemas/entity.schema.json")
+          PY
 
       - name: Validate schema fixture (schema self-exercise)
         uses: dsanders11/json-schema-validate-action@v2.1.0

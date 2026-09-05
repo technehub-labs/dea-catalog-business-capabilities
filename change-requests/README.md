@@ -19,6 +19,7 @@ Cross-repo mandatory standard applied by every TechNeHub Labs catalog repo (L1 l
 | CR | Title | Status | Notes |
 |---|---|---|---|
 | [CR-CATALOG-STRUCT-03a](CR-CATALOG-STRUCT-03a.md) | Business Capability Catalog Adoption (Layout + Index) | Proposed | First half of STRUCT-03. Moves 26 flat capability YAMLs into per-entity subtrees; vendors regenerator + gate + schema; commits `CATALOG.yaml` + `TEMPLATE_VERSION`; adds `.github/workflows/catalog-conformance.yml`. 33 research files in `docs/research/` STAY in place; STRUCT-03b handles their distribution. All 16 CSTs pass under `--strict`. |
+| [CR-CATALOG-STRUCT-03b](CR-CATALOG-STRUCT-03b.md) | Business Capability Catalog Adoption (Research Distribution) | Proposed | Second half of STRUCT-03. Distributes 33 research files: CAND-018 boundary decision (2 files) to `dea:capability-analytics-and-intelligence/research/`; 31 catalog-wide artifacts to new `catalog-research/`; 9 SVG visuals + manifest to new `visuals/`. `docs/research/` removed. Brings the BC catalog from `partial` to `conforming`. |
 
 ## Conformance Gate series (cross-repo, CG-001..006 anchor in dea-metaframework)
 

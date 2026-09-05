@@ -4,8 +4,8 @@ catalog:
     candidates: 0
     canonical: 26
     entities: 26
-    open_change_requests: 9
-    research_files: 0
+    open_change_requests: 10
+    research_files: 3
     retired: 0
   cross_cutting:
     change_requests: change-requests/
@@ -23,7 +23,7 @@ catalog:
     last_modified: '2026-09-05'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-analytics-and-intelligence/dea:capability-analytics-and-intelligence.yaml
-    research_count: 0
+    research_count: 3
     retired_count: 1
     state: canonical
     type: BusinessCapability
@@ -310,7 +310,10 @@ catalog:
   repository: https://github.com/technehub-labs/dea-catalog-business-capabilities.git
   research_registers:
   - entity_id: dea:capability-analytics-and-intelligence
-    files: []
+    files:
+    - BOUNDARY-DECISION-CAND-018.md
+    - README.md
+    - boundary-decision-cand-018.yaml
     path: entities/v1-alpha/dea:capability-analytics-and-intelligence/research/
   - entity_id: dea:capability-asset-management
     files: []
