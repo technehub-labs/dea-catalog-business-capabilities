@@ -1,0 +1,391 @@
+catalog:
+  abbreviation: BC
+  counts:
+    candidates: 0
+    canonical: 26
+    entities: 26
+    open_change_requests: 9
+    research_files: 0
+    retired: 0
+  cross_cutting:
+    change_requests: change-requests/
+    classifications: classifications/
+    contributions_queue: contributions/
+    schemas: schemas/
+    validators: scripts/
+  description: 'An ability the business possesses or requires to deliver value. Maps to ECF coordinates.
+
+    '
+  entities:
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-analytics-and-intelligence
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-analytics-and-intelligence/dea:capability-analytics-and-intelligence.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-asset-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-asset-management/dea:capability-asset-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-change-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-change-management/dea:capability-change-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-compliance-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-compliance-management/dea:capability-compliance-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-customer-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-customer-management/dea:capability-customer-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-enterprise-governance
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-enterprise-governance/dea:capability-enterprise-governance.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-facility-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-facility-management/dea:capability-facility-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-financial-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-financial-management/dea:capability-financial-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-financial-stewardship
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-financial-stewardship/dea:capability-financial-stewardship.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-information-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-information-management/dea:capability-information-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-innovation-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-innovation-management/dea:capability-innovation-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-legal-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-legal-management/dea:capability-legal-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-marketing
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-marketing/dea:capability-marketing.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-offering-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-offering-management/dea:capability-offering-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-operations
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-operations/dea:capability-operations.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-partner-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-partner-management/dea:capability-partner-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-resilience-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-resilience-management/dea:capability-resilience-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-risk-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-risk-management/dea:capability-risk-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-security-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-security-management/dea:capability-security-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-sourcing-and-procurement
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-sourcing-and-procurement/dea:capability-sourcing-and-procurement.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-strategic-planning
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-strategic-planning/dea:capability-strategic-planning.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-strategy
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-strategy/dea:capability-strategy.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-supplier-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-supplier-management/dea:capability-supplier-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-technology-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-technology-management/dea:capability-technology-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-workforce-management
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-workforce-management/dea:capability-workforce-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
+    id: dea:capability-workforce-planning
+    last_modified: '2026-09-05'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-workforce-planning/dea:capability-workforce-planning.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  id: dea:catalog-business-capabilities
+  metamodel_version: 1.0.0
+  name: Business Capability
+  owner: TechNeHub Labs
+  repository: https://github.com/technehub-labs/dea-catalog-business-capabilities.git
+  research_registers:
+  - entity_id: dea:capability-analytics-and-intelligence
+    files: []
+    path: entities/v1-alpha/dea:capability-analytics-and-intelligence/research/
+  - entity_id: dea:capability-asset-management
+    files: []
+    path: entities/v1-alpha/dea:capability-asset-management/research/
+  - entity_id: dea:capability-change-management
+    files: []
+    path: entities/v1-alpha/dea:capability-change-management/research/
+  - entity_id: dea:capability-compliance-management
+    files: []
+    path: entities/v1-alpha/dea:capability-compliance-management/research/
+  - entity_id: dea:capability-customer-management
+    files: []
+    path: entities/v1-alpha/dea:capability-customer-management/research/
+  - entity_id: dea:capability-enterprise-governance
+    files: []
+    path: entities/v1-alpha/dea:capability-enterprise-governance/research/
+  - entity_id: dea:capability-facility-management
+    files: []
+    path: entities/v1-alpha/dea:capability-facility-management/research/
+  - entity_id: dea:capability-financial-management
+    files: []
+    path: entities/v1-alpha/dea:capability-financial-management/research/
+  - entity_id: dea:capability-financial-stewardship
+    files: []
+    path: entities/v1-alpha/dea:capability-financial-stewardship/research/
+  - entity_id: dea:capability-information-management
+    files: []
+    path: entities/v1-alpha/dea:capability-information-management/research/
+  - entity_id: dea:capability-innovation-management
+    files: []
+    path: entities/v1-alpha/dea:capability-innovation-management/research/
+  - entity_id: dea:capability-legal-management
+    files: []
+    path: entities/v1-alpha/dea:capability-legal-management/research/
+  - entity_id: dea:capability-marketing
+    files: []
+    path: entities/v1-alpha/dea:capability-marketing/research/
+  - entity_id: dea:capability-offering-management
+    files: []
+    path: entities/v1-alpha/dea:capability-offering-management/research/
+  - entity_id: dea:capability-operations
+    files: []
+    path: entities/v1-alpha/dea:capability-operations/research/
+  - entity_id: dea:capability-partner-management
+    files: []
+    path: entities/v1-alpha/dea:capability-partner-management/research/
+  - entity_id: dea:capability-resilience-management
+    files: []
+    path: entities/v1-alpha/dea:capability-resilience-management/research/
+  - entity_id: dea:capability-risk-management
+    files: []
+    path: entities/v1-alpha/dea:capability-risk-management/research/
+  - entity_id: dea:capability-security-management
+    files: []
+    path: entities/v1-alpha/dea:capability-security-management/research/
+  - entity_id: dea:capability-sourcing-and-procurement
+    files: []
+    path: entities/v1-alpha/dea:capability-sourcing-and-procurement/research/
+  - entity_id: dea:capability-strategic-planning
+    files: []
+    path: entities/v1-alpha/dea:capability-strategic-planning/research/
+  - entity_id: dea:capability-strategy
+    files: []
+    path: entities/v1-alpha/dea:capability-strategy/research/
+  - entity_id: dea:capability-supplier-management
+    files: []
+    path: entities/v1-alpha/dea:capability-supplier-management/research/
+  - entity_id: dea:capability-technology-management
+    files: []
+    path: entities/v1-alpha/dea:capability-technology-management/research/
+  - entity_id: dea:capability-workforce-management
+    files: []
+    path: entities/v1-alpha/dea:capability-workforce-management/research/
+  - entity_id: dea:capability-workforce-planning
+    files: []
+    path: entities/v1-alpha/dea:capability-workforce-planning/research/
+  status: active
+  version: 1.0.0

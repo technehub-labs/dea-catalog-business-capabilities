@@ -1,0 +1,59 @@
+name: Publish latest capability artifacts
+
+# CR-DEA-BC-06: publishes mutable /latest/ artifacts on every push to main
+# and dispatches 'capabilities-updated' to the central Pages aggregator.
+#
+# Pattern A: org-wide central aggregator (technehub-labs/technehub-labs.github.io).
+# Proven reference: dea-metamodel .github/workflows/notify-pages.yml (PR #151).
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: publish-latest
+  cancel-in-progress: false
+
+jobs:
+  publish-latest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout dea-catalog-business-capabilities
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node (pinned via .nvmrc)
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate /latest/ artifacts
+        env:
+          CI: 'true'
+          GITHUB_SHA: ${{ github.sha }}
+        run: node scripts/publish.js latest
+
+      - name: Upload artifacts (debug)
+        uses: actions/upload-artifact@v4
+        with:
+          name: capabilities-latest-artifacts
+          path: out/latest/
+          retention-days: 7
+
+      - name: Dispatch to Pages aggregator
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
+        run: |
+          gh api repos/technehub-labs/technehub-labs.github.io/dispatches \
+            -X POST \
+            -f event_type=capabilities-updated \
+            -f client_payload='{"source":"dea-catalog-business-capabilities","commit":"${{ github.sha }}","version":"latest"}' \
+            --silent

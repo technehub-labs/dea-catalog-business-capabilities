@@ -11,13 +11,18 @@ Exit 1 on any dangling parent reference.
 """
 import glob
 import sys
+from pathlib import Path
 
 import yaml
 
 
 def main() -> int:
     canonical = set()
-    for path in glob.glob("entities/v1-alpha/capability-*.yaml"):
+    # Walk the subtree layout recursively; skip state-directory files
+    # (research/, candidates/, retired/) per CR-CATALOG-STRUCT-01 §5.
+    for path in glob.glob("entities/v1-alpha/**/*.yaml", recursive=True):
+        if any(part in ("research", "candidates", "retired") for part in Path(path).parts):
+            continue
         canonical.add(yaml.safe_load(open(path))["id"])
 
     failures = 0

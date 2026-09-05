@@ -103,7 +103,28 @@ def check_view(blk: dict, fp: str, errors: list):
 
 
 def main():
-    files = sorted(glob.glob(str(ENT / 'capability-*.yaml')))
+    # Walk every subtree under entities/v1-alpha/ recursively; pick up
+    # the canonical YAML at each subtree root. Per CR-CATALOG-STRUCT-01
+    # §5: every entity subtree has a canonical file at the root plus
+    # optional research/, candidates/, retired/ state directories.
+    # CR-CATALOG-STRUCT-03a adopts that layout for the 26 canonical
+    # Business Capability entries.
+    files = sorted(glob.glob(str(ENT / '**' / '*.yaml'), recursive=True))
+
+    # Skip non-entry files: READMEs (subtree index docs) and any YAML
+    # living under a per-entity state directory (research/, candidates/,
+    # retired/) per CR-CATALOG-STRUCT-01 §5. State-directory files are
+    # research/candidate/retired artifacts, not catalog entries; they
+    # are not required to carry the ecfConformance block.
+    def is_state_dir_file(path: str) -> bool:
+        parts = Path(path).parts
+        return any(p in ('research', 'candidates', 'retired') for p in parts)
+
+    files = [
+        f for f in files
+        if '/README' not in f and '/readme' not in f
+        and not is_state_dir_file(f)
+    ]
     errors: list[str] = []
     for fp in files:
         try:

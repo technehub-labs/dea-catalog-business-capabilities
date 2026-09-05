@@ -2,6 +2,24 @@
 # Auto-generated from OpenDEAM v0.2.1 (dea-architecture-framework, ADR-0002).
 # Do not edit manually — allocation changes go through the root model
 # (structural: ADR + minor bump; additive: PR + patch bump).
+#
+# Catalog identity (id/name/abbreviation/version/status/metamodel_version/
+# owner) below is the top-level block the catalog repository standard
+# (CR-CATALOG-STRUCT-01) regenerator reads (CR-CATALOG-STRUCT-06a). The
+# `description:` field lower in this file is the existing root-level
+# description and is the one the regenerator picks up. The metamodel:
+# and catalog: blocks beneath retain their original auto-generated
+# semantics; this addition is purely additive and represents catalog
+# identity (which the catalog author owns), not allocation data (which
+# the root model owns).
+id: dea:catalog-business-capabilities
+name: Business Capability
+abbreviation: BC
+version: "1.0.0"
+status: active
+metamodel_version: "1.0.0"
+owner: TechNeHub Labs
+
 metamodel:
   version: v0.2.1
   entity_id: dea:entity-capability

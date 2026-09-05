@@ -10,7 +10,15 @@ Change requests for the Business Capability catalog. CRs land verbatim on accept
 | CR-DEA-BC-03 | Catalog Schema and CI Reconciliation | Landed | PR #21 (2026-09-01) | `schemas/entity.schema.json` + entry CI reconciled with dea-metamodel (ADR-015 lineage) and the catalog-wide CI conventions (D8 correction recorded below). Ships no entries. |
 | CR-DEA-BC-04 | Industry Specialization Framework and First View (MCSP) | Landed | PR #27 (2026-09-01) | Views as mapping artifacts; SPEC-NNN record shape; version pinning; view schema + CI; evidence discipline; ECF inheritance; MCSP proving instance. |
 | CR-DEA-BC-05 | Catalogue Versioning and Change Procedure | Landed | PR #39 (2026-09-02) | Three-tier pin scheme (ECF contract, catalog version label, git ref); bump rules (major/minor/patch); change procedure; tag format `v<N>-<word>.<P>`; CHANGELOG from merged PRs. |
-| CR-DEA-BC-06 | Publication Pipeline and Versioned Artifacts | Proposed | This PR | Three artifacts per tag (poster, map, catalog); Node + D3.js generation; GitHub Pages + Releases + semantic-data endpoints; two-trigger pipeline (push-to-main + tag-push). No code in this PR; mockups in `business-capabilities/18_publication/`. |
+| CR-DEA-BC-06 | Publication Pipeline and Versioned Artifacts | Accepted (proposal), implementation PR pending | PR #42 (2026-09-04) | Three artifacts per tag (poster, map, catalog); Node + js-yaml + sharp generation (D3 was the proposal default but was rejected as unnecessary; see `decisions.md` D-2026-09-04-02); central-aggregator Pages via `repository_dispatch` (Pattern A, matches `dea-metamodel` PR #151 + `dea-metaframework` PR #7; the proposal's §5.1 `actions/deploy-pages@v4` text was superseded by D-2026-09-04-01); semantic-data endpoints + MANIFEST.md. Implementation ships scripts, two workflows, decisions log, and operations doc; no entity or overlay changes. |
+
+## Catalog Structure series
+
+Cross-repo mandatory standard applied by every TechNeHub Labs catalog repo (L1 layer). This row tracks this catalog's adoption of the standard.
+
+| CR | Title | Status | Notes |
+|---|---|---|---|
+| [CR-CATALOG-STRUCT-03a](CR-CATALOG-STRUCT-03a.md) | Business Capability Catalog Adoption (Layout + Index) | Proposed | First half of STRUCT-03. Moves 26 flat capability YAMLs into per-entity subtrees; vendors regenerator + gate + schema; commits `CATALOG.yaml` + `TEMPLATE_VERSION`; adds `.github/workflows/catalog-conformance.yml`. 33 research files in `docs/research/` STAY in place; STRUCT-03b handles their distribution. All 16 CSTs pass under `--strict`. |
 
 ## Conformance Gate series (cross-repo, CG-001..006 anchor in dea-metaframework)
 

@@ -62,7 +62,14 @@ def main() -> int:
     if not self_pin:
         failures.append("C0: dependencies.yaml must declare a self-pin to dea:catalog/business-capabilities.")
 
-    entry_paths = sorted(glob.glob("entities/v1-alpha/capability-*.yaml"))
+    entry_paths = sorted(glob.glob("entities/v1-alpha/**/*.yaml", recursive=True))
+    # Skip state-directory files (research/, candidates/, retired/)
+    # per CR-CATALOG-STRUCT-01 §5: only the canonical file at the subtree
+    # root is a catalog entry.
+    entry_paths = [
+        p for p in entry_paths
+        if not any(part in ('research', 'candidates', 'retired') for part in Path(p).parts)
+    ]
     if not entry_paths:
         print("No catalog entries found (admission gates not started). Skipping C1..C5.")
         return 0
