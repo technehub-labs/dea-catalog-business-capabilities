@@ -2,13 +2,13 @@ id: dea:capability-workforce-management
 type: BusinessCapability
 name: Workforce Management
 definition: The ability to acquire, develop, deploy, and release the enterprise's
-  people.
-version: 1.0.0
+  workforce of human and artificial agents.
+version: 1.1.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
-outcome: The enterprise has the people it needs, developing, with deliberate entry
-  and exit.
+outcome: The enterprise has the agents it needs, human and artificial, developing,
+  with deliberate entry and exit.
 business_object: Workforce
 ecf:
   primary:
@@ -66,7 +66,8 @@ non_examples:
 - An HRIS (a system)
 - An HR department (an organization)
 specialization_boundary: Workforce forms (employees, contractors, volunteers, uniformed
-  service) are specialization; the ability to manage a workforce is not.
+  service, AI agents, autonomous software agents, robotic systems, hybrid agent
+  teams) are specialization; the ability to manage a workforce is not.
 aliases:
 - People Management
 - People / Workforce Management
