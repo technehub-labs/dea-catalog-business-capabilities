@@ -30,14 +30,14 @@ function generateMapSVG({ entities, overlayIndex, candIndex, version: ver }) {
   // Column headers (y=74, x = cellCenter)
   for (let c = 0; c < COLS; c++) {
     const hx = GRID_X + CELL_W * c + CELL_W / 2 + CELL_GAP_X * c;
-    out.push(`<text x="${hx}" y="74" font-size="13" font-weight="600" fill="${COLORS.DOMAIN_LABEL}" text-anchor="middle">${STAGES[c].display}</text>`);
+    out.push(`<text x="${hx}" y="74" font-size="13" font-weight="600" fill="${COLORS.DOMAIN_LABEL}" text-anchor="middle">${esc(STAGES[c].display)}</text>`);
   }
 
   // Cells (rows)
   for (let r = 0; r < ROWS; r++) {
     const rowY = GRID_Y + CELL_H * r + CELL_GAP_Y * r + 50.14285714285714; // mockup row header y: 132.14 (r=0), 226.43 (r=1)
     // The mockup row header is at y = (cellY) + 50.142857; cellY for r=0 = 82 -> header y = 132.14
-    out.push(`<text x="40" y="${rowY}" font-size="12" font-weight="600" fill="${COLORS.DOMAIN_LABEL}">${DOMAINS[r].display}</text>`);
+    out.push(`<text x="40" y="${rowY}" font-size="12" font-weight="600" fill="${COLORS.DOMAIN_LABEL}">${esc(DOMAINS[r].display)}</text>`);
 
     for (let c = 0; c < COLS; c++) {
       // Cell container rect: mockup draws ALL 49 cells (even empty ones).

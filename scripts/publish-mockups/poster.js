@@ -55,7 +55,7 @@ function generatePosterSVG({ entities, overlayIndex, candIndex, version: ver }) 
     // mockup header x for CONCEIVE is 354.57142857142856 = GRID_X + CELL_W/2 + 4*0 (approx) for c=0
     // We compute as: GRID_X + CELL_W * c + (CELL_W / 2) + 4 * c (matches mockup).
     const hx = GRID_X + CELL_W * c + CELL_W / 2 + 4 * c;
-    out.push(`<text x="${hx}" y="146" font-size="18" font-weight="600" fill="${COLORS.DOMAIN_LABEL}" text-anchor="middle">${STAGES[c].display}</text>`);
+    out.push(`<text x="${hx}" y="146" font-size="18" font-weight="600" fill="${COLORS.DOMAIN_LABEL}" text-anchor="middle">${esc(STAGES[c].display)}</text>`);
   }
 
   // Cells (49: 7 rows x 7 cols)
@@ -63,7 +63,7 @@ function generatePosterSVG({ entities, overlayIndex, candIndex, version: ver }) 
     const rowDomain = DOMAINS[r];
     // row header text
     const rowY = GRID_Y + CELL_H * r + 59.64285714285714; // mockup uses y = 223.64285714285714 for r=0 (= 164+59.642857)
-    out.push(`<text x="70" y="${rowY}" font-size="14" font-weight="600" fill="${COLORS.DOMAIN_LABEL}">${rowDomain.display}</text>`);
+    out.push(`<text x="70" y="${rowY}" font-size="14" font-weight="600" fill="${COLORS.DOMAIN_LABEL}">${esc(rowDomain.display)}</text>`);
 
     for (let c = 0; c < COLS; c++) {
       const cx = GRID_X + CELL_W * c + 4 * c; // cell x for (0,0) is 284 (matches mockup)

@@ -6,11 +6,15 @@ const path = require('node:path');
 const yaml = require('js-yaml');
 
 function loadEntities(rootDir) {
+  // Entities live at entities/v1-alpha/<id>/<id>.yaml (CR-CATALOG-STRUCT-03a
+  // nested layout). The id is the directory name and the file stem.
   const dir = path.join(rootDir, 'entities', 'v1-alpha');
   const out = [];
-  for (const name of fs.readdirSync(dir).sort()) {
-    if (!name.startsWith('capability-') || !name.endsWith('.yaml')) continue;
-    const doc = yaml.load(fs.readFileSync(path.join(dir, name), 'utf8'));
+  for (const sub of fs.readdirSync(dir).sort()) {
+    if (!sub.startsWith('dea:')) continue;
+    const file = path.join(dir, sub, `${sub}.yaml`);
+    if (!fs.existsSync(file)) continue;
+    const doc = yaml.load(fs.readFileSync(file, 'utf8'));
     if (!doc || !doc.id) continue;
     out.push(doc);
   }
@@ -18,7 +22,7 @@ function loadEntities(rootDir) {
 }
 
 function loadOverlay(rootDir) {
-  const p = path.join(rootDir, 'docs', 'research', 'ecf-overlay-v0.2.yaml');
+  const p = path.join(rootDir, 'catalog-research', 'ecf-overlay-v0.2.yaml');
   return yaml.load(fs.readFileSync(p, 'utf8'));
 }
 
@@ -32,7 +36,7 @@ function loadDepsRaw(rootDir) {
 }
 
 function loadOverlayRaw(rootDir) {
-  return fs.readFileSync(path.join(rootDir, 'docs', 'research', 'ecf-overlay-v0.2.yaml'), 'utf8');
+  return fs.readFileSync(path.join(rootDir, 'catalog-research', 'ecf-overlay-v0.2.yaml'), 'utf8');
 }
 
 function loadChangelog(rootDir) {
