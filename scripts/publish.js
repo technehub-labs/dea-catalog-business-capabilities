@@ -1,18 +1,21 @@
 #!/usr/bin/env node
 //
-// CR-DEA-BC-06 publication pipeline entry point.
+// CR-DEA-BC-06 + CR-DEA-BC-10 publication pipeline entry point.
 //
 // Usage:
 //   node scripts/publish.js latest            # publish mutable latest artifacts
 //   node scripts/publish.js <version-label>   # publish versioned artifacts (e.g. v1-alpha.0)
 //
-// In CI (process.env.CI === 'true'), after writing artifacts the script:
-//   - dispatches repository_dispatch 'capabilities-updated' to the central
-//     aggregator (technehub-labs/technehub-labs.github.io) for /latest/ builds
-//   - dispatches 'capabilities-versioned' for /<version>/ builds
+// Distribution path (CR-DEA-BC-10): artifacts live in out/<target>/ on the
+// workflow runner. The latest build is uploaded as a workflow-run artifact
+// (debug). The versioned build is zipped and attached to a GitHub Release
+// at technehub-labs/dea-catalog-business-capabilities/releases/tag/<label>.
+// CR-DEA-BC-10 retired the central-aggregator Pages repository_dispatch path
+// that this script previously initiated.
 //
-// In CI, if the GITHUB_TOKEN is present, this script creates a GitHub Release
-// for versioned builds with a zip of all artifacts attached.
+// CR-DEA-BC-10 was originally authored as CR-DEA-BC-08; renumbered to BC-10
+// before merge because CR-DEA-BC-08 had already shipped as the Technology
+// Management N-006R coordinate (PR #53, 2026-09-08).
 
 const fs = require('node:fs');
 const path = require('node:path');
@@ -30,21 +33,6 @@ const { writeFile } = require('./lib/write-files.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const target = process.argv[2] || 'latest';
-
-function dispatchEvent(eventType, clientPayload) {
-  // Use the GitHub CLI for repository_dispatch since it's already auth'd.
-  const { execSync } = require('node:child_process');
-  const payload = JSON.stringify(clientPayload);
-  try {
-    execSync(
-      `gh api repos/technehub-labs/technehub-labs.github.io/dispatches -X POST -f event_type="${eventType}" -f client_payload='${payload}'`,
-      { stdio: 'inherit', env: { ...process.env } },
-    );
-    console.log(`dispatched ${eventType} to aggregator`);
-  } catch (e) {
-    console.warn(`warn: dispatch ${eventType} failed: ${e.message}`);
-  }
-}
 
 function createGitHubRelease(versionLabel, manifest) {
   const { execSync } = require('node:child_process');
@@ -168,13 +156,11 @@ async function main() {
     console.log(`  ${path.relative(ROOT, w.path)} (${w.size} bytes)`);
   }
 
-  // CI dispatch
+  // GitHub Release for versioned builds (CR-DEA-BC-10: distribution path;
+  // the central-aggregator dispatch was retired).
   if (isCI) {
     const commit = process.env.GITHUB_SHA || 'unknown';
-    if (target === 'latest') {
-      dispatchEvent('capabilities-updated', { source: 'dea-catalog-business-capabilities', commit, version: versionLabel });
-    } else {
-      dispatchEvent('capabilities-versioned', { source: 'dea-catalog-business-capabilities', commit, version: versionLabel });
+    if (target !== 'latest') {
       createGitHubRelease(versionLabel);
     }
   }

@@ -1,8 +1,16 @@
 name: Publish versioned capability artifacts
 
-# CR-DEA-BC-06: on every v* tag push, generates immutable versioned artifacts,
-# creates a GitHub Release with a zip, and dispatches 'capabilities-versioned'
-# to the central Pages aggregator.
+# CR-DEA-BC-06 + CR-DEA-BC-10: on every v* tag push, generates immutable
+# versioned artifacts, creates a GitHub Release with a zip of those artifacts,
+# and uploads the zip as a workflow-run artifact. Distribution is via GitHub
+# Releases only. CR-DEA-BC-10 retired the central-aggregator Pages
+# repository_dispatch path: the aggregator never wired up a consumer workflow
+# for `capabilities-versioned` and the dispatch secret was unprovisioned, so
+# the dispatch step failed on every run.
+#
+# CR-DEA-BC-06 was originally authored as CR-DEA-BC-08; renumbered to BC-10
+# before merge because CR-DEA-BC-08 had already shipped as the Technology
+# Management N-006R coordinate (PR #53, 2026-09-08).
 #
 # Tag format per CR-DEA-BC-05: v<N>-<word>.<P> for lettered-suffix versions
 # (v1-alpha.0), v<N>.<M> from v2 onward.
@@ -92,25 +100,3 @@ jobs:
               --title "${VERSION_LABEL}" \
               --generate-notes
           fi
-
-      - name: Dispatch to Pages aggregator
-        if: success()
-        env:
-          # CR-DEA-BC-09 follow-up: fall back to secrets.GITHUB_TOKEN when
-          # the org-level secrets.DISPATCH_TOKEN is not configured. The
-          # default GITHUB_TOKEN has cross-repo repository_dispatch authority
-          # for same-org targets under the same installation (the same
-          # pattern as dea-metaframework PR #7 and dea-metamodel PR #151);
-          # DISPATCH_TOKEN is a retained override for installations that
-          # want a narrower-scoped PAT. The previous config referenced
-          # DISPATCH_TOKEN only, which rendered as an empty GH_TOKEN in the
-          # step environment and failed every cross-repo dispatch (v1-alpha.1
-          # through v1-alpha.3 all failed this step).
-          GH_TOKEN: ${{ secrets.DISPATCH_TOKEN || secrets.GITHUB_TOKEN }}
-          VERSION_LABEL: ${{ github.ref_name }}
-        run: |
-          gh api repos/technehub-labs/technehub-labs.github.io/dispatches \
-            -X POST \
-            -f event_type=capabilities-versioned \
-            -f client_payload='{"source":"dea-catalog-business-capabilities","commit":"${{ github.sha }}","version":"'"${VERSION_LABEL}"'"}' \
-            --silent
