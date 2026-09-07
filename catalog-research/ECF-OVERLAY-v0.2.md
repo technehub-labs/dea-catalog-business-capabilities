@@ -60,7 +60,7 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 | party-relationship | Citizen / Member Relationship (operate); Customer Management (operate); Marketing (conceive); Partner Management (conceive) |
 | finance-accounting | Financial Management (operate); Financial Stewardship (conceive) |
 | product-value | Innovation Management (conceive); Offering Management (conceive) |
-| agency-organization | People / Workforce Management (build); Workforce Planning (design) |
+| agency-organization | Workforce Management (build); Workforce Planning (design) |
 | <unmapped> | Technology Management (<unmapped>) |
 
 ## Empty cells (legitimate, per CR section 27)
