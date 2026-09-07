@@ -250,11 +250,11 @@
           "type": "string",
           "enum": [
             "governance-existence",
-            "customer-demand",
-            "supply-resources",
-            "product-offering",
-            "operations-delivery",
-            "finance-value",
+            "party-relationship",
+            "strategy-direction",
+            "product-value",
+            "operations-enablement",
+            "finance-accounting",
             "people-organization"
           ]
         },

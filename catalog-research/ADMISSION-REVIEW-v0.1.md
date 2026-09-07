@@ -20,7 +20,7 @@ Five of the six open ECF conflict flags belonged to recommended candidates and a
 | ID | Candidate | Decision | Rationale (abbreviated) |
 |---|---|---|---|
 | R-001 | CAND-008 Partner Management | Defensible as recorded | Partnering is first initiated when the enterprise conceives demand-side relationships; supply-side operation is legitimate participation. Dual-home tension expressed, not smoothed. |
-| R-002 | CAND-010 Marketing | Defensible as recorded | N-002 settled placement (Marketing distinct from Customer and Offering); primary customer-demand x conceive is honest. |
+| R-002 | CAND-010 Marketing | Defensible as recorded | N-002 settled placement (Marketing distinct from Customer and Offering); primary party-relationship x conceive is honest. |
 | R-003 | CAND-017 Information Management | Defensible; secondaries deliberately empty | The span of information across domains is a property of the business object, not of initiation. Enumerating all domains would violate honest-not-exhaustive. |
 | R-004 | CAND-019 Technology Management | N-006 resolved: business capability, business object Technology; ECF legitimately absent | Enterprise-general ability (technology investment, lifecycle, sourcing). No ECF domain carries technology (L5 concern); the section 38 legitimately-absent clause covers this exactly. Entry carries `held_unmapped` with note. |
 | R-005 | CAND-028 Change Management | Defensible as recorded | Earliest initiation governance-existence x improve; cross-domain applicability is an object property, not a mapping defect. |

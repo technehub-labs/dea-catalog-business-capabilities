@@ -83,7 +83,7 @@ The section 36 initial finding is confirmed with evidence: a recurring enterpris
 
 ## 11. ECF Overlay
 
-28 of 29 capability-classified candidates received preliminary coordinates under the earliest-initiation rule (primary = first initiation stage, not heaviest operation). CAND-019 Technology Management is **held unmapped**: no ECF domain carries technology (technology is an L5 layer concern, not a domain), and the mapping is recorded as legitimately absent per the section 38 clause, with the N-006 open question carried (business capability with a domain, or cross-cutting governance concern). Empty cells are documented as legitimate results (section 27; no forced coverage): governance-existence x build/activate, finance-value x design/build/activate/retire, and people-organization x conceive/retire are empty at this granularity without semantic damage.
+28 of 29 capability-classified candidates received preliminary coordinates under the earliest-initiation rule (primary = first initiation stage, not heaviest operation). CAND-019 Technology Management is **held unmapped**: no ECF domain carries technology (technology is an L5 layer concern, not a domain), and the mapping is recorded as legitimately absent per the section 38 clause, with the N-006 open question carried (business capability with a domain, or cross-cutting governance concern). Empty cells are documented as legitimate results (section 27; no forced coverage): governance-existence x build/activate, finance-accounting x design/build/activate/retire, and people-organization x conceive/retire are empty at this granularity without semantic damage.
 
 Six mappings carry open conflict flags (CAND-008, CAND-010, CAND-017, CAND-018, CAND-019, CAND-028), flagged not smoothed (section 26). Each is a case where earliest initiation is arguable between two stages or domains; the flags ride into the review package with the close-out.
 
@@ -122,25 +122,25 @@ The admission gate close-out (v0.1) recommends 23 candidates, each with all ten 
 | CAND-001 | Strategy | governance-existence x conceive |
 | CAND-002 | Strategic Planning | governance-existence x conceive |
 | CAND-003 | Enterprise Governance | governance-existence x conceive |
-| CAND-005 | Customer Management | customer-demand x operate |
-| CAND-007 | Supplier Management | supply-resources x build |
-| CAND-008 | Partner Management | customer-demand x conceive (conflict flag) |
-| CAND-009 | Offering Management | product-offering x conceive |
-| CAND-010 | Marketing | customer-demand x conceive (conflict flag) |
-| CAND-012 | Operations | operations-delivery x operate |
-| CAND-013 | Financial Stewardship | finance-value x conceive |
-| CAND-014 | Financial Management | finance-value x operate |
+| CAND-005 | Customer Management | party-relationship x operate |
+| CAND-007 | Supplier Management | strategy-direction x build |
+| CAND-008 | Partner Management | party-relationship x conceive (conflict flag) |
+| CAND-009 | Offering Management | product-value x conceive |
+| CAND-010 | Marketing | party-relationship x conceive (conflict flag) |
+| CAND-012 | Operations | operations-enablement x operate |
+| CAND-013 | Financial Stewardship | finance-accounting x conceive |
+| CAND-014 | Financial Management | finance-accounting x operate |
 | CAND-015 | Workforce Management | people-organization x build |
 | CAND-016 | Workforce Planning | people-organization x design |
-| CAND-017 | Information Management | operations-delivery x operate (conflict flag) |
+| CAND-017 | Information Management | operations-enablement x operate (conflict flag) |
 | CAND-019 | Technology Management | held unmapped (legitimately absent; N-006 open question, conflict flag) |
 | CAND-020 | Risk Management | governance-existence x conceive |
 | CAND-021 | Compliance Management | governance-existence x activate |
 | CAND-022 | Legal Management | governance-existence x conceive |
 | CAND-024 | Security Management | governance-existence x design |
-| CAND-025 | Sourcing and Procurement | supply-resources x build |
-| CAND-026 | Asset Management | supply-resources x build |
-| CAND-027 | Facility Management | supply-resources x activate |
+| CAND-025 | Sourcing and Procurement | strategy-direction x build |
+| CAND-026 | Asset Management | strategy-direction x build |
+| CAND-027 | Facility Management | strategy-direction x activate |
 | CAND-028 | Change Management | governance-existence x improve (conflict flag) |
 
 Full coordinates: `admission-gate-closeout.yaml` and `preliminary-ecf-overlay.yaml`. The set size is an output of the analysis, not a target (section 31); 23 grounded capabilities are preferable to 40 invented ones.

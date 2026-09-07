@@ -4,7 +4,7 @@ CR-DEA-BC-04 proving instance. Machine form: `view-telecom-mcsp.yaml`. Baseline:
 
 ## Coverage
 
-**26 of 26 canonical capabilities accounted for**: 4 admitted specializations, 22 inherited unchanged. The 3 entries added at PR #32 (resilience, innovation, analytics-and-intelligence) are inherited unchanged: they are sector-agnostic, the telecom view adds no specialization for them, and they participate via their canonical coordinates (governance-existence × design + operate, product-offering × conceive + design, operations-delivery × operate).
+**26 of 26 canonical capabilities accounted for**: 4 admitted specializations, 22 inherited unchanged. The 3 entries added at PR #32 (resilience, innovation, analytics-and-intelligence) are inherited unchanged: they are sector-agnostic, the telecom view adds no specialization for them, and they participate via their canonical coordinates (governance-existence × design + operate, product-value × conceive + design, operations-enablement × operate).
 
 ## Admitted specializations
 

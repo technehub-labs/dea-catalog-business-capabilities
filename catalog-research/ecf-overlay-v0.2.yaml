@@ -28,13 +28,13 @@ applied_decisions:
     candidate: CAND-008
     topic: Partner Management dual-home tension
     verdict: defensible-as-recorded
-    rationale: "Partnering initiated at customer-demand \xD7 conceive; supply-side operation is legitimate participation;\
+    rationale: "Partnering initiated at party-relationship \xD7 conceive; supply-side operation is legitimate participation;\
       \ dual-home tension expressed, not smoothed."
   - id: R-002
     candidate: CAND-010
     topic: Marketing placement
     verdict: defensible-as-recorded
-    rationale: "N-002 settled Marketing distinct from Customer and Offering; primary customer-demand \xD7 conceive is honest."
+    rationale: "N-002 settled Marketing distinct from Customer and Offering; primary party-relationship \xD7 conceive is honest."
   - id: R-003
     candidate: CAND-017
     topic: Information Management span
@@ -69,7 +69,7 @@ applied_decisions:
     candidate: CAND-018
     topic: Analytics boundary vs Information
     verdict: distinct-first-order; admitted-at-PR-32
-    rationale: "Reading A: stewardship ends where derivation begins; operations-delivery \xD7 operate (primary), secondaries\
+    rationale: "Reading A: stewardship ends where derivation begins; operations-enablement \xD7 operate (primary), secondaries\
       \ empty per R-003 parity; record shape conforms; no layering violation. Boundary decision: docs/research/boundary-decision-cand-018\
       \ v0.1, PR #29."
   - id: N-007
@@ -127,14 +127,14 @@ overlays:
 - candidate: CAND-005
   name: Customer Management
   primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: operate
   secondary:
-  - domain: customer-demand
+  - domain: party-relationship
     stage: conceive
-  - domain: customer-demand
+  - domain: party-relationship
     stage: improve
-  - domain: customer-demand
+  - domain: party-relationship
     stage: retire
   confidence: high
   conflict: null
@@ -146,10 +146,10 @@ overlays:
 - candidate: CAND-006
   name: Citizen / Member Relationship
   primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: operate
   secondary:
-  - domain: customer-demand
+  - domain: party-relationship
     stage: improve
   confidence: low
   conflict: null
@@ -159,12 +159,12 @@ overlays:
 - candidate: CAND-007
   name: Supplier Management
   primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: build
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: improve
   confidence: medium
   conflict: null
@@ -174,13 +174,13 @@ overlays:
 - candidate: CAND-008
   name: Partner Management
   primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: conceive
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
   confidence: low
-  conflict: partners sit between supply-resources (they supply) and customer-demand (they co-create demand); weak mapping
+  conflict: partners sit between strategy-direction (they supply) and party-relationship (they co-create demand); weak mapping
     flagged
   status: admitted
   admission_pr: 25
@@ -188,16 +188,16 @@ overlays:
 - candidate: CAND-009
   name: Offering Management
   primary:
-    domain: product-offering
+    domain: product-value
     stage: conceive
   secondary:
-  - domain: product-offering
+  - domain: product-value
     stage: design
-  - domain: product-offering
+  - domain: product-value
     stage: build
-  - domain: product-offering
+  - domain: product-value
     stage: improve
-  - domain: product-offering
+  - domain: product-value
     stage: retire
   confidence: high
   conflict: null
@@ -207,10 +207,10 @@ overlays:
 - candidate: CAND-010
   name: Marketing
   primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: conceive
   secondary:
-  - domain: customer-demand
+  - domain: party-relationship
     stage: operate
   confidence: medium
   conflict: 'pending normalization: Marketing under Customer (CAND-005) vs under Offering (CAND-009) shifts the primary domain'
@@ -220,10 +220,10 @@ overlays:
 - candidate: CAND-012
   name: Operations
   primary:
-    domain: operations-delivery
+    domain: operations-enablement
     stage: operate
   secondary:
-  - domain: operations-delivery
+  - domain: operations-enablement
     stage: improve
   confidence: high
   conflict: null
@@ -233,10 +233,10 @@ overlays:
 - candidate: CAND-013
   name: Financial Stewardship
   primary:
-    domain: finance-value
+    domain: finance-accounting
     stage: conceive
   secondary:
-  - domain: finance-value
+  - domain: finance-accounting
     stage: operate
   confidence: high
   conflict: null
@@ -246,10 +246,10 @@ overlays:
 - candidate: CAND-014
   name: Financial Management
   primary:
-    domain: finance-value
+    domain: finance-accounting
     stage: operate
   secondary:
-  - domain: finance-value
+  - domain: finance-accounting
     stage: conceive
   confidence: high
   conflict: null
@@ -287,7 +287,7 @@ overlays:
 - candidate: CAND-017
   name: Information Management
   primary:
-    domain: operations-delivery
+    domain: operations-enablement
     stage: operate
   secondary: []
   confidence: low
@@ -299,7 +299,7 @@ overlays:
 - candidate: CAND-018
   name: Analytics and Intelligence
   primary:
-    domain: operations-delivery
+    domain: operations-enablement
     stage: operate
   secondary: []
   confidence: low
@@ -386,10 +386,10 @@ overlays:
 - candidate: CAND-025
   name: Sourcing and Procurement
   primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: build
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
   confidence: high
   conflict: null
@@ -399,12 +399,12 @@ overlays:
 - candidate: CAND-026
   name: Asset Management
   primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: build
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: retire
   confidence: medium
   conflict: null
@@ -414,10 +414,10 @@ overlays:
 - candidate: CAND-027
   name: Facility Management
   primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: activate
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
   confidence: medium
   conflict: null
@@ -438,10 +438,10 @@ overlays:
 - candidate: CAND-029
   name: Innovation Management
   primary:
-    domain: product-offering
+    domain: product-value
     stage: conceive
   secondary:
-  - domain: product-offering
+  - domain: product-value
     stage: design
   confidence: low
   conflict: null
@@ -451,33 +451,33 @@ overlays:
 coverage:
   canonical_coordinates_total: 49
   canonical_coordinates_referenced:
-  - customer-demand.conceive
-  - customer-demand.improve
-  - customer-demand.operate
-  - customer-demand.retire
-  - finance-value.conceive
-  - finance-value.operate
+  - party-relationship.conceive
+  - party-relationship.improve
+  - party-relationship.operate
+  - party-relationship.retire
+  - finance-accounting.conceive
+  - finance-accounting.operate
   - governance-existence.activate
   - governance-existence.conceive
   - governance-existence.design
   - governance-existence.improve
   - governance-existence.operate
-  - operations-delivery.improve
-  - operations-delivery.operate
+  - operations-enablement.improve
+  - operations-enablement.operate
   - people-organization.build
   - people-organization.design
   - people-organization.improve
   - people-organization.operate
-  - product-offering.build
-  - product-offering.conceive
-  - product-offering.design
-  - product-offering.improve
-  - product-offering.retire
-  - supply-resources.activate
-  - supply-resources.build
-  - supply-resources.improve
-  - supply-resources.operate
-  - supply-resources.retire
+  - product-value.build
+  - product-value.conceive
+  - product-value.design
+  - product-value.improve
+  - product-value.retire
+  - strategy-direction.activate
+  - strategy-direction.build
+  - strategy-direction.improve
+  - strategy-direction.operate
+  - strategy-direction.retire
   canonical_coordinates_referenced_count: 27
   canonical_coordinates_unreferenced_count: 22
   note: Per CG-005 Invariant 7, unreferenced coordinates are legitimate; the catalog is not required to populate all 49.
@@ -496,7 +496,7 @@ admission_summary:
   - CAND-029
 empty_cells_legitimate:
 - governance-existence x build, activate
-- finance-value x design, build, activate, retire (primary)
+- finance-accounting x design, build, activate, retire (primary)
 - people-organization x conceive, retire (primary)
 conflicts_open:
 - CAND-008

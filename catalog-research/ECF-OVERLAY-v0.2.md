@@ -30,9 +30,9 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 ### Review (R-001..R-008)
 
 - **R-001** (CAND-008, Partner Management dual-home tension): defensible-as-recorded.
-  - Partnering initiated at customer-demand × conceive; supply-side operation is legitimate participation; dual-home tension expressed, not smoothed.
+  - Partnering initiated at party-relationship × conceive; supply-side operation is legitimate participation; dual-home tension expressed, not smoothed.
 - **R-002** (CAND-010, Marketing placement): defensible-as-recorded.
-  - N-002 settled Marketing distinct from Customer and Offering; primary customer-demand × conceive is honest.
+  - N-002 settled Marketing distinct from Customer and Offering; primary party-relationship × conceive is honest.
 - **R-003** (CAND-017, Information Management span): defensible-secondaries-deliberately-empty.
   - The span of information across domains is a property of the business object, not of initiation; enumerating all domains would violate honest-not-exhaustive.
 - **R-004** (CAND-019, Technology Management unmapped): N-006-resolved.
@@ -44,7 +44,7 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 - **R-007** (CAND-029, Innovation boundary vs Change): deferral-lifted; admitted-at-PR-32.
   - ISO 56002 draws the boundary against Change Management (innovation originates the new; change institutionalizes it); Oslo Manual 2018 names innovation management as a distinct activity class; evidence E4, generality 8/10 strong.
 - **R-008** (CAND-018, Analytics boundary vs Information): distinct-first-order; admitted-at-PR-32.
-  - Reading A: stewardship ends where derivation begins; operations-delivery × operate (primary), secondaries empty per R-003 parity; record shape conforms; no layering violation. Boundary decision: docs/research/boundary-decision-cand-018 v0.1, PR #29.
+  - Reading A: stewardship ends where derivation begins; operations-enablement × operate (primary), secondaries empty per R-003 parity; record shape conforms; no layering violation. Boundary decision: docs/research/boundary-decision-cand-018 v0.1, PR #29.
 - **N-007** (CAND-004, Stakeholder Relationship Mgmt grouping): reclassified-as-grouping-parent; withdrawn-from-admission.
   - Aggregate parent; children admitted separately (CAND-005 Customer Mgmt, CAND-006 Citizen/Member, CAND-007 Supplier Mgmt, CAND-008 Partner Mgmt). Non-redundancy rule (BIZBOK SRC-001) applies.
 - **N-008** (CAND-011, Value Delivery aggregate): dissolved-as-first-order.
@@ -55,18 +55,18 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 | ECF Domain | Capabilities (primary coordinate) |
 |---|---|
 | governance-existence | Change Management (improve); Compliance Management (activate); Enterprise Governance (conceive); Legal Management (conceive); Resilience Management (design); Risk Management (conceive); Security Management (design); Strategic Planning (conceive); Strategy (conceive) |
-| supply-resources | Asset Management (build); Facility Management (activate); Sourcing and Procurement (build); Supplier Management (build) |
-| operations-delivery | Analytics and Intelligence (operate); Information Management (operate); Operations (operate) |
-| customer-demand | Citizen / Member Relationship (operate); Customer Management (operate); Marketing (conceive); Partner Management (conceive) |
-| finance-value | Financial Management (operate); Financial Stewardship (conceive) |
-| product-offering | Innovation Management (conceive); Offering Management (conceive) |
+| strategy-direction | Asset Management (build); Facility Management (activate); Sourcing and Procurement (build); Supplier Management (build) |
+| operations-enablement | Analytics and Intelligence (operate); Information Management (operate); Operations (operate) |
+| party-relationship | Citizen / Member Relationship (operate); Customer Management (operate); Marketing (conceive); Partner Management (conceive) |
+| finance-accounting | Financial Management (operate); Financial Stewardship (conceive) |
+| product-value | Innovation Management (conceive); Offering Management (conceive) |
 | people-organization | People / Workforce Management (build); Workforce Planning (design) |
 | <unmapped> | Technology Management (<unmapped>) |
 
 ## Empty cells (legitimate, per CR section 27)
 
 - governance-existence x build, activate
-- finance-value x design, build, activate, retire (primary)
+- finance-accounting x design, build, activate, retire (primary)
 - people-organization x conceive, retire (primary)
 
 ## Conflicts carried forward (CR section 26)
@@ -86,7 +86,7 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 
 ## Reading the overlay
 
-The overlay is now canonical, anchored in the admitted 26-entry catalog. The 14 distinct primary coordinates used (with secondaries expanding to 17 unique coordinates) cluster in governance-existence (9 entries: Strategy, Strategic Planning, Enterprise Governance, Risk, Compliance, Legal, Resilience, Security, Change) and supply-resources (4: Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt). Customer-demand holds 4 (Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing); operations-delivery holds 3 (Operations, Information Mgmt, Analytics and Intelligence); finance-value holds 2 (Financial Stewardship, Financial Management); people-organization holds 2 (Workforce Mgmt, Workforce Planning); product-offering holds 2 (Offering Mgmt, Innovation). Technology Management is the only held-unmapped entry, with the rationale locked by N-006.
+The overlay is now canonical, anchored in the admitted 26-entry catalog. The 14 distinct primary coordinates used (with secondaries expanding to 17 unique coordinates) cluster in governance-existence (9 entries: Strategy, Strategic Planning, Enterprise Governance, Risk, Compliance, Legal, Resilience, Security, Change) and strategy-direction (4: Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt). Customer-demand holds 4 (Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing); operations-enablement holds 3 (Operations, Information Mgmt, Analytics and Intelligence); finance-accounting holds 2 (Financial Stewardship, Financial Management); people-organization holds 2 (Workforce Mgmt, Workforce Planning); product-value holds 2 (Offering Mgmt, Innovation). Technology Management is the only held-unmapped entry, with the rationale locked by N-006.
 
 ## Carried forward from v0.1 (open items)
 

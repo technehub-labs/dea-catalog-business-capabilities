@@ -94,12 +94,12 @@ ecfConformance:
     doesNotRedefine: true
     mapping:
       governance-existence: GovernanceAndExistence
-      supply-resources: SupplyAndResources
+      strategy-direction: StrategyAndDirection
       people-organization: PeopleAndOrganization
-      customer-demand: CustomerAndDemand
-      product-offering: ProductAndOffering
-      operations-delivery: OperationsAndDelivery
-      finance-value: FinanceAndValue
+      party-relationship: PartyAndRelationship
+      product-value: ProductAndValue
+      operations-enablement: OperationsAndEnablement
+      finance-accounting: FinanceAndAccounting
       _stage_conceive: Conceive
       _stage_design: Design
       _stage_build: Build

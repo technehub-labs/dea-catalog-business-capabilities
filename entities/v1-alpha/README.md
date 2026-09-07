@@ -23,9 +23,9 @@ outcome: ...
 business_object: Customer
 version: 1.0.0
 ecf:
-  primary: { domain: customer-demand, stage: operate }
+  primary: { domain: party-relationship, stage: operate }
   secondary:
-    - { domain: customer-demand, stage: conceive }
+    - { domain: party-relationship, stage: conceive }
 evidence:
   sources: [SRC-001, SRC-002]
   rationale: ...
