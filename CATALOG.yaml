@@ -4,7 +4,7 @@ catalog:
     candidates: 0
     canonical: 26
     entities: 26
-    open_change_requests: 12
+    open_change_requests: 13
     research_files: 3
     retired: 0
   cross_cutting:
@@ -291,7 +291,7 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.1.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-workforce-planning
@@ -302,7 +302,7 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.1.0
   id: dea:catalog-business-capabilities
   metamodel_version: 1.0.0
   name: Business Capability

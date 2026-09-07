@@ -9,6 +9,23 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [v1-alpha.1] - 2026-09-07
+
+**Minor** (CR-DEA-BC-07, PR #48). Substrate-neutral re-statement of the two
+workforce capabilities, reconciling catalog content with the dea-metaframework
+v2.4.0 rationale (ADR-ECF-002 section 5; CR-ECF-007). Names, business objects,
+ECF coordinates, aliases, and pins unchanged (N-001 stands):
+`dea:capability-workforce-management` and `dea:capability-workforce-planning`
+now define the workforce as human and artificial agents, with the
+specialization boundary enumerating biological and artificial workforce forms.
+Both entries bump 1.0.0 -> 1.1.0. Also in this change:
+`visuals/v09-ecf-coverage-map.svg` domain axis labels re-keyed to the v2.4.0
+canonical set (six of seven were stale from pre-v2.3.0; same bug class as the
+grid.js fix in CR-CATALOG-STRUCT-09 section 5), and the canonical ECF overlay
+v0.2 domain table now cites the admitted capability by its canonical name.
+Historical research artifacts and the `out/v1-alpha.0` snapshot are
+deliberately untouched (provenance). Tag: v1-alpha.1.
+
 ## [v2.4.0-migration] - 2026-09-07
 
 CR-CATALOG-STRUCT-09 implementation: ECF Domain enum migration to the
