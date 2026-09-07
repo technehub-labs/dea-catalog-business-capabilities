@@ -91,7 +91,7 @@ ecfConformance:
     mapping:
       governance-existence: GovernanceAndExistence
       strategy-direction: StrategyAndDirection
-      people-organization: PeopleAndOrganization
+      agency-organization: AgencyAndOrganization
       party-relationship: PartyAndRelationship
       product-value: ProductAndValue
       operations-enablement: OperationsAndEnablement

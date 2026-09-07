@@ -12,12 +12,12 @@ outcome: The enterprise has the people it needs, developing, with deliberate ent
 business_object: Workforce
 ecf:
   primary:
-    domain: people-organization
+    domain: agency-organization
     stage: build
   secondary:
-  - domain: people-organization
+  - domain: agency-organization
     stage: operate
-  - domain: people-organization
+  - domain: agency-organization
     stage: improve
 related_capabilities:
 - dea:capability-workforce-planning
@@ -58,7 +58,7 @@ specialization:
   industry_examples: []
 why_capability: E5; N-001 settled the name (Workforce Management; "People Management"
   carried as alias).
-ecf_rationale: Primary build in people-organization (the workforce is built, then
+ecf_rationale: Primary build in agency-organization (the workforce is built, then
   operated and improved); conceive and retire are legitimately empty at first order.
 boundary: Manages the workforce; does not plan its shape (Workforce Planning) or govern
   the enterprise (Enterprise Governance).
@@ -78,21 +78,21 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: PeopleAndOrganization
+    domain: AgencyAndOrganization
     stage: Build
-    identifier: ecf:peopleOrganization.build
+    identifier: ecf:agencyOrganization.build
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
-    domain: PeopleAndOrganization
+    domain: AgencyAndOrganization
     stage: Operate
-    identifier: ecf:peopleOrganization.operate
+    identifier: ecf:agencyOrganization.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   - kind: coordinate
-    domain: PeopleAndOrganization
+    domain: AgencyAndOrganization
     stage: Improve
-    identifier: ecf:peopleOrganization.improve
+    identifier: ecf:agencyOrganization.improve
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:
@@ -105,7 +105,7 @@ ecfConformance:
     mapping:
       governance-existence: GovernanceAndExistence
       strategy-direction: StrategyAndDirection
-      people-organization: PeopleAndOrganization
+      agency-organization: AgencyAndOrganization
       party-relationship: PartyAndRelationship
       product-value: ProductAndValue
       operations-enablement: OperationsAndEnablement

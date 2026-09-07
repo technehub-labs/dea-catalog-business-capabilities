@@ -30,7 +30,7 @@ APPLY = '--apply' in sys.argv
 DOMAIN_MAP = {
     'governance-existence': 'GovernanceAndExistence',
     'strategy-direction': 'StrategyAndDirection',
-    'people-organization': 'PeopleAndOrganization',
+    'agency-organization': 'AgencyAndOrganization',
     'party-relationship': 'PartyAndRelationship',
     'product-value': 'ProductAndValue',
     'operations-enablement': 'OperationsAndEnablement',
@@ -39,7 +39,7 @@ DOMAIN_MAP = {
 DOMAIN_ID = {
     'governance-existence': 'governanceExistence',
     'strategy-direction': 'strategyDirection',
-    'people-organization': 'peopleOrganization',
+    'agency-organization': 'agencyOrganization',
     'party-relationship': 'partyRelationship',
     'product-value': 'productValue',
     'operations-enablement': 'operationsEnablement',

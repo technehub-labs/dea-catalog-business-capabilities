@@ -20,7 +20,7 @@ Date: 2026-08-31. Status: candidate-not-canonical. Machine-readable: `preliminar
 | operations-enablement | Value Delivery, Operations, Information Mgmt, Analytics (4) |
 | finance-accounting | Financial Stewardship, Financial Management (2) |
 | strategy-direction | Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt (4) |
-| people-organization | People/Workforce Mgmt, Workforce Planning (2) |
+| agency-organization | People/Workforce Mgmt, Workforce Planning (2) |
 
 One candidate held unmapped: Technology Management (CAND-019), see conflicts.
 
@@ -35,7 +35,7 @@ One candidate held unmapped: Technology Management (CAND-019), see conflicts.
 
 - governance-existence × build, activate: no candidate initiates there; governance conceives, then operates. Legitimately empty.
 - finance-accounting × design, build, activate, improve, retire (except secondary participation): financial stewardship conceives and operates; the enterprise does not "design" finance as a stage. Legitimately empty.
-- people-organization × conceive, retire: workforce is built, then operated and improved. Legitimately empty.
+- agency-organization × conceive, retire: workforce is built, then operated and improved. Legitimately empty.
 
 ## Reading the overlay
 

@@ -27,8 +27,8 @@ All ten axes met on current evidence. ECF primary coordinate per overlay v0.1 (e
 | CAND-012 | Operations | operations-enablement x operate |  |
 | CAND-013 | Financial Stewardship | finance-accounting x conceive |  |
 | CAND-014 | Financial Management | finance-accounting x operate |  |
-| CAND-015 | Workforce Management | people-organization x build |  |
-| CAND-016 | Workforce Planning | people-organization x design |  |
+| CAND-015 | Workforce Management | agency-organization x build |  |
+| CAND-016 | Workforce Planning | agency-organization x design |  |
 | CAND-017 | Information Management | operations-enablement x operate | flagged |
 | CAND-019 | Technology Management | ? x ? | flagged |
 | CAND-020 | Risk Management | governance-existence x conceive |  |

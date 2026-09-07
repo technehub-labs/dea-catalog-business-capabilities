@@ -259,12 +259,12 @@ overlays:
 - candidate: CAND-015
   name: People / Workforce Management
   primary:
-    domain: people-organization
+    domain: agency-organization
     stage: build
   secondary:
-  - domain: people-organization
+  - domain: agency-organization
     stage: operate
-  - domain: people-organization
+  - domain: agency-organization
     stage: improve
   confidence: high
   conflict: null
@@ -274,10 +274,10 @@ overlays:
 - candidate: CAND-016
   name: Workforce Planning
   primary:
-    domain: people-organization
+    domain: agency-organization
     stage: design
   secondary:
-  - domain: people-organization
+  - domain: agency-organization
     stage: build
   confidence: medium
   conflict: null
@@ -464,10 +464,10 @@ coverage:
   - governance-existence.operate
   - operations-enablement.improve
   - operations-enablement.operate
-  - people-organization.build
-  - people-organization.design
-  - people-organization.improve
-  - people-organization.operate
+  - agency-organization.build
+  - agency-organization.design
+  - agency-organization.improve
+  - agency-organization.operate
   - product-value.build
   - product-value.conceive
   - product-value.design
@@ -497,7 +497,7 @@ admission_summary:
 empty_cells_legitimate:
 - governance-existence x build, activate
 - finance-accounting x design, build, activate, retire (primary)
-- people-organization x conceive, retire (primary)
+- agency-organization x conceive, retire (primary)
 conflicts_open:
 - CAND-008
 - CAND-010

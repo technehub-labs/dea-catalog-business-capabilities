@@ -11,10 +11,10 @@ outcome: A maintained view of future workforce demand and supply, feeding Workfo
 business_object: Workforce Plan
 ecf:
   primary:
-    domain: people-organization
+    domain: agency-organization
     stage: design
   secondary:
-  - domain: people-organization
+  - domain: agency-organization
     stage: build
 related_capabilities:
 - dea:capability-workforce-management
@@ -53,7 +53,7 @@ specialization:
   industry_examples: []
 why_capability: E3; distinct from Workforce Management (execution) per the sweep;
   planning object is the Workforce Plan.
-ecf_rationale: Primary design in people-organization (workforce shape is designed
+ecf_rationale: Primary design in agency-organization (workforce shape is designed
   before it is built).
 boundary: Plans the workforce; does not acquire, develop, or release people (Workforce
   Management).
@@ -70,15 +70,15 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: PeopleAndOrganization
+    domain: AgencyAndOrganization
     stage: Design
-    identifier: ecf:peopleOrganization.design
+    identifier: ecf:agencyOrganization.design
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
-    domain: PeopleAndOrganization
+    domain: AgencyAndOrganization
     stage: Build
-    identifier: ecf:peopleOrganization.build
+    identifier: ecf:agencyOrganization.build
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:
@@ -91,7 +91,7 @@ ecfConformance:
     mapping:
       governance-existence: GovernanceAndExistence
       strategy-direction: StrategyAndDirection
-      people-organization: PeopleAndOrganization
+      agency-organization: AgencyAndOrganization
       party-relationship: PartyAndRelationship
       product-value: ProductAndValue
       operations-enablement: OperationsAndEnablement

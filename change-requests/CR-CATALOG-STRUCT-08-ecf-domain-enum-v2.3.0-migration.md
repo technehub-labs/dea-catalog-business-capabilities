@@ -30,7 +30,7 @@ they reference shift.
 |------------------|------------------|
 | `governance-existence` / `GovernanceAndExistence` | `governance-existence` / `GovernanceAndExistence` (unchanged) |
 | `supply-resources` / `SupplyAndResources` | `strategy-direction` / `StrategyAndDirection` |
-| `people-organization` / `PeopleAndOrganization` | `people-organization` / `PeopleAndOrganization` (unchanged) |
+| `agency-organization` / `AgencyAndOrganization` | `agency-organization` / `AgencyAndOrganization` (unchanged) |
 | `customer-demand` / `CustomerAndDemand` | `party-relationship` / `PartyAndRelationship` |
 | `product-offering` / `ProductAndOffering` | `product-value` / `ProductAndValue` |
 | `operations-delivery` / `OperationsAndDelivery` | `operations-enablement` / `OperationsAndEnablement` |

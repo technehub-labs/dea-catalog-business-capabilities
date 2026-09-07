@@ -9,6 +9,18 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [v2.4.0-migration] - 2026-09-07
+
+CR-CATALOG-STRUCT-09 implementation: ECF Domain enum migration to the
+v2.4.0 canonical Domain set (carried by `technehub-labs/dea-metaframework`
+v2.4.0; CR-ECF-007 + ADR-ECF-002). One of seven Domains renamed: Domain 3
+`PeopleAndOrganization` -> `AgencyAndOrganization` (kebab-case
+`people-organization` -> `agency-organization`), driven by the Substrate
+Independence Stress Test. 39 files re-keyed (1 schema, 3 scripts, 26 entity
+YAMLs, 7 catalog-research files, 2 CR records). Also fixes a pre-existing
+bug in `scripts/lib/grid.js` where the six other Domain display labels were
+stale from pre-v2.3.0. No content redistribution required (CR-ECF-007 §6.3).
+
 ## [v2.3.0-migration] - 2026-09-07
 
 CR-CATALOG-STRUCT-08 implementation: ECF Domain enum migration to the
