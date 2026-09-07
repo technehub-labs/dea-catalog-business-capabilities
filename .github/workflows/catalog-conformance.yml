@@ -55,3 +55,6 @@ jobs:
               --catalog-root . \
               --template-root .metaframework/tools/catalog-repo-template \
               --strict
+
+      - name: Check visual domain labels (CR-DEA-BC-07 §5 guard)
+        run: python scripts/check_visual_domain_labels.py
