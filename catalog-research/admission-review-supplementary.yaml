@@ -38,7 +38,7 @@ conflict_resolutions:
   decision: deferral lifted; boundary settled; ECF conflict flag resolved to placement
   rationale: 'boundary-decision-cand-018 v0.1 (PR #29) adopted reading A: Analytics and Intelligence is a distinct
     first-order capability; the boundary is the business object (stewardship ends where derivation begins). With the
-    boundary settled, the ECF conflict flag reduces to placement: operations-delivery x operate accepted; the span of
+    boundary settled, the ECF conflict flag reduces to placement: operations-enablement x operate accepted; the span of
     analytics across domains is a property of the Insight object (R-003 parity), so secondaries stay empty per
     honest-not-exhaustive.'
 reviews:
@@ -54,7 +54,7 @@ reviews:
     anti_invention: first-order confirmed (boundary decision v0.1, PR #29; R-008)
   architectural_gate:
     verdict: pass
-    ecf: placement decided at this gate per the decision consequence (operations-delivery x operate; secondaries empty)
+    ecf: placement decided at this gate per the decision consequence (operations-enablement x operate; secondaries empty)
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
@@ -90,7 +90,7 @@ reviews:
     anti_invention: first-order confirmed (pre-check v0.4 after corpus patch; R-007)
   architectural_gate:
     verdict: pass
-    ecf: mapping per close-out v0.1 accepted (product-offering x conceive primary; design secondary; no conflict flag)
+    ecf: mapping per close-out v0.1 accepted (product-value x conceive primary; design secondary; no conflict flag)
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission

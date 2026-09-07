@@ -160,10 +160,10 @@ Worked example (illustrative, not canonical):
 
 ```
 Customer Management
-Primary:    Customer & Demand × Operate / Deliver
-Secondary:  Customer & Demand × Conceive
-            Customer & Demand × Improve
-            Customer & Demand × Retire / Renew
+Primary:    Party & Relationship × Operate / Deliver
+Secondary:  Party & Relationship × Conceive
+            Party & Relationship × Improve
+            Party & Relationship × Retire / Renew
 ```
 
 ## 12. Canonical capability record (conceptual)

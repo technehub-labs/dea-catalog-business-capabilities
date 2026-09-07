@@ -64,14 +64,14 @@ recommendations:
 - candidate: CAND-005
   name: Customer Management
   ecf_primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: operate
   ecf_secondary:
-  - domain: customer-demand
+  - domain: party-relationship
     stage: conceive
-  - domain: customer-demand
+  - domain: party-relationship
     stage: improve
-  - domain: customer-demand
+  - domain: party-relationship
     stage: retire
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -79,12 +79,12 @@ recommendations:
 - candidate: CAND-007
   name: Supplier Management
   ecf_primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: build
   ecf_secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: improve
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -92,10 +92,10 @@ recommendations:
 - candidate: CAND-008
   name: Partner Management
   ecf_primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: conceive
   ecf_secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
   ecf_conflict_flag: true
   recommendation: recommend_admission
@@ -103,16 +103,16 @@ recommendations:
 - candidate: CAND-009
   name: Offering Management
   ecf_primary:
-    domain: product-offering
+    domain: product-value
     stage: conceive
   ecf_secondary:
-  - domain: product-offering
+  - domain: product-value
     stage: design
-  - domain: product-offering
+  - domain: product-value
     stage: build
-  - domain: product-offering
+  - domain: product-value
     stage: improve
-  - domain: product-offering
+  - domain: product-value
     stage: retire
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -120,10 +120,10 @@ recommendations:
 - candidate: CAND-010
   name: Marketing
   ecf_primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: conceive
   ecf_secondary:
-  - domain: customer-demand
+  - domain: party-relationship
     stage: operate
   ecf_conflict_flag: true
   recommendation: recommend_admission
@@ -131,10 +131,10 @@ recommendations:
 - candidate: CAND-012
   name: Operations
   ecf_primary:
-    domain: operations-delivery
+    domain: operations-enablement
     stage: operate
   ecf_secondary:
-  - domain: operations-delivery
+  - domain: operations-enablement
     stage: improve
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -142,10 +142,10 @@ recommendations:
 - candidate: CAND-013
   name: Financial Stewardship
   ecf_primary:
-    domain: finance-value
+    domain: finance-accounting
     stage: conceive
   ecf_secondary:
-  - domain: finance-value
+  - domain: finance-accounting
     stage: operate
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -153,10 +153,10 @@ recommendations:
 - candidate: CAND-014
   name: Financial Management
   ecf_primary:
-    domain: finance-value
+    domain: finance-accounting
     stage: operate
   ecf_secondary:
-  - domain: finance-value
+  - domain: finance-accounting
     stage: conceive
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -188,7 +188,7 @@ recommendations:
 - candidate: CAND-017
   name: Information Management
   ecf_primary:
-    domain: operations-delivery
+    domain: operations-enablement
     stage: operate
   ecf_secondary: []
   ecf_conflict_flag: true
@@ -250,10 +250,10 @@ recommendations:
 - candidate: CAND-025
   name: Sourcing and Procurement
   ecf_primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: build
   ecf_secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -261,12 +261,12 @@ recommendations:
 - candidate: CAND-026
   name: Asset Management
   ecf_primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: build
   ecf_secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: retire
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -274,10 +274,10 @@ recommendations:
 - candidate: CAND-027
   name: Facility Management
   ecf_primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: activate
   ecf_secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -295,10 +295,10 @@ deferrals:
 - candidate: CAND-006
   name: Citizen / Member Relationship
   ecf_primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: operate
   ecf_secondary:
-  - domain: customer-demand
+  - domain: party-relationship
     stage: improve
   ecf_conflict_flag: false
   disposition: deferred
@@ -313,7 +313,7 @@ deferrals:
 - candidate: CAND-018
   name: Analytics and Intelligence
   ecf_primary:
-    domain: operations-delivery
+    domain: operations-enablement
     stage: operate
   ecf_secondary: []
   ecf_conflict_flag: true
@@ -343,10 +343,10 @@ deferrals:
 - candidate: CAND-029
   name: Innovation Management
   ecf_primary:
-    domain: product-offering
+    domain: product-value
     stage: conceive
   ecf_secondary:
-  - domain: product-offering
+  - domain: product-value
     stage: design
   ecf_conflict_flag: false
   disposition: deferred

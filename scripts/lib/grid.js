@@ -9,11 +9,11 @@
 
 const DOMAINS = [
   { id: 'governance-existence',   display: 'Governance Existence' },
-  { id: 'customer-demand',        display: 'Customer Demand' },
-  { id: 'supply-resources',        display: 'Supply Resources' },
-  { id: 'product-offering',       display: 'Product Offering' },
-  { id: 'operations-delivery',    display: 'Operations Delivery' },
-  { id: 'finance-value',          display: 'Finance Value' },
+  { id: 'party-relationship',        display: 'Customer Demand' },
+  { id: 'strategy-direction',        display: 'Supply Resources' },
+  { id: 'product-value',       display: 'Product Offering' },
+  { id: 'operations-enablement',    display: 'Operations Delivery' },
+  { id: 'finance-accounting',          display: 'Finance Value' },
   { id: 'people-organization',    display: 'People Organization' },
 ];
 

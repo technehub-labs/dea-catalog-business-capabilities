@@ -44,26 +44,26 @@ overlays:
 - candidate: CAND-004
   name: Stakeholder Relationship Management
   primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: conceive
   secondary:
-  - domain: customer-demand
+  - domain: party-relationship
     stage: operate
-  - domain: customer-demand
+  - domain: party-relationship
     stage: improve
   confidence: medium
   conflict: null
 - candidate: CAND-005
   name: Customer Management
   primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: operate
   secondary:
-  - domain: customer-demand
+  - domain: party-relationship
     stage: conceive
-  - domain: customer-demand
+  - domain: party-relationship
     stage: improve
-  - domain: customer-demand
+  - domain: party-relationship
     stage: retire
   confidence: high
   conflict: null
@@ -72,99 +72,99 @@ overlays:
 - candidate: CAND-006
   name: Citizen / Member Relationship
   primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: operate
   secondary:
-  - domain: customer-demand
+  - domain: party-relationship
     stage: improve
   confidence: low
   conflict: null
 - candidate: CAND-007
   name: Supplier Management
   primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: build
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: improve
   confidence: medium
   conflict: null
 - candidate: CAND-008
   name: Partner Management
   primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: conceive
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
   confidence: low
-  conflict: partners sit between supply-resources (they supply) and customer-demand (they co-create demand); weak mapping
+  conflict: partners sit between strategy-direction (they supply) and party-relationship (they co-create demand); weak mapping
     flagged
 - candidate: CAND-009
   name: Offering Management
   primary:
-    domain: product-offering
+    domain: product-value
     stage: conceive
   secondary:
-  - domain: product-offering
+  - domain: product-value
     stage: design
-  - domain: product-offering
+  - domain: product-value
     stage: build
-  - domain: product-offering
+  - domain: product-value
     stage: improve
-  - domain: product-offering
+  - domain: product-value
     stage: retire
   confidence: high
   conflict: null
 - candidate: CAND-010
   name: Marketing
   primary:
-    domain: customer-demand
+    domain: party-relationship
     stage: conceive
   secondary:
-  - domain: customer-demand
+  - domain: party-relationship
     stage: operate
   confidence: medium
   conflict: 'pending normalization: Marketing under Customer (CAND-005) vs under Offering (CAND-009) shifts the primary domain'
 - candidate: CAND-011
   name: Value Delivery
   primary:
-    domain: operations-delivery
+    domain: operations-enablement
     stage: activate
   secondary:
-  - domain: operations-delivery
+  - domain: operations-enablement
     stage: operate
   confidence: medium
   conflict: null
 - candidate: CAND-012
   name: Operations
   primary:
-    domain: operations-delivery
+    domain: operations-enablement
     stage: operate
   secondary:
-  - domain: operations-delivery
+  - domain: operations-enablement
     stage: improve
   confidence: high
   conflict: null
 - candidate: CAND-013
   name: Financial Stewardship
   primary:
-    domain: finance-value
+    domain: finance-accounting
     stage: conceive
   secondary:
-  - domain: finance-value
+  - domain: finance-accounting
     stage: operate
   confidence: high
   conflict: null
 - candidate: CAND-014
   name: Financial Management
   primary:
-    domain: finance-value
+    domain: finance-accounting
     stage: operate
   secondary:
-  - domain: finance-value
+  - domain: finance-accounting
     stage: conceive
   confidence: high
   conflict: null
@@ -193,7 +193,7 @@ overlays:
 - candidate: CAND-017
   name: Information Management
   primary:
-    domain: operations-delivery
+    domain: operations-enablement
     stage: operate
   secondary: []
   confidence: low
@@ -202,7 +202,7 @@ overlays:
 - candidate: CAND-018
   name: Analytics and Intelligence
   primary:
-    domain: operations-delivery
+    domain: operations-enablement
     stage: operate
   secondary: []
   confidence: low
@@ -269,32 +269,32 @@ overlays:
 - candidate: CAND-025
   name: Sourcing and Procurement
   primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: build
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
   confidence: high
   conflict: null
 - candidate: CAND-026
   name: Asset Management
   primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: build
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: retire
   confidence: medium
   conflict: null
 - candidate: CAND-027
   name: Facility Management
   primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: activate
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
   confidence: medium
   conflict: null
@@ -309,16 +309,16 @@ overlays:
 - candidate: CAND-029
   name: Innovation Management
   primary:
-    domain: product-offering
+    domain: product-value
     stage: conceive
   secondary:
-  - domain: product-offering
+  - domain: product-value
     stage: design
   confidence: low
   conflict: null
 empty_cells_legitimate:
 - governance-existence x build, activate
-- finance-value x design, build, activate, retire (primary)
+- finance-accounting x design, build, activate, retire (primary)
 - people-organization x conceive, retire (primary)
 conflicts_open:
 - CAND-008

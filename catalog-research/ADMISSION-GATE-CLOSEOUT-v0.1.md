@@ -19,25 +19,25 @@ All ten axes met on current evidence. ECF primary coordinate per overlay v0.1 (e
 | CAND-001 | Strategy | governance-existence x conceive |  |
 | CAND-002 | Strategic Planning | governance-existence x conceive |  |
 | CAND-003 | Enterprise Governance | governance-existence x conceive |  |
-| CAND-005 | Customer Management | customer-demand x operate |  |
-| CAND-007 | Supplier Management | supply-resources x build |  |
-| CAND-008 | Partner Management | customer-demand x conceive | flagged |
-| CAND-009 | Offering Management | product-offering x conceive |  |
-| CAND-010 | Marketing | customer-demand x conceive | flagged |
-| CAND-012 | Operations | operations-delivery x operate |  |
-| CAND-013 | Financial Stewardship | finance-value x conceive |  |
-| CAND-014 | Financial Management | finance-value x operate |  |
+| CAND-005 | Customer Management | party-relationship x operate |  |
+| CAND-007 | Supplier Management | strategy-direction x build |  |
+| CAND-008 | Partner Management | party-relationship x conceive | flagged |
+| CAND-009 | Offering Management | product-value x conceive |  |
+| CAND-010 | Marketing | party-relationship x conceive | flagged |
+| CAND-012 | Operations | operations-enablement x operate |  |
+| CAND-013 | Financial Stewardship | finance-accounting x conceive |  |
+| CAND-014 | Financial Management | finance-accounting x operate |  |
 | CAND-015 | Workforce Management | people-organization x build |  |
 | CAND-016 | Workforce Planning | people-organization x design |  |
-| CAND-017 | Information Management | operations-delivery x operate | flagged |
+| CAND-017 | Information Management | operations-enablement x operate | flagged |
 | CAND-019 | Technology Management | ? x ? | flagged |
 | CAND-020 | Risk Management | governance-existence x conceive |  |
 | CAND-021 | Compliance Management | governance-existence x activate |  |
 | CAND-022 | Legal Management | governance-existence x conceive |  |
 | CAND-024 | Security Management | governance-existence x design |  |
-| CAND-025 | Sourcing and Procurement | supply-resources x build |  |
-| CAND-026 | Asset Management | supply-resources x build |  |
-| CAND-027 | Facility Management | supply-resources x activate |  |
+| CAND-025 | Sourcing and Procurement | strategy-direction x build |  |
+| CAND-026 | Asset Management | strategy-direction x build |  |
+| CAND-027 | Facility Management | strategy-direction x activate |  |
 | CAND-028 | Change Management | governance-existence x improve | flagged |
 
 Full coordinates per candidate: `admission-gate-closeout.yaml` (machine-checkable against `preliminary-ecf-overlay.yaml`).

@@ -12,19 +12,19 @@ conflict_resolutions:
 - candidate: CAND-008
   id: R-001
   decision: mapping defensible as recorded
-  rationale: The partnering ability is first initiated when the enterprise conceives its demand-side relationships (customer-demand
+  rationale: The partnering ability is first initiated when the enterprise conceives its demand-side relationships (party-relationship
     x conceive); supply-side operation is legitimate participation (secondary). The dual-home tension is inherent to partnering
     and is expressed, not smoothed.
 - candidate: CAND-010
   id: R-002
   decision: mapping defensible as recorded
   rationale: N-002 settled the normalization question (Marketing stands distinct from Customer Management and Offering Management);
-    with the blocker removed, primary customer-demand x conceive (marketing conceives demand) with secondary operate is honest.
+    with the blocker removed, primary party-relationship x conceive (marketing conceives demand) with secondary operate is honest.
 - candidate: CAND-017
   id: R-003
   decision: mapping defensible as recorded; secondaries deliberately empty
   rationale: The span of information across domains is a property of the business object, not of the capability initiation.
-    Enumerating every domain as secondary would violate the honest-not-exhaustive rule; placement at operations-delivery x
+    Enumerating every domain as secondary would violate the honest-not-exhaustive rule; placement at operations-enablement x
     operate distorts neither model.
 - candidate: CAND-019
   id: R-004

@@ -9,6 +9,69 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [v2.3.0-migration] - 2026-09-07
+
+CR-CATALOG-STRUCT-08 implementation: ECF Domain enum migration to the
+v2.3.0 canonical Domain set (carried by
+`technehub-labs/dea-metaframework` v2.3.0; CR-ECF-006 + ADR-ECF-001).
+Five of seven Domains renamed; one Domain replaced (Supply & Resources
+-> Strategy & Direction). 53 files modified; no new entities admitted.
+
+This is the **4th and final landing in the v2.3.0 wave** at the
+metaframework + metamodel + catalogs tier (after metaframework,
+metamodel, and the process catalog).
+
+### Changed
+
+- **Schema enum** (`schemas/entity.schema.json`): the `domain` enum in
+  `ecfConformance` updated to the v2.3.0 set.
+- **`scripts/check_ecf_conformance.py`**: `CANON_DOMAINS` set updated;
+  5 of 7 values flipped; the conformance check now PASS on 26
+  entries + MCSP view (verified post-migration).
+- **`scripts/migrate_ecf_conformance.py`**: `DOMAIN_MAP` (kebab -> Pascal)
+  and `DOMAIN_ID` (kebab -> lowerCamelCase) updated to the v2.3.0 set.
+- **30 entity YAMLs** in `entities/v1-alpha/`: every
+  `ecf.primary.domain`, `ecf.secondary.domain`, and
+  `ecfConformance.canonicalReferences[].domain` updated to the v2.3.0
+  kebab-case and PascalCase values.
+- **MCSP view** (`mappings/specializations/view-telecom-mcsp.yaml` +
+  `VIEW-TELECOM-MCSP.md`): updated.
+- **8 catalog-research files** in `catalog-research/`:
+  `preliminary-ecf-overlay.yaml`, `admission-review.yaml`,
+  `admission-review-supplementary.yaml`,
+  `admission-gate-closeout.yaml`, `normalization.yaml`,
+  `ECF-OVERLAY-v0.1.md`, `RESEARCH-REPORT-v0.1.md`,
+  `ADMISSION-REVIEW-v0.1.md`, `ADMISSION-REVIEW-SUPPLEMENTARY-v0.2.md`.
+  Every reference to the v2.2.0 Domain names updated to v2.3.0.
+- **1 CR file** (`change-requests/CR-DEA-BC-03.md`): narrative updated.
+- **1 doc file** (`docs/FOUNDATIONS.md`): narrative updated.
+- **1 lib file** (`scripts/lib/grid.js`): the grid layout labels
+  re-keyed to the v2.3.0 display form.
+
+### Not changed (out of scope for the v2.3.0 migration)
+
+- **No new capabilities admitted.** The v2.3.0 wave is a pure rename.
+- **The 6 open conflict flags (CAND-008, 010, 017, 018, 019, 028)**
+  deliberately held in v0.2 remain unchanged. Their disposition
+  references are now keyed to the v2.3.0 Domain names but the
+  rationales and decisions are unchanged.
+- **The v0.2 ECF Overlay re-derivation** (re-running the candidate
+  set against the v2.3.0 Domain taxonomy) is a separate task that
+  follows this PR. Parked but ready to dispatch.
+- **The 4 pre-existing build-script path bugs** (regenerate_catalog.py,
+  check_catalog_index.py, migrate_ecf_conformance.py all look for
+  `tools/catalog-index-schema.json` but the schema lives in
+  `catalog-index-schema/`) are pre-existing and not introduced by
+  this PR.
+
+### Verification
+
+- `scripts/check_ecf_conformance.py`: **PASS** (26 entries + MCSP view
+  conform).
+- `scripts/check_versions.py`: **PASS** (26 entries conform to
+  CR-DEA-BC-05 version discipline).
+- `scripts/check_view_refs.py`: runs as expected.
+
 ## [Unreleased] - 2026-09-05
 
 ### CR-CATALOG-STRUCT-03b: catalog repository standard adoption (research distribution)

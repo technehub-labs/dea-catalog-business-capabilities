@@ -12,10 +12,10 @@ outcome: The enterprise obtains what it needs, at deliberate terms, with a clean
 business_object: Purchase Order
 ecf:
   primary:
-    domain: supply-resources
+    domain: strategy-direction
     stage: build
   secondary:
-  - domain: supply-resources
+  - domain: strategy-direction
     stage: operate
 related_capabilities:
 - dea:capability-supplier-management
@@ -55,7 +55,7 @@ specialization:
   industry_examples: []
 why_capability: E4; distinct from Supplier Management (the relationship) per the sweep;
   object is the Purchase Order.
-ecf_rationale: Primary build in supply-resources (acquisition builds the supply position);
+ecf_rationale: Primary build in strategy-direction (acquisition builds the supply position);
   operated thereafter.
 boundary: Executes acquisition; does not manage supplier relationships (Supplier Management)
   or the acquired assets (Asset Management).
@@ -72,15 +72,15 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: SupplyAndResources
+    domain: StrategyAndDirection
     stage: Build
-    identifier: ecf:supplyResources.build
+    identifier: ecf:strategyDirection.build
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
-    domain: SupplyAndResources
+    domain: StrategyAndDirection
     stage: Operate
-    identifier: ecf:supplyResources.operate
+    identifier: ecf:strategyDirection.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:
@@ -92,12 +92,12 @@ ecfConformance:
     doesNotRedefine: true
     mapping:
       governance-existence: GovernanceAndExistence
-      supply-resources: SupplyAndResources
+      strategy-direction: StrategyAndDirection
       people-organization: PeopleAndOrganization
-      customer-demand: CustomerAndDemand
-      product-offering: ProductAndOffering
-      operations-delivery: OperationsAndDelivery
-      finance-value: FinanceAndValue
+      party-relationship: PartyAndRelationship
+      product-value: ProductAndValue
+      operations-enablement: OperationsAndEnablement
+      finance-accounting: FinanceAndAccounting
       _stage_conceive: Conceive
       _stage_design: Design
       _stage_build: Build

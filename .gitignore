@@ -14,3 +14,5 @@ coverage/
 .vscode/
 *.swp
 *.bak
+# Planning / staging notes (per CR-programme convention: never committed)
+01_plan/

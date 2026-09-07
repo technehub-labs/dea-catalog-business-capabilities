@@ -29,21 +29,21 @@ APPLY = '--apply' in sys.argv
 #  '^ecf:[a-z][a-zA-Z0-9]*\.[a-z][a-zA-Z0-9]*$').
 DOMAIN_MAP = {
     'governance-existence': 'GovernanceAndExistence',
-    'supply-resources': 'SupplyAndResources',
+    'strategy-direction': 'StrategyAndDirection',
     'people-organization': 'PeopleAndOrganization',
-    'customer-demand': 'CustomerAndDemand',
-    'product-offering': 'ProductAndOffering',
-    'operations-delivery': 'OperationsAndDelivery',
-    'finance-value': 'FinanceAndValue',
+    'party-relationship': 'PartyAndRelationship',
+    'product-value': 'ProductAndValue',
+    'operations-enablement': 'OperationsAndEnablement',
+    'finance-accounting': 'FinanceAndAccounting',
 }
 DOMAIN_ID = {
     'governance-existence': 'governanceExistence',
-    'supply-resources': 'supplyResources',
+    'strategy-direction': 'strategyDirection',
     'people-organization': 'peopleOrganization',
-    'customer-demand': 'customerDemand',
-    'product-offering': 'productOffering',
-    'operations-delivery': 'operationsDelivery',
-    'finance-value': 'financeValue',
+    'party-relationship': 'partyRelationship',
+    'product-value': 'productValue',
+    'operations-enablement': 'operationsEnablement',
+    'finance-accounting': 'financeAccounting',
 }
 STAGE_MAP = {
     'conceive': 'Conceive',
