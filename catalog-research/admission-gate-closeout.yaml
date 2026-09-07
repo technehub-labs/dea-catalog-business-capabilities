@@ -164,12 +164,12 @@ recommendations:
 - candidate: CAND-015
   name: Workforce Management
   ecf_primary:
-    domain: people-organization
+    domain: agency-organization
     stage: build
   ecf_secondary:
-  - domain: people-organization
+  - domain: agency-organization
     stage: operate
-  - domain: people-organization
+  - domain: agency-organization
     stage: improve
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -177,10 +177,10 @@ recommendations:
 - candidate: CAND-016
   name: Workforce Planning
   ecf_primary:
-    domain: people-organization
+    domain: agency-organization
     stage: design
   ecf_secondary:
-  - domain: people-organization
+  - domain: agency-organization
     stage: build
   ecf_conflict_flag: false
   recommendation: recommend_admission

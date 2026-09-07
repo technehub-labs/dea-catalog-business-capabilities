@@ -8,13 +8,13 @@
 // conformant-with-extension posture (CR-ECF-CG-003 §5).
 
 const DOMAINS = [
-  { id: 'governance-existence',   display: 'Governance Existence' },
-  { id: 'party-relationship',        display: 'Customer Demand' },
-  { id: 'strategy-direction',        display: 'Supply Resources' },
-  { id: 'product-value',       display: 'Product Offering' },
-  { id: 'operations-enablement',    display: 'Operations Delivery' },
-  { id: 'finance-accounting',          display: 'Finance Value' },
-  { id: 'people-organization',    display: 'People Organization' },
+  { id: 'governance-existence',   display: 'Governance & Existence' },
+  { id: 'party-relationship',        display: 'Party & Relationship' },
+  { id: 'strategy-direction',        display: 'Strategy & Direction' },
+  { id: 'product-value',       display: 'Product & Value' },
+  { id: 'operations-enablement',    display: 'Operations & Enablement' },
+  { id: 'finance-accounting',          display: 'Finance & Accounting' },
+  { id: 'agency-organization',    display: 'Agency & Organization' },
 ];
 
 const STAGES = [

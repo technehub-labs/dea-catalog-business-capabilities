@@ -26,7 +26,7 @@ CONTRACT_VERSION = '1.0.0'
 PROFILE = 'dea:ecf@1.0.0'
 FRAMEWORK = 'EnterpriseConceptFramework'
 CANON_DOMAINS = {
-    'GovernanceAndExistence', 'StrategyAndDirection', 'PeopleAndOrganization',
+    'GovernanceAndExistence', 'StrategyAndDirection', 'AgencyAndOrganization',
     'PartyAndRelationship', 'ProductAndValue', 'OperationsAndEnablement',
     'FinanceAndAccounting',
 }

@@ -83,7 +83,7 @@ The section 36 initial finding is confirmed with evidence: a recurring enterpris
 
 ## 11. ECF Overlay
 
-28 of 29 capability-classified candidates received preliminary coordinates under the earliest-initiation rule (primary = first initiation stage, not heaviest operation). CAND-019 Technology Management is **held unmapped**: no ECF domain carries technology (technology is an L5 layer concern, not a domain), and the mapping is recorded as legitimately absent per the section 38 clause, with the N-006 open question carried (business capability with a domain, or cross-cutting governance concern). Empty cells are documented as legitimate results (section 27; no forced coverage): governance-existence x build/activate, finance-accounting x design/build/activate/retire, and people-organization x conceive/retire are empty at this granularity without semantic damage.
+28 of 29 capability-classified candidates received preliminary coordinates under the earliest-initiation rule (primary = first initiation stage, not heaviest operation). CAND-019 Technology Management is **held unmapped**: no ECF domain carries technology (technology is an L5 layer concern, not a domain), and the mapping is recorded as legitimately absent per the section 38 clause, with the N-006 open question carried (business capability with a domain, or cross-cutting governance concern). Empty cells are documented as legitimate results (section 27; no forced coverage): governance-existence x build/activate, finance-accounting x design/build/activate/retire, and agency-organization x conceive/retire are empty at this granularity without semantic damage.
 
 Six mappings carry open conflict flags (CAND-008, CAND-010, CAND-017, CAND-018, CAND-019, CAND-028), flagged not smoothed (section 26). Each is a case where earliest initiation is arguable between two stages or domains; the flags ride into the review package with the close-out.
 
@@ -130,8 +130,8 @@ The admission gate close-out (v0.1) recommends 23 candidates, each with all ten 
 | CAND-012 | Operations | operations-enablement x operate |
 | CAND-013 | Financial Stewardship | finance-accounting x conceive |
 | CAND-014 | Financial Management | finance-accounting x operate |
-| CAND-015 | Workforce Management | people-organization x build |
-| CAND-016 | Workforce Planning | people-organization x design |
+| CAND-015 | Workforce Management | agency-organization x build |
+| CAND-016 | Workforce Planning | agency-organization x design |
 | CAND-017 | Information Management | operations-enablement x operate (conflict flag) |
 | CAND-019 | Technology Management | held unmapped (legitimately absent; N-006 open question, conflict flag) |
 | CAND-020 | Risk Management | governance-existence x conceive |

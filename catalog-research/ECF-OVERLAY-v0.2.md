@@ -60,14 +60,14 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 | party-relationship | Citizen / Member Relationship (operate); Customer Management (operate); Marketing (conceive); Partner Management (conceive) |
 | finance-accounting | Financial Management (operate); Financial Stewardship (conceive) |
 | product-value | Innovation Management (conceive); Offering Management (conceive) |
-| people-organization | People / Workforce Management (build); Workforce Planning (design) |
+| agency-organization | People / Workforce Management (build); Workforce Planning (design) |
 | <unmapped> | Technology Management (<unmapped>) |
 
 ## Empty cells (legitimate, per CR section 27)
 
 - governance-existence x build, activate
 - finance-accounting x design, build, activate, retire (primary)
-- people-organization x conceive, retire (primary)
+- agency-organization x conceive, retire (primary)
 
 ## Conflicts carried forward (CR section 26)
 
@@ -86,7 +86,7 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 
 ## Reading the overlay
 
-The overlay is now canonical, anchored in the admitted 26-entry catalog. The 14 distinct primary coordinates used (with secondaries expanding to 17 unique coordinates) cluster in governance-existence (9 entries: Strategy, Strategic Planning, Enterprise Governance, Risk, Compliance, Legal, Resilience, Security, Change) and strategy-direction (4: Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt). Customer-demand holds 4 (Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing); operations-enablement holds 3 (Operations, Information Mgmt, Analytics and Intelligence); finance-accounting holds 2 (Financial Stewardship, Financial Management); people-organization holds 2 (Workforce Mgmt, Workforce Planning); product-value holds 2 (Offering Mgmt, Innovation). Technology Management is the only held-unmapped entry, with the rationale locked by N-006.
+The overlay is now canonical, anchored in the admitted 26-entry catalog. The 14 distinct primary coordinates used (with secondaries expanding to 17 unique coordinates) cluster in governance-existence (9 entries: Strategy, Strategic Planning, Enterprise Governance, Risk, Compliance, Legal, Resilience, Security, Change) and strategy-direction (4: Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt). Customer-demand holds 4 (Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing); operations-enablement holds 3 (Operations, Information Mgmt, Analytics and Intelligence); finance-accounting holds 2 (Financial Stewardship, Financial Management); agency-organization holds 2 (Workforce Mgmt, Workforce Planning); product-value holds 2 (Offering Mgmt, Innovation). Technology Management is the only held-unmapped entry, with the rationale locked by N-006.
 
 ## Carried forward from v0.1 (open items)
 
