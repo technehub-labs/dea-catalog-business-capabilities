@@ -1,29 +1,31 @@
-id: dea:capability-compliance-management
+id: dea:capability-financial-resource-management
 type: BusinessCapability
-name: Compliance Management
-definition: The ability to know the enterprise's obligations and to conform to them
-  demonstrably.
-version: 1.0.0
+name: Financial Resource Management
+aliases:
+- Financial Management
+definition: The ability to plan, record, control, and report the enterprise's financial
+  resources in the operating cycle.
+version: 2.0.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
-capability_layer: support
-outcome: Obligations are identified, interpreted, met, and the conformance is provable.
-business_object: Regulation
+capability_layer: operational
+outcome: Money is accounted for, budgets hold, and financial reporting is accurate
+  and timely.
+business_object: Financial Resource
 ecf:
   primary:
-    domain: governance-existence
-    stage: activate
-  secondary:
-  - domain: governance-existence
+    domain: finance-accounting
     stage: operate
+  secondary:
+  - domain: finance-accounting
+    stage: conceive
 related_capabilities:
-- dea:capability-risk-management
+- dea:capability-financial-stewardship
 evidence:
   sources:
   - SRC-001
   - SRC-002
-  - SRC-004
-  - SRC-005
+  - SRC-006
   rationale: Enterprise-generality demonstrated at E4; evidence trail in docs/research
     (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
 provenance:
@@ -53,16 +55,17 @@ provenance:
 specialization:
   allowed: true
   industry_examples: []
-why_capability: E4; distinct from Risk (exposure) and Legal (counsel) per the sweep.
-ecf_rationale: Primary activate in governance-existence (compliance is activated when
-  obligations bind); operated thereafter.
-boundary: Manages conformance; does not assess exposure (Risk Management) or conduct
-  legal work (Legal Management).
+why_capability: E4; the operating-cycle counterpart to Financial Stewardship (E5),
+  distinct per the sweep.
+ecf_rationale: Primary operate in finance-accounting; conceive participation (budgeting
+  posture) recorded as secondary.
+boundary: Runs the financial cycle; does not set financial constitution (Financial
+  Stewardship) or manage non-financial assets (Asset Management).
 non_examples:
-- A compliance tool (a system)
-- An audit (an assurance event)
-specialization_boundary: Obligation sets (telecom license conditions, HIPAA, PSD2)
-  are specialization; the ability to comply is not.
+- An ERP finance module (a system)
+- A finance department (an organization, CAND-030)
+specialization_boundary: Accounting regimes (IFRS, GAAP, public-sector frameworks)
+  are external obligation sets, not specializations of the ability.
 ecfConformance:
   framework: EnterpriseConceptFramework
   contractVersion: 1.0.0
@@ -71,15 +74,15 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: GovernanceAndExistence
-    stage: Activate
-    identifier: ecf:governanceExistence.activate
+    domain: FinanceAndAccounting
+    stage: Operate
+    identifier: ecf:financeAccounting.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
-    domain: GovernanceAndExistence
-    stage: Operate
-    identifier: ecf:governanceExistence.operate
+    domain: FinanceAndAccounting
+    stage: Conceive
+    identifier: ecf:financeAccounting.conceive
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:

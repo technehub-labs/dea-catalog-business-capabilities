@@ -57,7 +57,8 @@ why_capability: E3; parent of Facility Management per the sweep (facilities are 
   asset class large enough to warrant its own first-order capability).
 ecf_rationale: Primary build in strategy-direction; operated and retired across the
   asset lifecycle.
-boundary: Stewards assets; does not manage money (Financial Management), technology
+boundary: Stewards assets; does not manage money (Financial Resource Management),
+  technology
   as an estate (Technology Management), or facilities specifically (Facility Management).
 non_examples:
 - An asset register (an artifact)
