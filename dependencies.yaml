@@ -26,4 +26,4 @@ metamodel_pin: 1.0.0
 catalogs:
 - id: dea:catalog/business-capabilities
   version: v1-alpha
-  ref: v1-alpha.1
+  ref: v1-alpha.2
