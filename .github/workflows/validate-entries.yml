@@ -136,3 +136,6 @@ jobs:
 
       - name: Run catalog version guard (CR-DEA-BC-05)
         run: python scripts/check_versions.py
+
+      - name: Run naming and definition-shape lint (CR-DEA-BC-09; TAXONOMY sections 1, 1A)
+        run: python scripts/check_naming.py
