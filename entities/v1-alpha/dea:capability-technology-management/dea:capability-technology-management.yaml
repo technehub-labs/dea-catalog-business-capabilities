@@ -62,7 +62,7 @@ why_capability: 'E4; N-006R resolved at BC-08: a business capability whose objec
   is Technology, not a cross-cutting concern. The technology estate is a stable
   subject with lifecycle; stewardship of the estate is the deliberate direction
   of an enterprise resource, which is the semantic anchor of Strategy & Direction.
-  Distinct from Operations & Enablement section 3.6 sub-concern Technology Enablement,
+  Distinct from Enablement & Operations section 3.6 sub-concern Technology Enablement,
   which positions technology as a means of execution, not as an end.'
 ecf_rationale: 'N-006R / BC-08: strategy-direction x build. Earliest legitimate initiation
   of technology-estate stewardship is build (the enterprise acquires/stands-up technology
@@ -115,7 +115,7 @@ ecfConformance:
       agency-organization: AgencyAndOrganization
       party-relationship: PartyAndRelationship
       product-value: ProductAndValue
-      operations-enablement: OperationsAndEnablement
+      enablement-operations: EnablementAndOperations
       finance-accounting: FinanceAndAccounting
       _stage_conceive: Conceive
       _stage_design: Design

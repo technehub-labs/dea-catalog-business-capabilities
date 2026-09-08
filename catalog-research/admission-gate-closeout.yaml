@@ -131,10 +131,10 @@ recommendations:
 - candidate: CAND-012
   name: Operations
   ecf_primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   ecf_secondary:
-  - domain: operations-enablement
+  - domain: enablement-operations
     stage: improve
   ecf_conflict_flag: false
   recommendation: recommend_admission
@@ -188,7 +188,7 @@ recommendations:
 - candidate: CAND-017
   name: Information Management
   ecf_primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   ecf_secondary: []
   ecf_conflict_flag: true
@@ -313,7 +313,7 @@ deferrals:
 - candidate: CAND-018
   name: Analytics and Intelligence
   ecf_primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   ecf_secondary: []
   ecf_conflict_flag: true

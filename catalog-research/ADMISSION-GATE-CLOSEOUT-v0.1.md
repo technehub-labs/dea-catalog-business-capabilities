@@ -24,12 +24,12 @@ All ten axes met on current evidence. ECF primary coordinate per overlay v0.1 (e
 | CAND-008 | Partner Management | party-relationship x conceive | flagged |
 | CAND-009 | Offering Management | product-value x conceive |  |
 | CAND-010 | Marketing | party-relationship x conceive | flagged |
-| CAND-012 | Operations | operations-enablement x operate |  |
+| CAND-012 | Operations | enablement-operations x operate |  |
 | CAND-013 | Financial Stewardship | finance-accounting x conceive |  |
 | CAND-014 | Financial Management | finance-accounting x operate |  |
 | CAND-015 | Workforce Management | agency-organization x build |  |
 | CAND-016 | Workforce Planning | agency-organization x design |  |
-| CAND-017 | Information Management | operations-enablement x operate | flagged |
+| CAND-017 | Information Management | enablement-operations x operate | flagged |
 | CAND-019 | Technology Management | ? x ? | flagged |
 | CAND-020 | Risk Management | governance-existence x conceive |  |
 | CAND-021 | Compliance Management | governance-existence x activate |  |

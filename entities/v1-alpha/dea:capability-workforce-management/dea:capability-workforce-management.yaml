@@ -109,7 +109,7 @@ ecfConformance:
       agency-organization: AgencyAndOrganization
       party-relationship: PartyAndRelationship
       product-value: ProductAndValue
-      operations-enablement: OperationsAndEnablement
+      enablement-operations: EnablementAndOperations
       finance-accounting: FinanceAndAccounting
       _stage_conceive: Conceive
       _stage_design: Design

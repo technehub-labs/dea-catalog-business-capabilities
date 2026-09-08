@@ -17,7 +17,7 @@ technology."
 That rationale is incorrect against the framework's own canonical grounding
 (`dea-metaframework/framework/domain-grounding.md` §3.6 and §3.2):
 
-- §3.6 (Operations & Enablement) names **Technology Enablement** as an internal
+- §3.6 (Enablement & Operations) names **Technology Enablement** as an internal
   MECE sub-concern, but immediately clarifies: "Technology, platforms, and
   physical assets are positioned as enablers of execution, **not as ends in
   themselves**." The framework is explicit that technology-as-an-enabler is
@@ -26,7 +26,7 @@ That rationale is incorrect against the framework's own canonical grounding
 
 - §3.2 (Strategy & Direction) records the prior "Supply & Resources" domain
   was removed *because* resource stewardship at the strategic level belongs in
-  S&D: "physical resources moved to Operations & Enablement (as enablers);
+  S&D: "physical resources moved to Enablement & Operations (as enablers);
   financial resources moved to Finance & Accounting; human resources stay in
   Agency & Organization." The vacated "persists (as deliberate steering)"
   axiom slot maps cleanly to Strategy & Direction.
@@ -92,7 +92,7 @@ Under scope A, each candidate surface was inspected before editing:
 | `ecfConformance.canonicalReferences` | `[]` | 3 entries: primary, 2 secondaries - all `strategy-direction` x { build, operate, improve } |
 | `ecfConformance.extensions` | includes `held-unmapped` classification-state | replaced with `multiple-contextual-coordinates` rationale + kebab-case display vocabulary (matching peer entries) |
 | `evidence.rationale` | ends "...distinctness-sweep, admission-gate-closeout)." | extended: "Enterprise-generality demonstrated at E4; N-006 resolved at BC-08: technology is an estate, not an enabler of execution; stewardship of the estate belongs in Strategy & Direction, parallel to Asset Management and Facility Management. Evidence trail in docs/research (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout)." |
-| `why_capability` | ends "...ECF legitimately absent: no ECF domain carries technology (an L5 layer concern)." | extended: "E4; N-006R resolved at BC-08: a business capability whose object is Technology, not a cross-cutting concern. The technology *estate* is a stable subject with lifecycle; stewardship of the estate is the deliberate direction of an enterprise resource, which is the semantic anchor of Strategy & Direction. Distinct from Operations & Enablement §3.6 sub-concern 'Technology Enablement', which positions technology as a means of execution, not as an end." |
+| `why_capability` | ends "...ECF legitimately absent: no ECF domain carries technology (an L5 layer concern)." | extended: "E4; N-006R resolved at BC-08: a business capability whose object is Technology, not a cross-cutting concern. The technology *estate* is a stable subject with lifecycle; stewardship of the estate is the deliberate direction of an enterprise resource, which is the semantic anchor of Strategy & Direction. Distinct from Enablement & Operations §3.6 sub-concern 'Technology Enablement', which positions technology as a means of execution, not as an end." |
 | `ecf_rationale` | "R-004: held unmapped with recorded reason; the section 38 legitimately-absent clause applies." | "N-006R / BC-08: strategy-direction × build. Earliest legitimate initiation of technology-estate stewardship is build (the enterprise acquires/stands-up technology here, just as it does with assets); secondaries record legitimate participation at operate (running the estate) and improve (evolving it). Mirrors the Asset Management placement." |
 | `boundary` | "Stewards the technology estate; does not manage the information it carries (Information Management) or operate delivery (Operations)." | unchanged (the boundary is correct; the ECF affiliation was the missing piece) |
 | `non_examples` | "An IT department (an organization)"; "A specific platform (a system)" | unchanged |

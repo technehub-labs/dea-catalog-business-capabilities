@@ -31,7 +31,7 @@ Honesty note: the named trigger also listed government, non-profit, and infrastr
 
 ## CAND-018 (added in v0.2)
 
-The boundary decision (boundary-decision-cand-018 v0.1, PR #29) adopted reading A: Analytics and Intelligence is a distinct first-order capability; stewardship ends where derivation begins. Both section 12 gates pass: semantic (ability, outcome, implementation independence, naming, anti-invention all met at E3) and architectural (ECF placement decided at the gate: operations-enablement x operate, secondaries empty per honest-not-exhaustive with R-003 parity; record shape conforms; no layering violation). R-008 records the deferral lift and resolves the ECF conflict flag to a placement decision.
+The boundary decision (boundary-decision-cand-018 v0.1, PR #29) adopted reading A: Analytics and Intelligence is a distinct first-order capability; stewardship ends where derivation begins. Both section 12 gates pass: semantic (ability, outcome, implementation independence, naming, anti-invention all met at E3) and architectural (ECF placement decided at the gate: enablement-operations x operate, secondaries empty per honest-not-exhaustive with R-003 parity; record shape conforms; no layering violation). R-008 records the deferral lift and resolves the ECF conflict flag to a placement decision.
 
 ## Effect
 

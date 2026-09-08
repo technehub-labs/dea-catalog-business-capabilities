@@ -73,6 +73,14 @@ v0.2 domain table now cites the admitted capability by its canonical name.
 Historical research artifacts and the `out/v1-alpha.0` snapshot are
 deliberately untouched (provenance). Tag: v1-alpha.1.
 
+## [v2.5.0-migration] - 2026-09-08
+
+CR-BC-ECF-03 implementation: ECF Domain enum migration to the v2.5.0 canonical Domain set (carried by `technehub-labs/dea-metaframework` v2.5.0; CR-ECF-008 + ADR-ECF-003). One of seven Domains renamed: Domain 6 `OperationsAndEnablement` → `EnablementAndOperations` (kebab-case `operations-enablement` → `enablement-operations`; lowerCamelCase `operationsEnablement` → `enablementAndOperations`), driven by the Domain/Stage Orthogonality Stress Test. 44 files re-keyed (1 schema, 3 scripts, 26 entity YAMLs, 7 catalog-research files, 3 CR records). Also fixes the Domain 6 display label in `scripts/lib/grid.js` (the Domain-3 fix from CR-CATALOG-STRUCT-09 left Domain-6 stale). No content redistribution required (CR-ECF-008 §3.5).
+
+**Files touched**: 44 files + 1 new CR carrier. See `change-requests/CR-BC-ECF-03.md` for the full mapping table and validation evidence.
+
+**Unchanged**: Domain number (6), matrix position, semantic anchor (`Execution`), seven-Domain partition, seven lifecycle Stages, Stage 5 name (`Operate`), and the `ECF = Domain × Stage = 49 coordinates` construction.
+
 ## [v2.4.0-migration] - 2026-09-07
 
 CR-CATALOG-STRUCT-09 implementation: ECF Domain enum migration to the

@@ -17,7 +17,7 @@ Date: 2026-08-31. Status: candidate-not-canonical. Machine-readable: `preliminar
 | governance-existence | Strategy, Strategic Planning, Enterprise Governance, Risk, Compliance, Legal, Resilience, Security, Change (9) |
 | party-relationship | Stakeholder Relationship Mgmt, Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing (5) |
 | product-value | Offering Management, Innovation (2) |
-| operations-enablement | Value Delivery, Operations, Information Mgmt, Analytics (4) |
+| enablement-operations | Value Delivery, Operations, Information Mgmt, Analytics (4) |
 | finance-accounting | Financial Stewardship, Financial Management (2) |
 | strategy-direction | Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt (4) |
 | agency-organization | People/Workforce Mgmt, Workforce Planning (2) |
@@ -27,7 +27,7 @@ One candidate held unmapped: Technology Management (CAND-019), see conflicts.
 ## Semantic conflicts flagged (CR §26)
 
 1. **CAND-019 Technology Management**: no ECF domain carries technology (technology is a layer concern, L5, not an ECF domain). Mapping to any domain would be forced. Held unmapped with the open question: is Technology Management a business capability with a domain, or a cross-cutting governance concern? Carried to the normalization pass.
-2. **CAND-017 Information Management / CAND-018 Analytics**: mapped to operations-enablement × operate, but both span domains (information flows everywhere). Flag: if the span is legitimate, secondary coordinates grow; if not, the candidate may be cross-cutting like technology. Pending.
+2. **CAND-017 Information Management / CAND-018 Analytics**: mapped to enablement-operations × operate, but both span domains (information flows everywhere). Flag: if the span is legitimate, secondary coordinates grow; if not, the candidate may be cross-cutting like technology. Pending.
 3. **CAND-028 Change Management**: stage-anchored (improve) but cross-domain by nature. Mapped governance-existence × improve with conflict note: change is an enterprise-wide concern that may not own a domain.
 4. **CAND-008 Partner Management**: partners sit between strategy-direction (they supply) and party-relationship (they demand). Mapped party-relationship × conceive with a weak-mapping flag.
 

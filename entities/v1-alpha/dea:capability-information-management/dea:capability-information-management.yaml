@@ -12,7 +12,7 @@ outcome: Information is findable, trustworthy, retained correctly, and disposed 
 business_object: Information
 ecf:
   primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   secondary: []
 related_capabilities:
@@ -52,7 +52,7 @@ specialization:
   industry_examples: []
 why_capability: 'E4; span across domains resolved at review (R-003): the span is a
   property of the business object, not of initiation.'
-ecf_rationale: 'R-003: primary operations-enablement x operate; secondaries deliberately
+ecf_rationale: 'R-003: primary enablement-operations x operate; secondaries deliberately
   empty (honest-not-exhaustive).'
 boundary: Manages information; does not manage the technology that carries it (Technology
   Management) or produce analytics from it (Analytics and Intelligence, deferred).
@@ -69,9 +69,9 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: OperationsAndEnablement
+    domain: EnablementAndOperations
     stage: Operate
-    identifier: ecf:operationsEnablement.operate
+    identifier: ecf:enablementAndOperations.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   extensions:
@@ -87,7 +87,7 @@ ecfConformance:
       agency-organization: AgencyAndOrganization
       party-relationship: PartyAndRelationship
       product-value: ProductAndValue
-      operations-enablement: OperationsAndEnablement
+      enablement-operations: EnablementAndOperations
       finance-accounting: FinanceAndAccounting
       _stage_conceive: Conceive
       _stage_design: Design

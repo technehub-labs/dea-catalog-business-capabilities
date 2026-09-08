@@ -68,7 +68,7 @@ applied_decisions:
     candidate: CAND-018
     topic: Analytics boundary vs Information
     verdict: distinct-first-order; admitted-at-PR-32
-    rationale: "Reading A: stewardship ends where derivation begins; operations-enablement \xD7 operate (primary), secondaries\
+    rationale: "Reading A: stewardship ends where derivation begins; enablement-operations \xD7 operate (primary), secondaries\
       \ empty per R-003 parity; record shape conforms; no layering violation. Boundary decision: docs/research/boundary-decision-cand-018\
       \ v0.1, PR #29."
   - id: N-007
@@ -219,10 +219,10 @@ overlays:
 - candidate: CAND-012
   name: Operations
   primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   secondary:
-  - domain: operations-enablement
+  - domain: enablement-operations
     stage: improve
   confidence: high
   conflict: null
@@ -286,7 +286,7 @@ overlays:
 - candidate: CAND-017
   name: Information Management
   primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   secondary: []
   confidence: low
@@ -298,7 +298,7 @@ overlays:
 - candidate: CAND-018
   name: Analytics and Intelligence
   primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   secondary: []
   confidence: low
@@ -467,8 +467,8 @@ coverage:
   - governance-existence.design
   - governance-existence.improve
   - governance-existence.operate
-  - operations-enablement.improve
-  - operations-enablement.operate
+  - enablement-operations.improve
+  - enablement-operations.operate
   - agency-organization.build
   - agency-organization.design
   - agency-organization.improve

@@ -33,7 +33,7 @@ they reference shift.
 | `agency-organization` / `AgencyAndOrganization` | `agency-organization` / `AgencyAndOrganization` (unchanged) |
 | `customer-demand` / `CustomerAndDemand` | `party-relationship` / `PartyAndRelationship` |
 | `product-offering` / `ProductAndOffering` | `product-value` / `ProductAndValue` |
-| `operations-delivery` / `OperationsAndDelivery` | `operations-enablement` / `OperationsAndEnablement` |
+| `operations-delivery` / `OperationsAndDelivery` | `enablement-operations` / `EnablementAndOperations` |
 | `finance-value` / `FinanceAndValue` | `finance-accounting` / `FinanceAndAccounting` |
 
 Lowercase `camelCase` (`partyRelationship`, etc.) for the `ecf:`

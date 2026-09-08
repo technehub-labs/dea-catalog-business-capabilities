@@ -11,7 +11,7 @@ outcome: Decisions are informed by derived intelligence.
 business_object: Insight
 ecf:
   primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   secondary: []
 related_capabilities:
@@ -56,7 +56,7 @@ why_capability: E3; the object and outcome tests carry the decision (Insight is 
   produced thing with its own lifecycle; decisions informed is an outcome distinct
   from information stewarded); vendor-heavy support noted and not load-bearing (boundary
   decision v0.1).
-ecf_rationale: 'R-008: operations-enablement x operate; the span of analytics across
+ecf_rationale: 'R-008: enablement-operations x operate; the span of analytics across
   domains is a property of the Insight object (R-003 parity), so secondaries stay
   empty per honest-not-exhaustive.'
 boundary: Derives insight; does not steward information (Information Management).
@@ -74,9 +74,9 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: OperationsAndEnablement
+    domain: EnablementAndOperations
     stage: Operate
-    identifier: ecf:operationsEnablement.operate
+    identifier: ecf:enablementAndOperations.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   extensions:
@@ -92,7 +92,7 @@ ecfConformance:
       agency-organization: AgencyAndOrganization
       party-relationship: PartyAndRelationship
       product-value: ProductAndValue
-      operations-enablement: OperationsAndEnablement
+      enablement-operations: EnablementAndOperations
       finance-accounting: FinanceAndAccounting
       _stage_conceive: Conceive
       _stage_design: Design
