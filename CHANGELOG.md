@@ -9,6 +9,26 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [v1-alpha.2] - 2026-09-08
+
+**Minor** (CR-DEA-BC-08, PR #49). Coordinate Technology Management - resolve
+N-006. The N-006 held-unmapped decision was incorrect against the framework's
+canonical grounding (`dea-metaframework/framework/domain-grounding.md` §3.6
+and §3.2); technology is an enterprise **estate** whose stewardship belongs
+in Strategy & Direction, parallel to Asset Management and Facility Management.
+This change supersedes N-006 with **N-006R**: `dea:capability-technology-management`
+moves to `strategy-direction × build` (primary) with secondaries at
+`operate` and `improve`. Entry bumps 1.0.0 -> 1.1.0. The canonical ECF
+overlay v0.2 (markdown + YAML) is updated to drop the held-unmapped
+footnote and the `strategy-direction` row now carries Technology Management.
+Provenance strikes: R-004 in `ADMISSION-REVIEW-v0.1.md` and the carried
+forward item in `BC-02-CLOSEOUT.md` are marked superseded by N-006R.
+Historical research artifacts (`candidates.yaml`, `normalization.yaml`,
+`RESEARCH-REPORT-v0.1.md`, `ECF-OVERLAY-v0.1.md`, the v0.1 overlay YAML)
+and the published `out/v1-alpha.0` snapshot are deliberately untouched
+(provenance). Distinct primary coordinates rise 15 -> 16; held-unmapped
+count falls 1 -> 0. No schema or CI change. Tag: v1-alpha.2.
+
 ## [v1-alpha.1] - 2026-09-07
 
 **Minor** (CR-DEA-BC-07, PR #48). Substrate-neutral re-statement of the two

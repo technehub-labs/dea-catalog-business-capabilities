@@ -4,7 +4,7 @@ catalog:
     candidates: 0
     canonical: 26
     entities: 26
-    open_change_requests: 13
+    open_change_requests: 14
     research_files: 3
     retired: 0
   cross_cutting:
@@ -273,14 +273,14 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-technology-management
-    last_modified: '2026-09-07'
+    last_modified: '2026-09-08'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-technology-management/dea:capability-technology-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.1.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-workforce-management

@@ -33,10 +33,9 @@ Date: 2026-09-01. Scope: CR-DEA-BC-02 (Evidence-Based First-Order Capability Inv
 1. Review of the 23-candidate recommendation set: semantic gate then architectural gate (METHODOLOGY.md section 12).
 2. G5 corpus gap: government reference models (GRM/GSRM). Gates the CAND-005/CAND-006 unification decision and moves CAND-006/023/029/035.
 3. CAND-018 boundary delineation against CAND-017 Information Management: a targeted decision, not a research phase.
-4. Six ECF conflict flags (CAND-008/010/017/018/019/028): review-time decisions.
-5. N-006 carried question: Technology Management as domain capability vs cross-cutting concern.
-6. Overlay regeneration to v0.2 post-review (applies N-007/N-008 to the map).
-7. **Numbering reconciliation:** CR-DEA-BC-02 section 40 (authored before the method CR) names BC-03 as First-Order Capability Canonicalization; CR-DEA-BC-01 (accepted later) names BC-03 as schema + CI and treats canonical admission as BC-02 execution. A decision is needed before the next CR opens; the GOVERNANCE.md renumbering convention records whatever is decided.
+4. Five ECF conflict flags (CAND-008/010/017/018/028; CAND-019 resolved at CR-DEA-BC-08): review-time decisions.
+5. Overlay regeneration to v0.2 post-review (applies N-007/N-008 to the map).
+6. **Numbering reconciliation:** CR-DEA-BC-02 section 40 (authored before the method CR) names BC-03 as First-Order Capability Canonicalization; CR-DEA-BC-01 (accepted later) names BC-03 as schema + CI and treats canonical admission as BC-02 execution. A decision is needed before the next CR opens; the GOVERNANCE.md renumbering convention records whatever is decided.
 
 ## Next gate
 

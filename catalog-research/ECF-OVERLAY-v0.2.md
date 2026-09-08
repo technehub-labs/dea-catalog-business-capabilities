@@ -4,10 +4,10 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 
 ## Headline
 
-- **26 canonical first-order capabilities** (23 from BC-04 admission + 3 admitted at PR #32: CAND-018 Analytics and Intelligence, CAND-023 Resilience, CAND-029 Innovation).
-- **1 held-unmapped**: CAND-019 Technology Management (N-006: business capability stands, ECF legitimately absent).
+- **26 canonical first-order capabilities** (23 from BC-04 admission + 3 admitted at PR #32: CAND-018 Analytics and Intelligence, CAND-023 Resilience, CAND-029 Innovation; CAND-019 Technology Management was admitted at BC-02 in `held_unmapped` state and is now mapped to `strategy-direction × build` at CR-DEA-BC-08).
+- **0 held-unmapped**: N-006 was resolved by CR-DEA-BC-08 with the new normalization identifier N-006R (technology is an estate, not an enabler of execution; stewardship of the estate belongs in Strategy & Direction, parallel to Asset Management and Facility Management).
 - **2 candidates withdrawn** from the first-order track per normalization: CAND-004 (N-007, reclassified as grouping parent; children admitted separately) and CAND-011 (N-008, dissolved; CAND-012 Operations is the surviving first-order child).
-- **14 distinct primary coordinates** referenced out of 49 canonical coordinates; **no forced coverage** (per CG-005 Invariant 7).
+- **15 distinct primary coordinates** referenced out of 49 canonical coordinates; **no forced coverage** (per CG-005 Invariant 7).
 
 ## Rules applied (carried from v0.1)
 
@@ -25,7 +25,7 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 - **N-003**: Analytics stays a provisional child of Information Management (later resolved by R-008 as distinct)
 - **N-004**: Sourcing/Procurement and Supplier Management are distinct (CAND-025 vs CAND-007)
 - **N-005**: Section 20 example resolved
-- **N-006**: Technology Management stands; its coordinate does not (held_unmapped)
+- **N-006R**: Technology Management stands and is now mapped (CR-DEA-BC-08); technology is an estate, not an enabler of execution; stewardship of the estate belongs in Strategy & Direction, parallel to Asset Management and Facility Management
 
 ### Review (R-001..R-008)
 
@@ -35,8 +35,8 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
   - N-002 settled Marketing distinct from Customer and Offering; primary party-relationship × conceive is honest.
 - **R-003** (CAND-017, Information Management span): defensible-secondaries-deliberately-empty.
   - The span of information across domains is a property of the business object, not of initiation; enumerating all domains would violate honest-not-exhaustive.
-- **R-004** (CAND-019, Technology Management unmapped): N-006-resolved.
-  - Business capability, business object Technology; ECF legitimately absent (L5 concern, no domain carries technology). Section 38 legitimately-absent clause applies.
+- **R-004** (CAND-019, Technology Management placement): superseded by N-006R.
+  - The N-006 held-unmapped rationale ("no ECF domain carries technology") was incorrect against the framework's canonical grounding (dea-metaframework/framework/domain-grounding.md §3.6 explicitly positions technology as a means of execution, not an end; §3.2 records the prior Supply & Resources removal because estate stewardship of enterprise resources lives in Strategy & Direction). CR-DEA-BC-08 supersedes N-006 with N-006R; primary coordinate is `strategy-direction × build`, parallel to Asset Management.
 - **R-005** (CAND-028, Change Management cross-domain): defensible-as-recorded.
   - Earliest initiation governance-existence × improve; cross-domain applicability is an object property, not a mapping defect.
 - **R-006** (CAND-023, Resilience boundary vs Risk/Security): deferral-lifted; admitted-at-PR-32.
@@ -55,13 +55,13 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 | ECF Domain | Capabilities (primary coordinate) |
 |---|---|
 | governance-existence | Change Management (improve); Compliance Management (activate); Enterprise Governance (conceive); Legal Management (conceive); Resilience Management (design); Risk Management (conceive); Security Management (design); Strategic Planning (conceive); Strategy (conceive) |
-| strategy-direction | Asset Management (build); Facility Management (activate); Sourcing and Procurement (build); Supplier Management (build) |
+| strategy-direction | Asset Management (build); Facility Management (activate); Sourcing and Procurement (build); Supplier Management (build); Technology Management (build) |
 | operations-enablement | Analytics and Intelligence (operate); Information Management (operate); Operations (operate) |
 | party-relationship | Citizen / Member Relationship (operate); Customer Management (operate); Marketing (conceive); Partner Management (conceive) |
 | finance-accounting | Financial Management (operate); Financial Stewardship (conceive) |
 | product-value | Innovation Management (conceive); Offering Management (conceive) |
 | agency-organization | Workforce Management (build); Workforce Planning (design) |
-| <unmapped> | Technology Management (<unmapped>) |
+| <unmapped> | _(none)_ |
 
 ## Empty cells (legitimate, per CR section 27)
 
@@ -75,7 +75,6 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 - CAND-010
 - CAND-017
 - CAND-018
-- CAND-019
 - CAND-028
 
 ## Coordinate coverage (canonical 7x7 = 49)
@@ -86,13 +85,13 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 
 ## Reading the overlay
 
-The overlay is now canonical, anchored in the admitted 26-entry catalog. The 14 distinct primary coordinates used (with secondaries expanding to 17 unique coordinates) cluster in governance-existence (9 entries: Strategy, Strategic Planning, Enterprise Governance, Risk, Compliance, Legal, Resilience, Security, Change) and strategy-direction (4: Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt). Customer-demand holds 4 (Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing); operations-enablement holds 3 (Operations, Information Mgmt, Analytics and Intelligence); finance-accounting holds 2 (Financial Stewardship, Financial Management); agency-organization holds 2 (Workforce Mgmt, Workforce Planning); product-value holds 2 (Offering Mgmt, Innovation). Technology Management is the only held-unmapped entry, with the rationale locked by N-006.
+The overlay is now canonical, anchored in the admitted 26-entry catalog. The 15 distinct primary coordinates used (with secondaries expanding to 18 unique coordinates) cluster in governance-existence (9 entries: Strategy, Strategic Planning, Enterprise Governance, Risk, Compliance, Legal, Resilience, Security, Change) and strategy-direction (5: Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt, Technology Mgmt). Customer-demand holds 4 (Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing); operations-enablement holds 3 (Operations, Information Mgmt, Analytics and Intelligence); finance-accounting holds 2 (Financial Stewardship, Financial Management); agency-organization holds 2 (Workforce Mgmt, Workforce Planning); product-value holds 2 (Offering Mgmt, Innovation). Technology Management's N-006R mapping (CR-DEA-BC-08) places it in `strategy-direction × build` as the technology-estate peer of Asset Management and Facility Management.
 
 ## Carried forward from v0.1 (open items)
 
-- CAND-019 (N-006): business capability stands, ECF legitimately absent; reflected in catalog as `held_unmapped` with the rationale note. No further action.
 - CAND-017 (Information Management) span: R-003 records that secondaries are deliberately empty; the span is a property of the business object, not of initiation. No further action.
 - CAND-028 (Change Management) cross-domain applicability: R-005 records as object property, not mapping defect. No further action.
+- CAND-019 (N-006R, CR-DEA-BC-08): Technology Management is now mapped at `strategy-direction × build`; N-006R supersedes N-006. No further action.
 
 ## Cross-references
 
