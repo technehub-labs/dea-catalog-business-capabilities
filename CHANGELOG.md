@@ -38,7 +38,7 @@ contract are unaffected. Tag: v1-alpha.3.
 
 ## [v1-alpha.2] - 2026-09-08
 
-**Minor** (CR-DEA-BC-08, PR #49). Coordinate Technology Management - resolve
+**Minor** (CR-DEA-BC-08, PR #53). Coordinate Technology Management - resolve
 N-006. The N-006 held-unmapped decision was incorrect against the framework's
 canonical grounding (`dea-metaframework/framework/domain-grounding.md` §3.6
 and §3.2); technology is an enterprise **estate** whose stewardship belongs
