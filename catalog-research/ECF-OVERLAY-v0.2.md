@@ -54,12 +54,12 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 
 | ECF Domain | Capabilities (primary coordinate) |
 |---|---|
-| governance-existence | Change Management (improve); Compliance Management (activate); Enterprise Governance (conceive); Legal Management (conceive); Resilience Management (design); Risk Management (conceive); Security Management (design); Strategic Planning (conceive); Strategy (conceive) |
+| governance-existence | Change Management (improve); Regulation Management (activate); Enterprise Governance (conceive); Legal Matter Management (conceive); Continuity Management (design); Risk Management (conceive); Security Management (design); Strategic Planning (conceive); Strategy (conceive) |
 | strategy-direction | Asset Management (build); Facility Management (activate); Sourcing and Procurement (build); Supplier Management (build); Technology Management (build) |
 | operations-enablement | Analytics and Intelligence (operate); Information Management (operate); Operations (operate) |
 | party-relationship | Citizen / Member Relationship (operate); Customer Management (operate); Marketing (conceive); Partner Management (conceive) |
-| finance-accounting | Financial Management (operate); Financial Stewardship (conceive) |
-| product-value | Innovation Management (conceive); Offering Management (conceive) |
+| finance-accounting | Financial Resource Management (operate); Financial Stewardship (conceive) |
+| product-value | Idea Management (conceive); Offering Management (conceive) |
 | agency-organization | Workforce Management (build); Workforce Planning (design) |
 | <unmapped> | _(none)_ |
 
@@ -85,7 +85,7 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 
 ## Reading the overlay
 
-The overlay is now canonical, anchored in the admitted 26-entry catalog. The 15 distinct primary coordinates used (with secondaries expanding to 18 unique coordinates) cluster in governance-existence (9 entries: Strategy, Strategic Planning, Enterprise Governance, Risk, Compliance, Legal, Resilience, Security, Change) and strategy-direction (5: Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt, Technology Mgmt). Customer-demand holds 4 (Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing); operations-enablement holds 3 (Operations, Information Mgmt, Analytics and Intelligence); finance-accounting holds 2 (Financial Stewardship, Financial Management); agency-organization holds 2 (Workforce Mgmt, Workforce Planning); product-value holds 2 (Offering Mgmt, Innovation). Technology Management's N-006R mapping (CR-DEA-BC-08) places it in `strategy-direction × build` as the technology-estate peer of Asset Management and Facility Management.
+The overlay is now canonical, anchored in the admitted 26-entry catalog. The 15 distinct primary coordinates used (with secondaries expanding to 18 unique coordinates) cluster in governance-existence (9 entries: Strategy, Strategic Planning, Enterprise Governance, Risk, Regulation Management, Legal Matter Management, Continuity Management, Security, Change) and strategy-direction (5: Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt, Technology Mgmt). Customer-demand holds 4 (Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing); operations-enablement holds 3 (Operations, Information Mgmt, Analytics and Intelligence); finance-accounting holds 2 (Financial Stewardship, Financial Resource Management); agency-organization holds 2 (Workforce Mgmt, Workforce Planning); product-value holds 2 (Offering Mgmt, Idea Management). Technology Management's N-006R mapping (CR-DEA-BC-08) places it in `strategy-direction × build` as the technology-estate peer of Asset Management and Facility Management. Names reflect CR-DEA-BC-09 (N-010..N-014 renames; N-015 retention).
 
 ## Carried forward from v0.1 (open items)
 

@@ -13,7 +13,7 @@ CR-DEA-BC-04 proving instance. Machine form: `view-telecom-mcsp.yaml`. Baseline:
 | SPEC-001 | Customer Management | Telecom Customer Management (alias: Subscriber Management) | The customer is a subscriber; the relationship anchors in a subscription, a number, a device. Activation, port-in/port-out, SIM change, contractual churn windows. |
 | SPEC-004 | Offering Management | Tariff and Bundle Management (alias: Product Catalog Management) | Offerings are tariffs, bundles, add-ons priced on usage dimensions; regulatory notification duties ride the offering lifecycle. |
 | SPEC-005 | Partner Management | Roaming and Interconnect Management | Peers are other operators; agreements are roaming and interconnect, with wholesale rates, settlement, coverage footprints. |
-| SPEC-006 | Compliance Management | Telecom Regulatory Compliance | License conditions, lawful intercept, emergency services access, number portability duties, universal service, spectrum conditions. |
+| SPEC-006 | Regulation Management | Telecom Regulatory Compliance | License conditions, lawful intercept, emergency services access, number portability duties, universal service, spectrum conditions. |
 
 All four carry sector evidence at E3 (TM Forum business frameworks, BIAN service landscape, GSMA roaming/wholesale practice, sector regulation). Evidence, not authority (EVIDENCE.md).
 

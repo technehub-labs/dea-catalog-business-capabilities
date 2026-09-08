@@ -58,7 +58,7 @@ ecf_rationale: Planning begins at conceive in governance-existence, immediately 
 boundary: Plans the pursuit of direction; does not set direction (Strategy) or manage
   the resulting change portfolio (Change Management).
 non_examples:
-- An annual budget cycle (Financial Management)
+- An annual budget cycle (Financial Resource Management)
 - A project plan (a process artifact, not this ability)
 specialization_boundary: Planning cadences and frameworks (rolling, scenario, Hoshin)
   are implementation choices, not specializations of the ability.

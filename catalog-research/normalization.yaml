@@ -1,6 +1,7 @@
 register_version: 0.2.0
 cr: CR-DEA-BC-02 (section 20; deliverable section 33 item 5)
-compiled: '2026-09-01 (v0.2: aggregate decisions N-007/N-008; N-003 re-test closed as N-009)'
+compiled: '2026-09-01 (v0.2: aggregate decisions N-007/N-008; N-003 re-test closed as N-009); 2026-09-08
+  (N-010..N-015 appended: CR-DEA-BC-09 naming conformance renames and the Security Management retention)'
 status: candidate-not-canonical; decisions are research decisions, subject to review
 inputs:
   candidates: docs/research/candidates.yaml
@@ -161,6 +162,104 @@ decisions:
   outcome: Parent-Child retained (CAND-017 -> CAND-018); re-test trigger closed
   action: No structural change; CAND-018 remains on the admission track with boundary_defensible gap carried
   confidence: low
+- id: N-010
+  question: 'CR-DEA-BC-09 naming conformance: Compliance Management (CAND-021) against TAXONOMY section 1 rules
+    2 and 4'
+  candidates:
+  - CAND-021
+  evidence:
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  analysis: 'Compliance is a state of conformity to regulation: outcome-adjacent (rule 4) and not the business
+    object (rule 2). The object is Regulation; the ability is to know the enterprise regulatory obligations and
+    to conform to them demonstrably. Regulation Management names the object in plain vocabulary (regulatory
+    affairs usage); the misreading risk (a regulator managing the regulations it writes) is resolved by the
+    definition and boundary, which scope the ability to the enterprise conformance posture.'
+  outcome: Renamed Compliance Management -> Regulation Management
+  action: 'Entry renamed; id dea:capability-compliance-management -> dea:capability-regulation-management;
+    former name recorded in aliases; version 1.0.0 -> 2.0.0 (identity change, VERSIONING section 1.2)'
+  confidence: high
+- id: N-011
+  question: 'CR-DEA-BC-09 naming conformance: Financial Management (CAND-014) against TAXONOMY section 1 rule
+    2'
+  candidates:
+  - CAND-014
+  evidence:
+  - SRC-001
+  - SRC-004
+  analysis: 'The object is Financial Resource; the admitted name carried only the object adjective (Financial).
+    Financial Resource Management is the object-literal form and is also the BIZBOK source term; per TAXONOMY
+    section 2.4 the source term stays in the evidence register and the canonical name is decided by section 1,
+    which here lands on the same form.'
+  outcome: Renamed Financial Management -> Financial Resource Management
+  action: 'Entry renamed; id dea:capability-financial-management -> dea:capability-financial-resource-management;
+    former name recorded in aliases; version 1.0.0 -> 2.0.0'
+  confidence: high
+- id: N-012
+  question: 'CR-DEA-BC-09 naming conformance: Innovation Management (CAND-029) against TAXONOMY section 1 rule
+    2'
+  candidates:
+  - CAND-029
+  evidence:
+  - SRC-002
+  analysis: 'The recorded object is Idea; innovation names the act of innovating (a process reading, rule 1)
+    or the produced novelty (an outcome reading, rule 4). Idea Management names the object in plain vocabulary.
+    Residual tension: the ability covers development and realization, which the name Idea Management may
+    undershoot; resolved by the definition (originate, develop, and realize ideas) and by the outcome
+    (innovations introduced, not merely ideated). Changing business_object Idea -> Innovation was considered
+    and deferred: a business_object change is an evidence-bearing semantic change, out of scope for a naming
+    conformance pass.'
+  outcome: Renamed Innovation Management -> Idea Management
+  action: 'Entry renamed; id dea:capability-innovation-management -> dea:capability-idea-management; former
+    name recorded in aliases; version 1.0.0 -> 2.0.0; business_object question parked (evidence-bearing
+    semantic change, not a naming question)'
+  confidence: medium
+- id: N-013
+  question: 'CR-DEA-BC-09 naming conformance: Legal Management (CAND-022) against TAXONOMY section 1 rule 2'
+  candidates:
+  - CAND-022
+  evidence:
+  - SRC-002
+  - SRC-004
+  analysis: 'The object is Legal Matter; the admitted name carried only the object adjective (Legal). Legal
+    Matter Management is the object-literal form and matches legal-operations vocabulary.'
+  outcome: Renamed Legal Management -> Legal Matter Management
+  action: 'Entry renamed; id dea:capability-legal-management -> dea:capability-legal-matter-management; former
+    name recorded in aliases; version 1.0.0 -> 2.0.0'
+  confidence: high
+- id: N-014
+  question: 'CR-DEA-BC-09 naming conformance: Resilience Management (CAND-023) against TAXONOMY section 1 rules
+    2 and 4'
+  candidates:
+  - CAND-023
+  evidence:
+  - SRC-002
+  - SRC-013
+  analysis: 'Resilience is a property of the enterprise (a quality it has), not a business object the ability
+    manages; the recorded object is Continuity. Continuity Management names the object in plain vocabulary
+    (business continuity usage, minus the redundant Business prefix per rule 6).'
+  outcome: Renamed Resilience Management -> Continuity Management
+  action: 'Entry renamed; id dea:capability-resilience-management -> dea:capability-continuity-management;
+    former name recorded in aliases; version 1.0.0 -> 2.0.0'
+  confidence: high
+- id: N-015
+  question: 'CR-DEA-BC-09 naming conformance: Security Management (CAND-024) against TAXONOMY section 1 rule
+    2'
+  candidates:
+  - CAND-024
+  evidence:
+  - SRC-002
+  - SRC-004
+  analysis: 'The recorded object is the compound Asset/Information. An object-literal name (Asset and
+    Information Protection Management) fails rule 6 (plain vocabulary) and rule 1 (reads as a five-word
+    work description). Security is the plain-vocabulary name of the protection ability across the source
+    corpus (ISO 27001 information security management; BIZBOK Security Management); the compound object is
+    carried by the business_object field and the boundary, not by the name. Retained per the N-001 precedent
+    (plain-vocabulary ability-domain name wins over literal object containment).'
+  outcome: Retained as Security Management (reviewed-retained)
+  action: No rename; decision recorded; entry unchanged at version 1.0.0
+  confidence: high
 deferred:
 - item: Citizen/Member Relationship (CAND-006) vs Customer Management unification
   trigger: government reference models (gap G5)

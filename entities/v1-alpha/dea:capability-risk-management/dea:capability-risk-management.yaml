@@ -19,8 +19,8 @@ ecf:
   - domain: governance-existence
     stage: improve
 related_capabilities:
-- dea:capability-compliance-management
-- dea:capability-legal-management
+- dea:capability-regulation-management
+- dea:capability-legal-matter-management
 - dea:capability-security-management
 evidence:
   sources:
@@ -61,8 +61,8 @@ why_capability: E4; parent of the governance triad relationship set (Compliance,
   Security relate through it) per the sweep.
 ecf_rationale: Primary conceive in governance-existence (risk posture is constituted
   with direction); operated and improved continuously.
-boundary: Manages exposure; does not manage obligation conformance (Compliance), legal
-  matters (Legal), or protective control (Security).
+boundary: Manages exposure; does not manage obligation conformance (Regulation Management),
+  legal matters (Legal Matter Management), or protective control (Security Management).
 non_examples:
 - A risk register (an artifact)
 - A risk function (an organization)

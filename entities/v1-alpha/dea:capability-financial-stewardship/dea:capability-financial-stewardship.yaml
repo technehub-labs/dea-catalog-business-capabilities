@@ -18,7 +18,7 @@ ecf:
   - domain: finance-accounting
     stage: operate
 related_capabilities:
-- dea:capability-financial-management
+- dea:capability-financial-resource-management
 evidence:
   sources:
   - SRC-001
@@ -55,14 +55,14 @@ provenance:
 specialization:
   allowed: true
   industry_examples: []
-why_capability: 'E5; distinct from Financial Management (the operating cycle) by the
-  sweep: stewardship sets the financial constitution, management runs it.'
+why_capability: 'E5; distinct from Financial Resource Management (the operating cycle)
+  by the sweep: stewardship sets the financial constitution, management runs it.'
 ecf_rationale: Primary conceive in finance-accounting (financial position is constituted
   deliberately); exercised at operate.
 boundary: Stewards financial position; does not run the accounting cycle or execute
-  transactions (Financial Management).
+  transactions (Financial Resource Management).
 non_examples:
-- A ledger (the object of Financial Management)
+- A ledger (the object of Financial Resource Management)
 - A treasury desk (an organization)
 specialization_boundary: Instruments and capital structures vary by sector; the ability
   to steward financial position does not.

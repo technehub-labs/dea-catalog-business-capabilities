@@ -56,7 +56,7 @@ specializations:
     rating: E3
   status: admitted
 - id: SPEC-006
-  parent: dea:capability-compliance-management
+  parent: dea:capability-regulation-management
   level: L3
   sector: Telecommunications (mobile services)
   name: Telecom Regulatory Compliance
@@ -77,21 +77,21 @@ inherited:
 - dea:capability-marketing
 - dea:capability-operations
 - dea:capability-financial-stewardship
-- dea:capability-financial-management
+- dea:capability-financial-resource-management
 - dea:capability-workforce-management
 - dea:capability-workforce-planning
 - dea:capability-information-management
 - dea:capability-analytics-and-intelligence
 - dea:capability-technology-management
 - dea:capability-risk-management
-- dea:capability-legal-management
+- dea:capability-legal-matter-management
 - dea:capability-security-management
-- dea:capability-resilience-management
+- dea:capability-continuity-management
 - dea:capability-sourcing-and-procurement
 - dea:capability-asset-management
 - dea:capability-facility-management
 - dea:capability-change-management
-- dea:capability-innovation-management
+- dea:capability-idea-management
 rejected:
 - name: Network Management
   reason: 'Fails the business-object test (D7): the object is technology (the network),
