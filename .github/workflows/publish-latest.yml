@@ -50,7 +50,10 @@ jobs:
       - name: Dispatch to Pages aggregator
         if: success()
         env:
-          GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
+          # CR-DEA-BC-09 follow-up: fall back to secrets.GITHUB_TOKEN when
+          # the org-level secrets.DISPATCH_TOKEN is not configured. See the
+          # matching note in publish-versioned.yml for the rationale.
+          GH_TOKEN: ${{ secrets.DISPATCH_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           gh api repos/technehub-labs/technehub-labs.github.io/dispatches \
             -X POST \

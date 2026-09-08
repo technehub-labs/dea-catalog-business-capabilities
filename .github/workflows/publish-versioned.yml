@@ -72,7 +72,17 @@ jobs:
       - name: Dispatch to Pages aggregator
         if: success()
         env:
-          GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
+          # CR-DEA-BC-09 follow-up: fall back to secrets.GITHUB_TOKEN when
+          # the org-level secrets.DISPATCH_TOKEN is not configured. The
+          # default GITHUB_TOKEN has cross-repo repository_dispatch authority
+          # for same-org targets under the same installation (the same
+          # pattern as dea-metaframework PR #7 and dea-metamodel PR #151);
+          # DISPATCH_TOKEN is a retained override for installations that
+          # want a narrower-scoped PAT. The previous config referenced
+          # DISPATCH_TOKEN only, which rendered as an empty GH_TOKEN in the
+          # step environment and failed every cross-repo dispatch (v1-alpha.1
+          # through v1-alpha.3 all failed this step).
+          GH_TOKEN: ${{ secrets.DISPATCH_TOKEN || secrets.GITHUB_TOKEN }}
           VERSION_LABEL: ${{ github.ref_name }}
         run: |
           gh api repos/technehub-labs/technehub-labs.github.io/dispatches \
