@@ -24,7 +24,7 @@ conflict_resolutions:
   id: R-003
   decision: mapping defensible as recorded; secondaries deliberately empty
   rationale: The span of information across domains is a property of the business object, not of the capability initiation.
-    Enumerating every domain as secondary would violate the honest-not-exhaustive rule; placement at operations-enablement x
+    Enumerating every domain as secondary would violate the honest-not-exhaustive rule; placement at enablement-operations x
     operate distorts neither model.
 - candidate: CAND-019
   id: R-004

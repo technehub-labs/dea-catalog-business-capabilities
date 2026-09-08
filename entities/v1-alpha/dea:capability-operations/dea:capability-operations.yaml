@@ -12,10 +12,10 @@ outcome: Offerings are delivered, continuously, at the quality the enterprise co
 business_object: Operation
 ecf:
   primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   secondary:
-  - domain: operations-enablement
+  - domain: enablement-operations
     stage: improve
 related_capabilities:
 - dea:capability-offering-management
@@ -56,7 +56,7 @@ specialization:
   industry_examples: []
 why_capability: E4; N-008 dissolved Value Delivery as a separate first-order capability
   and re-rooted Operations as the value-execution capability.
-ecf_rationale: Primary operate in operations-enablement; improve participation is honest
+ecf_rationale: Primary operate in enablement-operations; improve participation is honest
   and recorded.
 boundary: Runs delivery; does not manage the offerings delivered (Offering Management)
   or change how delivery works (Change Management).
@@ -73,15 +73,15 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: OperationsAndEnablement
+    domain: EnablementAndOperations
     stage: Operate
-    identifier: ecf:operationsEnablement.operate
+    identifier: ecf:enablementAndOperations.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
-    domain: OperationsAndEnablement
+    domain: EnablementAndOperations
     stage: Improve
-    identifier: ecf:operationsEnablement.improve
+    identifier: ecf:enablementAndOperations.improve
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:
@@ -97,7 +97,7 @@ ecfConformance:
       agency-organization: AgencyAndOrganization
       party-relationship: PartyAndRelationship
       product-value: ProductAndValue
-      operations-enablement: OperationsAndEnablement
+      enablement-operations: EnablementAndOperations
       finance-accounting: FinanceAndAccounting
       _stage_conceive: Conceive
       _stage_design: Design

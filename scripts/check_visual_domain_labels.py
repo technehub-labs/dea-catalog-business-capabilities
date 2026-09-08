@@ -46,6 +46,8 @@ STALE_TERMS = [
     "finance-value", "FinanceAndValue", "financeValue", "finance value", "Finance & Value",
     # v2.3.0 Domain 3 retired by v2.4.0 (CR-ECF-007)
     "people-organization", "PeopleAndOrganization", "peopleAndOrganization", "people organization", "People & Organization",
+    # v2.4.0 Domain 6 retired by v2.5.0 (CR-ECF-008)
+    "operations-enablement", "OperationsAndEnablement", "operationsAndEnablement", "operations enablement", "Operations & Enablement",
 ]
 
 # An SVG referencing this many distinct canonical domains is treated as a

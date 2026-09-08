@@ -27,7 +27,7 @@ PROFILE = 'dea:ecf@1.0.0'
 FRAMEWORK = 'EnterpriseConceptFramework'
 CANON_DOMAINS = {
     'GovernanceAndExistence', 'StrategyAndDirection', 'AgencyAndOrganization',
-    'PartyAndRelationship', 'ProductAndValue', 'OperationsAndEnablement',
+    'PartyAndRelationship', 'ProductAndValue', 'EnablementAndOperations',
     'FinanceAndAccounting',
 }
 CANON_STAGES = {'Conceive', 'Design', 'Build', 'Activate', 'Operate', 'Improve', 'Retire'}

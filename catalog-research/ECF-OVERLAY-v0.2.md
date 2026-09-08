@@ -44,7 +44,7 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 - **R-007** (CAND-029, Innovation boundary vs Change): deferral-lifted; admitted-at-PR-32.
   - ISO 56002 draws the boundary against Change Management (innovation originates the new; change institutionalizes it); Oslo Manual 2018 names innovation management as a distinct activity class; evidence E4, generality 8/10 strong.
 - **R-008** (CAND-018, Analytics boundary vs Information): distinct-first-order; admitted-at-PR-32.
-  - Reading A: stewardship ends where derivation begins; operations-enablement × operate (primary), secondaries empty per R-003 parity; record shape conforms; no layering violation. Boundary decision: docs/research/boundary-decision-cand-018 v0.1, PR #29.
+  - Reading A: stewardship ends where derivation begins; enablement-operations × operate (primary), secondaries empty per R-003 parity; record shape conforms; no layering violation. Boundary decision: docs/research/boundary-decision-cand-018 v0.1, PR #29.
 - **N-007** (CAND-004, Stakeholder Relationship Mgmt grouping): reclassified-as-grouping-parent; withdrawn-from-admission.
   - Aggregate parent; children admitted separately (CAND-005 Customer Mgmt, CAND-006 Citizen/Member, CAND-007 Supplier Mgmt, CAND-008 Partner Mgmt). Non-redundancy rule (BIZBOK SRC-001) applies.
 - **N-008** (CAND-011, Value Delivery aggregate): dissolved-as-first-order.
@@ -56,7 +56,7 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 |---|---|
 | governance-existence | Change Management (improve); Regulation Management (activate); Enterprise Governance (conceive); Legal Matter Management (conceive); Continuity Management (design); Risk Management (conceive); Security Management (design); Strategic Planning (conceive); Strategy (conceive) |
 | strategy-direction | Asset Management (build); Facility Management (activate); Sourcing and Procurement (build); Supplier Management (build); Technology Management (build) |
-| operations-enablement | Analytics and Intelligence (operate); Information Management (operate); Operations (operate) |
+| enablement-operations | Analytics and Intelligence (operate); Information Management (operate); Operations (operate) |
 | party-relationship | Citizen / Member Relationship (operate); Customer Management (operate); Marketing (conceive); Partner Management (conceive) |
 | finance-accounting | Financial Resource Management (operate); Financial Stewardship (conceive) |
 | product-value | Idea Management (conceive); Offering Management (conceive) |
@@ -85,7 +85,7 @@ CR-DEA-BC-04 stage; post-PR-32. Status: **admitted-canonical-overlay** (replaces
 
 ## Reading the overlay
 
-The overlay is now canonical, anchored in the admitted 26-entry catalog. The 15 distinct primary coordinates used (with secondaries expanding to 18 unique coordinates) cluster in governance-existence (9 entries: Strategy, Strategic Planning, Enterprise Governance, Risk, Regulation Management, Legal Matter Management, Continuity Management, Security, Change) and strategy-direction (5: Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt, Technology Mgmt). Customer-demand holds 4 (Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing); operations-enablement holds 3 (Operations, Information Mgmt, Analytics and Intelligence); finance-accounting holds 2 (Financial Stewardship, Financial Resource Management); agency-organization holds 2 (Workforce Mgmt, Workforce Planning); product-value holds 2 (Offering Mgmt, Idea Management). Technology Management's N-006R mapping (CR-DEA-BC-08) places it in `strategy-direction × build` as the technology-estate peer of Asset Management and Facility Management. Names reflect CR-DEA-BC-09 (N-010..N-014 renames; N-015 retention).
+The overlay is now canonical, anchored in the admitted 26-entry catalog. The 15 distinct primary coordinates used (with secondaries expanding to 18 unique coordinates) cluster in governance-existence (9 entries: Strategy, Strategic Planning, Enterprise Governance, Risk, Regulation Management, Legal Matter Management, Continuity Management, Security, Change) and strategy-direction (5: Supplier Mgmt, Sourcing/Procurement, Asset Mgmt, Facility Mgmt, Technology Mgmt). Customer-demand holds 4 (Customer Mgmt, Citizen/Member, Partner Mgmt, Marketing); enablement-operations holds 3 (Operations, Information Mgmt, Analytics and Intelligence); finance-accounting holds 2 (Financial Stewardship, Financial Resource Management); agency-organization holds 2 (Workforce Mgmt, Workforce Planning); product-value holds 2 (Offering Mgmt, Idea Management). Technology Management's N-006R mapping (CR-DEA-BC-08) places it in `strategy-direction × build` as the technology-estate peer of Asset Management and Facility Management. Names reflect CR-DEA-BC-09 (N-010..N-014 renames; N-015 retention).
 
 ## Carried forward from v0.1 (open items)
 

@@ -12,7 +12,7 @@ const DOMAINS = [
   { id: 'party-relationship',        display: 'Party & Relationship' },
   { id: 'strategy-direction',        display: 'Strategy & Direction' },
   { id: 'product-value',       display: 'Product & Value' },
-  { id: 'operations-enablement',    display: 'Operations & Enablement' },
+  { id: 'enablement-operations',    display: 'Enablement & Operations' },
   { id: 'finance-accounting',          display: 'Finance & Accounting' },
   { id: 'agency-organization',    display: 'Agency & Organization' },
 ];

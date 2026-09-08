@@ -131,20 +131,20 @@ overlays:
 - candidate: CAND-011
   name: Value Delivery
   primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: activate
   secondary:
-  - domain: operations-enablement
+  - domain: enablement-operations
     stage: operate
   confidence: medium
   conflict: null
 - candidate: CAND-012
   name: Operations
   primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   secondary:
-  - domain: operations-enablement
+  - domain: enablement-operations
     stage: improve
   confidence: high
   conflict: null
@@ -193,7 +193,7 @@ overlays:
 - candidate: CAND-017
   name: Information Management
   primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   secondary: []
   confidence: low
@@ -202,7 +202,7 @@ overlays:
 - candidate: CAND-018
   name: Analytics and Intelligence
   primary:
-    domain: operations-enablement
+    domain: enablement-operations
     stage: operate
   secondary: []
   confidence: low

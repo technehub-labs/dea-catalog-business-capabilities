@@ -127,12 +127,12 @@ The admission gate close-out (v0.1) recommends 23 candidates, each with all ten 
 | CAND-008 | Partner Management | party-relationship x conceive (conflict flag) |
 | CAND-009 | Offering Management | product-value x conceive |
 | CAND-010 | Marketing | party-relationship x conceive (conflict flag) |
-| CAND-012 | Operations | operations-enablement x operate |
+| CAND-012 | Operations | enablement-operations x operate |
 | CAND-013 | Financial Stewardship | finance-accounting x conceive |
 | CAND-014 | Financial Management | finance-accounting x operate |
 | CAND-015 | Workforce Management | agency-organization x build |
 | CAND-016 | Workforce Planning | agency-organization x design |
-| CAND-017 | Information Management | operations-enablement x operate (conflict flag) |
+| CAND-017 | Information Management | enablement-operations x operate (conflict flag) |
 | CAND-019 | Technology Management | held unmapped (legitimately absent; N-006 open question, conflict flag) |
 | CAND-020 | Risk Management | governance-existence x conceive |
 | CAND-021 | Compliance Management | governance-existence x activate |

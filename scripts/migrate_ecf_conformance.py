@@ -33,7 +33,7 @@ DOMAIN_MAP = {
     'agency-organization': 'AgencyAndOrganization',
     'party-relationship': 'PartyAndRelationship',
     'product-value': 'ProductAndValue',
-    'operations-enablement': 'OperationsAndEnablement',
+    'enablement-operations': 'EnablementAndOperations',
     'finance-accounting': 'FinanceAndAccounting',
 }
 DOMAIN_ID = {
@@ -42,7 +42,7 @@ DOMAIN_ID = {
     'agency-organization': 'agencyOrganization',
     'party-relationship': 'partyRelationship',
     'product-value': 'productValue',
-    'operations-enablement': 'operationsEnablement',
+    'enablement-operations': 'operationsEnablement',
     'finance-accounting': 'financeAccounting',
 }
 STAGE_MAP = {
