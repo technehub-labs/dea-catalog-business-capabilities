@@ -22,7 +22,7 @@ applied_decisions:
     N-003: Analytics stays a provisional child of Information Management (later resolved by R-008 as distinct)
     N-004: Sourcing/Procurement and Supplier Management are distinct (CAND-025 vs CAND-007)
     N-005: Section 20 example resolved
-    N-006: Technology Management stands; its coordinate does not (held_unmapped)
+    N-006R: Technology Management stands and is now mapped (CR-DEA-BC-08); technology is an estate, not an enabler of execution; stewardship of the estate belongs in Strategy & Direction, parallel to Asset Management and Facility Management
   review_decisions:
   - id: R-001
     candidate: CAND-008
@@ -43,10 +43,9 @@ applied_decisions:
       all domains would violate honest-not-exhaustive.
   - id: R-004
     candidate: CAND-019
-    topic: Technology Management unmapped
-    verdict: N-006-resolved
-    rationale: Business capability, business object Technology; ECF legitimately absent (L5 concern, no domain carries technology).
-      Section 38 legitimately-absent clause applies.
+    topic: Technology Management placement
+    verdict: superseded-by-N-006R
+    rationale: "N-006 carried a held-unmapped decision on the rationale that no ECF domain carries technology; that rationale was incorrect against the framework's canonical grounding (dea-metaframework/framework/domain-grounding.md sections 3.6 and 3.2). CR-DEA-BC-08 supersedes N-006 with N-006R: Technology Management is the technology-estate peer of Asset Management and Facility Management, primary coordinate strategy-direction \\xD7 build."
   - id: R-005
     candidate: CAND-028
     topic: Change Management cross-domain
@@ -309,13 +308,19 @@ overlays:
   admission_cr: CR-DEA-BC-04 (boundary decision)
 - candidate: CAND-019
   name: Technology Management
-  primary: null
-  secondary: []
-  confidence: low
-  conflict: 'HELD UNMAPPED: no ECF domain carries technology (technology is an L5 layer concern, not a domain); open question
-    carried to normalization: business capability with a domain, or cross-cutting governance concern?'
-  status: admitted-with-held-unmapped
-  held_unmapped_rationale: 'N-006: business capability stands; ECF legitimately absent'
+  primary:
+    domain: strategy-direction
+    stage: build
+  secondary:
+  - domain: strategy-direction
+    stage: operate
+  - domain: strategy-direction
+    stage: improve
+  confidence: high
+  conflict: null
+  status: admitted
+  admission_pr: 48
+  admission_cr: CR-DEA-BC-08
 - candidate: CAND-020
   name: Risk Management
   primary:
@@ -488,8 +493,7 @@ admission_summary:
   - CAND-004
   - CAND-011
   admitted_total: 26
-  held_unmapped:
-  - CAND-019
+  held_unmapped: []
   admitted_at_pr_32:
   - CAND-018
   - CAND-023
