@@ -36,6 +36,14 @@ CI time (object-anchoring advisory only). Consumers pinning by entry id must
 remap the five retired ids; consumers pinning the catalog label or the ECF
 contract are unaffected. Tag: v1-alpha.3.
 
+- Nested-capability-map release artifact: `scripts/generate_capability_map.py`
+  + `scripts/render_map_png.mjs` wired into `publish-versioned.yml`. On every
+  v* tag push the pipeline now emits `out/<label>/capability-map.html` (self-
+  contained CSS-grid poster) and `out/<label>/capability-map-a3.png` (4961 x
+  3508 px @ 300 dpi). Both flow into the release zip. The map reads ECF axes
+  from `schemas/entity.schema.json` (canonical v2.5.0 enum); matrix row order
+  mirrors `scripts/lib/grid.js` so the two never drift.
+
 ## [v1-alpha.2] - 2026-09-08
 
 **Minor** (CR-DEA-BC-08, PR #53). Coordinate Technology Management - resolve

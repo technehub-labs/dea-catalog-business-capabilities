@@ -43,6 +43,30 @@ jobs:
           VERSION_LABEL: ${{ github.ref_name }}
         run: node scripts/publish.js "$VERSION_LABEL"
 
+      - name: Generate nested capability map (HTML + A3 PNG)
+        env:
+          VERSION_LABEL: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          OUT_DIR="out/${VERSION_LABEL}"
+          mkdir -p "${OUT_DIR}"
+          python3 scripts/generate_capability_map.py \
+            --label "${VERSION_LABEL}" \
+            --out "${OUT_DIR}/capability-map.html"
+          node scripts/render_map_png.mjs \
+            "${OUT_DIR}/capability-map.html" \
+            "${OUT_DIR}/capability-map-a3.png"
+
+      - name: Rezip with map assets
+        env:
+          VERSION_LABEL: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          OUT_DIR="out/${VERSION_LABEL}"
+          cd "${OUT_DIR}"
+          rm -f "../${VERSION_LABEL}.zip"
+          zip -qr "../${VERSION_LABEL}.zip" .
+
       - name: Upload artifacts (debug)
         uses: actions/upload-artifact@v4
         with:

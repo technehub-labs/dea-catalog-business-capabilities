@@ -59,6 +59,8 @@ GitHub Pages: https://technehub-labs.github.io/capabilities/<target>/
 | `overlay.json` | ECF overlay v0.2 verbatim |
 | `overlay.yaml` | ECF overlay v0.2 verbatim (YAML source) |
 | `dependencies.yaml` | Catalog manifest verbatim |
+| `capability-map.html` | Nested L0 ⊃ L1 ⊃ L2 capability × ECF poster (self-contained CSS grid; versioned builds only) |
+| `capability-map-a3.png` | A3 landscape rasterisation of the same map, 4961 × 3508 px @ 300 dpi (versioned builds only) |
 | `MANIFEST.md` | Build summary + file inventory |
 
 ## How to cut a new catalog version
