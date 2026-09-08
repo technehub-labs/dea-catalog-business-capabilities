@@ -31,7 +31,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-asset-management
-    last_modified: '2026-09-07'
+    last_modified: '2026-09-08'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-asset-management/dea:capability-asset-management.yaml
     research_count: 0
@@ -108,7 +108,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-financial-stewardship
-    last_modified: '2026-09-07'
+    last_modified: '2026-09-08'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-financial-stewardship/dea:capability-financial-stewardship.yaml
     research_count: 0
@@ -207,7 +207,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-risk-management
-    last_modified: '2026-09-07'
+    last_modified: '2026-09-08'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-risk-management/dea:capability-risk-management.yaml
     research_count: 0
@@ -240,7 +240,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-strategic-planning
-    last_modified: '2026-09-07'
+    last_modified: '2026-09-08'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-strategic-planning/dea:capability-strategic-planning.yaml
     research_count: 0
