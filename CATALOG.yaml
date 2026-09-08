@@ -4,7 +4,7 @@ catalog:
     candidates: 0
     canonical: 26
     entities: 26
-    open_change_requests: 14
+    open_change_requests: 15
     research_files: 3
     retired: 0
   cross_cutting:
@@ -52,15 +52,15 @@ catalog:
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-compliance-management
-    last_modified: '2026-09-07'
+    id: dea:capability-continuity-management
+    last_modified: '2026-09-08'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-compliance-management/dea:capability-compliance-management.yaml
+    path: entities/v1-alpha/dea:capability-continuity-management/dea:capability-continuity-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-customer-management
@@ -96,15 +96,15 @@ catalog:
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-financial-management
-    last_modified: '2026-09-07'
+    id: dea:capability-financial-resource-management
+    last_modified: '2026-09-08'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-financial-management/dea:capability-financial-management.yaml
+    path: entities/v1-alpha/dea:capability-financial-resource-management/dea:capability-financial-resource-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-financial-stewardship
@@ -118,6 +118,17 @@ catalog:
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
+    id: dea:capability-idea-management
+    last_modified: '2026-09-08'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-idea-management/dea:capability-idea-management.yaml
+    research_count: 0
+    retired_count: 1
+    state: canonical
+    type: BusinessCapability
+    version: 2.0.0
+  - candidate_count: 1
+    canonical_count: 1
     id: dea:capability-information-management
     last_modified: '2026-09-07'
     lifecycle_status: active
@@ -129,26 +140,15 @@ catalog:
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-innovation-management
-    last_modified: '2026-09-07'
+    id: dea:capability-legal-matter-management
+    last_modified: '2026-09-08'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-innovation-management/dea:capability-innovation-management.yaml
+    path: entities/v1-alpha/dea:capability-legal-matter-management/dea:capability-legal-matter-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
-  - candidate_count: 1
-    canonical_count: 1
-    id: dea:capability-legal-management
-    last_modified: '2026-09-07'
-    lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-legal-management/dea:capability-legal-management.yaml
-    research_count: 0
-    retired_count: 1
-    state: canonical
-    type: BusinessCapability
-    version: 1.0.0
+    version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-marketing
@@ -195,15 +195,15 @@ catalog:
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-resilience-management
-    last_modified: '2026-09-07'
+    id: dea:capability-regulation-management
+    last_modified: '2026-09-08'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-resilience-management/dea:capability-resilience-management.yaml
+    path: entities/v1-alpha/dea:capability-regulation-management/dea:capability-regulation-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-risk-management
@@ -321,9 +321,9 @@ catalog:
   - entity_id: dea:capability-change-management
     files: []
     path: entities/v1-alpha/dea:capability-change-management/research/
-  - entity_id: dea:capability-compliance-management
+  - entity_id: dea:capability-continuity-management
     files: []
-    path: entities/v1-alpha/dea:capability-compliance-management/research/
+    path: entities/v1-alpha/dea:capability-continuity-management/research/
   - entity_id: dea:capability-customer-management
     files: []
     path: entities/v1-alpha/dea:capability-customer-management/research/
@@ -333,21 +333,21 @@ catalog:
   - entity_id: dea:capability-facility-management
     files: []
     path: entities/v1-alpha/dea:capability-facility-management/research/
-  - entity_id: dea:capability-financial-management
+  - entity_id: dea:capability-financial-resource-management
     files: []
-    path: entities/v1-alpha/dea:capability-financial-management/research/
+    path: entities/v1-alpha/dea:capability-financial-resource-management/research/
   - entity_id: dea:capability-financial-stewardship
     files: []
     path: entities/v1-alpha/dea:capability-financial-stewardship/research/
+  - entity_id: dea:capability-idea-management
+    files: []
+    path: entities/v1-alpha/dea:capability-idea-management/research/
   - entity_id: dea:capability-information-management
     files: []
     path: entities/v1-alpha/dea:capability-information-management/research/
-  - entity_id: dea:capability-innovation-management
+  - entity_id: dea:capability-legal-matter-management
     files: []
-    path: entities/v1-alpha/dea:capability-innovation-management/research/
-  - entity_id: dea:capability-legal-management
-    files: []
-    path: entities/v1-alpha/dea:capability-legal-management/research/
+    path: entities/v1-alpha/dea:capability-legal-matter-management/research/
   - entity_id: dea:capability-marketing
     files: []
     path: entities/v1-alpha/dea:capability-marketing/research/
@@ -360,9 +360,9 @@ catalog:
   - entity_id: dea:capability-partner-management
     files: []
     path: entities/v1-alpha/dea:capability-partner-management/research/
-  - entity_id: dea:capability-resilience-management
+  - entity_id: dea:capability-regulation-management
     files: []
-    path: entities/v1-alpha/dea:capability-resilience-management/research/
+    path: entities/v1-alpha/dea:capability-regulation-management/research/
   - entity_id: dea:capability-risk-management
     files: []
     path: entities/v1-alpha/dea:capability-risk-management/research/
