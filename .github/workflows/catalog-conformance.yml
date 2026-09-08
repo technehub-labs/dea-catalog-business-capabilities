@@ -16,6 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # CR-DEA-BC-08: fetch full history + branch tip (not the synthetic
+          # merge commit). The synthetic merge commit returned by GitHub's PR
+          # checkout touches every entity file, which makes the regenerator's
+          # git-log-based `last_modified` field collapse to the merge date for
+          # every entity, breaking CATALOG.yaml freshness checks for any PR
+          # that bumps an entry version.
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Install dependencies
         run: pip install pyyaml jsonschema pytest
