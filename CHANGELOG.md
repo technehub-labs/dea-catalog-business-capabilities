@@ -9,6 +9,33 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [v1-alpha.3] - 2026-09-08
+
+**Minor** (CR-DEA-BC-09, PR pending). Naming conformance refresh and
+definition template formalization. TAXONOMY.md section 1 rule 2 clarified
+(anchoring is semantic, not literal token containment; N-001/N-015 precedent
+recorded); new section 1A formalizes the definition template ("The ability to
+..." single sentence naming the business object) and the outcome-restatement
+ban; sections 6/7 refreshed to the post-STRUCT-03 layout. Five entries renamed
+to satisfy the clarified object-anchoring rule (normalization decisions
+N-010..N-014; each renamed entry bumps 1.0.0 -> 2.0.0 per VERSIONING section
+1.2, former names recorded in aliases, former ids not reused):
+
+- Compliance Management -> Regulation Management
+- Financial Management -> Financial Resource Management
+- Innovation Management -> Idea Management
+- Legal Management -> Legal Matter Management
+- Resilience Management -> Continuity Management
+
+Security Management reviewed-retained (N-015): the compound business object
+(Asset/Information) precludes plain object-literal naming. MCSP view
+references, overlay v0.2 canonical names, README narratives, and cross-referencing
+entries (Risk, Financial Stewardship, Asset, Strategic Planning) updated
+atomically. New `scripts/check_naming.py` enforces TAXONOMY sections 1/1A at
+CI time (object-anchoring advisory only). Consumers pinning by entry id must
+remap the five retired ids; consumers pinning the catalog label or the ECF
+contract are unaffected. Tag: v1-alpha.3.
+
 ## [v1-alpha.2] - 2026-09-08
 
 **Minor** (CR-DEA-BC-08, PR #49). Coordinate Technology Management - resolve
