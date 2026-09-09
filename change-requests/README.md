@@ -24,6 +24,8 @@ Cross-repo mandatory standard applied by every TechNeHub Labs catalog repo (L1 l
 |---|---|---|---|
 | [CR-CATALOG-STRUCT-03a](CR-CATALOG-STRUCT-03a.md) | Business Capability Catalog Adoption (Layout + Index) | Landed | commit `39815423` (2026-09-05) | First half of STRUCT-03. Moves 26 flat capability YAMLs into per-entity subtrees; vendors regenerator + gate + schema; commits `CATALOG.yaml` + `TEMPLATE_VERSION`; adds `.github/workflows/catalog-conformance.yml`. 33 research files in `docs/research/` STAY in place; STRUCT-03b handles their distribution. All 16 CSTs pass under `--strict`. |
 | [CR-CATALOG-STRUCT-03b](CR-CATALOG-STRUCT-03b.md) | Business Capability Catalog Adoption (Research Distribution) | Landed | commit `c33843d3` (2026-09-05) | Second half of STRUCT-03. Distributes 33 research files: CAND-018 boundary decision (2 files) to `dea:capability-analytics-and-intelligence/research/`; 31 catalog-wide artifacts to new `catalog-research/`; 9 SVG visuals + manifest to new `visuals/`. `docs/research/` removed. Brings the BC catalog from `partial` to `conforming`. |
+| [CR-CATALOG-STRUCT-08](CR-CATALOG-STRUCT-08-ecf-domain-enum-v2.3.0-migration.md) | ECF Domain Enum v2.3.0 Migration | Landed | PR #46 (2026-09-07) | Carrier for the v2.3.0 Domain enum migration in this catalog (4th landing in the wave after metaframework, metamodel, process catalog). Five of the seven canonical ECF Domains were renamed in the metaframework (CR-ECF-006 + ADR-ECF-001); the v0.2 overlay remains valid; only the names shifted. Companion to CR-BP-17. |
+| [CR-CATALOG-STRUCT-09](CR-CATALOG-STRUCT-09-ecf-domain-enum-agency-migration.md) | ECF Domain Enum v2.4.0 Migration (Agency & Organization) | Landed | PR #47 (2026-09-07) | v2.4.0 migration carrier: Domain 3 renamed from `PeopleAndOrganization` to `AgencyAndOrganization` (Substrate Independence Stress Test; ADR-ECF-002 / CR-ECF-007). Single Domain rename; no content redistribution. Companion to CR-BP-18. |
 
 ## Conformance Gate series (cross-repo, CG-001..006 anchor in dea-metaframework)
 
@@ -31,11 +33,18 @@ Cross-repo mandatory standard applied by every TechNeHub Labs catalog repo (L1 l
 |----|-------|--------|-------|
 | [CR-ECF-CG-003](CR-ECF-CG-003.md) | Business Capability Catalog Conformance | Landed | PR #34 (2026-09-01) | Catalog is the validation-and-correction target, not a redesign. Mandates Capability Identity ≠ ECF Coordinate; preserves multiple contextual coordinates; ratifies 26-entry plus MCSP view conformance via a new `ecfConformance` block. Gate is live in `.github/workflows/catalog-conformance.yml`. |
 
+## BC-ECF migration carrier series (cross-repo; metaframework CR-ECF-NNN anchor)
+
+This catalog's migration carriers for metaframework ECF enum bumps. Each row corresponds to a Domain/Stage rename driven by a metaframework ADR + CR; the carrier PR lands the rename in this catalog's `schemas/entity.schema.json` and the canonical entity overlays.
+
+| CR | Title | Status | Notes |
+|----|-------|--------|-------|
+| [CR-BC-ECF-03](CR-BC-ECF-03.md) | ECF Domain Enum v2.5.0 Migration (Domain 6 Enablement & Operations) | Landed | PR #56 (2026-09-08) | v2.5.0 migration carrier: Domain 6 renamed from `OperationsAndEnablement` to `EnablementAndOperations` (Domain/Stage Orthogonality Stress Test; ADR-ECF-003 / CR-ECF-008). Single Domain rename; no content redistribution. Companion to CR-BP-23. |
+
 ## Numbering
 
 - The series tag is `CR-DEA-BC` (DEA Business Capability).
 - CR-DEA-BC-01 is the method CR; CR-DEA-BC-01A was renumbered from an early CR-DEA-BC-02 allocation (2026-08-31) when the number was yielded to the evidence-investigation CR.
-- Successors are parked, not scheduled: CR-DEA-BC-03 (schema + CI reconciliation with dea-metamodel), CR-DEA-BC-04 (industry specialization framework; first view: Mobile Communications Service Provider).
 - **Decision 2026-09-01 (numbering reconciliation):** CR-DEA-BC-02 section 40 (authored before the method CR) named BC-03 as "First-Order Capability Canonicalization"; CR-DEA-BC-01 (accepted later) names BC-03 as schema + CI and treats canonical admission as BC-02's own execution through the section 38 gate and the method review gates. Decided: **the CR-DEA-BC-01 assignment holds.** Canonical admission of the recommended set is method execution (METHODOLOGY.md section 12), not a separate CR; CR-DEA-BC-03 is the schema + CI reconciliation. Recorded per the renumbering convention (GOVERNANCE.md section 2).
 
 ## Corrections to landed CRs
