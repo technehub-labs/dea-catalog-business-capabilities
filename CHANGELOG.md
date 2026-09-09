@@ -411,5 +411,4 @@ metamodel pin (`1.0.0`) is held by `dea-metamodel`. Both are recorded in
 - Canonical admission of 24/25/26 (Resilience, Innovation, Analytics).
   Landed PR #32.
 
-[Unreleased]: https://github.com/technehub-labs/dea-catalog-business-capabilities/compare/v1-alpha.0...HEAD
 [v1-alpha.0]: https://github.com/technehub-labs/dea-catalog-business-capabilities/releases/tag/v1-alpha.0
