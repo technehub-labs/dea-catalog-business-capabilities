@@ -1,11 +1,12 @@
 # CR-CATALOG-STRUCT-03a: Business Capability Catalog Adoption (Layout + Index)
 
-**Status**: Proposed
+**Status**: Landed
 **Layer**: L1 (Business Capability Catalog)
 **Owner**: TechNeHub Labs
+**Date**: 2026-09-05
 **Depends on**: CR-CATALOG-STRUCT-01 (merged), CR-CATALOG-STRUCT-06a/b (merged), CR-CATALOG-STRUCT-02 (merged; pattern reference)
 **Supersedes**: none
-**Related**: CR-CATALOG-STRUCT-03b (research distribution; future), CR-CATALOG-STRUCT-04..05 (other adoptions), CR-CATALOG-STRUCT-07 (cross-repo consumer)
+**Related**: CR-CATALOG-STRUCT-03b (research distribution; landed 2026-09-05, PR #45), CR-CATALOG-STRUCT-04..05 (other adoptions), CR-CATALOG-STRUCT-07 (cross-repo consumer)
 **Authority**: Mandatory; enforced by CI on every PR
 
 ---
