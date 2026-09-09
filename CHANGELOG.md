@@ -9,51 +9,41 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
-## [Unreleased] - 2026-09-09
+## [v1-alpha.4] - 2026-09-09
 
-### Release pipeline consolidation (CR-DEA-BC-11)
+**Patch** (CR-DEA-BC-11, PR #62). Release-pipeline consolidation: the
+first-generation Node-based publication pipeline (CR-DEA-BC-06 +
+CR-DEA-BC-10) is superseded by the framework Python
+`scripts/generate_capability_map.py`, which natively emits the L0 ⊃ L1 ⊃ L2
+capability × ECF map (HTML + A3 landscape PNG) via weasyprint + pdftoppm.
+No Node, no Chrome, no playwright, no sharp. The release zip shrinks
+from 12 files to 2 (`capability-map.html` + `capability-map-a3.png`).
 
-The first-generation Node-based publication pipeline (CR-DEA-BC-06,
-PR #42) and its dispatch-retirement follow-up (CR-DEA-BC-10, PR #52)
-are **superseded** by the framework Python `scripts/generate_capability_map.py`,
-which natively emits the L0 ⊃ L1 ⊃ L2 capability × ECF map (HTML + A3 PNG)
-via weasyprint + pdftoppm — no Node, no Chrome, no playwright, no sharp.
+**Consumer-facing migration:** any consumer pinned to retired artifacts
+(`poster.svg/png`, `map.svg/png`, `catalog.svg/png`, `catalog.csv`,
+`catalog.json`, `overlay.yaml/json`, `dependencies.yaml`, `MANIFEST.md`)
+must migrate. See `docs/publication-pipeline.md` § "Migration from the
+BC-06 / BC-10 pipeline" for the full replacement table. The framework
+will gain a `--emit-sidecars` mode in a follow-up CR if any consumer
+needs the lost machine-readable endpoints.
 
-**Consumer-facing changes:**
+**Operational changes:** `scripts/publish.js`, `scripts/publish-mockups/`,
+`scripts/lib/`, `scripts/render_map_png.mjs`, and
+`.github/workflows/publish-latest.yml` are deleted from the live tree
+(remain in git history). `package.json` becomes Python-only metadata;
+`package-lock.json` is removed. The framework Python grows three new
+CLI flags (`--png`, `--dpi`, `--page-{w,h}-mm`) for the native PNG
+render path.
 
-- The release zip shrinks from 12 files (`poster.svg/png`, `map.svg/png`,
-  `catalog.svg/png`, `catalog.csv`, `catalog.json`, `overlay.yaml/json`,
-  `dependencies.yaml`, `MANIFEST.md`, `capability-map.html`,
-  `capability-map-a3.png`) to **2 files**: `capability-map.html` +
-  `capability-map-a3.png`.
-- Consumers that pinned to retired artifacts (`poster.svg`, `map.svg`,
-  `catalog.svg`, `catalog.csv`, `catalog.json`, `overlay.yaml/json`,
-  `dependencies.yaml`, `MANIFEST.md`) must migrate. See
-  `docs/publication-pipeline.md` § "Migration from the BC-06 / BC-10
-  pipeline" for the full replacement table.
-- **No more machine-readable row inventory, semantic-data endpoints, or
-  catalog manifest** in the release zip. If a consumer pins to those,
-  file an issue and the framework will gain a `--emit-sidecars` mode in
-  a follow-up CR.
-- **No more `publish-latest.yml`** workflow. Every push to `main` triggers
-  the conformance / gate workflows only; a new tag is required to publish
-  a new artifact bundle.
+**Why a supersede (not an edit):** CR-DEA-BC-06 and CR-DEA-BC-10 are not
+edited in place; their status flips to `Superseded` and a `superseded_by`
+pointer is recorded. Per the standing CR-hygiene rule, landed CRs are
+immutable.
 
-**Operational changes:**
+**Catalog content:** no changes to entries, schema, or ECF enum. Patch
+tier reflects tooling-only scope.
 
-- `scripts/publish.js`, `scripts/publish-mockups/`, `scripts/lib/`,
-  `scripts/render_map_png.mjs`, and `.github/workflows/publish-latest.yml`
-  are deleted from the live tree. They remain in git history.
-- The Node-side `package.json` is reduced to a workspace metadata file
-  with a Python-only `map` script. `package-lock.json` is removed.
-- The framework Python grows three new CLI flags (`--png`, `--dpi`,
-  `--page-{w,h}-mm`) for the native PNG render path.
-
-**Why a supersede (not just an edit):**
-
-CR-DEA-BC-06 and CR-DEA-BC-10 are not edited in place; their status flips
-to `Superseded` and a `superseded_by` pointer is recorded. Per the
-standing CR-hygiene rule, landed CRs are immutable.
+Tag: `v1-alpha.4`.
 
 ## [v1-alpha.3] - 2026-09-08
 
