@@ -195,7 +195,7 @@ metamodel, and the process catalog).
   CR-DEA-BC-05 version discipline).
 - `scripts/check_view_refs.py`: runs as expected.
 
-## [Unreleased] - 2026-09-05
+## [STRUCT-03b] - 2026-09-05
 
 ### CR-CATALOG-STRUCT-03b: catalog repository standard adoption (research distribution)
 
@@ -237,7 +237,7 @@ Verification:
 - Gate --strict exits 0.
 - Conformance --strict: 16/16 CSTs passed, 0 warnings.
 
-## [Unreleased] - 2026-09-05
+## [STRUCT-03a] - 2026-09-05
 
 ### CR-CATALOG-STRUCT-03a: catalog repository standard adoption (layout + index)
 

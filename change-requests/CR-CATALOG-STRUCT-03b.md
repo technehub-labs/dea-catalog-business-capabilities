@@ -1,8 +1,9 @@
 # CR-CATALOG-STRUCT-03b: Business Capability Catalog Research Distribution
 
-**Status**: Proposed
+**Status**: Landed
 **Layer**: L1 (Business Capability Catalog)
 **Owner**: TechNeHub Labs
+**Date**: 2026-09-05
 **Depends on**: CR-CATALOG-STRUCT-03a (merged; PR #44)
 **Supersedes**: none
 **Related**: CR-CATALOG-STRUCT-03a (preceding slice; PR #44), CR-CATALOG-STRUCT-01 (the standard), CR-CATALOG-STRUCT-07 (cross-repo consumer)
