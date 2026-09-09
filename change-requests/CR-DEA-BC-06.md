@@ -1,8 +1,11 @@
 ---
 cr: CR-DEA-BC-06
 title: Publication Pipeline and Versioned Artifacts
-status: proposed
+status: landed
 date: 2026-09-02
+landing_commit: a632363b4bd503ad45105c93669da8a56f2bba0c
+landing_pr: 42
+landing_date: 2026-09-04
 author: technehub-labs (working folder business-capabilities)
 target_repo: dea-catalog-business-capabilities
 consumer_repos:
