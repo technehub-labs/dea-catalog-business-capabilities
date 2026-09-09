@@ -81,6 +81,37 @@ v0.2 domain table now cites the admitted capability by its canonical name.
 Historical research artifacts and the `out/v1-alpha.0` snapshot are
 deliberately untouched (provenance). Tag: v1-alpha.1.
 
+### Operational follow-up (post-release)
+
+- **PR #50 (CR-DEA-BC-07 §5 follow-up)**: adds `scripts/check_visual_domain_labels.py`
+  and wires it into `catalog-conformance.yml`. R1 bans retired domain labels in
+  any casing/form on `visuals/*.svg`; R2 requires any domain-axis visual (3+
+  canonical domains referenced) to reference all seven. Canonical set is read
+  from `schemas/entity.schema.json`, so the next enum wave only changes the
+  schema and the guard follows.
+- **PR #51 (publication pipeline code fix)**: three pre-existing bugs in
+  `scripts/lib/load-entities.js` (hardcoded `docs/research/` paths; flat
+  `capability-*.yaml` filter ignoring the STRUCT-03a nested layout) and
+  `scripts/publish-mockups/{map,poster}.js` (missing `esc()` on
+  `STAGES[c].display` and `DOMAINS[r].display` interpolations, causing Sharp
+  PNG rasterization to fail on `xmlParseEntityRef`). Pipeline now produces
+  11/11 artifacts for both `latest` and versioned targets; verified end-to-end
+  on the `v1-alpha.1` tag push.
+- **PR #52 (CR-DEA-BC-10)**: retires the `Dispatch to Pages aggregator` step
+  from `publish-latest.yml` and `publish-versioned.yml` and the
+  `dispatchEvent()` function from `scripts/publish.js`. The central aggregator
+  repo never wired up a `sync-capabilities.yml` consumer for `capabilities-updated`
+  /`capabilities-versioned`, and `secrets.DISPATCH_TOKEN` was unprovisioned,
+  so the dispatch step failed on every run since at least 2026-09-05.
+  Current distribution path is GitHub Releases only; `docs/publication-pipeline.md`
+  is rewritten to record that and preserves the original Pattern A reference as
+  §6 Historical reference. CR-DEA-BC-10 was originally numbered CR-DEA-BC-08
+  on authorship; renumbered to BC-10 before merge because BC-08 had already
+  shipped as the Technology Management N-006R coordinate (PR #53, 2026-09-08).
+  Reissue note: this operational follow-up should appear under `[v1-alpha.1]`
+  in any pre-2026-09-08 viewer; new viewers see it appended to the existing
+  BC-01 wave.
+
 ## [v2.5.0-migration] - 2026-09-08
 
 CR-BC-ECF-03 implementation: ECF Domain enum migration to the v2.5.0 canonical Domain set (carried by `technehub-labs/dea-metaframework` v2.5.0; CR-ECF-008 + ADR-ECF-003). One of seven Domains renamed: Domain 6 `OperationsAndEnablement` → `EnablementAndOperations` (kebab-case `operations-enablement` → `enablement-operations`; lowerCamelCase `operationsEnablement` → `enablementAndOperations`), driven by the Domain/Stage Orthogonality Stress Test. 44 files re-keyed (1 schema, 3 scripts, 26 entity YAMLs, 7 catalog-research files, 3 CR records). Also fixes the Domain 6 display label in `scripts/lib/grid.js` (the Domain-3 fix from CR-CATALOG-STRUCT-09 left Domain-6 stale). No content redistribution required (CR-ECF-008 §3.5).
