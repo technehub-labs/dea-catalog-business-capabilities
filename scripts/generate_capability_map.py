@@ -783,6 +783,12 @@ def main() -> None:
     p.add_argument("--entity-urls", default=None, help="Comma-separated entity YAML/JSON URLs")
     p.add_argument("--cache-dir", type=Path, default=None)
     p.add_argument("--title", default=None, help="Override H2 catalog title")
+    p.add_argument("--png", default=None, help="Optional: also render to this PNG path")
+    p.add_argument("--dpi", type=int, default=300, help="PNG DPI (default 300)")
+    p.add_argument("--page-w-mm", type=float, default=420.0,
+                   help="PNG page width in millimetres (default 420 = A3 long edge)")
+    p.add_argument("--page-h-mm", type=float, default=297.0,
+                   help="PNG page height in millimetres (default 297 = A3 short edge)")
     args = p.parse_args()
 
     cache = args.cache_dir or Path(tempfile.gettempdir()) / "opendeam-map-cache"
@@ -823,6 +829,66 @@ def main() -> None:
     args.out.write_text(html_doc, encoding="utf-8")
     print(f"Wrote {args.out.resolve()} ({len(html_doc):,} bytes)")
     print(f"  title={title!r}  entities={len(ents)}  cells={len(matrix)}  unmapped={held or '—'}")
+
+    # Optional: render A3 landscape PNG via weasyprint + pdftoppm.
+    if args.png:
+        render_png(html_doc, args.out, Path(args.png), page_mm=(args.page_w_mm, args.page_h_mm),
+                   dpi=args.dpi)
+
+
+def render_png(html_doc: str, html_src: Path, png_out: Path, *,
+               page_mm: tuple[float, float], dpi: int) -> None:
+    """Render the HTML poster to a print-quality PNG using weasyprint + pdftoppm.
+
+    weasyprint composes the CSS-Grid HTML to a single PDF page at the requested
+    paper size. pdftoppm (poppler) rasterises the PDF to a PNG at the chosen
+    DPI. Both are pure dependencies (no Chrome / playwright / sharp required).
+
+    Falls back gracefully if either dependency is missing: a clear error message
+    names the missing system package and points the operator at the README.
+    """
+    import shutil
+    import subprocess
+    import tempfile
+
+    try:
+        from weasyprint import HTML as WP_HTML, CSS as WP_CSS  # noqa: F401
+    except ImportError:
+        sys.exit("weasyprint not installed; run `pip install weasyprint` "
+                 "or use the HTML output without --png.")
+
+    if not shutil.which("pdftoppm"):
+        sys.exit("pdftoppm not found; install poppler-utils "
+                 "(e.g. `sudo apt install poppler-utils`).")
+
+    width_mm, height_mm = page_mm
+    png_out.parent.mkdir(parents=True, exist_ok=True)
+
+    # CSS that pins the page to the chosen paper size with zero margins so the
+    # poster's CSS-Grid fills the entire sheet. orientation=landscape is set by
+    # choosing width >= height (A3 landscape: 420mm x 297mm).
+    a3_css = (
+        f"@page {{ size: {width_mm}mm {height_mm}mm; margin: 0; }}"
+        f"html, body {{ width: {width_mm}mm; height: {height_mm}mm; }}"
+    )
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as pdf_f:
+        pdf_path = Path(pdf_f.name)
+    try:
+        WP_HTML(string=html_doc, base_url=str(html_src.parent)).write_pdf(
+            target=str(pdf_path),
+            stylesheets=[WP_CSS(string=a3_css)],
+        )
+        # pdftoppm writes single-page PNGs as <stem>-1.png; redirect to a
+        # single named output via -singlefile.
+        subprocess.run(
+            ["pdftoppm", "-r", str(dpi), "-png", "-singlefile",
+             str(pdf_path), str(png_out.with_suffix(""))],
+            check=True,
+        )
+        print(f"Wrote {png_out.resolve()} ({png_out.stat().st_size:,} bytes, "
+              f"{width_mm:g}x{height_mm:g}mm @ {dpi} dpi)")
+    finally:
+        pdf_path.unlink(missing_ok=True)
 
 
 if __name__ == "__main__":

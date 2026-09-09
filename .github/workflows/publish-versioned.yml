@@ -1,16 +1,22 @@
 name: Publish versioned capability artifacts
 
-# CR-DEA-BC-06 + CR-DEA-BC-10: on every v* tag push, generates immutable
-# versioned artifacts, creates a GitHub Release with a zip of those artifacts,
-# and uploads the zip as a workflow-run artifact. Distribution is via GitHub
-# Releases only. CR-DEA-BC-10 retired the central-aggregator Pages
-# repository_dispatch path: the aggregator never wired up a consumer workflow
-# for `capabilities-versioned` and the dispatch secret was unprovisioned, so
-# the dispatch step failed on every run.
+# Release-pipeline consolidation (2026-09-09): on every v* tag push, generates
+# the L0 ⊃ L1 ⊃ L2 nested ECF capability map (HTML + A3 landscape PNG) from
+# the framework Python (scripts/generate_capability_map.py), zips the two
+# artifacts, creates or updates the GitHub Release, and uploads the zip as a
+# workflow-run artifact. Distribution is GitHub Releases only.
 #
-# CR-DEA-BC-06 was originally authored as CR-DEA-BC-08; renumbered to BC-10
-# before merge because CR-DEA-BC-08 had already shipped as the Technology
-# Management N-006R coordinate (PR #53, 2026-09-08).
+# This workflow supersedes the CR-DEA-BC-06 / CR-DEA-BC-10 pipeline
+# (scripts/publish.js + scripts/publish-mockups/* + scripts/render_map_png.mjs
+# + scripts/lib/* + .github/workflows/publish-latest.yml). Those files were
+# retired 2026-09-09 in favour of a single canonical artifact family: the
+# framework Python (CR-DEA-BC-11 release-pipeline consolidation).
+#
+# Consumers that pinned to the retired artifacts (poster.svg, catalog.svg,
+# catalog.csv, catalog.json, overlay.yaml/json, dependencies.yaml, MANIFEST.md)
+# must migrate to:
+#   - capability-map.html  (the L0 ⊃ L1 ⊃ L2 grid + legend + attribution)
+#   - capability-map-a3.png (A3 landscape @300 DPI raster of the same)
 #
 # Tag format per CR-DEA-BC-05: v<N>-<word>.<P> for lettered-suffix versions
 # (v1-alpha.0), v<N>.<M> from v2 onward.
@@ -36,20 +42,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node (pinned via .nvmrc)
-        uses: actions/setup-node@v4
+      - name: Setup Python (pinned via .python-version)
+        uses: actions/setup-python@v5
         with:
-          node-version-file: .nvmrc
+          python-version-file: .python-version
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Generate /<tag>/ artifacts
-        env:
-          CI: 'true'
-          GITHUB_SHA: ${{ github.sha }}
-          VERSION_LABEL: ${{ github.ref_name }}
-        run: node scripts/publish.js "$VERSION_LABEL"
+      - name: Install Python dependencies
+        run: |
+          set -euo pipefail
+          python3 -m pip install --upgrade pip
+          # weasyprint for HTML -> PDF; pdftoppm (poppler) for PDF -> PNG.
+          python3 -m pip install weasyprint pyyaml
+          # poppler-utils for pdftoppm (system package).
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends poppler-utils
 
       - name: Generate nested capability map (HTML + A3 PNG)
         env:
@@ -60,12 +66,11 @@ jobs:
           mkdir -p "${OUT_DIR}"
           python3 scripts/generate_capability_map.py \
             --label "${VERSION_LABEL}" \
-            --out "${OUT_DIR}/capability-map.html"
-          node scripts/render_map_png.mjs \
-            "${OUT_DIR}/capability-map.html" \
-            "${OUT_DIR}/capability-map-a3.png"
+            --out "${OUT_DIR}/capability-map.html" \
+            --png "${OUT_DIR}/capability-map-a3.png" \
+            --dpi 300
 
-      - name: Rezip with map assets
+      - name: Rezip artifacts
         env:
           VERSION_LABEL: ${{ github.ref_name }}
         run: |
