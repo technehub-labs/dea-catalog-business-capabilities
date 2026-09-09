@@ -282,20 +282,19 @@ Verification:
 - Gate --strict exits 0.
 - Conformance --strict: 16/16 CSTs passed, 0 warnings.
 
-## [Unreleased] - 2026-09-04
+## [v1-alpha.0-pipeline-live] - 2026-09-04
 
-### Publication pipeline live
+### Publication pipeline live (CR-DEA-BC-06)
 
 The catalog now publishes per-version artifacts (poster.svg + .png, map.svg +
 .png, catalog.svg + .png, catalog.csv) plus semantic-data endpoints
-(catalog.json, overlay.json, overlay.yaml, dependencies.yaml) to GitHub
-Pages via the central aggregator dispatch pattern (CR-DEA-BC-06).
+(catalog.json, overlay.json, overlay.yaml, dependencies.yaml).
 
 - `scripts/publish.js` generates the four artifacts from the live catalog
   state. Generation is pure-SVG-string composition plus `sharp` rasterisation
   (300 / 96 / 150 DPI for poster / map / catalog respectively).
-- Three publication destinations: GitHub Pages (`/latest/`, `/<version>/`),
-  GitHub Release (zip attached on tag pushes), semantic-data endpoints.
+- Distribution destinations: workflow-run artifacts (debug, every push) and
+  GitHub Release (zip attached on `v*` tag pushes).
 - Triggers: push to `main` (latest artifacts, mutable) + tag push matching
   `v*` (versioned artifacts, immutable).
 - Provenance: CR-DEA-BC-06 (proposal md5 `8f460bcc53e776230724c523d4fa205f`;
@@ -305,6 +304,14 @@ Pages via the central aggregator dispatch pattern (CR-DEA-BC-06).
   invocation of the `publish-versioned` workflow (AC8).
 - Scope of this entry: documentation + scripts + workflows. No entity,
   overlay, or dependencies change.
+- Note: this section was originally filed as `[Unreleased]`; renamed to
+  `[v1-alpha.0-pipeline-live]` on 2026-09-09 once CR-DEA-BC-06's
+  implementation landed (commit `a632363b`). The distribution path was
+  further amended on 2026-09-09 by CR-DEA-BC-10 (PR #52): the central-
+  aggregator Pages `repository_dispatch` flow is retired; current
+  distribution is GitHub Releases + workflow-run artifacts only. See the
+  `[v1-alpha.1]` row's "Operational follow-up (post-release)" sub-list for
+  the retirement record.
 
 ## [v1-alpha.0] - 2026-09-02
 

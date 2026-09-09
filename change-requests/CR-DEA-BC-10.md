@@ -1,9 +1,10 @@
 # CR-DEA-BC-10: Retire Dead Pages-Aggregator Dispatch Steps
 
-**Status**: Accepted
+**Status**: Landed
 **Layer**: Catalog (business capabilities)
 **Owner**: Coder (for eaojnr)
-**Date**: 2026-09-07
+**Date**: 2026-09-09
+**Landing commit**: `4d5067ea041efa824b1cc079b915dfaa4be87e28` (PR #52)
 **Depends on**: CR-DEA-BC-06 (publication pipeline, accepted 2026-09-04); CR-DEA-BC-07 (v1-alpha.1 release, 2026-09-07)
 **Related**: PRs #48, #50, #51 (the v1-alpha.1 wave)
 
