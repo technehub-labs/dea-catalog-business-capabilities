@@ -1,21 +1,13 @@
 {
-  "name": "dea-catalog-business-capabilities-publisher",
+  "name": "dea-catalog-business-capabilities",
   "version": "1.0.0",
   "private": true,
-  "description": "Publication pipeline for the Business Capability Catalog (CR-DEA-BC-06).",
+  "description": "Business Capability Catalog (CR-DEA-BC-01). The release pipeline renders an L0 ⊃ L1 ⊃ L2 nested ECF capability map (HTML + A3 landscape PNG) on every v* tag push via the framework Python (scripts/generate_capability_map.py). Distribution is GitHub Releases only.",
   "engines": {
-    "node": ">=22.0.0"
+    "python": ">=3.11"
   },
   "scripts": {
-    "publish:latest": "node scripts/publish.js latest",
-    "publish:versioned": "node scripts/publish.js",
-    "test": "node scripts/publish.js latest"
-  },
-  "dependencies": {
-    "js-yaml": "^4.1.0",
-    "sharp": "^0.33.4"
-  },
-  "devDependencies": {
-    "playwright-core": "^1.63.0"
+    "map": "python3 scripts/generate_capability_map.py",
+    "test": "python3 scripts/check_naming.py && python3 scripts/check_versions.py && python3 scripts/check_ecf_conformance.py && python3 scripts/check_visual_domain_labels.py && python3 scripts/check_view_refs.py"
   }
 }

@@ -1,12 +1,21 @@
 # CR-DEA-BC-10: Retire Dead Pages-Aggregator Dispatch Steps
 
-**Status**: Landed
+**Status**: Superseded
 **Layer**: Catalog (business capabilities)
 **Owner**: Coder (for eaojnr)
 **Date**: 2026-09-09
 **Landing commit**: `4d5067ea041efa824b1cc079b915dfaa4be87e28` (PR #52)
 **Depends on**: CR-DEA-BC-06 (publication pipeline, accepted 2026-09-04); CR-DEA-BC-07 (v1-alpha.1 release, 2026-09-07)
 **Related**: PRs #48, #50, #51 (the v1-alpha.1 wave)
+**Superseded by**: `chore/consolidate-release-pipeline-to-framework` (2026-09-09)
+**Superseded reason**: The whole BC-06 publication pipeline (and therefore the
+dispatch step this CR retired) was replaced by the framework Python
+`scripts/generate_capability_map.py`. The dispatch step itself no longer exists
+in `.github/workflows/publish-versioned.yml`; the workflow now calls the
+framework Python directly. CR-DEA-BC-10 remains a faithful record of the
+decision that ended the central-aggregator Pages path; the new pipeline
+records that end in `docs/publication-pipeline.md` § "Migration from the
+BC-06 / BC-10 pipeline".
 
 ## 1. What this CR is
 

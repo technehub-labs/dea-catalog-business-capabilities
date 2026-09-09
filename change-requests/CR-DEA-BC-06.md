@@ -1,11 +1,22 @@
 ---
 cr: CR-DEA-BC-06
 title: Publication Pipeline and Versioned Artifacts
-status: landed
+status: superseded
 date: 2026-09-02
 landing_commit: a632363b4bd503ad45105c93669da8a56f2bba0c
 landing_pr: 42
 landing_date: 2026-09-04
+superseded_by: chore/consolidate-release-pipeline-to-framework (2026-09-09)
+superseded_reason: |
+  CR-DEA-BC-06's Node-based pipeline (scripts/publish.js + scripts/publish-mockups/*
+  + scripts/render_map_png.mjs + scripts/lib/* + .github/workflows/publish-latest.yml)
+  is retired in favour of the framework Python
+  scripts/generate_capability_map.py, which natively emits the L0 ⊃ L1 ⊃ L2
+  capability × ECF map (HTML + A3 PNG) using weasyprint + pdftoppm — no Node,
+  no Chrome, no playwright, no sharp. CR-DEA-BC-06's 12-file artifact zip is
+  replaced by a 2-file zip (capability-map.html, capability-map-a3.png).
+  See docs/publication-pipeline.md "Migration from the BC-06 / BC-10 pipeline"
+  for the consumer-facing migration map.
 author: technehub-labs (working folder business-capabilities)
 target_repo: dea-catalog-business-capabilities
 consumer_repos:
