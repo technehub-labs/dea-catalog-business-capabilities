@@ -1,9 +1,11 @@
 # CR-DEA-BC-09: Naming Conformance Refresh and Definition Template
 
-**Status**: Accepted
+**Status**: Landed
 **Layer**: Catalog (business capabilities)
 **Owner**: Coder (for eaojnr)
 **Date**: 2026-09-08
+**Landing commit**: `04945946ff85a66c29c5bda4ba4a762762e6964e` (PR #54)
+**Tag**: `v1-alpha.3`
 **Depends on**: CR-DEA-BC-01 (naming rules); CR-DEA-BC-05 (versioning); CR-CATALOG-STRUCT-03a/03b (layout)
 **Related**: CR-DEA-BC-02 (normalization register; N-010..N-015 appended); CR-DEA-BC-04 (MCSP view reference updates)
 
