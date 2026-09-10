@@ -1,9 +1,11 @@
 # CR-DEA-BC-13: ECF Primary-Coordinate Rule Refinement — Semantic Center of Gravity + 26-Entry Re-Evaluation + Technology Management Boundary Decision + Tracks A/B/C Evidence Collection
 
-**Status**: Proposed
+**Status**: Landed
 **Layer**: Catalog (business capabilities)
 **Owner**: Coder (for eaojnr)
 **Date**: 2026-09-10
+**Landing commit**: `0c943b2d8e02c3feff3f8a26bfb2d6e89b3aac7e` (PR #66, squash-merged)
+**Tag**: `v1-alpha.6` (signed; cut at merge commit)
 **Depends on**: CR-DEA-BC-01 (method, landed); CR-DEA-BC-02 (evidence investigation, landed); CR-DEA-BC-05 (versioning, landed); CR-DEA-BC-12 (BC-SR-A001 carrier, landed 2026-09-10); BC-SR-A001 §14 (rule refinement); BC-SR-A001 §12 (Technology Management boundary)
 **Related**: dea-metaframework ADR-ECF-003 (Domain/Stage Orthogonality); dea-metamodel ADR-015
 **Supersedes**: none

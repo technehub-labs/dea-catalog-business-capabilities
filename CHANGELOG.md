@@ -11,7 +11,7 @@ regime) and `v<N>.<M>` semver from v2 onward. See
 
 ## [v1-alpha.6] - 2026-09-10
 
-**Minor** (CR-DEA-BC-13, PR pending). Method-CR for the ECF primary-coordinate rule: replaces the pre-CR-13 "earliest initiation point" rule with "semantic center of gravity" (METHODOLOGY.md §8), re-evaluates all 26 canonical entries under the new rule, formalizes the Technology Management carve per BC-SR-A001 §12, and starts the actual evidence collection for the three investigation tracks (Organizational Design, Enterprise Performance Management, Relationship Management) as non-canonical candidate records (no admission in this release).
+**Minor** (CR-DEA-BC-13, PR #66). Method-CR for the ECF primary-coordinate rule: replaces the pre-CR-13 "earliest initiation point" rule with "semantic center of gravity" (METHODOLOGY.md §8), re-evaluates all 26 canonical entries under the new rule, formalizes the Technology Management carve per BC-SR-A001 §12, and starts the actual evidence collection for the three investigation tracks (Organizational Design, Enterprise Performance Management, Relationship Management) as non-canonical candidate records (no admission in this release).
 
 ### §A. Method rule refinement
 
@@ -44,7 +44,7 @@ Three non-canonical candidate records created under `entities/v1-alpha/dea:candi
 
 No admission. Each track's evidence-record stub and ECF overlay hypothesis appended to `catalog-research/{evidence-register,preliminary-ecf-overlay,distinctness-sweep}.yaml`.
 
-**Tag**: `v1-alpha.6` (target at this CR's merge commit).
+**Tag**: `v1-alpha.6` (cut at this CR's merge commit; landed).
 
 ## [v1-alpha.5] - 2026-09-10
 
