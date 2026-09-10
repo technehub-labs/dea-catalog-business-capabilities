@@ -620,7 +620,7 @@ def css(n_stages: int) -> str:
   .l0-parent {{
     font-size: 0.62rem; font-weight: 600; color: var(--mid);
     padding: 3px 6px 2px; border-bottom: 1px solid #ddd; background: #f3f3f3;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 0;
+    overflow-wrap: anywhere; flex-shrink: 0;
   }}
   .l0.dense .l0-parent {{ background: #f8dede; color: #6a3030; }}
   .l1 {{
@@ -632,7 +632,7 @@ def css(n_stages: int) -> str:
     letter-spacing: 0.04em; padding: 0 2px 2px;
   }}
   .l2 {{
-    border-radius: 5px; padding: 5px 8px; display: flex; align-items: center;
+    border-radius: 5px; padding: 5px 8px; display: flex; align-items: flex-start;
     justify-content: space-between; gap: 6px; min-height: 28px; flex: 1 1 auto;
   }}
   .l2.primary {{ color: #fff; }}
@@ -645,12 +645,12 @@ def css(n_stages: int) -> str:
   .l2.secondary.support {{ border-color: var(--support); color: var(--support); }}
   .l2-text {{ min-width: 0; flex: 1; }}
   .l2-name {{
-    font-size: 0.78rem; font-weight: 700; line-height: 1.15;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    font-size: 0.78rem; font-weight: 700; line-height: 1.2;
+    overflow-wrap: anywhere; word-break: normal; hyphens: auto;
   }}
   .l2-bo {{
     font-size: 0.65rem; opacity: 0.85; margin-top: 1px;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    overflow-wrap: anywhere; word-break: normal; hyphens: auto;
   }}
   .l2-meta {{ display: flex; align-items: center; gap: 4px; flex-shrink: 0; }}
   .evidence {{ display: flex; gap: 3px; }}
