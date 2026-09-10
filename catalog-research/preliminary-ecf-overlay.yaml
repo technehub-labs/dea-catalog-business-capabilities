@@ -367,6 +367,26 @@ overlays:
   rationale: 'Under CR-DEA-BC-13 §A new rule: if admitted, Relationship Management is the constituted ability to establish,
     govern, develop, and terminate external-party relationships. Primary conceive (the relationship is constituted); secondaries
     operate and improve for the lifecycle.'
+- candidate_id: dea:candidate-technology-enablement
+  track: TER-TECHENABLEMENT-001
+  opened: '2026-09-10'
+  ecf_primary:
+    domain: enablement-operations
+    stage: operate
+  ecf_secondaries:
+  - domain: enablement-operations
+    stage: build
+  - domain: enablement-operations
+    stage: improve
+  rationale: Under the semantic-center-of-gravity rule (CR-DEA-BC-13 §A), the defining activity of Technology Enablement is
+    sustained IT service and platform delivery (operate). The ECF places technology as enablers of execution (BC-SR-A001 §15
+    quote), which is exactly the enablement-operations domain. Build and improve secondaries record the lifecycle participation.
+    Distinct from Technology Management (strategy-direction/build) by ECF cell and by business object (Technology Service
+    vs Technology Estate).
+  status: admitted
+  admitted_as: dea:capability-technology-enablement
+  admitted_in: CR-DEA-BC-17
+  admitted_date: '2026-09-10'
 empty_cells_legitimate:
 - governance-existence x build, activate
 - finance-accounting x design, build, activate, retire (primary)

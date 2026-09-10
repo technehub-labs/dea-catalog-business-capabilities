@@ -1759,3 +1759,34 @@ track_sweeps:
   - 2
   - 3
   status: sweep-completed-as-pending; admission decision pending evidence
+sweeps:
+- track: TER-TECHENABLEMENT-001
+  candidate: dea:candidate-technology-enablement
+  opened: '2026-09-10'
+  closed: '2026-09-10'
+  compared_to:
+  - id: dea:capability-technology-management
+    distinct_because: TM stewards the estate (what technology the enterprise has); TE runs the services (how that technology
+      operates for others). Different business object (Technology vs Technology Service) and different ECF cell (strategy-direction/build
+      vs enablement-operations/operate).
+  - id: dea:capability-operations
+    distinct_because: Operations delivers value (production, delivery, fulfillment of offerings); TE delivers technology services
+      for value delivery. Different business object (Operation vs Technology Service); same domain (enablement-operations)
+      but TE is the peer capability that services value delivery, not a sub-concern of it.
+  - id: dea:capability-information-management
+    distinct_because: IM stewards information across its lifecycle; TE operates the platforms and services that carry information.
+      Different business object (Information vs Technology Service); the IM boundary explicitly says it does not manage the
+      technology that carries information — that's TE.
+  - id: dea:capability-analytics-and-intelligence
+    distinct_because: A&I derives insight from information; TE runs services that A&I platforms may run on. A&I is about insight
+      (analytics output); TE is about services (technology input/output for others).
+  - id: dea:capability-change-management
+    distinct_because: Change Mgmt manages transitions; TE runs services. 'Technology' is one of Change Mgmt's specialization
+      kinds (a kind of change), not a service.
+  - id: dea:capability-continuity-management
+    distinct_because: Continuity Mgmt designs continuity patterns (design stage); TE runs services (operate stage). TE may
+      be a Consumer of continuity patterns but doesn't design them.
+  result: no overlap; the new entry fills a gap that none of the 26 canonical or 3 candidate entries cover.
+  admission_decision: admit
+  admitted_as: dea:capability-technology-enablement
+  admitted_in: CR-DEA-BC-17

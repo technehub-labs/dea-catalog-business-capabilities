@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Information Management
 definition: The ability to govern, structure, and steward the enterprise's information
   across its lifecycle.
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -17,6 +17,7 @@ ecf:
   secondary: []
 related_capabilities:
 - dea:capability-technology-management
+- dea:capability-technology-enablement
 evidence:
   sources:
   - SRC-002
@@ -56,6 +57,9 @@ ecf_rationale: 'R-003: primary enablement-operations x operate; secondaries deli
   empty (honest-not-exhaustive). CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).'
 boundary: Manages information; does not manage the technology that carries it (Technology
   Management) or produce analytics from it (Analytics and Intelligence, deferred).
+  Information platforms and data infrastructure that information management depends
+  on are operated by `dea:capability-technology-enablement` (admitted 2026-09-10
+  under CR-DEA-BC-17).
 non_examples:
 - A database (technology)
 - A report (an artifact)

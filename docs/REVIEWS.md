@@ -41,6 +41,7 @@ follow the links for the long-form.
 
 - [v1-alpha.5 — 2026-09-10](#v1-alpha5--2026-09-10)
 - [v1-alpha.6 — 2026-09-10 (BC-SR-A001 follow-on)](#v1-alpha6--2026-09-10-bc-sr-a001-follow-on)
+- [v1-alpha.7 — 2026-09-10 (BC-SR-A001 §12 closure)](#v1-alpha7--2026-09-10-bc-sr-a001-12-closure)
 
 ---
 
@@ -222,3 +223,92 @@ the v1-alpha.5 "high-confidence ECF re-mappings" half.
 - Cell occupancy went **16 → 14** under the new rule; concentration in
   `enablement-operations/operate` and `party-relationship/operate` is the
   intended effect.
+
+## v1-alpha.7 — 2026-09-10 (BC-SR-A001 §12 closure)
+
+**Submittal review filed:** [BC-SR-A001](../submittal-reviews/BC-SR-A001.md)
+(closes §12; this is the same review's third release-pass — BC-13 deferred
+the §12 admission, BC-17 admits it).
+
+**Carrier CR:** CR-DEA-BC-17 (PR TBD).
+
+**Review scope:** Single-entry admission — admits `dea:capability-technology-enablement`
+as a first-order canonical capability. Closes the BC-DEA-BC-13 §11 follow-on
+queue item (BC-13 §C deferred admission).
+
+**Headline finding (BC-SR-A001 §12, paraphrased):**
+
+> *"Technology Management should mean stewardship of the enterprise technology
+> estate, while Technology Enablement is a sub-concern of Enablement &
+> Operations: use of technology to enable execution. That distinction should
+> be made explicit in the capability catalog and ECF mapping rules.
+> Otherwise future catalog contributors will continually debate whether
+> cloud, platforms, applications, networks, AI agents, etc. belong in
+> Strategy or Enablement."*
+
+The BC-13 carrier executed the carve as carve-text only (kept one first-order
+cap with rigorous `boundary` declaration). This release **admits** the
+carved-out sub-concern as a separate first-order cap.
+
+**Items landed:**
+
+- **New entry:** `dea:capability-technology-enablement` at
+  `enablement-operations/operate` (primary), with `build` and `improve`
+  secondaries. Definition: "The ability to run and continuously adapt the
+  technology services, platforms, and automation that other capabilities
+  depend on, sustaining operational technology delivery across the
+  enterprise." Business object: **Technology Service** (distinct from
+  Technology Management's **Technology** estate).
+- **Technology Management updated:** version 1.2.0 → 1.3.0 (Minor for
+  boundary-text change). Adds `dea:capability-technology-enablement` to
+  `related_capabilities`; updates `boundary`, `specialization_boundary`,
+  `why_capability`, and `ecf_rationale` to record the peer relationship.
+  Coordinate unchanged (`strategy-direction/build`).
+- **Operations updated:** version 1.0.0 → 1.0.1 (Patch). Adds cross-reference
+  + boundary note that technology services are operated by Tech Enablement.
+- **Information Management updated:** version 1.0.0 → 1.0.1 (Patch). Adds
+  cross-reference + boundary note that information platforms are operated
+  by Tech Enablement.
+
+**Review-gate audit (per METHODOLOGY.md §12):**
+
+- **Semantic review (gate 1):** ✅
+  - Distinct business object (Technology Service)
+  - Distinct ECF cell (enablement-operations/operate)
+  - Distinct outcome (technology services are reliable/performant/adapted)
+  - Anti-invention: not a system, not an outcome, not an organization
+  - Distinctness sweep: no overlap with any of the 26 canonical or 3 candidate entries
+  - Naming: "Technology Enablement" — kebab-case, plain, well-known across industries
+  - Foundation inclusion criteria gate A+B+C: passed
+- **Architectural review (gate 2):** ✅
+  - ECF mapping satisfies METHODOLOGY.md §8 (semantic center of gravity rule)
+  - Realization links: peer relationship recorded under `related_capabilities`
+  - Record shape: all required fields present, conformant
+  - Layering boundaries: WSF / Metaframework / Metamodel / Catalogs all respected
+
+**Evidence trail (per CR-DEA-BC-02):**
+
+- `catalog-research/evidence-register.yaml`: TER-TECHENABLEMENT-001 (E3 → E4 on admission)
+- `catalog-research/preliminary-ecf-overlay.yaml`: ECF overlay hypothesis appended; status promoted to "admitted"
+- `catalog-research/distinctness-sweep.yaml`: distinctness sweep appended
+- `catalog-research/admission-gate-closeout.yaml`: §12 review-gate closeout recorded
+
+**Notes for consumers:**
+
+- The catalog now has **27 canonical first-order capabilities**. The previously
+  carved-out "Technology-as-Enabler" sub-concern is its own entry with its own
+  ECF coordinate and provenance trail.
+- Technology Management and Technology Enablement are **paired** but
+  **distinct**:
+  - Technology Management = IT **direction** function (estate; `strategy-direction/build`)
+  - Technology Enablement = IT **delivery** function (services; `enablement-operations/operate`)
+- Cell occupancy: `enablement-operations/operate` now has **7 entries**
+  (was 6 post-BC-13: analytics, asset, facility, information-mgmt, operations,
+  sourcing; + Tech Enablement). The new entry fits the cell naturally
+  (sustained stewardship / execution heuristic from BC-13 §A).
+
+**Items still in the open queue (not closed by this release):**
+
+- **CR-DEA-BC-14/15/16** — Track A/B/C admission CRs (gated on evidence packages)
+- **Industry-view mechanics pilot** — Healthcare example (deferred; not in scope for v1-alpha.7)
+- **Knowledge / Service / Quality / Stakeholder / EAM candidates** — BC-SR-A001 §7 + §17 P2–P3 deferred; revisit after tracks A/B/C close
