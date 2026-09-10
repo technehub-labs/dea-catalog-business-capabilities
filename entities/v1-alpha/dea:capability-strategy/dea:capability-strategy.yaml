@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Strategy
 definition: 'The ability to set the enterprise''s direction: where it will compete,
   what it will become, and what it will not do.'
-version: 1.0.0
+version: 1.1.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
@@ -12,10 +12,10 @@ outcome: An explicit, current statement of enterprise direction that constrains 
 business_object: Enterprise
 ecf:
   primary:
-    domain: governance-existence
+    domain: strategy-direction
     stage: conceive
   secondary:
-  - domain: governance-existence
+  - domain: strategy-direction
     stage: improve
 related_capabilities:
 - dea:capability-strategic-planning
@@ -57,8 +57,7 @@ specialization:
 why_capability: 'Direction-setting is exercised by every enterprise regardless of
   industry or implementation, is identifiable by its outcome, and passes the anti-invention
   test: every corpus source carries it.'
-ecf_rationale: 'Earliest initiation is conceive in governance-existence: strategy
-  exists from the moment the enterprise is conceived; it is exercised again at improve.'
+ecf_rationale: 'Re-mapped 2026-09-10 (BC-SR-A001 §8.A, CR-DEA-BC-12 §A.1): the ECF Strategy & Direction domain explicitly owns "purpose and ambition, environmental sensing, strategic choices, objectives and targets, strategic planning, and strategic adaptation"; governance-existence only authorizes, it does not direct. Primary strategy-direction/conceive; secondary strategy-direction/improve for strategy adaptation.'
 boundary: Sets direction; does not plan its pursuit (Strategic Planning), govern its
   execution (Enterprise Governance), or deliver value (Operations).
 non_examples:
@@ -74,15 +73,15 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: GovernanceAndExistence
+    domain: StrategyAndDirection
     stage: Conceive
-    identifier: ecf:governanceExistence.conceive
+    identifier: ecf:strategyDirection.conceive
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
-    domain: GovernanceAndExistence
+    domain: StrategyAndDirection
     stage: Improve
-    identifier: ecf:governanceExistence.improve
+    identifier: ecf:strategyDirection.improve
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:

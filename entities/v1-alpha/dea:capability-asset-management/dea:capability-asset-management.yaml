@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Asset Management
 definition: The ability to steward the enterprise's non-financial, non-workforce assets
   across their lifecycle.
-version: 1.0.0
+version: 1.1.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -11,12 +11,14 @@ outcome: Assets are known, maintained, utilized, and retired deliberately.
 business_object: Asset
 ecf:
   primary:
-    domain: strategy-direction
+    domain: enablement-operations
     stage: build
   secondary:
-  - domain: strategy-direction
+  - domain: enablement-operations
     stage: operate
-  - domain: strategy-direction
+  - domain: enablement-operations
+    stage: improve
+  - domain: enablement-operations
     stage: retire
 related_capabilities:
 - dea:capability-facility-management
@@ -55,8 +57,7 @@ specialization:
   industry_examples: []
 why_capability: E3; parent of Facility Management per the sweep (facilities are the
   asset class large enough to warrant its own first-order capability).
-ecf_rationale: Primary build in strategy-direction; operated and retired across the
-  asset lifecycle.
+ecf_rationale: 'Re-mapped 2026-09-10 (BC-SR-A001 §10, CR-DEA-BC-12 §A.3): the ECF grounding says "physical resources moved to Enablement & Operations as enablers"; stewardship of non-financial, non-workforce assets is lifecycle-stewardship, not direction-setting. Primary enablement-operations/build (assets are built/acquired); secondaries enablement-operations/operate, improve, retire across the asset lifecycle.'
 boundary: Stewards assets; does not manage money (Financial Resource Management),
   technology
   as an estate (Technology Management), or facilities specifically (Facility Management).
@@ -73,21 +74,27 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: StrategyAndDirection
+    domain: EnablementAndOperations
     stage: Build
-    identifier: ecf:strategyDirection.build
+    identifier: ecf:enablementAndOperations.build
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
-    domain: StrategyAndDirection
+    domain: EnablementAndOperations
     stage: Operate
-    identifier: ecf:strategyDirection.operate
+    identifier: ecf:enablementAndOperations.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   - kind: coordinate
-    domain: StrategyAndDirection
+    domain: EnablementAndOperations
+    stage: Improve
+    identifier: ecf:enablementAndOperations.improve
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  - kind: coordinate
+    domain: EnablementAndOperations
     stage: Retire
-    identifier: ecf:strategyDirection.retire
+    identifier: ecf:enablementAndOperations.retire
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:

@@ -31,7 +31,7 @@ metamodel:
 catalog:
   name: Business Capability
   repo: technehub-labs/dea-catalog-business-capabilities
-  status: planned
+  status: populated
 
 description: |
   An ability the business possesses or requires to deliver value. Maps to ECF coordinates.

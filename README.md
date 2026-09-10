@@ -41,6 +41,24 @@ Guiding principles and decision points: [`docs/FOUNDATIONS.md`](docs/FOUNDATIONS
 
 **ECF Conformance CI (consumer side)**: `.github/workflows/ecf-conformance-consumer.yml` (CR-ECF-CG-006). On every PR and push to `main`, the workflow clones `dea-metamodel` and `dea-metaframework`, then runs `scripts/detect_drift.py` from the metamodel against this catalog. The metamodel-side workflow owns the consolidated conformance report; this hook owns the per-consumer drift verdict.
 
+## Submittal Reviews
+
+Submittal reviews are peer-style assessments filed against a *released* catalog (not
+an in-flight proposal). They are stored under [`submittal-reviews/`](submittal-reviews/);
+the cross-repo template lives at [`submittal-reviews/TEMPLATE.md`](submittal-reviews/TEMPLATE.md).
+
+Each release that lands at least one recommendation from a submittal review gets an
+entry in [`docs/REVIEWS.md`](docs/REVIEWS.md), which provides summarized-yet-rich
+commentary on what was reviewed, what was acted on, and what was deferred.
+
+**Current review(s):**
+
+| ID | Filed | Scope | Status | Carrier CR |
+|---|---|---|---|---|
+| [BC-SR-A001](submittal-reviews/BC-SR-A001.md) | 2026-09-10 | Full catalog v1-alpha.0..v1-alpha.4: methodology, ECF semantic alignment, foundational gap analysis, repo/doc drift | Triaged; carrier opened | [CR-DEA-BC-12](change-requests/CR-DEA-BC-12.md) |
+
+See [`docs/REVIEWS.md`](docs/REVIEWS.md) for the per-release commentary.
+
 ## Entity Definition
 
 | Field | Value |
@@ -50,7 +68,11 @@ Guiding principles and decision points: [`docs/FOUNDATIONS.md`](docs/FOUNDATIONS
 | Layer | L3 |
 | Building Block | L3-value-delivery |
 | Model Version | OpenDEAM v0.2.1 |
-| Catalog Status | planned |
+| Catalog Status | populated |
+| Catalog Version | v1-alpha.0..v1-alpha.4 (current: v1-alpha.4, tag `570830a`; v1-alpha.5 in CR-DEA-BC-12) |
+| Metamodel pin | 1.0.0 (`dea-metamodel`) |
+| ECF conformance contract pin | 1.0.0 (`dea:ecf@1.0.0`) |
+| Architecture framework pin | OpenDEAM v0.2.1 (`dea-architecture-framework`) — separate version axis from the metamodel; not in conflict with `metamodel_pin: 1.0.0` |
 
 ## Key Tenets
 
