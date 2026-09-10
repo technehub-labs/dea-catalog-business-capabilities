@@ -9,6 +9,43 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [v1-alpha.6] - 2026-09-10
+
+**Minor** (CR-DEA-BC-13, PR pending). Method-CR for the ECF primary-coordinate rule: replaces the pre-CR-13 "earliest initiation point" rule with "semantic center of gravity" (METHODOLOGY.md §8), re-evaluates all 26 canonical entries under the new rule, formalizes the Technology Management carve per BC-SR-A001 §12, and starts the actual evidence collection for the three investigation tracks (Organizational Design, Enterprise Performance Management, Relationship Management) as non-canonical candidate records (no admission in this release).
+
+### §A. Method rule refinement
+
+`METHODOLOGY.md §8.2` codified with the new rule and four selection heuristics (sustained stewardship / posture / design / activation). The pre-CR-13 "earliest initiation point" rule is preserved as a historical record but is no longer the canonical selection logic. Backward-compatible: only the 4 primary-coordinate moves change; all secondaries preserved; no entry identity changes.
+
+### §B. 26-entry re-evaluation
+
+| Entry | Pre-CR-13 primary | Post-CR-13 primary | Move? |
+|---|---|---|---|
+| asset-management | enablement-operations/build | enablement-operations/**operate** (build → secondary) | **Yes** |
+| facility-management | enablement-operations/activate | enablement-operations/**operate** (activate → secondary) | **Yes** |
+| sourcing-and-procurement | enablement-operations/build | enablement-operations/**operate** (build → secondary) | **Yes** |
+| supplier-management | party-relationship/conceive | party-relationship/**operate** (conceive → secondary) | **Yes** |
+| partner-management | party-relationship/conceive (+strategy-direction/operate) | party-relationship/conceive (+party-relationship/operate) | **Partial** (secondary fix only) |
+| technology-management | strategy-direction/build | strategy-direction/build (no coord change; carve-text added) | **Carve-text only** |
+| (other 20) | unchanged | unchanged | **No** |
+
+Versions bumped: asset/facility/sourcing/supplier 1.1.0 → 1.2.0; technology 1.1.0 → 1.2.0; partner 1.0.0 → 1.1.0; others unchanged.
+
+### §C. Technology Management boundary decision
+
+Per BC-SR-A001 §12 and the user's CR-13 design decision (Q2): carve-text only. `dea:capability-technology-management/boundary` and `specialization_boundary` expanded to make the Tech-as-Estate vs Tech-as-Enabler carve explicit. The "Technology Enablement" sub-concern is recorded as a deferred specialization that a future CR may admit. Coordinate change: none. Version 1.1.0 → 1.2.0.
+
+### §D. Investigation tracks A/B/C — evidence collection started
+
+Three non-canonical candidate records created under `entities/v1-alpha/dea:candidate-{orgdesign,epm,relmgmt}/candidates/`:
+- **Track A — Organizational Design**: ECF overlay `agency-organization/design` (E3 preliminary).
+- **Track B — Enterprise Performance Management**: ECF overlay `strategy-direction/operate` (E3 preliminary); loop-closure narrative required (BC-SR-A001 §16).
+- **Track C — Relationship Management generic parent**: ECF overlay `party-relationship/conceive` (E2 early); three decision options evaluated (admit-with-specializations / abstract-grouping-only / no-admit).
+
+No admission. Each track's evidence-record stub and ECF overlay hypothesis appended to `catalog-research/{evidence-register,preliminary-ecf-overlay,distinctness-sweep}.yaml`.
+
+**Tag**: `v1-alpha.6` (target at this CR's merge commit).
+
 ## [v1-alpha.5] - 2026-09-10
 
 **Minor** (CR-DEA-BC-12, PR #65). Submittal-review driven ECF

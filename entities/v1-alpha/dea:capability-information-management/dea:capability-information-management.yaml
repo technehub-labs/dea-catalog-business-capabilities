@@ -53,7 +53,7 @@ specialization:
 why_capability: 'E4; span across domains resolved at review (R-003): the span is a
   property of the business object, not of initiation.'
 ecf_rationale: 'R-003: primary enablement-operations x operate; secondaries deliberately
-  empty (honest-not-exhaustive).'
+  empty (honest-not-exhaustive). CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).'
 boundary: Manages information; does not manage the technology that carries it (Technology
   Management) or produce analytics from it (Analytics and Intelligence, deferred).
 non_examples:

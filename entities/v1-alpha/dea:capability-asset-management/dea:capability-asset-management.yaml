@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Asset Management
 definition: The ability to steward the enterprise's non-financial, non-workforce assets
   across their lifecycle.
-version: 1.1.0
+version: 1.2.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -12,10 +12,10 @@ business_object: Asset
 ecf:
   primary:
     domain: enablement-operations
-    stage: build
+    stage: operate
   secondary:
   - domain: enablement-operations
-    stage: operate
+    stage: build
   - domain: enablement-operations
     stage: improve
   - domain: enablement-operations
@@ -57,7 +57,7 @@ specialization:
   industry_examples: []
 why_capability: E3; parent of Facility Management per the sweep (facilities are the
   asset class large enough to warrant its own first-order capability).
-ecf_rationale: 'Re-mapped 2026-09-10 (BC-SR-A001 §10, CR-DEA-BC-12 §A.3): the ECF grounding says "physical resources moved to Enablement & Operations as enablers"; stewardship of non-financial, non-workforce assets is lifecycle-stewardship, not direction-setting. Primary enablement-operations/build (assets are built/acquired); secondaries enablement-operations/operate, improve, retire across the asset lifecycle.'
+ecf_rationale: 'Re-mapped 2026-09-10 under CR-DEA-BC-13 §A new rule (semantic center of gravity). The defining activity of Asset Management is sustained stewardship of the asset base (operate); the build event (acquisition) and the lifecycle endpoints (improve, retire) participate but are not where the capability is defined. Originally mapped at strategy-direction/build under the pre-CR-13 "earliest initiation" rule; re-mapped to enablement-operations/build under CR-DEA-BC-12 §A.3; re-mapped again here from build to operate under the CR-13 rule. Cell occupancy: enablement-operations/{build, operate, improve, retire}.'
 boundary: Stewards assets; does not manage money (Financial Resource Management),
   technology
   as an estate (Technology Management), or facilities specifically (Facility Management).
@@ -75,14 +75,14 @@ ecfConformance:
   canonicalReferences:
   - kind: coordinate
     domain: EnablementAndOperations
-    stage: Build
-    identifier: ecf:enablementAndOperations.build
+    stage: Operate
+    identifier: ecf:enablementAndOperations.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
     domain: EnablementAndOperations
-    stage: Operate
-    identifier: ecf:enablementAndOperations.operate
+    stage: Build
+    identifier: ecf:enablementAndOperations.build
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   - kind: coordinate

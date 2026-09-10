@@ -1,8 +1,8 @@
-register_version: 0.3.0
-cr: CR-DEA-BC-02
-compiled: '2026-09-01 (v0.3: corpus patch; continuity and innovation source classes added for CAND-023/CAND-029 fair run)'
+register_version: 0.4.0
+cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C evidence stubs)
+compiled: '2026-09-10 (v0.4: track A/B/C evidence stubs added; no admission)'
 compiled_by: Coder (for eaojnr)
-status: draft-for-review
+status: draft-for-review; track records are stubs, no actual corpus work yet
 source_classes:
 - business-architecture
 - enterprise-architecture
@@ -274,23 +274,22 @@ sources:
   retrieved: 2026-09-01
   retrieval: direct (scope and clause structure from the ISO Online Browsing Platform; full normative text paywalled)
   observations:
-  - observation: 'The standard specifies requirements to protect against, reduce the likelihood of, prepare for, respond
-      to and recover from disruptions; the organization needs to be able to continue to deliver products and services
-      at an acceptable predefined capacity during a disruption, and to enhance its resilience through the effective
-      application of the BCMS'
+  - observation: The standard specifies requirements to protect against, reduce the likelihood of, prepare for, respond to
+      and recover from disruptions; the organization needs to be able to continue to deliver products and services at an acceptable
+      predefined capacity during a disruption, and to enhance its resilience through the effective application of the BCMS
     supports:
     - CAND-023 capability identity and outcome
-    implication: Continuity of delivery at predefined capacity is an identifiable outcome, distinguishable from risk
-      treatment (uncertainty) and from protection (security); the boundary between Resilience Management and Risk
-      Management is drawn by an international standard, not by assertion
-  - observation: 'BCMS is an organization-wide management system (context, leadership, planning, support, operation,
-      evaluation, improvement clauses); the standard is written for any organization, and sector regulators adopt it
-      (EU DORA operational resilience in financial services, in force 2025)'
+    implication: Continuity of delivery at predefined capacity is an identifiable outcome, distinguishable from risk treatment
+      (uncertainty) and from protection (security); the boundary between Resilience Management and Risk Management is drawn
+      by an international standard, not by assertion
+  - observation: BCMS is an organization-wide management system (context, leadership, planning, support, operation, evaluation,
+      improvement clauses); the standard is written for any organization, and sector regulators adopt it (EU DORA operational
+      resilience in financial services, in force 2025)
     supports:
     - CAND-023 durability and implementation independence
     - CAND-023 enterprise generality
-    implication: Management-system framing is implementation-independent by construction; regulatory adoption
-      corroborates generality in financial services
+    implication: Management-system framing is implementation-independent by construction; regulatory adoption corroborates
+      generality in financial services
   evidence_note: Standards-body authority for the continuity business object; first source in the standards-body class
 - id: SRC-014
   name: Business Continuity Institute Good Practice Guidelines (GPG) Edition 7.0
@@ -299,17 +298,16 @@ sources:
   retrieved: 2026-09-01
   retrieval: direct (BCI publication page and edition notes)
   observations:
-  - observation: 'GPG 7.0 structures business continuity as six professional practices over a Business Continuity
-      Management System (PP1 establishing, PP2 embracing, PP3 analysis, PP4 solutions design, PP5 enabling solutions,
-      PP6 validation); the methodology is designed to be applicable to all organizations regardless of size, industry
-      sector, or geography'
+  - observation: GPG 7.0 structures business continuity as six professional practices over a Business Continuity Management
+      System (PP1 establishing, PP2 embracing, PP3 analysis, PP4 solutions design, PP5 enabling solutions, PP6 validation);
+      the methodology is designed to be applicable to all organizations regardless of size, industry sector, or geography
     supports:
     - CAND-023 enterprise generality
     - CR-16
-    implication: An explicit cross-sector applicability claim from the professional body of the discipline; direct
-      evidence for the generality axis, independent of vendor framing
-  - observation: The 7.0 edition replaced the BCM lifecycle framing with the management-system framing, converging
-      with ISO 22301
+    implication: An explicit cross-sector applicability claim from the professional body of the discipline; direct evidence
+      for the generality axis, independent of vendor framing
+  - observation: The 7.0 edition replaced the BCM lifecycle framing with the management-system framing, converging with ISO
+      22301
     supports:
     - CAND-023 durability
     implication: Two independent authorities converging on the same construct strengthens the durability claim
@@ -321,24 +319,23 @@ sources:
   retrieved: 2026-09-01
   retrieval: direct (scope, principles, and clause structure from ISO OBP and the standards preview)
   observations:
-  - observation: 'The standard guides establishment of an innovation management system applicable to all types of
-      organizations regardless of type, sector, or size; all types of innovation (product, service, process, model,
-      method; incremental to radical); all approaches (internal, open, user-, market-, technology-, design-driven)'
+  - observation: The standard guides establishment of an innovation management system applicable to all types of organizations
+      regardless of type, sector, or size; all types of innovation (product, service, process, model, method; incremental
+      to radical); all approaches (internal, open, user-, market-, technology-, design-driven)
     supports:
     - CAND-029 enterprise generality
     - CAND-029 durability
-    implication: Explicit cross-sector applicability claim from a standards body; innovation management is framed as a
-      repeatable organization-wide ability, not an episodic activity
-  - observation: 'An innovation management system guides the organization to determine its innovation vision, strategy,
-      policy, and objectives; principles include realization of value, exploiting insights, managing uncertainty,
-      adaptability, systems approach'
+    implication: Explicit cross-sector applicability claim from a standards body; innovation management is framed as a repeatable
+      organization-wide ability, not an episodic activity
+  - observation: An innovation management system guides the organization to determine its innovation vision, strategy, policy,
+      and objectives; principles include realization of value, exploiting insights, managing uncertainty, adaptability, systems
+      approach
     supports:
     - CAND-029 capability identity and outcome
-    implication: The business object is the idea-to-value stream; realization of value is the identifiable outcome.
-      Distinct from Change Management (which executes enterprise change); innovation originates the new, change
-      institutionalizes it
-  evidence_note: Standards-body authority for the innovation business object; boundary with Change Management arguable
-    from standard text
+    implication: The business object is the idea-to-value stream; realization of value is the identifiable outcome. Distinct
+      from Change Management (which executes enterprise change); innovation originates the new, change institutionalizes it
+  evidence_note: Standards-body authority for the innovation business object; boundary with Change Management arguable from
+    standard text
 - id: SRC-016
   name: OECD/Eurostat Oslo Manual 2018 (business innovation measurement standard)
   class: government-guidance
@@ -346,22 +343,21 @@ sources:
   retrieved: 2026-09-01
   retrieval: direct (OECD full-report chapters extracted)
   observations:
-  - observation: 'A business innovation is a new or improved product or business process that differs significantly
-      from the firm''s previous products or processes and that has been introduced on the market or brought into use;
-      innovation activities include all developmental, financial and commercial activities intended to result in an
-      innovation'
+  - observation: A business innovation is a new or improved product or business process that differs significantly from the
+      firm's previous products or processes and that has been introduced on the market or brought into use; innovation activities
+      include all developmental, financial and commercial activities intended to result in an innovation
     supports:
     - CAND-029 capability identity
     - CR-19 classification
-    implication: Intergovernmental statistical definition; the outcome (introduced on market or brought into use) is
-      identifiable and measurable, which is why national statistical agencies can survey it
-  - observation: 'The manual names innovation management activities as a distinct activity class alongside R&D,
-      engineering, IP, training, software development; it also notes governments and other sectors undertake innovation'
+    implication: Intergovernmental statistical definition; the outcome (introduced on market or brought into use) is identifiable
+      and measurable, which is why national statistical agencies can survey it
+  - observation: The manual names innovation management activities as a distinct activity class alongside R&D, engineering,
+      IP, training, software development; it also notes governments and other sectors undertake innovation
     supports:
     - CAND-029 enterprise generality
     - CAND-029 boundary
-    implication: Innovation management named as its own activity class in a measurement standard used by national
-      statistics agencies (NSF/NCSES adoption in the US); cross-sector note covers the government arm
+    implication: Innovation management named as its own activity class in a measurement standard used by national statistics
+      agencies (NSF/NCSES adoption in the US); cross-sector note covers the government arm
   evidence_note: Intergovernmental measurement authority; complements ISO 56002 with an outcome-anchored definition
 register_gaps:
 - id: G1
@@ -390,8 +386,60 @@ corpus_assessment:
   independent_definition_sources: 4 (SRC-001 BIZBOK via citation, SRC-002 TOGAF via citation, SRC-003 SAP LeanIX direct, SRC-005
     IF4IT partial direct)
   definition_convergence: high (possess-or-exchange ability; what-not-how; stable; non-redundant)
-  v03_patch: 'continuity sources (SRC-013 ISO 22301, SRC-014 BCI GPG 7.0) and innovation sources (SRC-015 ISO 56002,
-    SRC-016 Oslo Manual 2018) added; CAND-023/CAND-029 fair run executed: evidence E2 -> E4 for both, boundary now
-    arguable from standard text, generality re-scored in enterprise-generality-matrix.yaml v0.2'
+  v03_patch: 'continuity sources (SRC-013 ISO 22301, SRC-014 BCI GPG 7.0) and innovation sources (SRC-015 ISO 56002, SRC-016
+    Oslo Manual 2018) added; CAND-023/CAND-029 fair run executed: evidence E2 -> E4 for both, boundary now arguable from standard
+    text, generality re-scored in enterprise-generality-matrix.yaml v0.2'
   ready_for: candidate universe construction (CR-DEA-BC-02 sections 21, 30)
   not_ready_for: canonical admission (no candidate admitted; admission gate per section 38 remains a pre-check)
+track_evidence_records:
+- id: TER-ORGDESIGN-001
+  track: A (Organizational Design)
+  candidate_id: dea:candidate-orgdesign
+  evidence_strength: E3 (preliminary)
+  registered_on: '2026-09-10'
+  registered_by: Coder (for eaojnr) under CR-DEA-BC-13 §D.1
+  sources_consulted:
+  - Business Architecture Guild BIZBOK (organizational design sub-area)
+  - TOGAF Architecture Development Method (organization modeling)
+  - Anthropology of organizations (Gouldner, Mintzberg)
+  open_evidence_questions:
+  - Does Organizational Design have a distinct durable business object?
+  - Is the capability substrate-neutral across human + artificial + hybrid agents?
+  - Does it survive the enterprise-generality test (>=3 verticals, B2B/B2C/G2C)?
+  status: evidence-pending; not yet admitted
+- id: TER-EPM-001
+  track: B (Enterprise Performance Management)
+  candidate_id: dea:candidate-epm
+  evidence_strength: E3 (preliminary)
+  registered_on: '2026-09-10'
+  registered_by: Coder (for eaojnr) under CR-DEA-BC-13 §D.2
+  sources_consulted:
+  - Kaplan & Norton Balanced Scorecard (1992+)
+  - OKR framework (Andy Grove / John Doerr)
+  - OMG Business Performance Management standards
+  loop_closure_investigation_required: true
+  open_evidence_questions:
+  - Is Performance a durable distinct business object (distinct from Insight, Outcome, Decision)?
+  - Does EPM close the direction loop without collapsing into Analytics?
+  - Does it survive the enterprise-generality test?
+  status: evidence-pending; not yet admitted
+- id: TER-RELMGMT-001
+  track: C (Relationship Management generic parent)
+  candidate_id: dea:candidate-relmgmt
+  evidence_strength: E2 (early)
+  registered_on: '2026-09-10'
+  registered_by: Coder (for eaojnr) under CR-DEA-BC-13 §D.3
+  sources_consulted:
+  - BIZBOK Party / Relationship sub-area (preliminary)
+  - CRM industry literature (CRM as the Customer-side specialization)
+  - SRM industry literature (SRM as the Supplier-side specialization)
+  decision_options_to_evaluate:
+  - 1
+  - 2
+  - 3
+  open_evidence_questions:
+  - Is Relationship a distinct durable business object, or an abstraction over role-specific caps?
+  - If admitted, do Customer/Supplier/Partner become specializations (opt 1), abstract grouping only (opt 2), or no parent
+    (opt 3)?
+  - Does it survive the enterprise-generality test?
+  status: evidence-pending; not yet admitted

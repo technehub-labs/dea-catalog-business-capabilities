@@ -53,7 +53,7 @@ why_capability: E3; stage-anchored at improve; cross-domain applicability resolv
   at review (R-005) as an object property, not a mapping defect.
 ecf_rationale: 'R-005: primary governance-existence x improve (the ability is first
   exercised when the enterprise deliberately improves itself); secondaries empty per
-  honest-not-exhaustive.'
+  honest-not-exhaustive. CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).'
 boundary: Manages change; does not set direction (Strategy), govern the enterprise
   (Enterprise Governance), or operate steady-state delivery (Operations).
 non_examples:

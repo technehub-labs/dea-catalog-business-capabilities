@@ -57,7 +57,7 @@ specialization:
 why_capability: E4; N-008 dissolved Value Delivery as a separate first-order capability
   and re-rooted Operations as the value-execution capability.
 ecf_rationale: Primary operate in enablement-operations; improve participation is honest
-  and recorded.
+  and recorded.  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
 boundary: Runs delivery; does not manage the offerings delivered (Offering Management)
   or change how delivery works (Change Management).
 non_examples:

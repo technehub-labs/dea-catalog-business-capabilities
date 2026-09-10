@@ -1,0 +1,87 @@
+id: dea:candidate-epm
+type: Candidate
+name: Enterprise Performance Management
+status: candidate-not-canonical
+cr: CR-DEA-BC-13
+investigation_track: B
+investigation_source: BC-SR-A001 §5
+opened: '2026-09-10'
+classification: CAPABILITY
+business_object_hypothesis: Enterprise Performance
+ecf_overlay_hypothesis:
+  primary:
+    domain: strategy-direction
+    stage: operate
+  secondary:
+  - domain: strategy-direction
+    stage: improve
+  - domain: finance-accounting
+    stage: operate
+  rationale: 'Under CR-DEA-BC-13 §A semantic-center-of-gravity rule: Enterprise Performance Management''s defining activity
+    is sustained performance measurement and governance (operate); the adaptation loop (improve) and the financial-perf cross-cutting
+    participation (finance-accounting/operate) are secondaries. Per BC-SR-A001 §16 this closes the direction loop: Strategy
+    -> Strategic Planning -> Performance -> Insight -> Adaptation.'
+evidence_requirement:
+  rating_target_for_admission: E3 or higher
+  evidence_ladder: catalog-research/EVIDENCE.md
+  enterprise_generality:
+    test: Must survive the foundation inclusion criteria (BC-SR-A001 §17; per the user's gate A+B+C - multi-industry, archetype
+      universality, domain-object-agnostic).
+    industries_required: 3 or more
+    archetype_test: B2B, B2C, G2C
+  boundary_defensibility:
+    against_capabilities:
+    - id: dea:capability-analytics-and-intelligence
+      rationale: Analytics derives decision-grade insight from information; EPM governs enterprise performance against objectives.
+        Distinct objects (Insight vs Enterprise Performance) and distinct outcomes.
+    - id: dea:capability-financial-resource-management
+      rationale: Financial Resource Management handles the money side; EPM handles the multi-dimensional enterprise-performance
+        side (financial + operational + strategic).
+    - id: dea:capability-strategy
+      rationale: Strategy sets the objectives; EPM measures performance against them. Distinct objects (Enterprise vs Enterprise
+        Performance).
+    - id: dea:capability-strategic-planning
+      rationale: Strategic Planning is the plan; EPM is the measurement against the plan. Distinct objects (Plan vs Enterprise
+        Performance).
+  loop_closure_narrative_required: true
+  loop_closure_note: Per BC-SR-A001 §5 and §16, EPM would close the direction loop (Strategy -> Planning -> Performance ->
+    Insight -> Adaptation -> Change). Even if not admitted, the loop's status (open/closed-via-other-means) must be reported
+    by this track.
+distinctness_sweep:
+  status: pending
+  against_existing_26:
+  - id: dea:capability-analytics-and-intelligence
+    relationship: adjacent-distinct
+    verdict: distinct
+    rationale: 'Analytics = insight generation; EPM = performance governance against objectives. The closed-loop distinction:
+      Analytics is the insight half; EPM is the governance half.'
+  - id: dea:capability-financial-resource-management
+    relationship: subset-adjacent
+    verdict: distinct
+    rationale: Financial Resource Management = money flows; EPM = enterprise-wide (financial + operational + strategic).
+  - id: dea:capability-strategy
+    relationship: adjacent
+    verdict: distinct
+    rationale: Strategy = posture; EPM = measurement against posture.
+  - id: dea:capability-strategic-planning
+    relationship: adjacent
+    verdict: distinct
+    rationale: Planning = plan; EPM = measurement against plan.
+admission_status: not-admitted
+admission_gate: METHODOLOGY.md §12 review gates (admission happens in a follow-on CR only if evidence supports it; provisional
+  CR-DEA-BC-15 per BC-12 §9).
+open_evidence_questions:
+- question: Is Performance a durable distinct business object, distinct from Insight, Outcome, and Decision?
+  hypothesis: Enterprise Performance (to be tested against object-family boundaries).
+- question: Does EPM close the direction loop (BC-SR-A001 §16) without collapsing into Analytics?
+  hypothesis: Yes - EPM is the governance/measurement side, Analytics is the insight side. They are complementary, not overlapping.
+- question: Does it survive the enterprise-generality test across >=3 verticals (B2B, B2C, G2C)?
+  hypothesis: Likely yes - Balanced Scorecard, OKR frameworks, and regulatory performance regimes are all enterprise-general.
+progress:
+- date: '2026-09-10'
+  actor: Coder (for eaojnr)
+  stage: candidate
+  note: Stub created under CR-DEA-BC-13 §D.2. No evidence work yet; investigation track B opened by CR-DEA-BC-12 §B.2; candidate
+    record produced here.
+lifecycle_status: candidate
+version: 0.1.0

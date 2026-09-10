@@ -57,7 +57,7 @@ specialization:
 why_capability: 'Direction-setting is exercised by every enterprise regardless of
   industry or implementation, is identifiable by its outcome, and passes the anti-invention
   test: every corpus source carries it.'
-ecf_rationale: 'Re-mapped 2026-09-10 (BC-SR-A001 §8.A, CR-DEA-BC-12 §A.1): the ECF Strategy & Direction domain explicitly owns "purpose and ambition, environmental sensing, strategic choices, objectives and targets, strategic planning, and strategic adaptation"; governance-existence only authorizes, it does not direct. Primary strategy-direction/conceive; secondary strategy-direction/improve for strategy adaptation.'
+ecf_rationale: 'Re-mapped 2026-09-10 (BC-SR-A001 §8.A, CR-DEA-BC-12 §A.1): the ECF Strategy & Direction domain explicitly owns "purpose and ambition, environmental sensing, strategic choices, objectives and targets, strategic planning, and strategic adaptation"; governance-existence only authorizes, it does not direct. Primary strategy-direction/conceive; secondary strategy-direction/improve for strategy adaptation. CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).'
 boundary: Sets direction; does not plan its pursuit (Strategic Planning), govern its
   execution (Enterprise Governance), or deliver value (Operations).
 non_examples:

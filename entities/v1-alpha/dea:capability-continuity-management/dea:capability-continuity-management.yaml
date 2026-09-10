@@ -64,7 +64,7 @@ why_capability: E4; the continuity business object and the boundary against Risk
   Security are drawn by ISO 22301, not by assertion; BCI GPG 7.0 carries an explicit
   all-sector applicability claim.
 ecf_rationale: Primary governance-existence x design (continuity posture is designed
-  into the enterprise); operated continuously through disruption response.
+  into the enterprise); operated continuously through disruption response.  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
 boundary: Manages continuity of delivery through disruption; does not treat uncertainty
   (Risk Management) or apply protective control (Security Management).
 non_examples:
