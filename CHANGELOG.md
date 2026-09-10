@@ -9,6 +9,67 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [v1-alpha.5] - 2026-09-10 (target)
+
+**Minor** (CR-DEA-BC-12, PR pending). Submittal-review driven ECF
+re-alignment. Carrier for the substantive recommendations of submittal
+review [BC-SR-A001](submittal-reviews/BC-SR-A001.md), filed 2026-09-10
+against the released v1-alpha.4 catalog (commit `570830a`).
+
+**Six high-confidence ECF re-mappings** (per-entity version: 1.0.0 → 1.1.0;
+catalog version: v1-alpha.4 → v1-alpha.5; tag at merge commit):
+
+| Entry | Old primary | New primary | Review § |
+|---|---|---|---|
+| Strategy | `governance-existence / conceive` | `strategy-direction / conceive` | §8.A |
+| Strategic Planning | `governance-existence / conceive` | `strategy-direction / conceive` | §9 |
+| Asset Management | `strategy-direction / build` | `enablement-operations / build` | §10 |
+| Facility Management | `strategy-direction / activate` | `enablement-operations / activate` | §11 |
+| Supplier Management | `strategy-direction / build` | `party-relationship / conceive+operate` | §13 |
+| Sourcing & Procurement | `strategy-direction / build` | `enablement-operations / build` (+`strategy-direction / conceive+design` secondaries) | §13 |
+
+Each re-mapping is justified in its entry's `ecf_rationale` field by
+quoting the relevant ECF domain definition; no entry's identity (id, name,
+definition, business_object, outcome) changes.
+
+**Three investigation tracks opened** (no admission in this release):
+
+- Investigation Track A — [Organizational Design](catalog-research/INV-ORGDESIGN-v0.1.md) (BC-SR-A001 §4 P1).
+- Investigation Track B — [Enterprise Performance Management](catalog-research/INV-EPM-v0.1.md) (BC-SR-A001 §5 P1).
+- Investigation Track C — [Relationship Management](catalog-research/INV-RELMGMT-v0.1.md) (BC-SR-A001 §6 P1–P2).
+
+Each opens a research-led evidence investigation; admission is gated on the
+catalog's own §12 review gates in a follow-on CR if the evidence supports it.
+
+**Submittal-review infrastructure introduced:**
+- New top-level folder [`submittal-reviews/`](submittal-reviews/) with
+  README (lifecycle), TEMPLATE (cross-repo reusable template derived from
+  BC-SR-A001), and the BC-SR-A001 review itself.
+- New [`docs/REVIEWS.md`](docs/REVIEWS.md) per-release submittal-review
+  commentary; linked from the README's `## Submittal Reviews` section.
+
+**Repository/doc drift closed:**
+- `README.md` Entity Definition table: `Catalog Status: planned` → `populated`.
+- `metamodel-pointer.yaml` `catalog.status: planned` → `populated`.
+- `README.md` Entity Definition table now disambiguates the three version
+  pins (catalog version / metamodel pin / ECF conformance contract pin /
+  architecture framework pin), addressing the apparent version-pin confusion
+  BC-SR-A001 §19 raised. (The reviewer flagged "OpenDEAM v0.2.1" as a
+  conflict; on investigation it is the architecture-framework pin, a
+  separate version axis from the metamodel pin 1.0.0. Both pins are correct
+  as written; the README now makes this explicit.)
+
+**Deferred (not in this release):**
+- Technology Management coordinate (BC-SR-A001 §12; medium-confidence; needs
+  a formal boundary decision).
+- ECF mapping rule refinement ("semantic center of gravity" vs "earliest
+  initiation", BC-SR-A001 §14; method-level change).
+- Knowledge Management candidate (BC-SR-A001 §7 P2; revisit after track A).
+- Service / Quality / Stakeholder / EAM candidates (BC-SR-A001 §17 P2–P3;
+  revisit after tracks A/B/C close).
+
+**Tag**: `v1-alpha.5` (cut at this CR's merge commit).
+
 ## [v1-alpha.4] - 2026-09-09
 
 **Patch** (CR-DEA-BC-11, PR #62). Release-pipeline consolidation: the

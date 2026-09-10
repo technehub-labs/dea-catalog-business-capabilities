@@ -2,7 +2,7 @@ id: dea:capability-facility-management
 type: BusinessCapability
 name: Facility Management
 definition: The ability to provide and operate the enterprise's physical places.
-version: 1.0.0
+version: 1.1.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -10,10 +10,10 @@ outcome: Places are available, safe, fit for purpose, and cost-deliberate.
 business_object: Facility
 ecf:
   primary:
-    domain: strategy-direction
+    domain: enablement-operations
     stage: activate
   secondary:
-  - domain: strategy-direction
+  - domain: enablement-operations
     stage: operate
 related_capabilities:
 - dea:capability-asset-management
@@ -53,8 +53,7 @@ specialization:
 why_capability: E3; distinct child-level capability standing at first order per the
   sweep (facilities warrant their own ability; Asset Management remains the general
   case).
-ecf_rationale: Primary activate in strategy-direction (places are activated for use,
-  then operated).
+ecf_rationale: 'Re-mapped 2026-09-10 (BC-SR-A001 §11, CR-DEA-BC-12 §A.4): the capability is "to provide and operate the enterprise''s physical places" — definitionally Enablement & Operations per the ECF grounding ("physical infrastructure is part of Enablement & Operations"). Primary enablement-operations/activate (places are activated for use); secondary enablement-operations/operate.'
 boundary: Operates places; does not steward the general asset base (Asset Management)
   or plan the workforce that staffs them (Workforce Planning).
 non_examples:
@@ -70,15 +69,15 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: StrategyAndDirection
+    domain: EnablementAndOperations
     stage: Activate
-    identifier: ecf:strategyDirection.activate
+    identifier: ecf:enablementAndOperations.activate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
-    domain: StrategyAndDirection
+    domain: EnablementAndOperations
     stage: Operate
-    identifier: ecf:strategyDirection.operate
+    identifier: ecf:enablementAndOperations.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:

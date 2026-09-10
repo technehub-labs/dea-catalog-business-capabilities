@@ -4,7 +4,7 @@ catalog:
     candidates: 0
     canonical: 26
     entities: 26
-    open_change_requests: 17
+    open_change_requests: 18
     research_files: 3
     retired: 0
   cross_cutting:
@@ -31,14 +31,14 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-asset-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-asset-management/dea:capability-asset-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.1.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-change-management
@@ -86,14 +86,14 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-facility-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-facility-management/dea:capability-facility-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.1.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-financial-resource-management
@@ -229,47 +229,47 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-sourcing-and-procurement
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-sourcing-and-procurement/dea:capability-sourcing-and-procurement.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.1.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-strategic-planning
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-strategic-planning/dea:capability-strategic-planning.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.1.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-strategy
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-strategy/dea:capability-strategy.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.1.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-supplier-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-supplier-management/dea:capability-supplier-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.1.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-technology-management

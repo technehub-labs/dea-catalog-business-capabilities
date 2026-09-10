@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Sourcing and Procurement
 definition: 'The ability to acquire goods and services: sourcing choices, purchasing,
   and receipt.'
-version: 1.0.0
+version: 1.1.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
@@ -12,10 +12,14 @@ outcome: The enterprise obtains what it needs, at deliberate terms, with a clean
 business_object: Purchase Order
 ecf:
   primary:
-    domain: strategy-direction
+    domain: enablement-operations
     stage: build
   secondary:
   - domain: strategy-direction
+    stage: conceive
+  - domain: strategy-direction
+    stage: design
+  - domain: enablement-operations
     stage: operate
 related_capabilities:
 - dea:capability-supplier-management
@@ -55,8 +59,7 @@ specialization:
   industry_examples: []
 why_capability: E4; distinct from Supplier Management (the relationship) per the sweep;
   object is the Purchase Order.
-ecf_rationale: Primary build in strategy-direction (acquisition builds the supply position);
-  operated thereafter.
+ecf_rationale: 'Re-mapped 2026-09-10 (BC-SR-A001 §13, CR-DEA-BC-12 §A.6): acquisition is execution (build + operate in Enablement & Operations), not direction-setting; but strategic sourcing posture is set in Strategy & Direction (conceive + design). Primary enablement-operations/build (acquisition builds the supply position); secondaries strategy-direction/conceive and strategy-direction/design (strategic sourcing choices), enablement-operations/operate (ongoing purchasing). Cleanly separates Strategy (decides sourcing posture), Party & Relationship (Supplier Management owns the relationship), Enablement & Operations (executes acquisition), Finance (accounts for monetary exchange).'
 boundary: Executes acquisition; does not manage supplier relationships (Supplier Management)
   or the acquired assets (Asset Management).
 non_examples:
@@ -72,15 +75,27 @@ ecfConformance:
   affiliation: mapped
   canonicalReferences:
   - kind: coordinate
-    domain: StrategyAndDirection
+    domain: EnablementAndOperations
     stage: Build
-    identifier: ecf:strategyDirection.build
+    identifier: ecf:enablementAndOperations.build
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
     domain: StrategyAndDirection
+    stage: Conceive
+    identifier: ecf:strategyDirection.conceive
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  - kind: coordinate
+    domain: StrategyAndDirection
+    stage: Design
+    identifier: ecf:strategyDirection.design
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  - kind: coordinate
+    domain: EnablementAndOperations
     stage: Operate
-    identifier: ecf:strategyDirection.operate
+    identifier: ecf:enablementAndOperations.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:
