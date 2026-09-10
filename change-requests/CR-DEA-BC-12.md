@@ -1,9 +1,11 @@
 # CR-DEA-BC-12: Submittal Review BC-SR-A001 — Six High-Confidence ECF Re-Mappings, Three New Investigations, and Repo-Doc Drift Cleanup
 
-**Status**: Proposed
+**Status**: Landed
 **Layer**: Catalog (business capabilities)
 **Owner**: Coder (for eaojnr)
 **Date**: 2026-09-10
+**Landing commit**: `246e010a3765309d22269daee6484e091cfd3054` (PR #65, squash-merged)
+**Tag**: `v1-alpha.5` (signed; cut at merge commit)
 **Depends on**: CR-DEA-BC-01 (method, landed); CR-DEA-BC-02 (evidence investigation, landed); CR-DEA-BC-05 (versioning, landed); BC-SR-A001 (submittal review, filed 2026-09-10)
 **Related**: dea-metaframework ADR-ECF-003 (Domain/Stage Orthogonality); dea-metaframework CR-ECF-008 (Domain 6 rename); dea-metamodel ADR-015
 **Supersedes**: none

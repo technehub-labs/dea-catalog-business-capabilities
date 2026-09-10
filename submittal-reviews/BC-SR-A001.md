@@ -8,7 +8,7 @@ reviewer_affiliation: external
 date_filed: 2026-09-10
 filing_repo: technehub-labs/dea-catalog-business-capabilities
 carrier_cr: CR-DEA-BC-12
-status: triaged
+status: fully-actioned
 scope: Full catalog v1-alpha.0..v1-alpha.4 — methodology, ECF semantic alignment, foundational gap analysis, repository/doc drift
 ---
 

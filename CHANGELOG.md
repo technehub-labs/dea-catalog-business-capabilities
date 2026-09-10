@@ -9,9 +9,9 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
-## [v1-alpha.5] - 2026-09-10 (target)
+## [v1-alpha.5] - 2026-09-10
 
-**Minor** (CR-DEA-BC-12, PR pending). Submittal-review driven ECF
+**Minor** (CR-DEA-BC-12, PR #65). Submittal-review driven ECF
 re-alignment. Carrier for the substantive recommendations of submittal
 review [BC-SR-A001](submittal-reviews/BC-SR-A001.md), filed 2026-09-10
 against the released v1-alpha.4 catalog (commit `570830a`).
