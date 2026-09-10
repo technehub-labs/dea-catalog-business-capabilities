@@ -2,7 +2,7 @@ id: dea:capability-facility-management
 type: BusinessCapability
 name: Facility Management
 definition: The ability to provide and operate the enterprise's physical places.
-version: 1.1.0
+version: 1.2.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -11,10 +11,10 @@ business_object: Facility
 ecf:
   primary:
     domain: enablement-operations
-    stage: activate
+    stage: operate
   secondary:
   - domain: enablement-operations
-    stage: operate
+    stage: activate
 related_capabilities:
 - dea:capability-asset-management
 evidence:
@@ -53,7 +53,7 @@ specialization:
 why_capability: E3; distinct child-level capability standing at first order per the
   sweep (facilities warrant their own ability; Asset Management remains the general
   case).
-ecf_rationale: 'Re-mapped 2026-09-10 (BC-SR-A001 §11, CR-DEA-BC-12 §A.4): the capability is "to provide and operate the enterprise''s physical places" — definitionally Enablement & Operations per the ECF grounding ("physical infrastructure is part of Enablement & Operations"). Primary enablement-operations/activate (places are activated for use); secondary enablement-operations/operate.'
+ecf_rationale: 'Re-mapped 2026-09-10 under CR-DEA-BC-13 §A new rule (semantic center of gravity). The defining activity of Facility Management is the sustained operation of places (operate); the activate event (a place going live) is one-time. Originally mapped at strategy-direction/activate under the pre-CR-13 "earliest initiation" rule; re-mapped to enablement-operations/activate under CR-DEA-BC-12 §A.4; re-mapped again here from activate to operate under the CR-13 rule. Activate remains a legitimate secondary coordinate for facilities being commissioned.'
 boundary: Operates places; does not steward the general asset base (Asset Management)
   or plan the workforce that staffs them (Workforce Planning).
 non_examples:
@@ -70,14 +70,14 @@ ecfConformance:
   canonicalReferences:
   - kind: coordinate
     domain: EnablementAndOperations
-    stage: Activate
-    identifier: ecf:enablementAndOperations.activate
+    stage: Operate
+    identifier: ecf:enablementAndOperations.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
     domain: EnablementAndOperations
-    stage: Operate
-    identifier: ecf:enablementAndOperations.operate
+    stage: Activate
+    identifier: ecf:enablementAndOperations.activate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:

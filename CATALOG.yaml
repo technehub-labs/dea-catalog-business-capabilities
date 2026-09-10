@@ -1,10 +1,10 @@
 catalog:
   abbreviation: BC
   counts:
-    candidates: 0
+    candidates: 3
     canonical: 26
-    entities: 26
-    open_change_requests: 18
+    entities: 29
+    open_change_requests: 19
     research_files: 3
     retired: 0
   cross_cutting:
@@ -18,9 +18,42 @@ catalog:
     '
   entities:
   - candidate_count: 1
+    canonical_count: 0
+    id: dea:candidate-epm
+    last_modified: '2026-09-10'
+    lifecycle_status: candidate
+    path: entities/v1-alpha/dea:candidate-epm/candidates/epm.yaml
+    research_count: 0
+    retired_count: 0
+    state: candidate
+    type: unknown
+    version: 0.0.0
+  - candidate_count: 1
+    canonical_count: 0
+    id: dea:candidate-orgdesign
+    last_modified: '2026-09-10'
+    lifecycle_status: candidate
+    path: entities/v1-alpha/dea:candidate-orgdesign/candidates/orgdesign.yaml
+    research_count: 0
+    retired_count: 0
+    state: candidate
+    type: unknown
+    version: 0.0.0
+  - candidate_count: 1
+    canonical_count: 0
+    id: dea:candidate-relmgmt
+    last_modified: '2026-09-10'
+    lifecycle_status: candidate
+    path: entities/v1-alpha/dea:candidate-relmgmt/candidates/relmgmt.yaml
+    research_count: 0
+    retired_count: 0
+    state: candidate
+    type: unknown
+    version: 0.0.0
+  - candidate_count: 1
     canonical_count: 1
     id: dea:capability-analytics-and-intelligence
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-analytics-and-intelligence/dea:capability-analytics-and-intelligence.yaml
     research_count: 3
@@ -38,11 +71,11 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.1.0
+    version: 1.2.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-change-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-change-management/dea:capability-change-management.yaml
     research_count: 0
@@ -53,7 +86,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-continuity-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-continuity-management/dea:capability-continuity-management.yaml
     research_count: 0
@@ -64,7 +97,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-customer-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-customer-management/dea:capability-customer-management.yaml
     research_count: 0
@@ -75,7 +108,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-enterprise-governance
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-enterprise-governance/dea:capability-enterprise-governance.yaml
     research_count: 0
@@ -93,11 +126,11 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.1.0
+    version: 1.2.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-financial-resource-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-financial-resource-management/dea:capability-financial-resource-management.yaml
     research_count: 0
@@ -108,7 +141,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-financial-stewardship
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-financial-stewardship/dea:capability-financial-stewardship.yaml
     research_count: 0
@@ -119,7 +152,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-idea-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-idea-management/dea:capability-idea-management.yaml
     research_count: 0
@@ -130,7 +163,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-information-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-information-management/dea:capability-information-management.yaml
     research_count: 0
@@ -141,7 +174,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-legal-matter-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-legal-matter-management/dea:capability-legal-matter-management.yaml
     research_count: 0
@@ -152,7 +185,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-marketing
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-marketing/dea:capability-marketing.yaml
     research_count: 0
@@ -163,7 +196,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-offering-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-offering-management/dea:capability-offering-management.yaml
     research_count: 0
@@ -174,7 +207,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-operations
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-operations/dea:capability-operations.yaml
     research_count: 0
@@ -185,18 +218,18 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-partner-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-partner-management/dea:capability-partner-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.1.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-regulation-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-regulation-management/dea:capability-regulation-management.yaml
     research_count: 0
@@ -207,7 +240,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-risk-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-risk-management/dea:capability-risk-management.yaml
     research_count: 0
@@ -218,7 +251,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-security-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-security-management/dea:capability-security-management.yaml
     research_count: 0
@@ -236,7 +269,7 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.1.0
+    version: 1.2.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-strategic-planning
@@ -269,22 +302,22 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.1.0
+    version: 1.2.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-technology-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-technology-management/dea:capability-technology-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.1.0
+    version: 1.2.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-workforce-management
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-workforce-management/dea:capability-workforce-management.yaml
     research_count: 0
@@ -295,7 +328,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-workforce-planning
-    last_modified: '2026-09-08'
+    last_modified: '2026-09-10'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-workforce-planning/dea:capability-workforce-planning.yaml
     research_count: 0
@@ -309,6 +342,15 @@ catalog:
   owner: TechNeHub Labs
   repository: https://github.com/technehub-labs/dea-catalog-business-capabilities.git
   research_registers:
+  - entity_id: dea:candidate-epm
+    files: []
+    path: entities/v1-alpha/dea:candidate-epm/research/
+  - entity_id: dea:candidate-orgdesign
+    files: []
+    path: entities/v1-alpha/dea:candidate-orgdesign/research/
+  - entity_id: dea:candidate-relmgmt
+    files: []
+    path: entities/v1-alpha/dea:candidate-relmgmt/research/
   - entity_id: dea:capability-analytics-and-intelligence
     files:
     - BOUNDARY-DECISION-CAND-018.md

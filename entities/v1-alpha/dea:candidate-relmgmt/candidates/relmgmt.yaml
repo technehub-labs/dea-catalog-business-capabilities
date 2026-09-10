@@ -1,0 +1,103 @@
+id: dea:candidate-relmgmt
+type: Candidate
+name: Relationship Management
+status: candidate-not-canonical
+cr: CR-DEA-BC-13
+investigation_track: C
+investigation_source: BC-SR-A001 §6
+opened: '2026-09-10'
+classification: CAPABILITY
+business_object_hypothesis: Relationship (party-relationship as underlying semantic subject, per ECF Party & Relationship
+  domain definition)
+ecf_overlay_hypothesis:
+  primary:
+    domain: party-relationship
+    stage: conceive
+  secondary:
+  - domain: party-relationship
+    stage: operate
+  - domain: party-relationship
+    stage: improve
+  rationale: 'Under CR-DEA-BC-13 §A semantic-center-of-gravity rule: if admitted, Relationship Management''s defining activity
+    is the constituted ability to establish, govern, develop, and terminate external-party relationships; the primary is therefore
+    conceive (the relationship is constituted) and the secondaries carry the lifecycle (operate, improve).'
+evidence_requirement:
+  rating_target_for_admission: E3 or higher
+  evidence_ladder: catalog-research/EVIDENCE.md
+  enterprise_generality:
+    test: Must survive the foundation inclusion criteria (BC-SR-A001 §17; per the user's gate A+B+C - multi-industry, archetype
+      universality, domain-object-agnostic).
+    industries_required: 3 or more
+    archetype_test: B2B, B2C, G2C
+  boundary_defensibility:
+    against_capabilities:
+    - id: dea:capability-customer-management
+      rationale: If Relationship Management is admitted, Customer Management becomes its specialization (customer role). Distinctness
+        is at the level of the role, not the relationship-as-object.
+    - id: dea:capability-supplier-management
+      rationale: If Relationship Management is admitted, Supplier Management becomes its specialization (supplier role). Distinctness
+        same as above.
+    - id: dea:capability-partner-management
+      rationale: If Relationship Management is admitted, Partner Management becomes its specialization (partner role). Distinctness
+        same as above.
+    - id: dea:capability-marketing
+      rationale: Marketing is demand-side acquisition (conceive); Relationship Management (if admitted) is the cross-role
+        relationship ability. Marketing may be a specialization of Relationship Management, or may stand alone if its acquisition
+        focus is sufficiently distinct.
+  decision_options:
+  - option: 1
+    label: Admit Relationship Management as a first-order cap with role-specific specializations
+    surface_change: 26 -> 27 caps; Customer / Supplier / Partner become specializations
+    decision_pending: true
+  - option: 2
+    label: Admit as abstract grouping only (no canonical cap)
+    surface_change: 26 caps unchanged; grouping lives in the specialization register
+    decision_pending: true
+  - option: 3
+    label: Do not admit; role-specific caps are MECE-complete
+    surface_change: 26 caps unchanged; rationale recorded as durable no-admit decision
+    decision_pending: true
+distinctness_sweep:
+  status: pending
+  against_existing_26:
+  - id: dea:capability-customer-management
+    relationship: potential-specialization
+    verdict: distinct-as-role
+    rationale: 'Customer = role; Relationship (party-relationship as underlying subject) = object-family. Admit-as-parent
+      option: Customer becomes a specialization. Do-not-admit option: Customer stands alone.'
+  - id: dea:capability-supplier-management
+    relationship: potential-specialization
+    verdict: distinct-as-role
+    rationale: Same as above.
+  - id: dea:capability-partner-management
+    relationship: potential-specialization
+    verdict: distinct-as-role
+    rationale: Same as above.
+  - id: dea:capability-marketing
+    relationship: potential-specialization-or-adjacent
+    verdict: distinct-with-decision-needed
+    rationale: Marketing could be a Relationship Management specialization (the demand-side specialization) or stand alone
+      (its acquisition focus).
+admission_status: not-admitted
+admission_gate: METHODOLOGY.md §12 review gates (admission happens in a follow-on CR only if evidence supports it; provisional
+  CR-DEA-BC-16 per BC-12 §9).
+open_evidence_questions:
+- question: Is Relationship (party-relationship as underlying semantic subject) a distinct durable business object, or is
+    it an abstraction over the role-specific caps?
+  hypothesis: ECF Party & Relationship domain names party-relationship as the underlying subject. Whether this becomes a 'distinct
+    business object' or an abstraction is the gate question.
+- question: If admitted, do the role-specific caps (Customer / Supplier / Partner) become specializations (option 1), abstract
+    grouping only (option 2), or no parent at all (option 3)?
+  hypothesis: Option 3 is the simplest and is the catalog's current state. Option 1 is the most architecturally aligned with
+    the ECF. Option 2 preserves the first-order-concept discipline but produces a non-canonical entry.
+- question: Does it survive the enterprise-generality test across >=3 verticals (B2B, B2C, G2C)?
+  hypothesis: Yes - party-relationship management is universal; the question is whether it's a distinct *ability* (option
+    1) or an abstraction (options 2 / 3).
+progress:
+- date: '2026-09-10'
+  actor: Coder (for eaojnr)
+  stage: candidate
+  note: Stub created under CR-DEA-BC-13 §D.3. No evidence work yet; investigation track C opened by CR-DEA-BC-12 §B.3; candidate
+    record produced here.
+lifecycle_status: candidate
+version: 0.1.0

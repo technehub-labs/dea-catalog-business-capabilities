@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Technology Management
 definition: The ability to direct, invest in, and steward the enterprise's technology
   estate.
-version: 1.1.0
+version: 1.2.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -64,18 +64,22 @@ why_capability: 'E4; N-006R resolved at BC-08: a business capability whose objec
   of an enterprise resource, which is the semantic anchor of Strategy & Direction.
   Distinct from Enablement & Operations section 3.6 sub-concern Technology Enablement,
   which positions technology as a means of execution, not as an end.'
-ecf_rationale: 'N-006R / BC-08: strategy-direction x build. Earliest legitimate initiation
-  of technology-estate stewardship is build (the enterprise acquires/stands-up technology
-  here, just as it does with assets); secondaries record legitimate participation
-  at operate (running the estate) and improve (evolving it). Mirrors the Asset Management
-  placement.'
-boundary: Stewards the technology estate; does not manage the information it carries
-  (Information Management) or operate delivery (Operations).
+ecf_rationale: 'CR-DEA-BC-13 §A re-evaluation: under the new "semantic center of gravity" rule, Technology Management''s primary stays at strategy-direction/build because the *defining* activity is acquiring and constituting the technology estate (a direction-setting act — what technology bets the enterprise is making); secondaries strategy-direction/operate and strategy-direction/improve record the lifecycle participation. The carve-text update (CR-DEA-BC-13 §C) addresses BC-SR-A001 §12''s concern: the "Technology-as-Enabler" sub-concern is explicitly out of scope and is deferred to a future CR if evidence supports admitting a separate first-order capability. Coordinate change is therefore carve-text only, not a primary move. Supersedes the pre-CR-13 rationale (N-006R / BC-08 "earliest legitimate initiation").'
+boundary: 'Stewards the enterprise technology estate (the set of platforms, applications,
+  networks, data, and AI agents the enterprise uses). Does not execute operations
+  through technology (Operations); does not derive insight from information (Analytics
+  & Intelligence); does not govern information lifecycles (Information Management).
+  Per CR-DEA-BC-13 §C (carve-text decision on BC-SR-A001 §12): the "use of technology
+  to enable execution" sub-concern (Technology-as-Enabler) is NOT part of this capability''s
+  first-order scope and is recorded as a deferred specialization below.'
 non_examples:
 - An IT department (an organization)
 - A specific platform (a system)
-specialization_boundary: Technology domains (network, cloud, OT) are specialization
-  of the estate, not of the ability.
+specialization_boundary: 'Technology domains (network, cloud, OT, AI agents) are specialization
+  of this capability (the estate). The "Technology Enablement" sub-concern (technology-as-enabler,
+  the use of technology by other capabilities to execute) is NOT a specialization
+  of this capability; it is a separate first-order candidate that may be admitted
+  in a future CR if evidence supports it (BC-SR-A001 §12; CR-DEA-BC-13 §C).'
 ecfConformance:
   framework: EnterpriseConceptFramework
   contractVersion: 1.0.0

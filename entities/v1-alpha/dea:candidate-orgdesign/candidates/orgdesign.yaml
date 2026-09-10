@@ -1,0 +1,83 @@
+id: dea:candidate-orgdesign
+type: Candidate
+name: Organizational Design
+status: candidate-not-canonical
+cr: CR-DEA-BC-13
+investigation_track: A
+investigation_source: BC-SR-A001 §4
+opened: '2026-09-10'
+classification: CAPABILITY
+business_object_hypothesis: Organizational Structure
+ecf_overlay_hypothesis:
+  primary:
+    domain: agency-organization
+    stage: design
+  secondary:
+  - domain: agency-organization
+    stage: conceive
+  - domain: agency-organization
+    stage: build
+  rationale: 'Under CR-DEA-BC-13 §A semantic-center-of-gravity rule: Organizational Design''s defining activity is the sustained
+    design of organizational structures, roles, authorities, and coordination patterns. The constitute (conceive) and stand-up
+    (build) events participate but are not where the capability is defined. The Domain axis follows the ECF''s explicit Agency
+    & Organization scope (which already includes human, artificial, and hybrid agents per v2.4.0 stress test).'
+evidence_requirement:
+  rating_target_for_admission: E3 or higher
+  evidence_ladder: catalog-research/EVIDENCE.md
+  enterprise_generality:
+    test: Must survive the foundation inclusion criteria (BC-SR-A001 §17; per the user's gate A+B+C - multi-industry, archetype
+      universality, domain-object-agnostic).
+    industries_required: 3 or more
+    archetype_test: B2B, B2C, G2C
+  boundary_defensibility:
+    against_capabilities:
+    - id: dea:capability-workforce-management
+      rationale: Workforce Management is about the agents; Organizational Design is about the structure that makes the agents
+        an enterprise.
+    - id: dea:capability-workforce-planning
+      rationale: Workforce Planning is about future workforce requirements; Organizational Design is about the structure.
+    - id: dea:capability-strategy
+      rationale: Strategy is the posture; Organizational Design is the operationalization of that posture into roles and authorities.
+    - id: dea:capability-strategic-planning
+      rationale: Strategic Planning is sequencing the pursuit of direction; Organizational Design is the structural envelope
+        that the pursuit runs through.
+  substrate_neutrality:
+    test: Must be substrate-neutral (human + artificial + hybrid agents), per CR-DEA-BC-07 + ECF v2.4.0 Agency & Organization
+      scope.
+distinctness_sweep:
+  status: pending
+  against_existing_26:
+  - id: dea:capability-workforce-management
+    relationship: parent-child-adjacent
+    verdict: distinct
+    rationale: workforce = agents; organizational design = structure of agents
+  - id: dea:capability-workforce-planning
+    relationship: adjacent
+    verdict: distinct
+    rationale: workforce planning = capacity over time; organizational design = structure
+  - id: dea:capability-strategy
+    relationship: adjacent
+    verdict: distinct
+    rationale: strategy = posture; organizational design = operationalization
+  - id: dea:capability-strategic-planning
+    relationship: adjacent
+    verdict: distinct
+    rationale: planning = sequencing; organizational design = structure
+admission_status: not-admitted
+admission_gate: METHODOLOGY.md §12 review gates (admission happens in a follow-on CR only if evidence supports it; provisional
+  CR-DEA-BC-14 per BC-12 §9).
+open_evidence_questions:
+- question: Does Organizational Design have a distinct durable business object?
+  hypothesis: Organizational Structure (to be tested against the BC-12 §B.3 distinct-business-object test for parents).
+- question: Is the capability substrate-neutral across human + artificial + hybrid agents per the Agency & Organization v2.4.0
+    stress test?
+- question: Does it survive the enterprise-generality test across >=3 verticals (B2B, B2C, G2C)?
+- question: Does the candidate close any architectural loop that is currently open (per BC-SR-A001 §16 closed-loop structure)?
+progress:
+- date: '2026-09-10'
+  actor: Coder (for eaojnr)
+  stage: candidate
+  note: Stub created under CR-DEA-BC-13 §D.1. No evidence work yet; investigation track A opened by CR-DEA-BC-12 §B.1; candidate
+    record produced here.
+lifecycle_status: candidate
+version: 0.1.0

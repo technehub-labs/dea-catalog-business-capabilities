@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Supplier Management
 definition: The ability to establish, maintain, and end relationships with those who
   supply the enterprise.
-version: 1.1.0
+version: 1.2.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
@@ -12,10 +12,10 @@ business_object: Supplier
 ecf:
   primary:
     domain: party-relationship
-    stage: conceive
+    stage: operate
   secondary:
   - domain: party-relationship
-    stage: operate
+    stage: conceive
   - domain: party-relationship
     stage: improve
 related_capabilities:
@@ -57,7 +57,7 @@ specialization:
   industry_examples: []
 why_capability: Enterprise-general across all corpus classes; distinct from Sourcing
   and Procurement (the act of acquiring) by the sweep.
-ecf_rationale: 'Re-mapped 2026-09-10 (BC-SR-A001 §13, CR-DEA-BC-12 §A.5): the ECF explicitly says suppliers are external parties belonging to Party & Relationship; Supplier Management is fundamentally a relationship capability, not a direction-setting one. Primary party-relationship/conceive (the supplier relationship is conceived when the supply base is constituted); secondaries party-relationship/operate and party-relationship/improve for ongoing management and improvement. Independent of Investigation Track C (Relationship Management generic parent); if Track C admits a parent, this entry may become a specialization in a follow-on migration CR.'
+ecf_rationale: 'Re-mapped 2026-09-10 under CR-DEA-BC-13 §A new rule (semantic center of gravity). The defining activity of Supplier Management is sustained management of the supply base (operate); the conceive event (initial supplier on-boarding) and the improve stage participate but are not where the capability is defined. Originally mapped at strategy-direction/build under the pre-CR-13 "earliest initiation" rule; re-mapped to party-relationship/conceive under CR-DEA-BC-12 §A.5; re-mapped again here from conceive to operate under the CR-13 rule. Independent of Investigation Track C (Relationship Management generic parent); if Track C admits a parent, this entry may become a specialization in a follow-on migration CR.'
 boundary: Manages the supplier relationship; does not execute acquisition (Sourcing
   and Procurement) or manage alliances of equals (Partner Management).
 non_examples:
@@ -74,14 +74,14 @@ ecfConformance:
   canonicalReferences:
   - kind: coordinate
     domain: PartyAndRelationship
-    stage: Conceive
-    identifier: ecf:partyRelationship.conceive
+    stage: Operate
+    identifier: ecf:partyRelationship.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
     domain: PartyAndRelationship
-    stage: Operate
-    identifier: ecf:partyRelationship.operate
+    stage: Conceive
+    identifier: ecf:partyRelationship.conceive
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   - kind: coordinate

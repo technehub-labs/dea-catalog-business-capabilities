@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Partner Management
 definition: The ability to establish and maintain relationships with entities the
   enterprise cooperates with as peers.
-version: 1.0.0
+version: 1.1.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
@@ -14,7 +14,7 @@ ecf:
     domain: party-relationship
     stage: conceive
   secondary:
-  - domain: strategy-direction
+  - domain: party-relationship
     stage: operate
 related_capabilities:
 - dea:capability-customer-management
@@ -54,9 +54,7 @@ specialization:
   industry_examples: []
 why_capability: 'Enterprise-general (E3); the dual-home ECF tension was resolved at
   review (R-001): the tension is inherent to partnering and is expressed, not smoothed.'
-ecf_rationale: 'R-001: first initiated when the enterprise conceives its demand-side
-  relationships (party-relationship x conceive); supply-side operation is legitimate
-  participation.'
+ecf_rationale: 'CR-DEA-BC-13 §B re-evaluation: secondary coordinate corrected. The pre-CR-13 `strategy-direction/operate` secondary was a legacy from earlier placement reasoning that conflated partner-management with strategic-direction activities. Partner Management is a Party & Relationship capability end-to-end. Primary party-relationship/conceive (partner relationships are constituted); secondary party-relationship/operate (ongoing partnership activity). Independent of Investigation Track C (Relationship Management generic parent); if Track C admits a parent, this entry may become a specialization in a follow-on migration CR.'
 boundary: Manages peer relationships; does not manage suppliers (Supplier Management)
   or customers (Customer Management).
 non_examples:
@@ -78,9 +76,9 @@ ecfConformance:
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
-    domain: StrategyAndDirection
+    domain: PartyAndRelationship
     stage: Operate
-    identifier: ecf:strategyDirection.operate
+    identifier: ecf:partyRelationship.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:

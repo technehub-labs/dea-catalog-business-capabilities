@@ -58,7 +58,7 @@ why_capability: E3; the object and outcome tests carry the decision (Insight is 
   decision v0.1).
 ecf_rationale: 'R-008: enablement-operations x operate; the span of analytics across
   domains is a property of the Insight object (R-003 parity), so secondaries stay
-  empty per honest-not-exhaustive.'
+  empty per honest-not-exhaustive. CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).'
 boundary: Derives insight; does not steward information (Information Management).
   Stewardship ends where derivation begins (boundary decision v0.1).
 non_examples:

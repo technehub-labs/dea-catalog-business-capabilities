@@ -123,9 +123,20 @@ Candidate dispositions: `accepted` / `merged` / `rejected` / `deferred` / `speci
 ## 8. ECF overlay rules
 
 1. Each canonical capability carries a **primary** ECF coordinate (`ecf.primary`: domain × stage) and may carry **secondary** coordinates (`ecf.secondary`).
-2. The primary coordinate marks **earliest initiation**: the ECF lifecycle rule that a capability maps to the stage where it is first initiated, not the stage of heaviest operation.
+2. The primary coordinate marks the capability's **semantic center of gravity**: the ECF cell where the capability's defining work is sustained, not where its lifecycle begins (CR-DEA-BC-13, refining the pre-CR-13 "earliest initiation point" rule). Lifecycle participation in other stages is recorded honestly via `ecf.secondary`.
 3. Secondary coordinates record legitimate participation in other stages. They are honest, not exhaustive.
 4. Depth is achieved by **recursion**: any ECF cell may decompose into a further 7×7 matrix. The catalog does not build an enormous flat subdivision tree.
+
+**Working definition (CR-DEA-BC-13 §3):** the semantic center of gravity of a capability is the ECF cell in which the capability's *defining activity* is sustained. A capability's defining activity is what the capability *is*, not what produces or maintains it. Where a capability has multiple sustained activities across cells, the cell carrying the largest share of the defining activity wins the primary slot; the rest move to secondary.
+
+**Selection heuristics (apply in order; first decisive wins):**
+
+1. *Stewardship / sustained execution*: if the capability is primarily a sustained stewardship or execution activity, the primary cell is `operate` in the capability's domain (e.g. Operations → enablement-operations/operate; Customer Management → party-relationship/operate).
+2. *Posture / constitutive activity*: if the capability is primarily a posture, framework, or constitutive decision sustained from the moment it is constituted, the primary cell is `conceive` in the capability's domain (e.g. Strategy → strategy-direction/conceive; Risk Management → governance-existence/conceive).
+3. *Design / build activity*: if the capability is primarily a designed artifact, pattern, or build phase, the primary cell is `design` or `build` in the capability's domain (e.g. Continuity Management → governance-existence/design; Asset Management's *estates* under build, *stewardship* under operate).
+4. *Activation / enforcement*: if the capability is primarily an act of putting something into effect, the primary cell is `activate` (e.g. Regulation Management → governance-existence/activate; Facility Management's *go-live* is activate, ongoing operation is operate).
+
+The pre-CR-13 "earliest initiation point" rule placed the primary at the first lifecycle stage the capability enters; the CR-DEA-BC-13 refinement places it at the stage where the capability is *defined*. The change moves four entries (Asset Management, Facility Management, Sourcing & Procurement, Supplier Management) from `build`/`activate`/`conceive` to `operate`.
 
 ## 9. Possession semantics
 
