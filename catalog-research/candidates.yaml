@@ -1,8 +1,7 @@
-universe_version: 0.3.0
-cr: CR-DEA-BC-02
-compiled: '2026-09-01 (v0.3: corpus patch applied; CAND-023/CAND-029 evidence E2 -> E4, boundary and generality
-  re-evaluated)'
-status: candidate-not-canonical
+universe_version: 0.4.0
+cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C stubs) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; CAND-036 admitted)
+compiled: '2026-09-11 (v0.4: CAND-036 Organizational Design admitted under CR-DEA-BC-14; canonical true; E4; all 10 admission gates met per precheck v0.7)'
+status: active
 evidence_register: docs/research/evidence-register.yaml
 classification_taxonomy:
 - CAPABILITY
@@ -867,8 +866,8 @@ candidates:
 - id: CAND-036
   name: Organizational Design
   classification: CAPABILITY
-  confidence: medium
-  evidence_strength: E1
+  confidence: high
+  evidence_strength: E4
   business_object_hypothesis: Organization Structure
   parent_candidates: []
   child_candidates:
@@ -903,15 +902,23 @@ candidates:
     exemplar.'
   provenance:
     research_artifact: true
-    canonical: false
+    canonical: true
     added: '2026-09-11'
+    admitted_by: eaojnr
+    admission_cr: CR-DEA-BC-14
     evidence_register: docs/research/evidence-register.yaml
-    track: Track A (BC-DEA-BC-13 §B.1; CR-DEA-BC-18)
+    track: Track A (BC-DEA-BC-13 §B.1; CR-DEA-BC-18 evidence seed; CR-DEA-BC-14 admission)
     sources_seeded_by:
     - BC-SR-A001 §4 (reviewer P1)
     - BC-DEA-BC-13 §B.1
     - CR-DEA-BC-17 §10 follow-on queue (CR-DEA-BC-14 provisional)
-    pending_promotion:
-    - E0 → E1 on initial corpus seeding (this CR)
-    - E1 → E3 on independent corroboration across ≥2 source classes (this CR)
-    - E3+ → admission gate per METHODOLOGY §12 (separate CR-DEA-BC-14)
+    - CR-DEA-BC-18 (research-CR; evidence package)
+    - CR-DEA-BC-14 (admission-CR; this CR)
+    promotion_history:
+    - stage: research-CR (CR-DEA-BC-18)
+      date: '2026-09-11'
+      evidence_strength: E3
+    - stage: admission (CR-DEA-BC-14)
+      date: '2026-09-11'
+      evidence_strength: E4
+      basis: 'EVIDENCE.md §3 admission promotion rule (E3 + admission gate; all 10 criteria met per admission-gate-precheck.yaml v0.7)'

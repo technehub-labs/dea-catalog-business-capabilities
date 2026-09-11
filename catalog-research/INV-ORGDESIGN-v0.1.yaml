@@ -1,14 +1,15 @@
-inv_version: 0.1.0
+inv_version: 0.2.0
 track: A
 candidate_id: CAND-036
 candidate_name: Organizational Design
 track_id: TER-ORGDESIGN-001
-carrier_cr: CR-DEA-BC-18
+carrier_cr: CR-DEA-BC-18 (research-CR) + CR-DEA-BC-14 (admission CR; closed 2026-09-11)
 investigation_carrier: CR-DEA-BC-12 §B.1
-reviewer_seed: BC-SR-A001 §4 (P1)
-date_opened: 2026-09-10
-date_evidence_seeded: 2026-09-11
-status: evidence-seeded; research-CR; no admission in CR-DEA-BC-18
+reviewer_seed: BC-SR-A001 §4 (reviewer P1)
+date_opened: '2026-09-10'
+date_evidence_seeded: '2026-09-11 (CR-DEA-BC-18)'
+date_admitted: '2026-09-11 (CR-DEA-BC-14)'
+status: closed (Track A admitted under CR-DEA-BC-14; CAND-036 promoted to E4; canonical entry dea:capability-organizational-design v1.0.0)
 question: 'Is Organizational Design a distinct first-order capability that survives the catalog admission gate (METHODOLOGY §12)?'
 hypothesis:
   ability: 'The ability to design the enterprise''s organizational structures, roles, authorities, and coordination patterns through which agency is organized.'
@@ -116,7 +117,7 @@ follow_up_evidence_actions:
 - Direct retrieval of Galbraith (2002) chapter structure to confirm five-choice Star Model framing
 - Direct retrieval of APQC PCF element list to map Organization Development / Manage Organizational Change process categories to CAND-036 child candidates
 - Direct retrieval of ISO 9001:2015 §5.3 normative text via institutional access (currently summary-level)
-provisional_admission_cr: CR-DEA-BC-14 (Track A admission; triggers on user acceptance of evidence package)
+provisional_admission_cr: CR-DEA-BC-14 (Track A admission; triggered 2026-09-11; admitted)
 companion_tracks:
   B:
     id: TER-EPM-001

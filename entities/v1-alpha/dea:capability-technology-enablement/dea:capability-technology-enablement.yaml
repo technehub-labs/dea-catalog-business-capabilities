@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Technology Enablement
 definition: The ability to run and continuously adapt the technology services, platforms, and automation
   that other capabilities depend on, sustaining operational technology delivery across the enterprise.
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -24,6 +24,7 @@ related_capabilities:
 - dea:capability-operations
 - dea:capability-information-management
 - dea:capability-analytics-and-intelligence
+- dea:capability-organizational-design
 evidence:
   sources:
   - SRC-005
@@ -78,9 +79,10 @@ ecf_rationale: 'Admitted 2026-09-10 under CR-DEA-BC-17. Under the new semantic-c
 boundary: 'Runs technology services, platforms, automation, and observability for the rest of the enterprise.
   DOES NOT build/acquire the technology estate (Technology Management: strategic posture and acquisition);
   DOES NOT derive insight from information (Analytics and Intelligence); DOES NOT steward information
-  lifecycles (Information Management); DOES NOT run business operations (Operations: value delivery).
-  The defining distinction: Technology Enablement is the IT delivery function; Technology Management is
-  the IT direction function.'
+  lifecycles (Information Management); DOES NOT run business operations (Operations: value delivery),
+  or design the IT organization structure (Organizational Design: IT org design is a sub-concern). The
+  defining distinction: Technology Enablement is the IT delivery function; Technology Management is the
+  IT direction function.'
 non_examples:
 - 'An IT department (an organization: the function may be performed by one)'
 - 'A specific platform (a system: the capability operates platforms but is not one)'

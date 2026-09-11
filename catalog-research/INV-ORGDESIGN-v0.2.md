@@ -1,8 +1,8 @@
 # Investigation Track A: Organizational Design
 
-**Status**: evidence-seeded (CR-DEA-BC-18 research-CR; no admission in this revision)
+**Status**: closed (Track A admitted under CR-DEA-BC-14, 2026-09-11; CAND-036 → E4; canonical entry `dea:capability-organizational-design` v1.0.0)
 **Source**: [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §4 (reviewer P1)
-**Carrier CR**: [CR-DEA-BC-12](../change-requests/CR-DEA-BC-12.md) §B.1 (investigation opened) → [CR-DEA-BC-18](../change-requests/CR-DEA-BC-18-track-a-orgdesign-evidence.md) (evidence package)
+**Carrier CR**: [CR-DEA-BC-12](../change-requests/CR-DEA-BC-12.md) §B.1 (investigation opened) → [CR-DEA-BC-18](../change-requests/CR-DEA-BC-18-track-a-orgdesign-evidence.md) (evidence package) → [CR-DEA-BC-14](../change-requests/CR-DEA-BC-14-track-a-orgdesign-admission.md) (admission)
 **Machine-readable twin**: [`INV-ORGDESIGN-v0.1.yaml`](INV-ORGDESIGN-v0.1.yaml)
 **Date opened**: 2026-09-10 (carrier BC-12)
 **Date evidence-seeded**: 2026-09-11 (CR-DEA-BC-18)

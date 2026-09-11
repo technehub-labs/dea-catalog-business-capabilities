@@ -1,11 +1,9 @@
-sweep_version: 0.3.0
-cr: CR-DEA-BC-02 (initial 26) + CR-DEA-BC-13 (track A/B/C sweeps) + CR-DEA-BC-18 (Track A evidence seed;
-  expanded against-list incl. dea:capability-technology-management and dea:capability-technology-enablement)
-compiled: '2026-09-11 (v0.3: track A evidence seeded; expanded against-list incl. the 2 newly-admitted
-  Tech capabilities; 26-entry sweep and track B/C sweeps unchanged)'
-status: candidate-not-canonical; research decisions, subject to review
+sweep_version: 0.4.0
+cr: CR-DEA-BC-02 (initial 26) + CR-DEA-BC-13 (track A/B/C sweeps) + CR-DEA-BC-18 (Track A evidence seed; expanded against-list incl. dea:capability-technology-management and dea:capability-technology-enablement) + CR-DEA-BC-14 (Track A admission; sweep against-list 6 → 8 peers; admitted 2026-09-11)
+compiled: '2026-09-11 (v0.4: Track A admitted under CR-DEA-BC-14; OrgDesign sweep 6 → 8 peers; sweep-completed-as-admitted)'
+status: active; Track A closed under CR-DEA-BC-14
 inputs:
-  candidates: docs/research/candidates.yaml (v0.3.0)
+  candidates: docs/research/candidates.yaml (v0.4.0)
   normalization: docs/research/normalization.yaml (v0.2.0)
   generality_matrix: docs/research/enterprise-generality-matrix.yaml (v0.3.0)
 scope:
@@ -1713,9 +1711,9 @@ enumeration:
   - CAND-029
   relationship: parent_child
 track_sweeps:
-- candidate: dea:candidate-orgdesign
+- candidate: dea:capability-organizational-design
   track: A
-  cr: CR-DEA-BC-13 §D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed; no admission)
+  cr: CR-DEA-BC-13 §D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed) + CR-DEA-BC-14 (admission; this round)
   against:
   - id: dea:capability-workforce-management
     verdict: Distinct
@@ -1751,8 +1749,19 @@ track_sweeps:
       for the rest of the enterprise (post-BC-17; enablement-operations/operate); Organizational Design
       designs the structure of the function that delivers those services (sourcing model, team topology,
       on-call coordination). Different business object.'
-  status: sweep-completed-as-evidence-seeded; evidence package seeded by CR-DEA-BC-18 across SRC-017/018/019;
-    admission pending separate admission CR (CR-DEA-BC-14 provisional)
+  - id: dea:capability-enterprise-governance
+    verdict: Distinct
+    rationale: 'authority framework vs structural implementation: Enterprise Governance sets the authority
+      framework (business object: Decision); Organizational Design implements it operationally as roles,
+      units, and reporting lines. Different business object; parent-child relationship (Governance sets
+      framework; OrgDesign operationalizes).'
+  - id: dea:capability-change-management
+    verdict: Distinct
+    rationale: 'change operation vs structural design: Change Management operates change initiatives
+      (business object: Change); Organizational Design designs the structure that may result from a change.
+      Different business object; the relationship is parent-child in the other direction (OrgDesign defines
+      target structure; Change Mgmt runs the initiative to realize it).'
+  status: sweep-completed-as-admitted; admitted 2026-09-11 under CR-DEA-BC-14; CAND-036 closed
 - candidate: dea:candidate-epm
   track: B
   cr: CR-DEA-BC-13 §D.2

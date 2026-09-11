@@ -1,9 +1,7 @@
-overlay_version: 0.3.0
-cr: CR-DEA-BC-02 (legacy 26 placements) + CR-DEA-BC-13 (track A/B/C hypotheses) + CR-DEA-BC-18 (Track
-  A evidence seed)
-compiled: '2026-09-11 (v0.3: Track A evidence seeded: dea:candidate-orgdesign confidence low → low-medium;
-  CR-DEA-BC-18 sources cited; admission not in CR-DEA-BC-18)'
-status: candidate-not-canonical
+overlay_version: 0.4.0
+cr: CR-DEA-BC-02 (legacy 26 placements) + CR-DEA-BC-13 (track A/B/C hypotheses) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; dea:candidate-orgdesign → dea:capability-organizational-design; confidence low-medium → high)
+compiled: '2026-09-11 (v0.4: Track A admission closed under CR-DEA-BC-14; OrgDesign overlay dea:candidate-orgdesign → dea:capability-organizational-design; confidence low-medium → high; E4)'
+status: active; Track A closed under CR-DEA-BC-14
 inputs:
   candidates: docs/research/candidates.yaml
   evidence_register: docs/research/evidence-register.yaml
@@ -323,7 +321,7 @@ overlays:
     stage: design
   confidence: low
   conflict: null
-- candidate: dea:candidate-orgdesign
+- candidate: dea:capability-organizational-design
   name: Organizational Design
   primary:
     domain: agency-organization
@@ -333,10 +331,9 @@ overlays:
     stage: conceive
   - domain: agency-organization
     stage: build
-  confidence: 'low-medium (E3 corroboration seeded by CR-DEA-BC-18 across three independent source classes;
-    promotes to high on admission: admission not in CR-DEA-BC-18)'
+  confidence: 'high (E4 admitted under CR-DEA-BC-14; E3 corroboration seeded by CR-DEA-BC-18 across three independent source classes: business-architecture / cross-industry-process / standards-body; promoted to E4 on admission per EVIDENCE.md §3)'
   conflict: null
-  cr: CR-DEA-BC-13 §D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed; no admission)
+  cr: CR-DEA-BC-13 §D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed) + CR-DEA-BC-14 (admission; this round)
   rationale: 'Under CR-DEA-BC-13 §A new rule (semantic center of gravity): Organizational Design''s defining
     activity is sustained design of organizational structures, roles, authorities, and coordination patterns.
     Domain Agency & Organization per ECF v2.4.0 (substrate-neutral; human + artificial + hybrid agents).

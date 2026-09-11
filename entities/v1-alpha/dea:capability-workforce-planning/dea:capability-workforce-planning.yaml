@@ -1,14 +1,14 @@
 id: dea:capability-workforce-planning
 type: BusinessCapability
 name: Workforce Planning
-definition: The ability to determine what workforce, human and artificial, the
-  enterprise will need and when.
-version: 1.1.0
+definition: The ability to determine what workforce, human and artificial, the enterprise will need and
+  when.
+version: 1.1.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
-outcome: A maintained view of future demand and supply across the human and
-  artificial workforce, feeding Workforce Management.
+outcome: A maintained view of future demand and supply across the human and artificial workforce, feeding
+  Workforce Management.
 business_object: Workforce Plan
 ecf:
   primary:
@@ -19,12 +19,13 @@ ecf:
     stage: build
 related_capabilities:
 - dea:capability-workforce-management
+- dea:capability-organizational-design
 evidence:
   sources:
   - SRC-002
   - SRC-004
-  rationale: Enterprise-generality demonstrated at E3; evidence trail in docs/research
-    (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
+  rationale: Enterprise-generality demonstrated at E3; evidence trail in docs/research (evidence-register,
+    enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
 provenance:
   ladder_passage:
   - stage: candidate
@@ -38,8 +39,7 @@ provenance:
     actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
   - stage: normalized
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8,
-      #12)'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
   - stage: ecf-mapped
     date: '2026-08-31'
     actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
@@ -52,17 +52,18 @@ provenance:
 specialization:
   allowed: true
   industry_examples: []
-why_capability: E3; distinct from Workforce Management (execution) per the sweep;
-  planning object is the Workforce Plan.
-ecf_rationale: Primary design in agency-organization (workforce shape is designed
-  before it is built).  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
-boundary: Plans the workforce; does not acquire, develop, or release agents (Workforce
-  Management).
+why_capability: E3; distinct from Workforce Management (execution) per the sweep; planning object is the
+  Workforce Plan.
+ecf_rationale: Primary design in agency-organization (workforce shape is designed before it is built).  CR-DEA-BC-13
+  §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate
+  change).
+boundary: Plans the workforce; does not acquire, develop, or release agents (Workforce Management), or
+  design the structure that the plan fits (Organizational Design).
 non_examples:
 - A hiring requisition (an artifact of execution)
 - A skills database (a system)
-specialization_boundary: Planning horizons, models, and the mix of human and
-  artificial agents vary by sector; the ability to plan a workforce does not.
+specialization_boundary: Planning horizons, models, and the mix of human and artificial agents vary by
+  sector; the ability to plan a workforce does not.
 ecfConformance:
   framework: EnterpriseConceptFramework
   contractVersion: 1.0.0
@@ -85,9 +86,8 @@ ecfConformance:
   extensions:
   - name: kebab-case-domain-vocabulary
     kind: display-vocabulary
-    description: Catalog-side kebab-case labels for the seven ECF Domains and seven
-      ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums
-      for the gate.
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven ECF Stages (see mapping).
+      Display-only; resolves to canonical PascalCase enums for the gate.
     doesNotRedefine: true
     mapping:
       governance-existence: GovernanceAndExistence
@@ -106,11 +106,11 @@ ecfConformance:
       _stage_retire: Retire
   - name: multiple-contextual-coordinates
     kind: catalog-specific-relation
-    description: A capability may have one primary and zero-or-more secondary canonical
-      coordinates without identity duplication (CG-003 §5).
+    description: A capability may have one primary and zero-or-more secondary canonical coordinates without
+      identity duplication (CG-003 §5).
     doesNotRedefine: true
   - name: held-unmapped
     kind: classification-state
-    description: State for capabilities with no ECF affiliation by design (N-006);
-      does not appear on this entry because primary is set.
+    description: State for capabilities with no ECF affiliation by design (N-006); does not appear on
+      this entry because primary is set.
     doesNotRedefine: true
