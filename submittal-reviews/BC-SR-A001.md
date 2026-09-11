@@ -9,7 +9,7 @@ date_filed: 2026-09-10
 filing_repo: technehub-labs/dea-catalog-business-capabilities
 carrier_cr: CR-DEA-BC-12
 status: fully-actioned
-scope: Full catalog v1-alpha.0..v1-alpha.4 — methodology, ECF semantic alignment, foundational gap analysis, repository/doc drift
+scope: Full catalog v1-alpha.0..v1-alpha.4: methodology, ECF semantic alignment, foundational gap analysis, repository/doc drift
 ---
 
 # BC-SR-A001: Submittal Review of Business Capability Catalog v1-alpha.4
@@ -20,7 +20,7 @@ scope: Full catalog v1-alpha.0..v1-alpha.4 — methodology, ECF semantic alignme
 
 ---
 
-I reviewed the current Business Capability catalog, its methodology/taxonomy, the individual capability records, and the current ECF domain-grounding specification. My conclusion is that the catalog is substantially stronger than a conventional capability map, but there are some important foundational gaps—and, more importantly, several ECF coordinate assignments that appear semantically inconsistent with the ECF itself.
+I reviewed the current Business Capability catalog, its methodology/taxonomy, the individual capability records, and the current ECF domain-grounding specification. My conclusion is that the catalog is substantially stronger than a conventional capability map, but there are some important foundational gaps: and, more importantly, several ECF coordinate assignments that appear semantically inconsistent with the ECF itself.
 
 Business Capability catalog⁠
 ECF / Metaframework⁠
@@ -49,7 +49,7 @@ However, I see four significant foundational gaps:
 1. Organizational Design / Organization Management
 2. Enterprise Performance Management
 3. Generic Party / Stakeholder Relationship Management
-4. Knowledge / Learning Management — possibly, but this one needs stronger evidence before admission.
+4. Knowledge / Learning Management: possibly, but this one needs stronger evidence before admission.
 
 And I see three major ECF-placement problems:
 
@@ -99,7 +99,7 @@ The ECF has seven domains, but the capability population should not necessarily 
 
 ⸻
 
-4. Gap #1 — Organizational Design / Organization Management
+4. Gap #1: Organizational Design / Organization Management
 
 This is the clearest foundational gap.
 
@@ -149,7 +149,7 @@ I would rank this Priority 1.
 
 ⸻
 
-5. Gap #2 — Enterprise Performance Management
+5. Gap #2: Enterprise Performance Management
 
 This is, in my view, the most important functional gap.
 
@@ -199,7 +199,7 @@ I would rank this Priority 1.
 
 ⸻
 
-6. Gap #3 — Generic Party / Stakeholder Relationship Management
+6. Gap #3: Generic Party / Stakeholder Relationship Management
 
 This is more subtle.
 
@@ -259,11 +259,11 @@ This would align the catalog much more tightly with the ECF’s own assertion th
 
 I would not necessarily canonize this immediately. It deserves a boundary/evidence investigation because it could also become an abstract grouping parent rather than a first-order capability.
 
-Priority: 1–2.
+Priority: 1-2.
 
 ⸻
 
-7. Gap #4 — Knowledge / Organizational Learning
+7. Gap #4: Knowledge / Organizational Learning
 
 There is a potentially important gap between:
 
@@ -312,9 +312,9 @@ Therefore this could easily become an unnecessary abstraction unless the evidenc
 
 So:
 
-Investigate — do not automatically add.
+Investigate: do not automatically add.
 
-Priority: 2–3.
+Priority: 2-3.
 
 ⸻
 
@@ -557,7 +557,7 @@ That is precisely the kind of cross-domain semantic separation the ECF is design
 
 ⸻
 
-14. The ECF coordinate philosophy itself is good—but needs one refinement
+14. The ECF coordinate philosophy itself is good: but needs one refinement
 
 The repository currently uses:
 
@@ -705,7 +705,7 @@ P3	Enterprise Architecture Management	Probably specialization/model construct ra
 
 I would not add all of these.
 
-The target should probably remain somewhere around 28–32 first-order capabilities, not 50–100.
+The target should probably remain somewhere around 28-32 first-order capabilities, not 50-100.
 
 ⸻
 
@@ -756,7 +756,7 @@ I would not redesign the methodology.
 
 The evidence ladder, first-order concept, specialization boundary, ability test, and “capability before coordinate” principle are strong. 
 
-The capability set is approximately 80–85% of the way to a strong enterprise-general foundation.
+The capability set is approximately 80-85% of the way to a strong enterprise-general foundation.
 
 The most important missing concepts are:
 
@@ -790,13 +790,13 @@ I would not start adding new capabilities yet.
 
 I would first run a focused “Business Capability ↔ ECF Semantic Alignment” change cycle:
 
-BC-ECF-01 — Revalidate all 26 primary coordinates against the normative ECF domain boundaries, specifically applying a new rule:
+BC-ECF-01: Revalidate all 26 primary coordinates against the normative ECF domain boundaries, specifically applying a new rule:
 
 Primary ECF coordinate represents the capability’s semantic center of gravity; secondary coordinates represent legitimate lifecycle participation. Earliest initiation is evidence for placement, not by itself the placement rule.
 
 Then correct the six high-confidence mappings above.
 
-After that, conduct the evidence investigation for the three proposed foundational gaps—Organizational Design, Enterprise Performance Management, and Relationship Management—before admitting anything else.
+After that, conduct the evidence investigation for the three proposed foundational gaps: Organizational Design, Enterprise Performance Management, and Relationship Management: before admitting anything else.
 
 That would make the catalog considerably more coherent and, importantly, would make the ECF × Business Capability relationship itself a much stronger part of OpenDEAM’s architecture rather than just a classification overlay.  
 ---
@@ -807,10 +807,10 @@ Each item from BC-SR-A001 §17, §18, §19 is classified as follows. See CR-DEA-
 
 | Review section | Item | Class | Carrier action |
 |---|---|---|---|
-| §4 | Gap #1 — Organizational Design | P1 (reviewer) | Open investigation track A (evidence-led) |
-| §5 | Gap #2 — Enterprise Performance Management | P1 (reviewer) | Open investigation track B (evidence-led) |
-| §6 | Gap #3 — Relationship Management (generic parent) | P1–P2 (reviewer) | Open investigation track C (boundary-led) |
-| §7 | Gap #4 — Knowledge Management | P2 (reviewer) | Defer to backlog pending evidence |
+| §4 | Gap #1: Organizational Design | P1 (reviewer) | Open investigation track A (evidence-led) |
+| §5 | Gap #2: Enterprise Performance Management | P1 (reviewer) | Open investigation track B (evidence-led) |
+| §6 | Gap #3: Relationship Management (generic parent) | P1-P2 (reviewer) | Open investigation track C (boundary-led) |
+| §7 | Gap #4: Knowledge Management | P2 (reviewer) | Defer to backlog pending evidence |
 | §8.A | Strategy coordinate (Governance→Strategy & Direction) | High confidence | Land in CR-DEA-BC-12 §"ECF re-mapping" |
 | §9 | Strategic Planning coordinate (same move) | High confidence | Land in CR-DEA-BC-12 §"ECF re-mapping" |
 | §10 | Asset Management coordinate (Strategy→Enablement & Operations) | High confidence | Land in CR-DEA-BC-12 §"ECF re-mapping" |
@@ -820,6 +820,6 @@ Each item from BC-SR-A001 §17, §18, §19 is classified as follows. See CR-DEA-
 | §14 | ECF mapping rule refinement ("semantic center of gravity" vs "earliest initiation") | Method change | Open as follow-on method-CR; not in BC-12 |
 | §15 | Concentration around Governance & Existence (after §8/§9 moves) | Architectural observation | Implicitly addressed by the §8/§9 moves |
 | §16 | Closed-loop capability structure | Architectural proposal | Informs investigation track B (Performance Management) |
-| §17 (rest) | Service Management, Quality Management, Stakeholder Management, EAM | P2–P3 | Defer to backlog; revisit after the three investigations close |
+| §17 (rest) | Service Management, Quality Management, Stakeholder Management, EAM | P2-P3 | Defer to backlog; revisit after the three investigations close |
 | §19 | README status field "planned" → "populated" | Doc drift | Land in CR-DEA-BC-12 §"Repo-doc drift" |
 | §19 | OpenDEAM version pin (repo described against v0.2.1, metamodel pinned to 1.0.0) | Doc drift | Land in CR-DEA-BC-12 §"Repo-doc drift" |

@@ -24,7 +24,7 @@ The change is a **single Domain rename**; the other six Domains and the cardinal
 ## 3. Files changed
 
 - **1 schema**: `schemas/entity.schema.json` (kebab-case domain enum).
-- **3 check/conformance scripts**: `scripts/check_ecf_conformance.py` (CANON_DOMAINS), `scripts/migrate_ecf_conformance.py` (DOMAIN_MAP), `scripts/lib/grid.js` (DOMAINS id; display labels also corrected — see §5).
+- **3 check/conformance scripts**: `scripts/check_ecf_conformance.py` (CANON_DOMAINS), `scripts/migrate_ecf_conformance.py` (DOMAIN_MAP), `scripts/lib/grid.js` (DOMAINS id; display labels also corrected: see §5).
 - **26 entity YAMLs** under `entities/v1-alpha/` (domain field re-keyed where applicable).
 - **7 catalog-research files**: `ECF-OVERLAY-v0.1.md`, `ECF-OVERLAY-v0.2.md`, `RESEARCH-REPORT-v0.1.md`, `ADMISSION-GATE-CLOSEOUT-v0.1.md`, `admission-gate-closeout.yaml`, `ecf-overlay-v0.2.yaml`, `preliminary-ecf-overlay.yaml`.
 - **2 CR records** touched (CR-DEA-BC-03, CR-CATALOG-STRUCT-08).

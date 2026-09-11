@@ -1,6 +1,8 @@
 sweep_version: 0.3.0
-cr: CR-DEA-BC-02 (initial 26) + CR-DEA-BC-13 (track A/B/C sweeps) + CR-DEA-BC-18 (Track A evidence seed; expanded against-list incl. dea:capability-technology-management and dea:capability-technology-enablement)
-compiled: '2026-09-11 (v0.3: track A evidence seeded; expanded against-list incl. the 2 newly-admitted Tech capabilities; 26-entry sweep and track B/C sweeps unchanged)'
+cr: CR-DEA-BC-02 (initial 26) + CR-DEA-BC-13 (track A/B/C sweeps) + CR-DEA-BC-18 (Track A evidence seed;
+  expanded against-list incl. dea:capability-technology-management and dea:capability-technology-enablement)
+compiled: '2026-09-11 (v0.3: track A evidence seeded; expanded against-list incl. the 2 newly-admitted
+  Tech capabilities; 26-entry sweep and track B/C sweeps unchanged)'
 status: candidate-not-canonical; research decisions, subject to review
 inputs:
   candidates: docs/research/candidates.yaml (v0.3.0)
@@ -15,12 +17,12 @@ scope:
   - candidate: CAND-011
     reason: dissolved as first-order candidate (normalization N-008)
 method:
-  primary_test: business-object distinctness; two candidates anchored on different durable business objects are distinct abilities
-    (CR section 19 capability semantics, section 30 business-object focus)
-  partition_rule: candidates are partitioned by business-object family; all cross-family pairs classify Distinct unless an
-    explicit decision below overrides
-  within_family_rule: pairs inside one family require an explicit decision (parent-child, synonym, overlap, or distinct);
-    no pair may rest on name similarity alone (CR section 20)
+  primary_test: business-object distinctness; two candidates anchored on different durable business objects
+    are distinct abilities (CR section 19 capability semantics, section 30 business-object focus)
+  partition_rule: candidates are partitioned by business-object family; all cross-family pairs classify
+    Distinct unless an explicit decision below overrides
+  within_family_rule: pairs inside one family require an explicit decision (parent-child, synonym, overlap,
+    or distinct); no pair may rest on name similarity alone (CR section 20)
   vocabulary:
   - Synonyms
   - Parent-Child
@@ -135,8 +137,8 @@ explicit_decisions:
   - CAND-005
   - CAND-006
   relationship: deferred
-  basis: 'unification decision deferred (trigger: government reference models, evidence gap G5); CAND-006 tracked as sector-bound
-    specialization arm'
+  basis: 'unification decision deferred (trigger: government reference models, evidence gap G5); CAND-006
+    tracked as sector-bound specialization arm'
 - pair:
   - CAND-005
   - CAND-007
@@ -201,13 +203,14 @@ explicit_decisions:
   - CAND-013
   - CAND-014
   relationship: Parent-Child
-  basis: shared object (Financial Resource); stewardship (governance of the resource) over management (its operation)
+  basis: shared object (Financial Resource); stewardship (governance of the resource) over management
+    (its operation)
 - pair:
   - CAND-013
   - CAND-020
   relationship: Distinct
-  basis: financial resource stewardship vs uncertainty treatment; financial risk is a specialization of risk, not a merge
-    point
+  basis: financial resource stewardship vs uncertainty treatment; financial risk is a specialization of
+    risk, not a merge point
 - pair:
   - CAND-013
   - CAND-025
@@ -222,7 +225,8 @@ explicit_decisions:
   - CAND-017
   - CAND-018
   relationship: Parent-Child
-  basis: normalization N-003 confirmed at re-test (N-009); insight vs information, corpus treatment still inconsistent
+  basis: normalization N-003 confirmed at re-test (N-009); insight vs information, corpus treatment still
+    inconsistent
 - pair:
   - CAND-017
   - CAND-019
@@ -232,17 +236,20 @@ explicit_decisions:
   - CAND-017
   - CAND-024
   relationship: Distinct
-  basis: stewarding information vs protecting it; security overlays information and assets but owns protection posture
+  basis: stewarding information vs protecting it; security overlays information and assets but owns protection
+    posture
 - pair:
   - CAND-002
   - CAND-016
   relationship: Distinct
-  basis: name similarity only (planning); objects differ (enterprise Plan vs Workforce Plan); CR section 20 rule applied
+  basis: name similarity only (planning); objects differ (enterprise Plan vs Workforce Plan); CR section
+    20 rule applied
 - pair:
   - CAND-003
   - CAND-020
   relationship: Distinct
-  basis: decision authority vs uncertainty treatment; governance sets risk appetite but does not manage risk
+  basis: decision authority vs uncertainty treatment; governance sets risk appetite but does not manage
+    risk
 - pair:
   - CAND-020
   - CAND-021
@@ -257,12 +264,14 @@ explicit_decisions:
   - CAND-020
   - CAND-023
   relationship: Parent-Child
-  basis: continuity under disruption sits under the assurance umbrella; object Continuity distinct from Risk
+  basis: continuity under disruption sits under the assurance umbrella; object Continuity distinct from
+    Risk
 - pair:
   - CAND-020
   - CAND-024
   relationship: Parent-Child
-  basis: protection posture under the assurance umbrella; Asset/Information protection vs uncertainty treatment
+  basis: protection posture under the assurance umbrella; Asset/Information protection vs uncertainty
+    treatment
 - pair:
   - CAND-021
   - CAND-022
@@ -272,7 +281,8 @@ explicit_decisions:
   - CAND-023
   - CAND-024
   relationship: Distinct
-  basis: continuity of operation vs protection of assets; a breach can be survived (resilience) or prevented (security)
+  basis: continuity of operation vs protection of assets; a breach can be survived (resilience) or prevented
+    (security)
 - pair:
   - CAND-024
   - CAND-026
@@ -295,8 +305,8 @@ results:
   deferred: 1
   synonyms_unresolved: 0
   overlaps_unresolved: 0
-verdict: Distinctness demonstrated for 26 of 27 on-track candidates; one pair deferred (CAND-005/CAND-006 unification). No
-  unresolved synonyms or overlaps.
+verdict: Distinctness demonstrated for 26 of 27 on-track candidates; one pair deferred (CAND-005/CAND-006
+  unification). No unresolved synonyms or overlaps.
 enumeration:
 - pair:
   - CAND-001
@@ -1709,23 +1719,40 @@ track_sweeps:
   against:
   - id: dea:capability-workforce-management
     verdict: Distinct
-    rationale: 'agents vs structure of agents — Workforce Management concerns the lifecycle of agents (acquisition, development, deployment, retention per CAND-015); Organizational Design concerns the structure those agents populate. Different business object: Agent lifecycle vs Organization Structure.'
+    rationale: 'agents vs structure of agents: Workforce Management concerns the lifecycle of agents (acquisition,
+      development, deployment, retention per CAND-015); Organizational Design concerns the structure those
+      agents populate. Different business object: Agent lifecycle vs Organization Structure.'
   - id: dea:capability-workforce-planning
     verdict: Distinct
-    rationale: 'capacity over time vs structure — Workforce Planning concerns forecasting and resourcing agent capacity (CAND-014); Organizational Design concerns the structural design choices that define role hierarchies, authority allocation, and coordination patterns. Different business object: Agent capacity vs Organization Structure.'
+    rationale: 'capacity over time vs structure: Workforce Planning concerns forecasting and resourcing
+      agent capacity (CAND-014); Organizational Design concerns the structural design choices that define
+      role hierarchies, authority allocation, and coordination patterns. Different business object: Agent
+      capacity vs Organization Structure.'
   - id: dea:capability-strategy
     verdict: Distinct
-    rationale: 'posture vs operationalization — Strategy concerns the enterprise posture at the strategic level (CAND-001; business object: Enterprise); Organizational Design operationalizes the structural choices that implement a chosen posture. Different business object; the relationship is parent-child (Org Design implements Strategy), not distinctness-by-overlap.'
+    rationale: 'posture vs operationalization: Strategy concerns the enterprise posture at the strategic
+      level (CAND-001; business object: Enterprise); Organizational Design operationalizes the structural
+      choices that implement a chosen posture. Different business object; the relationship is parent-child
+      (Org Design implements Strategy), not distinctness-by-overlap.'
   - id: dea:capability-strategic-planning
     verdict: Distinct
-    rationale: 'sequencing vs structure — Strategic Planning concerns planning the sequencing of strategic initiatives (CAND-002; business object: Plan); Organizational Design concerns the structural form. Different business object.'
+    rationale: 'sequencing vs structure: Strategic Planning concerns planning the sequencing of strategic
+      initiatives (CAND-002; business object: Plan); Organizational Design concerns the structural form.
+      Different business object.'
   - id: dea:capability-technology-management
     verdict: Distinct
-    rationale: 'technology estate vs organization structure — Technology Management stewards the technology estate (post-BC-08; strategy-direction/build); Organizational Design designs the structure through which the estate is stewarded (e.g., IT department shape, CIO reporting line). Different business object: Technology Estate vs Organization Structure.'
+    rationale: 'technology estate vs organization structure: Technology Management stewards the technology
+      estate (post-BC-08; strategy-direction/build); Organizational Design designs the structure through
+      which the estate is stewarded (e.g., IT department shape, CIO reporting line). Different business
+      object: Technology Estate vs Organization Structure.'
   - id: dea:capability-technology-enablement
     verdict: Distinct
-    rationale: 'technology services vs organization structure — Technology Enablement runs technology services for the rest of the enterprise (post-BC-17; enablement-operations/operate); Organizational Design designs the structure of the function that delivers those services (sourcing model, team topology, on-call coordination). Different business object.'
-  status: 'sweep-completed-as-evidence-seeded; evidence package seeded by CR-DEA-BC-18 across SRC-017/018/019; admission pending separate admission CR (CR-DEA-BC-14 provisional)'
+    rationale: 'technology services vs organization structure: Technology Enablement runs technology services
+      for the rest of the enterprise (post-BC-17; enablement-operations/operate); Organizational Design
+      designs the structure of the function that delivers those services (sourcing model, team topology,
+      on-call coordination). Different business object.'
+  status: sweep-completed-as-evidence-seeded; evidence package seeded by CR-DEA-BC-18 across SRC-017/018/019;
+    admission pending separate admission CR (CR-DEA-BC-14 provisional)
 - candidate: dea:candidate-epm
   track: B
   cr: CR-DEA-BC-13 §D.2
@@ -1772,26 +1799,27 @@ sweeps:
   closed: '2026-09-10'
   compared_to:
   - id: dea:capability-technology-management
-    distinct_because: TM stewards the estate (what technology the enterprise has); TE runs the services (how that technology
-      operates for others). Different business object (Technology vs Technology Service) and different ECF cell (strategy-direction/build
-      vs enablement-operations/operate).
+    distinct_because: TM stewards the estate (what technology the enterprise has); TE runs the services
+      (how that technology operates for others). Different business object (Technology vs Technology Service)
+      and different ECF cell (strategy-direction/build vs enablement-operations/operate).
   - id: dea:capability-operations
-    distinct_because: Operations delivers value (production, delivery, fulfillment of offerings); TE delivers technology services
-      for value delivery. Different business object (Operation vs Technology Service); same domain (enablement-operations)
-      but TE is the peer capability that services value delivery, not a sub-concern of it.
+    distinct_because: Operations delivers value (production, delivery, fulfillment of offerings); TE delivers
+      technology services for value delivery. Different business object (Operation vs Technology Service);
+      same domain (enablement-operations) but TE is the peer capability that services value delivery,
+      not a sub-concern of it.
   - id: dea:capability-information-management
-    distinct_because: IM stewards information across its lifecycle; TE operates the platforms and services that carry information.
-      Different business object (Information vs Technology Service); the IM boundary explicitly says it does not manage the
-      technology that carries information — that's TE.
+    distinct_because: 'IM stewards information across its lifecycle; TE operates the platforms and services
+      that carry information. Different business object (Information vs Technology Service); the IM boundary
+      explicitly says it does not manage the technology that carries information: that''s TE.'
   - id: dea:capability-analytics-and-intelligence
-    distinct_because: A&I derives insight from information; TE runs services that A&I platforms may run on. A&I is about insight
-      (analytics output); TE is about services (technology input/output for others).
+    distinct_because: A&I derives insight from information; TE runs services that A&I platforms may run
+      on. A&I is about insight (analytics output); TE is about services (technology input/output for others).
   - id: dea:capability-change-management
-    distinct_because: Change Mgmt manages transitions; TE runs services. 'Technology' is one of Change Mgmt's specialization
-      kinds (a kind of change), not a service.
+    distinct_because: Change Mgmt manages transitions; TE runs services. 'Technology' is one of Change
+      Mgmt's specialization kinds (a kind of change), not a service.
   - id: dea:capability-continuity-management
-    distinct_because: Continuity Mgmt designs continuity patterns (design stage); TE runs services (operate stage). TE may
-      be a Consumer of continuity patterns but doesn't design them.
+    distinct_because: Continuity Mgmt designs continuity patterns (design stage); TE runs services (operate
+      stage). TE may be a Consumer of continuity patterns but doesn't design them.
   result: no overlap; the new entry fills a gap that none of the 26 canonical or 3 candidate entries cover.
   admission_decision: admit
   admitted_as: dea:capability-technology-enablement

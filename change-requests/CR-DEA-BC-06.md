@@ -12,7 +12,7 @@ superseded_reason: |
   + scripts/render_map_png.mjs + scripts/lib/* + .github/workflows/publish-latest.yml)
   is retired in favour of the framework Python
   scripts/generate_capability_map.py, which natively emits the L0 ⊃ L1 ⊃ L2
-  capability × ECF map (HTML + A3 PNG) using weasyprint + pdftoppm — no Node,
+  capability × ECF map (HTML + A3 PNG) using weasyprint + pdftoppm: no Node,
   no Chrome, no playwright, no sharp. CR-DEA-BC-06's 12-file artifact zip is
   replaced by a 2-file zip (capability-map.html, capability-map-a3.png).
   See docs/publication-pipeline.md "Migration from the BC-06 / BC-10 pipeline"

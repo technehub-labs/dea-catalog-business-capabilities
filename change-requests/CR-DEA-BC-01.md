@@ -99,7 +99,6 @@ The method established by this CR comprises 18 components:
 9. **Visible research trail.** Candidate Universe, Normalized Set, and Canonical Set are distinct populations; rejections and deferrals are retained with rationale.
 10. **ADR-015 record alignment.** The canonical record carries `capability_layer` (governed enumeration) and never `capability_type`; kind is expressed by entity specialization, not by a classifier field (CR-DEA-BC-01A).
 11. **One phase per PR.** Each phase ships a visible, checked-in deliverable; the catalog CHANGELOG shows the prior to new delta per PR.
-12. **Writing conventions.** Design Specification tone; no en or em dashes in any shipped document.
 
 ## Phase plan
 

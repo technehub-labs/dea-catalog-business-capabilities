@@ -1,4 +1,4 @@
-# Investigation Track B — Enterprise Performance Management
+# Investigation Track B: Enterprise Performance Management
 
 **Status**: Open (evidence-led investigation)
 **Source**: [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §5 (reviewer P1)
@@ -10,12 +10,12 @@
 
 Is **Enterprise Performance Management** a distinct first-order capability,
 or is it subsumed by Analytics & Intelligence? And does it close the
-**Direction loop** that the reviewer identifies in BC-SR-A001 §16—
+**Direction loop** that the reviewer identifies in BC-SR-A001 §16:
 
 > Strategy → Strategic Planning → Performance Management → Analytics &
 > Intelligence → Strategy Adaptation
 
-— which is currently broken?
+: which is currently broken?
 
 ## Hypothesis (from the reviewer)
 
@@ -30,10 +30,10 @@ or is it subsumed by Analytics & Intelligence? And does it close the
 The catalog currently has Analytics & Intelligence, which is explicitly
 *deriving decision-grade insight from information*. That is intelligence, not
 performance management. The enterprise also needs an enduring ability to
-define, measure, evaluate, govern, and adapt performance — which is the
+define, measure, evaluate, govern, and adapt performance: which is the
 Measure / Reassess half of the broader OpenDEAM cycle.
 
-## Distinctness sweep — required against
+## Distinctness sweep: required against
 
 - `dea:capability-analytics-and-intelligence` (insight from information)
 - `dea:capability-financial-resource-management` (financial performance)
@@ -60,7 +60,7 @@ Measure / Reassess half of the broader OpenDEAM cycle.
    (`dea:capability-analytics-and-intelligence`).
 7. **Loop-closure narrative:** how the candidate, if admitted, would close
    the direction loop from BC-SR-A001 §16. This is required even if the
-   candidate is not admitted — it informs whether the loop is closed by
+   candidate is not admitted: it informs whether the loop is closed by
    other means or remains open.
 
 If the evidence supports admission, a separate admission CR is opened

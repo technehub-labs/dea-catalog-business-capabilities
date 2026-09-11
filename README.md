@@ -72,7 +72,7 @@ See [`docs/REVIEWS.md`](docs/REVIEWS.md) for the per-release commentary.
 | Catalog Version | v1-alpha.0..v1-alpha.4 (current: v1-alpha.4, tag `570830a`; v1-alpha.5 in CR-DEA-BC-12) |
 | Metamodel pin | 1.0.0 (`dea-metamodel`) |
 | ECF conformance contract pin | 1.0.0 (`dea:ecf@1.0.0`) |
-| Architecture framework pin | OpenDEAM v0.2.1 (`dea-architecture-framework`) — separate version axis from the metamodel; not in conflict with `metamodel_pin: 1.0.0` |
+| Architecture framework pin | OpenDEAM v0.2.1 (`dea-architecture-framework`): separate version axis from the metamodel; not in conflict with `metamodel_pin: 1.0.0` |
 
 ## Key Tenets
 

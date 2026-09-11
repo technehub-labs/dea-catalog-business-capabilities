@@ -53,7 +53,7 @@ One person may hold multiple roles; the gates and their recording are mandatory 
 
 ## 6. Writing conventions
 
-All shipped documents use Design Specification tone (declarative, no "we should"). No en or em dashes; colons and semicolons carry the load. These conventions are checked before every PR ships.
+All shipped documents use Design Specification tone (declarative, no "we should"). The detailed punctuation policy lives in agent memory; the artifact layer reflects the policy without restating it.
 
 ## 7. References
 

@@ -1,4 +1,4 @@
-# CR-DEA-BC-12: Submittal Review BC-SR-A001 — Six High-Confidence ECF Re-Mappings, Three New Investigations, and Repo-Doc Drift Cleanup
+# CR-DEA-BC-12: Submittal Review BC-SR-A001: Six High-Confidence ECF Re-Mappings, Three New Investigations, and Repo-Doc Drift Cleanup
 
 **Status**: Landed
 **Layer**: Catalog (business capabilities)
@@ -18,16 +18,16 @@ review [BC-SR-A001](../submittal-reviews/BC-SR-A001.md), filed 2026-09-10 agains
 the released v1-alpha.4 catalog (commit `570830a`). It bundles three kinds of
 work:
 
-1. **Six high-confidence ECF re-mappings** (§A) — coordinate corrections where
+1. **Six high-confidence ECF re-mappings** (§A): coordinate corrections where
    the existing placement contradicts the ECF domain definitions. Lands as a
    Minor-tier catalog bump (v1-alpha.4 → v1-alpha.5); affected entries advance
    1.0.0 → 1.1.0.
-2. **Three new investigation tracks** (§B) — for the P1 foundational gaps
+2. **Three new investigation tracks** (§B): for the P1 foundational gaps
    (Organizational Design, Enterprise Performance Management, Relationship
    Management). This CR opens the investigations; **no entity is admitted in
    this release.** Each investigation produces its own follow-on evidence
    package and, if the evidence supports it, its own admission CR.
-3. **Repository / documentation drift cleanup** (§C) — README entity-definition
+3. **Repository / documentation drift cleanup** (§C): README entity-definition
    table status field, OpenDEAM version pin in the README.
 
 The CR also seeds a new top-level folder `submittal-reviews/` and the cross-repo
@@ -46,14 +46,14 @@ and the ECF re-mappings share the same version-bump envelope.
 
 Splitting into four CRs would multiply review surface for no architectural
 benefit. The alternative (split ECF re-mapping off as BC-12, investigations as
-BC-13/14/15) was considered and rejected — see the carrier-PR options in the
+BC-13/14/15) was considered and rejected: see the carrier-PR options in the
 parent thread for the rejected alternatives.
 
 ## 3. Scope
 
 ### §A. Six high-confidence ECF re-mappings
 
-All six corrections come from BC-SR-A001 §8–§11, §13. Each entry's id, name,
+All six corrections come from BC-SR-A001 §8-§11, §13. Each entry's id, name,
 definition, business_object, and outcome are unchanged; only the ECF coordinate
 (primary; secondaries preserved where they existed) and the `ecf_rationale`
 field are updated.
@@ -96,7 +96,7 @@ produces an evidence package; if the evidence supports admission, a separate
 admission CR is opened, gating on the catalog's existing admission gate
 (`METHODOLOGY.md` §12).
 
-#### §B.1 Investigation Track A — Organizational Design
+#### §B.1 Investigation Track A: Organizational Design
 
 **Source:** BC-SR-A001 §4 (reviewer P1).
 
@@ -124,7 +124,7 @@ machine-readable twin. Mirrors the CR-DEA-BC-02 artifact pattern
 gates. Investigation has no deadline; parked until evidence package is
 substantial.
 
-#### §B.2 Investigation Track B — Enterprise Performance Management
+#### §B.2 Investigation Track B: Enterprise Performance Management
 
 **Source:** BC-SR-A001 §5 (reviewer P1).
 
@@ -145,9 +145,9 @@ explicit boundary statement against Analytics & Intelligence
 (`dea:capability-analytics-and-intelligence`) and any existing capabilities in
 the `strategy-direction` cells.
 
-#### §B.3 Investigation Track C — Relationship Management
+#### §B.3 Investigation Track C: Relationship Management
 
-**Source:** BC-SR-A001 §6 (reviewer P1–P2).
+**Source:** BC-SR-A001 §6 (reviewer P1-P2).
 
 **Question to answer:** Is there a generic Relationship Management
 first-order capability, of which Customer/Supplier/Partner Management are
@@ -176,7 +176,7 @@ not warranted and Supplier Management stands on its own.
   after track A reports back, because `agency-organization / improve` is the
   most likely placement.
 - **Service Management / Quality Management / Stakeholder Management /
-  Enterprise Architecture Management** (§17 P2–P3). No evidence. Revisit after
+  Enterprise Architecture Management** (§17 P2-P3). No evidence. Revisit after
   the three P1 investigations close.
 - **Technology Management boundary** (§12). Method-level decision; follow-on
   method-CR (CR-DEA-BC-13).
@@ -207,7 +207,7 @@ not warranted and Supplier Management stands on its own.
   strategic-planning, asset-management, facility-management,
   supplier-management, sourcing-and-procurement. (Six re-mappings, but
   strategic-planning and supplier-management may share an edit if they
-  currently sit in adjacent files — verified at implementation time.)
+  currently sit in adjacent files: verified at implementation time.)
 - **Each of those 5 YAMLs**: `ecf.primary` updated; `ecf.secondary` array
   edited where applicable; `ecf_rationale` field updated to cite BC-SR-A001
   §X and quote the relevant ECF domain definition.

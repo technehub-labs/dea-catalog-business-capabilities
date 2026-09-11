@@ -1,4 +1,4 @@
-# Investigation Track A — Organizational Design
+# Investigation Track A: Organizational Design
 
 **Status**: Open (evidence-led investigation)
 **Source**: [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §4 (reviewer P1)
@@ -27,7 +27,7 @@ coordination/collaboration, movement/transition. The catalog currently has
 Workforce Planning and Workforce Management, which address the agents; neither
 addresses the structure that makes the agents an enterprise.
 
-## Distinctness sweep — required against
+## Distinctness sweep: required against
 
 - `dea:capability-workforce-planning` (agent capacity planning)
 - `dea:capability-workforce-management` (acquisition, development, deployment)

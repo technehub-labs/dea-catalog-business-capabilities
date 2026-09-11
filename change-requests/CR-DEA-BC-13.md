@@ -1,4 +1,4 @@
-# CR-DEA-BC-13: ECF Primary-Coordinate Rule Refinement — Semantic Center of Gravity + 26-Entry Re-Evaluation + Technology Management Boundary Decision + Tracks A/B/C Evidence Collection
+# CR-DEA-BC-13: ECF Primary-Coordinate Rule Refinement: Semantic Center of Gravity + 26-Entry Re-Evaluation + Technology Management Boundary Decision + Tracks A/B/C Evidence Collection
 
 **Status**: Landed
 **Layer**: Catalog (business capabilities)
@@ -14,10 +14,10 @@
 
 This CR is the **method-level refinement** carrier for the ECF primary-coordinate rule, and the **scope bundle** that lands four workstreams in one atomic PR:
 
-1. **§A — Method rule refinement.** Codify the new ECF primary-coordinate rule ("semantic center of gravity") in `METHODOLOGY.md §8`. The pre-CR-13 rule ("earliest initiation point") is preserved as a historical record but is no longer the canonical selection logic.
-2. **§B — 26-entry re-evaluation.** Apply the new rule to all 26 canonical entries. Surface which placements survive (21) and which move (4 + 1 carve-only). This satisfies the user's standing request: a single rule applied uniformly across the foundation.
-3. **§C — Technology Management boundary decision.** Per BC-SR-A001 §12, formalize the carve between "Technology as Estate" (strategy-direction/build) and "Technology as Enabler" (enablement-operations/operate). This CR's chosen outcome is **carve-text only** — keep `dea:capability-technology-management` as a single first-order entry with a rigorous `boundary` declaration. The "Technology-as-Enabler" sub-concern is flagged as a deferred specialization that a future CR may admit.
-4. **§D — Investigation-track evidence collection (A, B, C).** Start the actual evidence work for the three investigation tracks opened by CR-DEA-BC-12. This CR produces the candidate records, evidence register entries, ECF overlay hypotheses, and distinctness sweeps. **No admission** in this CR — admission remains gated on `METHODOLOGY.md §12` review gates per CR-DEA-BC-12's stance.
+1. **§A: Method rule refinement.** Codify the new ECF primary-coordinate rule ("semantic center of gravity") in `METHODOLOGY.md §8`. The pre-CR-13 rule ("earliest initiation point") is preserved as a historical record but is no longer the canonical selection logic.
+2. **§B: 26-entry re-evaluation.** Apply the new rule to all 26 canonical entries. Surface which placements survive (21) and which move (4 + 1 carve-only). This satisfies the user's standing request: a single rule applied uniformly across the foundation.
+3. **§C: Technology Management boundary decision.** Per BC-SR-A001 §12, formalize the carve between "Technology as Estate" (strategy-direction/build) and "Technology as Enabler" (enablement-operations/operate). This CR's chosen outcome is **carve-text only**: keep `dea:capability-technology-management` as a single first-order entry with a rigorous `boundary` declaration. The "Technology-as-Enabler" sub-concern is flagged as a deferred specialization that a future CR may admit.
+4. **§D: Investigation-track evidence collection (A, B, C).** Start the actual evidence work for the three investigation tracks opened by CR-DEA-BC-12. This CR produces the candidate records, evidence register entries, ECF overlay hypotheses, and distinctness sweeps. **No admission** in this CR: admission remains gated on `METHODOLOGY.md §12` review gates per CR-DEA-BC-12's stance.
 
 This is a single-PR scope per the user's CR-13 design decision (Q1: retrospective re-evaluation; Q2: include Technology Management; Q3: start evidence collection for all three tracks).
 
@@ -54,16 +54,16 @@ When multiple cells share sustained activity, the cell with the largest share wi
 
 ### §3.3 Why this is the right rule
 
-- **Pre-CR-13 rule ("earliest initiation point")** maps the primary to the first lifecycle stage the capability enters. This produces semantically unintuitive placements where the *defining* activity is in a different cell (e.g. Asset Management placed at `build` because the asset is acquired there, but the defining activity — stewardship of the asset base — is sustained at `operate`).
+- **Pre-CR-13 rule ("earliest initiation point")** maps the primary to the first lifecycle stage the capability enters. This produces semantically unintuitive placements where the *defining* activity is in a different cell (e.g. Asset Management placed at `build` because the asset is acquired there, but the defining activity: stewardship of the asset base: is sustained at `operate`).
 - **New rule ("semantic center of gravity")** maps the primary to the cell where the capability's defining work is sustained. The lifecycle still participates honestly via `secondary` coordinates; the primary simply names where the capability *is*.
 - **Backward compatibility:** the four entries that move (§B) preserve all their `secondary` coordinates. No entry's identity (id, name, definition, business_object, outcome) changes. The moves are coordinate-only.
-- **Foundation-purity discipline:** the new rule makes the catalog more honest under the ECF's own framing — the ECF's Domain axis names the *what*, the Stage axis names the *where in the lifecycle*; "semantic center of gravity" picks the cell that is *most this capability*, not the cell that *sees it first*.
+- **Foundation-purity discipline:** the new rule makes the catalog more honest under the ECF's own framing: the ECF's Domain axis names the *what*, the Stage axis names the *where in the lifecycle*; "semantic center of gravity" picks the cell that is *most this capability*, not the cell that *sees it first*.
 
 ### §3.4 What does NOT change
 
-- ECF coordinate *identifier* rules (PascalCase domain, camelCase identifier, multiple contextual coordinates, held-unmapped) — unchanged.
-- The "ECF primary + honest secondaries" rule — unchanged.
-- The catalog's stance that ECF coordinates are classification metadata, not capability identity — unchanged.
+- ECF coordinate *identifier* rules (PascalCase domain, camelCase identifier, multiple contextual coordinates, held-unmapped): unchanged.
+- The "ECF primary + honest secondaries" rule: unchanged.
+- The catalog's stance that ECF coordinates are classification metadata, not capability identity: unchanged.
 - The pre-CR-13 placements are preserved as a historical record in the §B audit table; nothing is rewritten in a way that loses the rule-history.
 
 ## 4. 26-entry re-evaluation (§B)
@@ -113,11 +113,11 @@ The new rule applied to all 26 canonical entries. Per-cell verdict:
 | enablement-operations | 0 | 0 | 0 | 0 | **6** | 0 |
 | finance-accounting | 1 | 0 | 0 | 0 | 1 | 0 |
 
-(Note: total = 14 unique ECF cells, down from 16 after CR-DEA-BC-12. The four primary-coordinate moves (asset, facility, sourcing, supplier) consolidated into cells that were already occupied by canonical entries — the catalog's coordinate space became *more* concentrated under the new rule. Cell concentration is the intended effect: the post-CR-13 heatmap reflects what the catalog *is*, not where it starts.)
+(Note: total = 14 unique ECF cells, down from 16 after CR-DEA-BC-12. The four primary-coordinate moves (asset, facility, sourcing, supplier) consolidated into cells that were already occupied by canonical entries: the catalog's coordinate space became *more* concentrated under the new rule. Cell concentration is the intended effect: the post-CR-13 heatmap reflects what the catalog *is*, not where it starts.)
 
 ### §4.1 Pre-CR-13 vs post-CR-13 ECF heatmap
 
-The post-CR-13 catalog is more concentrated in `operate` cells (the natural semantic center for sustained abilities) and less concentrated in `build`/`activate` cells. This is the explicit intended effect of the rule change — the ECF heatmap now *reads* the catalog the way a reader expects: things that are sustained are placed where they are sustained.
+The post-CR-13 catalog is more concentrated in `operate` cells (the natural semantic center for sustained abilities) and less concentrated in `build`/`activate` cells. This is the explicit intended effect of the rule change: the ECF heatmap now *reads* the catalog the way a reader expects: things that are sustained are placed where they are sustained.
 
 ## 5. Technology Management boundary decision (§C)
 
@@ -133,13 +133,13 @@ The post-CR-13 catalog is more concentrated in `operate` cells (the natural sema
 | (b) Split Technology Management into two first-order caps (Technology Estate Management + Technology Enablement) | Two new canonical caps; admission gated on §12 review | 2+ files; count 26→28 |
 | (c) Keep current coordinate + carve-text in `boundary` field + defer "Technology Enablement" specialization | Carve-text only; one cap | 1 file; deferred admission |
 
-### §5.3 Chosen outcome: option (c) — carve-text only
+### §5.3 Chosen outcome: option (c): carve-text only
 
 **Rationale:**
 
-- Option (b) — splitting into two first-order caps — is the architecturally correct outcome but is itself an admission decision (count 26 → 27), which must pass the §12 review gates. Doing it in this CR would mix a method-CR with an admission-CR, which is the very split that BC-12 §B explicitly avoided.
-- Option (a) — moving to enablement-operations/operate — would lose the "estate" framing the reviewer explicitly endorsed. The `strategy-direction/build` placement honors the "stewardship of the technology estate" semantic; moving to operate would re-confuse Tech-as-Enablement with Tech-as-Estate, which is exactly the carve the reviewer asks to make explicit.
-- Option (c) — carve-text only — honors the reviewer's recommendation *without* admission. The carve is recorded in `dea:capability-technology-management`'s `boundary` and `specialization_boundary` fields; a future CR may admit "Technology Enablement" as a new first-order cap if evidence supports it.
+- Option (b): splitting into two first-order caps: is the architecturally correct outcome but is itself an admission decision (count 26 → 27), which must pass the §12 review gates. Doing it in this CR would mix a method-CR with an admission-CR, which is the very split that BC-12 §B explicitly avoided.
+- Option (a): moving to enablement-operations/operate: would lose the "estate" framing the reviewer explicitly endorsed. The `strategy-direction/build` placement honors the "stewardship of the technology estate" semantic; moving to operate would re-confuse Tech-as-Enablement with Tech-as-Estate, which is exactly the carve the reviewer asks to make explicit.
+- Option (c): carve-text only: honors the reviewer's recommendation *without* admission. The carve is recorded in `dea:capability-technology-management`'s `boundary` and `specialization_boundary` fields; a future CR may admit "Technology Enablement" as a new first-order cap if evidence supports it.
 
 ### §5.4 Carve-text (added to `dea:capability-technology-management/boundary` and `specialization_boundary`)
 
@@ -150,35 +150,35 @@ The post-CR-13 catalog is more concentrated in `operate` cells (the natural sema
 ## 6. Investigation-track evidence collection (§D)
 
 Per CR-DEA-BC-12 §B, three investigation tracks were opened:
-- Track A — Organizational Design (P1)
-- Track B — Enterprise Performance Management (P1)
-- Track C — Relationship Management generic parent (P1–P2)
+- Track A: Organizational Design (P1)
+- Track B: Enterprise Performance Management (P1)
+- Track C: Relationship Management generic parent (P1-P2)
 
 This CR starts the actual evidence work for all three. Each track produces:
 
-1. **Candidate record** under `entities/v1-alpha/candidates/<candidate-id>/` (per the standard's `candidates/` directory layout, NOT canonical — the directory is non-canonical by design).
+1. **Candidate record** under `entities/v1-alpha/candidates/<candidate-id>/` (per the standard's `candidates/` directory layout, NOT canonical: the directory is non-canonical by design).
 2. **Evidence register entry** in `catalog-research/evidence-register.yaml`.
 3. **ECF overlay hypothesis** in `catalog-research/preliminary-ecf-overlay.yaml` (appended).
 4. **Distinctness sweep** in `catalog-research/distinctness-sweep.yaml` (appended).
 
 **No entity is admitted in this CR.** Admission remains gated on `METHODOLOGY.md §12` review gates; admission happens in follow-on admission CRs (provisional CR-DEA-BC-14/15/16 per BC-12 §9) when the evidence package is complete.
 
-### §6.1 Track A — Organizational Design
+### §6.1 Track A: Organizational Design
 
 **Candidate record:** `entities/v1-alpha/candidates/cand-orgdesign/` (this directory is excluded from canonical entry enumeration by `scripts/regenerate_catalog.py` and the `check_ecf_conformance.py` walk; see conformance suite for the exclude rule).
 
-**ECF placement hypothesis:** `agency-organization/design` (primary), with `agency-organization/conceive` and `agency-organization/build` as secondaries. Under the new §A rule, this is the *sustained* activity of structuring roles, authorities, and coordination patterns — squarely in the design axis of Agency & Organization.
+**ECF placement hypothesis:** `agency-organization/design` (primary), with `agency-organization/conceive` and `agency-organization/build` as secondaries. Under the new §A rule, this is the *sustained* activity of structuring roles, authorities, and coordination patterns: squarely in the design axis of Agency & Organization.
 
 **Evidence register entry:** E3 (preliminary; the workforces-sweep and at least one industry corpus are needed to push to E4 before admission).
 
 **Distinctness sweep:** against `dea:capability-workforce-management` (workers, not structure), `dea:capability-workforce-planning` (capacity, not structure), `dea:capability-strategy` (strategic posture, not structure), `dea:capability-strategic-planning` (planning, not structure).
 
 **Open evidence questions:**
-- Does the candidate have a distinct durable business object? (Initial hypothesis: "Organizational Structure" — to be tested.)
+- Does the candidate have a distinct durable business object? (Initial hypothesis: "Organizational Structure": to be tested.)
 - Is the capability substrate-neutral (human + AI agents per the Agency & Organization v2.4.0 stress test)?
 - Does it survive the enterprise-generality test across ≥3 verticals?
 
-### §6.2 Track B — Enterprise Performance Management
+### §6.2 Track B: Enterprise Performance Management
 
 **Candidate record:** `entities/v1-alpha/candidates/cand-epm/`.
 
@@ -193,7 +193,7 @@ This CR starts the actual evidence work for all three. Each track produces:
 - Does EPM close the Direction loop (Strategy → Planning → Performance → Insight → Adaptation) without collapsing into Analytics?
 - Cross-industry universality test (B2B/B2C/G2C per the foundation inclusion criteria).
 
-### §6.3 Track C — Relationship Management
+### §6.3 Track C: Relationship Management
 
 **Candidate record:** `entities/v1-alpha/candidates/cand-relmgmt/`.
 
@@ -214,14 +214,14 @@ This CR starts the actual evidence work for all three. Each track produces:
 
 ### §A. Method rule refinement
 
-- `METHODOLOGY.md` — §8.2 rule text replaced; §3.2 selection heuristics added; §3.3 backward-compatibility note added.
+- `METHODOLOGY.md`: §8.2 rule text replaced; §3.2 selection heuristics added; §3.3 backward-compatibility note added.
 
 ### §B. 26-entry re-evaluation
 
 - **4 entity YAMLs** with primary-coordinate moves: `asset-management`, `facility-management`, `sourcing-and-procurement`, `supplier-management`. Each: `version 1.1.0 → 1.2.0`; `ecf.primary` updated; `ecf.secondary` rotated (former primary becomes secondary where applicable); `ecf_rationale` rewritten to cite CR-DEA-BC-13 + the new rule; `ecfConformance.canonicalReferences` updated.
 - **1 entity YAML** with secondary-coordinate fix: `partner-management` (drop `strategy-direction/operate` secondary; add `party-relationship/operate` secondary). `version 1.0.0 → 1.1.0`.
 - **21 entity YAMLs** with rationale refresh only (no coordinate change): each gets an `ecf_rationale` update that cites CR-DEA-BC-13 and confirms the placement survives the new rule. Versions unchanged (1.0.0 or 1.1.0 already).
-- `CATALOG.yaml` — regenerated.
+- `CATALOG.yaml`: regenerated.
 
 ### §C. Technology Management boundary
 
@@ -230,16 +230,16 @@ This CR starts the actual evidence work for all three. Each track produces:
 ### §D. Investigation tracks A/B/C
 
 - **3 candidate subtrees** under `entities/v1-alpha/candidates/`: `cand-orgdesign/`, `cand-epm/`, `cand-relmgmt/`. Each contains a candidate record YAML + a brief `README.md` with the candidate's distinctness-sweep against the existing 26.
-- `catalog-research/evidence-register.yaml` — appended with 3 new entries.
-- `catalog-research/preliminary-ecf-overlay.yaml` — appended with 3 new overlay hypotheses.
-- `catalog-research/distinctness-sweep.yaml` — appended with 3 new sweeps.
+- `catalog-research/evidence-register.yaml`: appended with 3 new entries.
+- `catalog-research/preliminary-ecf-overlay.yaml`: appended with 3 new overlay hypotheses.
+- `catalog-research/distinctness-sweep.yaml`: appended with 3 new sweeps.
 
 ### §E. Carrier CR + paperwork
 
 - `change-requests/CR-DEA-BC-13.md` (this file).
-- `change-requests/README.md` — row added.
-- `CHANGELOG.md` — `[v1-alpha.6]` section added.
-- `docs/REVIEWS.md` — entry appended for this release (submittal-review-driven follow-on to BC-SR-A001).
+- `change-requests/README.md`: row added.
+- `CHANGELOG.md`: `[v1-alpha.6]` section added.
+- `docs/REVIEWS.md`: entry appended for this release (submittal-review-driven follow-on to BC-SR-A001).
 
 ## 8. Version bump
 

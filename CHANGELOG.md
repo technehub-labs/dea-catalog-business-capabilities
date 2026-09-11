@@ -9,6 +9,10 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## Unreleased
+
+**Housekeeping** (no version bump; pre-release cleanup). Removes en/em dashes from every GitHub-visible artifact in the repo (32 files; 213 em-dashes + 24 en-dashes removed from Markdown; 23 em-dashes from YAML prose). The punctuation policy now lives in memory; the artifact layer reflects it without stating it. Change-requested under user instruction 2026-09-11.
+
 ## [v1-alpha.7] - 2026-09-10
 
 **Minor** (CR-DEA-BC-17, PR pending). Admission-CR closing the BC-DEA-BC-13 §11 follow-on queue item. Admits `dea:capability-technology-enablement` as the 27th first-order canonical capability at `enablement-operations/operate` (primary), with `enablement-operations/{build, improve}` as secondaries. The new entry is the IT **delivery** function (running technology services, platforms, automation for the rest of the enterprise); Technology Management remains the IT **direction** function (stewarding the technology estate). The carve BC-SR-A001 §12 asked us to make explicit is now formalized as a peer relationship between two first-order capabilities rather than as a deferred specialization.
@@ -43,7 +47,7 @@ regime) and `v<N>.<M>` semver from v2 onward. See
 ### Research-CR addendum (same release cycle, no version bump)
 
 **CR-DEA-BC-18** (research-CR; no admission). Begins the evidence-collection work
-for BC-SR-A001 §4 (Track A — Organizational Design). Lands on disk:
+for BC-SR-A001 §4 (Track A: Organizational Design). Lands on disk:
 
 - CAND-036 added to candidate universe (CAPABILITY classification; evidence
   rating E1 pending direct retrieval; promotes to E3 on independent
@@ -91,12 +95,12 @@ Versions bumped: asset/facility/sourcing/supplier 1.1.0 → 1.2.0; technology 1.
 
 Per BC-SR-A001 §12 and the user's CR-13 design decision (Q2): carve-text only. `dea:capability-technology-management/boundary` and `specialization_boundary` expanded to make the Tech-as-Estate vs Tech-as-Enabler carve explicit. The "Technology Enablement" sub-concern is recorded as a deferred specialization that a future CR may admit. Coordinate change: none. Version 1.1.0 → 1.2.0.
 
-### §D. Investigation tracks A/B/C — evidence collection started
+### §D. Investigation tracks A/B/C: evidence collection started
 
 Three non-canonical candidate records created under `entities/v1-alpha/dea:candidate-{orgdesign,epm,relmgmt}/candidates/`:
-- **Track A — Organizational Design**: ECF overlay `agency-organization/design` (E3 preliminary).
-- **Track B — Enterprise Performance Management**: ECF overlay `strategy-direction/operate` (E3 preliminary); loop-closure narrative required (BC-SR-A001 §16).
-- **Track C — Relationship Management generic parent**: ECF overlay `party-relationship/conceive` (E2 early); three decision options evaluated (admit-with-specializations / abstract-grouping-only / no-admit).
+- **Track A: Organizational Design**: ECF overlay `agency-organization/design` (E3 preliminary).
+- **Track B: Enterprise Performance Management**: ECF overlay `strategy-direction/operate` (E3 preliminary); loop-closure narrative required (BC-SR-A001 §16).
+- **Track C: Relationship Management generic parent**: ECF overlay `party-relationship/conceive` (E2 early); three decision options evaluated (admit-with-specializations / abstract-grouping-only / no-admit).
 
 No admission. Each track's evidence-record stub and ECF overlay hypothesis appended to `catalog-research/{evidence-register,preliminary-ecf-overlay,distinctness-sweep}.yaml`.
 
@@ -127,9 +131,9 @@ definition, business_object, outcome) changes.
 
 **Three investigation tracks opened** (no admission in this release):
 
-- Investigation Track A — [Organizational Design](catalog-research/INV-ORGDESIGN-v0.1.md) (BC-SR-A001 §4 P1).
-- Investigation Track B — [Enterprise Performance Management](catalog-research/INV-EPM-v0.1.md) (BC-SR-A001 §5 P1).
-- Investigation Track C — [Relationship Management](catalog-research/INV-RELMGMT-v0.1.md) (BC-SR-A001 §6 P1–P2).
+- Investigation Track A: [Organizational Design](catalog-research/INV-ORGDESIGN-v0.1.md) (BC-SR-A001 §4 P1).
+- Investigation Track B: [Enterprise Performance Management](catalog-research/INV-EPM-v0.1.md) (BC-SR-A001 §5 P1).
+- Investigation Track C: [Relationship Management](catalog-research/INV-RELMGMT-v0.1.md) (BC-SR-A001 §6 P1-P2).
 
 Each opens a research-led evidence investigation; admission is gated on the
 catalog's own §12 review gates in a follow-on CR if the evidence supports it.
@@ -158,7 +162,7 @@ catalog's own §12 review gates in a follow-on CR if the evidence supports it.
 - ECF mapping rule refinement ("semantic center of gravity" vs "earliest
   initiation", BC-SR-A001 §14; method-level change).
 - Knowledge Management candidate (BC-SR-A001 §7 P2; revisit after track A).
-- Service / Quality / Stakeholder / EAM candidates (BC-SR-A001 §17 P2–P3;
+- Service / Quality / Stakeholder / EAM candidates (BC-SR-A001 §17 P2-P3;
   revisit after tracks A/B/C close).
 
 **Tag**: `v1-alpha.5` (cut at this CR's merge commit).

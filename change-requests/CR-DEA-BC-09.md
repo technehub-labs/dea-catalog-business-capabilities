@@ -161,7 +161,6 @@ Post-CR advisory set (5, all documented in the script docstring): Strategy
 - `scripts/check_catalog_index.py --schema ...`: OK (26 entities)
 - `scripts/check_visual_domain_labels.py`: PASS
 - Entry schema validation (jsonschema draft-07, CI-equivalent): 26/26 clean
-- Dash check (no en/em dashes): clean on all touched files
 - `git diff --check`: clean
 - Secret-pattern scan: clean
 

@@ -1,11 +1,11 @@
-# CR-DEA-BC-18 — Track A (Organizational Design) Evidence Package
+# CR-DEA-BC-18: Track A (Organizational Design) Evidence Package
 
 **Status:** Draft for review (research-CR; no admission in this revision)
 **Date:** 2026-09-11
 **Carrier:** Coder (for eaojnr)
 **Branch:** `feat/CR-DEA-BC-18-track-a-orgdesign-evidence`
 **Closes:** BC-13 §B.1 (Track A investigation opened); BC-SR-A001 §4 evidence work
-**Blocks:** CR-DEA-BC-14 (provisional; Track A admission CR — pending user acceptance)
+**Blocks:** CR-DEA-BC-14 (provisional; Track A admission CR: pending user acceptance)
 
 ---
 
@@ -90,12 +90,12 @@ sense. ✅
 
 Three independent source classes registered in `evidence-register.yaml` v0.5.0:
 
-- **SRC-017** — Galbraith Star Model & org-design literature (business-architecture)
-- **SRC-018** — APQC PCF v8.0 — Organization category (cross-industry-process)
-- **SRC-019** — ISO 9001:2015 §5.3 organizational roles, responsibilities, authorities (standards-body)
+- **SRC-017**: Galbraith Star Model & org-design literature (business-architecture)
+- **SRC-018**: APQC PCF v8.0: Organization category (cross-industry-process)
+- **SRC-019**: ISO 9001:2015 §5.3 organizational roles, responsibilities, authorities (standards-body)
 
 EVIDENCE.md §3 E3 threshold: "appears in credible material with partial
-independence" — **exceeded** (full independence across three source classes,
+independence": **exceeded** (full independence across three source classes,
 not partial).
 
 EVIDENCE.md §5 retrieval honesty: indirect retrieval flagged for SRC-017
@@ -156,23 +156,23 @@ CR-DEA-BC-14 (Track A admission) when admitted.
 |---|---|
 | SRC-017/018/019 indirect retrieval may be challenged at admission review | Direct retrieval actions recorded in TER-ORGDESIGN-001 follow_up_evidence_actions; can run independently of admission. Re-rating on direct retrieval is a small follow-on CR if needed. |
 | Anti-invention test (§5) on non-profit archetype is `moderate`, not `strong` | Non-profit boards / dual governance is a legitimate variation of the design discipline; the capability still recurs. Documented in matrix row note. |
-| CAND-036 child-candidate mapping (a/b/c) is hypothesized, not worked out | Recorded as "candidate children" — admission CR decides whether to keep, work out, or omit. Not blocking research-CR landing. |
+| CAND-036 child-candidate mapping (a/b/c) is hypothesized, not worked out | Recorded as "candidate children": admission CR decides whether to keep, work out, or omit. Not blocking research-CR landing. |
 | User may disagree with the ECF primary placement (`agency-organization/design`) | The hypothesis is low-medium confidence; admission CR can revise. The overlay hypothesis is recorded honestly, not smoothed. |
 | BC-SR-A001 §4 reviewer's exact boundary expectations (e.g. relationship to Workforce Management) | Sweep rationale explicitly addresses each pair; ready for review. |
 
 ## 10. Follow-on work (not in this CR)
 
-- **CR-DEA-BC-14 (provisional)** — Track A admission CR. Triggered on user
+- **CR-DEA-BC-14 (provisional)**: Track A admission CR. Triggered on user
   acceptance of this evidence package. Will carry formal §12 review sign-off,
   version bump (catalog → 28 first-order capabilities), final entry record,
   CHANGELOG / docs/REVIEWS / README updates, tag-cut decision.
-- **Direct retrieval actions** — independent of admission; can run as a
+- **Direct retrieval actions**: independent of admission; can run as a
   follow-on if SRC-017/018/019 primaries are needed for stronger E4 rating.
-- **Track B (EPM, BC-15 provisional)** — separate evidence package; no work
+- **Track B (EPM, BC-15 provisional)**: separate evidence package; no work
   in this CR.
-- **Track C (Relationship Mgmt, BC-16 provisional)** — separate evidence
+- **Track C (Relationship Mgmt, BC-16 provisional)**: separate evidence
   package; no work in this CR.
-- **CAND-036 child candidates** — a/b/c on file; admission CR decides depth.
+- **CAND-036 child candidates**: a/b/c on file; admission CR decides depth.
 
 ## 11. See also
 
@@ -180,11 +180,11 @@ CR-DEA-BC-14 (Track A admission) when admitted.
   test; §6 ladder passage; §8 ECF mapping rule; §4 admission tests.
 - [EVIDENCE.md](../../EVIDENCE.md) §2 source classes; §3 E0:E5 ratings; §5
   retrieval honesty; §6 dual-delivery.
-- [INV-ORGDESIGN-v0.2.md](../../catalog-research/INV-ORGDESIGN-v0.2.md) — full
+- [INV-ORGDESIGN-v0.2.md](../../catalog-research/INV-ORGDESIGN-v0.2.md): full
   investigation report.
-- [INV-ORGDESIGN-v0.1.yaml](../../catalog-research/INV-ORGDESIGN-v0.1.yaml) —
+- [INV-ORGDESIGN-v0.1.yaml](../../catalog-research/INV-ORGDESIGN-v0.1.yaml):
   YAML twin.
-- [BC-SR-A001 §4](../submittal-reviews/BC-SR-A001.md) — reviewer seed (P1).
-- [CR-DEA-BC-12 §B.1](./CR-DEA-BC-12.md) — investigation opened.
-- [CR-DEA-BC-13 §D.1](./CR-DEA-BC-13.md) — overlay hypothesis + track record.
-- [CR-DEA-BC-17 §10](./CR-DEA-BC-17.md) — follow-on queue (BC-14 provisional).
+- [BC-SR-A001 §4](../submittal-reviews/BC-SR-A001.md): reviewer seed (P1).
+- [CR-DEA-BC-12 §B.1](./CR-DEA-BC-12.md): investigation opened.
+- [CR-DEA-BC-13 §D.1](./CR-DEA-BC-13.md): overlay hypothesis + track record.
+- [CR-DEA-BC-17 §10](./CR-DEA-BC-17.md): follow-on queue (BC-14 provisional).

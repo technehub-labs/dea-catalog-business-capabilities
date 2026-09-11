@@ -1,12 +1,14 @@
 id: dea:capability-technology-enablement
 type: BusinessCapability
 name: Technology Enablement
-definition: The ability to run and continuously adapt the technology services, platforms, and automation that other capabilities depend on, sustaining operational technology delivery across the enterprise.
+definition: The ability to run and continuously adapt the technology services, platforms, and automation
+  that other capabilities depend on, sustaining operational technology delivery across the enterprise.
 version: 1.0.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
-outcome: Technology services and platforms are reliable, available, performant, and adapted to changing demand from the capabilities that depend on them.
+outcome: Technology services and platforms are reliable, available, performant, and adapted to changing
+  demand from the capabilities that depend on them.
 business_object: Technology Service
 ecf:
   primary:
@@ -26,10 +28,13 @@ evidence:
   sources:
   - SRC-005
   - SRC-006
-  rationale: 'Admission per CR-DEA-BC-17. The ''Technology-as-Enabler'' sub-concern carved out by CR-DEA-BC-13 §C is here promoted to a first-order canonical capability. Evidence trail: BC-SR-A001 §12 (reviewer''s
-    recommendation to formalize the Tech-as-Estate vs Tech-as-Enabler carve); CR-DEA-BC-13 §C (carve-text-only deferral); CR-DEA-BC-17 §3 (full evidence package for admission). Enterprise-generality demonstrated
-    at E3 (cross-industry IT service delivery function is universal across B2B/B2C/G2C enterprises per foundation inclusion criteria gate A+B+C); evidence trail in catalog-research/{evidence-register, enterprise-generality-matrix,
-    distinctness-sweep}.'
+  rationale: 'Admission per CR-DEA-BC-17. The ''Technology-as-Enabler'' sub-concern carved out by CR-DEA-BC-13
+    §C is here promoted to a first-order canonical capability. Evidence trail: BC-SR-A001 §12 (reviewer''s
+    recommendation to formalize the Tech-as-Estate vs Tech-as-Enabler carve); CR-DEA-BC-13 §C (carve-text-only
+    deferral); CR-DEA-BC-17 §3 (full evidence package for admission). Enterprise-generality demonstrated
+    at E3 (cross-industry IT service delivery function is universal across B2B/B2C/G2C enterprises per
+    foundation inclusion criteria gate A+B+C); evidence trail in catalog-research/{evidence-register,
+    enterprise-generality-matrix, distinctness-sweep}.'
 provenance:
   ladder_passage:
   - stage: candidate
@@ -56,24 +61,34 @@ provenance:
 specialization:
   allowed: true
   industry_examples: []
-why_capability: E3 (foundation-grade per A+B+C gate). BC-SR-A001 §12 explicitly recommended this admission. CR-DEA-BC-13 §C carved out the Technology-as-Enabler sub-concern; this CR admits it as a first-order
-  capability. Distinct business object (Technology Service vs Technology Estate) and distinct ECF cell (enablement-operations/operate vs strategy-direction/build) from Technology Management. Distinct from
+why_capability: E3 (foundation-grade per A+B+C gate). BC-SR-A001 §12 explicitly recommended this admission.
+  CR-DEA-BC-13 §C carved out the Technology-as-Enabler sub-concern; this CR admits it as a first-order
+  capability. Distinct business object (Technology Service vs Technology Estate) and distinct ECF cell
+  (enablement-operations/operate vs strategy-direction/build) from Technology Management. Distinct from
   Operations (delivery of value vs delivery of technology for value delivery).
-ecf_rationale: 'Admitted 2026-09-10 under CR-DEA-BC-17. Under the new semantic-center-of-gravity rule (CR-DEA-BC-13 §A), the defining activity of Technology Enablement is sustained IT service and platform
-  delivery (operate) — running, monitoring, adapting technology services for the capabilities that depend on them. Secondary coordinates: build (provisioning new services as demand requires) and improve
-  (SRE/platform engineering iteration). Distinct from Technology Management (strategy-direction/build): Technology Management stewards the estate (what technology the enterprise has); Technology Enablement
-  runs the services (how that technology operates for others). The ECF places technology as enablers of execution (BC-SR-A001 §15 quote: ''Technology, platforms, and physical infrastructure are positioned
-  as enablers of execution''), which is exactly the enablement-operations domain and the operate stage.'
-boundary: 'Runs technology services, platforms, automation, and observability for the rest of the enterprise. DOES NOT build/acquire the technology estate (Technology Management — strategic posture and
-  acquisition); DOES NOT derive insight from information (Analytics and Intelligence); DOES NOT steward information lifecycles (Information Management); DOES NOT run business operations (Operations — value
-  delivery). The defining distinction: Technology Enablement is the IT delivery function; Technology Management is the IT direction function.'
+ecf_rationale: 'Admitted 2026-09-10 under CR-DEA-BC-17. Under the new semantic-center-of-gravity rule
+  (CR-DEA-BC-13 §A), the defining activity of Technology Enablement is sustained IT service and platform
+  delivery (operate): running, monitoring, adapting technology services for the capabilities that depend
+  on them. Secondary coordinates: build (provisioning new services as demand requires) and improve (SRE/platform
+  engineering iteration). Distinct from Technology Management (strategy-direction/build): Technology Management
+  stewards the estate (what technology the enterprise has); Technology Enablement runs the services (how
+  that technology operates for others). The ECF places technology as enablers of execution (BC-SR-A001
+  §15 quote: ''Technology, platforms, and physical infrastructure are positioned as enablers of execution''),
+  which is exactly the enablement-operations domain and the operate stage.'
+boundary: 'Runs technology services, platforms, automation, and observability for the rest of the enterprise.
+  DOES NOT build/acquire the technology estate (Technology Management: strategic posture and acquisition);
+  DOES NOT derive insight from information (Analytics and Intelligence); DOES NOT steward information
+  lifecycles (Information Management); DOES NOT run business operations (Operations: value delivery).
+  The defining distinction: Technology Enablement is the IT delivery function; Technology Management is
+  the IT direction function.'
 non_examples:
-- An IT department (an organization — the function may be performed by one)
-- A specific platform (a system — the capability operates platforms but is not one)
-- An SLO (an artifact — the outcome, not the capability)
-specialization_boundary: IT service management (incident, problem, change), platform engineering (internal developer platforms, paved roads), site reliability engineering (SLOs, error budgets, on-call),
-  automation engineering (RPA, workflow automation, agentic automation), and data platform engineering are specializations of this capability. The ability to run technology services is NOT a specialization
-  of any other capability.
+- 'An IT department (an organization: the function may be performed by one)'
+- 'A specific platform (a system: the capability operates platforms but is not one)'
+- 'An SLO (an artifact: the outcome, not the capability)'
+specialization_boundary: IT service management (incident, problem, change), platform engineering (internal
+  developer platforms, paved roads), site reliability engineering (SLOs, error budgets, on-call), automation
+  engineering (RPA, workflow automation, agentic automation), and data platform engineering are specializations
+  of this capability. The ability to run technology services is NOT a specialization of any other capability.
 ecfConformance:
   framework: EnterpriseConceptFramework
   contractVersion: 1.0.0
@@ -102,7 +117,8 @@ ecfConformance:
   extensions:
   - name: kebab-case-domain-vocabulary
     kind: display-vocabulary
-    description: Catalog-side kebab-case labels for the seven ECF Domains and seven ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums for the gate.
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven ECF Stages (see mapping).
+      Display-only; resolves to canonical PascalCase enums for the gate.
     doesNotRedefine: true
     mapping:
       governance-existence: GovernanceAndExistence
@@ -121,5 +137,6 @@ ecfConformance:
       _stage_retire: Retire
   - name: multiple-contextual-coordinates
     kind: catalog-specific-relation
-    description: A capability may have one primary and zero-or-more secondary canonical coordinates without identity duplication (CG-003 §5).
+    description: A capability may have one primary and zero-or-more secondary canonical coordinates without
+      identity duplication (CG-003 §5).
     doesNotRedefine: true

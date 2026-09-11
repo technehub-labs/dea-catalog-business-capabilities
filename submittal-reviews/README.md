@@ -13,9 +13,9 @@ artifact rather than for an in-flight proposal.
    submission lands here as `BC-SR-A###.md` (BC = Business Capability, SR =
    Submittal Review, A### = sequential id).
 3. **Triage by the catalog owner.** Each item in the submission is classified:
-   - **P1 — high confidence, in-scope** (recommended fix lands in a CR)
-   - **P2 — borderline, evidence-gated** (opens an investigation; no admission)
-   - **P3 — investigation** (placed on a backlog; not acted on until a higher-priority
+   - **P1: high confidence, in-scope** (recommended fix lands in a CR)
+   - **P2: borderline, evidence-gated** (opens an investigation; no admission)
+   - **P3: investigation** (placed on a backlog; not acted on until a higher-priority
      CR clears it)
 4. **The carrier CR for the recommendations is opened** in `change-requests/`
    (CR-DEA-BC-NN). Each item in the review is referenced by section number and
@@ -37,15 +37,15 @@ artifact rather than for an in-flight proposal.
 
 `BC-SR-A<NNN>.md`
 
-- `BC` — catalog prefix. Other catalogs use their own prefix:
+- `BC`: catalog prefix. Other catalogs use their own prefix:
   - `DEA-MF-SR-...` for `dea-metaframework`
   - `DEA-MM-SR-...` for `dea-metamodel`
   - `DEA-CP-SR-...` for `dea-catalog-processes`
   - `DEA-CA-SR-...` for `dea-catalog-actors`
   - (`DEA-` is the org prefix; cross-repo consumers of this convention are documented
     in the org-wide submittal-review standard.)
-- `SR` — submittal review (constant).
-- `A<NNN>` — sequential id, zero-padded to three digits, assigned by the receiving
+- `SR`: submittal review (constant).
+- `A<NNN>`: sequential id, zero-padded to three digits, assigned by the receiving
   catalog owner when the submission is filed. Sequence is per-catalog (BC starts at
   A001, MM starts at A001 independently).
 
@@ -57,11 +57,11 @@ verbatim across all TechNeHub Labs catalogs.
 
 ## Cross-references
 
-- `TEMPLATE.md` — the reusable cross-repo template for submitting review feedback.
-- `change-requests/README.md` — index of carrier CRs that landed recommendations
+- `TEMPLATE.md`: the reusable cross-repo template for submitting review feedback.
+- `change-requests/README.md`: index of carrier CRs that landed recommendations
   from submittal reviews.
-- `CHANGELOG.md` — per-release entries referencing submittal reviews and their
+- `CHANGELOG.md`: per-release entries referencing submittal reviews and their
   carrier CRs.
-- `README.md` — `## Submittal Reviews` section with the running summary.
-- `docs/REVIEWS.md` — per-release submittal review commentary underpinning
+- `README.md`: `## Submittal Reviews` section with the running summary.
+- `docs/REVIEWS.md`: per-release submittal review commentary underpinning
   changes in a summarized yet rich form for the next imaged release.

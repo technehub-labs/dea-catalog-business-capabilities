@@ -20,7 +20,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 0
     id: dea:candidate-epm
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: candidate
     path: entities/v1-alpha/dea:candidate-epm/candidates/epm.yaml
     research_count: 0
@@ -31,7 +31,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 0
     id: dea:candidate-orgdesign
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: candidate
     path: entities/v1-alpha/dea:candidate-orgdesign/candidates/orgdesign.yaml
     research_count: 0
@@ -42,7 +42,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 0
     id: dea:candidate-relmgmt
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: candidate
     path: entities/v1-alpha/dea:candidate-relmgmt/candidates/relmgmt.yaml
     research_count: 0
