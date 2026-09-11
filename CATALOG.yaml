@@ -4,7 +4,7 @@ catalog:
     candidates: 3
     canonical: 27
     entities: 30
-    open_change_requests: 20
+    open_change_requests: 21
     research_files: 3
     retired: 0
   cross_cutting:
@@ -163,7 +163,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-information-management
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-information-management/dea:capability-information-management.yaml
     research_count: 0
@@ -207,7 +207,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-operations
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-operations/dea:capability-operations.yaml
     research_count: 0

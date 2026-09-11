@@ -28,8 +28,8 @@ evidence_ratings:
 - E4
 - E5
 counts:
-  total: 35
-  CAPABILITY: 29
+  total: 36
+  CAPABILITY: 30
   SPECIALIZATION: 1
   PROCESS: 1
   ORGANIZATION: 1
@@ -856,3 +856,50 @@ candidates:
     canonical: false
     added: '2026-08-31'
     evidence_register: docs/research/evidence-register.yaml
+- id: CAND-036
+  name: Organizational Design
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E1
+  business_object_hypothesis: Organization Structure
+  parent_candidates: []
+  child_candidates:
+  - CAND-036a Role and Authority Design
+  - CAND-036b Coordination Pattern Design
+  - CAND-036c Governance Hierarchy Design
+  sources:
+  - SRC-017
+  - SRC-018
+  - SRC-019
+  durable: demonstrated
+  implementation_independent: demonstrated
+  notes: 'Track A investigation (CR-DEA-BC-18); seeded by BC-SR-A001 §4 (reviewer P1) and BC-DEA-BC-13 §B.1. Hypothesized
+    first-order capability: the ability to design the enterprise''s organizational structures, roles, authorities, and
+    coordination patterns through which agency is organized. Distinct from CAND-015 Workforce Management (agent lifecycle)
+    and CAND-014 Workforce Planning (agent capacity); the structural subject here is the Organization, not the agents
+    that populate it. Anti-invention test: changes industry, the ability still makes sense (every enterprise has structure
+    to design). Evidence initially E1 from review recommendation; promotion to E3 requires independent corpus corroboration
+    from at least two source classes (research-CR deliverable).'
+  rationale: 'The capability is recognized across management literature (Galbraith Star Model, McKinsey 7-S, Weick''s organizing,
+    standard organizational design textbooks) and across industry frameworks (APQC PCF Organization Development process category,
+    ISO 9001 §5.3 organizational roles). The ECF explicitly defines Agency & Organization as owning organizational design,
+    agent capacity planning, acquisition/onboarding, development/performance, coordination/collaboration, movement/transition.
+    The catalog currently admits Workforce Planning (CAND-014, agent capacity) and Workforce Management (CAND-015, agent lifecycle)
+    but not the structural capability the ECF positions in agency-organization / design. Per BC-SR-A001 §4, this is a foundational
+    gap. Per METHODOLOGY §5 anti-invention test: an adopting enterprise that changes industry tomorrow still requires an organizational
+    design capability — foundation-grade. Per §3 capability vs organization disambiguation: Organizational Design is the design
+    *ability*, not an organization itself; CAND-030 (Finance Department, ORGANIZATION) is the disambiguation exemplar.'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-09-11'
+    evidence_register: docs/research/evidence-register.yaml
+    track: 'Track A (BC-DEA-BC-13 §B.1; CR-DEA-BC-18)'
+    sources_seeded_by:
+    - BC-SR-A001 §4 (reviewer P1)
+    - BC-DEA-BC-13 §B.1
+    - CR-DEA-BC-17 §10 follow-on queue (CR-DEA-BC-14 provisional)
+    pending_promotion:
+    - E0 → E1 on initial corpus seeding (this CR)
+    - E1 → E3 on independent corroboration across ≥2 source classes (this CR)
+    - E3+ → admission gate per METHODOLOGY §12 (separate CR-DEA-BC-14)

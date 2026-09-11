@@ -40,6 +40,31 @@ regime) and `v<N>.<M>` semver from v2 onward. See
 
 **Tag**: `v1-alpha.7` (target at this CR's merge commit).
 
+### Research-CR addendum (same release cycle, no version bump)
+
+**CR-DEA-BC-18** (research-CR; no admission). Begins the evidence-collection work
+for BC-SR-A001 §4 (Track A — Organizational Design). Lands on disk:
+
+- CAND-036 added to candidate universe (CAPABILITY classification; evidence
+  rating E1 pending direct retrieval; promotes to E3 on independent
+  corroboration across three source classes).
+- SRC-017/018/019 added to evidence register (business-architecture /
+  cross-industry-process / standards-body classes respectively; full
+  independence across classes).
+- TER-ORGDESIGN-001 track record seeded.
+- ECF overlay hypothesis confidence `low → low-medium`.
+- Enterprise-generality matrix row added (9 of 10 types strong; non-profit
+  moderate; demonstrated per A+B+C gate).
+- Distinctness sweep expanded to cover the two newly-admitted Tech capabilities.
+- Admission-gate pre-check added with honest gap disclosure (`evidence_ge_E3`
+  pending direct retrieval of SRC-017/018/019 primaries).
+- Full investigation report: `catalog-research/INV-ORGDESIGN-v0.2.md` + YAML
+  twin `INV-ORGDESIGN-v0.1.yaml`.
+
+**No canonical entity admitted** in CR-DEA-BC-18. Catalog still 27 first-order.
+Track A admission remains the next step (provisional CR-DEA-BC-14, triggered on
+user acceptance of this evidence package).
+
 ## [v1-alpha.6] - 2026-09-10
 
 **Minor** (CR-DEA-BC-13, PR #66). Method-CR for the ECF primary-coordinate rule: replaces the pre-CR-13 "earliest initiation point" rule with "semantic center of gravity" (METHODOLOGY.md §8), re-evaluates all 26 canonical entries under the new rule, formalizes the Technology Management carve per BC-SR-A001 §12, and starts the actual evidence collection for the three investigation tracks (Organizational Design, Enterprise Performance Management, Relationship Management) as non-canonical candidate records (no admission in this release).
