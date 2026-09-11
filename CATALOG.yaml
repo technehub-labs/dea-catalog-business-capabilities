@@ -306,7 +306,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: dea:capability-technology-enablement
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-technology-enablement/dea:capability-technology-enablement.yaml
     research_count: 0
@@ -317,7 +317,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-technology-management
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-technology-management/dea:capability-technology-management.yaml
     research_count: 0
