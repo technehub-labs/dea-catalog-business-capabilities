@@ -1,8 +1,8 @@
-register_version: 0.5.0
-cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C evidence stubs) + CR-DEA-BC-18 (Track A evidence package)
-compiled: '2026-09-11 (v0.5: Track A evidence seeded — CAND-036 Organizational Design; SRC-017/018/019 added; E1 → E3 target on independent corroboration across 3 source classes)'
+register_version: 0.6.0
+cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C evidence stubs) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; TER-ORGDESIGN-001 closed; CAND-036 → E4)
+compiled: '2026-09-11 (v0.6: Track A admission closed under CR-DEA-BC-14; TER-ORGDESIGN-001 status closed; CAND-036 admitted as `dea:capability-organizational-design` v1.0.0)'
 compiled_by: Coder (for eaojnr)
-status: draft-for-review; Track A evidence work in progress; no admission in this revision
+status: draft-for-review; Track A admission closed under CR-DEA-BC-14 (this revision); Tracks B (EPM) and C (Relationship Mgmt) still in evidence-stub phase
 source_classes:
 - business-architecture
 - enterprise-architecture
@@ -471,25 +471,24 @@ corpus_assessment:
 track_evidence_records:
 - id: TER-ORGDESIGN-001
   track: A (Organizational Design)
-  candidate_id: dea:candidate-orgdesign (CAND-036)
-  evidence_strength: 'E3 (seeded by CR-DEA-BC-18; independent corroboration across business-architecture + cross-industry-process + standards-body source classes; promotes to E4 on admission — admission not in CR-DEA-BC-18)'
+  candidate_id: dea:capability-organizational-design (CAND-036)
+  evidence_strength: E4 (admitted under CR-DEA-BC-14; promotion from E3 per EVIDENCE.md §3 admission promotion rule)
   registered_on: '2026-09-10'
   registered_by: Coder (for eaojnr) under CR-DEA-BC-13 §D.1
   evidence_seeded_on: '2026-09-11'
   evidence_seeded_by: Coder (for eaojnr) under CR-DEA-BC-18 (research-CR; no admission)
+  admitted_on: '2026-09-11'
+  admitted_by: eaojnr under CR-DEA-BC-14 (admission PR; this round)
   sources_consulted:
-  - SRC-017 Galbraith Star Model and organization-design literature (business-architecture class; indirect retrieval pending direct text)
-  - SRC-018 APQC PCF v8.0 — Organization category (cross-industry-process class; indirect retrieval pending direct element list)
-  - SRC-019 ISO 9001:2015 §5.3 organizational roles, responsibilities, and authorities (standards-body class; direct retrieval of summary, full normative text paywalled)
-  open_evidence_questions:
-  - "Does Organizational Design have a distinct durable business object? (preliminary answer: yes, Organization Structure — distinct from Strategy's Enterprise object, Workforce Planning's Agent capacity object, Workforce Management's Agent lifecycle object)"
-  - "Is the capability substrate-neutral across human + artificial + hybrid agents? (preliminary answer: yes per METHODOLOGY §1 capability-as-ability definition; the design subject is the structure, not the substrate)"
-  - "Does it survive the enterprise-generality test (>=3 verticals, B2B/B2C/G2C)? (preliminary answer: yes — strong on commercial, professional-services, government, healthcare, technology, manufacturing, financial-services, infrastructure, retail; moderate on non-profit; per CAND-036 enterprise-generality-matrix row in CR-DEA-BC-18)"
+  - 'SRC-017 Galbraith Star Model and organization-design literature (business-architecture class; indirect retrieval pending direct text)'
+  - 'SRC-018 APQC PCF v8.0 — Organization category (cross-industry-process class; indirect retrieval pending direct element list)'
+  - 'SRC-019 ISO 9001:2015 §5.3 organizational roles, responsibilities, and authorities (standards-body class; direct retrieval of summary, full normative text paywalled)'
+  open_evidence_questions: []
   follow_up_evidence_actions:
-  - Direct retrieval of Galbraith (2002) chapter structure to confirm five-choice Star Model framing
-  - Direct retrieval of APQC PCF element list to map 'Organization Development' / 'Manage Organizational Change' process categories to CAND-036 child candidates
-  - Direct retrieval of ISO 9001:2015 §5.3 normative text via institutional access (currently summary-level)
-  status: evidence-seeded; research-CR CR-DEA-BC-18 ready for review; admission not in this CR
+  - Direct retrieval of Galbraith (2002) chapter structure to confirm five-choice Star Model framing (independent of admission; re-rates to E5 if done)
+  - "Direct retrieval of APQC PCF element list to map 'Organization Development' / 'Manage Organizational Change' process categories to CAND-036 child candidates (independent of admission; re-rates to E5 if done)"
+  - 'Direct retrieval of ISO 9001:2015 §5.3 normative text via institutional access (currently summary-level; independent of admission; re-rates to E5 if done)'
+  status: 'closed (admitted under CR-DEA-BC-14, 2026-09-11); canonical entry `dea:capability-organizational-design` v1.0.0'
 - id: TER-EPM-001
   track: B (Enterprise Performance Management)
   candidate_id: dea:candidate-epm

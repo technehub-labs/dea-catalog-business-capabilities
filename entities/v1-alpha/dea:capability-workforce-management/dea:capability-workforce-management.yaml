@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Workforce Management
 definition: The ability to acquire, develop, deploy, and release the enterprise's
   workforce of human and artificial agents.
-version: 1.1.0
+version: 1.1.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -21,6 +21,7 @@ ecf:
     stage: improve
 related_capabilities:
 - dea:capability-workforce-planning
+- dea:capability-organizational-design
 evidence:
   sources:
   - SRC-002
@@ -60,8 +61,9 @@ why_capability: E5; N-001 settled the name (Workforce Management; "People Manage
   carried as alias).
 ecf_rationale: Primary build in agency-organization (the workforce is built, then
   operated and improved); conceive and retire are legitimately empty at first order.  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
-boundary: Manages the workforce; does not plan its shape (Workforce Planning) or govern
-  the enterprise (Enterprise Governance).
+boundary: Manages the workforce; does not plan its shape (Workforce Planning),
+  design the structure that hosts it (Organizational Design), or govern the enterprise
+  (Enterprise Governance).
 non_examples:
 - An HRIS (a system)
 - An HR department (an organization)

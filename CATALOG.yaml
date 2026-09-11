@@ -2,9 +2,9 @@ catalog:
   abbreviation: BC
   counts:
     candidates: 3
-    canonical: 27
-    entities: 30
-    open_change_requests: 21
+    canonical: 28
+    entities: 31
+    open_change_requests: 22
     research_files: 3
     retired: 0
   cross_cutting:
@@ -75,14 +75,14 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-change-management
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-change-management/dea:capability-change-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-continuity-management
@@ -108,14 +108,14 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-enterprise-governance
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-enterprise-governance/dea:capability-enterprise-governance.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-facility-management
@@ -215,6 +215,17 @@ catalog:
     state: canonical
     type: BusinessCapability
     version: 1.0.1
+  - candidate_count: 0
+    canonical_count: 1
+    id: dea:capability-organizational-design
+    last_modified: '2026-09-11'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-organizational-design/dea:capability-organizational-design.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-partner-management
@@ -273,25 +284,25 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-strategic-planning
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-strategic-planning/dea:capability-strategic-planning.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.1.0
+    version: 1.1.1
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-strategy
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-strategy/dea:capability-strategy.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.1.0
+    version: 1.1.1
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-supplier-management
@@ -313,7 +324,7 @@ catalog:
     retired_count: 0
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-technology-management
@@ -324,29 +335,29 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.3.0
+    version: 1.3.1
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-workforce-management
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-workforce-management/dea:capability-workforce-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.1.0
+    version: 1.1.1
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-workforce-planning
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-workforce-planning/dea:capability-workforce-planning.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.1.0
+    version: 1.1.1
   id: dea:catalog-business-capabilities
   metamodel_version: 1.0.0
   name: Business Capability
@@ -410,6 +421,9 @@ catalog:
   - entity_id: dea:capability-operations
     files: []
     path: entities/v1-alpha/dea:capability-operations/research/
+  - entity_id: dea:capability-organizational-design
+    files: []
+    path: entities/v1-alpha/dea:capability-organizational-design/research/
   - entity_id: dea:capability-partner-management
     files: []
     path: entities/v1-alpha/dea:capability-partner-management/research/

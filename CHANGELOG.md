@@ -9,6 +9,31 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [v1-alpha.8] - 2026-09-11
+
+**Minor** (CR-DEA-BC-14, PR pending). Admission-CR closing the BC-SR-A001 §4 evidence work (reviewer P1 — "the catalog had Strategy + Strategic Planning + Workforce Planning + Workforce Management but not the structural-design capability the ECF positions in `agency-organization/design`"). Admits `dea:capability-organizational-design` as the **28th first-order canonical capability** at `agency-organization/design` (primary), with `agency-organization/{conceive, build}` as secondaries. OrgDesign is the structural-design function (roles, units, reporting lines, authorities, coordination patterns that fit the work the enterprise must do); it is the peer of Workforce Planning (same primary coordinate `agency-organization/design`, distinct by business-object partition — Organization Structure vs Workforce Plan). Track A of CR-DEA-BC-13 §B.1 closed.
+
+### Affected entries
+
+- **New entry:** `dea:capability-organizational-design` v1.0.0 (first canonical release).
+- **Strategy:** 1.1.0 → **1.1.1** (Patch for related_capabilities + boundary-text exclusion extension).
+- **Strategic Planning:** 1.1.0 → **1.1.1** (Patch).
+- **Workforce Management:** 1.1.0 → **1.1.1** (Patch).
+- **Workforce Planning:** 1.1.0 → **1.1.1** (Patch; explicit same-cell note added).
+- **Change Management:** 1.0.0 → **1.0.1** (Patch).
+- **Technology Management:** 1.3.0 → **1.3.1** (Patch).
+- **Technology Enablement:** 1.0.0 → **1.0.1** (Patch).
+- **Enterprise Governance:** 1.0.0 → **1.0.1** (Patch).
+- **Other 19 entries:** unchanged.
+
+### Track A closure
+
+- TER-ORGDESIGN-001 track record closed; CAND-036 promoted E3 → E4 per EVIDENCE.md §3 admission promotion rule.
+- ECF overlay hypothesis confidence low-medium → high.
+- Distinctness sweep extended to cover all 8 peers (added Enterprise Governance + Change Management in this CR).
+- Admission-gate pre-check `evidence_ge_E3` gap → met.
+- Follow-up direct-retrieval actions for SRC-017/018/019 primaries recorded as independent of admission (would re-rate to E5 if done).
+
 ## [v1-alpha.7] - 2026-09-10
 
 **Minor** (CR-DEA-BC-17, PR pending). Admission-CR closing the BC-DEA-BC-13 §11 follow-on queue item. Admits `dea:capability-technology-enablement` as the 27th first-order canonical capability at `enablement-operations/operate` (primary), with `enablement-operations/{build, improve}` as secondaries. The new entry is the IT **delivery** function (running technology services, platforms, automation for the rest of the enterprise); Technology Management remains the IT **direction** function (stewarding the technology estate). The carve BC-SR-A001 §12 asked us to make explicit is now formalized as a peer relationship between two first-order capabilities rather than as a deferred specialization.

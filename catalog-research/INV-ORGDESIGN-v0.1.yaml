@@ -1,14 +1,15 @@
-inv_version: 0.1.0
+inv_version: 0.2.0
 track: A
 candidate_id: CAND-036
 candidate_name: Organizational Design
 track_id: TER-ORGDESIGN-001
-carrier_cr: CR-DEA-BC-18
+carrier_cr: CR-DEA-BC-18 (research-CR) + CR-DEA-BC-14 (admission CR; closed 2026-09-11)
 investigation_carrier: CR-DEA-BC-12 §B.1
 reviewer_seed: BC-SR-A001 §4 (P1)
 date_opened: 2026-09-10
 date_evidence_seeded: 2026-09-11
-status: evidence-seeded; research-CR; no admission in CR-DEA-BC-18
+date_admitted: 2026-09-11
+status: closed (admitted under CR-DEA-BC-14, 2026-09-11); Track A complete; canonical entry `dea:capability-organizational-design` v1.0.0 at agency-organization/design (primary) + conceive/build secondaries
 question: 'Is Organizational Design a distinct first-order capability that survives the catalog admission gate (METHODOLOGY §12)?'
 hypothesis:
   ability: 'The ability to design the enterprise''s organizational structures, roles, authorities, and coordination patterns through which agency is organized.'
@@ -105,13 +106,13 @@ admission_gate_precheck:
   - evidence_ge_E3
   untested: []
 ladder_passage:
-  candidate: met (CAND-036 in candidates.yaml v0.3)
+  candidate: met (CAND-036 in candidates.yaml v0.4)
   observed: met (Galbraith, APQC PCF, ISO 9001 - all credible material)
   corroborated: met (three independent source classes)
-  normalized: met (no alias collisions surfaced)
-  ecf_mapped: met (low-medium confidence; agency-organization/design primary + conceive/build secondaries)
-  reviewed: partial (semantic review per §12.1 passes; architectural review per §12.2 passes; final §12 review happens in admission CR)
-  canonical: not met (admission is the next step; this CR is research-only)
+  normalized: met (8-entry distinctness sweep; all pairs pass by business-object partition)
+  ecf_mapped: met (high confidence under CR-DEA-BC-14; agency-organization/design primary + conceive/build secondaries)
+  reviewed: met (CR-DEA-BC-14 §3 semantic review gate + §4 architectural review gate; both pass; final §12 review closed at admission PR)
+  canonical: met (admitted under CR-DEA-BC-14, 2026-09-11; CAND-036 E4 per EVIDENCE.md §3 admission promotion rule; canonical entry `dea:capability-organizational-design` v1.0.0)
 follow_up_evidence_actions:
 - Direct retrieval of Galbraith (2002) chapter structure to confirm five-choice Star Model framing
 - Direct retrieval of APQC PCF element list to map Organization Development / Manage Organizational Change process categories to CAND-036 child candidates

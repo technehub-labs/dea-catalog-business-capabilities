@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Strategic Planning
 definition: The ability to translate enterprise direction into an ordered set of intents,
   horizons, and resource postures.
-version: 1.1.0
+version: 1.1.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
@@ -17,6 +17,7 @@ ecf:
   secondary: []
 related_capabilities:
 - dea:capability-strategy
+- dea:capability-organizational-design
 evidence:
   sources:
   - SRC-001
@@ -54,8 +55,9 @@ why_capability: 'Distinct from Strategy (the sweep demonstrated partition: Strat
   sets direction, Strategic Planning sequences its pursuit); recorded in every strategy-bearing
   corpus source.'
 ecf_rationale: 'Re-mapped 2026-09-10 (BC-SR-A001 §9, CR-DEA-BC-12 §A.2): the ECF lists Strategic Planning inside Strategy & Direction; planning is downstream of strategy but in the same domain. Primary strategy-direction/conceive (planning is constituted when strategy is conceived); no secondaries. CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).'
-boundary: Plans the pursuit of direction; does not set direction (Strategy) or manage
-  the resulting change portfolio (Change Management).
+boundary: Plans the pursuit of direction; does not set direction (Strategy), design
+  the structure the plan operates within (Organizational Design), or manage the resulting
+  change portfolio (Change Management).
 non_examples:
 - An annual budget cycle (Financial Resource Management)
 - A project plan (a process artifact, not this ability)

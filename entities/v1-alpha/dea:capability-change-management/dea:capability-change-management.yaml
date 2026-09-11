@@ -2,7 +2,7 @@ id: dea:capability-change-management
 type: BusinessCapability
 name: Change Management
 definition: The ability to move the enterprise deliberately from one state to another.
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
@@ -16,6 +16,7 @@ ecf:
   secondary: []
 related_capabilities:
 - dea:capability-enterprise-governance
+- dea:capability-organizational-design
 evidence:
   sources:
   - SRC-002
@@ -55,7 +56,8 @@ ecf_rationale: 'R-005: primary governance-existence x improve (the ability is fi
   exercised when the enterprise deliberately improves itself); secondaries empty per
   honest-not-exhaustive. CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).'
 boundary: Manages change; does not set direction (Strategy), govern the enterprise
-  (Enterprise Governance), or operate steady-state delivery (Operations).
+  (Enterprise Governance), design the new structure that the change operates within
+  (Organizational Design), or operate steady-state delivery (Operations).
 non_examples:
 - A change request ticket (an artifact)
 - A transformation office (an organization)

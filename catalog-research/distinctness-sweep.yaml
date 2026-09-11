@@ -1,9 +1,9 @@
-sweep_version: 0.3.0
-cr: CR-DEA-BC-02 (initial 26) + CR-DEA-BC-13 (track A/B/C sweeps) + CR-DEA-BC-18 (Track A evidence seed; expanded against-list incl. dea:capability-technology-management and dea:capability-technology-enablement)
-compiled: '2026-09-11 (v0.3: track A evidence seeded; expanded against-list incl. the 2 newly-admitted Tech capabilities; 26-entry sweep and track B/C sweeps unchanged)'
+sweep_version: 0.4.0
+cr: CR-DEA-BC-02 (initial 26) + CR-DEA-BC-13 (track A/B/C sweeps) + CR-DEA-BC-18 (Track A evidence seed; expanded against-list incl. dea:capability-technology-management and dea:capability-technology-enablement) + CR-DEA-BC-14 (Track A admission; expanded against-list incl. dea:capability-enterprise-governance and dea:capability-change-management; dea:candidate-orgdesign → dea:capability-organizational-design)
+compiled: '2026-09-11 (v0.4: Track A admitted under CR-DEA-BC-14; OrgDesign against-list 6 → 8 entries; sweep closed)'
 status: candidate-not-canonical; research decisions, subject to review
 inputs:
-  candidates: docs/research/candidates.yaml (v0.3.0)
+  candidates: docs/research/candidates.yaml (v0.4.0)
   normalization: docs/research/normalization.yaml (v0.2.0)
   generality_matrix: docs/research/enterprise-generality-matrix.yaml (v0.3.0)
 scope:
@@ -1703,29 +1703,35 @@ enumeration:
   - CAND-029
   relationship: parent_child
 track_sweeps:
-- candidate: dea:candidate-orgdesign
+- candidate: dea:capability-organizational-design
   track: A
-  cr: CR-DEA-BC-13 §D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed; no admission)
+  cr: CR-DEA-BC-13 §D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed; no admission) + CR-DEA-BC-14 (admission CR; this round)
   against:
   - id: dea:capability-workforce-management
     verdict: Distinct
     rationale: 'agents vs structure of agents — Workforce Management concerns the lifecycle of agents (acquisition, development, deployment, retention per CAND-015); Organizational Design concerns the structure those agents populate. Different business object: Agent lifecycle vs Organization Structure.'
   - id: dea:capability-workforce-planning
     verdict: Distinct
-    rationale: 'capacity over time vs structure — Workforce Planning concerns forecasting and resourcing agent capacity (CAND-014); Organizational Design concerns the structural design choices that define role hierarchies, authority allocation, and coordination patterns. Different business object: Agent capacity vs Organization Structure.'
+    rationale: 'capacity over time vs structure — Workforce Planning concerns forecasting and resourcing agent capacity (CAND-014); Organizational Design concerns the structural design choices that define role hierarchies, authority allocation, and coordination patterns. Different business object: Agent capacity vs Organization Structure. Same primary ECF coordinate (agency-organization/design) but distinct by business-object partition (Workforce Plan vs Organization Structure); the two are peers — design the structure, plan the workforce against it.'
   - id: dea:capability-strategy
     verdict: Distinct
     rationale: 'posture vs operationalization — Strategy concerns the enterprise posture at the strategic level (CAND-001; business object: Enterprise); Organizational Design operationalizes the structural choices that implement a chosen posture. Different business object; the relationship is parent-child (Org Design implements Strategy), not distinctness-by-overlap.'
   - id: dea:capability-strategic-planning
     verdict: Distinct
     rationale: 'sequencing vs structure — Strategic Planning concerns planning the sequencing of strategic initiatives (CAND-002; business object: Plan); Organizational Design concerns the structural form. Different business object.'
+  - id: dea:capability-enterprise-governance
+    verdict: Distinct
+    rationale: 'authority framework vs structural implementation — Enterprise Governance concerns the authority framework (CAND-003; business object: Decision); Organizational Design implements that framework operationally as roles, units, and reporting lines. Different business object (Decision vs Organization Structure); the relationship is parent-child (Governance sets the framework; OrgDesign implements it).'
+  - id: dea:capability-change-management
+    verdict: Distinct
+    rationale: 'change process vs structural subject — Change Management concerns the deliberate movement of the enterprise from one state to another (business object: Change); Organizational Design concerns the structural choices themselves (business object: Organization Structure). The relationship is parent-child in the other direction: structural redesign is one trigger of change, but OrgDesign is not the change process itself.'
   - id: dea:capability-technology-management
     verdict: Distinct
     rationale: 'technology estate vs organization structure — Technology Management stewards the technology estate (post-BC-08; strategy-direction/build); Organizational Design designs the structure through which the estate is stewarded (e.g., IT department shape, CIO reporting line). Different business object: Technology Estate vs Organization Structure.'
   - id: dea:capability-technology-enablement
     verdict: Distinct
     rationale: 'technology services vs organization structure — Technology Enablement runs technology services for the rest of the enterprise (post-BC-17; enablement-operations/operate); Organizational Design designs the structure of the function that delivers those services (sourcing model, team topology, on-call coordination). Different business object.'
-  status: 'sweep-completed-as-evidence-seeded; evidence package seeded by CR-DEA-BC-18 across SRC-017/018/019; admission pending separate admission CR (CR-DEA-BC-14 provisional)'
+  status: 'sweep-completed-as-admitted; Track A admission closed under CR-DEA-BC-14 (2026-09-11); CAND-036 E4; canonical entry `dea:capability-organizational-design` v1.0.0'
 - candidate: dea:candidate-epm
   track: B
   cr: CR-DEA-BC-13 §D.2

@@ -372,3 +372,47 @@ boundaries; final record-shape conformance happens in the admission CR.
 - **CR-DEA-BC-16** — Track C (Relationship Mgmt) evidence package (not yet started)
 - **Direct retrieval actions** for SRC-017/018/019 (independent of admission;
   re-rates to E4 if done)
+
+## v1-alpha.8 — 2026-09-11 (BC-SR-A001 §4 closure)
+
+**CARRIER:** [CR-DEA-BC-14](../../change-requests/CR-DEA-BC-14-track-a-orgdesign-admission.md) (admission-CR; canonical entity added; 27 → 28 first-order caps).
+
+**Review scope:** Track A admission of `dea:capability-organizational-design` at `agency-organization/design` (primary) + `conceive/build` secondaries. Closes BC-SR-A001 §4 (reviewer P1), BC-13 §B.1 (Track A investigation opened), CR-DEA-BC-18 (Track A evidence package), TER-ORGDESIGN-001 (open → closed), CAND-036 (E3 → E4 per EVIDENCE.md §3 admission promotion rule).
+
+**Headline status:** **All 10 admission-gate criteria met** per `admission-gate-precheck.yaml` v0.7 row for CAND-036. Semantic review gate 1 passes on hard gates (Ability, Outcome, Implementation Independence) and all 7 soft gates; architectural review gate 2 passes on ECF mapping defensibility (semantic-center-of-gravity rule CR-13 §A → agency-organization/design primary + conceive/build secondaries), cell-occupancy (3 → 4, within monopartite band), layering boundaries (no parent-child violation), specialization defensibility (foundation per METHODOLOGY §5 anti-invention).
+
+**Items landed:**
+
+- **`dea:capability-organizational-design` v1.0.0** admitted as 28th first-order canonical capability at `agency-organization/design` (primary); business object Organization Structure; 8 related_capabilities entries (Strategy, Strategic Planning, Enterprise Governance, Workforce Planning, Workforce Management, Change Management, Technology Management, Technology Enablement).
+- **8 existing entries bumped to Patch** (1.1.0 → 1.1.1 / 1.0.0 → 1.0.1 / 1.3.0 → 1.3.1): related_capabilities + boundary-text exclusion extension.
+- **`dea:capability-workforce-planning` boundary** extended with explicit same-cell note (Workforce Plan vs Organization Structure business-object partition).
+- **`dea:capability-technology-management` boundary** extended with IT-org-design-as-sub-concern clause.
+- **`dea:capability-technology-enablement` boundary** extended with IT-org-design-as-sub-concern clause.
+- **Distinctness sweep** expanded from 6 → 8 peers (added Enterprise Governance + Change Management).
+- **CAND-036 promoted E3 → E4** per EVIDENCE.md §3 admission promotion rule.
+- **TER-ORGDESIGN-001 track record** closed.
+- **ECF overlay hypothesis** confidence `low-medium → high`.
+- **Admission-gate pre-check** `evidence_ge_E3` gap → met; clean_except_pending_artifacts 26 → 27; with_gaps 2 → 1.
+
+**Review-gate audit (per METHODOLOGY.md §12):**
+
+- Gate 1 (semantic review): ✅ all hard gates + 7 soft gates pass.
+- Gate 2 (architectural review): ✅ ECF mapping, cell-occupancy, layering, specialization all defensible.
+- Gate 3 (admission-gate): ✅ all 10 criteria met per `admission-gate-precheck.yaml` v0.7 row for CAND-036.
+
+**Honest disclosure (per BC-SR-A001 §4 honest-reporting rule):**
+
+The EVIDENCE.md §3 E3 threshold is "partial independence" — SRC-017/018/019 are sourced on the strength of documented corpus knowledge with retrieval honesty (`indirect` or summary-level for some; full direct-retrieval pending institutional access). The admission is solid on partial-independence grounds (three fully-independent classes exceeds the partial threshold); direct retrieval of the three primary sources would re-rate to E5 but is independent of the admission decision and tracked separately as follow-up actions.
+
+**Notes for consumers:**
+
+- The catalog is now **28 first-order canonical capabilities** (27 → 28; one new first-order admission).
+- The Track A admission closes the BC-13 §B.1 follow-on queue item. Track B (EPM, BC-15) and Track C (Relationship Mgmt, BC-16) evidence work remains separate.
+- `agency-organization/design` cell-occupancy: 3 → 4 (within monopartite band per METHODOLOGY §11). No conflict.
+
+**Items still in the open queue (not closed by this release):**
+
+- **CR-DEA-BC-15** — Track B (EPM) evidence package (not yet started)
+- **CR-DEA-BC-16** — Track C (Relationship Mgmt) evidence package (not yet started)
+- **Direct retrieval actions** for SRC-017/018/019 (independent of admission; re-rates to E5 if done)
+- **BC-SR-A001 §7** — Knowledge / Service / Quality / Stakeholder / EAM candidates (P2-P3 deferred)

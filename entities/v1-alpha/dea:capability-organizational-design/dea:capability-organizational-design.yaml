@@ -1,0 +1,122 @@
+id: dea:capability-organizational-design
+type: BusinessCapability
+name: Organizational Design
+definition: The ability to structure the enterprise into roles, units, reporting
+  lines, authorities, and coordination patterns that fit the work the enterprise
+  must do, and to revise that structure when the work changes.
+version: 1.0.0
+metamodel_pin: 1.0.0
+lifecycle_status: active
+capability_layer: strategic
+outcome: The enterprise has a structure whose roles, authorities, and
+  coordination patterns align with its strategy and operating context, and
+  can be revised deliberately rather than drifting.
+business_object: Organization Structure
+ecf:
+  primary:
+    domain: agency-organization
+    stage: design
+  secondary:
+  - domain: agency-organization
+    stage: conceive
+  - domain: agency-organization
+    stage: build
+related_capabilities:
+- dea:capability-strategy
+- dea:capability-strategic-planning
+- dea:capability-enterprise-governance
+- dea:capability-workforce-planning
+- dea:capability-workforce-management
+- dea:capability-change-management
+- dea:capability-technology-management
+- dea:capability-technology-enablement
+evidence:
+  sources:
+  - SRC-017
+  - SRC-018
+  - SRC-019
+  rationale: "Admission per CR-DEA-BC-14 (Track A of CR-DEA-BC-13 B.1 / BC-SR-A001 4). Evidence trail: BC-SR-A001 4 (reviewer's P1; the catalog had Strategy + Strategic Planning + Workforce Planning + Workforce Management but not the structural-design capability the ECF positions in agency-organization/design); CR-DEA-BC-13 B.1 (Track A investigation opened); CR-DEA-BC-13 D.1 (ECF overlay hypothesis + track record stub); CR-DEA-BC-18 (research-CR evidence package; no admission); CR-DEA-BC-14 3 (semantic review gate) + 4 (architectural review gate) + 5 (admission-gate closeout). Enterprise-generality demonstrated at E3 (organization-design literature is universal across B2B/B2C/G2C enterprises per foundation inclusion criteria gate A+B+C; 9 of 10 types strong in enterprise-generality matrix, 1 moderate; cross-industry evidence in SRC-017 Galbraith, SRC-018 APQC PCF Organization category, SRC-019 ISO 9001 5.3 organizational roles). Evidence trail on disk: catalog-research/{candidates, evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-precheck, preliminary-ecf-overlay, INV-ORGDESIGN-v0.2, INV-ORGDESIGN-v0.1.yaml}."
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: "2026-09-10"
+    actor: "Coder (for eaojnr), BC-13 B.1 Track A candidate seeded (BC-13 carrier)"
+  - stage: observed
+    date: "2026-09-10"
+    actor: "Coder (for eaojnr), BC-SR-A001 4 + Galbraith/APQC/ISO 9001 evidence seeding"
+  - stage: corroborated
+    date: "2026-09-11"
+    actor: "Coder (for eaojnr), CR-DEA-BC-18 enterprise-generality matrix (B2B/B2C/G2C sweep)"
+  - stage: normalized
+    date: "2026-09-11"
+    actor: "Coder (for eaojnr), CR-DEA-BC-18 distinctness sweep vs Strategy / Strategic Planning / Workforce Planning / Workforce Management / Tech Mgmt / Tech Enablement"
+  - stage: ecf-mapped
+    date: "2026-09-11"
+    actor: "Coder (for eaojnr), ECF overlay hypothesis: agency-organization/design (primary); conceive + build secondaries"
+  - stage: reviewed
+    date: "2026-09-11"
+    actor: "Coder (for eaojnr), CR-DEA-BC-14 3 (semantic review gate 1) + 4 (architectural review gate 2)"
+  - stage: canonical
+    date: "2026-09-11"
+    actor: "eaojnr, admission PR (this change)"
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: "E4 (foundation-grade per A+B+C gate; promotion from E3 at admission per EVIDENCE.md 3 admission promotion rule). BC-SR-A001 4 explicitly recommended this admission. CR-DEA-BC-13 B.1 carved Track A as a follow-on investigation; CR-DEA-BC-18 (research-CR) seeded the evidence package across three independent source classes (business-architecture / cross-industry-process / standards-body) and registered TER-ORGDESIGN-001 track record at E3; this CR closes the 4 evidence work and promotes to E4 on admission. Distinct business object (Organization Structure vs Workforce Management's Workforce Plan / Workforce Mgmt's Agent lifecycle / Strategy's Enterprise). Distinct ECF cell (agency-organization/design vs Workforce Planning at the same cell; distinctness passes by business-object partition; Organization Structure vs Workforce Plan)."
+ecf_rationale: "Admitted 2026-09-11 under CR-DEA-BC-14. Under the semantic-center-of-gravity rule (CR-DEA-BC-13 A), the defining activity is sustained structuring of roles, authorities, units, and coordination patterns, squarely in the design axis of Agency & Organization. Secondaries: conceive (diagnostic/re-design) and build (operationalization). Distinct from Workforce Planning (same primary coordinate agency-organization/design) by business object; Organizational Design structures the enterprise (Organization Structure: roles, units, authorities), Workforce Planning sizes the demand-supply picture (Workforce Plan: capability and capacity at horizon). Peers; both inputs to Workforce Management."
+boundary: "Designs the enterprise's roles, units, reporting lines, authorities, and coordination patterns. DOES NOT set direction (Strategy; the structural design serves the strategy, does not define it). DOES NOT plan the workforce against the structure (Workforce Planning; separate planning ability against the designed structure). DOES NOT execute the agent lifecycle (Workforce Management; operates the workforce against the structure). DOES NOT govern the enterprise (Enterprise Governance; sets the authority framework, OrgDesign implements it operationally). DOES NOT manage change processes (Change Management; operates change initiatives; structural redesign is one trigger of change, not the change process itself). DOES NOT steward the technology estate (Technology Management; IT strategy and acquisition). DOES NOT run technology services (Technology Enablement; IT delivery). The defining distinction: Organizational Design is the structural-design function; Workforce Planning is the workforce-demand-supply-planning function; Workforce Management is the agent-execution function."
+non_examples:
+- An organization chart (an artifact; the document of a structural decision)
+- A reporting line (an artifact; one element of a structural decision)
+- A specific role profile (an artifact; one role within a structure)
+- A re-org event (a process; the act of implementing a structural change)
+specialization_boundary: "Structural archetypes (functional, divisional, matrix, network, holacratic, ambidextrous), governance patterns (centralized, federated, hub-and-spoke), and coordination mechanisms (hierarchies, communities-of-practice, platform teams, cells, squads) vary by enterprise context; the ability to design and revise a structure does not. Specializations include enterprise architecture for the structure's information flows, HR-organization design for the role architecture, IT-organization design for the IT org structure (a sub-concern that Tech Mgmt coordinates per CR-DEA-BC-13 C), and post-merger integration for transition structures."
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: mapped
+  canonicalReferences:
+  - kind: coordinate
+    domain: AgencyAndOrganization
+    stage: Design
+    identifier: ecf:agencyOrganization.design
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: primary
+  - kind: coordinate
+    domain: AgencyAndOrganization
+    stage: Conceive
+    identifier: ecf:agencyOrganization.conceive
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  - kind: coordinate
+    domain: AgencyAndOrganization
+    stage: Build
+    identifier: ecf:agencyOrganization.build
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  extensions:
+  - name: kebab-case-domain-vocabulary
+    kind: display-vocabulary
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums for the gate.
+    doesNotRedefine: true
+    mapping:
+      governance-existence: GovernanceAndExistence
+      strategy-direction: StrategyAndDirection
+      agency-organization: AgencyAndOrganization
+      party-relationship: PartyAndRelationship
+      product-value: ProductAndValue
+      enablement-operations: EnablementAndOperations
+      finance-accounting: FinanceAndAccounting
+      _stage_conceive: Conceive
+      _stage_design: Design
+      _stage_build: Build
+      _stage_activate: Activate
+      _stage_operate: Operate
+      _stage_improve: Improve
+      _stage_retire: Retire
+  - name: multiple-contextual-coordinates
+    kind: catalog-specific-relation
+    description: A capability may have one primary and zero-or-more secondary canonical coordinates without identity duplication (CG-003 5).
+    doesNotRedefine: true

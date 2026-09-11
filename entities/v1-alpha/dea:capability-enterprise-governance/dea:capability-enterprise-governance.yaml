@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Enterprise Governance
 definition: 'The ability to direct and control the enterprise: decision rights, accountability,
   oversight, and policy across the whole.'
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
@@ -22,6 +22,7 @@ ecf:
 related_capabilities:
 - dea:capability-strategy
 - dea:capability-risk-management
+- dea:capability-organizational-design
 evidence:
   sources:
   - SRC-001
@@ -62,7 +63,9 @@ why_capability: Governance of the enterprise-as-a-whole is enterprise-general an
 ecf_rationale: Primary conceive in governance-existence (governance is constituted
   with the enterprise); exercised continuously at operate and improve.  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
 boundary: Governs the enterprise; does not manage specific obligation classes (Compliance,
-  Legal), exposure (Risk), or change (Change Management).
+  Legal), exposure (Risk), change (Change Management), or design the structure the governance
+  operates within (Organizational Design - Enterprise Governance sets the authority framework;
+  Organizational Design implements it operationally as roles, units, and reporting lines).
 non_examples:
 - A board meeting (an event)
 - A policy document (an artifact)

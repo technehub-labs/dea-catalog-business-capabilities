@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Workforce Planning
 definition: The ability to determine what workforce, human and artificial, the
   enterprise will need and when.
-version: 1.1.0
+version: 1.1.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -19,6 +19,7 @@ ecf:
     stage: build
 related_capabilities:
 - dea:capability-workforce-management
+- dea:capability-organizational-design
 evidence:
   sources:
   - SRC-002
@@ -57,7 +58,9 @@ why_capability: E3; distinct from Workforce Management (execution) per the sweep
 ecf_rationale: Primary design in agency-organization (workforce shape is designed
   before it is built).  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
 boundary: Plans the workforce; does not acquire, develop, or release agents (Workforce
-  Management).
+  Management), or design the structure the plan fits (Organizational Design; this capability
+  shares the agency-organization/design primary coordinate with Workforce Planning but is
+  distinct by business object - Organization Structure vs Workforce Plan).
 non_examples:
 - A hiring requisition (an artifact of execution)
 - A skills database (a system)

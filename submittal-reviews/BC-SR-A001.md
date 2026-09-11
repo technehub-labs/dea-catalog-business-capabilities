@@ -807,7 +807,7 @@ Each item from BC-SR-A001 §17, §18, §19 is classified as follows. See CR-DEA-
 
 | Review section | Item | Class | Carrier action |
 |---|---|---|---|
-| §4 | Gap #1 — Organizational Design | P1 (reviewer) | Open investigation track A (evidence-led) |
+| §4 | Gap #1 — Organizational Design | P1 (reviewer) | **Closed 2026-09-11 under CR-DEA-BC-18 (evidence package) + CR-DEA-BC-14 (admission).** `dea:capability-organizational-design` admitted at `agency-organization/design` (primary) + `conceive/build` secondaries. Catalog 27 → 28 first-order caps. CAND-036 promoted E3 → E4 per EVIDENCE.md §3 admission promotion rule. |
 | §5 | Gap #2 — Enterprise Performance Management | P1 (reviewer) | Open investigation track B (evidence-led) |
 | §6 | Gap #3 — Relationship Management (generic parent) | P1–P2 (reviewer) | Open investigation track C (boundary-led) |
 | §7 | Gap #4 — Knowledge Management | P2 (reviewer) | Defer to backlog pending evidence |

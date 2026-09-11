@@ -1,6 +1,6 @@
-overlay_version: 0.3.0
-cr: CR-DEA-BC-02 (legacy 26 placements) + CR-DEA-BC-13 (track A/B/C hypotheses) + CR-DEA-BC-18 (Track A evidence seed)
-compiled: '2026-09-11 (v0.3: Track A evidence seeded — dea:candidate-orgdesign confidence low → low-medium; CR-DEA-BC-18 sources cited; admission not in CR-DEA-BC-18)'
+overlay_version: 0.4.0
+cr: CR-DEA-BC-02 (legacy 26 placements) + CR-DEA-BC-13 (track A/B/C hypotheses) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; dea:candidate-orgdesign → dea:capability-organizational-design; confidence low-medium → high)
+compiled: '2026-09-11 (v0.4: Track A admitted under CR-DEA-BC-14; candidate-orgdesign → capability-organizational-design; cell-occupancy incremented agency-organization/design from 3 to 4)'
 status: candidate-not-canonical
 inputs:
   candidates: docs/research/candidates.yaml
@@ -318,7 +318,7 @@ overlays:
     stage: design
   confidence: low
   conflict: null
-- candidate: dea:candidate-orgdesign
+- candidate: dea:capability-organizational-design
   name: Organizational Design
   primary:
     domain: agency-organization
@@ -328,15 +328,16 @@ overlays:
     stage: conceive
   - domain: agency-organization
     stage: build
-  confidence: low-medium (E3 corroboration seeded by CR-DEA-BC-18 across three independent source classes; promotes to high on admission — admission not in CR-DEA-BC-18)
+  confidence: high (E4 admission under CR-DEA-BC-14; promotion from low-medium per EVIDENCE.md §3 admission promotion rule; ECF placement confirmed via semantic-center-of-gravity rule CR-DEA-BC-13 §A)
   conflict: null
-  cr: CR-DEA-BC-13 §D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed; no admission)
+  cr: CR-DEA-BC-13 §D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed; no admission) + CR-DEA-BC-14 (admission CR; this round)
   rationale: 'Under CR-DEA-BC-13 §A new rule (semantic center of gravity): Organizational Design''s defining activity is sustained
     design of organizational structures, roles, authorities, and coordination patterns. Domain Agency & Organization per ECF
-    v2.4.0 (substrate-neutral; human + artificial + hybrid agents). CR-DEA-BC-18 seeds the evidence package (SRC-017/018/019
-    across business-architecture / cross-industry-process / standards-body classes); distinctness sweep vs CAND-014/015/001/002
-    passes by business-object partition (Organization Structure distinct from Agent Capacity, Agent Lifecycle, Enterprise,
-    Plan).'
+    v2.4.0 (substrate-neutral; human + artificial + hybrid agents). CR-DEA-BC-18 seeded the evidence package (SRC-017/018/019
+    across business-architecture / cross-industry-process / standards-body classes); CR-DEA-BC-14 closed Track A admission and
+    promoted CAND-036 E3 → E4. Distinctness sweep vs Strategy / Strategic Planning / Workforce Planning / Workforce Management
+    / Tech Mgmt / Tech Enablement passes by business-object partition (Organization Structure distinct from Enterprise, Plan,
+    Agent Capacity, Agent Lifecycle, Technology Estate, Technology Service).'
 - candidate: dea:candidate-epm
   name: Enterprise Performance Management
   primary:
