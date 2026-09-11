@@ -1,6 +1,6 @@
-version: 0.5.0
-cr: CR-DEA-BC-02 section 38 (dry run)
-compiled: '2026-09-01 (v0.5: CAND-018 boundary closed by boundary-decision-cand-018 v0.1, PR #29)'
+version: 0.6.0
+cr: CR-DEA-BC-02 section 38 (dry run) + CR-DEA-BC-18 (Track A evidence seed; no admission)
+compiled: '2026-09-11 (v0.6: CAND-036 Organizational Design pre-check added under CR-DEA-BC-18 evidence seed; evidence_ge_E3 gap pending direct retrieval of SRC-017/018/019; all other gates met)'
 status: pre-check only; no candidate admitted; final admission remains subject to review (section 38)
 legend:
   met: criterion satisfied on current evidence
@@ -425,8 +425,26 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested: []
+- candidate: CAND-036
+  name: Organizational Design
+  criteria:
+    evidence_ge_E3: gap
+    classification_capability: met
+    enterprise_generality: met
+    durability: met
+    implementation_independence: met
+    outcome_identifiable: met
+    boundary_defensible: met
+    distinctness: met
+    specialization_not_required: met
+    ecf_mapping: met
+  gaps:
+  - evidence_ge_E3
+  untested: []
+  pre_check_notes: 'Track A evidence package seeded by CR-DEA-BC-18 across SRC-017 (business-architecture), SRC-018 (cross-industry-process), SRC-019 (standards-body). Three independent source classes; preliminary rating E1 in candidates.yaml v0.3 pending direct retrieval of SRC-017 Galbraith (2002) chapter structure, SRC-018 APQC PCF element list, SRC-019 ISO 9001 §5.3 full normative text. Promotion to E3 contingent on direct retrieval; promotion to E4+ contingent on admission in separate CR (CR-DEA-BC-14 provisional). All other gates met on current evidence: classification (CAPABILITY vs PROCESS/ORGANIZATION); enterprise generality (9 of 10 strong per CAND-036 enterprise-generality-matrix v0.3 row); durability (recurring discipline since Galbraith 1970s); implementation independence (Galbraith Star / McKinsey 7-S / Holacracy / Functional archetypes); outcome identifiable (designed structure supporting the enterprise''s chosen posture); boundary defensible (Organization Structure business object distinct from Agent Capacity / Agent Lifecycle / Enterprise / Plan); distinctness (sweep vs CAND-001/002/014/015/019/030 passes by business-object partition); specialization not required (foundation per METHODOLOGY §5 anti-invention); ECF mapping (agency-organization/design primary + conceive/build secondaries per CR-DEA-BC-13 §D.1 + CR-DEA-BC-18 §5).'
 summary:
-  candidates_on_track: 27
+  candidates_on_track: 28
   clean_except_pending_artifacts: 26
-  with_gaps: 1
+  with_gaps: 2
   removed: 2
+  notes: 'CR-DEA-BC-18 adds CAND-036 to the on-track set; pre-check records evidence_ge_E3 as gap pending direct retrieval of SRC-017/018/019 primary sources. All other gates met on current evidence; admission remains gated on METHODOLOGY §12 review in a separate CR (CR-DEA-BC-14 provisional).'

@@ -312,3 +312,63 @@ carved-out sub-concern as a separate first-order cap.
 - **CR-DEA-BC-14/15/16** — Track A/B/C admission CRs (gated on evidence packages)
 - **Industry-view mechanics pilot** — Healthcare example (deferred; not in scope for v1-alpha.7)
 - **Knowledge / Service / Quality / Stakeholder / EAM candidates** — BC-SR-A001 §7 + §17 P2–P3 deferred; revisit after tracks A/B/C close
+
+### v1-alpha.7 addendum — BC-SR-A001 §4 evidence work in progress (no admission)
+
+**Sub-CARRIER:** [CR-DEA-BC-18](../../change-requests/CR-DEA-BC-18-track-a-orgdesign-evidence.md)
+(research-CR; no canonical change; same release cycle).
+
+**Review scope:** Evidence package for BC-SR-A001 §4 (reviewer P1 —
+Organizational Design as a foundational gap; the catalog currently has
+Workforce Planning + Workforce Management but not the structural-design
+capability the ECF positions in `agency-organization/design`).
+
+**Headline status:** Evidence seeded across three independent source classes
+(SRC-017 business-architecture / SRC-018 cross-industry-process / SRC-019
+standards-body); full independence across classes exceeds the E3 threshold
+per EVIDENCE.md §3. CAND-036 added to the candidate universe; ECF overlay
+hypothesis confidence `low → low-medium`; distinctness sweep expanded;
+enterprise-generality matrix row added; admission-gate pre-check honest about
+the one remaining gap (`evidence_ge_E3` pending direct retrieval of
+SRC-017/018/019 primaries).
+
+**Items landed (research artifacts, no canonical entity):**
+
+- **CAND-036** added to `catalog-research/candidates.yaml` v0.3 (CAPABILITY;
+  E1; business object Organization Structure).
+- **SRC-017/018/019** added to `catalog-research/evidence-register.yaml` v0.5.
+- **TER-ORGDESIGN-001** track record seeded.
+- **ECF overlay hypothesis** updated in `preliminary-ecf-overlay.yaml` v0.3
+  (confidence `low → low-medium`).
+- **Enterprise-generality matrix** row added in `enterprise-generality-matrix.yaml` v0.3
+  (9 of 10 types strong; non-profit moderate; demonstrated per A+B+C gate).
+- **Distinctness sweep** expanded in `distinctness-sweep.yaml` v0.3 (track A
+  extended to cover `dea:capability-technology-management` and
+  `dea:capability-technology-enablement`).
+- **Admission-gate pre-check** added in `admission-gate-precheck.yaml` v0.6.
+- **INV-ORGDESIGN-v0.2.md** + YAML twin (dual-delivery per EVIDENCE.md §6).
+
+**Review-gate audit (per METHODOLOGY.md §12):** Research-CR — semantic review
+gate 1 passes on all hard gates (Ability, Outcome, Implementation Independence)
+and on 6 of 7 soft gates (Durability, Enterprise Relevance, Object Focus,
+Distinctness, Decomposability, ECF Fit). The Evidence soft gate has the open
+`evidence_ge_E3` gap (pending direct retrieval of SRC-017/018/019 primaries).
+Architectural review gate 2 passes on ECF mapping defensibility, layering
+boundaries; final record-shape conformance happens in the admission CR.
+
+**Notes for consumers:**
+
+- The catalog is still **27 first-order canonical capabilities** (unchanged from
+  v1-alpha.7 main release). CAND-036 is a candidate-on-file; not yet admitted.
+- The Track A admission CR (CR-DEA-BC-14, provisional) becomes the next step
+  when this evidence package is accepted by the user.
+- Track B (EPM, BC-15) and Track C (Relationship Mgmt, BC-16) evidence work
+  remains separate; no work on them in CR-DEA-BC-18.
+
+**Items still in the open queue (not closed by this addendum):**
+
+- **CR-DEA-BC-14** — Track A admission CR (now unblocked; awaits user acceptance)
+- **CR-DEA-BC-15** — Track B (EPM) evidence package (not yet started)
+- **CR-DEA-BC-16** — Track C (Relationship Mgmt) evidence package (not yet started)
+- **Direct retrieval actions** for SRC-017/018/019 (independent of admission;
+  re-rates to E4 if done)

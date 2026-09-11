@@ -1,7 +1,6 @@
-matrix_version: 0.2.0
+matrix_version: 0.3.0
 cr: CR-DEA-BC-02 (sections 8-9; deliverable section 33 item 6)
-compiled: '2026-09-01 (v0.2: CAND-023/CAND-029 rows re-scored after corpus patch; CAND-004/CAND-011 rows retained for comparability, both off
-  the admission track per N-007/N-008)'
+compiled: '2026-09-11 (v0.3: CAND-036 Organizational Design row added under CR-DEA-BC-18 evidence seed; demonstrated pending review; CAND-023/CAND-029 v0.2 rows preserved; CAND-004/CAND-011 retained off track)'
 status: candidate-not-canonical; analytical evidence, not the catalog
 enterprise_types:
 - commercial
@@ -404,8 +403,26 @@ rows:
   enterprise_generality: demonstrated
   v02_delta: 'government and retail moderate -> strong: ISO 56002 all-sectors applicability (SRC-015); Oslo Manual cross-sector note incl. government
     innovation (SRC-016)'
+- candidate: CAND-036
+  name: Organizational Design
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+  sources_consulted:
+  - SRC-017 (business-architecture; Galbraith Star Model, OB textbooks)
+  - SRC-018 (cross-industry-process; APQC PCF Organization category)
+  - SRC-019 (standards-body; ISO 9001 §5.3 role/authority clause)
+  v03_delta: 'CR-DEA-BC-18 evidence seed; non-profit moderate because non-profits design structures differently (e.g. boards, dual governance) but the capability still recurs'
 summary:
-  demonstrated: 28
+  demonstrated: 29
   partial: 0
   sector_bound: 1
-  note: 28 of 29 rows demonstrated; CAND-006 sector-bound (specialization path); 2 rows off admission track per N-007/N-008
+  note: 29 of 30 rows demonstrated; CAND-006 sector-bound (specialization path); 2 rows off admission track per N-007/N-008

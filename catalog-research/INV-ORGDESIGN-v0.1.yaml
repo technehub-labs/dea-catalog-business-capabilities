@@ -1,0 +1,128 @@
+inv_version: 0.1.0
+track: A
+candidate_id: CAND-036
+candidate_name: Organizational Design
+track_id: TER-ORGDESIGN-001
+carrier_cr: CR-DEA-BC-18
+investigation_carrier: CR-DEA-BC-12 §B.1
+reviewer_seed: BC-SR-A001 §4 (P1)
+date_opened: 2026-09-10
+date_evidence_seeded: 2026-09-11
+status: evidence-seeded; research-CR; no admission in CR-DEA-BC-18
+question: 'Is Organizational Design a distinct first-order capability that survives the catalog admission gate (METHODOLOGY §12)?'
+hypothesis:
+  ability: 'The ability to design the enterprise''s organizational structures, roles, authorities, and coordination patterns through which agency is organized.'
+  ecf_primary:
+    domain: agency-organization
+    stage: design
+  ecf_secondaries:
+  - domain: agency-organization
+    stage: conceive
+  - domain: agency-organization
+    stage: build
+  business_object: Organization Structure
+  substrate_neutral: true (ECF v2.4.0 covers human + artificial + hybrid agents)
+evidence_sources:
+- id: SRC-017
+  name: Galbraith Star Model and organization-design literature
+  class: business-architecture
+  retrieval: indirect (book titles, Star Model structure, core concepts; pending direct retrieval)
+  supports:
+  - CAND-036 capability identity
+  - CAND-036 ability (vs process) classification
+  - CAND-036 implementation independence
+  - CAND-036 durability
+  - CAND-036 enterprise generality
+- id: SRC-018
+  name: APQC PCF v8.0 - Organization category
+  class: cross-industry-process
+  retrieval: indirect (PCF structure cited from public APQC overview; full element list behind registration form)
+  supports:
+  - CAND-036 recurrence discovery
+  - CAND-036 enterprise generality
+- id: SRC-019
+  name: ISO 9001:2015 §5.3 organizational roles, responsibilities, authorities
+  class: standards-body
+  retrieval: direct (OBP summary; full normative text paywalled)
+  supports:
+  - CAND-036 capability identity
+  - CAND-036 outcome (auditability of QMS)
+  - CAND-036 enterprise generality
+evidence_strength: E3 (three independent source classes; promotes to E4 on direct retrieval; promotes to E4+ on admission)
+distinctness_sweep:
+  total_pairs: 6
+  results:
+  - against: dea:capability-workforce-management
+    verdict: Distinct
+    rationale: 'Agent lifecycle vs Organization Structure - different business objects'
+  - against: dea:capability-workforce-planning
+    verdict: Distinct
+    rationale: 'Agent capacity vs Organization Structure - different business objects'
+  - against: dea:capability-strategy
+    verdict: Distinct (parent-child)
+    rationale: 'Enterprise vs Organization Structure - Org Design implements Strategy; not overlap'
+  - against: dea:capability-strategic-planning
+    verdict: Distinct
+    rationale: 'Plan vs Organization Structure - different business objects'
+  - against: dea:capability-technology-management
+    verdict: Distinct
+    rationale: 'Technology Estate vs Organization Structure - different business objects'
+  - against: dea:capability-technology-enablement
+    verdict: Distinct
+    rationale: 'Technology Service vs Organization Structure - different business objects'
+  all_pairs_pass: true
+enterprise_generality:
+  rule: demonstrated (strong in 7+ of 10 types)
+  row: enterprise-generality-matrix.yaml v0.3 rows[CAND-036]
+  scores:
+    commercial: strong
+    professional-services: strong
+    manufacturing: strong
+    retail: strong
+    financial-services: strong
+    healthcare: strong
+    technology: strong
+    infrastructure: strong
+    government: strong
+    non-profit: moderate
+  strong_count: 9
+  moderate_count: 1
+  demonstrated: true
+admission_gate_precheck:
+  candidate: CAND-036
+  criteria:
+    evidence_ge_E3: gap (pending direct retrieval of SRC-017/018/019 primaries)
+    classification_capability: met
+    enterprise_generality: met
+    durability: met
+    implementation_independence: met
+    outcome_identifiable: met
+    boundary_defensible: met
+    distinctness: met
+    specialization_not_required: met
+    ecf_mapping: met
+  gaps:
+  - evidence_ge_E3
+  untested: []
+ladder_passage:
+  candidate: met (CAND-036 in candidates.yaml v0.3)
+  observed: met (Galbraith, APQC PCF, ISO 9001 - all credible material)
+  corroborated: met (three independent source classes)
+  normalized: met (no alias collisions surfaced)
+  ecf_mapped: met (low-medium confidence; agency-organization/design primary + conceive/build secondaries)
+  reviewed: partial (semantic review per §12.1 passes; architectural review per §12.2 passes; final §12 review happens in admission CR)
+  canonical: not met (admission is the next step; this CR is research-only)
+follow_up_evidence_actions:
+- Direct retrieval of Galbraith (2002) chapter structure to confirm five-choice Star Model framing
+- Direct retrieval of APQC PCF element list to map Organization Development / Manage Organizational Change process categories to CAND-036 child candidates
+- Direct retrieval of ISO 9001:2015 §5.3 normative text via institutional access (currently summary-level)
+provisional_admission_cr: CR-DEA-BC-14 (Track A admission; triggers on user acceptance of evidence package)
+companion_tracks:
+  B:
+    id: TER-EPM-001
+    name: Enterprise Performance Management
+    status: evidence-pending; no work in CR-DEA-BC-18
+  C:
+    id: TER-RELMGMT-001
+    name: Relationship Management (generic parent)
+    status: evidence-pending; no work in CR-DEA-BC-18
