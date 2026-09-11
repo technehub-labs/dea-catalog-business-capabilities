@@ -1,0 +1,83 @@
+inv_version: 0.1.0
+track: B
+candidate_id: CAND-037
+candidate_name: Enterprise Performance Management
+track_id: TER-EPM-001
+carrier_cr: CR-DEA-BC-19 (research-CR; this CR)
+investigation_carrier: CR-DEA-BC-12 §B.2
+reviewer_seed: BC-SR-A001 §5 (reviewer P1)
+reviewer_loop_closure_seed: BC-SR-A001 §16 (Direction Loop narrative)
+date_opened: '2026-09-10'
+date_evidence_seeded: '2026-09-11 (CR-DEA-BC-19)'
+status: evidence-seeded (Track B research-CR; no admission in CR-DEA-BC-19; admission pending separate CR-DEA-BC-15)
+loop_closure_investigation_required: true
+sources:
+- id: SRC-020
+  name: Kaplan & Norton Balanced Scorecard (1992+) and Strategy Maps (2000+)
+  class: business-architecture
+  retrieval: indirect (HBR 1992 paywalled; corpus knowledge + secondary summaries)
+  supports:
+  - CAND-037 capability identity (performance management as a discipline)
+  - CAND-037 distinctness from Analytics (governance vs insight)
+  - CAND-037 durability (sustained operating capability)
+  - CAND-037 enterprise generality
+- id: SRC-021
+  name: OKR framework (Andy Grove / John Doerr) and practitioner literature
+  class: commercial-capability-models
+  retrieval: indirect (Doerr 2018 corpus knowledge; Grove 1983 corpus knowledge)
+  supports:
+  - CAND-037 durability (recurring cadence)
+  - CAND-037 capability identity (performance as a discipline, not a one-time project)
+  - CAND-037 implementation independence (multiple frameworks realize the capability: BSC, OKR, custom systems)
+  - CAND-037 enterprise generality
+- id: SRC-022
+  name: OMG Business Performance Management standards (BPM CBOK, OCEB 2)
+  class: standards-body
+  retrieval: direct (OMG OCEB 2 page publicly accessible; BPM CBOK content from public OMG documentation)
+  supports:
+  - CAND-037 capability identity
+  - CAND-037 distinctness from Analytics (governance vs insight)
+  - CAND-037 enterprise generality
+  - CAND-037 durability (maturity progression)
+open_evidence_questions:
+- question: 'Is Performance a durable distinct business object (distinct from Insight, Outcome, Decision)?'
+  status: partially-answered
+  answer: 'Performance is a durable distinct business object, distinct from Insight (Analytics). Per SRC-022 (OMG BPM CBOK) and SRC-020 (BSC): performance is the governance and measurement of outcomes against objectives; insight is the production of decision-grade knowledge from data. The OMG BPM standards explicitly distinguish performance governance from information extraction.'
+- question: 'Does EPM close the direction loop without collapsing into Analytics?'
+  status: open (loop-closure narrative recorded in CR-DEA-BC-19 §6 regardless of admission outcome)
+  answer: 'Loop closes if EPM is admitted: Strategy sets posture → Strategic Planning plans execution → Performance Management measures outcomes → Analytics & Intelligence derives insight from outcomes → Strategy Adaptation updates posture. EPM and Analytics are distinct cells of the loop. The loop does not close if EPM is not admitted: the missing link is governance of outcomes, which today is partly absorbed into Analytics (data-driven decision-making) and partly into Strategic Planning (objective-setting) without an explicit performance-management discipline.'
+- question: 'Does it survive the enterprise-generality test?'
+  status: confirmed
+  answer: 'Yes. 9 of 10 strong per CAND-037 enterprise-generality-matrix v0.4 row (commercial, professional-services, manufacturing, retail, financial-services, healthcare, technology, infrastructure, government strong; non-profit moderate). Demonstrated per A+B+C gate (METHODOLOGY §5).'
+open_methodology_questions:
+- 'Direction Loop closure narrative (BC-DEA-BC-13 §D.2 explicit decision): does the catalog admit EPM, OR does the loop remain open and the catalog admits a different capability that closes it, OR does the loop remain open and the catalog admits EPM later. Decision is the user per CR-DEA-BC-15 admission decision (pending).'
+ladder_passage:
+  candidate: met
+  observed: met
+  corroborated: met (E3 confirmed across SRC-020/021/022 three-source convergence)
+  normalized: met (ECF mapping confirmed at strategy-direction/operate primary)
+  ecf_mapped: met (preliminary-ecf-overlay.yaml v0.5 entry; confidence low-medium)
+  reviewed: met (this investigation report; review gate pending admission-CR)
+  canonical: pending (admission in CR-DEA-BC-15; contingent on user acceptance of evidence package)
+distinguished_against:
+- dea:capability-analytics-and-intelligence
+- dea:capability-financial-resource-management
+- dea:capability-strategy
+- dea:capability-strategic-planning
+- dea:capability-workforce-management
+- dea:capability-technology-management
+- dea:capability-technology-enablement
+- dea:capability-organizational-design
+companion_tracks:
+  A:
+    id: TER-ORGDESIGN-001
+    status: closed (admitted 2026-09-11 under CR-DEA-BC-14)
+  C:
+    id: TER-RELMGMT-001
+    status: open (investigation not yet started)
+follow_up_evidence_actions:
+- 'Direct retrieval of SRC-020 Kaplan and Norton Balanced Scorecard HBR 1992 article full text. Independent of admission. Would re-rate to E5.'
+- 'Direct retrieval of SRC-021 Grove 1983 High Output Management book content. Independent of admission. Would re-rate to E5.'
+- 'Direct retrieval of SRC-022 OMG BPM CBOK full normative text. Independent of admission. Would re-rate to E5.'
+notes: 'Track B evidence package seeded by CR-DEA-BC-19. Three independent source classes (business-architecture; commercial-capability-models; standards-body) supports E3 evidence rating per EVIDENCE.md §3. Retrieval honesty: SRC-020 indirect; SRC-021 indirect; SRC-022 direct. Loop-closure narrative required regardless of admission per BC-DEA-BC-13 §D.2 explicit decision (CR-DEA-BC-19 §6 records the narrative).'
+provisional_admission_cr: CR-DEA-BC-15 (Track B admission; triggers on user acceptance of evidence package)

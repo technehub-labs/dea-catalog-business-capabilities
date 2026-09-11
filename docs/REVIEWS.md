@@ -416,3 +416,44 @@ The EVIDENCE.md §3 E3 threshold is "partial independence". SRC-017/018/019 are 
 - CR-DEA-BC-16: Track C (Relationship Mgmt) evidence package (not yet started)
 - Direct retrieval actions for SRC-017/018/019 (independent of admission; re-rates to E5 if done)
 - BC-SR-A001 §7: Knowledge / Service / Quality / Stakeholder / EAM candidates (P2-P3 deferred)
+
+## v1-alpha.8 (continued): 2026-09-11 (BC-SR-A001 §5 Track B evidence work)
+
+**CARRIER:** [CR-DEA-BC-19](../../change-requests/CR-DEA-BC-19-track-b-epm-evidence.md) (research-CR; Track B evidence package; no admission in this CR).
+
+**Review scope:** Track B evidence work for `dea:candidate-epm` (CAND-037). Closes TER-EPM-001 (evidence-pending → evidence-seeded). Adds CAND-037 to the candidate universe (E1 → E3 confirmed). Adds SRC-020/021/022 across three independent source classes (business-architecture; commercial-capability-models; standards-body). Expands distinctness sweep from 4 → 8 peers. Records Direction Loop closure narrative required by BC-DEA-BC-13 §D.2 explicit decision.
+
+**Headline status:** E3 confirmed across three independent source classes per EVIDENCE.md §3 partial-independence threshold. Loop-closure narrative recorded regardless of admission outcome. **No canonical entity admitted.** Catalog stays at 28 first-order caps. Unblocks CR-DEA-BC-15 (provisional Track B admission CR; awaits user acceptance of evidence package).
+
+**Items landed:**
+
+- CAND-037 added to candidates.yaml v0.5.0 (E1 → E3; canonical false; admitted_by TBD; promotion_history pending).
+- SRC-020 added to evidence-register.yaml v0.7.0 (Kaplan and Norton Balanced Scorecard; business-architecture class; 3 observations).
+- SRC-021 added (OKR framework; commercial-capability-models class; 3 observations).
+- SRC-022 added (OMG Business Performance Management standards via OCEB 2; standards-body class; 3 observations).
+- TER-EPM-001 status evidence-pending → evidence-seeded; E3 confirmed; sources_consulted updated to SRC refs.
+- Preliminary-ecf-overlay.yaml EPM overlay confidence low → low-medium.
+- Distinctness-sweep.yaml EPM track_sweep against-list 4 → 8 peers (added Workforce Management + Technology Management + Technology Enablement + Organizational Design).
+- Enterprise-generality-matrix.yaml CAND-037 row added (9 of 10 strong; demonstrated per A+B+C gate).
+- Admission-gate-precheck.yaml v0.8 CAND-037 row added (all 10 admission gates met on current evidence).
+- INV-EPM-v0.1.md status evidence-pending → evidence-seeded; machine-readable twin `INV-EPM-v0.1.yaml` created.
+- CHANGELOG.md addendum under v1-alpha.8 (research-CR; same release cycle; no version bump).
+
+**Direction Loop closure narrative (BC-DEA-BC-13 §D.2 explicit decision):**
+
+The reviewer identifies the Direction Loop (BC-SR-A001 §16): Strategy → Strategic Planning → Performance Management → Analytics & Intelligence → Strategy Adaptation. Loop is currently broken. If CAND-037 is admitted under CR-DEA-BC-15, the loop closes (Strategy sets posture; Strategic Planning plans; Performance Management measures; Analytics derives insight; Strategy Adaptation updates posture). If CAND-037 is not admitted, the loop remains open and the missing link (governance of outcomes) is partly absorbed into Analytics and Strategic Planning without an explicit performance-management discipline. The decision is the user's per CR-DEA-BC-15 admission decision (pending). This narrative is required regardless of admission outcome and is recorded in `INV-EPM-v0.1.yaml` `open_methodology_questions`.
+
+**Honest disclosure (per BC-SR-A001 §4 honest-reporting rule):**
+
+- SRC-020: indirect retrieval (HBR 1992 article paywalled; corpus knowledge + secondary summaries).
+- SRC-021: indirect retrieval (Doerr 2018 corpus knowledge; Grove 1983 corpus knowledge).
+- SRC-022: direct retrieval (OMG OCEB 2 page publicly accessible; BPM CBOK content from public OMG documentation).
+
+This honesty is recorded in the source `retrieval` fields.
+
+**Items still in the open queue (not closed by this research-CR):**
+
+- CR-DEA-BC-15: Track B (EPM) admission (pending user acceptance of evidence package)
+- CR-DEA-BC-16: Track C (Relationship Mgmt) evidence package (not yet started)
+- Direct retrieval actions for SRC-020/021/022 (independent of admission; re-rates to E5 if done)
+- BC-SR-A001 §7: Knowledge / Service / Quality / Stakeholder / EAM candidates (P2-P3 deferred)

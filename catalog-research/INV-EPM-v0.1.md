@@ -1,10 +1,11 @@
 # Investigation Track B: Enterprise Performance Management
 
-**Status**: Open (evidence-led investigation)
+**Status**: evidence-seeded (CR-DEA-BC-19 research-CR; no admission in this revision)
 **Source**: [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §5 (reviewer P1)
-**Carrier CR**: [CR-DEA-BC-12](../change-requests/CR-DEA-BC-12.md) §B.2
-**Machine-readable twin**: (to be added when evidence work begins)
-**Date opened**: 2026-09-10
+**Carrier CR**: [CR-DEA-BC-12](../change-requests/CR-DEA-BC-12.md) §B.2 (investigation opened) → [CR-DEA-BC-19](../change-requests/CR-DEA-BC-19-track-b-epm-evidence.md) (evidence package)
+**Machine-readable twin**: [`INV-EPM-v0.1.yaml`](INV-EPM-v0.1.yaml)
+**Date opened**: 2026-09-10 (carrier BC-12)
+**Date evidence-seeded**: 2026-09-11 (CR-DEA-BC-19)
 
 ## Question to answer
 
