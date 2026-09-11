@@ -1,14 +1,14 @@
 id: dea:capability-workforce-management
 type: BusinessCapability
 name: Workforce Management
-definition: The ability to acquire, develop, deploy, and release the enterprise's
-  workforce of human and artificial agents.
-version: 1.1.0
+definition: The ability to acquire, develop, deploy, and release the enterprise's workforce of human and
+  artificial agents.
+version: 1.1.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
-outcome: The enterprise has the agents it needs, human and artificial, developing,
-  with deliberate entry and exit.
+outcome: The enterprise has the agents it needs, human and artificial, developing, with deliberate entry
+  and exit.
 business_object: Workforce
 ecf:
   primary:
@@ -21,14 +21,15 @@ ecf:
     stage: improve
 related_capabilities:
 - dea:capability-workforce-planning
+- dea:capability-organizational-design
 evidence:
   sources:
   - SRC-002
   - SRC-004
   - SRC-005
   - SRC-006
-  rationale: Enterprise-generality demonstrated at E5; evidence trail in docs/research
-    (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
+  rationale: Enterprise-generality demonstrated at E5; evidence trail in docs/research (evidence-register,
+    enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
 provenance:
   ladder_passage:
   - stage: candidate
@@ -42,8 +43,7 @@ provenance:
     actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
   - stage: normalized
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8,
-      #12)'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
   - stage: ecf-mapped
     date: '2026-08-31'
     actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
@@ -56,18 +56,18 @@ provenance:
 specialization:
   allowed: true
   industry_examples: []
-why_capability: E5; N-001 settled the name (Workforce Management; "People Management"
-  carried as alias).
-ecf_rationale: Primary build in agency-organization (the workforce is built, then
-  operated and improved); conceive and retire are legitimately empty at first order.  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
-boundary: Manages the workforce; does not plan its shape (Workforce Planning) or govern
-  the enterprise (Enterprise Governance).
+why_capability: E5; N-001 settled the name (Workforce Management; "People Management" carried as alias).
+ecf_rationale: Primary build in agency-organization (the workforce is built, then operated and improved);
+  conceive and retire are legitimately empty at first order.  CR-DEA-BC-13 §A re-evaluation 2026-09-10
+  under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
+boundary: Manages the workforce; does not plan its shape (Workforce Planning) or govern the enterprise
+  (Enterprise Governance), or design the structure of the workforce (Organizational Design).
 non_examples:
 - An HRIS (a system)
 - An HR department (an organization)
-specialization_boundary: Workforce forms (employees, contractors, volunteers, uniformed
-  service, AI agents, autonomous software agents, robotic systems, hybrid agent
-  teams) are specialization; the ability to manage a workforce is not.
+specialization_boundary: Workforce forms (employees, contractors, volunteers, uniformed service, AI agents,
+  autonomous software agents, robotic systems, hybrid agent teams) are specialization; the ability to
+  manage a workforce is not.
 aliases:
 - People Management
 - People / Workforce Management
@@ -99,9 +99,8 @@ ecfConformance:
   extensions:
   - name: kebab-case-domain-vocabulary
     kind: display-vocabulary
-    description: Catalog-side kebab-case labels for the seven ECF Domains and seven
-      ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums
-      for the gate.
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven ECF Stages (see mapping).
+      Display-only; resolves to canonical PascalCase enums for the gate.
     doesNotRedefine: true
     mapping:
       governance-existence: GovernanceAndExistence
@@ -120,11 +119,11 @@ ecfConformance:
       _stage_retire: Retire
   - name: multiple-contextual-coordinates
     kind: catalog-specific-relation
-    description: A capability may have one primary and zero-or-more secondary canonical
-      coordinates without identity duplication (CG-003 §5).
+    description: A capability may have one primary and zero-or-more secondary canonical coordinates without
+      identity duplication (CG-003 §5).
     doesNotRedefine: true
   - name: held-unmapped
     kind: classification-state
-    description: State for capabilities with no ECF affiliation by design (N-006);
-      does not appear on this entry because primary is set.
+    description: State for capabilities with no ECF affiliation by design (N-006); does not appear on
+      this entry because primary is set.
     doesNotRedefine: true

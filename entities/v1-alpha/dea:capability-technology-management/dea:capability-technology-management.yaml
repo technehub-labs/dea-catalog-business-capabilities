@@ -2,7 +2,7 @@ id: dea:capability-technology-management
 type: BusinessCapability
 name: Technology Management
 definition: The ability to direct, invest in, and steward the enterprise's technology estate.
-version: 1.3.0
+version: 1.3.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
@@ -20,6 +20,7 @@ ecf:
 related_capabilities:
 - dea:capability-information-management
 - dea:capability-technology-enablement
+- dea:capability-organizational-design
 evidence:
   sources:
   - SRC-002
@@ -79,9 +80,10 @@ boundary: 'Stewards the enterprise technology estate (the set of platforms, appl
   and AI agents the enterprise uses). Does not execute operations through technology (Operations); does
   not derive insight from information (Analytics & Intelligence); does not govern information lifecycles
   (Information Management); does not run technology services and platforms for the rest of the enterprise
-  (`dea:capability-technology-enablement`: admitted 2026-09-10 under CR-DEA-BC-17). The defining distinction:
-  this entry is the IT direction function (the estate); `dea:capability-technology-enablement` is the
-  IT delivery function (the services).'
+  (`dea:capability-technology-enablement`: admitted 2026-09-10 under CR-DEA-BC-17), or design the IT organization
+  structure (Organizational Design: IT org design is a sub-concern). The defining distinction: this entry
+  is the IT direction function (the estate); `dea:capability-technology-enablement` is the IT delivery
+  function (the services).'
 non_examples:
 - An IT department (an organization)
 - A specific platform (a system)

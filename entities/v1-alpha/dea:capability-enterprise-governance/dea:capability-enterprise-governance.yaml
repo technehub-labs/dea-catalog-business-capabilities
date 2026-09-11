@@ -1,14 +1,14 @@
 id: dea:capability-enterprise-governance
 type: BusinessCapability
 name: Enterprise Governance
-definition: 'The ability to direct and control the enterprise: decision rights, accountability,
-  oversight, and policy across the whole.'
-version: 1.0.0
+definition: 'The ability to direct and control the enterprise: decision rights, accountability, oversight,
+  and policy across the whole.'
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
-outcome: Decisions are made by the right authority, recorded, and enforced; the enterprise
-  remains answerable to its principals.
+outcome: Decisions are made by the right authority, recorded, and enforced; the enterprise remains answerable
+  to its principals.
 business_object: Decision
 ecf:
   primary:
@@ -22,13 +22,14 @@ ecf:
 related_capabilities:
 - dea:capability-strategy
 - dea:capability-risk-management
+- dea:capability-organizational-design
 evidence:
   sources:
   - SRC-001
   - SRC-002
   - SRC-004
-  rationale: Enterprise-generality demonstrated at E3; evidence trail in docs/research
-    (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
+  rationale: Enterprise-generality demonstrated at E3; evidence trail in docs/research (evidence-register,
+    enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
 provenance:
   ladder_passage:
   - stage: candidate
@@ -42,8 +43,7 @@ provenance:
     actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
   - stage: normalized
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8,
-      #12)'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
   - stage: ecf-mapped
     date: '2026-08-31'
     actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
@@ -56,18 +56,18 @@ provenance:
 specialization:
   allowed: true
   industry_examples: []
-why_capability: Governance of the enterprise-as-a-whole is enterprise-general and
-  implementation-independent; distinct from Risk, Compliance, and Legal by the distinctness
-  sweep.
-ecf_rationale: Primary conceive in governance-existence (governance is constituted
-  with the enterprise); exercised continuously at operate and improve.  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
-boundary: Governs the enterprise; does not manage specific obligation classes (Compliance,
-  Legal), exposure (Risk), or change (Change Management).
+why_capability: Governance of the enterprise-as-a-whole is enterprise-general and implementation-independent;
+  distinct from Risk, Compliance, and Legal by the distinctness sweep.
+ecf_rationale: Primary conceive in governance-existence (governance is constituted with the enterprise);
+  exercised continuously at operate and improve.  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new
+  semantic-center-of-gravity rule, placement confirmed (no coordinate change).
+boundary: Governs the enterprise; does not manage specific obligation classes (Compliance, Legal), exposure
+  (Risk), or change (Change Management), or design the structure (Organizational Design).
 non_examples:
 - A board meeting (an event)
 - A policy document (an artifact)
-specialization_boundary: Governance instruments (boards, councils, assemblies) vary
-  by sector and ownership form; the ability to govern does not.
+specialization_boundary: Governance instruments (boards, councils, assemblies) vary by sector and ownership
+  form; the ability to govern does not.
 ecfConformance:
   framework: EnterpriseConceptFramework
   contractVersion: 1.0.0
@@ -96,9 +96,8 @@ ecfConformance:
   extensions:
   - name: kebab-case-domain-vocabulary
     kind: display-vocabulary
-    description: Catalog-side kebab-case labels for the seven ECF Domains and seven
-      ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums
-      for the gate.
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven ECF Stages (see mapping).
+      Display-only; resolves to canonical PascalCase enums for the gate.
     doesNotRedefine: true
     mapping:
       governance-existence: GovernanceAndExistence
@@ -117,11 +116,11 @@ ecfConformance:
       _stage_retire: Retire
   - name: multiple-contextual-coordinates
     kind: catalog-specific-relation
-    description: A capability may have one primary and zero-or-more secondary canonical
-      coordinates without identity duplication (CG-003 §5).
+    description: A capability may have one primary and zero-or-more secondary canonical coordinates without
+      identity duplication (CG-003 §5).
     doesNotRedefine: true
   - name: held-unmapped
     kind: classification-state
-    description: State for capabilities with no ECF affiliation by design (N-006);
-      does not appear on this entry because primary is set.
+    description: State for capabilities with no ECF affiliation by design (N-006); does not appear on
+      this entry because primary is set.
     doesNotRedefine: true
