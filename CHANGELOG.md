@@ -9,6 +9,37 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [v1-alpha.7] - 2026-09-10
+
+**Minor** (CR-DEA-BC-17, PR pending). Admission-CR closing the BC-DEA-BC-13 §11 follow-on queue item. Admits `dea:capability-technology-enablement` as the 27th first-order canonical capability at `enablement-operations/operate` (primary), with `enablement-operations/{build, improve}` as secondaries. The new entry is the IT **delivery** function (running technology services, platforms, automation for the rest of the enterprise); Technology Management remains the IT **direction** function (stewarding the technology estate). The carve BC-SR-A001 §12 asked us to make explicit is now formalized as a peer relationship between two first-order capabilities rather than as a deferred specialization.
+
+### Affected entries
+
+- **New entry:** `dea:capability-technology-enablement` v1.0.0 (first canonical release).
+- **Technology Management:** 1.2.0 → **1.3.0** (Minor for boundary-text change + related_capabilities addition).
+- **Operations:** 1.0.0 → **1.0.1** (Patch for cross-reference addition).
+- **Information Management:** 1.0.0 → **1.0.1** (Patch for cross-reference addition).
+- **Other 23 entries:** unchanged.
+
+### Evidence trail
+
+- `catalog-research/evidence-register.yaml` v0.5.0: TER-TECHENABLEMENT-001 (E3 → E4 on admission).
+- `catalog-research/preliminary-ecf-overlay.yaml` v0.3.0: ECF overlay hypothesis appended; status promoted to "admitted".
+- `catalog-research/distinctness-sweep.yaml` v0.3.0: distinctness sweep appended against Operations, Tech Mgmt, IM, A&I.
+- `catalog-research/admission-gate-closeout.yaml`: §12 review-gate closeout recorded.
+
+### Foundation inclusion criteria gate A+B+C (locked 2026-09-10)
+
+- (A) Sensible in ≥3 verticals: ✅ Universal IT delivery function across B2B/B2C/G2C and every industry archetype.
+- (B) Works in B2B/B2C/G2C archetypes: ✅ Every archetype has an IT delivery function.
+- (C) Describable without industry-specific domain object: ✅ "Technology Service" is substrate-neutral.
+
+### Catalog count
+
+**26 → 27 first-order canonical capabilities** (first-order admission).
+
+**Tag**: `v1-alpha.7` (target at this CR's merge commit).
+
 ## [v1-alpha.6] - 2026-09-10
 
 **Minor** (CR-DEA-BC-13, PR #66). Method-CR for the ECF primary-coordinate rule: replaces the pre-CR-13 "earliest initiation point" rule with "semantic center of gravity" (METHODOLOGY.md §8), re-evaluates all 26 canonical entries under the new rule, formalizes the Technology Management carve per BC-SR-A001 §12, and starts the actual evidence collection for the three investigation tracks (Organizational Design, Enterprise Performance Management, Relationship Management) as non-canonical candidate records (no admission in this release).

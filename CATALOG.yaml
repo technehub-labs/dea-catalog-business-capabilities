@@ -2,9 +2,9 @@ catalog:
   abbreviation: BC
   counts:
     candidates: 3
-    canonical: 26
-    entities: 29
-    open_change_requests: 19
+    canonical: 27
+    entities: 30
+    open_change_requests: 20
     research_files: 3
     retired: 0
   cross_cutting:
@@ -170,7 +170,7 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-legal-matter-management
@@ -214,7 +214,7 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-partner-management
@@ -303,17 +303,28 @@ catalog:
     state: canonical
     type: BusinessCapability
     version: 1.2.0
+  - candidate_count: 0
+    canonical_count: 1
+    id: dea:capability-technology-enablement
+    last_modified: '2026-09-11'
+    lifecycle_status: active
+    path: entities/v1-alpha/dea:capability-technology-enablement/dea:capability-technology-enablement.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-technology-management
-    last_modified: '2026-09-10'
+    last_modified: '2026-09-11'
     lifecycle_status: active
     path: entities/v1-alpha/dea:capability-technology-management/dea:capability-technology-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.2.0
+    version: 1.3.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-workforce-management
@@ -423,6 +434,9 @@ catalog:
   - entity_id: dea:capability-supplier-management
     files: []
     path: entities/v1-alpha/dea:capability-supplier-management/research/
+  - entity_id: dea:capability-technology-enablement
+    files: []
+    path: entities/v1-alpha/dea:capability-technology-enablement/research/
   - entity_id: dea:capability-technology-management
     files: []
     path: entities/v1-alpha/dea:capability-technology-management/research/

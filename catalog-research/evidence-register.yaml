@@ -443,3 +443,15 @@ track_evidence_records:
     (opt 3)?
   - Does it survive the enterprise-generality test?
   status: evidence-pending; not yet admitted
+- track_id: TER-TECHENABLEMENT-001
+  track_label: Technology Enablement
+  track_source: BC-SR-A001 §12 + CR-DEA-BC-13 §C carve-text + CR-DEA-BC-17 admission
+  opened: '2026-09-10'
+  closed: '2026-09-10'
+  evidence_strength: E3 (preliminary; promotes to E4 on admission — admission landed 2026-09-10 per CR-DEA-BC-17)
+  rationale: 'The ''Technology-as-Enabler'' sub-concern BC-SR-A001 §12 carved out at BC-13 §C is admitted under CR-DEA-BC-17
+    as `dea:capability-technology-enablement` at enablement-operations/operate. Evidence sources: BC-SR-A001 §12 (the reviewer''s
+    recommendation to formalize the Tech-as-Estate vs Tech-as-Enabler carve); BC-SR-A001 §15 (the ECF''s own placement of
+    technology as enablers of execution); existing carve-text in `dea:capability-technology-management` (post-BC-13); general
+    industry practice (ITIL, SRE, platform engineering treat IT delivery as a distinct organizational function). Enterprise-generality
+    confirmed at the A+B+C foundation inclusion criteria gate (cross-industry universality of the IT delivery function).'
