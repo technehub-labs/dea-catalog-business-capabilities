@@ -27,7 +27,6 @@ evidence:
   - SRC-002
   - SRC-004
   - SRC-005
-  - BC-SR-A001
   rationale: 'Enterprise-generality demonstrated at E4; N-006 resolved at BC-08:
     technology is an estate, not an enabler of execution; stewardship of the estate
     belongs in Strategy & Direction, parallel to Asset Management and Facility

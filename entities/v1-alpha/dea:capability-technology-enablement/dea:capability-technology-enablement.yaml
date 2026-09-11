@@ -24,7 +24,6 @@ related_capabilities:
 - dea:capability-analytics-and-intelligence
 evidence:
   sources:
-  - BC-SR-A001
   - SRC-005
   - SRC-006
   rationale: 'Admission per CR-DEA-BC-17. The ''Technology-as-Enabler'' sub-concern carved out by CR-DEA-BC-13 §C is here promoted to a first-order canonical capability. Evidence trail: BC-SR-A001 §12 (reviewer''s
