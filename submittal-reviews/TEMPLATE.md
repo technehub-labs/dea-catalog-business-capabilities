@@ -56,13 +56,13 @@ numbered to preserve stable cross-references in carrier CRs (carrier CRs cite
 review items by section number, e.g. "BC-SR-A001 §8.A").
 
 ### §1. Executive assessment
-A 2–4 paragraph executive summary. State (a) the overall verdict (acceptable /
+A 2-4 paragraph executive summary. State (a) the overall verdict (acceptable /
 needs fixes / has foundational problems), (b) the headline strengths, (c) the
 headline gaps, (d) the most important next step. The catalog owner reads this
 section first; everything else is evidence for it.
 
 ### §2. What the catalog gets right
-A bulleted enumeration of strengths. Be specific — cite section numbers,
+A bulleted enumeration of strengths. Be specific: cite section numbers,
 record ids, or filenames. The owner needs to know what to *preserve* as much
 as what to fix. Strengths not captured here are at risk of accidental
 regression in the carrier CR.
@@ -72,9 +72,9 @@ A domain-by-domain table mapping the catalog's current content to the ECF
 domains (or the equivalent meta-framework coordinate system, where ECF is not
 applicable). Each row records the domain, the entities currently placed in it,
 and a one-line assessment (balanced / under-represented / overloaded / semantically
-questionable). This table is the diagnostic for §4–§7.
+questionable). This table is the diagnostic for §4-§7.
 
-### §4–§7. Foundational gaps
+### §4-§7. Foundational gaps
 Each gap gets its own numbered subsection (§4 Gap #1, §5 Gap #2, …). For each
 gap:
 
@@ -85,11 +85,11 @@ gap:
   secondary coordinates, with rationale.
 - **Evidence requirement.** What evidence would be required to recommend
   admission through the catalog's own admission gate. The reviewer does not
-  produce this evidence — they identify what is required.
+  produce this evidence: they identify what is required.
 - **Priority.** P1 (strong candidate for canonical admission), P2 (borderline,
   evidence-gated), P3 (investigation on backlog).
 
-### §8–§14. ECF coordinate alignment issues
+### §8-§14. ECF coordinate alignment issues
 Each mis-placement gets its own numbered subsection. For each:
 
 - **Current placement.** Domain × stage, with the entity id.

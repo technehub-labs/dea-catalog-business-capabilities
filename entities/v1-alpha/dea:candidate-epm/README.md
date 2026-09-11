@@ -1,4 +1,4 @@
-# Investigation Track B — Enterprise Performance Management
+# Investigation Track B: Enterprise Performance Management
 
 **Candidate id:** `dea:candidate-epm`
 **Status:** candidate-not-canonical (non-admitted research artifact)
@@ -21,7 +21,7 @@ a follow-on CR (provisional CR-DEA-BC-15).
 
 **Distinctive feature of this track:** the candidate is being investigated not
 only for boundary defensibility against existing caps but also for whether it
-closes the **direction loop** identified in BC-SR-A001 §16 — Strategy →
+closes the **direction loop** identified in BC-SR-A001 §16: Strategy →
 Strategic Planning → Performance → Insight → Adaptation. The candidate record's
 `evidence_requirement.loop_closure_narrative_required` flag is set, and the
 investigation must report on the loop's status even if the candidate is not
@@ -32,5 +32,5 @@ hypothesis, evidence-required-for-admission, and deliverables.
 
 **Files in this subtree:**
 
-- `candidates/epm.yaml` — the candidate record (ECF overlay hypothesis,
+- `candidates/epm.yaml`: the candidate record (ECF overlay hypothesis,
   evidence requirement, distinctness sweep, open evidence questions).

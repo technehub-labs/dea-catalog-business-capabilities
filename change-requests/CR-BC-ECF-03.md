@@ -25,7 +25,7 @@ The change is a **single Domain rename**; the other six Domains and the cardinal
 ## 3. Files changed
 
 - **1 schema**: `schemas/entity.schema.json` (kebab-case domain enum).
-- **3 check/conformance scripts**: `scripts/check_ecf_conformance.py` (CANON_DOMAINS), `scripts/migrate_ecf_conformance.py` (DOMAIN_MAP), `scripts/lib/grid.js` (DOMAINS id; display labels also corrected — see §5).
+- **3 check/conformance scripts**: `scripts/check_ecf_conformance.py` (CANON_DOMAINS), `scripts/migrate_ecf_conformance.py` (DOMAIN_MAP), `scripts/lib/grid.js` (DOMAINS id; display labels also corrected: see §5).
 - **26 entity YAMLs** under `entities/v1-alpha/` (domain field re-keyed where applicable).
 - **7 catalog-research files**: `ECF-OVERLAY-v0.1.md`, `ECF-OVERLAY-v0.2.md`, `RESEARCH-REPORT-v0.1.md`, `ADMISSION-GATE-CLOSEOUT-v0.1.md`, `admission-gate-closeout.yaml`, `ecf-overlay-v0.2.yaml`, `preliminary-ecf-overlay.yaml`.
 - **3 CR records** touched (CR-DEA-BC-03, CR-CATALOG-STRUCT-08, CR-CATALOG-STRUCT-09).
@@ -64,10 +64,10 @@ The catalog's own `scripts/check_ecf_conformance.py` enforces the canonical doma
 
 ## 8. Companion CRs (downstream cascade)
 
-- `dea-metaframework` CR-ECF-008 (PR #30) — merged 2026-09-08
-- `dea-metamodel` CR-MM-ECF-03 (PR #167) — open
-- `dea-catalog-processes` CR-BP-23 (PR #61) — open
-- `dea-catalog-business-objects` CR-BO-02 — planned (4 file footprint)
-- `dea-catalog-organizational-units` CR-OU-02 — planned (3 file footprint)
+- `dea-metaframework` CR-ECF-008 (PR #30): merged 2026-09-08
+- `dea-metamodel` CR-MM-ECF-03 (PR #167): open
+- `dea-catalog-processes` CR-BP-23 (PR #61): open
+- `dea-catalog-business-objects` CR-BO-02: planned (4 file footprint)
+- `dea-catalog-organizational-units` CR-OU-02: planned (3 file footprint)
 
 Repos audited as having zero footprint (no migration needed): `dea-catalog-actors`, `dea-catalog-stakeholders`, `dea-catalog-digital-business-service-factory`, `dea-architecture-framework`.

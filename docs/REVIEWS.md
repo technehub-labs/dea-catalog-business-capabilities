@@ -1,4 +1,4 @@
-# Submittal Reviews — Release Commentary
+# Submittal Reviews: Release Commentary
 
 This document is the per-release commentary surface for **submittal reviews** filed
 against this catalog. Each release that lands at least one recommendation from a
@@ -11,7 +11,7 @@ The intent is two-fold:
    acted on, and what was deferred.
 2. **Make submittal review commentary "summarized yet rich."** The full review
    file (under `submittal-reviews/`) is the long-form record; this document is
-   the bridge — enough context to understand *why* the release changed, with
+   the bridge: enough context to understand *why* the release changed, with
    pointers to the full evidence.
 
 ## Format
@@ -20,12 +20,12 @@ Each entry is appended in release order. New entries are added by the carrier CR
 that lands the recommendations. The structure is:
 
 ```
-## [<release label>] — <release date>
+## [<release label>]: <release date>
 
 **Submittal review filed:** <BC-SR-A###> by <reviewer> on <date>
 **Carrier CR:** <CR-DEA-...-NN>
 **Review scope:** <one-line>
-**Headline findings:** <2–4 bullets, paraphrased>
+**Headline findings:** <2-4 bullets, paraphrased>
 **Items landed in this release:** <bullets citing review section numbers>
 **Items opened as investigations:** <bullets with their own CR numbers, if opened>
 **Items deferred to backlog:** <bullets with rationale>
@@ -39,24 +39,24 @@ follow the links for the long-form.
 
 ## Index
 
-- [v1-alpha.5 — 2026-09-10](#v1-alpha5--2026-09-10)
-- [v1-alpha.6 — 2026-09-10 (BC-SR-A001 follow-on)](#v1-alpha6--2026-09-10-bc-sr-a001-follow-on)
-- [v1-alpha.7 — 2026-09-10 (BC-SR-A001 §12 closure)](#v1-alpha7--2026-09-10-bc-sr-a001-12-closure)
+- [v1-alpha.5: 2026-09-10](#v1-alpha5--2026-09-10)
+- [v1-alpha.6: 2026-09-10 (BC-SR-A001 follow-on)](#v1-alpha6--2026-09-10-bc-sr-a001-follow-on)
+- [v1-alpha.7: 2026-09-10 (BC-SR-A001 §12 closure)](#v1-alpha7--2026-09-10-bc-sr-a001-12-closure)
 
 ---
 
-## v1-alpha.5 — 2026-09-10 (planned)
+## v1-alpha.5: 2026-09-10 (planned)
 
 **Submittal review filed:** BC-SR-A001 by (external) on 2026-09-10 against the
 v1-alpha.4 catalog (commit `570830a`).
 
 **Carrier CR:** CR-DEA-BC-12.
 
-**Review scope:** Full catalog v1-alpha.0..v1-alpha.4 — methodology, ECF semantic
+**Review scope:** Full catalog v1-alpha.0..v1-alpha.4: methodology, ECF semantic
 alignment, foundational gap analysis, and repository/doc drift.
 
 **Headline findings (paraphrased):**
-- The catalog is "approximately 80–85% of the way to a strong enterprise-general
+- The catalog is "approximately 80-85% of the way to a strong enterprise-general
   foundation." Methodology is sound; the evidence ladder, first-order concept,
   specialization boundary, ability test, and capability-before-coordinate
   principle should all be preserved.
@@ -97,14 +97,14 @@ alignment, foundational gap analysis, and repository/doc drift.
 - OpenDEAM version pin correction in the README, per §19.
 
 **Items opened as investigations (no admission in this release):**
-- Investigation track A — **Organizational Design** as a first-order capability
+- Investigation track A: **Organizational Design** as a first-order capability
   (§4 P1). Evidence investigation per the catalog's own admission gate; no
   admission until evidence supports it.
-- Investigation track B — **Enterprise Performance Management** as a first-order
+- Investigation track B: **Enterprise Performance Management** as a first-order
   capability (§5 P1). Evidence investigation, including how it would close the
   Direction loop in §16.
-- Investigation track C — **Relationship Management** as a generic parent for
-  Customer/Supplier/Partner Management (§6 P1–P2). Boundary-led investigation;
+- Investigation track C: **Relationship Management** as a generic parent for
+  Customer/Supplier/Partner Management (§6 P1-P2). Boundary-led investigation;
   output may be a new first-order cap, an abstract grouping, or a no-op with
   rationale.
 
@@ -116,7 +116,7 @@ alignment, foundational gap analysis, and repository/doc drift.
   Design) reports back, because Agency & Organization × Improve is the most
   likely placement.
 - **Service Management, Quality Management, Stakeholder Management, Enterprise
-  Architecture Management** as candidate first-order caps (§17 P2–P3). No
+  Architecture Management** as candidate first-order caps (§17 P2-P3). No
   evidence yet; revisit after the three P1 investigations close.
 - **Technology Management boundary** decision (§12). The reviewer's own
   recommendation: investigate whether Technology Management = stewardship of
@@ -144,10 +144,10 @@ alignment, foundational gap analysis, and repository/doc drift.
 - The catalog label advances **v1-alpha.4 → v1-alpha.5** (Minor tier).
 - No new entities admitted. The catalog count remains 26 first-order caps.
 
-## v1-alpha.6 — 2026-09-10 (BC-SR-A001 follow-on)
+## v1-alpha.6: 2026-09-10 (BC-SR-A001 follow-on)
 
 **Submittal review filed:** [BC-SR-A001](../submittal-reviews/BC-SR-A001.md)
-(continues from v1-alpha.5 carrier — same review; this release closes BC-SR-A001
+(continues from v1-alpha.5 carrier: same review; this release closes BC-SR-A001
 §12, §14, and §17 deferred items via CR-DEA-BC-13).
 
 **Carrier CR:** CR-DEA-BC-13 (PR #66).
@@ -187,12 +187,12 @@ the v1-alpha.5 "high-confidence ECF re-mappings" half.
   for tracks A/B/C.
 
 **Items opened as investigations (already running, see v1-alpha.5 entry):**
-- Track A — Organizational Design (research files: `INV-ORGDESIGN-v0.1.md` +
+- Track A: Organizational Design (research files: `INV-ORGDESIGN-v0.1.md` +
   candidate record + evidence-register stub TER-ORGDESIGN-001 + ECF overlay
   hypothesis + distinctness sweep).
-- Track B — Enterprise Performance Management (loop-closure narrative required
+- Track B: Enterprise Performance Management (loop-closure narrative required
   regardless of admission).
-- Track C — Relationship Management generic parent (3 decision options tracked:
+- Track C: Relationship Management generic parent (3 decision options tracked:
   admit-with-specializations / abstract-grouping-only / no-admit).
 
 **Items deferred to backlog (with rationale):**
@@ -203,7 +203,7 @@ the v1-alpha.5 "high-confidence ECF re-mappings" half.
   (provisional) handles this once evidence supports it.
 - **Knowledge Management** (§7 P2). Revisit after track A reports back, because
   `agency-organization / improve` is the most likely placement.
-- **Service / Quality / Stakeholder / EAM** candidates (§17 P2–P3). Revisit
+- **Service / Quality / Stakeholder / EAM** candidates (§17 P2-P3). Revisit
   after tracks A/B/C close.
 
 **Doc-drift items closed:**
@@ -224,15 +224,15 @@ the v1-alpha.5 "high-confidence ECF re-mappings" half.
   `enablement-operations/operate` and `party-relationship/operate` is the
   intended effect.
 
-## v1-alpha.7 — 2026-09-10 (BC-SR-A001 §12 closure)
+## v1-alpha.7: 2026-09-10 (BC-SR-A001 §12 closure)
 
 **Submittal review filed:** [BC-SR-A001](../submittal-reviews/BC-SR-A001.md)
-(closes §12; this is the same review's third release-pass — BC-13 deferred
+(closes §12; this is the same review's third release-pass: BC-13 deferred
 the §12 admission, BC-17 admits it).
 
 **Carrier CR:** CR-DEA-BC-17 (PR TBD).
 
-**Review scope:** Single-entry admission — admits `dea:capability-technology-enablement`
+**Review scope:** Single-entry admission: admits `dea:capability-technology-enablement`
 as a first-order canonical capability. Closes the BC-DEA-BC-13 §11 follow-on
 queue item (BC-13 §C deferred admission).
 
@@ -278,7 +278,7 @@ carved-out sub-concern as a separate first-order cap.
   - Distinct outcome (technology services are reliable/performant/adapted)
   - Anti-invention: not a system, not an outcome, not an organization
   - Distinctness sweep: no overlap with any of the 26 canonical or 3 candidate entries
-  - Naming: "Technology Enablement" — kebab-case, plain, well-known across industries
+  - Naming: "Technology Enablement": kebab-case, plain, well-known across industries
   - Foundation inclusion criteria gate A+B+C: passed
 - **Architectural review (gate 2):** ✅
   - ECF mapping satisfies METHODOLOGY.md §8 (semantic center of gravity rule)
@@ -309,16 +309,16 @@ carved-out sub-concern as a separate first-order cap.
 
 **Items still in the open queue (not closed by this release):**
 
-- **CR-DEA-BC-14/15/16** — Track A/B/C admission CRs (gated on evidence packages)
-- **Industry-view mechanics pilot** — Healthcare example (deferred; not in scope for v1-alpha.7)
-- **Knowledge / Service / Quality / Stakeholder / EAM candidates** — BC-SR-A001 §7 + §17 P2–P3 deferred; revisit after tracks A/B/C close
+- **CR-DEA-BC-14/15/16**: Track A/B/C admission CRs (gated on evidence packages)
+- **Industry-view mechanics pilot**: Healthcare example (deferred; not in scope for v1-alpha.7)
+- **Knowledge / Service / Quality / Stakeholder / EAM candidates**: BC-SR-A001 §7 + §17 P2-P3 deferred; revisit after tracks A/B/C close
 
-### v1-alpha.7 addendum — BC-SR-A001 §4 evidence work in progress (no admission)
+### v1-alpha.7 addendum: BC-SR-A001 §4 evidence work in progress (no admission)
 
 **Sub-CARRIER:** [CR-DEA-BC-18](../../change-requests/CR-DEA-BC-18-track-a-orgdesign-evidence.md)
 (research-CR; no canonical change; same release cycle).
 
-**Review scope:** Evidence package for BC-SR-A001 §4 (reviewer P1 —
+**Review scope:** Evidence package for BC-SR-A001 §4 (reviewer P1:
 Organizational Design as a foundational gap; the catalog currently has
 Workforce Planning + Workforce Management but not the structural-design
 capability the ECF positions in `agency-organization/design`).
@@ -348,7 +348,7 @@ SRC-017/018/019 primaries).
 - **Admission-gate pre-check** added in `admission-gate-precheck.yaml` v0.6.
 - **INV-ORGDESIGN-v0.2.md** + YAML twin (dual-delivery per EVIDENCE.md §6).
 
-**Review-gate audit (per METHODOLOGY.md §12):** Research-CR — semantic review
+**Review-gate audit (per METHODOLOGY.md §12):** Research-CR: semantic review
 gate 1 passes on all hard gates (Ability, Outcome, Implementation Independence)
 and on 6 of 7 soft gates (Durability, Enterprise Relevance, Object Focus,
 Distinctness, Decomposability, ECF Fit). The Evidence soft gate has the open
@@ -367,8 +367,8 @@ boundaries; final record-shape conformance happens in the admission CR.
 
 **Items still in the open queue (not closed by this addendum):**
 
-- **CR-DEA-BC-14** — Track A admission CR (now unblocked; awaits user acceptance)
-- **CR-DEA-BC-15** — Track B (EPM) evidence package (not yet started)
-- **CR-DEA-BC-16** — Track C (Relationship Mgmt) evidence package (not yet started)
+- **CR-DEA-BC-14**: Track A admission CR (now unblocked; awaits user acceptance)
+- **CR-DEA-BC-15**: Track B (EPM) evidence package (not yet started)
+- **CR-DEA-BC-16**: Track C (Relationship Mgmt) evidence package (not yet started)
 - **Direct retrieval actions** for SRC-017/018/019 (independent of admission;
   re-rates to E4 if done)

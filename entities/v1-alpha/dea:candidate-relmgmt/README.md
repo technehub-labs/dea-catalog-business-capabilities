@@ -1,9 +1,9 @@
-# Investigation Track C — Relationship Management
+# Investigation Track C: Relationship Management
 
 **Candidate id:** `dea:candidate-relmgmt`
 **Status:** candidate-not-canonical (non-admitted research artifact)
 **Investigation track:** C
-**Source:** [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §6 (reviewer P1–P2)
+**Source:** [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §6 (reviewer P1-P2)
 **Carrier CR:** [CR-DEA-BC-13](../change-requests/CR-DEA-BC-13.md) §D.3
 **Opened:** 2026-09-10
 
@@ -38,6 +38,6 @@ hypothesis, evidence-required-for-admission, and deliverables.
 
 **Files in this subtree:**
 
-- `candidates/relmgmt.yaml` — the candidate record (ECF overlay hypothesis,
+- `candidates/relmgmt.yaml`: the candidate record (ECF overlay hypothesis,
   evidence requirement, distinctness sweep, decision options, open evidence
   questions).

@@ -1,4 +1,4 @@
-# Investigation Track A — Organizational Design
+# Investigation Track A: Organizational Design
 
 **Candidate id:** `dea:candidate-orgdesign`
 **Status:** candidate-not-canonical (non-admitted research artifact)
@@ -25,5 +25,5 @@ hypothesis, evidence-required-for-admission, and deliverables.
 
 **Files in this subtree:**
 
-- `candidates/orgdesign.yaml` — the candidate record (ECF overlay hypothesis,
+- `candidates/orgdesign.yaml`: the candidate record (ECF overlay hypothesis,
   evidence requirement, distinctness sweep, open evidence questions).

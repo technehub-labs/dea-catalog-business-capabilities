@@ -15,15 +15,15 @@
 
 This CR is the **admission CR** that closes the BC-SR-A001 §12 deferred item CR-DEA-BC-13 §C carved out as a follow-on. It admits **Technology Enablement** as a new first-order canonical capability and updates the related cross-references on the existing Technology Management, Operations, and Information Management entries.
 
-The BC-13 carrier explicitly deferred this admission because BC-13 was a **method-CR** (rule refinement + 26-entry re-evaluation) and admitting a new first-order cap would have mixed a method-CR with an admission-CR. This CR is the dedicated admission-CR — its scope is bounded to a single entry's admission and the three cross-reference updates required to keep the catalog internally consistent.
+The BC-13 carrier explicitly deferred this admission because BC-13 was a **method-CR** (rule refinement + 26-entry re-evaluation) and admitting a new first-order cap would have mixed a method-CR with an admission-CR. This CR is the dedicated admission-CR: its scope is bounded to a single entry's admission and the three cross-reference updates required to keep the catalog internally consistent.
 
 ### 1.1 Outcome
 
 - **Catalog count: 26 → 27 first-order canonical capabilities.**
 - **New entry:** `dea:capability-technology-enablement` at `enablement-operations/operate` (primary) with `build` and `improve` as secondaries.
-- **New pair:** Technology Management (estate, `strategy-direction/build`) and Technology Enablement (services, `enablement-operations/operate`) — the carve BC-SR-A001 §12 asked us to make explicit.
+- **New pair:** Technology Management (estate, `strategy-direction/build`) and Technology Enablement (services, `enablement-operations/operate`): the carve BC-SR-A001 §12 asked us to make explicit.
 - **Three existing entries updated:** Technology Management (1.2.0 → 1.3.0; related_capabilities + boundary text), Operations (1.0.0 → 1.0.1; related_capabilities + boundary text), Information Management (1.0.0 → 1.0.1; related_capabilities + boundary text).
-- **Tag target: v1-alpha.7** (Minor bump — new first-order admission).
+- **Tag target: v1-alpha.7** (Minor bump: new first-order admission).
 
 ### 1.2 Why this CR exists at all
 
@@ -33,7 +33,7 @@ BC-SR-A001 §12 said:
 
 BC-13 §C honored the recommendation as a **carve-text-only** decision (kept `dea:capability-technology-management` as a single first-order cap with rigorous `boundary` text). The "Technology-as-Enabler" sub-concern was flagged as a **deferred specialization**.
 
-That deferred item is the explicit queue item in CR-DEA-BC-13 §11 (follow-on CRs) under the label "**CR-DEA-BC-17** — Technology Management split (admit "Technology Enablement")".
+That deferred item is the explicit queue item in CR-DEA-BC-13 §11 (follow-on CRs) under the label "**CR-DEA-BC-17**: Technology Management split (admit "Technology Enablement")".
 
 This CR admits it.
 
@@ -43,8 +43,8 @@ This CR admits it.
 
 The change is bounded and reviewable end-to-end:
 
-- **One new entry** (`dea:capability-technology-enablement`) — a single, self-contained YAML file with full provenance, evidence trail, and ECF conformance block.
-- **Three existing entries updated** (Technology Management 1.2.0 → 1.3.0; Operations 1.0.0 → 1.0.1; Information Management 1.0.0 → 1.0.1) — all are cross-reference additions (Patch-tier per `docs/VERSIONING.md §1.2`); no coordinate moves, no boundary-text changes that re-litigate scope, no identity changes.
+- **One new entry** (`dea:capability-technology-enablement`): a single, self-contained YAML file with full provenance, evidence trail, and ECF conformance block.
+- **Three existing entries updated** (Technology Management 1.2.0 → 1.3.0; Operations 1.0.0 → 1.0.1; Information Management 1.0.0 → 1.0.1): all are cross-reference additions (Patch-tier per `docs/VERSIONING.md §1.2`); no coordinate moves, no boundary-text changes that re-litigate scope, no identity changes.
 - **One catalog-regeneration** (`CATALOG.yaml`).
 - **One tag** (`v1-alpha.7`).
 
@@ -65,8 +65,8 @@ The definition satisfies the Section 1 requirements (durable ability, independen
 | Distinction | Pass? | Why |
 |---|---|---|
 | Object Focus | ✅ | Business object is "Technology Service" (distinct from Tech Mgmt's "Technology" estate, from Operations' "Operation", from IM's "Information"). |
-| Outcome focus | ✅ | Outcome is "Technology services are reliable, available, performant, and adapted to changing demand from the capabilities that depend on them" — a distinct outcome. |
-| Implementation Independence | ✅ | A capability: the actual IT delivery function may be performed by an internal IT department, an external MSP, a platform team, or a hybrid — the capability is the *what*, not the *how*. |
+| Outcome focus | ✅ | Outcome is "Technology services are reliable, available, performant, and adapted to changing demand from the capabilities that depend on them": a distinct outcome. |
+| Implementation Independence | ✅ | A capability: the actual IT delivery function may be performed by an internal IT department, an external MSP, a platform team, or a hybrid: the capability is the *what*, not the *how*. |
 | Anti-invention classification | ✅ | Not a System (it operates systems), not an Outcome (the outcome is the state of services being reliable). |
 | Not duplicating any existing entry | ✅ | See §3.3. |
 
@@ -78,7 +78,7 @@ Per the new rule's "no two entries should describe the same durable ability" pri
 |---|---|
 | Technology Management | TM stewards the **estate** (what technology the enterprise has, acquired and lifecycle-tracked). TE runs the **services** (how that technology operates for others). Different business object (Technology vs Technology Service), different ECF cell (strategy-direction/build vs enablement-operations/operate). TM's carve-text now explicitly excludes TE's scope. |
 | Operations | Operations delivers **value** (production, delivery, fulfillment of offerings). TE delivers **technology services** that value delivery depends on. Operations is `operate` for value; TE is `operate` for technology services. Different business object (Operation vs Technology Service). |
-| Information Management | IM stewards **information** across its lifecycle. TE operates the **platforms and services** that carry information. Different business object (Information vs Technology Service); distinct carve ("does not manage the technology that carries it" — Technology Enablement does). |
+| Information Management | IM stewards **information** across its lifecycle. TE operates the **platforms and services** that carry information. Different business object (Information vs Technology Service); distinct carve ("does not manage the technology that carries it": Technology Enablement does). |
 | Analytics & Intelligence | A&I derives **insight from information**. TE runs **services** that information and analytics platforms may run on, but doesn't derive insight itself. Distinct. |
 | Change Management | Change Mgmt manages the **transition** between enterprise states. TE runs **services**. Change Mgmt lists "technology" as one of its specialization kinds (the kind of change, not a service). Distinct. |
 | Continuity Management | Continuity Mgmt designs **continuity patterns**. TE runs **services**, including the operational continuity of services themselves. Continuity is a design-level concern (design stage); TE is a run-level concern (operate stage). Distinct. |
@@ -92,9 +92,9 @@ Per the new rule's "no two entries should describe the same durable ability" pri
 
 Per TAXONOMY §1:
 
-- **Name:** "Technology Enablement" — kebab-case `technology-enablement`; English-canonical; plain (no jargon); well-known across industries (ITIL, SRE, platform engineering all use this exact term or close variants).
+- **Name:** "Technology Enablement": kebab-case `technology-enablement`; English-canonical; plain (no jargon); well-known across industries (ITIL, SRE, platform engineering all use this exact term or close variants).
 - **Aliases:** none required at admission time.
-- **business_object:** "Technology Service" — echoes the name (`Technology` is in the name; `Service` is the operational unit).
+- **business_object:** "Technology Service": echoes the name (`Technology` is in the name; `Service` is the operational unit).
 
 ### 3.5 Foundation inclusion criteria (gate A+B+C, locked 2026-09-10)
 
@@ -114,14 +114,14 @@ Per TAXONOMY §1:
 
 Under the new "semantic center of gravity" rule (CR-DEA-BC-13 §A):
 
-- **Primary:** `enablement-operations/operate`. Rationale: the *defining* activity of Technology Enablement is sustained IT service and platform delivery — running, monitoring, adapting technology services for the capabilities that depend on them. This is squarely the `operate` stage (not `build` = provisioning a one-off service; not `improve` = SRE iteration; not `conceive` = IT direction).
-- **Secondary:** `enablement-operations/build` — provisioning new services as demand requires.
-- **Secondary:** `enablement-operations/improve` — SRE / platform engineering iteration.
+- **Primary:** `enablement-operations/operate`. Rationale: the *defining* activity of Technology Enablement is sustained IT service and platform delivery: running, monitoring, adapting technology services for the capabilities that depend on them. This is squarely the `operate` stage (not `build` = provisioning a one-off service; not `improve` = SRE iteration; not `conceive` = IT direction).
+- **Secondary:** `enablement-operations/build`: provisioning new services as demand requires.
+- **Secondary:** `enablement-operations/improve`: SRE / platform engineering iteration.
 - **No `strategy-direction/*` secondary** because that would collide with Tech Management's `strategy-direction/build` placement and double-count the IT direction function.
 
 ### 4.2 Realization links (Section 10)
 
-The new entry references four related capabilities (`Technology Management`, `Operations`, `Information Management`, `Analytics & Intelligence`). These are recorded under `related_capabilities`, not under realization links — the metamodel distinguishes the two, and this is a peer-relationship, not a realization.
+The new entry references four related capabilities (`Technology Management`, `Operations`, `Information Management`, `Analytics & Intelligence`). These are recorded under `related_capabilities`, not under realization links: the metamodel distinguishes the two, and this is a peer-relationship, not a realization.
 
 ### 4.3 Record shape (Section 10)
 
@@ -129,10 +129,10 @@ The new entry conforms to the v1-alpha record shape: top-level `id`, `type`, `na
 
 ### 4.4 Layering boundaries
 
-- **WSF** — not invoked (no process or actor realization recorded; the new entry is an L1 capability, not a process or actor).
-- **Metaframework** — ECF contract v1.0.0 pinned; canonicalReferences block conformant.
-- **Metamodel** — `metamodel_pin: 1.0.0` recorded.
-- **Catalogs** — sibling-catalog cross-references recorded under `related_capabilities` (pointers only; not realizing).
+- **WSF**: not invoked (no process or actor realization recorded; the new entry is an L1 capability, not a process or actor).
+- **Metaframework**: ECF contract v1.0.0 pinned; canonicalReferences block conformant.
+- **Metamodel**: `metamodel_pin: 1.0.0` recorded.
+- **Catalogs**: sibling-catalog cross-references recorded under `related_capabilities` (pointers only; not realizing).
 
 ---
 
@@ -140,13 +140,13 @@ The new entry conforms to the v1-alpha record shape: top-level `id`, `type`, `na
 
 The new entry's `provenance.ladder_passage` records the full evidence-promotion ladder:
 
-1. **candidate** (2026-09-10) — derived from CR-DEA-BC-13 §C carve-text + BC-SR-A001 §12 recommendation.
-2. **observed** (2026-09-10) — BC-SR-A001 §12 + carve-text evidence; the carve-text in `dea:capability-technology-management` is itself the observation.
-3. **corroborated** (2026-09-10) — enterprise-generality matrix entry (cross-industry sweep confirms IT delivery function is universal).
-4. **normalized** (2026-09-10) — distinctness sweep (§3.3 above) confirms no overlap with any of the 26 canonical or 3 candidate entries.
-5. **ecf-mapped** (2026-09-10) — ECF overlay hypothesis: `enablement-operations/operate` (primary).
-6. **reviewed** (2026-09-10) — semantic review (§3) + architectural review (§4).
-7. **canonical** (2026-09-10) — admission PR (this change).
+1. **candidate** (2026-09-10): derived from CR-DEA-BC-13 §C carve-text + BC-SR-A001 §12 recommendation.
+2. **observed** (2026-09-10): BC-SR-A001 §12 + carve-text evidence; the carve-text in `dea:capability-technology-management` is itself the observation.
+3. **corroborated** (2026-09-10): enterprise-generality matrix entry (cross-industry sweep confirms IT delivery function is universal).
+4. **normalized** (2026-09-10): distinctness sweep (§3.3 above) confirms no overlap with any of the 26 canonical or 3 candidate entries.
+5. **ecf-mapped** (2026-09-10): ECF overlay hypothesis: `enablement-operations/operate` (primary).
+6. **reviewed** (2026-09-10): semantic review (§3) + architectural review (§4).
+7. **canonical** (2026-09-10): admission PR (this change).
 
 The supporting research artifacts are appended to `catalog-research/`:
 
@@ -206,7 +206,7 @@ To keep the catalog internally consistent:
 
 Per `docs/VERSIONING.md §1.2`:
 
-- **Catalog label:** v1-alpha.6 → v1-alpha.7 (**Minor** — new first-order admission).
+- **Catalog label:** v1-alpha.6 → v1-alpha.7 (**Minor**: new first-order admission).
 - **New entry version:** `1.0.0` (first canonical release).
 - **Affected existing entries:**
   - Technology Management: 1.2.0 → 1.3.0 (Minor for boundary-text change).
@@ -223,8 +223,8 @@ Per `docs/VERSIONING.md §1.2`:
 
 | Risk | Mitigation |
 |---|---|
-| Critics may say "Technology Enablement is just IT operations, which is a sub-concern of Operations" | The carve is explicit: Operations delivers *value*; Technology Enablement delivers *technology services for value delivery*. Different business objects. Different definition. The new entry's ECF cell is `enablement-operations/operate` — adjacent to Operations, not nested under it. The cross-references are recorded under `related_capabilities` (peer relationship, not parent-child). |
-| Critics may say "this is an admission, not a method change — should be in a different CR series" | The CR series is layered; CR-DEA-BC-13 was the method-CR (rule refinement). CR-DEA-BC-17 is the admission-CR for the entry BC-13 §C carved out. Both are legitimate; BC-13 §11 explicitly listed CR-DEA-BC-17 as a follow-on admission CR. |
+| Critics may say "Technology Enablement is just IT operations, which is a sub-concern of Operations" | The carve is explicit: Operations delivers *value*; Technology Enablement delivers *technology services for value delivery*. Different business objects. Different definition. The new entry's ECF cell is `enablement-operations/operate`: adjacent to Operations, not nested under it. The cross-references are recorded under `related_capabilities` (peer relationship, not parent-child). |
+| Critics may say "this is an admission, not a method change: should be in a different CR series" | The CR series is layered; CR-DEA-BC-13 was the method-CR (rule refinement). CR-DEA-BC-17 is the admission-CR for the entry BC-13 §C carved out. Both are legitimate; BC-13 §11 explicitly listed CR-DEA-BC-17 as a follow-on admission CR. |
 | The new entry expands the 26-cap "deliberately small" first-order set the reviewer endorsed | The reviewer endorsed keeping the set small *when the entries are well-supported*. BC-SR-A001 §12 explicitly recommended this admission; the evidence package (§5) supports it. The foundation inclusion criteria gate A+B+C (§3.5) confirms foundation-grade fit. The set grows by 1 (26 → 27), not by many. |
 | Cross-reference updates could be deferred to a follow-on CR | Possible, but they would leave the catalog inconsistent until the follow-on lands. Keeping the bundle atomic ensures the catalog is internally consistent at v1-alpha.7. |
 | The 3 candidates (Org Design, EPM, Relationship Mgmt) remain un-admitted; this CR doesn't help them | Correct scope discipline. CR-DEA-BC-14/15/16 are gated on evidence packages for each track. CR-DEA-BC-17 is independent of those packages and can ship now. |
@@ -233,19 +233,19 @@ Per `docs/VERSIONING.md §1.2`:
 
 ## 10. Follow-on work (not in this CR)
 
-- **CR-DEA-BC-14** — Track A (Organizational Design) admission (when track A evidence supports).
-- **CR-DEA-BC-15** — Track B (EPM) admission (when track B evidence supports).
-- **CR-DEA-BC-16** — Track C (Relationship Management generic parent) admission (after the 3 decision options are evaluated and one is chosen).
-- **Future MCSP specialization pilot** — Healthcare industry view, surfacing industry-disjoint L1 (e.g., "Disease Prevention & Management") and industry-specialization of foundation L1s (e.g., "Patient Management" specializing "Customer Management"). Not in CR-DEA-BC-17.
+- **CR-DEA-BC-14**: Track A (Organizational Design) admission (when track A evidence supports).
+- **CR-DEA-BC-15**: Track B (EPM) admission (when track B evidence supports).
+- **CR-DEA-BC-16**: Track C (Relationship Management generic parent) admission (after the 3 decision options are evaluated and one is chosen).
+- **Future MCSP specialization pilot**: Healthcare industry view, surfacing industry-disjoint L1 (e.g., "Disease Prevention & Management") and industry-specialization of foundation L1s (e.g., "Patient Management" specializing "Customer Management"). Not in CR-DEA-BC-17.
 
 ---
 
 ## 11. See also
 
-- [CR-DEA-BC-13](CR-DEA-BC-13.md) — the BC-13 method-CR that carved this admission out (§C).
-- [BC-SR-A001 §12](../submittal-reviews/BC-SR-A001.md#12-technology-management-deserves-special-treatment) — the reviewer's recommendation this admission closes.
-- [`dea:capability-technology-management`](../entities/v1-alpha/dea:capability-technology-management/dea:capability-technology-management.yaml) — the paired entry (IT direction function).
-- [`METHODOLOGY.md §12`](../METHODOLOGY.md) — the two review gates (semantic + architectural) this admission passes.
-- [`docs/VERSIONING.md §1.2`](../docs/VERSIONING.md) — version semantics for the affected entries.
-- [CHANGELOG.md](../CHANGELOG.md) — v1-alpha.7 entry.
-- [docs/REVIEWS.md](../docs/REVIEWS.md) — v1-alpha.7 commentary.
+- [CR-DEA-BC-13](CR-DEA-BC-13.md): the BC-13 method-CR that carved this admission out (§C).
+- [BC-SR-A001 §12](../submittal-reviews/BC-SR-A001.md#12-technology-management-deserves-special-treatment): the reviewer's recommendation this admission closes.
+- [`dea:capability-technology-management`](../entities/v1-alpha/dea:capability-technology-management/dea:capability-technology-management.yaml): the paired entry (IT direction function).
+- [`METHODOLOGY.md §12`](../METHODOLOGY.md): the two review gates (semantic + architectural) this admission passes.
+- [`docs/VERSIONING.md §1.2`](../docs/VERSIONING.md): version semantics for the affected entries.
+- [CHANGELOG.md](../CHANGELOG.md): v1-alpha.7 entry.
+- [docs/REVIEWS.md](../docs/REVIEWS.md): v1-alpha.7 commentary.

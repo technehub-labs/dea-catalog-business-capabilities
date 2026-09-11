@@ -20,7 +20,7 @@ ADR-ECF-001); this repo is the **4th landing in the v2.3.0 wave**
 
 The migration is a pure rename. The **ECF Overlay v0.2 re-derivation**
 against the v2.3.0 Domain set is a separate task that follows this PR
-— parked per eaojnr's direction but ready to dispatch. The overlay's
+: parked per eaojnr's direction but ready to dispatch. The overlay's
 admitted candidates and dispositions are unchanged; only the names
 they reference shift.
 

@@ -1,4 +1,4 @@
-# Investigation Track A — Organizational Design
+# Investigation Track A: Organizational Design
 
 **Status**: evidence-seeded (CR-DEA-BC-18 research-CR; no admission in this revision)
 **Source**: [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §4 (reviewer P1)
@@ -44,7 +44,7 @@ the agents; neither addresses the structure that makes the agents an enterprise.
 The reviewer's concern: the structural-design capability is the foundation, and
 the agent-lifecycle capabilities are its realization.
 
-## 3. Distinctness sweep — result
+## 3. Distinctness sweep: result
 
 Full sweep in
 [`distinctness-sweep.yaml`](distinctness-sweep.yaml) §`track_sweeps[0]`
@@ -61,7 +61,7 @@ Full sweep in
 
 All pairs pass the §3 business-object partition test. No synonym, overlap, or
 implementation-variant relationships. The relationship between Org Design and
-Strategy is **parent-child**, not overlap — Org Design operationalizes the
+Strategy is **parent-child**, not overlap: Org Design operationalizes the
 structural choices that implement a chosen strategy posture.
 
 ## 4. Evidence package (seeded)
@@ -72,7 +72,7 @@ classes for CAND-036:
 | Source | Class | Retrieval | Observation (short) |
 |---|---|---|---|
 | **SRC-017** Galbraith Star Model & org-design literature | business-architecture | indirect (book titles, Star Model structure, core concepts; pending direct retrieval) | Org design is a recognized management discipline; multiple competing structural archetypes; cross-sector applicability |
-| **SRC-018** APQC PCF v8.0 — Organization category | cross-industry-process | indirect (PCF structure cited from public APQC overview; full element list behind registration form) | PCF surfaces org design activities as a recurrent class of cross-industry enterprise work |
+| **SRC-018** APQC PCF v8.0: Organization category | cross-industry-process | indirect (PCF structure cited from public APQC overview; full element list behind registration form) | PCF surfaces org design activities as a recurrent class of cross-industry enterprise work |
 | **SRC-019** ISO 9001:2015 §5.3 organizational roles, responsibilities, authorities | standards-body | direct (OBP summary; full normative text paywalled) | ISO names role/authority design as a top-management responsibility; applies across any ISO 9001-adopting organization |
 
 Three independent classes (business-architecture, cross-industry-process,
@@ -95,7 +95,7 @@ remain gated on a separate admission CR (CR-DEA-BC-14 provisional) following the
 
 ## 5. ECF mapping (hypothesis, evidence-seeded)
 
-Primary: **`agency-organization / design`** — the defining activity is sustained
+Primary: **`agency-organization / design`**: the defining activity is sustained
 design of organizational structures, roles, authorities, and coordination
 patterns. Per `METHODOLOGY.md` §8.3 heuristic 3 (Design / build activity): "if the
 capability is primarily a designed artifact, pattern, or build phase, the primary
@@ -111,7 +111,7 @@ design subject is the structure, not the substrate.
 
 Full overlay hypothesis entry:
 [`preliminary-ecf-overlay.yaml`](preliminary-ecf-overlay.yaml) `overlays[candidate=dea:candidate-orgdesign]`
-(v0.3, confidence `low-medium` — promotes to `high` on admission in CR-DEA-BC-14).
+(v0.3, confidence `low-medium`: promotes to `high` on admission in CR-DEA-BC-14).
 
 ## 6. Ladder passage (so far)
 
@@ -167,14 +167,14 @@ Track A passage after CR-DEA-BC-18:
 
 ## 9. Follow-on (not in this CR)
 
-- **CR-DEA-BC-14 (provisional)** — Track A admission CR. Triggered when the user
+- **CR-DEA-BC-14 (provisional)**: Track A admission CR. Triggered when the user
   reviews this evidence package, accepts it, and signals readiness for admission.
   Will carry the formal `METHODOLOGY.md` §12 review, the final `N-NNN`
   normalization decision (if any), the version bump (catalog → 28 first-order
   capabilities), the carrier CR body, the CHANGELOG / docs/REVIEWS / README
   updates, and the release-tag decision.
-- **Direct retrieval actions** (above) — can run independently of admission.
-- **Track B (EPM)** and **Track C (Relationship Management)** — separate
+- **Direct retrieval actions** (above): can run independently of admission.
+- **Track B (EPM)** and **Track C (Relationship Management)**: separate
   evidence packages; BC-15 and BC-16 provisional. No work on them in this CR.
 
 ## 10. Progress log

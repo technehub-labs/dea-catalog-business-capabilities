@@ -1,7 +1,7 @@
-# Investigation Track C — Relationship Management (Generic Parent)
+# Investigation Track C: Relationship Management (Generic Parent)
 
 **Status**: Open (boundary-led investigation)
-**Source**: [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §6 (reviewer P1–P2)
+**Source**: [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §6 (reviewer P1-P2)
 **Carrier CR**: [CR-DEA-BC-12](../change-requests/CR-DEA-BC-12.md) §B.3
 **Machine-readable twin**: (to be added when evidence work begins)
 **Date opened**: 2026-09-10
@@ -14,7 +14,7 @@ role-specific capabilities already MECE-complete and the generic parent is
 unnecessary abstraction?
 
 This is the hardest of the three investigation tracks because the answer
-might legitimately be **"no generic parent is warranted"** — and that is a
+might legitimately be **"no generic parent is warranted"**: and that is a
 valid output. The investigation must produce the rationale either way.
 
 ## Hypothesis (from the reviewer)
@@ -29,13 +29,13 @@ secondaries.
 **Why this might be foundational (per BC-SR-A001 §6):**
 
 The ECF Party & Relationship domain is MECE-complete for the external
-environment — customer, supplier, partner, regulator, community. The catalog
+environment: customer, supplier, partner, regulator, community. The catalog
 organizes the domain around roles (Customer, Supplier, Partner). The ECF
 organizes it around party/relationship as the underlying semantic subject.
 These are not the same cut. The reviewer's question is which cut is
 canonical for an enterprise-general foundation.
 
-## Distinctness sweep — required against
+## Distinctness sweep: required against
 
 - `dea:capability-customer-management` (customer relationship)
 - `dea:capability-supplier-management` (supplier relationship; note: this

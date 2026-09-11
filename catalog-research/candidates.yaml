@@ -1,6 +1,7 @@
 universe_version: 0.3.0
 cr: CR-DEA-BC-02
-compiled: '2026-09-01 (v0.3: corpus patch applied; CAND-023/CAND-029 evidence E2 -> E4, boundary and generality re-evaluated)'
+compiled: '2026-09-01 (v0.3: corpus patch applied; CAND-023/CAND-029 evidence E2 -> E4, boundary and generality
+  re-evaluated)'
 status: candidate-not-canonical
 evidence_register: docs/research/evidence-register.yaml
 classification_taxonomy:
@@ -54,8 +55,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 Enterprise Direction; first-order candidate
-  rationale: Multiple sources identify direction-setting as a recurring enterprise ability; the noun Strategy is a stable
-    business-object-anchored capability name
+  rationale: Multiple sources identify direction-setting as a recurring enterprise ability; the noun Strategy
+    is a stable business-object-anchored capability name
   provenance:
     research_artifact: true
     canonical: false
@@ -127,11 +128,11 @@ candidates:
   - SRC-006
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 Stakeholder Relationship; grouping parent only (normalization N-007); withdrawn from the
-    first-order admission track
-  rationale: Aggregation over customers, citizens, partners, suppliers, regulators; carries the business-object focus on the
-    relationship itself. No boundary independent of the union of children; retained for the common relationship pattern
-    and the deferred CAND-005/CAND-006 unification decision
+  notes: Theme section 30 Stakeholder Relationship; grouping parent only (normalization N-007); withdrawn
+    from the first-order admission track
+  rationale: Aggregation over customers, citizens, partners, suppliers, regulators; carries the business-object
+    focus on the relationship itself. No boundary independent of the union of children; retained for the
+    common relationship pattern and the deferred CAND-005/CAND-006 unification decision
   provenance:
     research_artifact: true
     canonical: false
@@ -157,8 +158,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Highest convergence in the corpus; BIZBOK exemplar
-  rationale: 'The canonical BIZBOK Customer Management decomposition: children stay on Customer (CRM, account, lifecycle,
-    service); business-object focus preserved'
+  rationale: 'The canonical BIZBOK Customer Management decomposition: children stay on Customer (CRM,
+    account, lifecycle, service); business-object focus preserved'
   provenance:
     research_artifact: true
     canonical: false
@@ -179,8 +180,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Public-sector / non-profit specialization arm
-  rationale: Distinct from Customer Management by business object; may unify with CAND-005 in normalization, or stay separate
-    as a specialization
+  rationale: Distinct from Customer Management by business object; may unify with CAND-005 in normalization,
+    or stay separate as a specialization
   provenance:
     research_artifact: true
     canonical: false
@@ -225,7 +226,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 Partner
-  rationale: Lower convergence than Supplier/Customer; partner relationship is structurally different from supply relationships
+  rationale: Lower convergence than Supplier/Customer; partner relationship is structurally different
+    from supply relationships
   provenance:
     research_artifact: true
     canonical: false
@@ -248,7 +250,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 Offering
-  rationale: Aggregates product/service development, lifecycle, portfolio; multiple sources converge on the offering-as-aggregate
+  rationale: Aggregates product/service development, lifecycle, portfolio; multiple sources converge on
+    the offering-as-aggregate
   provenance:
     research_artifact: true
     canonical: false
@@ -271,8 +274,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 sales/marketing; high frequency
-  rationale: Often listed separately from Customer Management in vendor lists; deserves normalization test (does Marketing
-    belong under Customer or Offering?)
+  rationale: Often listed separately from Customer Management in vendor lists; deserves normalization
+    test (does Marketing belong under Customer or Offering?)
   provenance:
     research_artifact: true
     canonical: false
@@ -292,10 +295,10 @@ candidates:
   - SRC-004
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 Value Delivery; dissolved as first-order candidate (normalization N-008); rejected aggregate,
-    recorded per section 39
-  rationale: Business object Outcome fails the noun-anchor test; the durable abilities are the children. Operations
-    re-rooted as first-order; Service Delivery, Fulfilment, Production re-attached under CAND-012
+  notes: Theme section 30 Value Delivery; dissolved as first-order candidate (normalization N-008); rejected
+    aggregate, recorded per section 39
+  rationale: Business object Outcome fails the noun-anchor test; the durable abilities are the children.
+    Operations re-rooted as first-order; Service Delivery, Fulfilment, Production re-attached under CAND-012
   provenance:
     research_artifact: true
     canonical: false
@@ -319,10 +322,10 @@ candidates:
   - SRC-006
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Common-level across industries; re-rooted as first-order after CAND-011 dissolution (normalization N-008);
-    inherits the former CAND-011 children
-  rationale: Universal in any enterprise that produces goods/services; abstraction test passes when restricted to recurring
-    operational abilities
+  notes: Common-level across industries; re-rooted as first-order after CAND-011 dissolution (normalization
+    N-008); inherits the former CAND-011 children
+  rationale: Universal in any enterprise that produces goods/services; abstraction test passes when restricted
+    to recurring operational abilities
   provenance:
     research_artifact: true
     canonical: false
@@ -349,8 +352,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 Financial Stewardship; high convergence
-  rationale: Highest frequency plus semantic validity across the corpus; accounting plus treasury plus planning are durable
-    children
+  rationale: Highest frequency plus semantic validity across the corpus; accounting plus treasury plus
+    planning are durable children
   provenance:
     research_artifact: true
     canonical: false
@@ -398,8 +401,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 People; highest convergence cluster
-  rationale: Sources variously name it Human Capital Management or HR; normalization test (which name carries which meaning?)
-    recorded for section 20 pass
+  rationale: Sources variously name it Human Capital Management or HR; normalization test (which name
+    carries which meaning?) recorded for section 20 pass
   provenance:
     research_artifact: true
     canonical: false
@@ -444,8 +447,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 Information
-  rationale: 'Includes data, knowledge, analytics; analytics flagged as potential specialization (different context: data
-    product vs analytical insight)'
+  rationale: 'Includes data, knowledge, analytics; analytics flagged as potential specialization (different
+    context: data product vs analytical insight)'
   provenance:
     research_artifact: true
     canonical: false
@@ -467,8 +470,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 analytics; potential specialization
-  rationale: Borderline first-order; many vendor models treat it as a distinct theme. Hold as candidate pending normalization
-    (cross-reference with CAND-017 vs standalone)
+  rationale: Borderline first-order; many vendor models treat it as a distinct theme. Hold as candidate
+    pending normalization (cross-reference with CAND-017 vs standalone)
   provenance:
     research_artifact: true
     canonical: false
@@ -564,7 +567,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 legal
-  rationale: 'Distinct from Compliance: legal equals rights/obligations/counsel; compliance equals obligation adherence'
+  rationale: 'Distinct from Compliance: legal equals rights/obligations/counsel; compliance equals obligation
+    adherence'
   provenance:
     research_artifact: true
     canonical: false
@@ -587,10 +591,11 @@ candidates:
   - SRC-014
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 resilience; evidence upgraded E2 -> E4 by corpus patch (SRC-013 ISO 22301, SRC-014 BCI GPG 7.0)
-  rationale: Continuity of delivery at acceptable predefined capacity during disruption (ISO 22301); boundary against
-    Risk (uncertainty treatment) and Security (protection) drawn by standard text; generality re-scored demonstrated
-    in matrix v0.2 (8 of 10 strong)
+  notes: Theme section 30 resilience; evidence upgraded E2 -> E4 by corpus patch (SRC-013 ISO 22301, SRC-014
+    BCI GPG 7.0)
+  rationale: Continuity of delivery at acceptable predefined capacity during disruption (ISO 22301); boundary
+    against Risk (uncertainty treatment) and Security (protection) drawn by standard text; generality
+    re-scored demonstrated in matrix v0.2 (8 of 10 strong)
   provenance:
     research_artifact: true
     canonical: false
@@ -612,8 +617,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 security
-  rationale: 'Distinct from SystemCapability for Information Security: this is the Business Capability to govern security
-    posture'
+  rationale: 'Distinct from SystemCapability for Information Security: this is the Business Capability
+    to govern security posture'
   provenance:
     research_artifact: true
     canonical: false
@@ -636,7 +641,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 Sourcing and External Provision
-  rationale: 'Distinct from Supplier Management: sourcing equals buying; supplier management equals ongoing supplier relationship'
+  rationale: 'Distinct from Supplier Management: sourcing equals buying; supplier management equals ongoing
+    supplier relationship'
   provenance:
     research_artifact: true
     canonical: false
@@ -704,8 +710,8 @@ candidates:
   durable: demonstrated
   implementation_independent: demonstrated
   notes: Theme section 30 Change and Improvement
-  rationale: 'Distinct from a dea ChangeInitiative (metamodel level): this is the Business Capability; metamodel entity is
-    the instance'
+  rationale: 'Distinct from a dea ChangeInitiative (metamodel level): this is the Business Capability;
+    metamodel entity is the instance'
   provenance:
     research_artifact: true
     canonical: false
@@ -728,11 +734,11 @@ candidates:
   - SRC-016
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 innovation; evidence upgraded E2 -> E4 by corpus patch (SRC-015 ISO 56002, SRC-016 Oslo Manual
-    2018)
-  rationale: Repeatable organization-wide idea-to-value ability (ISO 56002); outcome identifiable and measured by
-    national statistical agencies (Oslo Manual); boundary against Change Management drawn (originates vs
-    institutionalizes); generality re-scored demonstrated in matrix v0.2 (8 of 10 strong)
+  notes: Theme section 30 innovation; evidence upgraded E2 -> E4 by corpus patch (SRC-015 ISO 56002, SRC-016
+    Oslo Manual 2018)
+  rationale: Repeatable organization-wide idea-to-value ability (ISO 56002); outcome identifiable and
+    measured by national statistical agencies (Oslo Manual); boundary against Change Management drawn
+    (originates vs institutionalizes); generality re-scored demonstrated in matrix v0.2 (8 of 10 strong)
   provenance:
     research_artifact: true
     canonical: false
@@ -750,7 +756,8 @@ candidates:
   - SRC-006
   durable: n/a
   implementation_independent: n/a
-  notes: Vendor model lists this as a capability; here it is the organization that realizes Financial Stewardship
+  notes: Vendor model lists this as a capability; here it is the organization that realizes Financial
+    Stewardship
   rationale: 'Disambiguation section 19: an organization is not a capability'
   provenance:
     research_artifact: true
@@ -769,7 +776,8 @@ candidates:
   - SRC-004
   durable: n/a
   implementation_independent: n/a
-  notes: APQC recurring process; evidence of underlying Financial Stewardship capability, not itself a capability
+  notes: APQC recurring process; evidence of underlying Financial Stewardship capability, not itself a
+    capability
   rationale: 'Disambiguation section 19: a process is not a capability'
   provenance:
     research_artifact: true
@@ -849,8 +857,8 @@ candidates:
   durable: unknown
   implementation_independent: unknown
   notes: Non-profit/government sector needs investigation
-  rationale: Section 8 enterprise diversity test requires explicit study of non-profit/government contexts; current coverage
-    thin
+  rationale: Section 8 enterprise diversity test requires explicit study of non-profit/government contexts;
+    current coverage thin
   provenance:
     research_artifact: true
     canonical: false
@@ -873,28 +881,32 @@ candidates:
   - SRC-019
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: 'Track A investigation (CR-DEA-BC-18); seeded by BC-SR-A001 §4 (reviewer P1) and BC-DEA-BC-13 §B.1. Hypothesized
-    first-order capability: the ability to design the enterprise''s organizational structures, roles, authorities, and
-    coordination patterns through which agency is organized. Distinct from CAND-015 Workforce Management (agent lifecycle)
-    and CAND-014 Workforce Planning (agent capacity); the structural subject here is the Organization, not the agents
-    that populate it. Anti-invention test: changes industry, the ability still makes sense (every enterprise has structure
-    to design). Evidence initially E1 from review recommendation; promotion to E3 requires independent corpus corroboration
+  notes: 'Track A investigation (CR-DEA-BC-18); seeded by BC-SR-A001 §4 (reviewer P1) and BC-DEA-BC-13
+    §B.1. Hypothesized first-order capability: the ability to design the enterprise''s organizational
+    structures, roles, authorities, and coordination patterns through which agency is organized. Distinct
+    from CAND-015 Workforce Management (agent lifecycle) and CAND-014 Workforce Planning (agent capacity);
+    the structural subject here is the Organization, not the agents that populate it. Anti-invention test:
+    changes industry, the ability still makes sense (every enterprise has structure to design). Evidence
+    initially E1 from review recommendation; promotion to E3 requires independent corpus corroboration
     from at least two source classes (research-CR deliverable).'
-  rationale: 'The capability is recognized across management literature (Galbraith Star Model, McKinsey 7-S, Weick''s organizing,
-    standard organizational design textbooks) and across industry frameworks (APQC PCF Organization Development process category,
-    ISO 9001 §5.3 organizational roles). The ECF explicitly defines Agency & Organization as owning organizational design,
-    agent capacity planning, acquisition/onboarding, development/performance, coordination/collaboration, movement/transition.
-    The catalog currently admits Workforce Planning (CAND-014, agent capacity) and Workforce Management (CAND-015, agent lifecycle)
-    but not the structural capability the ECF positions in agency-organization / design. Per BC-SR-A001 §4, this is a foundational
-    gap. Per METHODOLOGY §5 anti-invention test: an adopting enterprise that changes industry tomorrow still requires an organizational
-    design capability — foundation-grade. Per §3 capability vs organization disambiguation: Organizational Design is the design
-    *ability*, not an organization itself; CAND-030 (Finance Department, ORGANIZATION) is the disambiguation exemplar.'
+  rationale: 'The capability is recognized across management literature (Galbraith Star Model, McKinsey
+    7-S, Weick''s organizing, standard organizational design textbooks) and across industry frameworks
+    (APQC PCF Organization Development process category, ISO 9001 §5.3 organizational roles). The ECF
+    explicitly defines Agency & Organization as owning organizational design, agent capacity planning,
+    acquisition/onboarding, development/performance, coordination/collaboration, movement/transition.
+    The catalog currently admits Workforce Planning (CAND-014, agent capacity) and Workforce Management
+    (CAND-015, agent lifecycle) but not the structural capability the ECF positions in agency-organization
+    / design. Per BC-SR-A001 §4, this is a foundational gap. Per METHODOLOGY §5 anti-invention test: an
+    adopting enterprise that changes industry tomorrow still requires an organizational design capability:
+    foundation-grade. Per §3 capability vs organization disambiguation: Organizational Design is the design
+    *ability*, not an organization itself; CAND-030 (Finance Department, ORGANIZATION) is the disambiguation
+    exemplar.'
   provenance:
     research_artifact: true
     canonical: false
     added: '2026-09-11'
     evidence_register: docs/research/evidence-register.yaml
-    track: 'Track A (BC-DEA-BC-13 §B.1; CR-DEA-BC-18)'
+    track: Track A (BC-DEA-BC-13 §B.1; CR-DEA-BC-18)
     sources_seeded_by:
     - BC-SR-A001 §4 (reviewer P1)
     - BC-DEA-BC-13 §B.1

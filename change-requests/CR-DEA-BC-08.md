@@ -177,7 +177,6 @@ referenced rises from 15 to 16. Historical research artifacts and the
 - `scripts/check_visual_domain_labels.py`: PASS (regenerated v09 has all
   seven axis labels in v2.4.0 form)
 - Entry schema validation (jsonschema draft-07, CI-equivalent): 26/26 clean
-- Dash check (no en/em dashes): clean on all touched files
 - Secret-pattern scan: clean
 
 ## 9. What did NOT change

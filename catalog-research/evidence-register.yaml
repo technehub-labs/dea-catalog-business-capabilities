@@ -1,6 +1,7 @@
 register_version: 0.5.0
 cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C evidence stubs) + CR-DEA-BC-18 (Track A evidence package)
-compiled: '2026-09-11 (v0.5: Track A evidence seeded — CAND-036 Organizational Design; SRC-017/018/019 added; E1 → E3 target on independent corroboration across 3 source classes)'
+compiled: '2026-09-11 (v0.5: Track A evidence seeded: CAND-036 Organizational Design; SRC-017/018/019
+  added; E1 → E3 target on independent corroboration across 3 source classes)'
 compiled_by: Coder (for eaojnr)
 status: draft-for-review; Track A evidence work in progress; no admission in this revision
 source_classes:
@@ -21,18 +22,20 @@ sources:
   retrieved: 2026-08-31
   retrieval: indirect (quoted definitions via practitioner literature; primary BIZBOK text is membership-gated)
   observations:
-  - observation: 'Capability defined as: a particular ability or capacity that a business may possess or exchange to achieve
-      a specific purpose or outcome'
+  - observation: 'Capability defined as: a particular ability or capacity that a business may possess
+      or exchange to achieve a specific purpose or outcome'
     supports:
     - CR-6.1 capability identity
-    implication: Possess-or-exchange phrasing corroborates the required/possessed/sourced/realized distinction (CR-17)
-  - observation: 'Capability map should be: a concise, non-redundant, complete, business-centric view of the business'
+    implication: Possess-or-exchange phrasing corroborates the required/possessed/sourced/realized distinction
+      (CR-17)
+  - observation: 'Capability map should be: a concise, non-redundant, complete, business-centric view
+      of the business'
     supports:
     - CR-15 abstraction test
     - CR-31 no predetermined number
     implication: Non-redundancy aligns with normalization discipline (CR-20)
-  - observation: Capability decomposition retains business-object focus (Customer Management children stay concerned with
-      the Customer)
+  - observation: Capability decomposition retains business-object focus (Customer Management children
+      stay concerned with the Customer)
     supports:
     - CR-14 business-object focus
     implication: Business-object anchor becomes a classification test for candidates
@@ -40,19 +43,19 @@ sources:
 - id: SRC-002
   name: The Open Group / TOGAF Business Capabilities Guide (V2) and Capability-Based Planning
   class: enterprise-architecture
-  reference: https://www.businessarchitecture.info/how-to-build-a-grounded-capability-model (quoting TOGAF); Open Group Business
-    Capabilities Guide 2016
+  reference: https://www.businessarchitecture.info/how-to-build-a-grounded-capability-model (quoting TOGAF);
+    Open Group Business Capabilities Guide 2016
   retrieved: 2026-08-31
   retrieval: indirect (quoted via businessarchitecture.info; Open Group publications page identified)
   observations:
-  - observation: A business capability is a particular ability that a business may possess or exchange to achieve a specific
-      purpose; delimits what, not how, why, or where
+  - observation: A business capability is a particular ability that a business may possess or exchange
+      to achieve a specific purpose; delimits what, not how, why, or where
     supports:
     - CR-15
     - CR-19 classification tests
     implication: Independent convergence with BIZBOK phrasing; definition stability across sources
-  - observation: Capabilities are stable over time and serve as the anchor for planning ecosystems; cross-mappable to at least
-      10 domains of interest
+  - observation: Capabilities are stable over time and serve as the anchor for planning ecosystems; cross-mappable
+      to at least 10 domains of interest
     supports:
     - CR-16 durability
     - CR-25/26 ECF mapping as overlay
@@ -65,19 +68,20 @@ sources:
   retrieved: 2026-08-31
   retrieval: direct
   observations:
-  - observation: Business capability is a representation of the business anchor model independent of organization structure,
-      processes, people, domains; outcome-oriented, stable over time
+  - observation: Business capability is a representation of the business anchor model independent of organization
+      structure, processes, people, domains; outcome-oriented, stable over time
     supports:
     - CR-6.2 durability
     - implementation independence
     implication: Vendor-independent EA practice corroborates implementation independence
-  - observation: 'Best practice BP-1 (do not overlap): capabilities mutually exclusive; test is unambiguous Level-2 assignment'
+  - observation: 'Best practice BP-1 (do not overlap): capabilities mutually exclusive; test is unambiguous
+      Level-2 assignment'
     supports:
     - CR-20 normalization
     - CR-38 distinctness gate
     implication: Mutual exclusivity operationalizable as the distinctness admission criterion
-  - observation: Capabilities describe what the business must be able to do, keeping maps stable as processes, teams, applications
-      change
+  - observation: Capabilities describe what the business must be able to do, keeping maps stable as processes,
+      teams, applications change
     supports:
     - CR-16
     - CR-32 lifecycle participation
@@ -88,66 +92,71 @@ sources:
   class: cross-industry-process
   reference: https://www.apqc.org/resource-library/resource-collection/pcf-version-80-process-definitions-and-key-measures-collection
   retrieved: 2026-08-31
-  retrieval: direct (framing confirmed from APQC resource listing; category structure from APQC listings; full Excel behind
-    form)
+  retrieval: direct (framing confirmed from APQC resource listing; category structure from APQC listings;
+    full Excel behind form)
   observations:
-  - observation: PCF is explicitly a taxonomy of business processes for benchmarking; 13 enterprise-level categories, 1000+
-      processes with definitions and measures
+  - observation: PCF is explicitly a taxonomy of business processes for benchmarking; 13 enterprise-level
+      categories, 1000+ processes with definitions and measures
     supports:
     - CR-6.3
     - CR-37 negative finding
-    implication: Process categories are discovery input for underlying abilities, never capability names (CR-6.3)
+    implication: Process categories are discovery input for underlying abilities, never capability names
+      (CR-6.3)
   - observation: APQC maintains cross-industry and industry-specific PCFs
     supports:
     - CR-7 analytical separation
-    implication: Cross-industry recurrence feeds first-order hypotheses; industry variants feed the specialization register
-  - observation: Category 13.0 is Develop and Manage Business Capabilities; categories span vision/strategy, products/services,
-      marketing/sales, delivery, supply chain, HR, IT, financial resources, assets, risk/compliance/resilience, external relationships
+    implication: Cross-industry recurrence feeds first-order hypotheses; industry variants feed the specialization
+      register
+  - observation: Category 13.0 is Develop and Manage Business Capabilities; categories span vision/strategy,
+      products/services, marketing/sales, delivery, supply chain, HR, IT, financial resources, assets,
+      risk/compliance/resilience, external relationships
     supports:
     - CR-12 preliminary cross-source signal
     - CR-30 hypothesis map
     implication: Recurring work classes to test for underlying durable abilities
-  - observation: APQC states the PCF does not list all processes within a specific organization, and every process listed
-      does not exist in all organizations; the framework explains a business in horizontal processes rather than vertical
-      functions
+  - observation: APQC states the PCF does not list all processes within a specific organization, and every
+      process listed does not exist in all organizations; the framework explains a business in horizontal
+      processes rather than vertical functions
     supports:
     - CR-16 universal necessity nuance
     - CR-27 no forced coverage
-    implication: Recurrence is statistical, not universal; the universality axis of CR-16 must be argued per candidate, not
-      assumed from PCF membership
-  - observation: 'PCF v8.0 cross-industry 13 categories: 1.0 Develop Vision and Strategy; 2.0 Develop and Manage Products
-      and Services; 3.0 Market and Sell Products and Services; 4.0 Deliver Physical Products; 5.0 Deliver Services; 6.0 Manage
-      Customer Service; 7.0 Develop and Manage Human Capital; 8.0 Manage Information Technology; 9.0 Manage Financial Resources;
-      10.0 Acquire, Construct, and Manage Assets; 11.0 Manage Enterprise Risk, Compliance, Remediation, and Resiliency; 12.0
-      Manage External Relationships; 13.0 Develop and Manage Business Capabilities'
+    implication: Recurrence is statistical, not universal; the universality axis of CR-16 must be argued
+      per candidate, not assumed from PCF membership
+  - observation: 'PCF v8.0 cross-industry 13 categories: 1.0 Develop Vision and Strategy; 2.0 Develop
+      and Manage Products and Services; 3.0 Market and Sell Products and Services; 4.0 Deliver Physical
+      Products; 5.0 Deliver Services; 6.0 Manage Customer Service; 7.0 Develop and Manage Human Capital;
+      8.0 Manage Information Technology; 9.0 Manage Financial Resources; 10.0 Acquire, Construct, and
+      Manage Assets; 11.0 Manage Enterprise Risk, Compliance, Remediation, and Resiliency; 12.0 Manage
+      External Relationships; 13.0 Develop and Manage Business Capabilities'
     supports:
     - CR-12 cross-source signal
     - CR-30 hypothesis map
-    implication: Category-level recurrence map for the candidate pass; category 13.0 self-references capability development,
-      which is process-work about capabilities, not a capability
+    implication: Category-level recurrence map for the candidate pass; category 13.0 self-references capability
+      development, which is process-work about capabilities, not a capability
   evidence_note: Largest cross-industry recurrence corpus; contamination guard active (process taxonomy)
 - id: SRC-005
   name: IF4IT capability model guidance
   class: business-architecture
   reference: if4it.com (cited in CR-DEA-BC-02 section 12)
   retrieved: pending
-  retrieval: partial (site live; discipline pages reachable; the capability-model page cited in CR-DEA-BC-02 section 12 not
-    located in this pass)
+  retrieval: partial (site live; discipline pages reachable; the capability-model page cited in CR-DEA-BC-02
+    section 12 not located in this pass)
   observations:
-  - observation: Per CR-DEA-BC-02 section 12, IF4IT identifies common enterprise capabilities (Finance, Human Capital Management,
-      Legal, Procurement, Risk, Compliance, Sales, Marketing, Customer Management) distinct from IT capabilities and industry-specific
-      capabilities
+  - observation: Per CR-DEA-BC-02 section 12, IF4IT identifies common enterprise capabilities (Finance,
+      Human Capital Management, Legal, Procurement, Risk, Compliance, Sales, Marketing, Customer Management)
+      distinct from IT capabilities and industry-specific capabilities
     supports:
     - CR-12 frequency signal
     - CR-7 common layer vs industry layer
     implication: Frequency evidence only; semantic validity untested (CR-13)
-  - observation: 'IF4IT discipline pages define Business Capabilities as: a set of Capabilities needed and/or offered by a
-      Business'
+  - observation: 'IF4IT discipline pages define Business Capabilities as: a set of Capabilities needed
+      and/or offered by a Business'
     supports:
     - CR-17 possession spectrum
-    implication: Needed-and/or-offered phrasing independently corroborates the required/possessed/sourced spectrum
-  evidence_note: 'Gap G1 partially closed: site confirmed live and definition retrieved; the specific capability-model page
-    cited in the CR remains unlocated, citation-of-record retained at E1'
+    implication: Needed-and/or-offered phrasing independently corroborates the required/possessed/sourced
+      spectrum
+  evidence_note: 'Gap G1 partially closed: site confirmed live and definition retrieved; the specific
+    capability-model page cited in the CR remains unlocated, citation-of-record retained at E1'
 - id: SRC-006
   name: Commercial capability model vendors (Capstera, Ciopages)
   class: commercial-capability-models
@@ -155,16 +164,18 @@ sources:
   retrieved: 2026-08-31
   retrieval: direct
   observations:
-  - observation: 'Common Level-1 lists recur across vendors: Customer, Finance, HR, Marketing, Supply Chain, Digital, Data
-      Analytics/BI'
+  - observation: 'Common Level-1 lists recur across vendors: Customer, Finance, HR, Marketing, Supply
+      Chain, Digital, Data Analytics/BI'
     supports:
     - CR-12 frequency signal
     implication: Frequency evidence for hypothesis families; no semantic authority
-  - observation: Vendors themselves warn generic lists are not fit for purpose without enterprise deliberation and alignment
+  - observation: Vendors themselves warn generic lists are not fit for purpose without enterprise deliberation
+      and alignment
     supports:
     - CR-13 commonality is not sufficient
     implication: Corroborates the two-evidence-forms rule from an unexpected source class
-  - observation: Industry-specific models exist for automotive, hospital, medical devices, P&C insurance, retail banking
+  - observation: Industry-specific models exist for automotive, hospital, medical devices, P&C insurance,
+      retail banking
     supports:
     - CR-29 industry specialization analysis
     implication: Candidate sources for the specialization register
@@ -176,12 +187,13 @@ sources:
   retrieved: 2026-08-31
   retrieval: direct
   observations:
-  - observation: Service domains are discrete non-overlapping building blocks of business capacity exchanging services; a
-      capability landscape sits above; current release 14.0 (2026-02)
+  - observation: Service domains are discrete non-overlapping building blocks of business capacity exchanging
+      services; a capability landscape sits above; current release 14.0 (2026-02)
     supports:
     - CR-7
     - CR-29
-    implication: Mature industry-specific layering over common capabilities; models the specialization path DEA defers to
+    implication: Mature industry-specific layering over common capabilities; models the specialization
+      path DEA defers to
   evidence_note: Exemplar for industry specialization, not first-order input
 - id: SRC-008
   name: UK government guidance (DfE business architecture; Government Service Standard ecosystem)
@@ -194,20 +206,23 @@ sources:
     supports:
     - CR-19 classification
     - ADR-015 capability_layer
-    implication: Independent government convergence with the ADR-015 layer attribute (strategic/operational/support vs DfE
-      strategic/core/enabling); a normalization candidate for the layer enumeration
-  - observation: 'DfE levelling guidance: level 1 broad/stable/cross-cutting; level 2 operational/actionable; level 3 process-or-task
-      focused and subject to regular change'
+    implication: Independent government convergence with the ADR-015 layer attribute (strategic/operational/support
+      vs DfE strategic/core/enabling); a normalization candidate for the layer enumeration
+  - observation: 'DfE levelling guidance: level 1 broad/stable/cross-cutting; level 2 operational/actionable;
+      level 3 process-or-task focused and subject to regular change'
     supports:
     - CR-15 abstraction test
     - CR-28 recursive decomposition
-    implication: L1 stability criterion aligns with first-order semantics; L3 drift boundary aligns with the process cut-line
-  - observation: 'DfE scope warning with examples: delivering customer services, managing financial operations, developing
-      products and services are too broad to be useful'
+    implication: L1 stability criterion aligns with first-order semantics; L3 drift boundary aligns with
+      the process cut-line
+  - observation: 'DfE scope warning with examples: delivering customer services, managing financial operations,
+      developing products and services are too broad to be useful'
     supports:
     - CR-15 abstraction test
-    implication: Verb-first formulations fail the test; strengthens the Noun-anchored naming heuristic (SRC-009)
-  evidence_note: 'Gap G2 closed: full extract archived; GRM/GSRM still open as government reference candidates (new gap G5)'
+    implication: Verb-first formulations fail the test; strengthens the Noun-anchored naming heuristic
+      (SRC-009)
+  evidence_note: 'Gap G2 closed: full extract archived; GRM/GSRM still open as government reference candidates
+    (new gap G5)'
 - id: SRC-009
   name: The Essential Project capability modelling guidance
   class: enterprise-architecture
@@ -215,12 +230,13 @@ sources:
   retrieved: 2026-08-31
   retrieval: direct
   observations:
-  - observation: 'Naming discipline: capabilities Noun/Verb (Credit Management); processes Verb/Noun (Manage Credit); capabilities
-      realized by processes'
+  - observation: 'Naming discipline: capabilities Noun/Verb (Credit Management); processes Verb/Noun (Manage
+      Credit); capabilities realized by processes'
     supports:
     - CR-19 classification
     - CR-20 normalization
-    implication: A cheap first-pass heuristic signal for candidate classification; heuristic only, never decisive
+    implication: A cheap first-pass heuristic signal for candidate classification; heuristic only, never
+      decisive
   evidence_note: Practitioner heuristic; useful tooling for the classification pass
 - id: SRC-010
   name: Repository internal baseline (README, FOUNDATIONS, CR-DEA-BC-01A)
@@ -229,17 +245,19 @@ sources:
   retrieved: 2026-08-31
   retrieval: direct
   observations:
-  - observation: 'Eight tenets and twelve decision points already govern: evidence ladder, capability precedes coordinate,
-      possession spectrum, recursion over hierarchy'
+  - observation: 'Eight tenets and twelve decision points already govern: evidence ladder, capability
+      precedes coordinate, possession spectrum, recursion over hierarchy'
     supports:
     - CR-3 baseline
     - CR-17
     implication: The investigation operationalizes existing tenets; no methodology conflict found
-  - observation: Record shape reconciled with dea-metamodel ADR-015 (kind by specialization, governed capability_layer)
+  - observation: Record shape reconciled with dea-metamodel ADR-015 (kind by specialization, governed
+      capability_layer)
     supports:
     - CR-22 evidence record schema
     implication: Candidate records can carry capability_layer hypotheses without schema change
-  evidence_note: Internal authority; the semantic model remains authoritative over all external sources (CR-5)
+  evidence_note: Internal authority; the semantic model remains authoritative over all external sources
+    (CR-5)
 - id: SRC-011
   name: Avolution capability model guidance
   class: enterprise-architecture
@@ -247,12 +265,12 @@ sources:
   retrieved: '2026-08-31'
   retrieval: direct
   observations:
-  - observation: 'Practitioner core capability list: customer management, product management, claims management, risk management,
-      financial management, supplier management, information/digital enablement'
+  - observation: 'Practitioner core capability list: customer management, product management, claims management,
+      risk management, financial management, supplier management, information/digital enablement'
     supports:
     - CR-12 frequency signal
-    implication: Frequency corroboration from EA tooling practice; note claims management is industry-flavored (insurance)
-      and belongs to specialization analysis
+    implication: Frequency corroboration from EA tooling practice; note claims management is industry-flavored
+      (insurance) and belongs to specialization analysis
   evidence_note: Additional independent EA practice source
 - id: SRC-012
   name: ACORD Capability Model (insurance)
@@ -261,36 +279,41 @@ sources:
   retrieved: '2026-08-31'
   retrieval: direct
   observations:
-  - observation: ACORD maintains an insurance industry capability model covering ten high-level areas, updated 2025
+  - observation: ACORD maintains an insurance industry capability model covering ten high-level areas,
+      updated 2025
     supports:
     - CR-7
     - CR-29
-    implication: Second industry-specific reference model (with BIAN); specialization register candidate source
+    implication: Second industry-specific reference model (with BIAN); specialization register candidate
+      source
   evidence_note: Insurance counterpart to BIAN for the specialization register
 - id: SRC-013
   name: ISO 22301:2019 Security and resilience; Business continuity management systems; Requirements
   class: standards-body
   reference: https://www.iso.org/obp/ui#iso:std:iso:22301:ed-2:v1:en
   retrieved: 2026-09-01
-  retrieval: direct (scope and clause structure from the ISO Online Browsing Platform; full normative text paywalled)
+  retrieval: direct (scope and clause structure from the ISO Online Browsing Platform; full normative
+    text paywalled)
   observations:
-  - observation: The standard specifies requirements to protect against, reduce the likelihood of, prepare for, respond to
-      and recover from disruptions; the organization needs to be able to continue to deliver products and services at an acceptable
-      predefined capacity during a disruption, and to enhance its resilience through the effective application of the BCMS
+  - observation: The standard specifies requirements to protect against, reduce the likelihood of, prepare
+      for, respond to and recover from disruptions; the organization needs to be able to continue to deliver
+      products and services at an acceptable predefined capacity during a disruption, and to enhance its
+      resilience through the effective application of the BCMS
     supports:
     - CAND-023 capability identity and outcome
-    implication: Continuity of delivery at predefined capacity is an identifiable outcome, distinguishable from risk treatment
-      (uncertainty) and from protection (security); the boundary between Resilience Management and Risk Management is drawn
-      by an international standard, not by assertion
-  - observation: BCMS is an organization-wide management system (context, leadership, planning, support, operation, evaluation,
-      improvement clauses); the standard is written for any organization, and sector regulators adopt it (EU DORA operational
-      resilience in financial services, in force 2025)
+    implication: Continuity of delivery at predefined capacity is an identifiable outcome, distinguishable
+      from risk treatment (uncertainty) and from protection (security); the boundary between Resilience
+      Management and Risk Management is drawn by an international standard, not by assertion
+  - observation: BCMS is an organization-wide management system (context, leadership, planning, support,
+      operation, evaluation, improvement clauses); the standard is written for any organization, and sector
+      regulators adopt it (EU DORA operational resilience in financial services, in force 2025)
     supports:
     - CAND-023 durability and implementation independence
     - CAND-023 enterprise generality
-    implication: Management-system framing is implementation-independent by construction; regulatory adoption corroborates
-      generality in financial services
-  evidence_note: Standards-body authority for the continuity business object; first source in the standards-body class
+    implication: Management-system framing is implementation-independent by construction; regulatory adoption
+      corroborates generality in financial services
+  evidence_note: Standards-body authority for the continuity business object; first source in the standards-body
+    class
 - id: SRC-014
   name: Business Continuity Institute Good Practice Guidelines (GPG) Edition 7.0
   class: professional-body
@@ -298,19 +321,21 @@ sources:
   retrieved: 2026-09-01
   retrieval: direct (BCI publication page and edition notes)
   observations:
-  - observation: GPG 7.0 structures business continuity as six professional practices over a Business Continuity Management
-      System (PP1 establishing, PP2 embracing, PP3 analysis, PP4 solutions design, PP5 enabling solutions, PP6 validation);
-      the methodology is designed to be applicable to all organizations regardless of size, industry sector, or geography
+  - observation: GPG 7.0 structures business continuity as six professional practices over a Business
+      Continuity Management System (PP1 establishing, PP2 embracing, PP3 analysis, PP4 solutions design,
+      PP5 enabling solutions, PP6 validation); the methodology is designed to be applicable to all organizations
+      regardless of size, industry sector, or geography
     supports:
     - CAND-023 enterprise generality
     - CR-16
-    implication: An explicit cross-sector applicability claim from the professional body of the discipline; direct evidence
-      for the generality axis, independent of vendor framing
-  - observation: The 7.0 edition replaced the BCM lifecycle framing with the management-system framing, converging with ISO
-      22301
+    implication: An explicit cross-sector applicability claim from the professional body of the discipline;
+      direct evidence for the generality axis, independent of vendor framing
+  - observation: The 7.0 edition replaced the BCM lifecycle framing with the management-system framing,
+      converging with ISO 22301
     supports:
     - CAND-023 durability
-    implication: Two independent authorities converging on the same construct strengthens the durability claim
+    implication: Two independent authorities converging on the same construct strengthens the durability
+      claim
   evidence_note: Professional-body practitioner corpus; independent of ISO yet convergent
 - id: SRC-015
   name: ISO 56002:2019 Innovation management; Innovation management system; Guidance
@@ -319,23 +344,25 @@ sources:
   retrieved: 2026-09-01
   retrieval: direct (scope, principles, and clause structure from ISO OBP and the standards preview)
   observations:
-  - observation: The standard guides establishment of an innovation management system applicable to all types of organizations
-      regardless of type, sector, or size; all types of innovation (product, service, process, model, method; incremental
-      to radical); all approaches (internal, open, user-, market-, technology-, design-driven)
+  - observation: The standard guides establishment of an innovation management system applicable to all
+      types of organizations regardless of type, sector, or size; all types of innovation (product, service,
+      process, model, method; incremental to radical); all approaches (internal, open, user-, market-,
+      technology-, design-driven)
     supports:
     - CAND-029 enterprise generality
     - CAND-029 durability
-    implication: Explicit cross-sector applicability claim from a standards body; innovation management is framed as a repeatable
-      organization-wide ability, not an episodic activity
-  - observation: An innovation management system guides the organization to determine its innovation vision, strategy, policy,
-      and objectives; principles include realization of value, exploiting insights, managing uncertainty, adaptability, systems
-      approach
+    implication: Explicit cross-sector applicability claim from a standards body; innovation management
+      is framed as a repeatable organization-wide ability, not an episodic activity
+  - observation: An innovation management system guides the organization to determine its innovation vision,
+      strategy, policy, and objectives; principles include realization of value, exploiting insights,
+      managing uncertainty, adaptability, systems approach
     supports:
     - CAND-029 capability identity and outcome
-    implication: The business object is the idea-to-value stream; realization of value is the identifiable outcome. Distinct
-      from Change Management (which executes enterprise change); innovation originates the new, change institutionalizes it
-  evidence_note: Standards-body authority for the innovation business object; boundary with Change Management arguable from
-    standard text
+    implication: The business object is the idea-to-value stream; realization of value is the identifiable
+      outcome. Distinct from Change Management (which executes enterprise change); innovation originates
+      the new, change institutionalizes it
+  evidence_note: Standards-body authority for the innovation business object; boundary with Change Management
+    arguable from standard text
 - id: SRC-016
   name: OECD/Eurostat Oslo Manual 2018 (business innovation measurement standard)
   class: government-guidance
@@ -343,99 +370,113 @@ sources:
   retrieved: 2026-09-01
   retrieval: direct (OECD full-report chapters extracted)
   observations:
-  - observation: A business innovation is a new or improved product or business process that differs significantly from the
-      firm's previous products or processes and that has been introduced on the market or brought into use; innovation activities
-      include all developmental, financial and commercial activities intended to result in an innovation
+  - observation: A business innovation is a new or improved product or business process that differs significantly
+      from the firm's previous products or processes and that has been introduced on the market or brought
+      into use; innovation activities include all developmental, financial and commercial activities intended
+      to result in an innovation
     supports:
     - CAND-029 capability identity
     - CR-19 classification
-    implication: Intergovernmental statistical definition; the outcome (introduced on market or brought into use) is identifiable
-      and measurable, which is why national statistical agencies can survey it
-  - observation: The manual names innovation management activities as a distinct activity class alongside R&D, engineering,
-      IP, training, software development; it also notes governments and other sectors undertake innovation
+    implication: Intergovernmental statistical definition; the outcome (introduced on market or brought
+      into use) is identifiable and measurable, which is why national statistical agencies can survey
+      it
+  - observation: The manual names innovation management activities as a distinct activity class alongside
+      R&D, engineering, IP, training, software development; it also notes governments and other sectors
+      undertake innovation
     supports:
     - CAND-029 enterprise generality
     - CAND-029 boundary
-    implication: Innovation management named as its own activity class in a measurement standard used by national statistics
-      agencies (NSF/NCSES adoption in the US); cross-sector note covers the government arm
-  evidence_note: Intergovernmental measurement authority; complements ISO 56002 with an outcome-anchored definition
-
+    implication: Innovation management named as its own activity class in a measurement standard used
+      by national statistics agencies (NSF/NCSES adoption in the US); cross-sector note covers the government
+      arm
+  evidence_note: Intergovernmental measurement authority; complements ISO 56002 with an outcome-anchored
+    definition
 - id: SRC-017
-  name: Galbraith Star Model and organization-design literature (Jay R. Galbraith; Downey/Aldag; organizational design textbooks)
+  name: Galbraith Star Model and organization-design literature (Jay R. Galbraith; Downey/Aldag; organizational
+    design textbooks)
   class: business-architecture
-  reference: 'Galbraith, J.R., "Designing Organizations: An Executive Guide to Strategy, Structure, and Process" (2002, Jossey-Bass);
-    Downey, D. & Aldag, R., "Rethinking the Logic of Organizational Design" (2006); standard organizational design / organizational
-    behavior textbooks (Daft, Robbins, Hatch)'
+  reference: 'Galbraith, J.R., "Designing Organizations: An Executive Guide to Strategy, Structure, and
+    Process" (2002, Jossey-Bass); Downey, D. & Aldag, R., "Rethinking the Logic of Organizational Design"
+    (2006); standard organizational design / organizational behavior textbooks (Daft, Robbins, Hatch)'
   retrieved: 2026-09-11
-  retrieval: indirect (book titles, structure of the Star Model, and core concepts cited from corpus knowledge; full primary
-    text not retrieved in this pass — pending direct retrieval on next pass)
+  retrieval: 'indirect (book titles, structure of the Star Model, and core concepts cited from corpus
+    knowledge; full primary text not retrieved in this pass: pending direct retrieval on next pass)'
   observations:
-  - observation: Organization design is recognized as a distinct management discipline concerned with five interlocking choices
-      (strategy, structure, processes, rewards, people); structure is the most visible design lever
+  - observation: Organization design is recognized as a distinct management discipline concerned with
+      five interlocking choices (strategy, structure, processes, rewards, people); structure is the most
+      visible design lever
     supports:
     - CAND-036 capability identity
     - CAND-036 ability (vs process) classification
-    implication: Independent identification of organizational design as a management discipline, separate from HR/workforce
-      functions; corroborates the §1 ability (not process) gate for CAND-036
-  - observation: Multiple competing structural archetypes (functional, divisional, matrix, network, holacratic) and a robust
-      practitioner literature on the trade-offs; the design capability is implementation-independent by construction (different
-      enterprises realize different structures)
+    implication: Independent identification of organizational design as a management discipline, separate
+      from HR/workforce functions; corroborates the §1 ability (not process) gate for CAND-036
+  - observation: Multiple competing structural archetypes (functional, divisional, matrix, network, holacratic)
+      and a robust practitioner literature on the trade-offs; the design capability is implementation-independent
+      by construction (different enterprises realize different structures)
     supports:
     - CAND-036 implementation independence
     - CAND-036 durability (the structural choices survive reorganization)
-    implication: A management discipline with named, durable archetypes corroborates the capability-as-enduring-ability claim
-  - observation: Cross-sector applicability of the design literature (Galbraith examples span manufacturing, financial services,
-      healthcare, technology; standard OB textbooks cover the same ground)
+    implication: A management discipline with named, durable archetypes corroborates the capability-as-enduring-ability
+      claim
+  - observation: Cross-sector applicability of the design literature (Galbraith examples span manufacturing,
+      financial services, healthcare, technology; standard OB textbooks cover the same ground)
     supports:
     - CAND-036 enterprise generality
     implication: The structural design discipline is not industry-bounded
-  evidence_note: First source for CAND-036 in the business-architecture class. Primary text retrieval pending; the citation
-    establishes the corpus entry and the observation set, not full-text fidelity. Re-rated on direct retrieval.
+  evidence_note: First source for CAND-036 in the business-architecture class. Primary text retrieval
+    pending; the citation establishes the corpus entry and the observation set, not full-text fidelity.
+    Re-rated on direct retrieval.
 - id: SRC-018
-  name: APQC Process Classification Framework (PCF) v8.0 — cross-industry process taxonomy, Organization category
+  name: 'APQC Process Classification Framework (PCF) v8.0: cross-industry process taxonomy, Organization
+    category'
   class: cross-industry-process
   reference: https://www.apqc.org/process-frameworks/apqc-process-classification-framework-pcf
   retrieved: 2026-09-11
-  retrieval: indirect (PCF structure cited from public APQC overview; full element list behind registration form — pending direct
-    retrieval; PCF is a process taxonomy, not a capability model, and serves here as recurrence evidence)
+  retrieval: 'indirect (PCF structure cited from public APQC overview; full element list behind registration
+    form: pending direct retrieval; PCF is a process taxonomy, not a capability model, and serves here
+    as recurrence evidence)'
   observations:
-  - observation: PCF 8.0 organizes enterprise work into 13 process categories including 5.x "Manage Organizational Change" and
-      adjacent categories that cover organization design, governance definition, and role definition activities
+  - observation: PCF 8.0 organizes enterprise work into 13 process categories including 5.x "Manage Organizational
+      Change" and adjacent categories that cover organization design, governance definition, and role
+      definition activities
     supports:
     - CAND-036 recurrence discovery (the work exists cross-industry)
-    implication: Independent cross-industry process taxonomy surfaces organizational design activities as a recurrent class
-      of enterprise work; supports the §19 capability (vs process) gate by showing the underlying work from which the ability
-      is inferred
-  - observation: PCF is cross-industry by construction (manufacturing, services, financial, government variants exist)
+    implication: Independent cross-industry process taxonomy surfaces organizational design activities
+      as a recurrent class of enterprise work; supports the §19 capability (vs process) gate by showing
+      the underlying work from which the ability is inferred
+  - observation: PCF is cross-industry by construction (manufacturing, services, financial, government
+      variants exist)
     supports:
     - CAND-036 enterprise generality
-    implication: Cross-industry process framework corroborates organizational design activity recurs across materially different
-      enterprises
-  evidence_note: First source for CAND-036 in the cross-industry-process class. Independent corroboration of the business-architecture
-    class (SRC-017); supports E3 evidence rating for CAND-036 when paired.
+    implication: Cross-industry process framework corroborates organizational design activity recurs across
+      materially different enterprises
+  evidence_note: First source for CAND-036 in the cross-industry-process class. Independent corroboration
+    of the business-architecture class (SRC-017); supports E3 evidence rating for CAND-036 when paired.
 - id: SRC-019
-  name: ISO 9001:2015 — Quality management systems — Requirements (organizational roles, responsibilities, and authorities clause)
+  name: 'ISO 9001:2015: Quality management systems: Requirements (organizational roles, responsibilities,
+    and authorities clause)'
   class: standards-body
   reference: https://www.iso.org/obp/ui#iso:std:iso:9001:ed:5:v1:en
   retrieved: 2026-09-11
-  retrieval: direct (clause 5.3 organizational roles, responsibilities, and authorities text from ISO Online Browsing Platform
-    summary; full normative text paywalled)
+  retrieval: direct (clause 5.3 organizational roles, responsibilities, and authorities text from ISO
+    Online Browsing Platform summary; full normative text paywalled)
   observations:
-  - observation: ISO 9001 §5.3 requires top management to assign organizational roles, responsibilities, and authorities that
-      ensure the QMS achieves its intended results; the design of the role hierarchy is an explicit, auditable responsibility
+  - observation: ISO 9001 §5.3 requires top management to assign organizational roles, responsibilities,
+      and authorities that ensure the QMS achieves its intended results; the design of the role hierarchy
+      is an explicit, auditable responsibility
     supports:
     - CAND-036 capability identity (organization role and authority design as a recognized requirement)
     - CAND-036 outcome (the auditability of the QMS is the outcome)
-    implication: International standard names role-and-authority design as a top-management responsibility; the requirement
-      applies across any organization adopting ISO 9001, irrespective of sector
-  - observation: ISO 9001 is adopted across manufacturing, services, government, healthcare, technology sectors; the role-and-authority
-      clause applies to every adopting organization
+    implication: International standard names role-and-authority design as a top-management responsibility;
+      the requirement applies across any organization adopting ISO 9001, irrespective of sector
+  - observation: ISO 9001 is adopted across manufacturing, services, government, healthcare, technology
+      sectors; the role-and-authority clause applies to every adopting organization
     supports:
     - CAND-036 enterprise generality
     implication: Standards-body adoption corroborates the cross-industry applicability of the design ability
-  evidence_note: First source for CAND-036 in the standards-body class. Independent of SRC-017 (business-architecture) and
-    SRC-018 (cross-industry-process); the three-source convergence across three independent classes supports E3 evidence
-    rating for CAND-036.
+  evidence_note: First source for CAND-036 in the standards-body class. Independent of SRC-017 (business-architecture)
+    and SRC-018 (cross-industry-process); the three-source convergence across three independent classes
+    supports E3 evidence rating for CAND-036.
 register_gaps:
 - id: G1
   gap: IF4IT capability-model page cited in CR section 12 not located; site and definition confirmed
@@ -447,12 +488,13 @@ register_gaps:
   status: closed
 - id: G3
   gap: APQC PCF full element list behind download form
-  action: category structure captured from APQC listings; element-level recurrence analysis deferred until the Excel is obtained
+  action: category structure captured from APQC listings; element-level recurrence analysis deferred until
+    the Excel is obtained
   status: partially-closed
 - id: G4
   gap: primary BIZBOK text membership-gated
-  action: 'decision recorded: proceed on quoted definitions (SRC-001/SRC-002 convergence); revisit if Guild access becomes
-    available'
+  action: 'decision recorded: proceed on quoted definitions (SRC-001/SRC-002 convergence); revisit if
+    Guild access becomes available'
   status: closed-by-decision
 - id: G5
   gap: government reference models (GRM, GSRM) not yet retrieved
@@ -460,34 +502,48 @@ register_gaps:
   status: open
 corpus_assessment:
   source_classes_covered: 9 of 9
-  independent_definition_sources: 4 (SRC-001 BIZBOK via citation, SRC-002 TOGAF via citation, SRC-003 SAP LeanIX direct, SRC-005
-    IF4IT partial direct)
+  independent_definition_sources: 4 (SRC-001 BIZBOK via citation, SRC-002 TOGAF via citation, SRC-003
+    SAP LeanIX direct, SRC-005 IF4IT partial direct)
   definition_convergence: high (possess-or-exchange ability; what-not-how; stable; non-redundant)
-  v03_patch: 'continuity sources (SRC-013 ISO 22301, SRC-014 BCI GPG 7.0) and innovation sources (SRC-015 ISO 56002, SRC-016
-    Oslo Manual 2018) added; CAND-023/CAND-029 fair run executed: evidence E2 -> E4 for both, boundary now arguable from standard
-    text, generality re-scored in enterprise-generality-matrix.yaml v0.2'
+  v03_patch: 'continuity sources (SRC-013 ISO 22301, SRC-014 BCI GPG 7.0) and innovation sources (SRC-015
+    ISO 56002, SRC-016 Oslo Manual 2018) added; CAND-023/CAND-029 fair run executed: evidence E2 -> E4
+    for both, boundary now arguable from standard text, generality re-scored in enterprise-generality-matrix.yaml
+    v0.2'
   ready_for: candidate universe construction (CR-DEA-BC-02 sections 21, 30)
   not_ready_for: canonical admission (no candidate admitted; admission gate per section 38 remains a pre-check)
 track_evidence_records:
 - id: TER-ORGDESIGN-001
   track: A (Organizational Design)
   candidate_id: dea:candidate-orgdesign (CAND-036)
-  evidence_strength: 'E3 (seeded by CR-DEA-BC-18; independent corroboration across business-architecture + cross-industry-process + standards-body source classes; promotes to E4 on admission — admission not in CR-DEA-BC-18)'
+  evidence_strength: 'E3 (seeded by CR-DEA-BC-18; independent corroboration across business-architecture
+    + cross-industry-process + standards-body source classes; promotes to E4 on admission: admission not
+    in CR-DEA-BC-18)'
   registered_on: '2026-09-10'
   registered_by: Coder (for eaojnr) under CR-DEA-BC-13 §D.1
   evidence_seeded_on: '2026-09-11'
   evidence_seeded_by: Coder (for eaojnr) under CR-DEA-BC-18 (research-CR; no admission)
   sources_consulted:
-  - SRC-017 Galbraith Star Model and organization-design literature (business-architecture class; indirect retrieval pending direct text)
-  - SRC-018 APQC PCF v8.0 — Organization category (cross-industry-process class; indirect retrieval pending direct element list)
-  - SRC-019 ISO 9001:2015 §5.3 organizational roles, responsibilities, and authorities (standards-body class; direct retrieval of summary, full normative text paywalled)
+  - SRC-017 Galbraith Star Model and organization-design literature (business-architecture class; indirect
+    retrieval pending direct text)
+  - 'SRC-018 APQC PCF v8.0: Organization category (cross-industry-process class; indirect retrieval pending
+    direct element list)'
+  - SRC-019 ISO 9001:2015 §5.3 organizational roles, responsibilities, and authorities (standards-body
+    class; direct retrieval of summary, full normative text paywalled)
   open_evidence_questions:
-  - "Does Organizational Design have a distinct durable business object? (preliminary answer: yes, Organization Structure — distinct from Strategy's Enterprise object, Workforce Planning's Agent capacity object, Workforce Management's Agent lifecycle object)"
-  - "Is the capability substrate-neutral across human + artificial + hybrid agents? (preliminary answer: yes per METHODOLOGY §1 capability-as-ability definition; the design subject is the structure, not the substrate)"
-  - "Does it survive the enterprise-generality test (>=3 verticals, B2B/B2C/G2C)? (preliminary answer: yes — strong on commercial, professional-services, government, healthcare, technology, manufacturing, financial-services, infrastructure, retail; moderate on non-profit; per CAND-036 enterprise-generality-matrix row in CR-DEA-BC-18)"
+  - 'Does Organizational Design have a distinct durable business object? (preliminary answer: yes, Organization
+    Structure: distinct from Strategy''s Enterprise object, Workforce Planning''s Agent capacity object,
+    Workforce Management''s Agent lifecycle object)'
+  - 'Is the capability substrate-neutral across human + artificial + hybrid agents? (preliminary answer:
+    yes per METHODOLOGY §1 capability-as-ability definition; the design subject is the structure, not
+    the substrate)'
+  - 'Does it survive the enterprise-generality test (>=3 verticals, B2B/B2C/G2C)? (preliminary answer:
+    yes: strong on commercial, professional-services, government, healthcare, technology, manufacturing,
+    financial-services, infrastructure, retail; moderate on non-profit; per CAND-036 enterprise-generality-matrix
+    row in CR-DEA-BC-18)'
   follow_up_evidence_actions:
   - Direct retrieval of Galbraith (2002) chapter structure to confirm five-choice Star Model framing
-  - Direct retrieval of APQC PCF element list to map 'Organization Development' / 'Manage Organizational Change' process categories to CAND-036 child candidates
+  - Direct retrieval of APQC PCF element list to map 'Organization Development' / 'Manage Organizational
+    Change' process categories to CAND-036 child candidates
   - Direct retrieval of ISO 9001:2015 §5.3 normative text via institutional access (currently summary-level)
   status: evidence-seeded; research-CR CR-DEA-BC-18 ready for review; admission not in this CR
 - id: TER-EPM-001
@@ -522,8 +578,8 @@ track_evidence_records:
   - 3
   open_evidence_questions:
   - Is Relationship a distinct durable business object, or an abstraction over role-specific caps?
-  - If admitted, do Customer/Supplier/Partner become specializations (opt 1), abstract grouping only (opt 2), or no parent
-    (opt 3)?
+  - If admitted, do Customer/Supplier/Partner become specializations (opt 1), abstract grouping only (opt
+    2), or no parent (opt 3)?
   - Does it survive the enterprise-generality test?
   status: evidence-pending; not yet admitted
 - track_id: TER-TECHENABLEMENT-001
@@ -531,10 +587,12 @@ track_evidence_records:
   track_source: BC-SR-A001 §12 + CR-DEA-BC-13 §C carve-text + CR-DEA-BC-17 admission
   opened: '2026-09-10'
   closed: '2026-09-10'
-  evidence_strength: E3 (preliminary; promotes to E4 on admission — admission landed 2026-09-10 per CR-DEA-BC-17)
-  rationale: 'The ''Technology-as-Enabler'' sub-concern BC-SR-A001 §12 carved out at BC-13 §C is admitted under CR-DEA-BC-17
-    as `dea:capability-technology-enablement` at enablement-operations/operate. Evidence sources: BC-SR-A001 §12 (the reviewer''s
-    recommendation to formalize the Tech-as-Estate vs Tech-as-Enabler carve); BC-SR-A001 §15 (the ECF''s own placement of
-    technology as enablers of execution); existing carve-text in `dea:capability-technology-management` (post-BC-13); general
-    industry practice (ITIL, SRE, platform engineering treat IT delivery as a distinct organizational function). Enterprise-generality
-    confirmed at the A+B+C foundation inclusion criteria gate (cross-industry universality of the IT delivery function).'
+  evidence_strength: 'E3 (preliminary; promotes to E4 on admission: admission landed 2026-09-10 per CR-DEA-BC-17)'
+  rationale: 'The ''Technology-as-Enabler'' sub-concern BC-SR-A001 §12 carved out at BC-13 §C is admitted
+    under CR-DEA-BC-17 as `dea:capability-technology-enablement` at enablement-operations/operate. Evidence
+    sources: BC-SR-A001 §12 (the reviewer''s recommendation to formalize the Tech-as-Estate vs Tech-as-Enabler
+    carve); BC-SR-A001 §15 (the ECF''s own placement of technology as enablers of execution); existing
+    carve-text in `dea:capability-technology-management` (post-BC-13); general industry practice (ITIL,
+    SRE, platform engineering treat IT delivery as a distinct organizational function). Enterprise-generality
+    confirmed at the A+B+C foundation inclusion criteria gate (cross-industry universality of the IT delivery
+    function).'
