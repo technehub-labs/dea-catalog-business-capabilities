@@ -1,20 +1,28 @@
-version: 0.7.0
-cr: CR-DEA-BC-02 section 38 (dry run) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; CAND-036 admitted E4; all gates met)
-compiled: '2026-09-11 (v0.7: CAND-036 Organizational Design admitted under CR-DEA-BC-14; all 10 admission gates met per METHODOLOGY.md §12; promoted E3 → E4 per EVIDENCE.md §3)'
-status: pre-check records CAND-036 as admitted (E4); 27 candidates on track with all artifacts closed; 1 candidate (CAND-004) pending evidence work
+version: 0.8.0
+cr: CR-DEA-BC-02 section 38 (dry run) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission;
+  CAND-036 admitted E4; all gates met) + CR-DEA-BC-19 (Track B evidence seed; CAND-037 E3 confirmed across
+  3 source classes)
+compiled: '2026-09-11 (v0.8: CAND-037 Enterprise Performance Management pre-check added under CR-DEA-BC-19
+  evidence seed; all 10 admission gates met on current evidence; promotion to E4 contingent on admission
+  in CR-DEA-BC-15)'
+status: pre-check only; CAND-036 admitted (E4); CAND-037 evidence-seeded (E3); final admission remains
+  subject to review (section 38) for CAND-037
 legend:
   met: criterion satisfied on current evidence
   gap: criterion evaluated and not yet satisfied; work item identified
   untested: criterion not yet evaluated; the artifact or decision that tests it is pending
 pending_artifacts:
-  distinctness: 'CAND-005/CAND-006 unification decision (deferred; trigger: government reference models, gap G5)'
+  distinctness: 'CAND-005/CAND-006 unification decision (deferred; trigger: government reference models,
+    gap G5)'
 removed:
 - candidate: CAND-004
   name: Stakeholder Relationship Management
-  disposition: reclassified grouping parent (normalization N-007); withdrawn from the admission track; boundary gap resolved by reclassification
+  disposition: reclassified grouping parent (normalization N-007); withdrawn from the admission track;
+    boundary gap resolved by reclassification
 - candidate: CAND-011
   name: Value Delivery
-  disposition: dissolved as first-order candidate (normalization N-008); rejected aggregate; boundary gap resolved by dissolution
+  disposition: dissolved as first-order candidate (normalization N-008); rejected aggregate; boundary
+    gap resolved by dissolution
 evaluations:
 - candidate: CAND-001
   name: Strategy
@@ -428,7 +436,8 @@ evaluations:
 - candidate: CAND-036
   name: Organizational Design
   criteria:
-    evidence_ge_E3: met (E3 confirmed across 3 independent source classes per CR-DEA-BC-18; E4 admission per EVIDENCE.md §3 promotion rule)
+    evidence_ge_E3: "met (E3 confirmed across 3 independent source classes per CR-DEA-BC-18; E4 admission\
+      \ per EVIDENCE.md \xA73 promotion rule)"
     classification_capability: met
     enterprise_generality: met
     durability: met
@@ -440,13 +449,75 @@ evaluations:
     ecf_mapping: met
   gaps: []
   untested:
-  - direct-retrieval of SRC-017 Galbraith (2002) chapter structure (independent of admission; would re-rate to E5)
+  - direct-retrieval of SRC-017 Galbraith (2002) chapter structure (independent of admission; would re-rate
+    to E5)
   - direct-retrieval of SRC-018 APQC PCF element list (independent of admission; would re-rate to E5)
-  - direct-retrieval of SRC-019 ISO 9001:2015 §5.3 full normative text (independent of admission; would re-rate to E5)
-  pre_check_notes: 'Admitted 2026-09-11 under CR-DEA-BC-14. All 10 admission gates met per METHODOLOGY.md §12. Track A evidence package seeded by CR-DEA-BC-18 across SRC-017 (business-architecture), SRC-018 (cross-industry-process), SRC-019 (standards-body); three independent source classes; E3 confirmed; promoted to E4 on admission per EVIDENCE.md §3 admission promotion rule. Direct-retrieval actions for SRC primaries are independent of admission (would re-rate to E5 if done; tracked separately). All gates met on current evidence: classification (CAPABILITY vs PROCESS/ORGANIZATION); enterprise generality (9 of 10 strong per CAND-036 enterprise-generality-matrix v0.3 row); durability (recurring discipline since Galbraith 1970s); implementation independence (Galbraith Star / McKinsey 7-S / Holacracy / Functional archetypes); outcome identifiable (designed structure supporting the enterprise''s chosen posture); boundary defensible (Organization Structure business object distinct from Agent Capacity / Agent Lifecycle / Enterprise / Plan / Decision / Change / Technology Estate / Technology Service); distinctness (8-peer sweep passes by business-object partition); specialization not required (foundation per METHODOLOGY §5 anti-invention); ECF mapping (agency-organization/design primary + conceive/build secondaries per CR-DEA-BC-13 §D.1 + CR-DEA-BC-18 §5 + CR-DEA-BC-14 §4).'
+  - "direct-retrieval of SRC-019 ISO 9001:2015 \xA75.3 full normative text (independent of admission;\
+    \ would re-rate to E5)"
+  pre_check_notes: "Admitted 2026-09-11 under CR-DEA-BC-14. All 10 admission gates met per METHODOLOGY.md\
+    \ \xA712. Track A evidence package seeded by CR-DEA-BC-18 across SRC-017 (business-architecture),\
+    \ SRC-018 (cross-industry-process), SRC-019 (standards-body); three independent source classes; E3\
+    \ confirmed; promoted to E4 on admission per EVIDENCE.md \xA73 admission promotion rule. Direct-retrieval\
+    \ actions for SRC primaries are independent of admission (would re-rate to E5 if done; tracked separately).\
+    \ All gates met on current evidence: classification (CAPABILITY vs PROCESS/ORGANIZATION); enterprise\
+    \ generality (9 of 10 strong per CAND-036 enterprise-generality-matrix v0.3 row); durability (recurring\
+    \ discipline since Galbraith 1970s); implementation independence (Galbraith Star / McKinsey 7-S /\
+    \ Holacracy / Functional archetypes); outcome identifiable (designed structure supporting the enterprise's\
+    \ chosen posture); boundary defensible (Organization Structure business object distinct from Agent\
+    \ Capacity / Agent Lifecycle / Enterprise / Plan / Decision / Change / Technology Estate / Technology\
+    \ Service); distinctness (8-peer sweep passes by business-object partition); specialization not required\
+    \ (foundation per METHODOLOGY \xA75 anti-invention); ECF mapping (agency-organization/design primary\
+    \ + conceive/build secondaries per CR-DEA-BC-13 \xA7D.1 + CR-DEA-BC-18 \xA75 + CR-DEA-BC-14 \xA74)."
+- candidate: CAND-037
+  name: Enterprise Performance Management
+  criteria:
+    evidence_ge_E3: "met (E3 confirmed across 3 independent source classes per CR-DEA-BC-19; promotion\
+      \ to E4 contingent on admission per EVIDENCE.md \xA73)"
+    classification_capability: met
+    enterprise_generality: met (9 of 10 strong per CAND-037 enterprise-generality-matrix v0.4 row; demonstrated
+      per A+B+C gate)
+    durability: met
+    implementation_independence: met
+    outcome_identifiable: met
+    boundary_defensible: met
+    distinctness: met (8-peer sweep; added Workforce Management + Technology Management + Technology Enablement
+      + Organizational Design in CR-DEA-BC-19)
+    specialization_not_required: met
+    ecf_mapping: met
+  gaps: []
+  untested:
+  - direct-retrieval of SRC-020 Kaplan and Norton Balanced Scorecard HBR 1992 article full text (independent
+    of admission; would re-rate to E5)
+  - direct-retrieval of SRC-021 Grove 1983 High Output Management book content (independent of admission;
+    would re-rate to E5)
+  - direct-retrieval of SRC-022 OMG BPM CBOK full normative text (independent of admission; would re-rate
+    to E5)
+  pre_check_notes: "Track B evidence package seeded by CR-DEA-BC-19 across SRC-020 (business-architecture;\
+    \ Kaplan and Norton Balanced Scorecard 1992+), SRC-021 (commercial-capability-models; OKR framework),\
+    \ SRC-022 (standards-body; OMG Business Performance Management standards). Three independent source\
+    \ classes; preliminary rating E1 in candidates.yaml v0.5 pending direct retrieval of SRC-020/021/022\
+    \ primary sources. Promotion to E3 contingent on three-source convergence (confirmed in CR-DEA-BC-19);\
+    \ promotion to E4+ contingent on admission in separate CR (CR-DEA-BC-15 provisional). All other gates\
+    \ met on current evidence: classification (CAPABILITY vs PROCESS/ORGANIZATION); enterprise generality\
+    \ (9 of 10 strong per CAND-037 enterprise-generality-matrix v0.4 row; demonstrated per A+B+C gate);\
+    \ durability (recurring discipline since Kaplan and Norton 1992 + Andy Grove 1983; OMG BPMM maturity\
+    \ progression confirms lifecycle); implementation independence (BSC, OKR, custom performance systems;\
+    \ the capability is the underlying ability to measure/evaluate/govern performance, not any specific\
+    \ framework); outcome identifiable (enterprise performance against objectives; auditable per ISO-style\
+    \ governance extensions); boundary defensible (Performance business object distinct from Insight /\
+    \ Outcome / Decision / Plan / Enterprise Posture / Money Flows / Agent Lifecycle / Organization Structure\
+    \ / Technology Estate / Technology Service); distinctness (8-peer sweep passes by business-object\
+    \ partition); specialization not required (foundation per METHODOLOGY \xA75 anti-invention; every\
+    \ enterprise measures performance against objectives); ECF mapping (strategy-direction/operate primary\
+    \ + strategy-direction/improve and finance-accounting/operate secondaries per CR-DEA-BC-13 \xA7D.2\
+    \ + CR-DEA-BC-19 \xA75). Loop-closure narrative required regardless of admission per BC-DEA-BC-13\
+    \ \xA7D.2 explicit decision (CR-DEA-BC-19 \xA76 records the loop-closure narrative)."
 summary:
-  candidates_on_track: 28
-  clean_except_pending_artifacts: 27
+  candidates_on_track: 29
+  clean_except_pending_artifacts: 28
   with_gaps: 1
   removed: 2
-  notes: 'CR-DEA-BC-14 closes Track A on 2026-09-11; CAND-036 Organizational Design promoted E3 → E4 per EVIDENCE.md §3 admission promotion rule; all 10 admission gates met. 27 candidates on track with all artifacts closed; 1 candidate (CAND-004, Track C Relationship Mgmt) still pending evidence work.'
+  notes: CR-DEA-BC-19 closes Track B evidence work on 2026-09-11; CAND-037 Enterprise Performance Management
+    confirmed E3 across SRC-020/021/022 three-source convergence; all 10 admission gates met on current
+    evidence; promotion to E4 contingent on admission in CR-DEA-BC-15. 28 candidates on track with all
+    artifacts closed; 1 candidate (CAND-004, Track C Relationship Mgmt) still pending evidence work.

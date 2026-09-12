@@ -1,9 +1,15 @@
-sweep_version: 0.4.0
-cr: CR-DEA-BC-02 (initial 26) + CR-DEA-BC-13 (track A/B/C sweeps) + CR-DEA-BC-18 (Track A evidence seed; expanded against-list incl. dea:capability-technology-management and dea:capability-technology-enablement) + CR-DEA-BC-14 (Track A admission; sweep against-list 6 → 8 peers; admitted 2026-09-11)
-compiled: '2026-09-11 (v0.4: Track A admitted under CR-DEA-BC-14; OrgDesign sweep 6 → 8 peers; sweep-completed-as-admitted)'
-status: active; Track A closed under CR-DEA-BC-14
+sweep_version: 0.5.0
+cr: CR-DEA-BC-02 (initial 26) + CR-DEA-BC-13 (track A/B/C sweeps) + CR-DEA-BC-18 (Track A evidence seed;
+  expanded against-list incl. dea:capability-technology-management and dea:capability-technology-enability)
+  + CR-DEA-BC-14 (Track A admission; sweep-completed-as-admitted for OrgDesign) + CR-DEA-BC-19 (Track
+  B evidence seed; expanded against-list 4 to 8 peers for EPM incl. workforce-mgmt, tech-mgmt, tech-enablement,
+  organizational-design)
+compiled: "2026-09-11 (v0.5: Track A admitted under CR-DEA-BC-14; OrgDesign sweep 6 \u2192 8 peers; sweep-completed-as-admitted)\
+  \ + Track B evidence-seeded under CR-DEA-BC-19 (EPM sweep 4 \u2192 8 peers; sweep-completed-as-evidence-seeded)"
+status: active; Track A closed under CR-DEA-BC-14 (admission 2026-09-11); Track B evidence-seeded under
+  CR-DEA-BC-19 (2026-09-11)
 inputs:
-  candidates: docs/research/candidates.yaml (v0.4.0)
+  candidates: docs/research/candidates.yaml (v0.5.0)
   normalization: docs/research/normalization.yaml (v0.2.0)
   generality_matrix: docs/research/enterprise-generality-matrix.yaml (v0.3.0)
 scope:
@@ -1713,7 +1719,8 @@ enumeration:
 track_sweeps:
 - candidate: dea:capability-organizational-design
   track: A
-  cr: CR-DEA-BC-13 §D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed) + CR-DEA-BC-14 (admission; this round)
+  cr: "CR-DEA-BC-13 \xA7D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed) + CR-DEA-BC-14 (admission; this\
+    \ round)"
   against:
   - id: dea:capability-workforce-management
     verdict: Distinct
@@ -1757,32 +1764,72 @@ track_sweeps:
       framework; OrgDesign operationalizes).'
   - id: dea:capability-change-management
     verdict: Distinct
-    rationale: 'change operation vs structural design: Change Management operates change initiatives
-      (business object: Change); Organizational Design designs the structure that may result from a change.
-      Different business object; the relationship is parent-child in the other direction (OrgDesign defines
-      target structure; Change Mgmt runs the initiative to realize it).'
+    rationale: 'change operation vs structural design: Change Management operates change initiatives (business
+      object: Change); Organizational Design designs the structure that may result from a change. Different
+      business object; the relationship is parent-child in the other direction (OrgDesign defines target
+      structure; Change Mgmt runs the initiative to realize it).'
   status: sweep-completed-as-admitted; admitted 2026-09-11 under CR-DEA-BC-14; CAND-036 closed
 - candidate: dea:candidate-epm
   track: B
-  cr: CR-DEA-BC-13 §D.2
+  cr: "CR-DEA-BC-13 \xA7D.2 (hypothesis) + CR-DEA-BC-19 (evidence seed; this CR)"
   against:
   - id: dea:capability-analytics-and-intelligence
+    rationale: 'insight from data vs governance of outcomes: Analytics & Intelligence derives decision-grade
+      insight from information (CAND-022; business object: Insight); Enterprise Performance Management
+      governs enterprise outcomes against objectives (business object: Performance). The standards body
+      (SRC-022 OMG BPM CBOK) explicitly distinguishes performance governance from information extraction.
+      Both rely on data; EPM is the operative capability that decides what to measure, evaluates the result,
+      and adapts objectives; Analytics is the capability that produces the insight. Different business
+      object; the relationship is consumer-provider (EPM consumes insights from Analytics).'
     verdict: Distinct
-    rationale: insight vs governance
   - id: dea:capability-financial-resource-management
+    rationale: "money flows vs enterprise-wide performance: Financial Resource Management stewards the\
+      \ money flows (post-BC-13 \xA7B.2 context; business object: Money Flows); EPM governs enterprise\
+      \ outcomes across all four BSC perspectives (financial, customer, internal process, learning and\
+      \ growth). The financial dimension is one cell of EPM scope, not the whole. Different business object."
     verdict: Distinct
-    rationale: money flows vs enterprise-wide performance
   - id: dea:capability-strategy
+    rationale: 'posture vs measurement of posture: Strategy concerns the enterprise posture at the strategic
+      level (CAND-001; business object: Enterprise Posture); EPM measures performance against the chosen
+      posture. Different business object; the relationship is parent-child (Strategy sets posture; EPM
+      measures it).'
     verdict: Distinct
-    rationale: posture vs measurement
   - id: dea:capability-strategic-planning
+    rationale: 'plan vs measurement of plan execution: Strategic Planning concerns the plan for the strategic
+      posture (CAND-002; business object: Plan); EPM measures performance against the plan. Different
+      business object; the relationship is parent-child (Strategic Planning produces the plan; EPM measures
+      execution against it).'
     verdict: Distinct
-    rationale: plan vs measurement
+  - id: dea:capability-workforce-management
+    rationale: 'agent lifecycle vs enterprise-wide performance: Workforce Management concerns agent lifecycle
+      (acquisition, development, deployment, retention per CAND-015); EPM is enterprise-wide performance
+      across multiple BSC perspectives. The people dimension (learning and growth) is one cell of EPM
+      scope, not the whole. Different business object.'
+    verdict: Distinct
+  - id: dea:capability-technology-management
+    rationale: 'technology estate vs enterprise-wide performance: Technology Management stewards the technology
+      estate (post-BC-08; strategy-direction/build); EPM measures performance of the entire enterprise.
+      Performance of the technology function is one cell of EPM scope, not the whole. Different business
+      object.'
+    verdict: Distinct
+  - id: dea:capability-technology-enablement
+    rationale: 'technology services vs enterprise-wide performance: Technology Enablement runs technology
+      services for the enterprise (post-BC-17; enablement-operations/operate); EPM measures performance
+      of the entire enterprise. Performance of the technology function is one cell of EPM scope, not the
+      whole. Different business object.'
+    verdict: Distinct
+  - id: dea:capability-organizational-design
+    rationale: 'structure design vs performance of the structured enterprise: Organizational Design designs
+      roles, units, and reporting lines (admitted 2026-09-11; agency-organization/design); EPM measures
+      performance of the structured enterprise. Different business object; the relationship is consumer-provider
+      (OrgDesign produces structures that EPM then evaluates against objectives).'
+    verdict: Distinct
   loop_closure_investigation: true
-  status: sweep-completed-as-pending; loop-closure narrative required regardless of admission
+  status: sweep-completed-as-evidence-seeded; research-CR; no admission in CR-DEA-BC-19; admission pending
+    separate CR-DEA-BC-15
 - candidate: dea:candidate-relmgmt
   track: C
-  cr: CR-DEA-BC-13 §D.3
+  cr: "CR-DEA-BC-13 \xA7D.3"
   against:
   - id: dea:capability-customer-management
     verdict: Distinct-as-role

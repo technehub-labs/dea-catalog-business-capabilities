@@ -1,6 +1,9 @@
-matrix_version: 0.3.0
-cr: CR-DEA-BC-02 (sections 8-9; deliverable section 33 item 6)
-compiled: '2026-09-11 (v0.3: CAND-036 Organizational Design row added under CR-DEA-BC-18 evidence seed; demonstrated pending review; CAND-023/CAND-029 v0.2 rows preserved; CAND-004/CAND-011 retained off track)'
+matrix_version: 0.4.0
+cr: CR-DEA-BC-02 (sections 8-9; deliverable section 33 item 6) + CR-DEA-BC-18 (Track A evidence seed;
+  CAND-036 row) + CR-DEA-BC-19 (Track B evidence seed; CAND-037 row)
+compiled: '2026-09-11 (v0.4: CAND-037 Enterprise Performance Management row added under CR-DEA-BC-19 evidence
+  seed; 9 of 10 strong; demonstrated per A+B+C gate; CAND-036 Organizational Design row preserved from
+  v0.3)'
 status: candidate-not-canonical; analytical evidence, not the catalog
 enterprise_types:
 - commercial
@@ -18,7 +21,8 @@ cell_values:
   moderate: recurs with materially different shape or frequency
   sector: exists mainly as industry-specific form
   none: not evidenced; legitimately absent
-generality_rule: demonstrated when strong in 7+ of 10 types; partial when strong+moderate in 7+; else sector-bound
+generality_rule: demonstrated when strong in 7+ of 10 types; partial when strong+moderate in 7+; else
+  sector-bound
 rows:
 - candidate: CAND-001
   name: Strategy
@@ -321,8 +325,9 @@ rows:
   government: strong
   non-profit: moderate
   enterprise_generality: demonstrated
-  v02_delta: 'retail and professional-services moderate -> strong: BCI GPG 7.0 explicit all-sector applicability (SRC-014); APQC 11.0 cross-industry
-    resiliency category (SRC-004); DORA-style operational resilience cascading to service providers'
+  v02_delta: 'retail and professional-services moderate -> strong: BCI GPG 7.0 explicit all-sector applicability
+    (SRC-014); APQC 11.0 cross-industry resiliency category (SRC-004); DORA-style operational resilience
+    cascading to service providers'
 - candidate: CAND-024
   name: Security Management
   commercial: strong
@@ -401,8 +406,8 @@ rows:
   government: strong
   non-profit: moderate
   enterprise_generality: demonstrated
-  v02_delta: 'government and retail moderate -> strong: ISO 56002 all-sectors applicability (SRC-015); Oslo Manual cross-sector note incl. government
-    innovation (SRC-016)'
+  v02_delta: 'government and retail moderate -> strong: ISO 56002 all-sectors applicability (SRC-015);
+    Oslo Manual cross-sector note incl. government innovation (SRC-016)'
 - candidate: CAND-036
   name: Organizational Design
   commercial: strong
@@ -419,10 +424,32 @@ rows:
   sources_consulted:
   - SRC-017 (business-architecture; Galbraith Star Model, OB textbooks)
   - SRC-018 (cross-industry-process; APQC PCF Organization category)
-  - SRC-019 (standards-body; ISO 9001 §5.3 role/authority clause)
-  v03_delta: 'CR-DEA-BC-18 evidence seed; non-profit moderate because non-profits design structures differently (e.g. boards, dual governance) but the capability still recurs'
+  - "SRC-019 (standards-body; ISO 9001 \xA75.3 role/authority clause)"
+  v03_delta: CR-DEA-BC-18 evidence seed; non-profit moderate because non-profits design structures differently
+    (e.g. boards, dual governance) but the capability still recurs
+- candidate: CAND-037
+  name: Enterprise Performance Management
+  commercial: strong
+  professional-services: strong
+  manufacturing: strong
+  retail: strong
+  financial-services: strong
+  healthcare: strong
+  technology: strong
+  infrastructure: strong
+  government: strong
+  non-profit: moderate
+  enterprise_generality: demonstrated
+  sources_consulted:
+  - SRC-020 (business-architecture; Kaplan and Norton Balanced Scorecard)
+  - SRC-021 (commercial-capability-models; OKR framework)
+  - SRC-022 (standards-body; OMG Business Performance Management standards)
+  v03_delta: CR-DEA-BC-19 evidence seed; non-profit moderate because non-profits measure performance differently
+    (e.g. mission-impact metrics, donor accountability) but the capability still recurs; 9 of 10 strong;
+    demonstrated per A+B+C gate
 summary:
   demonstrated: 29
   partial: 0
   sector_bound: 1
-  note: 29 of 30 rows demonstrated; CAND-006 sector-bound (specialization path); 2 rows off admission track per N-007/N-008
+  note: 29 of 30 rows demonstrated; CAND-006 sector-bound (specialization path); 2 rows off admission
+    track per N-007/N-008

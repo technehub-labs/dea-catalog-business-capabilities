@@ -34,6 +34,10 @@ regime) and `v<N>.<M>` semver from v2 onward. See
 - Admission-gate pre-check `evidence_ge_E3` gap → met.
 - Follow-up direct-retrieval actions for SRC-017/018/019 primaries recorded as independent of admission (would re-rate to E5 if done).
 
+### Research-CR addendum (CR-DEA-BC-19, same release cycle; no version bump)
+
+**Track B (Enterprise Performance Management) evidence package**. Research-CR; no canonical entity admitted in this CR. Seeds CAND-037 in the candidate universe (E1 → E3 confirmed across SRC-020/021/022 three-source convergence); adds SRC-020 (Kaplan and Norton Balanced Scorecard; business-architecture class), SRC-021 (OKR framework; commercial-capability-models class), SRC-022 (OMG Business Performance Management standards via OCEB 2; standards-body class). Closes TER-EPM-001 evidence-pending → evidence-seeded. Distinctness sweep expanded 4 → 8 peers (added Workforce Management + Technology Management + Technology Enablement + Organizational Design). ECF overlay confidence low → low-medium. Admission-gate pre-check added with all 10 gates met on current evidence (CAND-037 row; promotion to E4 contingent on admission in CR-DEA-BC-15 provisional). Direction Loop closure narrative recorded per BC-DEA-BC-13 §D.2 explicit decision (loop closes if EPM is admitted; loop remains open if EPM is not admitted; the missing link is governance of outcomes, partly absorbed into Analytics today). Catalog count unchanged at 28 first-order caps.
+
 ## Unreleased
 
 **Housekeeping** (no version bump; pre-release cleanup). Removes en/em dashes from every GitHub-visible artifact in the repo (32 files; 213 em-dashes + 24 en-dashes removed from Markdown; 23 em-dashes from YAML prose). The punctuation policy now lives in memory; the artifact layer reflects it without stating it. Change-requested under user instruction 2026-09-11.

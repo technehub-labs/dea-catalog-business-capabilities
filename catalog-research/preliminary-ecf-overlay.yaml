@@ -1,15 +1,21 @@
-overlay_version: 0.4.0
-cr: CR-DEA-BC-02 (legacy 26 placements) + CR-DEA-BC-13 (track A/B/C hypotheses) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; dea:candidate-orgdesign → dea:capability-organizational-design; confidence low-medium → high)
-compiled: '2026-09-11 (v0.4: Track A admission closed under CR-DEA-BC-14; OrgDesign overlay dea:candidate-orgdesign → dea:capability-organizational-design; confidence low-medium → high; E4)'
-status: active; Track A closed under CR-DEA-BC-14
+overlay_version: 0.5.0
+cr: "CR-DEA-BC-02 (legacy 26 placements) + CR-DEA-BC-13 (track A/B/C hypotheses) + CR-DEA-BC-18 (Track\
+  \ A evidence seed) + CR-DEA-BC-14 (Track A admission; dea:candidate-orgdesign \u2192 dea:capability-organizational-design;\
+  \ confidence low-medium \u2192 high) + CR-DEA-BC-19 (Track B evidence seed; dea:candidate-epm confidence\
+  \ low \u2192 low-medium)"
+compiled: "2026-09-11 (v0.5: Track A admission closed under CR-DEA-BC-14; OrgDesign overlay dea:candidate-orgdesign\
+  \ \u2192 dea:capability-organizational-design; confidence low-medium \u2192 high; E4) + Track B evidence\
+  \ seeded under CR-DEA-BC-19 (dea:candidate-epm confidence low \u2192 low-medium; E3 confirmed)"
+status: active; Track A closed under CR-DEA-BC-14 (admission 2026-09-11); Track B evidence-seeded under
+  CR-DEA-BC-19 (2026-09-11)
 inputs:
   candidates: docs/research/candidates.yaml
   evidence_register: docs/research/evidence-register.yaml
 rules:
-  primary: Semantic center of gravity (METHODOLOGY.md §8, codified under CR-DEA-BC-13). Pre-CR-13 the
-    rule was 'earliest legitimate initiation'; this overlay carries the legacy overlay hypotheses for
-    the 26 canonical entries under the old rule (see CR-DEA-BC-12 §A for the new placements) plus the
-    three track hypotheses under the new rule.
+  primary: "Semantic center of gravity (METHODOLOGY.md \xA78, codified under CR-DEA-BC-13). Pre-CR-13\
+    \ the rule was 'earliest legitimate initiation'; this overlay carries the legacy overlay hypotheses\
+    \ for the 26 canonical entries under the old rule (see CR-DEA-BC-12 \xA7A for the new placements)\
+    \ plus the three track hypotheses under the new rule."
   secondary: Legitimate participation only (unchanged across CR-13).
   no_forced_coverage: Empty cells are valid results (CR section 27; unchanged).
   conflicts: Flagged, not smoothed (CR section 26; unchanged).
@@ -331,15 +337,19 @@ overlays:
     stage: conceive
   - domain: agency-organization
     stage: build
-  confidence: 'high (E4 admitted under CR-DEA-BC-14; E3 corroboration seeded by CR-DEA-BC-18 across three independent source classes: business-architecture / cross-industry-process / standards-body; promoted to E4 on admission per EVIDENCE.md §3)'
+  confidence: "high (E4 admitted under CR-DEA-BC-14; E3 corroboration seeded by CR-DEA-BC-18 across three\
+    \ independent source classes: business-architecture / cross-industry-process / standards-body; promoted\
+    \ to E4 on admission per EVIDENCE.md \xA73)"
   conflict: null
-  cr: CR-DEA-BC-13 §D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed) + CR-DEA-BC-14 (admission; this round)
-  rationale: 'Under CR-DEA-BC-13 §A new rule (semantic center of gravity): Organizational Design''s defining
-    activity is sustained design of organizational structures, roles, authorities, and coordination patterns.
-    Domain Agency & Organization per ECF v2.4.0 (substrate-neutral; human + artificial + hybrid agents).
-    CR-DEA-BC-18 seeds the evidence package (SRC-017/018/019 across business-architecture / cross-industry-process
-    / standards-body classes); distinctness sweep vs CAND-014/015/001/002 passes by business-object partition
-    (Organization Structure distinct from Agent Capacity, Agent Lifecycle, Enterprise, Plan).'
+  cr: "CR-DEA-BC-13 \xA7D.1 (hypothesis) + CR-DEA-BC-18 (evidence seed) + CR-DEA-BC-14 (admission; this\
+    \ round)"
+  rationale: "Under CR-DEA-BC-13 \xA7A new rule (semantic center of gravity): Organizational Design's\
+    \ defining activity is sustained design of organizational structures, roles, authorities, and coordination\
+    \ patterns. Domain Agency & Organization per ECF v2.4.0 (substrate-neutral; human + artificial + hybrid\
+    \ agents). CR-DEA-BC-18 seeds the evidence package (SRC-017/018/019 across business-architecture /\
+    \ cross-industry-process / standards-body classes); distinctness sweep vs CAND-014/015/001/002 passes\
+    \ by business-object partition (Organization Structure distinct from Agent Capacity, Agent Lifecycle,\
+    \ Enterprise, Plan)."
 - candidate: dea:candidate-epm
   name: Enterprise Performance Management
   primary:
@@ -350,12 +360,17 @@ overlays:
     stage: improve
   - domain: finance-accounting
     stage: operate
-  confidence: low (E3 preliminary; needs corroboration)
+  confidence: low-medium (E3 confirmed by SRC-020/021/022 three-source convergence; pending direct retrieval
+    re-rating and admission)
   conflict: null
-  cr: CR-DEA-BC-13 §D.2
-  rationale: 'Under CR-DEA-BC-13 §A new rule: EPM''s defining activity is sustained performance measurement
-    and governance. Strategy & Direction because it serves the direction loop (BC-SR-A001 §16). Cross-cutting
-    participation in Finance & Accounting for the financial-performance dimension.'
+  cr: "CR-DEA-BC-13 \xA7D.2 (hypothesis) + CR-DEA-BC-19 (evidence seed; this CR)"
+  rationale: "Under CR-DEA-BC-13 \xA7A new rule + CR-DEA-BC-19 (this CR) confirmation: EPM's defining\
+    \ activity is sustained performance measurement and governance (Strategy & Direction because it serves\
+    \ the direction loop BC-SR-A001 \xA716). Cross-cutting participation in Finance & Accounting for the\
+    \ financial-performance dimension. Three-source convergence across SRC-020 (BSC business-architecture),\
+    \ SRC-021 (OKR commercial-capability-models), and SRC-022 (OMG BPM standards-body) supports E3 evidence\
+    \ rating and the strategy-direction/operate primary + strategy-direction/improve and finance-accounting/operate\
+    \ secondaries."
 - candidate: dea:candidate-relmgmt
   name: Relationship Management (generic parent)
   primary:
@@ -370,10 +385,10 @@ overlays:
   conflict: ECF framing favors party/relationship-as-underlying-subject (consistent with admitting this
     generic parent); the catalog's current state is role-specific only. The investigation track C must
     produce evidence to resolve.
-  cr: CR-DEA-BC-13 §D.3
-  rationale: 'Under CR-DEA-BC-13 §A new rule: if admitted, Relationship Management is the constituted
-    ability to establish, govern, develop, and terminate external-party relationships. Primary conceive
-    (the relationship is constituted); secondaries operate and improve for the lifecycle.'
+  cr: "CR-DEA-BC-13 \xA7D.3"
+  rationale: "Under CR-DEA-BC-13 \xA7A new rule: if admitted, Relationship Management is the constituted\
+    \ ability to establish, govern, develop, and terminate external-party relationships. Primary conceive\
+    \ (the relationship is constituted); secondaries operate and improve for the lifecycle."
 - candidate_id: dea:candidate-technology-enablement
   track: TER-TECHENABLEMENT-001
   opened: '2026-09-10'
@@ -385,11 +400,12 @@ overlays:
     stage: build
   - domain: enablement-operations
     stage: improve
-  rationale: Under the semantic-center-of-gravity rule (CR-DEA-BC-13 §A), the defining activity of Technology
-    Enablement is sustained IT service and platform delivery (operate). The ECF places technology as enablers
-    of execution (BC-SR-A001 §15 quote), which is exactly the enablement-operations domain. Build and
-    improve secondaries record the lifecycle participation. Distinct from Technology Management (strategy-direction/build)
-    by ECF cell and by business object (Technology Service vs Technology Estate).
+  rationale: "Under the semantic-center-of-gravity rule (CR-DEA-BC-13 \xA7A), the defining activity of\
+    \ Technology Enablement is sustained IT service and platform delivery (operate). The ECF places technology\
+    \ as enablers of execution (BC-SR-A001 \xA715 quote), which is exactly the enablement-operations domain.\
+    \ Build and improve secondaries record the lifecycle participation. Distinct from Technology Management\
+    \ (strategy-direction/build) by ECF cell and by business object (Technology Service vs Technology\
+    \ Estate)."
   status: admitted
   admitted_as: dea:capability-technology-enablement
   admitted_in: CR-DEA-BC-17

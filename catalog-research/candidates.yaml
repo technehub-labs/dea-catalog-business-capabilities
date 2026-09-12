@@ -1,6 +1,6 @@
-universe_version: 0.4.0
+universe_version: 0.5.0
 cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C stubs) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; CAND-036 admitted)
-compiled: '2026-09-11 (v0.4: CAND-036 Organizational Design admitted under CR-DEA-BC-14; canonical true; E4; all 10 admission gates met per precheck v0.7)'
+compiled: '2026-09-11 (v0.5: CAND-037 Enterprise Performance Management added under CR-DEA-BC-19 Track B research-CR; E1 pending evidence work; canonical false; admission remains a separate CR per BC-SR-A001 §5 P1)'
 status: active
 evidence_register: docs/research/evidence-register.yaml
 classification_taxonomy:
@@ -28,8 +28,8 @@ evidence_ratings:
 - E4
 - E5
 counts:
-  total: 36
-  CAPABILITY: 30
+  total: 37
+  CAPABILITY: 31
   SPECIALIZATION: 1
   PROCESS: 1
   ORGANIZATION: 1
@@ -908,6 +908,30 @@ candidates:
     admission_cr: CR-DEA-BC-14
     evidence_register: docs/research/evidence-register.yaml
     track: Track A (BC-DEA-BC-13 §B.1; CR-DEA-BC-18 evidence seed; CR-DEA-BC-14 admission)
+
+- id: CAND-037
+  name: Enterprise Performance Management
+  classification: CAPABILITY
+  confidence: medium
+  evidence_strength: E1
+  business_object_hypothesis: Performance
+  parent_candidates: []
+  child_candidates:
+  - CAND-037a Performance Definition and Target Setting
+  - CAND-037b Performance Measurement and Monitoring
+  - CAND-037c Performance Evaluation and Governance
+  - CAND-037d Performance Improvement and Adaptation
+  durable: demonstrated
+  implementation_independent: demonstrated
+  sources: []
+  rationale: 'The ability to define, measure, monitor, evaluate, govern, and improve enterprise-wide performance against intended objectives and targets. Distinct from Analytics & Intelligence (which derives decision-grade insight from information; CAND-022) because Performance is the governance and measurement of enterprise outcomes against objectives, not the production of insight from data; from Financial Resource Management (CAND-005; business object: money flows); from Strategy (CAND-001; business object: posture); and from Strategic Planning (CAND-002; business object: Plan). Anti-invention test (per METHODOLOGY §5): an enterprise that changes industry tomorrow still requires an EPM capability (every enterprise must define, measure, evaluate, and govern its performance against objectives): foundation-grade. Per BC-SR-A001 §16, the Direction Loop (Strategy → Strategic Planning → Performance Management → Analytics & Intelligence → Strategy Adaptation) is currently broken because EPM is absent from the catalog. Per §3 capability vs organization disambiguation: EPM is the design and operation ability, not a specific performance system or office (those are organizational realizations of the capability). ECF placement per CR-DEA-BC-13 §D.2 + CR-DEA-BC-19 (this CR): strategy-direction/operate primary (sustained performance measurement and governance is the operate stage of strategy-direction); strategy-direction/improve + finance-accounting/operate secondaries.'
+  notes: 'Track B investigation (CR-DEA-BC-19; this CR). Seeded by BC-SR-A001 §5 (reviewer P1) and BC-DEA-BC-13 §B.2 + §D.2 (hypothesis + loop-closure narrative requirement). Three source classes seeded: strategy (SRC-020 Kaplan & Norton Balanced Scorecard 1992+), framework/people-ops-management (SRC-021 OKR framework per Andy Grove + John Doerr), standards-body (SRC-022 OMG Business Performance Management standards via OCEB 2). Promotion from E1 (review recommendation only) to E3 requires independent corpus corroboration across the three source classes (this CR deliverable). Loop-closure narrative required regardless of admission per BC-DEA-BC-13 §D.2 explicit decision: even if EPM is not admitted, the Direction Loop status must be reported.'
+  provenance:
+    research_artifact: true
+    canonical: false
+    added: '2026-09-11'
+    evidence_register: docs/research/evidence-register.yaml
+    track: Track B (BC-DEA-BC-13 §B.2 + §D.2; CR-DEA-BC-19 research-CR)
     sources_seeded_by:
     - BC-SR-A001 §4 (reviewer P1)
     - BC-DEA-BC-13 §B.1
