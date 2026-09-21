@@ -1,5 +1,11 @@
 # CR-DEA-BC-17: Admit Technology Enablement as a First-Order Canonical Capability
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 **Status**: Proposed
 **Layer**: Catalog (business capabilities)
 **Owner**: Coder (for eaojnr)

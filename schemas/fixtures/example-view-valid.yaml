@@ -8,7 +8,7 @@ catalog_baseline: "fixture"
 
 specializations:
   - id: SPEC-001
-    parent: dea:capability-customer-management
+    parent: capabilities:capability-customer-management-f3n8wb
     level: L3
     sector: Fixture
     name: Fixture Customer Management
@@ -19,7 +19,7 @@ specializations:
     status: candidate
 
 inherited:
-  - dea:capability-operations
+  - capabilities:capability-operations-vm39fm
 
 rejected:
   - name: Fixture Impostor

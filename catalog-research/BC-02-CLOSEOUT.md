@@ -1,5 +1,11 @@
 # CR-DEA-BC-02 Close-out: Definition of Done Verification
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 Date: 2026-09-01. Scope: CR-DEA-BC-02 (Evidence-Based First-Order Capability Investigation). Method: every section 39 row verified programmatically against the artifacts landed on `main`. Machine-readable ledger: `bc-02-closeout.yaml`.
 
 **Result: 19 of 19 DoD rows pass. CR-DEA-BC-02 execution is complete.** Admission recommendations await review (section 38); nothing in the research line is canonical.

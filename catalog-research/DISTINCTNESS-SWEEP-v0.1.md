@@ -1,5 +1,11 @@
 # Distinctness Sweep v0.1: Summary for Review
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 CR-DEA-BC-02 section 20 / section 38; carry-forward from the generality matrix. Date: 2026-09-01.
 Machine-readable: `distinctness-sweep.yaml`. Research artifact; not the catalog.
 

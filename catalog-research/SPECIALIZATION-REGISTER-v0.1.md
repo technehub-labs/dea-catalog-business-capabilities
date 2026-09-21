@@ -1,5 +1,11 @@
 # Specialization Register v0.1: Summary for Review
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 CR-DEA-BC-02 close-out, deliverable section 33 item 9: candidates deferred to industry/sector/enterprise specialization, plus the specialization-boundary evidence (section 29). Machine-readable twin: `specialization-register.yaml`. Date: 2026-09-01.
 
 Status: candidate-not-canonical. Nothing here enters the first-order set; specializations reference parents and never modify or replace them (CR-DEA-BC-01 component 14). New ID family: `SPEC-NNN`.

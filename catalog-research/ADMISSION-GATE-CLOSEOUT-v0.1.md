@@ -1,5 +1,11 @@
 # Admission Gate Close-out v0.1: Section 38 Recommendations
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 CR-DEA-BC-02 close-out: per-candidate evaluation against the section 38 canonical admission gate. Machine-readable twin: `admission-gate-closeout.yaml`. Date: 2026-09-01.
 
 Status: candidate-not-canonical. This artifact **recommends**; it admits nothing. Final canonical admission remains subject to review (CR section 38; METHODOLOGY.md section 12). Supersedes `admission-gate-precheck.yaml` as the section 38 record; the pre-check remains the dry-run history.

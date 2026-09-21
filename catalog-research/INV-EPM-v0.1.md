@@ -1,5 +1,11 @@
 # Investigation Track B: Enterprise Performance Management
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 **Status**: evidence-seeded (CR-DEA-BC-19 research-CR; no admission in this revision)
 **Source**: [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §5 (reviewer P1)
 **Carrier CR**: [CR-DEA-BC-12](../change-requests/CR-DEA-BC-12.md) §B.2 (investigation opened) → [CR-DEA-BC-19](../change-requests/CR-DEA-BC-19-track-b-epm-evidence.md) (evidence package)

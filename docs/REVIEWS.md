@@ -1,5 +1,11 @@
 # Submittal Reviews: Release Commentary
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 This document is the per-release commentary surface for **submittal reviews** filed
 against this catalog. Each release that lands at least one recommendation from a
 submittal review gets a section here.

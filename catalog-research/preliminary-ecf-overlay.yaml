@@ -1,11 +1,15 @@
+# Layout note (CR-DEA-BC-mv1, 2026-09-21): historical research register authored
+# against the pre-migration layout and the legacy dea:* id family. Ids cited
+# below are historical; see reconciliation/migration-id-map.yaml for the
+# old-to-new id mapping.
 overlay_version: 0.5.0
 cr: "CR-DEA-BC-02 (legacy 26 placements) + CR-DEA-BC-13 (track A/B/C hypotheses) + CR-DEA-BC-18 (Track\
-  \ A evidence seed) + CR-DEA-BC-14 (Track A admission; dea:candidate-orgdesign \u2192 dea:capability-organizational-design;\
-  \ confidence low-medium \u2192 high) + CR-DEA-BC-19 (Track B evidence seed; dea:candidate-epm confidence\
+  \ A evidence seed) + CR-DEA-BC-14 (Track A admission; capabilities:candidate-orgdesign-a7s8bf \u2192 capabilities:capability-organizational-design-vanefq;\
+  \ confidence low-medium \u2192 high) + CR-DEA-BC-19 (Track B evidence seed; capabilities:candidate-epm-5fxren confidence\
   \ low \u2192 low-medium)"
-compiled: "2026-09-11 (v0.5: Track A admission closed under CR-DEA-BC-14; OrgDesign overlay dea:candidate-orgdesign\
-  \ \u2192 dea:capability-organizational-design; confidence low-medium \u2192 high; E4) + Track B evidence\
-  \ seeded under CR-DEA-BC-19 (dea:candidate-epm confidence low \u2192 low-medium; E3 confirmed)"
+compiled: "2026-09-11 (v0.5: Track A admission closed under CR-DEA-BC-14; OrgDesign overlay capabilities:candidate-orgdesign-a7s8bf\
+  \ \u2192 capabilities:capability-organizational-design-vanefq; confidence low-medium \u2192 high; E4) + Track B evidence\
+  \ seeded under CR-DEA-BC-19 (capabilities:candidate-epm-5fxren confidence low \u2192 low-medium; E3 confirmed)"
 status: active; Track A closed under CR-DEA-BC-14 (admission 2026-09-11); Track B evidence-seeded under
   CR-DEA-BC-19 (2026-09-11)
 inputs:
@@ -327,7 +331,7 @@ overlays:
     stage: design
   confidence: low
   conflict: null
-- candidate: dea:capability-organizational-design
+- candidate: capabilities:capability-organizational-design-vanefq
   name: Organizational Design
   primary:
     domain: agency-organization
@@ -350,7 +354,7 @@ overlays:
     \ cross-industry-process / standards-body classes); distinctness sweep vs CAND-014/015/001/002 passes\
     \ by business-object partition (Organization Structure distinct from Agent Capacity, Agent Lifecycle,\
     \ Enterprise, Plan)."
-- candidate: dea:candidate-epm
+- candidate: capabilities:candidate-epm-5fxren
   name: Enterprise Performance Management
   primary:
     domain: strategy-direction
@@ -371,7 +375,7 @@ overlays:
     \ SRC-021 (OKR commercial-capability-models), and SRC-022 (OMG BPM standards-body) supports E3 evidence\
     \ rating and the strategy-direction/operate primary + strategy-direction/improve and finance-accounting/operate\
     \ secondaries."
-- candidate: dea:candidate-relmgmt
+- candidate: capabilities:candidate-relmgmt-nu73v9
   name: Relationship Management (generic parent)
   primary:
     domain: party-relationship
@@ -407,7 +411,7 @@ overlays:
     \ (strategy-direction/build) by ECF cell and by business object (Technology Service vs Technology\
     \ Estate)."
   status: admitted
-  admitted_as: dea:capability-technology-enablement
+  admitted_as: capabilities:capability-technology-enablement-y6nkws
   admitted_in: CR-DEA-BC-17
   admitted_date: '2026-09-10'
 empty_cells_legitimate:

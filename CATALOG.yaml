@@ -1,10 +1,10 @@
 catalog:
   abbreviation: BC
   counts:
-    candidates: 3
-    canonical: 28
+    candidates: 31
+    canonical: 0
     entities: 31
-    open_change_requests: 23
+    open_change_requests: 24
     research_files: 3
     retired: 0
   cross_cutting:
@@ -19,10 +19,10 @@ catalog:
   entities:
   - candidate_count: 1
     canonical_count: 0
-    id: dea:candidate-epm
-    last_modified: '2026-09-11'
+    id: capabilities:candidate-epm-5fxren
+    last_modified: '2026-09-21'
     lifecycle_status: candidate
-    path: entities/v1-alpha/dea:candidate-epm/candidates/epm.yaml
+    path: entities/v1-alpha/epm-5fxren/candidates/epm.yaml
     research_count: 0
     retired_count: 0
     state: candidate
@@ -30,10 +30,10 @@ catalog:
     version: 0.0.0
   - candidate_count: 1
     canonical_count: 0
-    id: dea:candidate-orgdesign
-    last_modified: '2026-09-11'
+    id: capabilities:candidate-orgdesign-a7s8bf
+    last_modified: '2026-09-21'
     lifecycle_status: candidate
-    path: entities/v1-alpha/dea:candidate-orgdesign/candidates/orgdesign.yaml
+    path: entities/v1-alpha/orgdesign-a7s8bf/candidates/orgdesign.yaml
     research_count: 0
     retired_count: 0
     state: candidate
@@ -41,10 +41,10 @@ catalog:
     version: 0.0.0
   - candidate_count: 1
     canonical_count: 0
-    id: dea:candidate-relmgmt
-    last_modified: '2026-09-11'
+    id: capabilities:candidate-relmgmt-nu73v9
+    last_modified: '2026-09-21'
     lifecycle_status: candidate
-    path: entities/v1-alpha/dea:candidate-relmgmt/candidates/relmgmt.yaml
+    path: entities/v1-alpha/relmgmt-nu73v9/candidates/relmgmt.yaml
     research_count: 0
     retired_count: 0
     state: candidate
@@ -52,310 +52,310 @@ catalog:
     version: 0.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-analytics-and-intelligence
-    last_modified: '2026-09-10'
+    id: capabilities:capability-analytics-and-intelligence-559tky
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-analytics-and-intelligence/dea:capability-analytics-and-intelligence.yaml
+    path: entities/v1-alpha/analytics-and-intelligence-559tky/capabilities-capability-analytics-and-intelligence-559tky.yaml
     research_count: 3
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-asset-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-asset-management-judtwr
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-asset-management/dea:capability-asset-management.yaml
+    path: entities/v1-alpha/asset-management-judtwr/capabilities-capability-asset-management-judtwr.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.2.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-change-management
-    last_modified: '2026-09-11'
+    id: capabilities:capability-change-management-hukdeq
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-change-management/dea:capability-change-management.yaml
+    path: entities/v1-alpha/change-management-hukdeq/capabilities-capability-change-management-hukdeq.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-continuity-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-continuity-management-v3rn6u
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-continuity-management/dea:capability-continuity-management.yaml
+    path: entities/v1-alpha/continuity-management-v3rn6u/capabilities-capability-continuity-management-v3rn6u.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-customer-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-customer-management-f3n8wb
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-customer-management/dea:capability-customer-management.yaml
+    path: entities/v1-alpha/customer-management-f3n8wb/capabilities-capability-customer-management-f3n8wb.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-enterprise-governance
-    last_modified: '2026-09-11'
+    id: capabilities:capability-enterprise-governance-uas48u
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-enterprise-governance/dea:capability-enterprise-governance.yaml
+    path: entities/v1-alpha/enterprise-governance-uas48u/capabilities-capability-enterprise-governance-uas48u.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-facility-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-facility-management-tx73hb
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-facility-management/dea:capability-facility-management.yaml
+    path: entities/v1-alpha/facility-management-tx73hb/capabilities-capability-facility-management-tx73hb.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.2.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-financial-resource-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-financial-resource-management-cd3c7c
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-financial-resource-management/dea:capability-financial-resource-management.yaml
+    path: entities/v1-alpha/financial-resource-management-cd3c7c/capabilities-capability-financial-resource-management-cd3c7c.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-financial-stewardship
-    last_modified: '2026-09-10'
+    id: capabilities:capability-financial-stewardship-c7xtfk
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-financial-stewardship/dea:capability-financial-stewardship.yaml
+    path: entities/v1-alpha/financial-stewardship-c7xtfk/capabilities-capability-financial-stewardship-c7xtfk.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-idea-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-idea-management-86dckf
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-idea-management/dea:capability-idea-management.yaml
+    path: entities/v1-alpha/idea-management-86dckf/capabilities-capability-idea-management-86dckf.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-information-management
-    last_modified: '2026-09-11'
+    id: capabilities:capability-information-management-6vjgdh
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-information-management/dea:capability-information-management.yaml
+    path: entities/v1-alpha/information-management-6vjgdh/capabilities-capability-information-management-6vjgdh.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-legal-matter-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-legal-matter-management-zzbd2u
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-legal-matter-management/dea:capability-legal-matter-management.yaml
+    path: entities/v1-alpha/legal-matter-management-zzbd2u/capabilities-capability-legal-matter-management-zzbd2u.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-marketing
-    last_modified: '2026-09-10'
+    id: capabilities:capability-marketing-xmc539
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-marketing/dea:capability-marketing.yaml
+    path: entities/v1-alpha/marketing-xmc539/capabilities-capability-marketing-xmc539.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-offering-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-offering-management-6egkc8
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-offering-management/dea:capability-offering-management.yaml
+    path: entities/v1-alpha/offering-management-6egkc8/capabilities-capability-offering-management-6egkc8.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-operations
-    last_modified: '2026-09-11'
+    id: capabilities:capability-operations-vm39fm
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-operations/dea:capability-operations.yaml
+    path: entities/v1-alpha/operations-vm39fm/capabilities-capability-operations-vm39fm.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.1
   - candidate_count: 0
     canonical_count: 1
-    id: dea:capability-organizational-design
-    last_modified: '2026-09-11'
+    id: capabilities:capability-organizational-design-vanefq
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-organizational-design/dea:capability-organizational-design.yaml
+    path: entities/v1-alpha/organizational-design-vanefq/capabilities-capability-organizational-design-vanefq.yaml
     research_count: 0
     retired_count: 0
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-partner-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-partner-management-cp3vdb
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-partner-management/dea:capability-partner-management.yaml
+    path: entities/v1-alpha/partner-management-cp3vdb/capabilities-capability-partner-management-cp3vdb.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.1.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-regulation-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-regulation-management-gya4d8
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-regulation-management/dea:capability-regulation-management.yaml
+    path: entities/v1-alpha/regulation-management-gya4d8/capabilities-capability-regulation-management-gya4d8.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-risk-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-risk-management-h9uxdw
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-risk-management/dea:capability-risk-management.yaml
+    path: entities/v1-alpha/risk-management-h9uxdw/capabilities-capability-risk-management-h9uxdw.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-security-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-security-management-wmzc7c
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-security-management/dea:capability-security-management.yaml
+    path: entities/v1-alpha/security-management-wmzc7c/capabilities-capability-security-management-wmzc7c.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-sourcing-and-procurement
-    last_modified: '2026-09-10'
+    id: capabilities:capability-sourcing-and-procurement-esucp4
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-sourcing-and-procurement/dea:capability-sourcing-and-procurement.yaml
+    path: entities/v1-alpha/sourcing-and-procurement-esucp4/capabilities-capability-sourcing-and-procurement-esucp4.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.2.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-strategic-planning
-    last_modified: '2026-09-11'
+    id: capabilities:capability-strategic-planning-k3rz7a
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-strategic-planning/dea:capability-strategic-planning.yaml
+    path: entities/v1-alpha/strategic-planning-k3rz7a/capabilities-capability-strategic-planning-k3rz7a.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.1.1
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-strategy
-    last_modified: '2026-09-11'
+    id: capabilities:capability-strategy-wdrtha
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-strategy/dea:capability-strategy.yaml
+    path: entities/v1-alpha/strategy-wdrtha/capabilities-capability-strategy-wdrtha.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.1.1
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-supplier-management
-    last_modified: '2026-09-10'
+    id: capabilities:capability-supplier-management-d6fuj4
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-supplier-management/dea:capability-supplier-management.yaml
+    path: entities/v1-alpha/supplier-management-d6fuj4/capabilities-capability-supplier-management-d6fuj4.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.2.0
   - candidate_count: 0
     canonical_count: 1
-    id: dea:capability-technology-enablement
-    last_modified: '2026-09-11'
+    id: capabilities:capability-technology-enablement-y6nkws
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-technology-enablement/dea:capability-technology-enablement.yaml
+    path: entities/v1-alpha/technology-enablement-y6nkws/capabilities-capability-technology-enablement-y6nkws.yaml
     research_count: 0
     retired_count: 0
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-technology-management
-    last_modified: '2026-09-11'
+    id: capabilities:capability-technology-management-maus5n
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-technology-management/dea:capability-technology-management.yaml
+    path: entities/v1-alpha/technology-management-maus5n/capabilities-capability-technology-management-maus5n.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.3.1
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-workforce-management
-    last_modified: '2026-09-11'
+    id: capabilities:capability-workforce-management-9e8d8s
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-workforce-management/dea:capability-workforce-management.yaml
+    path: entities/v1-alpha/workforce-management-9e8d8s/capabilities-capability-workforce-management-9e8d8s.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.1.1
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-workforce-planning
-    last_modified: '2026-09-11'
+    id: capabilities:capability-workforce-planning-b43rhm
+    last_modified: '2026-09-21'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-workforce-planning/dea:capability-workforce-planning.yaml
+    path: entities/v1-alpha/workforce-planning-b43rhm/capabilities-capability-workforce-planning-b43rhm.yaml
     research_count: 0
     retired_count: 1
-    state: canonical
+    state: candidate
     type: BusinessCapability
     version: 1.1.1
   id: dea:catalog-business-capabilities
@@ -364,101 +364,101 @@ catalog:
   owner: TechNeHub Labs
   repository: https://github.com/technehub-labs/dea-catalog-business-capabilities.git
   research_registers:
-  - entity_id: dea:candidate-epm
+  - entity_id: capabilities:candidate-epm-5fxren
     files: []
-    path: entities/v1-alpha/dea:candidate-epm/research/
-  - entity_id: dea:candidate-orgdesign
+    path: entities/v1-alpha/epm-5fxren/candidates/research/
+  - entity_id: capabilities:candidate-orgdesign-a7s8bf
     files: []
-    path: entities/v1-alpha/dea:candidate-orgdesign/research/
-  - entity_id: dea:candidate-relmgmt
+    path: entities/v1-alpha/orgdesign-a7s8bf/candidates/research/
+  - entity_id: capabilities:candidate-relmgmt-nu73v9
     files: []
-    path: entities/v1-alpha/dea:candidate-relmgmt/research/
-  - entity_id: dea:capability-analytics-and-intelligence
+    path: entities/v1-alpha/relmgmt-nu73v9/candidates/research/
+  - entity_id: capabilities:capability-analytics-and-intelligence-559tky
     files:
     - BOUNDARY-DECISION-CAND-018.md
     - README.md
     - boundary-decision-cand-018.yaml
-    path: entities/v1-alpha/dea:capability-analytics-and-intelligence/research/
-  - entity_id: dea:capability-asset-management
+    path: entities/v1-alpha/analytics-and-intelligence-559tky/research/
+  - entity_id: capabilities:capability-asset-management-judtwr
     files: []
-    path: entities/v1-alpha/dea:capability-asset-management/research/
-  - entity_id: dea:capability-change-management
+    path: entities/v1-alpha/asset-management-judtwr/research/
+  - entity_id: capabilities:capability-change-management-hukdeq
     files: []
-    path: entities/v1-alpha/dea:capability-change-management/research/
-  - entity_id: dea:capability-continuity-management
+    path: entities/v1-alpha/change-management-hukdeq/research/
+  - entity_id: capabilities:capability-continuity-management-v3rn6u
     files: []
-    path: entities/v1-alpha/dea:capability-continuity-management/research/
-  - entity_id: dea:capability-customer-management
+    path: entities/v1-alpha/continuity-management-v3rn6u/research/
+  - entity_id: capabilities:capability-customer-management-f3n8wb
     files: []
-    path: entities/v1-alpha/dea:capability-customer-management/research/
-  - entity_id: dea:capability-enterprise-governance
+    path: entities/v1-alpha/customer-management-f3n8wb/research/
+  - entity_id: capabilities:capability-enterprise-governance-uas48u
     files: []
-    path: entities/v1-alpha/dea:capability-enterprise-governance/research/
-  - entity_id: dea:capability-facility-management
+    path: entities/v1-alpha/enterprise-governance-uas48u/research/
+  - entity_id: capabilities:capability-facility-management-tx73hb
     files: []
-    path: entities/v1-alpha/dea:capability-facility-management/research/
-  - entity_id: dea:capability-financial-resource-management
+    path: entities/v1-alpha/facility-management-tx73hb/research/
+  - entity_id: capabilities:capability-financial-resource-management-cd3c7c
     files: []
-    path: entities/v1-alpha/dea:capability-financial-resource-management/research/
-  - entity_id: dea:capability-financial-stewardship
+    path: entities/v1-alpha/financial-resource-management-cd3c7c/research/
+  - entity_id: capabilities:capability-financial-stewardship-c7xtfk
     files: []
-    path: entities/v1-alpha/dea:capability-financial-stewardship/research/
-  - entity_id: dea:capability-idea-management
+    path: entities/v1-alpha/financial-stewardship-c7xtfk/research/
+  - entity_id: capabilities:capability-idea-management-86dckf
     files: []
-    path: entities/v1-alpha/dea:capability-idea-management/research/
-  - entity_id: dea:capability-information-management
+    path: entities/v1-alpha/idea-management-86dckf/research/
+  - entity_id: capabilities:capability-information-management-6vjgdh
     files: []
-    path: entities/v1-alpha/dea:capability-information-management/research/
-  - entity_id: dea:capability-legal-matter-management
+    path: entities/v1-alpha/information-management-6vjgdh/research/
+  - entity_id: capabilities:capability-legal-matter-management-zzbd2u
     files: []
-    path: entities/v1-alpha/dea:capability-legal-matter-management/research/
-  - entity_id: dea:capability-marketing
+    path: entities/v1-alpha/legal-matter-management-zzbd2u/research/
+  - entity_id: capabilities:capability-marketing-xmc539
     files: []
-    path: entities/v1-alpha/dea:capability-marketing/research/
-  - entity_id: dea:capability-offering-management
+    path: entities/v1-alpha/marketing-xmc539/research/
+  - entity_id: capabilities:capability-offering-management-6egkc8
     files: []
-    path: entities/v1-alpha/dea:capability-offering-management/research/
-  - entity_id: dea:capability-operations
+    path: entities/v1-alpha/offering-management-6egkc8/research/
+  - entity_id: capabilities:capability-operations-vm39fm
     files: []
-    path: entities/v1-alpha/dea:capability-operations/research/
-  - entity_id: dea:capability-organizational-design
+    path: entities/v1-alpha/operations-vm39fm/research/
+  - entity_id: capabilities:capability-organizational-design-vanefq
     files: []
-    path: entities/v1-alpha/dea:capability-organizational-design/research/
-  - entity_id: dea:capability-partner-management
+    path: entities/v1-alpha/organizational-design-vanefq/research/
+  - entity_id: capabilities:capability-partner-management-cp3vdb
     files: []
-    path: entities/v1-alpha/dea:capability-partner-management/research/
-  - entity_id: dea:capability-regulation-management
+    path: entities/v1-alpha/partner-management-cp3vdb/research/
+  - entity_id: capabilities:capability-regulation-management-gya4d8
     files: []
-    path: entities/v1-alpha/dea:capability-regulation-management/research/
-  - entity_id: dea:capability-risk-management
+    path: entities/v1-alpha/regulation-management-gya4d8/research/
+  - entity_id: capabilities:capability-risk-management-h9uxdw
     files: []
-    path: entities/v1-alpha/dea:capability-risk-management/research/
-  - entity_id: dea:capability-security-management
+    path: entities/v1-alpha/risk-management-h9uxdw/research/
+  - entity_id: capabilities:capability-security-management-wmzc7c
     files: []
-    path: entities/v1-alpha/dea:capability-security-management/research/
-  - entity_id: dea:capability-sourcing-and-procurement
+    path: entities/v1-alpha/security-management-wmzc7c/research/
+  - entity_id: capabilities:capability-sourcing-and-procurement-esucp4
     files: []
-    path: entities/v1-alpha/dea:capability-sourcing-and-procurement/research/
-  - entity_id: dea:capability-strategic-planning
+    path: entities/v1-alpha/sourcing-and-procurement-esucp4/research/
+  - entity_id: capabilities:capability-strategic-planning-k3rz7a
     files: []
-    path: entities/v1-alpha/dea:capability-strategic-planning/research/
-  - entity_id: dea:capability-strategy
+    path: entities/v1-alpha/strategic-planning-k3rz7a/research/
+  - entity_id: capabilities:capability-strategy-wdrtha
     files: []
-    path: entities/v1-alpha/dea:capability-strategy/research/
-  - entity_id: dea:capability-supplier-management
+    path: entities/v1-alpha/strategy-wdrtha/research/
+  - entity_id: capabilities:capability-supplier-management-d6fuj4
     files: []
-    path: entities/v1-alpha/dea:capability-supplier-management/research/
-  - entity_id: dea:capability-technology-enablement
+    path: entities/v1-alpha/supplier-management-d6fuj4/research/
+  - entity_id: capabilities:capability-technology-enablement-y6nkws
     files: []
-    path: entities/v1-alpha/dea:capability-technology-enablement/research/
-  - entity_id: dea:capability-technology-management
+    path: entities/v1-alpha/technology-enablement-y6nkws/research/
+  - entity_id: capabilities:capability-technology-management-maus5n
     files: []
-    path: entities/v1-alpha/dea:capability-technology-management/research/
-  - entity_id: dea:capability-workforce-management
+    path: entities/v1-alpha/technology-management-maus5n/research/
+  - entity_id: capabilities:capability-workforce-management-9e8d8s
     files: []
-    path: entities/v1-alpha/dea:capability-workforce-management/research/
-  - entity_id: dea:capability-workforce-planning
+    path: entities/v1-alpha/workforce-management-9e8d8s/research/
+  - entity_id: capabilities:capability-workforce-planning-b43rhm
     files: []
-    path: entities/v1-alpha/dea:capability-workforce-planning/research/
+    path: entities/v1-alpha/workforce-planning-b43rhm/research/
   status: active
   version: 1.0.0

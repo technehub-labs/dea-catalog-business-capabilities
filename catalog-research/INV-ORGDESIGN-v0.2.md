@@ -1,5 +1,11 @@
 # Investigation Track A: Organizational Design
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 **Status**: closed (Track A admitted under CR-DEA-BC-14, 2026-09-11; CAND-036 → E4; canonical entry `dea:capability-organizational-design` v1.0.0)
 **Source**: [BC-SR-A001](../submittal-reviews/BC-SR-A001.md) §4 (reviewer P1)
 **Carrier CR**: [CR-DEA-BC-12](../change-requests/CR-DEA-BC-12.md) §B.1 (investigation opened) → [CR-DEA-BC-18](../change-requests/CR-DEA-BC-18-track-a-orgdesign-evidence.md) (evidence package) → [CR-DEA-BC-14](../change-requests/CR-DEA-BC-14-track-a-orgdesign-admission.md) (admission)

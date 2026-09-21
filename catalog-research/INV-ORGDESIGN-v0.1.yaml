@@ -9,7 +9,7 @@ reviewer_seed: BC-SR-A001 §4 (reviewer P1)
 date_opened: '2026-09-10'
 date_evidence_seeded: '2026-09-11 (CR-DEA-BC-18)'
 date_admitted: '2026-09-11 (CR-DEA-BC-14)'
-status: closed (Track A admitted under CR-DEA-BC-14; CAND-036 promoted to E4; canonical entry dea:capability-organizational-design v1.0.0)
+status: closed (Track A admitted under CR-DEA-BC-14; CAND-036 promoted to E4; canonical entry capabilities:capability-organizational-design-vanefq v1.0.0)
 question: 'Is Organizational Design a distinct first-order capability that survives the catalog admission gate (METHODOLOGY §12)?'
 hypothesis:
   ability: 'The ability to design the enterprise''s organizational structures, roles, authorities, and coordination patterns through which agency is organized.'
@@ -53,22 +53,22 @@ evidence_strength: E3 (three independent source classes; promotes to E4 on direc
 distinctness_sweep:
   total_pairs: 6
   results:
-  - against: dea:capability-workforce-management
+  - against: capabilities:capability-workforce-management-9e8d8s
     verdict: Distinct
     rationale: 'Agent lifecycle vs Organization Structure - different business objects'
-  - against: dea:capability-workforce-planning
+  - against: capabilities:capability-workforce-planning-b43rhm
     verdict: Distinct
     rationale: 'Agent capacity vs Organization Structure - different business objects'
-  - against: dea:capability-strategy
+  - against: capabilities:capability-strategy-wdrtha
     verdict: Distinct (parent-child)
     rationale: 'Enterprise vs Organization Structure - Org Design implements Strategy; not overlap'
-  - against: dea:capability-strategic-planning
+  - against: capabilities:capability-strategic-planning-k3rz7a
     verdict: Distinct
     rationale: 'Plan vs Organization Structure - different business objects'
-  - against: dea:capability-technology-management
+  - against: capabilities:capability-technology-management-maus5n
     verdict: Distinct
     rationale: 'Technology Estate vs Organization Structure - different business objects'
-  - against: dea:capability-technology-enablement
+  - against: capabilities:capability-technology-enablement-y6nkws
     verdict: Distinct
     rationale: 'Technology Service vs Organization Structure - different business objects'
   all_pairs_pass: true

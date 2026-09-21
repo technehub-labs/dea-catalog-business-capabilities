@@ -4,8 +4,8 @@ This directory holds the canonical first-order Business Capability entries: 26 c
 
 ## Entry conventions
 
-- One file per capability: `capability-<slug>.yaml` (TAXONOMY.md section 5).
-- `id` is `dea:capability-<slug>`; `type` is the constant `BusinessCapability` (kind by specialization, dea-metamodel ADR-015).
+- One file per capability: `entities/v1-alpha/<slug>-<hash>/capabilities-capability-<slug>-<hash>.yaml` (CR-DEA-BC-mv1 layout; TAXONOMY.md section 5).
+- `id` is `capabilities:capability-<slug>-<hash>` (org-wide id system, dea-metaframework docs/id-system.md); `type` is the constant `BusinessCapability` (kind by specialization, dea-metamodel ADR-015).
 - `capability_type` never appears (deprecated upstream; CR-DEA-BC-01A).
 - `capability_layer` is optional; values are exactly `strategic | operational | support`.
 - ECF coordinates live under `ecf` (`primary` = earliest initiation; `secondary` = legitimate participation). A capability whose mapping is legitimately absent sets `held_unmapped: true` with a `note` instead (CAND-019 precedent).
@@ -15,7 +15,7 @@ This directory holds the canonical first-order Business Capability entries: 26 c
 ## Shape (illustration, not canonical)
 
 ```yaml
-id: dea:capability-customer-management
+id: capabilities:capability-customer-management-f3n8wb
 type: BusinessCapability
 name: Customer Management
 definition: ...

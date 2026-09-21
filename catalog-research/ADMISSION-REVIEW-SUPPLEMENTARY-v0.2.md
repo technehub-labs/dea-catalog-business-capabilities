@@ -1,5 +1,11 @@
 # Supplementary Admission Review v0.2: CAND-018, CAND-023 and CAND-029
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 CR-DEA-BC-02 execution; METHODOLOGY.md section 12 gates. Date: 2026-09-01.
 Machine-readable: `admission-review-supplementary.yaml` v0.2. Supplements `admission-review.yaml` v0.1; review record, not a canonical transition.
 v0.2 adds CAND-018 after the boundary decision (PR #29) resolved its deferral trigger.

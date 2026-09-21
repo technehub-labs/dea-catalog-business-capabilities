@@ -2,7 +2,7 @@
 # Lives outside entities/ so it can never be mistaken for canonical content.
 # CI validates this file against schemas/entity.schema.json so the schema
 # is never untested while entities/ awaits admission PRs.
-id: dea:capability-fixture-example
+id: capabilities:capability-fixture-example-fxtrx2
 type: BusinessCapability
 name: Fixture Capability (not canonical)
 definition: >-

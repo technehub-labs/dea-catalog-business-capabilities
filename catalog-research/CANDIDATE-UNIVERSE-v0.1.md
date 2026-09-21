@@ -1,5 +1,11 @@
 # Candidate Universe v0.1: Index for Review
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 CR-DEA-BC-02 staged delivery, step 2: Candidate Universe (CR §33 items 3+4).
 Date: 2026-08-31. Status: **candidate-not-canonical**. Machine-readable: `candidates.yaml` (same folder).
 

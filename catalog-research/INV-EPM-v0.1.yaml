@@ -60,14 +60,14 @@ ladder_passage:
   reviewed: met (this investigation report; review gate pending admission-CR)
   canonical: pending (admission in CR-DEA-BC-15; contingent on user acceptance of evidence package)
 distinguished_against:
-- dea:capability-analytics-and-intelligence
-- dea:capability-financial-resource-management
-- dea:capability-strategy
-- dea:capability-strategic-planning
-- dea:capability-workforce-management
-- dea:capability-technology-management
-- dea:capability-technology-enablement
-- dea:capability-organizational-design
+- capabilities:capability-analytics-and-intelligence-559tky
+- capabilities:capability-financial-resource-management-cd3c7c
+- capabilities:capability-strategy-wdrtha
+- capabilities:capability-strategic-planning-k3rz7a
+- capabilities:capability-workforce-management-9e8d8s
+- capabilities:capability-technology-management-maus5n
+- capabilities:capability-technology-enablement-y6nkws
+- capabilities:capability-organizational-design-vanefq
 companion_tracks:
   A:
     id: TER-ORGDESIGN-001

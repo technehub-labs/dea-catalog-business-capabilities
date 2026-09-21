@@ -1,0 +1,65 @@
+version: 1
+namespace: capabilities
+migrated_at: '2026-09-21'
+carrier_cr: CR-DEA-BC-mv1
+id_map:
+  dea:candidate-epm: capabilities:candidate-epm-5fxren
+  dea:candidate-orgdesign: capabilities:candidate-orgdesign-a7s8bf
+  dea:candidate-relmgmt: capabilities:candidate-relmgmt-nu73v9
+  dea:capability-analytics-and-intelligence: capabilities:capability-analytics-and-intelligence-559tky
+  dea:capability-asset-management: capabilities:capability-asset-management-judtwr
+  dea:capability-change-management: capabilities:capability-change-management-hukdeq
+  dea:capability-continuity-management: capabilities:capability-continuity-management-v3rn6u
+  dea:capability-customer-management: capabilities:capability-customer-management-f3n8wb
+  dea:capability-enterprise-governance: capabilities:capability-enterprise-governance-uas48u
+  dea:capability-facility-management: capabilities:capability-facility-management-tx73hb
+  dea:capability-financial-resource-management: capabilities:capability-financial-resource-management-cd3c7c
+  dea:capability-financial-stewardship: capabilities:capability-financial-stewardship-c7xtfk
+  dea:capability-idea-management: capabilities:capability-idea-management-86dckf
+  dea:capability-information-management: capabilities:capability-information-management-6vjgdh
+  dea:capability-legal-matter-management: capabilities:capability-legal-matter-management-zzbd2u
+  dea:capability-marketing: capabilities:capability-marketing-xmc539
+  dea:capability-offering-management: capabilities:capability-offering-management-6egkc8
+  dea:capability-operations: capabilities:capability-operations-vm39fm
+  dea:capability-organizational-design: capabilities:capability-organizational-design-vanefq
+  dea:capability-partner-management: capabilities:capability-partner-management-cp3vdb
+  dea:capability-regulation-management: capabilities:capability-regulation-management-gya4d8
+  dea:capability-risk-management: capabilities:capability-risk-management-h9uxdw
+  dea:capability-security-management: capabilities:capability-security-management-wmzc7c
+  dea:capability-sourcing-and-procurement: capabilities:capability-sourcing-and-procurement-esucp4
+  dea:capability-strategic-planning: capabilities:capability-strategic-planning-k3rz7a
+  dea:capability-strategy: capabilities:capability-strategy-wdrtha
+  dea:capability-supplier-management: capabilities:capability-supplier-management-d6fuj4
+  dea:capability-technology-enablement: capabilities:capability-technology-enablement-y6nkws
+  dea:capability-technology-management: capabilities:capability-technology-management-maus5n
+  dea:capability-workforce-management: capabilities:capability-workforce-management-9e8d8s
+  dea:capability-workforce-planning: capabilities:capability-workforce-planning-b43rhm
+known_residuals:
+- legacy_value: dea:candidate-technology-enablement
+  where: catalog-research/preliminary-ecf-overlay.yaml, catalog-research/distinctness-sweep.yaml
+  reason: Retired candidate cited in historical research registers (promoted to
+    canonical as dea:capability-technology-enablement before the migration; the
+    candidate id itself was never a live record at migration time).
+- legacy_value: dea:capability-compliance-management
+  where: catalog-research/normalization.yaml
+  reason: Pre-rename id cited in the historical rename trail (renamed to
+    dea:capability-regulation-management at CR-DEA-BC-09; audit trail verbatim).
+- legacy_value: dea:capability-financial-management
+  where: catalog-research/normalization.yaml
+  reason: Pre-rename id cited in the historical rename trail (renamed to
+    dea:capability-financial-resource-management at CR-DEA-BC-09).
+- legacy_value: dea:capability-innovation-management
+  where: catalog-research/normalization.yaml
+  reason: Pre-rename id cited in the historical rename trail (renamed to
+    dea:capability-idea-management at CR-DEA-BC-09).
+- legacy_value: dea:capability-legal-management
+  where: catalog-research/normalization.yaml
+  reason: Pre-rename id cited in the historical rename trail (renamed to
+    dea:capability-legal-matter-management).
+- legacy_value: dea:capability-resilience-management
+  where: catalog-research/normalization.yaml
+  reason: Pre-rename id cited in the historical rename trail (renamed to
+    dea:capability-continuity-management at CR-DEA-BC-09).
+- legacy_value: dea:capability-technology-enability
+  where: catalog-research/distinctness-sweep.yaml
+  reason: Historical typo variant cited in a research note; not a record id.

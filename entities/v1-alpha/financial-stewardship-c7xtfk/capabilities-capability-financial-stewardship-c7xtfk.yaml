@@ -1,0 +1,119 @@
+id: capabilities:capability-financial-stewardship-c7xtfk
+type: BusinessCapability
+name: Financial Stewardship
+definition: 'The ability to hold the enterprise''s financial resources in trust: policy,
+  structure, and long-horizon financial position.'
+version: 1.0.0
+metamodel_pin: 1.0.0
+lifecycle_status: active
+capability_layer: strategic
+outcome: The enterprise's financial position is deliberate, funded, and answerable
+  over horizons beyond the operating cycle.
+business_object: Financial Resource
+ecf:
+  primary:
+    domain: finance-accounting
+    stage: conceive
+  secondary:
+  - domain: finance-accounting
+    stage: operate
+related_capabilities:
+- capabilities:capability-financial-resource-management-cd3c7c
+evidence:
+  sources:
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  rationale: Enterprise-generality demonstrated at E5; evidence trail in docs/research
+    (evidence-register, enterprise-generality-matrix, distinctness-sweep, admission-gate-closeout).
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+  - stage: observed
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+  - stage: corroborated
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+  - stage: normalized
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8,
+      #12)'
+  - stage: ecf-mapped
+    date: '2026-08-31'
+    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+  - stage: reviewed
+    date: '2026-09-01'
+    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+  - stage: canonical
+    date: '2026-09-01'
+    actor: eaojnr, admission PR (this change)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: 'E5; distinct from Financial Resource Management (the operating cycle)
+  by the sweep: stewardship sets the financial constitution, management runs it.'
+ecf_rationale: Primary conceive in finance-accounting (financial position is constituted
+  deliberately); exercised at operate.  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
+boundary: Stewards financial position; does not run the accounting cycle or execute
+  transactions (Financial Resource Management).
+non_examples:
+- A ledger (the object of Financial Resource Management)
+- A treasury desk (an organization)
+specialization_boundary: Instruments and capital structures vary by sector; the ability
+  to steward financial position does not.
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: mapped
+  canonicalReferences:
+  - kind: coordinate
+    domain: FinanceAndAccounting
+    stage: Conceive
+    identifier: ecf:financeAccounting.conceive
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: primary
+  - kind: coordinate
+    domain: FinanceAndAccounting
+    stage: Operate
+    identifier: ecf:financeAccounting.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  extensions:
+  - name: kebab-case-domain-vocabulary
+    kind: display-vocabulary
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven
+      ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums
+      for the gate.
+    doesNotRedefine: true
+    mapping:
+      governance-existence: GovernanceAndExistence
+      strategy-direction: StrategyAndDirection
+      agency-organization: AgencyAndOrganization
+      party-relationship: PartyAndRelationship
+      product-value: ProductAndValue
+      enablement-operations: EnablementAndOperations
+      finance-accounting: FinanceAndAccounting
+      _stage_conceive: Conceive
+      _stage_design: Design
+      _stage_build: Build
+      _stage_activate: Activate
+      _stage_operate: Operate
+      _stage_improve: Improve
+      _stage_retire: Retire
+  - name: multiple-contextual-coordinates
+    kind: catalog-specific-relation
+    description: A capability may have one primary and zero-or-more secondary canonical
+      coordinates without identity duplication (CG-003 §5).
+    doesNotRedefine: true
+  - name: held-unmapped
+    kind: classification-state
+    description: State for capabilities with no ECF affiliation by design (N-006);
+      does not appear on this entry because primary is set.
+    doesNotRedefine: true

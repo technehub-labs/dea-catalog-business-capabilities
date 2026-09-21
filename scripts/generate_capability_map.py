@@ -299,10 +299,9 @@ def find_entities_dir(root: Path) -> Path:
     for c in candidates:
         if not c.is_dir():
             continue
-        if any(c.glob("dea:*")):
-            return c
-        # flat capability yaml only (not repo-level config yaml)
-        if any(c.glob("capability-*.yaml")) or any(c.glob("dea:capability-*.yaml")):
+        # CR-DEA-BC-mv1: canonical record files are id-derived
+        # (capabilities-capability-*.yaml) one level below v1-alpha.
+        if any(c.glob("*/capabilities-*.yaml")):
             return c
     raise FileNotFoundError(f"No entity catalog under {root}")
 
@@ -310,8 +309,10 @@ def find_entities_dir(root: Path) -> Path:
 def iter_entity_yaml_paths(entities_dir: Path) -> list[Path]:
     paths: list[Path] = []
     for d in sorted(entities_dir.iterdir()):
-        if d.is_dir() and ":" in d.name:
-            paths.extend(sorted(d.glob("*.yaml")))
+        if d.is_dir():
+            # CR-DEA-BC-mv1: canonical record at the entity dir root only
+            # (state dirs research/ candidates/ retired/ excluded).
+            paths.extend(sorted(d.glob("capabilities-*.yaml")))
     if paths:
         return paths
     return [p for p in sorted(entities_dir.glob("*.yaml")) if not p.name.lower().startswith("readme")]
