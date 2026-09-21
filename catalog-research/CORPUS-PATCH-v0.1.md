@@ -1,5 +1,11 @@
 # Corpus Patch v0.1: Continuity and Innovation Sources; CAND-023/029 Fair Run
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 CR-DEA-BC-02; carry-forward from the distinctness sweep. Date: 2026-09-01.
 Machine-readable: `evidence-register.yaml` v0.3, `enterprise-generality-matrix.yaml` v0.2, `admission-gate-precheck.yaml` v0.4. Research artifact; not the catalog.
 

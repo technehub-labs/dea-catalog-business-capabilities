@@ -1,5 +1,11 @@
 # Catalog-wide research: technehub-labs/dea-catalog-business-capabilities
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 This directory holds research artifacts that document the catalog as a
 whole rather than any one entity. They cover the CR-DEA-BC-02 execution
 (admission, evidence, distinctness sweep, ECF overlay, corpus patch,

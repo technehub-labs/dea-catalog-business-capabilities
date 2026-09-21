@@ -1,5 +1,11 @@
 # Admission Review v0.1: Gate Record for the Recommendation Set
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 CR-DEA-BC-02 execution: the two review gates of METHODOLOGY.md section 12, executed on the 23-candidate recommendation set (gate close-out v0.1). Machine-readable twin: `admission-review.yaml`. Date: 2026-09-01.
 
 Status: review record. This register clears candidates for admission; the canonical transition executes in the admission PR after steward acceptance. Reviewer of record: Coder (for eaojnr).

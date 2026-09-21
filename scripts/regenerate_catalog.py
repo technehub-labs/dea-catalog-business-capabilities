@@ -76,11 +76,15 @@ CROSS_CUTTING_PATHS: dict[str, str] = {
     "change_requests": "change-requests/",
 }
 
-# Entity id pattern: dea:<family>-<name>(:<sub>)*; accepts single-segment
-# (dea:process-foo) and multi-segment (dea:pc-cd-op) ids. Matches the
-# schema's entity_entry.id pattern.
 import re
-ENTITY_ID_PATTERN = re.compile(r"^dea:[a-z0-9-]+(:[a-z0-9-]+)*$")
+# Entity id pattern: admits the legacy dea:<family>-<name>(:<sub>)* family
+# (unmigrated catalogs) and the org-wide namespaced family
+# <namespace>:<level>-...-<hash6> (post-migration; docs/id-system.md).
+ENTITY_ID_PATTERN = re.compile(
+    r"^(dea:[a-z0-9-]+(:[a-z0-9-]+)*"
+    r"|[a-z]+:(pc|group|process|activity|task|capability|candidate|actor"
+    r"|orgunit|object|service|stakeholder)-[a-z0-9-]+-[a-z2-9]{6})$"
+)
 
 
 def load_schema(schema_path: Path) -> dict[str, Any]:
@@ -192,28 +196,45 @@ def list_subtrees(catalog_root: Path) -> list[Path]:
 
 
 def entity_id_from_subtree(subtree: Path) -> str:
-    """Derive the entity id from the subtree directory name.
+    """Derive the entity id for a subtree directory.
 
-    The subtree directory preserves the canonical id verbatim (colons included),
-    so this is the canonical source.
+    Post-migration layout (docs/entity-storage-layout.md): directory names
+    are slug+hash, not ids; the canonical source is the record's own `id:`
+    field. Reads the first *.yaml at the subtree root, falling back to the
+    first candidates/*.yaml (candidate-only subtrees), then to the
+    directory name (legacy flat layout: dir name == id).
     """
+    for probe in sorted(subtree.glob("*.yaml")) + sorted(
+        (subtree / "candidates").glob("*.yaml")
+    ):
+        try:
+            data = load_yaml(probe)
+        except (OSError, yaml.YAMLError):
+            continue
+        if isinstance(data, dict) and isinstance(data.get("id"), str):
+            return data["id"]
     return subtree.name
 
 
 def read_canonical_yaml(subtree: Path, entity_id: str) -> dict[str, Any] | None:
     """Load the canonical YAML at the subtree root; return None if absent.
 
-    If no root-level canonical exists, fall back to the most recent file
-    under `retired/` (entities that are fully retired may have moved their
-    canonical file out of the root).
+    New layout (docs/entity-storage-layout.md): the canonical filename is
+    the id with colons normalized to hyphens. Legacy flat layout: the
+    filename is the id verbatim (colons included). If no root-level
+    canonical exists, fall back to the most recent file under `retired/`
+    (entities that are fully retired may have moved their canonical file
+    out of the root).
     """
-    canonical = subtree / f"{entity_id}.yaml"
+    canonical = subtree / (entity_id.replace(":", "-").lower() + ".yaml")
     if canonical.exists():
-        # Fallback: first .yaml at the subtree root.
-        candidates = sorted(subtree.glob("*.yaml"))
-        if not candidates:
-            return None
-        return load_yaml(candidates[0])
+        return load_yaml(canonical)
+    legacy = subtree / f"{entity_id}.yaml"
+    if legacy.exists():
+        return load_yaml(legacy)
+    root_yamls = sorted(subtree.glob("*.yaml"))
+    if root_yamls:
+        return load_yaml(root_yamls[0])
     retired = subtree / "retired"
     if retired.is_dir():
         retired_files = sorted(retired.glob("*.yaml"))
@@ -377,19 +398,24 @@ def entity_path_for(subtree: Path, state: str) -> str | None:
     """Build the repo-relative path field for the entity entry.
 
     Returns None if the subtree has no candidate file at all (empty subtree).
+    Post-migration layout: dir name is slug+hash; the canonical filename is
+    the id with colons normalized to hyphens.
     """
     entity_id = entity_id_from_subtree(subtree)
-    canonical = subtree / f"{entity_id}.yaml"
+    canonical = subtree / (entity_id.replace(":", "-").lower() + ".yaml")
     if canonical.exists():
-        return f"entities/v1-alpha/{entity_id}/{entity_id}.yaml"
+        return f"entities/v1-alpha/{subtree.name}/{canonical.name}"
+    legacy = subtree / f"{entity_id}.yaml"
+    if legacy.exists():
+        return f"entities/v1-alpha/{subtree.name}/{entity_id}.yaml"
     # First candidate file
     candidates_dir = subtree / "candidates"
     if candidates_dir.is_dir():
         candidates = sorted(p for p in candidates_dir.iterdir() if p.is_file() and p.suffix in (".yaml", ".yml"))
         if candidates:
-            return f"entities/v1-alpha/{entity_id}/candidates/{candidates[0].name}"
+            return f"entities/v1-alpha/{subtree.name}/candidates/{candidates[0].name}"
     # Subtree root with trailing slash
-    return f"entities/v1-alpha/{entity_id}/"
+    return f"entities/v1-alpha/{subtree.name}/"
 
 
 def build_entity_entry(
@@ -428,7 +454,7 @@ def build_entity_entry(
         "path": path,
         "research_count": count_regular_files(subtree / "research"),
         "candidate_count": count_regular_files(subtree / "candidates"),
-        "canonical_count": 1 if (subtree / f"{entity_id}.yaml").exists() else 0,
+        "canonical_count": 1 if read_canonical_yaml(subtree, entity_id) is not None else 0,
         "retired_count": count_regular_files(subtree / "retired"),
         "last_modified": git_last_commit_date(subtree, catalog_root),
         "version": version,
@@ -451,12 +477,19 @@ def build_research_registers(entities: list[dict[str, Any]], catalog_root: Path)
     registers: list[dict[str, Any]] = []
     for entity in entities:
         entity_id = entity["id"]
-        subtree = catalog_root / "entities" / "v1-alpha" / entity_id
+        # Resolve the subtree via the entry's declared path (post-migration
+        # layout: dir names are slug+hash, not ids).
+        declared = str(entity.get("path", ""))
+        subtree = catalog_root / declared
+        if declared and not declared.endswith("/"):
+            subtree = subtree.parent
+        if not subtree.is_dir():
+            subtree = catalog_root / "entities" / "v1-alpha" / entity_id
         research_files = list_research_files(subtree)
         registers.append(
             {
                 "entity_id": entity_id,
-                "path": f"entities/v1-alpha/{entity_id}/research/",
+                "path": f"{subtree.relative_to(catalog_root)}/research/",
                 "files": research_files,
             }
         )

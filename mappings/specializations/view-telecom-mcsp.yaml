@@ -5,7 +5,7 @@ sector: Telecommunications (mobile services)
 catalog_baseline: v1-alpha admission set of 2026-09-02 (26 canonical first-order capabilities; PR #32 added CAND-018 Analytics and Intelligence, CAND-023 Resilience, CAND-029 Innovation)
 specializations:
 - id: SPEC-001
-  parent: dea:capability-customer-management
+  parent: capabilities:capability-customer-management-f3n8wb
   level: L3
   sector: Telecommunications (mobile services)
   name: Telecom Customer Management
@@ -26,7 +26,7 @@ specializations:
     (proposition design) and retire (churn and port-out) participation already covered
     by the parent secondary coordinates.
 - id: SPEC-004
-  parent: dea:capability-offering-management
+  parent: capabilities:capability-offering-management-6egkc8
   level: L3
   sector: Telecommunications (mobile services)
   name: Tariff and Bundle Management
@@ -42,7 +42,7 @@ specializations:
   aliases:
   - Product Catalog Management
 - id: SPEC-005
-  parent: dea:capability-partner-management
+  parent: capabilities:capability-partner-management-cp3vdb
   level: L3
   sector: Telecommunications (mobile services)
   name: Roaming and Interconnect Management
@@ -56,7 +56,7 @@ specializations:
     rating: E3
   status: admitted
 - id: SPEC-006
-  parent: dea:capability-regulation-management
+  parent: capabilities:capability-regulation-management-gya4d8
   level: L3
   sector: Telecommunications (mobile services)
   name: Telecom Regulatory Compliance
@@ -70,32 +70,32 @@ specializations:
     rating: E3
   status: admitted
 inherited:
-- dea:capability-strategy
-- dea:capability-strategic-planning
-- dea:capability-enterprise-governance
-- dea:capability-supplier-management
-- dea:capability-marketing
-- dea:capability-operations
-- dea:capability-financial-stewardship
-- dea:capability-financial-resource-management
-- dea:capability-workforce-management
-- dea:capability-workforce-planning
-- dea:capability-information-management
-- dea:capability-analytics-and-intelligence
-- dea:capability-technology-management
-- dea:capability-risk-management
-- dea:capability-legal-matter-management
-- dea:capability-security-management
-- dea:capability-continuity-management
-- dea:capability-sourcing-and-procurement
-- dea:capability-asset-management
-- dea:capability-facility-management
-- dea:capability-change-management
-- dea:capability-idea-management
+- capabilities:capability-strategy-wdrtha
+- capabilities:capability-strategic-planning-k3rz7a
+- capabilities:capability-enterprise-governance-uas48u
+- capabilities:capability-supplier-management-d6fuj4
+- capabilities:capability-marketing-xmc539
+- capabilities:capability-operations-vm39fm
+- capabilities:capability-financial-stewardship-c7xtfk
+- capabilities:capability-financial-resource-management-cd3c7c
+- capabilities:capability-workforce-management-9e8d8s
+- capabilities:capability-workforce-planning-b43rhm
+- capabilities:capability-information-management-6vjgdh
+- capabilities:capability-analytics-and-intelligence-559tky
+- capabilities:capability-technology-management-maus5n
+- capabilities:capability-risk-management-h9uxdw
+- capabilities:capability-legal-matter-management-zzbd2u
+- capabilities:capability-security-management-wmzc7c
+- capabilities:capability-continuity-management-v3rn6u
+- capabilities:capability-sourcing-and-procurement-esucp4
+- capabilities:capability-asset-management-judtwr
+- capabilities:capability-facility-management-tx73hb
+- capabilities:capability-change-management-hukdeq
+- capabilities:capability-idea-management-86dckf
 rejected:
 - name: Network Management
   reason: 'Fails the business-object test (D7): the object is technology (the network),
-    not a business object. Technology estate stewardship is already canonical (dea:capability-technology-management);
+    not a business object. Technology estate stewardship is already canonical (capabilities:capability-technology-management-maus5n);
     network operations belong to the L5 realization concern, not to a business capability
     view.'
 deferred:

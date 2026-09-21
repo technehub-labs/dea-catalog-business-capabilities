@@ -1,5 +1,11 @@
 # CR-DEA-BC-18: Track A (Organizational Design) Evidence Package
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 **Status:** Draft for review (research-CR; no admission in this revision)
 **Date:** 2026-09-11
 **Carrier:** Coder (for eaojnr)

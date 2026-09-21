@@ -51,9 +51,9 @@ jobs:
           # candidate records, and retired copies; they are not validated
           # against the entry schema.
           {
-            for entity_subtree in entities/v1-alpha/dea:capability-*; do
+            for entity_subtree in entities/v1-alpha/*/; do
               [ -d "$entity_subtree" ] || continue
-              for f in "$entity_subtree"/*.yaml "$entity_subtree"/*.json; do
+              for f in "$entity_subtree"/capabilities-*.yaml "$entity_subtree"/capabilities-*.json; do
                 [ -f "$f" ] && echo "$f"
               done
             done

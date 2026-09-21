@@ -1,5 +1,11 @@
 # Research Report v0.1: First-Order Business Capability Investigation
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 CR-DEA-BC-02 capstone deliverable (section 33 item 10; structure per section 34). A synthesis of how the first-order set emerged from evidence. Date: 2026-09-01. Status: candidate-not-canonical; the report explains and recommends; admission remains subject to review (section 38; METHODOLOGY.md section 12).
 
 Machine-readable manifest: `research-report.yaml`. Underlying registers: evidence register v0.2, candidate universe v0.2, normalization register v0.2, enterprise-generality matrix v0.1, preliminary ECF overlay v0.1, distinctness sweep v0.1, admission gate close-out v0.1, specialization register v0.1.

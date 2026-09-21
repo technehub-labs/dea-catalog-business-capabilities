@@ -20,7 +20,7 @@
         "required": ["id", "parent", "level", "name", "definition_delta", "evidence", "status"],
         "properties": {
           "id": { "type": "string", "pattern": "^SPEC-[0-9]{3}$" },
-          "parent": { "type": "string", "description": "A canonical capability id (dea:capability-...) or a parent specialization id (SPEC-NNN). Referential integrity checked by CI." },
+          "parent": { "type": "string", "description": "A canonical capability id (capabilities:capability-...) or a parent specialization id (SPEC-NNN). Referential integrity checked by CI." },
           "level": { "enum": ["L2", "L3"] },
           "sector": { "type": "string" },
           "name": { "type": "string", "description": "Industry vocabulary permitted below L1 (TAXONOMY.md section 1 rule 5 governs L1 only)." },

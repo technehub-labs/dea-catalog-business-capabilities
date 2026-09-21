@@ -1,5 +1,11 @@
 # Business Capability Catalog Changelog
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 All notable changes to this catalog are recorded here. The format is based
 on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) adapted for
 CR-DEA-BC-05 versioning: each entry records the bump tier (major / minor /
@@ -39,6 +45,9 @@ regime) and `v<N>.<M>` semver from v2 onward. See
 **Track B (Enterprise Performance Management) evidence package**. Research-CR; no canonical entity admitted in this CR. Seeds CAND-037 in the candidate universe (E1 → E3 confirmed across SRC-020/021/022 three-source convergence); adds SRC-020 (Kaplan and Norton Balanced Scorecard; business-architecture class), SRC-021 (OKR framework; commercial-capability-models class), SRC-022 (OMG Business Performance Management standards via OCEB 2; standards-body class). Closes TER-EPM-001 evidence-pending → evidence-seeded. Distinctness sweep expanded 4 → 8 peers (added Workforce Management + Technology Management + Technology Enablement + Organizational Design). ECF overlay confidence low → low-medium. Admission-gate pre-check added with all 10 gates met on current evidence (CAND-037 row; promotion to E4 contingent on admission in CR-DEA-BC-15 provisional). Direction Loop closure narrative recorded per BC-DEA-BC-13 §D.2 explicit decision (loop closes if EPM is admitted; loop remains open if EPM is not admitted; the missing link is governance of outcomes, partly absorbed into Analytics today). Catalog count unchanged at 28 first-order caps.
 
 ## Unreleased
+
+**Major** (CR-DEA-BC-mv1). Org-wide id system migration (Wave 2): all 31 records (28 canonical capabilities + 3 candidates) move from the legacy `dea:*` family to `capabilities:capability-<slug>-<hash>` / `capabilities:candidate-<slug>-<hash>`; entity dirs move to `entities/v1-alpha/<slug>-<hash>/` (flat layout); every structured cross-reference rewritten; README.md per entity dir (IDM-007); new blocking gate `scripts/check_id_system.py` (IDM-001..007 + IDM-008 PR-scoped) wired into catalog-conformance CI; vendored STRUCT tools and catalog-index schema ported to the dual-family id system (upstream: dea-metaframework PR #34); `ecf_rationale` maxLength 1000 -> 1280 in the entity schema (namespaced ids are longer); 36 historical artifacts bannered with the CR-DEA-BC-mv1 layout note (content verbatim; see `reconciliation/cross-check-mv1.md`); migration id map at `reconciliation/migration-id-map.yaml` with 7 documented known residuals.
+
 
 **Housekeeping** (no version bump; pre-release cleanup). Removes en/em dashes from every GitHub-visible artifact in the repo (32 files; 213 em-dashes + 24 en-dashes removed from Markdown; 23 em-dashes from YAML prose). The punctuation policy now lives in memory; the artifact layer reflects it without stating it. Change-requested under user instruction 2026-09-11.
 

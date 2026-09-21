@@ -24,8 +24,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^dea:capability-[a-z0-9-]+$",
-      "examples": ["dea:capability-customer-management"]
+      "pattern": "^capabilities:capability-[a-z0-9-]+-[a-z2-9]{6}$",
+      "examples": ["capabilities:capability-customer-management-f3n8wb"]
     },
     "type": {
       "type": "string",
@@ -94,15 +94,15 @@
     },
     "parents": {
       "type": "array",
-      "items": { "type": "string", "pattern": "^dea:capability-[a-z0-9-]+$" }
+      "items": { "type": "string", "pattern": "^capabilities:capability-[a-z0-9-]+-[a-z2-9]{6}$" }
     },
     "children": {
       "type": "array",
-      "items": { "type": "string", "pattern": "^dea:capability-[a-z0-9-]+$" }
+      "items": { "type": "string", "pattern": "^capabilities:capability-[a-z0-9-]+-[a-z2-9]{6}$" }
     },
     "related_capabilities": {
       "type": "array",
-      "items": { "type": "string", "pattern": "^dea:capability-[a-z0-9-]+$" }
+      "items": { "type": "string", "pattern": "^capabilities:capability-[a-z0-9-]+-[a-z2-9]{6}$" }
     },
     "realization": {
       "type": "object",
@@ -185,8 +185,8 @@
     },
     "ecf_rationale": {
       "type": "string",
-      "maxLength": 1000,
-      "description": "Why the primary coordinate is what it is."
+      "maxLength": 1280,
+      "description": "Why the primary coordinate is what it is. (CR-DEA-BC-mv1: 1000 -> 1280; namespaced ids are up to ~20 chars longer than legacy dea:* ids and rationale prose cites them inline.)"
     },
     "boundary": {
       "type": "string",

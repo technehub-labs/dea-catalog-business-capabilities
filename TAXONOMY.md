@@ -50,7 +50,7 @@ Specializations reference parents; they never modify or replace them. A speciali
 | Research candidates | `CAND-NNN` (candidate universe; never reused) |
 | Sources | `SRC-NNN` (evidence register) |
 | Normalization decisions | `N-NNN` (normalization register) |
-| Canonical entries | ID `dea:capability-<slug>`; one file per entry, `entities/v1-alpha/capability-<slug>.yaml` (CR-DEA-BC-03 schema) |
+| Canonical entries | ID `capabilities:capability-<slug>-<hash>` (org-wide id system, dea-metaframework docs/id-system.md); one file per entry, `entities/v1-alpha/<slug>-<hash>/capabilities-capability-<slug>-<hash>.yaml` (CR-DEA-BC-03 schema; CR-DEA-BC-mv1 layout) |
 | Specializations | `SPEC-NNN` (three digits, sequential; register: `docs/research/specialization-register.yaml`); exist only inside views |
 | Specialization views | `mappings/specializations/view-<sector>-<name>.yaml`; view id `view-<sector>-<name>` (CR-DEA-BC-04) |
 | Research artifacts | Dual delivery: YAML register + Markdown summary, versioned together |
@@ -72,8 +72,8 @@ dea-catalog-business-capabilities/
 ├── change-requests/           ← landed CRs + index
 ├── schemas/                   ← entity + specialization-view schemas, fixtures (CR-DEA-BC-03/04)
 ├── entities/v1-alpha/         ← the canonical 26, one subtree per entry
-│   └── dea:capability-<slug>/
-│       ├── dea:capability-<slug>.yaml
+│   └── <slug>-<hash>/
+│       ├── capabilities-capability-<slug>-<hash>.yaml
 │       ├── candidates/        ← state directory
 │       ├── retired/           ← state directory
 │       └── research/          ← per-entity research (e.g., boundary decisions)

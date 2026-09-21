@@ -1,5 +1,11 @@
 # CR-DEA-BC-12: Submittal Review BC-SR-A001: Six High-Confidence ECF Re-Mappings, Three New Investigations, and Repo-Doc Drift Cleanup
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 **Status**: Landed
 **Layer**: Catalog (business capabilities)
 **Owner**: Coder (for eaojnr)

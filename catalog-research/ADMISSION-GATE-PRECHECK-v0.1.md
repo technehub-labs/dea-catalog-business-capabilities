@@ -1,5 +1,11 @@
 # Admission Gate Pre-Check v0.1: Summary for Review
 
+> **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
+> pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
+> family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
+> for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
+> the current layout.
+
 CR-DEA-BC-02 §38 dry run against the normalized universe (29 first-order candidates).
 Date: 2026-08-31. Machine-readable: `admission-gate-precheck.yaml`.
 Status: **pre-check only**. No candidate is admitted; final admission remains subject to review (§38 closing sentence).

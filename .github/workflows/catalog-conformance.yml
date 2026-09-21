@@ -65,5 +65,21 @@ jobs:
               --template-root .metaframework/tools/catalog-repo-template \
               --strict
 
+      - name: Run ID System gate (CR-DEA-BC-mv1; IDM-001..007)
+        run: python scripts/check_id_system.py --strict
+
+      - name: Run ID System coherence gate (CR-DEA-BC-mv1; IDM-008, PR-scoped)
+        run: |
+          git fetch origin main --depth=1 || true
+          python scripts/check_id_system.py --base-ref origin/main \
+              --report-path id-system-coherence-report.md
+
+      - name: Upload ID System coherence report
+        uses: actions/upload-artifact@v4
+        with:
+          name: id-system-coherence-report
+          path: id-system-coherence-report.md
+          if-no-files-found: ignore
+
       - name: Check visual domain labels (CR-DEA-BC-07 §5 guard)
         run: python scripts/check_visual_domain_labels.py
