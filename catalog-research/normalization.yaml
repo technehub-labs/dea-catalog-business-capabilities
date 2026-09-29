@@ -1,7 +1,12 @@
-register_version: 0.2.0
-cr: CR-DEA-BC-02 (section 20; deliverable section 33 item 5)
-compiled: '2026-09-01 (v0.2: aggregate decisions N-007/N-008; N-003 re-test closed as N-009); 2026-09-08
-  (N-010..N-015 appended: CR-DEA-BC-09 naming conformance renames and the Security Management retention)'
+register_version: 0.3.0
+cr: CR-DEA-BC-02 (section 20; deliverable section 33 item 5); CR-DEA-BC-09 (naming
+  conformance refresh; N-010..N-015); CR-DEA-BC-20 (noun-as-ability rule 7; N-016,
+  N-018, N-019, N-020; N-017 deferred to CR-DEA-BC-21 recon)
+compiled: '2026-09-01 (v0.2: aggregate decisions N-007/N-008; N-003 re-test closed
+  as N-009); 2026-09-08 (v0.2.1: N-010..N-015 appended: CR-DEA-BC-09 naming conformance
+  renames and the Security Management retention); 2026-09-29 (v0.3: N-016, N-018,
+  N-019, N-020 appended: CR-DEA-BC-20 noun-as-ability naming conformance; N-017 deferred
+  to CR-DEA-BC-21 recon)'
 status: candidate-not-canonical; decisions are research decisions, subject to review
 inputs:
   candidates: docs/research/candidates.yaml
@@ -9,7 +14,8 @@ inputs:
 rule: No merge occurs solely because names are similar (CR section 20).
 decisions:
 - id: N-001
-  question: 'People cluster: Workforce Management vs Human Capital Management vs HR vs People Management'
+  question: 'People cluster: Workforce Management vs Human Capital Management vs HR
+    vs People Management'
   candidates:
   - CAND-015
   evidence:
@@ -17,14 +23,18 @@ decisions:
   - SRC-004
   - SRC-005
   - SRC-006
-  analysis: 'APQC v8.0 names the category Develop and Manage Human Capital; IF4IT cites Human Capital Management; vendor lists
-    say HR or Human Resources. HR/Human Resources names the function or organization (already classified ORGANIZATION in the
-    disambiguation pattern of CAND-030) and fails the noun-anchor test as a capability name. Human Capital Management frames
-    people as a capital asset: defensible, but it narrows the business object to the economic view of people. Workforce Management
-    names the durable ability over the workforce business object without the asset framing.'
-  outcome: Synonyms (Human Capital Management = Workforce Management); HR rejected as a capability name (names the function)
-  action: 'CAND-015 renamed to Workforce Management; aliases recorded: Human Capital Management, People Management; rejected-name:
-    Human Resources (function name)'
+  analysis: 'APQC v8.0 names the category Develop and Manage Human Capital; IF4IT
+    cites Human Capital Management; vendor lists say HR or Human Resources. HR/Human
+    Resources names the function or organization (already classified ORGANIZATION
+    in the disambiguation pattern of CAND-030) and fails the noun-anchor test as a
+    capability name. Human Capital Management frames people as a capital asset: defensible,
+    but it narrows the business object to the economic view of people. Workforce Management
+    names the durable ability over the workforce business object without the asset
+    framing.'
+  outcome: Synonyms (Human Capital Management = Workforce Management); HR rejected
+    as a capability name (names the function)
+  action: 'CAND-015 renamed to Workforce Management; aliases recorded: Human Capital
+    Management, People Management; rejected-name: Human Resources (function name)'
   confidence: medium
 - id: N-002
   question: 'Marketing placement: under Customer Management or under Offering Management'
@@ -36,13 +46,18 @@ decisions:
   - SRC-004
   - SRC-005
   - SRC-006
-  analysis: 'APQC places Market and Sell as its own category, sibling to customer service and product development. The business
-    object of Marketing is demand creation in a market, not the customer relationship (Customer Management) and not the offering
-    itself (Offering Management). Marketing is therefore Distinct from both. Its first-order standing survives only if the
-    abstraction test passes; it does: Marketing Management is a durable ability across commercial enterprises. Government
-    and non-profit equivalents (outreach, enrollment communication) are noted as the diversity-test edge.'
-  outcome: Distinct; standalone first-order candidate; parent chain cleared (no parent pending admission)
-  action: CAND-010 parent_candidates cleared; overlay primary stays party-relationship x conceive
+  analysis: 'APQC places Market and Sell as its own category, sibling to customer
+    service and product development. The business object of Marketing is demand creation
+    in a market, not the customer relationship (Customer Management) and not the offering
+    itself (Offering Management). Marketing is therefore Distinct from both. Its first-order
+    standing survives only if the abstraction test passes; it does: Marketing Management
+    is a durable ability across commercial enterprises. Government and non-profit
+    equivalents (outreach, enrollment communication) are noted as the diversity-test
+    edge.'
+  outcome: Distinct; standalone first-order candidate; parent chain cleared (no parent
+    pending admission)
+  action: CAND-010 parent_candidates cleared; overlay primary stays party-relationship
+    x conceive
   confidence: medium
 - id: N-003
   question: 'Analytics and Intelligence: child of Information Management or standalone'
@@ -52,12 +67,13 @@ decisions:
   evidence:
   - SRC-002
   - SRC-006
-  analysis: 'Analytics consumes information but its business object is the insight, not the information. The ability to produce
-    decision-grade intelligence is distinguishable from the ability to steward data. However the corpus treats it inconsistently:
-    some vendor models make it a theme, others fold it into information or digital. Evidence is E3 with low confidence; splitting
-    now would outrun the evidence.'
-  outcome: Parent-Child retained provisionally (CAND-017 -> CAND-018); flagged for re-test after the enterprise-generality
-    matrix
+  analysis: 'Analytics consumes information but its business object is the insight,
+    not the information. The ability to produce decision-grade intelligence is distinguishable
+    from the ability to steward data. However the corpus treats it inconsistently:
+    some vendor models make it a theme, others fold it into information or digital.
+    Evidence is E3 with low confidence; splitting now would outrun the evidence.'
+  outcome: Parent-Child retained provisionally (CAND-017 -> CAND-018); flagged for
+    re-test after the enterprise-generality matrix
   action: No structural change; re-test trigger recorded
   confidence: low
 - id: N-004
@@ -69,47 +85,56 @@ decisions:
   - SRC-002
   - SRC-004
   - SRC-005
-  analysis: 'Different business objects: the purchase/acquisition versus the supplier relationship. An enterprise can procure
-    without managing supplier relationships (spot buying) and can manage supplier relationships beyond active procurement
-    (strategic alliances with no current spend). APQC separates sourcing/procurement work from external relationship management.
-    Distinctness is demonstrated, not merely nominal.'
+  analysis: 'Different business objects: the purchase/acquisition versus the supplier
+    relationship. An enterprise can procure without managing supplier relationships
+    (spot buying) and can manage supplier relationships beyond active procurement
+    (strategic alliances with no current spend). APQC separates sourcing/procurement
+    work from external relationship management. Distinctness is demonstrated, not
+    merely nominal.'
   outcome: Distinct; no merge; both retained as first-order candidates
   action: No structural change
   confidence: high
 - id: N-005
-  question: Customer Management vs Customer Relationship Management vs Customer Administration (CR section 20 example)
+  question: Customer Management vs Customer Relationship Management vs Customer Administration
+    (CR section 20 example)
   candidates:
   - CAND-005
   evidence:
   - SRC-001
   - SRC-003
   - SRC-006
-  analysis: 'Customer Relationship Management is the market-dominant name for the same construct (and a system category; see
-    CAND-032 disambiguation). Customer Administration narrows the object to account maintenance and is Overlapping: a child-scope
-    fragment, not a synonym. Per the section 20 rule, the name merge happens only because the constructs coincide, not because
-    the names are similar.'
-  outcome: Synonyms (Customer Relationship Management = Customer Management); Overlapping (Customer Administration = child-scope
-    fragment)
-  action: 'CAND-005 aliases recorded: Customer Relationship Management; Customer Administration logged as overlapping fragment'
+  analysis: 'Customer Relationship Management is the market-dominant name for the
+    same construct (and a system category; see CAND-032 disambiguation). Customer
+    Administration narrows the object to account maintenance and is Overlapping: a
+    child-scope fragment, not a synonym. Per the section 20 rule, the name merge happens
+    only because the constructs coincide, not because the names are similar.'
+  outcome: Synonyms (Customer Relationship Management = Customer Management); Overlapping
+    (Customer Administration = child-scope fragment)
+  action: 'CAND-005 aliases recorded: Customer Relationship Management; Customer Administration
+    logged as overlapping fragment'
   confidence: high
 - id: N-006
-  question: 'CAND-019 Technology Management: business capability with a domain, or cross-cutting concern (carried from ECF
-    overlay conflict)'
+  question: 'CAND-019 Technology Management: business capability with a domain, or
+    cross-cutting concern (carried from ECF overlay conflict)'
   candidates:
   - CAND-019
   evidence:
   - SRC-002
   - SRC-004
   - SRC-005
-  analysis: 'APQC carries Manage Information Technology as a category; IF4IT separates IT capabilities from common enterprise
-    capabilities. The business object (Technology) is real and durable; what fails is the ECF domain assignment, because the
-    ECF domains are business-semantic and technology is an L5 layer concern. The admission gate (section 38) explicitly allows
-    ECF Mapping to be legitimately absent. Decision: the capability stands; the coordinate does not.'
-  outcome: Retained as first-order candidate with ECF mapping legitimately absent (section 38 clause)
+  analysis: 'APQC carries Manage Information Technology as a category; IF4IT separates
+    IT capabilities from common enterprise capabilities. The business object (Technology)
+    is real and durable; what fails is the ECF domain assignment, because the ECF
+    domains are business-semantic and technology is an L5 layer concern. The admission
+    gate (section 38) explicitly allows ECF Mapping to be legitimately absent. Decision:
+    the capability stands; the coordinate does not.'
+  outcome: Retained as first-order candidate with ECF mapping legitimately absent
+    (section 38 clause)
   action: overlay entry confirmed unmapped-by-rule; candidates.yaml annotated
   confidence: medium
 - id: N-007
-  question: 'CAND-004 Stakeholder Relationship Management: aggregate candidate, parents-only, or dissolve'
+  question: 'CAND-004 Stakeholder Relationship Management: aggregate candidate, parents-only,
+    or dissolve'
   candidates:
   - CAND-004
   - CAND-005
@@ -120,15 +145,18 @@ decisions:
   - SRC-001
   - SRC-004
   - SRC-006
-  analysis: 'The business object Stakeholder is an abstraction over the relationship objects of the children (Customer,
-    Citizen, Supplier, Partner). Stakeholder-level abilities exist in the corpus (stakeholder mapping, engagement planning
-    in governance contexts), but the admission-gate boundary test fails: no boundary can be drawn for the aggregate that
-    is not exactly the union of its children. As an ability it adds no distinct outcome; as a structure it carries the
-    documented common relationship pattern that the section 29 specialization path and the deferred CAND-005/CAND-006
+  analysis: 'The business object Stakeholder is an abstraction over the relationship
+    objects of the children (Customer, Citizen, Supplier, Partner). Stakeholder-level
+    abilities exist in the corpus (stakeholder mapping, engagement planning in governance
+    contexts), but the admission-gate boundary test fails: no boundary can be drawn
+    for the aggregate that is not exactly the union of its children. As an ability
+    it adds no distinct outcome; as a structure it carries the documented common relationship
+    pattern that the section 29 specialization path and the deferred CAND-005/CAND-006
     unification decision both need.'
-  outcome: Parents-only; retained as structural grouping parent, withdrawn from the first-order admission track
-  action: 'CAND-004 marked status grouping_parent in candidates.yaml; children keep their parent pointer; boundary gap
-    in the admission pre-check resolved by reclassification'
+  outcome: Parents-only; retained as structural grouping parent, withdrawn from the
+    first-order admission track
+  action: CAND-004 marked status grouping_parent in candidates.yaml; children keep
+    their parent pointer; boundary gap in the admission pre-check resolved by reclassification
   confidence: medium
 - id: N-008
   question: 'CAND-011 Value Delivery: aggregate candidate, parents-only, or dissolve'
@@ -138,128 +166,246 @@ decisions:
   evidence:
   - SRC-001
   - SRC-004
-  analysis: 'The business object Outcome fails the noun-anchor test: an outcome is a property of every capability, not
-    a business object an ability can be anchored on. CR section 15 warned this aggregate is too broad if held as the
-    candidate. The durable abilities sit one level down: Operations, Service Delivery, Fulfilment, Production. Unlike
-    CAND-004, no distinct grouping pattern is lost by removal: the family is the operations chain itself.'
-  outcome: Dissolved as a first-order candidate; documented as a rejected aggregate (section 39 rejected/deferred record)
-  action: 'CAND-011 marked status dissolved in candidates.yaml; CAND-012 Operations re-rooted as first-order; Service
-    Delivery, Fulfilment, Production re-attached as candidate children of CAND-012; boundary gap resolved by dissolution'
+  analysis: 'The business object Outcome fails the noun-anchor test: an outcome is
+    a property of every capability, not a business object an ability can be anchored
+    on. CR section 15 warned this aggregate is too broad if held as the candidate.
+    The durable abilities sit one level down: Operations, Service Delivery, Fulfilment,
+    Production. Unlike CAND-004, no distinct grouping pattern is lost by removal:
+    the family is the operations chain itself.'
+  outcome: Dissolved as a first-order candidate; documented as a rejected aggregate
+    (section 39 rejected/deferred record)
+  action: CAND-011 marked status dissolved in candidates.yaml; CAND-012 Operations
+    re-rooted as first-order; Service Delivery, Fulfilment, Production re-attached
+    as candidate children of CAND-012; boundary gap resolved by dissolution
   confidence: medium
 - id: N-009
-  question: 'N-003 re-test (trigger fired: enterprise-generality matrix complete): Analytics standalone or child of
-    Information Management'
+  question: 'N-003 re-test (trigger fired: enterprise-generality matrix complete):
+    Analytics standalone or child of Information Management'
   candidates:
   - CAND-017
   - CAND-018
   evidence:
   - SRC-002
   - SRC-006
-  analysis: 'The generality matrix shows Analytics and Intelligence demonstrated across enterprise types, which removes
-    the generality objection to standalone treatment. The blocker remains corpus treatment: vendor and reference models
-    split between theme, fold-in, and standalone, and evidence stays E3 at low confidence. Splitting to standalone
-    first-order would outrun the evidence. The boundary gap on CAND-018 is carried, not resolved.'
+  analysis: 'The generality matrix shows Analytics and Intelligence demonstrated across
+    enterprise types, which removes the generality objection to standalone treatment.
+    The blocker remains corpus treatment: vendor and reference models split between
+    theme, fold-in, and standalone, and evidence stays E3 at low confidence. Splitting
+    to standalone first-order would outrun the evidence. The boundary gap on CAND-018
+    is carried, not resolved.'
   outcome: Parent-Child retained (CAND-017 -> CAND-018); re-test trigger closed
-  action: No structural change; CAND-018 remains on the admission track with boundary_defensible gap carried
+  action: No structural change; CAND-018 remains on the admission track with boundary_defensible
+    gap carried
   confidence: low
 - id: N-010
-  question: 'CR-DEA-BC-09 naming conformance: Compliance Management (CAND-021) against TAXONOMY section 1 rules
-    2 and 4'
+  question: 'CR-DEA-BC-09 naming conformance: Compliance Management (CAND-021) against
+    TAXONOMY section 1 rules 2 and 4'
   candidates:
   - CAND-021
   evidence:
   - SRC-002
   - SRC-004
   - SRC-005
-  analysis: 'Compliance is a state of conformity to regulation: outcome-adjacent (rule 4) and not the business
-    object (rule 2). The object is Regulation; the ability is to know the enterprise regulatory obligations and
-    to conform to them demonstrably. Regulation Management names the object in plain vocabulary (regulatory
-    affairs usage); the misreading risk (a regulator managing the regulations it writes) is resolved by the
-    definition and boundary, which scope the ability to the enterprise conformance posture.'
+  analysis: 'Compliance is a state of conformity to regulation: outcome-adjacent (rule
+    4) and not the business object (rule 2). The object is Regulation; the ability
+    is to know the enterprise regulatory obligations and to conform to them demonstrably.
+    Regulation Management names the object in plain vocabulary (regulatory affairs
+    usage); the misreading risk (a regulator managing the regulations it writes) is
+    resolved by the definition and boundary, which scope the ability to the enterprise
+    conformance posture.'
   outcome: Renamed Compliance Management -> Regulation Management
-  action: 'Entry renamed; id dea:capability-compliance-management -> dea:capability-regulation-management;
-    former name recorded in aliases; version 1.0.0 -> 2.0.0 (identity change, VERSIONING section 1.2)'
+  action: Entry renamed; id dea:capability-compliance-management -> dea:capability-regulation-management;
+    former name recorded in aliases; version 1.0.0 -> 2.0.0 (identity change, VERSIONING
+    section 1.2)
   confidence: high
 - id: N-011
-  question: 'CR-DEA-BC-09 naming conformance: Financial Management (CAND-014) against TAXONOMY section 1 rule
-    2'
+  question: 'CR-DEA-BC-09 naming conformance: Financial Management (CAND-014) against
+    TAXONOMY section 1 rule 2'
   candidates:
   - CAND-014
   evidence:
   - SRC-001
   - SRC-004
-  analysis: 'The object is Financial Resource; the admitted name carried only the object adjective (Financial).
-    Financial Resource Management is the object-literal form and is also the BIZBOK source term; per TAXONOMY
-    section 2.4 the source term stays in the evidence register and the canonical name is decided by section 1,
-    which here lands on the same form.'
+  analysis: The object is Financial Resource; the admitted name carried only the object
+    adjective (Financial). Financial Resource Management is the object-literal form
+    and is also the BIZBOK source term; per TAXONOMY section 2.4 the source term stays
+    in the evidence register and the canonical name is decided by section 1, which
+    here lands on the same form.
   outcome: Renamed Financial Management -> Financial Resource Management
-  action: 'Entry renamed; id dea:capability-financial-management -> dea:capability-financial-resource-management;
-    former name recorded in aliases; version 1.0.0 -> 2.0.0'
+  action: Entry renamed; id dea:capability-financial-management -> dea:capability-financial-resource-management;
+    former name recorded in aliases; version 1.0.0 -> 2.0.0
   confidence: high
 - id: N-012
-  question: 'CR-DEA-BC-09 naming conformance: Innovation Management (CAND-029) against TAXONOMY section 1 rule
-    2'
+  question: 'CR-DEA-BC-09 naming conformance: Innovation Management (CAND-029) against
+    TAXONOMY section 1 rule 2'
   candidates:
   - CAND-029
   evidence:
   - SRC-002
-  analysis: 'The recorded object is Idea; innovation names the act of innovating (a process reading, rule 1)
-    or the produced novelty (an outcome reading, rule 4). Idea Management names the object in plain vocabulary.
-    Residual tension: the ability covers development and realization, which the name Idea Management may
-    undershoot; resolved by the definition (originate, develop, and realize ideas) and by the outcome
-    (innovations introduced, not merely ideated). Changing business_object Idea -> Innovation was considered
-    and deferred: a business_object change is an evidence-bearing semantic change, out of scope for a naming
-    conformance pass.'
+  analysis: 'The recorded object is Idea; innovation names the act of innovating (a
+    process reading, rule 1) or the produced novelty (an outcome reading, rule 4).
+    Idea Management names the object in plain vocabulary. Residual tension: the ability
+    covers development and realization, which the name Idea Management may undershoot;
+    resolved by the definition (originate, develop, and realize ideas) and by the
+    outcome (innovations introduced, not merely ideated). Changing business_object
+    Idea -> Innovation was considered and deferred: a business_object change is an
+    evidence-bearing semantic change, out of scope for a naming conformance pass.'
   outcome: Renamed Innovation Management -> Idea Management
-  action: 'Entry renamed; id dea:capability-innovation-management -> dea:capability-idea-management; former
-    name recorded in aliases; version 1.0.0 -> 2.0.0; business_object question parked (evidence-bearing
-    semantic change, not a naming question)'
+  action: Entry renamed; id dea:capability-innovation-management -> dea:capability-idea-management;
+    former name recorded in aliases; version 1.0.0 -> 2.0.0; business_object question
+    parked (evidence-bearing semantic change, not a naming question)
   confidence: medium
 - id: N-013
-  question: 'CR-DEA-BC-09 naming conformance: Legal Management (CAND-022) against TAXONOMY section 1 rule 2'
+  question: 'CR-DEA-BC-09 naming conformance: Legal Management (CAND-022) against
+    TAXONOMY section 1 rule 2'
   candidates:
   - CAND-022
   evidence:
   - SRC-002
   - SRC-004
-  analysis: 'The object is Legal Matter; the admitted name carried only the object adjective (Legal). Legal
-    Matter Management is the object-literal form and matches legal-operations vocabulary.'
+  analysis: The object is Legal Matter; the admitted name carried only the object
+    adjective (Legal). Legal Matter Management is the object-literal form and matches
+    legal-operations vocabulary.
   outcome: Renamed Legal Management -> Legal Matter Management
-  action: 'Entry renamed; id dea:capability-legal-management -> dea:capability-legal-matter-management; former
-    name recorded in aliases; version 1.0.0 -> 2.0.0'
+  action: Entry renamed; id dea:capability-legal-management -> dea:capability-legal-matter-management;
+    former name recorded in aliases; version 1.0.0 -> 2.0.0
   confidence: high
 - id: N-014
-  question: 'CR-DEA-BC-09 naming conformance: Resilience Management (CAND-023) against TAXONOMY section 1 rules
-    2 and 4'
+  question: 'CR-DEA-BC-09 naming conformance: Resilience Management (CAND-023) against
+    TAXONOMY section 1 rules 2 and 4'
   candidates:
   - CAND-023
   evidence:
   - SRC-002
   - SRC-013
-  analysis: 'Resilience is a property of the enterprise (a quality it has), not a business object the ability
-    manages; the recorded object is Continuity. Continuity Management names the object in plain vocabulary
-    (business continuity usage, minus the redundant Business prefix per rule 6).'
+  analysis: Resilience is a property of the enterprise (a quality it has), not a business
+    object the ability manages; the recorded object is Continuity. Continuity Management
+    names the object in plain vocabulary (business continuity usage, minus the redundant
+    Business prefix per rule 6).
   outcome: Renamed Resilience Management -> Continuity Management
-  action: 'Entry renamed; id dea:capability-resilience-management -> dea:capability-continuity-management;
-    former name recorded in aliases; version 1.0.0 -> 2.0.0'
+  action: Entry renamed; id dea:capability-resilience-management -> dea:capability-continuity-management;
+    former name recorded in aliases; version 1.0.0 -> 2.0.0
   confidence: high
 - id: N-015
-  question: 'CR-DEA-BC-09 naming conformance: Security Management (CAND-024) against TAXONOMY section 1 rule
-    2'
+  question: 'CR-DEA-BC-09 naming conformance: Security Management (CAND-024) against
+    TAXONOMY section 1 rule 2'
   candidates:
   - CAND-024
   evidence:
   - SRC-002
   - SRC-004
-  analysis: 'The recorded object is the compound Asset/Information. An object-literal name (Asset and
-    Information Protection Management) fails rule 6 (plain vocabulary) and rule 1 (reads as a five-word
-    work description). Security is the plain-vocabulary name of the protection ability across the source
-    corpus (ISO 27001 information security management; BIZBOK Security Management); the compound object is
-    carried by the business_object field and the boundary, not by the name. Retained per the N-001 precedent
-    (plain-vocabulary ability-domain name wins over literal object containment).'
+  analysis: The recorded object is the compound Asset/Information. An object-literal
+    name (Asset and Information Protection Management) fails rule 6 (plain vocabulary)
+    and rule 1 (reads as a five-word work description). Security is the plain-vocabulary
+    name of the protection ability across the source corpus (ISO 27001 information
+    security management; BIZBOK Security Management); the compound object is carried
+    by the business_object field and the boundary, not by the name. Retained per the
+    N-001 precedent (plain-vocabulary ability-domain name wins over literal object
+    containment).
   outcome: Retained as Security Management (reviewed-retained)
+  verdict: review-retained
+  affected_entry: dea:capability-security-management
   action: No rename; decision recorded; entry unchanged at version 1.0.0
   confidence: high
+- id: N-016
+  question: 'CR-DEA-BC-20 naming conformance: Strategy (CAND-001) against TAXONOMY
+    section 1 rule 7 (noun-as-ability)'
+  candidates:
+  - CAND-001
+  evidence:
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  analysis: 'Strategy out of context reads primarily as noun-of-discourse (the plan,
+    the document, the position), not as the act/ability of formulating direction.
+    The noun-as-ability test (TAXONOMY section 1 rule 7) requires the canonical name
+    to read as a practice. Formulation is the recognized ability noun: the act and
+    capability of giving shape to direction. Strategy Formulation is the corpus-standard
+    form (BCG, McKinsey, Bain practice literature; BA Guild "Strategy Formulation"
+    view; BIZBOK uses "Strategy" as the catalog name but distinguishes "Formulation"
+    and "Execution" in the lifecycle).'
+  outcome: Renamed Strategy -> Strategy Formulation
+  action: Entry renamed; id dea:capability-strategy -> dea:capability-strategy-formulation;
+    former name recorded in aliases; version 1.1.1 -> 2.0.0
+  confidence: high
+- id: N-017
+  question: 'CR-DEA-BC-20 naming conformance: Analytics and Intelligence (CAND-018)
+    against TAXONOMY section 1 rule 7 (noun-as-ability); deferred to CR-DEA-BC-21
+    recon'
+  candidates:
+  - CAND-018
+  analysis: 'Per user direction (DP-E), the entry requires a dedicated ADR-driven
+    recon before committing to a rename target. Candidates under consideration: Insight
+    Management, Intelligence Management, Decision Intelligence Management, or review-retained.
+    Defer to CR-DEA-BC-21 for evidence gathering and the rename-CR that follows.'
+  outcome: Deferred to CR-DEA-BC-21 recon
+  action: No change in this CR; entry unchanged at version 1.0.0
+  confidence: medium
+- id: N-018
+  question: 'CR-DEA-BC-20 naming conformance: Operations (CAND-012) against TAXONOMY
+    section 1 rule 7 (noun-as-ability)'
+  candidates:
+  - CAND-012
+  evidence:
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  analysis: 'Operations is a bare plural noun that reads primarily as the function/activity,
+    not as an enduring ability. Operations Management is the corpus-standard form
+    (APQC category 4 "Operate"; BIZBOK "Operations Management"; BA Guild "Operations
+    and Support"). Parallels Customer Management, Asset Management, Workforce Management
+    in noun-as-ability shape. The business_object remains "Operations" at the single
+    top-level per user direction (DP-D): semantic breakdown of Production and Service
+    Delivery is provided in the definition field, not as a multi-object split in business_object.'
+  outcome: Renamed Operations -> Operations Management
+  action: Entry renamed; id dea:capability-operations -> dea:capability-operations-management;
+    former names recorded in aliases (Operations, Production Management (corpus),
+    Service Delivery Management (corpus)); definition re-anchored; business_object
+    unchanged as Operations; version 1.0.0 -> 2.0.0
+  confidence: high
+- id: N-019
+  question: 'CR-DEA-BC-20 naming conformance: Enterprise Governance (CAND-003) against
+    TAXONOMY section 1 rule 7 (noun-as-ability)'
+  candidates:
+  - CAND-003
+  evidence:
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  analysis: 'Governance reads as an ability verb (the act of governing), not as a
+    noun-of-discourse; the unmarked noun-as-ability test passes. The rule-2 object-anchoring
+    heuristic is advisory because the ability object is the act of constituting decisions
+    across the enterprise, which is not a literal token in "Enterprise Governance"
+    but is the semantic subject. N-015 precedent (CR-DEA-BC-09): compound object that
+    cannot be named literally without violating rule 6 (plain vocabulary) or rule
+    1 (ability noun phrases) is exempt; the exemption is recorded as a review-retained
+    verdict so that scripts/check_naming.py H8 honors it.'
+  outcome: Retained as Enterprise Governance (reviewed-retained)
+  verdict: review-retained
+  affected_entry: dea:capability-enterprise-governance
+  action: No rename; entry version 1.0.1 -> 1.0.2 (advisory-clearance bump; VERSIONING
+    section 1.2 minor)
+  confidence: high
+- id: N-020
+  question: 'CR-DEA-BC-20 business_object clarification: Sourcing and Procurement
+    (CAND-025) business_object Purchase Order -> Acquisition Cycle'
+  candidates:
+  - CAND-025
+  evidence:
+  - SRC-001
+  - SRC-004
+  analysis: 'The recorded business_object was "Purchase Order", which is a process
+    artifact (a document), not the ability object. The ability object is the supplier-acquisition
+    cycle: the sustained activity of identifying suppliers, qualifying them, transacting
+    with them, and managing the resulting supply relationships. "Acquisition Cycle"
+    names the sustained object; the artifacts (purchase orders, contracts, invoices)
+    are realization outputs. scripts/check_naming.py A1 advisory cleared by this semantic
+    clarification. Name and id unchanged; this is a semantic change at the business_object
+    field.'
+  outcome: business_object Purchase Order -> Acquisition Cycle
+  action: Entry version 1.2.0 -> 1.3.0 (semantic clarification; VERSIONING section
+    1.2 minor)
+  confidence: medium
 deferred:
 - item: Citizen/Member Relationship (CAND-006) vs Customer Management unification
   trigger: government reference models (gap G5)
