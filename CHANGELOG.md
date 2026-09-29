@@ -40,6 +40,31 @@ regime) and `v<N>.<M>` semver from v2 onward. See
 
 ## Unreleased
 
+**Major** (CR-DEA-BC-20). Renames two entries that fail the noun-as-ability rule (TAXONOMY section 1 rule 7) and registers two retention decisions on the BC-09 advisory set that did not need a rename.
+
+- **`dea:capability-strategy` → `dea:capability-strategy-formulation`.** Renamed (N-016). Version 1.1.1 → **2.0.0** (Major per VERSIONING section 1.1: name change is a breaking identity change for callers; `aliases: [Strategy]` preserves the colloquial reference). The new name reads as an ability rather than as a noun-of-discourse; parallels Strategic Planning (kept; passes noun-as-ability with the Planning suffix). Related entries updated: Organizational Design, Enterprise Governance, Strategic Planning, Change Management, Offering Management, Technology Enablement, Technology Management (related_capabilities + boundary prose).
+- **`dea:capability-operations` → `dea:capability-operations-management`.** Renamed (N-018). Version 1.0.1 → **2.0.0** (Major). `business_object: Operation` (singular) → `business_object: Operations` (plural) per DP-D decision (top-level concept retained; semantic breakdown of Production & Service Delivery added to the definition prose). `aliases: [Operations, Production Management, Service Delivery Management]` added for discoverability. The naming change parallels Customer Management, Asset Management, Risk Management. Related entries updated: Offering Management, Technology Enablement, Technology Management (boundary prose). N-017 Analytics and Intelligence rename deferred to standalone CR-DEA-BC-21 recon per DP-E.
+- **Enterprise Governance retention (N-019).** `verdict: review-retained`. Version 1.0.1 → **1.0.2** (Patch; VERSIONING section 1.2 minor = advisory-clearance bump). Rationale: `governance` reads as an ability verb; the entry's business_object `Decision` is the *subject of governing* not the *ability-object noun*.
+- **Sourcing and Procurement `business_object` clarification (N-020).** `business_object: Purchase Order` → `business_object: Acquisition Cycle` (Purchase Order is a process artifact, not the ability-object noun; Acquisition Cycle names the sustained activity). Version 1.2.0 → **1.3.0** (Minor). The capability name itself is unchanged; it already passes noun-as-ability as a gerund pair.
+- **Linter hardening.** `scripts/check_naming.py` gains H8 (noun-as-ability; structural hard check with suffix-pattern library + single-gerund + gerund-pair regex) and a review-retained exemption registry that reads `catalog-research/normalization.yaml` for `verdict: review-retained` decisions (resolved by `affected_entry` or, where N-NNN keyed, by candidate-to-entry mapping). Default exit code unchanged (0 on PASS; 1 on H1-H8 violations). The lint was previously advisory on the noun-as-ability axis (BC-09 §7); it is now a hard gate, with the only legal override being a registered N-NNN review-retained decision. CI calls `check_naming.py` without `--strict`; A1 (object-anchoring heuristic) remains advisory as it is semantic-review territory per TAXONOMY section 1A.3.
+
+### Affected entries
+
+- **Renamed (Major):** Strategy 1.1.1 → Strategy Formulation 2.0.0; Operations 1.0.1 → Operations Management 2.0.0.
+- **Bumped (Patch/Minor; no name change):** Enterprise Governance 1.0.1 → 1.0.2; Sourcing and Procurement 1.2.0 → 1.3.0.
+- **CATALOG.yaml** regenerated to reflect id/path/version/last_modified for the four affected entries. Tools/catalog-index-schema.json symlink created (was a script hardcoded-path bug).
+- **Catalog count** unchanged at 28 first-order canonical capabilities.
+- **Normalization register** version 0.2 → 0.3; decisions N-016, N-018, N-019, N-020 appended; N-015 `verdict: review-retained` field formalized.
+
+### Parked-items rollup (companion to BC-20)
+
+Surfaced the repo-wide parked/deferred/advisory items the user asked us to bring back into the loop:
+
+- **BC-13 follow-on queue** (4 entries): Organizational Design (BC-14, **closed**, PR #71), Tech Enablement (BC-17, **closed**, PR #67), EPM research-CR (BC-19, **complete**; admission-CR pending CR-DEA-BC-15 provisional), Relationship Management (BC-16, **INV-RELMGMT-v0.1 still E2**; deferred to future CR).
+- **BC-09 named advisories** (5 entries): Strategy → N-016; Analytics and Intelligence → N-017 deferred to CR-DEA-BC-21; Enterprise Governance → N-019; Sourcing and Procurement → N-020; Security Management → N-015 unchanged.
+- **Submittal review gaps (BC-SR-A001)**: §4 closed by BC-14; §5 research-CR closed by BC-19; §6 Open: relationship-management and party-relationship-vs-telecom-3rd-party unresolved (carries to future CR).
+- **Foundation hygiene**: H8 added to linter (BC-20); categorical reduction completed upstream (CR-MM-02).
+
 **Housekeeping** (no version bump; pre-release cleanup). Removes en/em dashes from every GitHub-visible artifact in the repo (32 files; 213 em-dashes + 24 en-dashes removed from Markdown; 23 em-dashes from YAML prose). The punctuation policy now lives in memory; the artifact layer reflects it without stating it. Change-requested under user instruction 2026-09-11.
 
 ## [v1-alpha.7] - 2026-09-10
