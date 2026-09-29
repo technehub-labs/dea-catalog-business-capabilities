@@ -1,15 +1,19 @@
-id: dea:capability-operations
+id: dea:capability-operations-management
 type: BusinessCapability
-name: Operations
-definition: The ability to run the enterprise's day-to-day production and delivery
+name: Operations Management
+definition: The ability to run the enterprise's day-to-day production and service delivery
   of value.
-version: 1.0.1
+version: 2.0.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
 outcome: Offerings are delivered, continuously, at the quality the enterprise commits
   to.
-business_object: Operation
+business_object: Operations
+aliases:
+- Operations
+- Production Management
+- Service Delivery Management
 ecf:
   primary:
     domain: enablement-operations

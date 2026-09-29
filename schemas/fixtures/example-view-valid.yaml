@@ -19,7 +19,7 @@ specializations:
     status: candidate
 
 inherited:
-  - dea:capability-operations
+  - dea:capability-operations-management
 
 rejected:
   - name: Fixture Impostor

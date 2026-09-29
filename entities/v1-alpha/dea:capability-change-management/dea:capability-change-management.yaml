@@ -54,8 +54,8 @@ ecf_rationale: 'R-005: primary governance-existence x improve (the ability is fi
   enterprise deliberately improves itself); secondaries empty per honest-not-exhaustive. CR-DEA-BC-13
   §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate
   change).'
-boundary: Manages change; does not set direction (Strategy), govern the enterprise (Enterprise Governance),
-  or operate steady-state delivery (Operations), or design the structure (Organizational Design).
+boundary: Manages change; does not set direction (Strategy Formulation), govern the enterprise (Enterprise Governance),
+  or operate steady-state delivery (Operations Management), or design the structure (Organizational Design).
 non_examples:
 - A change request ticket (an artifact)
 - A transformation office (an organization)

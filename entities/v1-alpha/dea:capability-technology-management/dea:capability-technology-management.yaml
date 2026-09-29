@@ -77,7 +77,7 @@ ecf_rationale: 'CR-DEA-BC-13 §A re-evaluation: under the new "semantic center o
   of Technology Enablement is recorded under `related_capabilities`. Supersedes the pre-CR-13 rationale
   (N-006R / BC-08 "earliest legitimate initiation").'
 boundary: 'Stewards the enterprise technology estate (the set of platforms, applications, networks, data,
-  and AI agents the enterprise uses). Does not execute operations through technology (Operations); does
+  and AI agents the enterprise uses). Does not execute operations through technology (Operations Management); does
   not derive insight from information (Analytics & Intelligence); does not govern information lifecycles
   (Information Management); does not run technology services and platforms for the rest of the enterprise
   (`dea:capability-technology-enablement`: admitted 2026-09-10 under CR-DEA-BC-17), or design the IT organization

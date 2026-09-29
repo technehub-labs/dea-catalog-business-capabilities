@@ -4,7 +4,7 @@ catalog:
     candidates: 3
     canonical: 28
     entities: 31
-    open_change_requests: 23
+    open_change_requests: 24
     research_files: 3
     retired: 0
   cross_cutting:
@@ -115,7 +115,7 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.1
+    version: 1.0.2
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-facility-management
@@ -206,15 +206,15 @@ catalog:
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-operations
-    last_modified: '2026-09-11'
+    id: dea:capability-operations-management
+    last_modified: '2026-09-29'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-operations/dea:capability-operations.yaml
+    path: entities/v1-alpha/dea:capability-operations-management/dea:capability-operations-management.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.1
+    version: 2.0.0
   - candidate_count: 0
     canonical_count: 1
     id: dea:capability-organizational-design
@@ -280,7 +280,7 @@ catalog:
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.2.0
+    version: 1.3.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-strategic-planning
@@ -294,15 +294,15 @@ catalog:
     version: 1.1.1
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-strategy
-    last_modified: '2026-09-11'
+    id: dea:capability-strategy-formulation
+    last_modified: '2026-09-29'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-strategy/dea:capability-strategy.yaml
+    path: entities/v1-alpha/dea:capability-strategy-formulation/dea:capability-strategy-formulation.yaml
     research_count: 0
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.1.1
+    version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-supplier-management
@@ -418,9 +418,9 @@ catalog:
   - entity_id: dea:capability-offering-management
     files: []
     path: entities/v1-alpha/dea:capability-offering-management/research/
-  - entity_id: dea:capability-operations
+  - entity_id: dea:capability-operations-management
     files: []
-    path: entities/v1-alpha/dea:capability-operations/research/
+    path: entities/v1-alpha/dea:capability-operations-management/research/
   - entity_id: dea:capability-organizational-design
     files: []
     path: entities/v1-alpha/dea:capability-organizational-design/research/
@@ -442,9 +442,9 @@ catalog:
   - entity_id: dea:capability-strategic-planning
     files: []
     path: entities/v1-alpha/dea:capability-strategic-planning/research/
-  - entity_id: dea:capability-strategy
+  - entity_id: dea:capability-strategy-formulation
     files: []
-    path: entities/v1-alpha/dea:capability-strategy/research/
+    path: entities/v1-alpha/dea:capability-strategy-formulation/research/
   - entity_id: dea:capability-supplier-management
     files: []
     path: entities/v1-alpha/dea:capability-supplier-management/research/

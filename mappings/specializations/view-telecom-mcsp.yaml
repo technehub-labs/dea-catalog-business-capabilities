@@ -70,12 +70,12 @@ specializations:
     rating: E3
   status: admitted
 inherited:
-- dea:capability-strategy
+- dea:capability-strategy-formulation
 - dea:capability-strategic-planning
 - dea:capability-enterprise-governance
 - dea:capability-supplier-management
 - dea:capability-marketing
-- dea:capability-operations
+- dea:capability-operations-management
 - dea:capability-financial-stewardship
 - dea:capability-financial-resource-management
 - dea:capability-workforce-management
