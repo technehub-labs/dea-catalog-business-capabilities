@@ -52,15 +52,15 @@ catalog:
     version: 0.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: dea:capability-analytics-and-intelligence
-    last_modified: '2026-09-10'
+    id: dea:capability-insight-management
+    last_modified: '2026-09-30'
     lifecycle_status: active
-    path: entities/v1-alpha/dea:capability-analytics-and-intelligence/dea:capability-analytics-and-intelligence.yaml
+    path: entities/v1-alpha/dea:capability-insight-management/dea:capability-insight-management.yaml
     research_count: 3
     retired_count: 1
     state: canonical
     type: BusinessCapability
-    version: 1.0.0
+    version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
     id: dea:capability-asset-management
@@ -373,12 +373,12 @@ catalog:
   - entity_id: dea:candidate-relmgmt
     files: []
     path: entities/v1-alpha/dea:candidate-relmgmt/research/
-  - entity_id: dea:capability-analytics-and-intelligence
+  - entity_id: dea:capability-insight-management
     files:
     - BOUNDARY-DECISION-CAND-018.md
     - README.md
     - boundary-decision-cand-018.yaml
-    path: entities/v1-alpha/dea:capability-analytics-and-intelligence/research/
+    path: entities/v1-alpha/dea:capability-insight-management/research/
   - entity_id: dea:capability-asset-management
     files: []
     path: entities/v1-alpha/dea:capability-asset-management/research/
