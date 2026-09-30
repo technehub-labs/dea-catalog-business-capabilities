@@ -1,12 +1,14 @@
-register_version: 0.7.0
-cr: "CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C evidence stubs) + CR-DEA-BC-18 (Track A evidence seed) +\
-  \ CR-DEA-BC-14 (Track A admission; CAND-036 admitted) + CR-DEA-BC-19 (Track B evidence seed; TER-EPM-001\
-  \ evidence-pending \u2192 evidence-seeded; CAND-037 E1 \u2192 E3)"
-compiled: "2026-09-11 (v0.7: Track B evidence seeded under CR-DEA-BC-19; TER-EPM-001 status evidence-seeded;\
-  \ CAND-037 E1 \u2192 E3 confirmed across SRC-020/021/022 three-source convergence)"
+register_version: 0.8.0
+cr: "CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C evidence stubs) + CR-DEA-BC-18 (Track A evidence seed) +
+  \ CR-DEA-BC-14 (Track A admission; CAND-036 admitted) + CR-DEA-BC-19 (Track B evidence seed; TER-EPM-001
+  \ evidence-pending -> evidence-seeded; CAND-037 E1 -> E3) + CR-DEA-BC-21 (Analytics and Intelligence
+  \ recon; SRC-023/024/025 evidence seed for CAND-018; E3 -> E4; recon recommends Insight Management
+  \ vector under TAXONOMY rule 7)"
+compiled: "2026-09-30 (v0.8: CR-DEA-BC-21 recon; SRC-023/024/025 evidence seed; CAND-018 E3 -> E4; recon recommends Insight Management vector under TAXONOMY rule 7)"
 compiled_by: Coder (for eaojnr)
 status: active; Track A closed under CR-DEA-BC-14 (admission 2026-09-11); Track B evidence-seeded under
-  CR-DEA-BC-19 (2026-09-11; admission pending CR-DEA-BC-15)
+  CR-DEA-BC-19 (2026-09-11; admission pending CR-DEA-BC-15); CR-DEA-BC-21 recon 2026-09-30 (CAND-018
+  E3 -> E4; insight-management vector under review; pending ADR-ES-021)
 source_classes:
 - business-architecture
 - enterprise-architecture
@@ -600,6 +602,62 @@ sources:
       as a recurring operating capability.'
     supports:
     - CAND-037 durability (maturity progression)
+- id: SRC-023
+  name: "APQC Process Classification Framework (PCF) Cross-Industry v7.4 (analytics + insights process groups)"
+  class: cross-industry-process
+  reference: "APQC (2024) Process Classification Framework (PCF) Cross-Industry, PDF Version 7.4, August 2024. Process groups 8.4 Manage Information, 13.7 Develop, manage, and deliver analytics (process 20959), 7.7.8.2 Develop insights into workforce analytics outcomes."
+  retrieved: 2026-09-30
+  retrieval: "direct (PCF PDF accessible from IFRC Solutions open-standards mirror; APQC primary portal publicly accessible; process-element numbering scheme verbatim from the PDF)"
+  observations:
+    - observation: "PCF 13.7 (process 20959) names the practice 'Develop, manage, and deliver analytics', not 'Business Intelligence'. Sub-processes include scope, hypothesize, collect, prepare, analyze, model, report on analysis, identify remedial actions. The verb-led naming pattern is significant: APQC has moved away from the legacy 'Business Intelligence' vocabulary toward 'analytics' + 'insights'."
+      supports:
+        - CAND-018 capability identity (the ability is a verb-led practice; 'Analytics' alone is the activity, 'Insight' is the noun product)
+      implication: "APQC independently corroborates the noun-of-discourse reading of 'Analytics and Intelligence'. The activity is analytics; the product of analytics is insight. The recon vector A (Insight Management) is the closest APQC-aligned vector."
+    - observation: "PCF 7.7.8.2 names 'Develop insights into workforce analytics outcomes' as a sub-process; the noun 'insights' is the output of the analytics activity, not a separate ability. The pattern holds at the workforce domain and is transferable to other domains."
+      supports:
+        - CAND-018 evidence_strength (E3 to E4)
+      implication: "Insights as a noun product is a recurring cross-domain pattern, not a one-off."
+    - observation: "PCF uses 'intelligence' only inside 'customer and market intelligence analysis' (process 10106), not as a standalone capability name. The 'Intelligence' token has narrower scope in PCF than 'Analytics' or 'Insights'."
+      supports:
+        - CAND-018 evidence (counter-evidence on Vector B; supports deprioritization of 'Intelligence Management')
+      implication: "Cross-industry practice does not treat 'Intelligence' as a first-order ability name."
+  evidence_note: "First source for CAND-018 evidence-strength upgrade E3 to E4. Names not copied (CR-5); process-element numbering preserved for traceability. Provides cross-industry corroboration that the ability is verb-led (analytics) and produces a noun (insight)."
+- id: SRC-024
+  name: "Business Architecture Guild BIZBOK v14 Insights discipline and Forrester Insights-Driven Business maturity model"
+  class: business-architecture
+  reference: "Business Architecture Guild (2024+) BIZBOK v14 introduction of the Insights discipline (public references: BMC Software BIZBOK introduction blog; BIZBOK v14 Update: Insights for Business Architects). Forrester (2018-2022) Insights-Driven Business maturity model and Charles Holive gauge self-assessment: Forrester Gauge Your Insights-Driven Business Maturity RES139875 and DataKitchen blog summary on Forrester chart your course to insights-driven business maturity."
+  retrieved: 2026-09-30
+  retrieval: "indirect (BIZBOK v14 primary text is membership-gated; BIZBOK v14 update content cited from practitioner literature and BMC Software blog summary; Forrester research reports cited by summary and aggregator posts; re-rate on direct retrieval of BIZBOK v14 Insights chapter)"
+  observations:
+    - observation: "BIZBOK v14 formally introduces 'Insights' as a business architecture discipline alongside the existing capabilities, value, organization, information, and metrics disciplines. The discipline is concerned with turning architecture artifacts into decision-grade understanding."
+      supports:
+        - CAND-018 capability identity (insight is a recognized business-architecture discipline)
+      implication: "Independent business-architecture corroboration of the 'Insights' token as the right noun product of analytics work."
+    - observation: "Forrester Insights-Driven Business maturity model treats insights as the output of a firm-wide DataOps and ModelOps practice; the model measures how well an enterprise converts data into decisions, not whether the enterprise runs analytics tools."
+      supports:
+        - CAND-018 enterprise-generality test
+      implication: "Forrester research validates that the ability recurs across industries; commercial-capability and business-architecture classes converge on the 'insight' noun."
+  evidence_note: "Second source for CAND-018 (business-architecture class); third class for the recon is standards-body (SRC-025). Convergence across two independent classes supports E4 evidence rating and the Insight Management vector (A)."
+- id: SRC-025
+  name: "DAMA DMBOK 2nd edition (Data Warehousing and Business Intelligence knowledge area) + OMG Decision Model and Notation (DMN) + IIBA BABOK v3 Strategy Analysis"
+  class: standards-body
+  reference: "DAMA International (2017) DAMA-DMBOK 2nd edition: Data Management Body of Knowledge, Chapter 8 Data Warehousing and Business Intelligence (process reference 20774-20781). Object Management Group (OMG) Decision Model and Notation (DMN) 1.4 specification. International Institute of Business Analysis (IIBA) (2015) BABOK v3 Knowledge Area 4: Strategy Analysis."
+  retrieved: 2026-09-30
+  retrieval: "indirect (DMBOK 2nd edition cited from publicly accessible summaries and the Atlan DAMA-DMBOK framework guide; DMN spec is OMG-public; BABOK v3 is IIBA-public with summaries on iiba.org and professional summaries; re-rate on direct retrieval of DMBOK 2nd ed. Data Warehousing and Business Intelligence chapter)"
+  observations:
+    - observation: "DMBOK 2nd ed. Chapter 8 Data Warehousing and Business Intelligence names the discipline using both data warehousing (the substrate) and business intelligence (the historical vocabulary). The chapter is concerned with extract/transform/load; metadata; query and reporting; analytics; data visualization. DMBOK explicitly subordinates BI to data management; BI is not a first-order standalone capability in DMBOK."
+      supports:
+        - CAND-018 distinctness sweep (analytics is a sub-concern of data management; the recon Insight Management reads as a peer because insight is the noun product and Information Management stewards the substrate)
+      implication: "DMBOK corroborates the distinctness between information stewardship (Information Management) and insight production (Analytics/Insight); the BC-SR-A001 boundary decision v0.1 that placed Analytics and Intelligence at Information Management peer in the ECF cell holds."
+    - observation: "OMG DMN 1.4 separates decision modeling from decision support; DMN treats the explicit modeling of decisions as a discipline but does not name 'decision intelligence' as a first-order enterprise ability. The 'decision intelligence' category was introduced by Gartner as a software platform taxonomy (Gartner Magic Quadrant for Decision Intelligence Platforms, 2024+), not as a first-order enterprise ability."
+      supports:
+        - CAND-018 vector deprioritization (Vector C Decision Intelligence Management is vendor-category, not enterprise ability)
+      implication: "The Decision Intelligence naming vector has weaker standards-body support than Vector A Insight Management; Vector A wins the recon."
+    - observation: "IIBA BABOK v3 names Strategy Analysis as one of six knowledge areas; this is closer to Strategic Planning (CAND-002) than to Analytics (CAND-018). BABOK does not name 'Analytics' or 'Intelligence' as a knowledge area; the practice is distributed across Strategy Analysis (KA4), Requirements Analysis and Design Definition (KA5), and Solution Evaluation (KA6)."
+      supports:
+        - CAND-018 distinctness sweep (Analytics is distinct from Strategy; BABOK corroborates the boundary)
+      implication: "Standards-body corpora treat Analytics as a cross-cutting practice that supports Strategy and Decisions, not as a peer of either."
+  evidence_note: "Standards-body source for the recon. Three classes converge (cross-industry-process SRC-023; business-architecture SRC-024; standards-body SRC-025) on Insight Management as the most evidence-supported vector. Independent corroboration from two vendor research firms (Gartner DI Platforms; Forrester Insights-Driven Business) cited as commercial-capability-models class within SRC-024."
 register_gaps:
 - id: G1
   gap: IF4IT capability-model page cited in CR section 12 not located; site and definition confirmed
@@ -623,6 +681,17 @@ register_gaps:
   gap: government reference models (GRM, GSRM) not yet retrieved
   action: add for the section 8 government diversity arm
   status: open
+- id: G11
+  gap: "Analytics & Intelligence capability name was flagged by N-017 (BC-20 deferred). CR-DEA-BC-21
+    recon 2026-09-30 names three candidate vectors (A Insight Management; B Intelligence Management;
+    C Decision Intelligence Management) and recommends A. Final name pending ADR-ES-021 ratification
+    and follow-on rename CR."
+  action: "Done 2026-09-30 (CR-DEA-BC-21 recon package: catalog-research/recon/INV-AI-v0.1.yaml +
+    catalog-research/recon/ADR-ES-021.yaml + candidates.yaml CAND-018 vector extension +
+    normalization.yaml N-022 review-retained entry + evidence-register.yaml SRC-023/024/025). N-022
+    verdict: review-retained-pending-ADR (not final). Closed when follow-on rename CR lands."
+  status: open
+
 corpus_assessment:
   source_classes_covered: 9 of 9
   independent_definition_sources: 4 (SRC-001 BIZBOK via citation, SRC-002 TOGAF via citation, SRC-003
@@ -634,6 +703,7 @@ corpus_assessment:
     v0.2'
   ready_for: candidate universe construction (CR-DEA-BC-02 sections 21, 30)
   not_ready_for: canonical admission (no candidate admitted; admission gate per section 38 remains a pre-check)
+track_evidence_records:
 track_evidence_records:
 - id: TER-ORGDESIGN-001
   track: A (Organizational Design)

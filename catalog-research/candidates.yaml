@@ -1,6 +1,6 @@
-universe_version: 0.5.0
-cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C stubs) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; CAND-036 admitted)
-compiled: '2026-09-11 (v0.5: CAND-037 Enterprise Performance Management added under CR-DEA-BC-19 Track B research-CR; E1 pending evidence work; canonical false; admission remains a separate CR per BC-SR-A001 §5 P1)'
+universe_version: 0.5.1
+cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C stubs) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; CAND-036 admitted) + CR-DEA-BC-19 (Track B EPM research-CR; CAND-037 added E1) + CR-DEA-BC-21 (Analytics and Intelligence recon; cand_018_vectors extension V-A/B/C/D; recommendation V-A Insight Management)
+compiled: '2026-09-11 (v0.5: CAND-037 Enterprise Performance Management added under CR-DEA-BC-19 Track B research-CR; E1 pending evidence work; canonical false; admission remains a separate CR per BC-SR-A001 section 5 P1); 2026-09-30 (v0.5.1: CR-DEA-BC-21 recon; cand_018_vectors extension with V-A Insight Management recommended under TAXONOMY rule 7; pending ADR-ES-021 ratification)'
 status: active
 evidence_register: docs/research/evidence-register.yaml
 classification_taxonomy:
@@ -946,3 +946,80 @@ candidates:
       date: '2026-09-11'
       evidence_strength: E4
       basis: 'EVIDENCE.md §3 admission promotion rule (E3 + admission gate; all 10 criteria met per admission-gate-precheck.yaml v0.7)'
+
+# CR-DEA-BC-21 recon (2026-09-30): Analytics and Intelligence (CAND-018) vector
+# extension. Four vectors evaluated against three independent source classes
+# (SRC-023 cross-industry-process; SRC-024 business-architecture; SRC-025
+# standards-body); see catalog-research/recon/INV-AI-v0.1.yaml and
+# catalog-research/recon/ADR-ES-021.yaml. Recommendation: V-A (Insight
+# Management); see ADR-ES-021 for the option grid.
+cand_018_vectors:
+- id: CAND-018-V-A
+  parent: CAND-018
+  name: Insight Management
+  proposed_id: dea:capability-insight-management
+  evidence_strength: E4
+  source_classes_observed:
+  - cross-industry-process (SRC-023 APQC PCF 7.4)
+  - business-architecture (SRC-024 BIZBOK v14 + Forrester)
+  - standards-body (SRC-025 DMBOK 2nd ed. + OMG DMN + BABOK v3)
+  noun_as_ability_pass: true
+  distinctness_preserved: true
+  ecf_placement_preserved: true
+  user_vocabulary_clear: true
+  recommendation: PRIMARY
+  aliases_retained:
+  - Analytics and Intelligence (legacy noun-of-discourse; provenance)
+  - Data and Analytics (BC-12 alias)
+  - Insight (BC-12 alias)
+  - Intelligence (BC-12 alias)
+  - Business Intelligence (legacy DMBOK vocabulary)
+- id: CAND-018-V-B
+  parent: CAND-018
+  name: Intelligence Management
+  proposed_id: dea:capability-intelligence-management
+  evidence_strength: E2
+  source_classes_observed:
+  - cross-industry-process (APQC PCF 10106 market-research context only)
+  noun_as_ability_pass: true
+  distinctness_preserved: false
+  ecf_placement_preserved: false
+  user_vocabulary_clear: false
+  recommendation: DEPRECATED
+  deprecation_rationale: |
+    APQC PCF 7.4 uses 'intelligence' only in market-research context (10106);
+    DMBOK 2nd ed. BI chapter is being retired in DMBOK 3.0; reads as Artificial
+    Intelligence software category (ambiguous); would collapse against Market
+    Intelligence sub-capability.
+- id: CAND-018-V-C
+  parent: CAND-018
+  name: Decision Intelligence Management
+  proposed_id: dea:capability-decision-intelligence-management
+  evidence_strength: E2
+  source_classes_observed:
+  - commercial-capability-models (Gartner Magic Quadrant for Decision Intelligence
+    Platforms, 2024+)
+  noun_as_ability_pass: true
+  distinctness_preserved: false
+  ecf_placement_preserved: false
+  user_vocabulary_clear: false
+  recommendation: DEPRECATED
+  deprecation_rationale: |
+    Gartner category is software platform taxonomy (vendor), not enterprise ability.
+    OMG DMN 1.4 does not name 'decision intelligence' as first-order ability. Would
+    shift ECF cell from information-management x operate toward governance-existence
+    x activate, breaking BC-SR-A001 section 4 boundary decision v0.1.
+- id: CAND-018-V-D
+  parent: CAND-018
+  name: Analytics and Intelligence (reviewed-retained)
+  proposed_id: dea:capability-analytics-and-intelligence
+  evidence_strength: n/a
+  noun_as_ability_pass: false
+  distinctness_preserved: true
+  ecf_placement_preserved: true
+  user_vocabulary_clear: false
+  recommendation: DEPRECATED
+  deprecation_rationale: |
+    Does not resolve noun-of-discourse concern. H8 hard gate continues to flag
+    the entry on every CI run. User explicit (DP-E) for ADR-driven recon; review-
+    retention would defeat the purpose.

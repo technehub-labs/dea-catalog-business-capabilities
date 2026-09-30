@@ -1,0 +1,185 @@
+---
+adr_id: ADR-ES-021
+title: "Analytics & Intelligence: rename to Insight Management under TAXONOMY rule 7"
+status: "proposed (2026-09-30); pending user ratification under CR-DEA-BC-21"
+date: "2026-09-30"
+cr: "CR-DEA-BC-21 (companion to CR-DEA-BC-20)"
+inventory: "INV-AI-v0.1 (catalog-research/recon/INV-AI-v0.1.yaml)"
+authors: "Coder (for eaojnr)"
+supersedes: null
+decision:
+  renames:
+    - from:
+        id: "dea:capability-analytics-and-intelligence"
+        name: "Analytics and Intelligence"
+        version: "1.1.0"
+      to:
+        id: "dea:capability-insight-management"
+        name: "Insight Management"
+        version: "2.0.0 (proposed)"
+  aliases_retained:
+    - "Analytics and Intelligence (legacy noun-of-discourse; preserved for provenance)"
+    - "Data and Analytics (BC-12 alias)"
+    - "Insight (BC-12 alias)"
+    - "Intelligence (BC-12 alias; retained for evidence-register compatibility)"
+    - "Business Intelligence (legacy DMBOK vocabulary; preserved for industry recognition)"
+  rationale: |
+    BC-20's N-017 deferred Analytics and Intelligence to a standalone recon. CR-DEA-BC-21
+    performed the three-class source sweep (cross-industry-process, business-architecture,
+    standards-body), distinctness sweep, semantic-center-of-gravity test, ECF placement
+    audit, and user vocabulary test, recorded in INV-AI-v0.1. The evidence converges on
+    "insight" as the noun-of-product of the analytics activity and on "Management" as
+    the ability suffix. The proposed name "Insight Management" passes the TAXONOMY rule
+    7 noun-as-ability test and preserves the BC-SR-A001 section 4 boundary decision v0.1
+    (Analytics as peer of Information Management, not as sub-capability).
+context:
+  background: |
+    The capability was admitted at version 1.1.0 with name "Analytics and Intelligence"
+    and business_object "Business Information". BC-09 advisory set flagged the name as
+    failing the noun-as-ability test (TAXONOMY rule 7, originally added in CR-DEA-BC-12
+    as advisory). BC-20 implemented rule 7 as H8 hard gate and renamed Strategy and
+    Operations, but deferred N-017 to a standalone recon under DP-E.
+  forces:
+    - "Industry vocabulary is unstable: PCF 7.4 has dropped 'Business Intelligence';
+      BIZBOK v14 introduces 'Insights' as a discipline; DMBOK 2nd ed. subordinates BI
+      to data management; DMBOK 3.0 retires the BI chapter; Gartner uses 'Decision
+      Intelligence' as a software platform category; Forrester uses 'insights-driven
+      business'."
+    - "Distinctness must be preserved from Information Management (substrate),
+      Strategic Planning (portfolio-level), and Decision Intelligence (vendor
+      category)."
+    - "The peer-of-Information-Management boundary in BC-SR-A001 must not be
+      re-litigated as part of the rename."
+    - "TAXONOMY rule 7 requires a noun-as-ability name with a recognized suffix
+      (Management, Stewardship, Formulation, etc.)."
+  constraints:
+    - "Renames must preserve aliases (BC-09 section 8 provenance rule)."
+    - "Renames must update CATALOG.yaml, related_capabilities references in
+      sibling entries, and the canonical OpenDEA Foundation Capability Map."
+    - "Renames must register an N-NNN decision in normalization.yaml and bump the
+      version to 2.0.0 (semver: backwards-incompatible name change)."
+    - "H8 hard gate must continue to PASS for the renamed entry."
+options_considered:
+  - id: "V-A"
+    name: "Insight Management"
+    pros:
+      - "Three-class source convergence (APQC PCF, BIZBOK v14, Forrester)."
+      - "Management suffix passes TAXONOMY rule 7."
+      - "Preserves BC-SR-A001 boundary decision v0.1."
+      - "User vocabulary already in use (insights platform, insights hub)."
+    cons:
+      - "Loss of 'Analytics' as a content token; BC-12 alias required."
+    chosen: true
+  - id: "V-B"
+    name: "Intelligence Management"
+    pros:
+      - "Management suffix passes TAXONOMY rule 7."
+    cons:
+      - "Intelligence narrowed to market-research context in PCF 7.4 (10106)."
+      - "Ambiguous with Artificial Intelligence as software category."
+      - "Would collapse against Market Intelligence as a sub-capability."
+      - "Does not preserve BC-SR-A001 distinctness from Information Management."
+    chosen: false
+  - id: "V-C"
+    name: "Decision Intelligence Management"
+    pros:
+      - "Management suffix passes TAXONOMY rule 7."
+      - "Gartner Magic Quadrant for Decision Intelligence Platforms (2024+) provides
+        some commercial recognition."
+    cons:
+      - "Gartner category is a software platform taxonomy, not an enterprise ability."
+      - "OMG DMN 1.4 does not name 'decision intelligence' as a first-order ability."
+      - "Would shift the ECF cell from information-management x operate to
+        governance-existence x activate, breaking BC-SR-A001."
+      - "Reads as 'intelligence about decisions', closer to a software support
+        function than to an enterprise ability."
+    chosen: false
+  - id: "V-D"
+    name: "Analytics and Intelligence (reviewed-retained)"
+    pros:
+      - "No implementation work; preserves current id and name."
+    cons:
+      - "Does not resolve noun-of-discourse concern (TAXONOMY rule 7 still fails)."
+      - "H8 hard gate would continue to flag the entry on every CI run."
+      - "User explicit: 'dedicate an ADR to research further the direction to take'.
+        Retaining the current name would defeat the purpose of the recon."
+    chosen: false
+
+consequences:
+  positive:
+    - "TAXONOMY rule 7 H8 gate passes for CAND-018."
+    - "Naming aligns with industry convergence (BIZBOK v14, Forrester, APQC PCF)."
+    - "BC-SR-A001 boundary preserved; no ECF-cell re-litigation."
+    - "User vocabulary unambiguous."
+  negative:
+    - "Renames are semver-incompatible; version bumps to 2.0.0."
+    - "Aliases retained for provenance; downstream consumers may need to update
+      references."
+  neutral:
+    - "The CR-DEA-BC-22 follow-on rename CR is the implementation vehicle.
+      ADR-ES-021 is the recommendation; the rename lands under BC-22 once the
+      user ratifies."
+
+verification:
+  - check: "H8 hard gate passes for the renamed entry (default and --strict modes)."
+    tool: "scripts/check_naming.py"
+  - check: "All 6 structural gates continue to PASS."
+    tools:
+      - "scripts/check_naming.py"
+      - "scripts/check_versions.py"
+      - "scripts/check_ecf_conformance.py"
+      - "scripts/check_view_refs.py"
+      - "scripts/check_catalog_index.py"
+      - "scripts/check_visual_domain_labels.py"
+  - check: "Aliases preserve BC-12 alias set + 'Business Intelligence' (legacy DMBOK)."
+    tool: "manual review of canonical entry"
+  - check: "CATALOG.yaml updated; OpenDEA Foundation Capability Map regenerated."
+    tool: "scripts/regenerate_catalog.py"
+  - check: "Related capabilities cross-references updated (Information Management, Knowledge Management, Strategic Planning, Enterprise Performance Management)."
+    tool: "manual review"
+
+follow_on_actions:
+  - id: "FA-1"
+    action: "User ratification of V-A (Insight Management) under CR-DEA-BC-21."
+    owner: "eaojnr"
+    blocking: true
+  - id: "FA-2"
+    action: "Follow-on rename CR (CR-DEA-BC-22) to apply the rename on the next-slice cadence."
+    owner: "Coder"
+    blocking: false
+    preconditions: "FA-1 (user ratification)"
+  - id: "FA-3"
+    action: "Update CR-DEA-BC-21 status to 'ratified' once user approves the recommendation."
+    owner: "Coder"
+    blocking: false
+  - id: "FA-4"
+    action: "Bump canonical entry version 1.1.0 -> 2.0.0; update id and name; retain aliases."
+    owner: "Coder"
+    blocking: false
+    preconditions: "FA-2"
+
+provenance:
+  decision_basis: |
+    INV-AI-v0.1 (catalog-research/recon/INV-AI-v0.1.yaml) records the three-class source
+    sweep, distinctness sweep, semantic-center-of-gravity test, ECF placement audit, and
+    user vocabulary test that produced the four vectors and the recommendation.
+  evidence_sources:
+    - "SRC-023 (APQC PCF 7.4; cross-industry-process)"
+    - "SRC-024 (BIZBOK v14 Insights discipline + Forrester Insights-Driven Business;
+      business-architecture)"
+    - "SRC-025 (DAMA DMBOK 2nd ed. + OMG DMN 1.4 + IIBA BABOK v3; standards-body)"
+    - "SRC-002 (BC-02 evidence; original admission)"
+    - "SRC-006 (BC-12 evidence; name advisory set)"
+  prior_decisions:
+    - "FOUNDATIONS.md D3 capability definition (FOUNDATIONS section 2)"
+    - "TAXONOMY.md rule 7 noun-as-ability (BC-12 advisory; BC-20 implementation)"
+    - "BC-SR-A001 section 4 boundary decision v0.1 (Analytics as peer of Information
+      Management)"
+    - "BC-SR-A001 section 5 carve-out (Analytics is not a sub-capability of Information
+      Management)"
+    - "CR-DEA-BC-09 advisory set (BC-09 section 8 provenance rules for renames)"
+    - "CR-DEA-BC-12 noun-as-ability naming advisory"
+    - "CR-DEA-BC-20 N-017 deferral to standalone recon (DP-E)"
+  supersedes:
+    - "INV-AI-v0.0 (no prior inventory)"
+    - "ADR-ES-020 (BC-20 rename cluster; did not cover Analytics and Intelligence)"

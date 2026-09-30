@@ -1,0 +1,216 @@
+---
+inventory_id: INV-AI-v0.1
+title: "Analytics & Intelligence recon: pre-rename evidence and distinctness inventory"
+cr: "CR-DEA-BC-21 (companion to CR-DEA-BC-20)"
+candidate: "CAND-018 (dea:candidate-analytics-and-intelligence; admitted entity dea:capability-analytics-and-intelligence)"
+registered_on: "2026-09-30"
+compiled_by: "Coder (for eaojnr)"
+supersedes: null
+status: "open; ratifies the recommendation forwarded to ADR-ES-021"
+purpose: |
+  BC-20 deferred N-017 (Analytics & Intelligence noun-of-discourse naming) to a standalone
+  recon (DP-E). CR-DEA-BC-21 codifies the recon procedure and produces this inventory plus
+  ADR-ES-021. The inventory is the evidence base that the ADR relies on.
+
+  Three primary concerns:
+      1. Analytics and Intelligence reads as a noun-of-discourse in the noun-as-ability
+         test (TAXONOMY rule 7): the two tokens name a noun (the activity) and a noun
+         (the object). Neither takes an ability suffix (Management, Stewardship, etc.).
+         BC-20's BC-09 advisory set flagged Analytics and Intelligence alongside
+         Strategy and Operations, both of which BC-20 renamed under N-016 and N-018.
+      2. Industry conventions are not consistent. PCF 7.4 has dropped "Business
+         Intelligence" as a process name; BIZBOK v14 introduces "Insights" as a
+         discipline; DMBOK subordinates BI to data management; DAMA's BI knowledge area
+         is being retired in DMBOK 3.0; Forrester uses "insights-driven business";
+         Gartner uses "decision intelligence" but as a software platform taxonomy.
+      3. Distinctness from neighboring capabilities is critical. CAND-018 sits in the
+         information-management x design/operate region. Without a clean name it
+         conflates with Information Management, Strategic Planning (Strategy Analysis
+         in BABOK), and Decision Intelligence (Gartner vendor category).
+
+procedure:
+  - step: 1
+    name: "three-class source sweep"
+    goal: |
+      Establish that the ability is enterprise-generality-compatible and that industry
+      vendors converge on a stable noun-of-product for the activity.
+    results: |
+      Three source classes exercised (per EVIDENCE.md):
+      - cross-industry-process (SRC-023: APQC PCF 7.4). Naming pattern is verb-led;
+        process 20959 is "Develop, manage, and deliver analytics". Sub-process 7.7.8.2
+        uses "insights" as the noun-of-product. No "Business Intelligence" PCF process.
+        "Intelligence" appears only in market-research context (10106).
+      - business-architecture (SRC-024: BIZBOK v14 Insights discipline + Forrester
+        Insights-Driven Business). BIZBOK v14 introduces "Insights" as a discipline
+        alongside capabilities, value, organization, information, metrics. Forrester
+        treats insights as the firm-wide DataOps/ModelOps output.
+      - standards-body (SRC-025: DAMA DMBOK 2nd ed. Ch. 8 BI knowledge area; OMG DMN
+        1.4; IIBA BABOK v3 KA4 Strategy Analysis). DMBOK subordinates BI to data
+        management. OMG DMN does not name "decision intelligence" as an enterprise
+        ability (Gartner introduced it as a software platform category). BABOK does
+        not name Analytics or Intelligence as a knowledge area.
+    outcome: |
+      Three independent classes converge on "insight" as the noun-of-product of the
+      analytics activity. CAND-018 evidence_strength promotes from E3 to E4.
+  - step: 2
+    name: "distinctness sweep"
+    goal: |
+      Confirm that the proposed name does not collapse the CAND-018 boundary against
+      Information Management (CAND-014), Strategic Planning (CAND-002), or Decision
+      Intelligence (vendor-category-only).
+    results: |
+      - Information Management stewards data and metadata as substrate. The recon's
+        Vector A (Insight Management) keeps Information Management as substrate and
+        Insight Management as production-of-meaning-from-substrate. DMBOK 2nd ed.
+        corroborates this substrate-vs-product boundary.
+      - Strategic Planning (BABOK Strategy Analysis KA4) operates at the portfolio
+        level. Analytics supports Strategic Planning with evidence but does not own
+        the strategy choice. CAND-002 and CAND-018 remain distinct.
+      - Decision Intelligence (Gartner Magic Quadrant for Decision Intelligence
+        Platforms, 2024+) is a software platform taxonomy. The recon treats it as a
+        vendor category, not as an enterprise ability. OMG DMN 1.4 separates decision
+        modeling (the enterprise ability) from decision-support platforms (the
+        software category).
+      - Intelligence (as in "market intelligence" or "competitive intelligence")
+        is a sub-vocabulary within analytics. APQC PCF uses "intelligence" only
+        inside market-research (10106). Treating "Intelligence Management" as the
+        canonical name would narrow the capability to a single sub-practice.
+    outcome: |
+      Vector A (Insight Management) preserves distinctness from each neighboring
+      capability. Vector B (Intelligence Management) collapses against Market
+      Intelligence as a sub-capability and reads as a vendor category (AI software).
+      Vector C (Decision Intelligence Management) is a vendor-platform category,
+      not an enterprise ability.
+  - step: 3
+    name: "semantic-center-of-gravity test"
+    goal: |
+      Verify that the proposed name's center of gravity is the enterprise ability
+      (not the supporting technology, not the byproduct, not the activity).
+    results: |
+      - Analytics: center-of-gravity is the activity. "Analytics" alone names the
+        activity (run analyses), not the ability. The noun-of-product is "insight".
+      - Intelligence: center-of-gravity is divided between activity (gather
+        intelligence) and capability noun (the resulting intelligence). Ambiguous
+        with AI as a software category.
+      - Insight: center-of-gravity is the product. "Insight" is the noun-of-product
+        of the analytics activity. APQC PCF 7.7.8.2 corroborates this.
+      - Decision: center-of-gravity is the choice. "Decision" is the artifact of
+        the choice. Decision Intelligence reads as "intelligence about decisions",
+        which is closer to a software support function than to an enterprise ability.
+    outcome: |
+      "Insight" has the cleanest center-of-gravity for the ability. "Insight
+      Management" places the ability noun in the suffix slot and reads as ability.
+  - step: 4
+    name: "ECF placement audit"
+    goal: |
+      Confirm the proposed name preserves the current ECF placement and boundary
+      prose in CAND-018's canonical entry (dea:capability-analytics-and-intelligence).
+    results: |
+      Current placement: information-management x design/operate (with operate as
+      the dominant stage; per BC-SR-A001 section 4 boundary decision v0.1).
+      BC-SR-A001 section 5 explicitly carved out Analytics as a peer of Information
+      Management, not as a sub-capability. Vector A (Insight Management) preserves
+      this peer-of-Information-Management boundary.
+      Vector B (Intelligence Management) would weaken the peer-of-substrate reading
+      (Intelligence is an activity; Information Management stewards the substrate).
+      Vector C (Decision Intelligence Management) would shift the ECF cell from
+      information-management x operate toward governance-existence x activate
+      (the decision moment), breaking BC-SR-A001.
+    outcome: |
+      Vector A is the only vector that preserves the BC-SR-A001 boundary decision
+      without re-litigation.
+  - step: 5
+    name: "user vocabulary test"
+    goal: |
+      Confirm that the proposed name maps to a concept the user community already
+      uses and that no terminology mismatch will surface in follow-on reviews.
+    results: |
+      - "Insight Management": widely recognized in BIZBOK, Forrester, vendor
+        product naming (e.g., "insights hub", "insights platform"), and practitioner
+        literature. User community is already familiar.
+      - "Intelligence Management": narrower in scope (market intelligence,
+        competitive intelligence, artificial intelligence ambiguity).
+      - "Decision Intelligence Management": too long; vendor-platform connotation.
+    outcome: |
+      "Insight Management" is the most natural in user vocabulary.
+
+vectors_evaluated:
+  - id: "V-A"
+    name: "Insight Management"
+    new_id: "dea:capability-insight-management"
+    noun_asis_pass: true
+    evidence_support: "strong (3-source convergence; BIZBOK v14, Forrester, APQC PCF)"
+    distinctness_preserved: true
+    ecf_placement_preserved: true
+    user_vocabulary_clear: true
+    recommendation: "PRIMARY"
+  - id: "V-B"
+    name: "Intelligence Management"
+    new_id: "dea:capability-intelligence-management"
+    noun_asis_pass: true
+    evidence_support: "weak (intelligence narrowed to market-research context; AI ambiguity)"
+    distinctness_preserved: false
+    ecf_placement_preserved: false
+    user_vocabulary_clear: false
+    recommendation: "DEPRECATED"
+  - id: "V-C"
+    name: "Decision Intelligence Management"
+    new_id: "dea:capability-decision-intelligence-management"
+    noun_asis_pass: true
+    evidence_support: "partial (Gartner Magic Quadrant for Decision Intelligence Platforms; vendor category)"
+    distinctness_preserved: false
+    ecf_placement_preserved: false
+    user_vocabulary_clear: false
+    recommendation: "DEPRECATED"
+  - id: "V-D"
+    name: "Analytics and Intelligence (reviewed-retained)"
+    new_id: "dea:capability-analytics-and-intelligence"
+    noun_asis_pass: false
+    evidence_support: "n/a"
+    distinctness_preserved: true
+    ecf_placement_preserved: true
+    user_vocabulary_clear: false
+    recommendation: "DEPRECATED (does not resolve noun-of-discourse concern)"
+
+recommendation:
+  vector: "V-A"
+  new_id: "dea:capability-insight-management"
+  new_name: "Insight Management"
+  current_id: "dea:capability-analytics-and-intelligence"
+  current_name: "Analytics and Intelligence"
+  rationale: |
+    Three independent source classes (SRC-023 cross-industry-process; SRC-024
+    business-architecture; SRC-025 standards-body) converge on "insight" as the
+    noun-of-product of the analytics activity. The Management suffix passes the
+    TAXONOMY rule 7 noun-as-ability test. The proposed name preserves BC-SR-A001
+    boundary v0.1 (peer of Information Management) without re-litigation. The
+    current name "Analytics and Intelligence" reads as two nouns joined by a
+    conjunction, with no ability suffix; both tokens are flagged by H8.
+
+follow_on_actions:
+  - action: "ADR-ES-021 draft (companion file)"
+    owner: "Coder"
+    status: "in progress"
+  - action: "N-022 register entry in normalization.yaml (review-retained-pending-ADR)"
+    owner: "Coder"
+    status: "in progress"
+  - action: "candidates.yaml CAND-018 vector extension (V-A, V-B, V-C, V-D)"
+    owner: "Coder"
+    status: "in progress"
+  - action: "evidence-register.yaml SRC-023/024/025 + G11 (BC-21 recon) and CAND-018 evidence E3 -> E4"
+    owner: "Coder"
+    status: "complete (this recon)"
+  - action: "Follow-on rename CR (CR-DEA-BC-22) to apply the rename once ADR-ES-021 is ratified"
+    owner: "Coder"
+    status: "deferred; blocked on ADR ratification and user approval"
+
+links:
+  - "catalog-research/evidence-register.yaml (SRC-023, SRC-024, SRC-025, G11)"
+  - "catalog-research/normalization.yaml (N-022 review-retained-pending-ADR)"
+  - "catalog-research/candidates.yaml (CAND-018 vector extension)"
+  - "catalog-research/recon/ADR-ES-021.yaml (the recommendation ADR)"
+  - "docs/FOUNDATIONS.md (D3 capability definition; section 7 noun-as-ability)"
+  - "TAXONOMY.md (rule 7 noun-as-ability; section 1A.3 machine-enforcement scope)"
+  - "submittal-reviews/BC-SR-A001.md (section 4 boundary decision v0.1; section 5 carve-out)"
+  - "change-requests/CR-DEA-BC-20.md (parent CR; N-017 deferred to this recon)"
+  - "change-requests/CR-DEA-BC-21.md (this CR; companion to BC-20)"
