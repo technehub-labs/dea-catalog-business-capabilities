@@ -56,6 +56,18 @@ regime) and `v<N>.<M>` semver from v2 onward. See
 - **Catalog count** unchanged at 28 first-order canonical capabilities.
 - **Normalization register** version 0.2 → 0.3; decisions N-016, N-018, N-019, N-020 appended; N-015 `verdict: review-retained` field formalized.
 
+**Major** (CR-DEA-BC-21 ratification + CR-DEA-BC-22). Closes the DP-E deferred item from CR-DEA-BC-20: the recon procedure for `Analytics and Intelligence` is complete and the user ratified V-A Insight Management on 2026-09-30. The rename is applied under CR-DEA-BC-22 on 2026-09-30.
+
+- **`dea:capability-analytics-and-intelligence` → `dea:capability-insight-management`.** Renamed (N-022). Version 1.0.0 → **2.0.0** (Major; semver-incompatible name change). `aliases: [Analytics and Intelligence, Data and Analytics, Insight, Intelligence, Business Intelligence]` retained for provenance and discoverability. `business_object: Insight` retained (it was already `Insight` in the prior entry; the rename aligns the name to match the object). The new name reads as an ability (`Management` gerund); the noun-of-product `Insight` is the cross-domain pattern observed in BABOK v3 (knowledge / insights / recommendations), BIZBOK v14 (insight lifecycle), DMBOK 2nd ed. (insights from data), OMG DMN (decision insight), and APQC PCF 7.4 (process 20959 verb-led "Develop, manage, and deliver analytics"; process 7.7.8.2 "Develop insights into workforce analytics outcomes"). Note: APQC PCF 7.4 has no process named "Business Intelligence"; Forrester and Gartner (Decision Intelligence / DI) have moved past that label. Related entries updated: Information Management (boundary prose), Technology Enablement (related_capabilities + boundary prose). CR-DEA-BC-21 recon procedure (catalog-research/recon/INV-AI-v0.1.yaml) and recommendation ADR (catalog-research/recon/ADR-ES-021.yaml) are recorded and the ADR status is updated to `ratified (2026-09-30)`. N-022 verdict closes from `review-retained-pending-ADR` to `rename-applied`.
+
+### Affected entries
+
+- **Renamed (Major):** Analytics and Intelligence 1.0.0 → Insight Management 2.0.0 (id, name, aliases appended).
+- **CATALOG.yaml** regenerated for `dea:capability-insight-management` block (id, name, path, version 2.0.0, last_modified 2026-09-30). The research sub-folder (containing `boundary-decision-cand-018.yaml`, `BOUNDARY-DECISION-CAND-018.md`, `README.md`) is moved with the parent directory and is listed in the catalog research refs against the new id.
+- **Catalog count** unchanged at 28 first-order canonical capabilities (rename, not admission).
+- **Normalization register** version 0.4 → 0.5; N-022 verdict `review-retained-pending-ADR` → `rename-applied`; `affected_entry` updated to `dea:capability-insight-management`; `prior_affected_entry` recorded for provenance.
+- **ADR-ES-021** status `proposed` → `ratified (2026-09-30)`; user ratification timestamp recorded.
+
 ### Parked-items rollup (companion to BC-20)
 
 Surfaced the repo-wide parked/deferred/advisory items the user asked us to bring back into the loop:
