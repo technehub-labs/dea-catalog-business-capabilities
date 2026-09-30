@@ -1,16 +1,20 @@
-register_version: 0.4.0
+register_version: 0.5.0
 cr: "CR-DEA-BC-02 (section 20; deliverable section 33 item 5); CR-DEA-BC-09 (naming
   conformance refresh; N-010..N-015); CR-DEA-BC-20 (noun-as-ability rule 7; N-016,
   N-018, N-019, N-020; N-017 deferred to CR-DEA-BC-21 recon); CR-DEA-BC-21 (N-022 -
   Analytics and Intelligence recon; review-retained-pending-ADR; recommendation V-A
-  Insight Management; pending CR-DEA-BC-22 follow-on rename CR)"
+  Insight Management); CR-DEA-BC-22 (N-022 verdict rename-applied; user ratified V-A
+  on 2026-09-30; rename Analytics and Intelligence to Insight Management applied
+  with version 1.0.0 to 2.0.0)"
 compiled: '2026-09-01 (v0.2: aggregate decisions N-007/N-008; N-003 re-test closed
   as N-009); 2026-09-08 (v0.2.1: N-010..N-015 appended: CR-DEA-BC-09 naming conformance
   renames and the Security Management retention); 2026-09-29 (v0.3: N-016, N-018,
   N-019, N-020 appended: CR-DEA-BC-20 noun-as-ability naming conformance; N-017 deferred
   to CR-DEA-BC-21 recon); 2026-09-30 (v0.4: N-022 appended: CR-DEA-BC-21 Analytics
   and Intelligence recon; review-retained-pending-ADR; recommendation V-A Insight
-  Management under TAXONOMY rule 7)'
+  Management under TAXONOMY rule 7); 2026-09-30 (v0.5: N-022 verdict rename-applied;
+  CR-DEA-BC-22 applied the rename Analytics and Intelligence to Insight Management;
+  user ratified V-A on 2026-09-30)'
 status: candidate-not-canonical; decisions are research decisions, subject to review
 inputs:
   candidates: docs/research/candidates.yaml
@@ -412,7 +416,8 @@ decisions:
   confidence: medium
 - id: N-022
   question: 'CR-DEA-BC-21 recon: Analytics and Intelligence (CAND-018) noun-as-ability
-    naming under TAXONOMY section 1 rule 7; review-retained pending ADR-ES-021 ratification'
+    naming under TAXONOMY section 1 rule 7; review-retained-pending-ADR (now: ratified
+    V-A Insight Management under CR-DEA-BC-22 on 2026-09-30)'
   candidates:
   - CAND-018
   evidence:
@@ -423,17 +428,18 @@ decisions:
     three-class source sweep, distinctness sweep, semantic-center-of-gravity test,
     ECF placement audit, and user vocabulary test. The recommendation, recorded in
     catalog-research/recon/ADR-ES-021.yaml, is to rename to Insight Management (V-A).
-    This N-022 entry records the review-retained-pending-ADR verdict so that
-    scripts/check_naming.py H8 continues to flag Analytics and Intelligence as a noun-of-discourse
-    while the user considers the recommendation. The current entry remains untouched
-    (id, name, version 1.1.0) until the follow-on rename CR (CR-DEA-BC-22) lands.'
-  outcome: Retained as Analytics and Intelligence (review-retained-pending-ADR; recommendation
-    V-A Insight Management)
-  verdict: review-retained-pending-ADR
-  affected_entry: dea:capability-analytics-and-intelligence
+    User ratified V-A on 2026-09-30 (message id 1554690132228051015). CR-DEA-BC-22
+    applies the rename on 2026-09-30: id dea:capability-analytics-and-intelligence
+    -> dea:capability-insight-management; name Analytics and Intelligence -> Insight
+    Management; version 1.0.0 -> 2.0.0 (semver-incompatible name change); aliases
+    retained for provenance. N-022 verdict closes on rename application.'
+  outcome: Renamed to Insight Management (V-A ratified; CR-DEA-BC-22 applied)
+  verdict: rename-applied
+  affected_entry: dea:capability-insight-management
+  prior_affected_entry: dea:capability-analytics-and-intelligence
   recommendation: V-A Insight Management (dea:capability-insight-management)
-  action: No rename in CR-DEA-BC-21; entry unchanged at version 1.1.0; CR-DEA-BC-22
-    follow-on rename CR to apply the rename on user ratification of V-A.
+  action: Rename applied under CR-DEA-BC-22 on 2026-09-30; user ratification of V-A
+    recorded under ADR-ES-021 with status "ratified".
   confidence: high
 deferred:
 - item: Citizen/Member Relationship (CAND-006) vs Customer Management unification

@@ -1,7 +1,8 @@
 ---
 adr_id: ADR-ES-021
 title: "Analytics & Intelligence: rename to Insight Management under TAXONOMY rule 7"
-status: "proposed (2026-09-30); pending user ratification under CR-DEA-BC-21"
+status: ratified (2026-09-30; user ratified V-A Insight Management under CR-DEA-BC-21
+  on message id 1554690132228051015; CR-DEA-BC-22 applies the rename on 2026-09-30)
 date: "2026-09-30"
 cr: "CR-DEA-BC-21 (companion to CR-DEA-BC-20)"
 inventory: "INV-AI-v0.1 (catalog-research/recon/INV-AI-v0.1.yaml)"
