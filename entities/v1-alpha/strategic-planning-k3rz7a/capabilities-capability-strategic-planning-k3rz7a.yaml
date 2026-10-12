@@ -17,6 +17,8 @@ ecf:
 related_capabilities:
 - capabilities:capability-strategy-formulation-sf7q2x
 - capabilities:capability-organizational-design-vanefq
+- capabilities:capability-enterprise-performance-management-5fxren
+
 evidence:
   sources:
   - SRC-001

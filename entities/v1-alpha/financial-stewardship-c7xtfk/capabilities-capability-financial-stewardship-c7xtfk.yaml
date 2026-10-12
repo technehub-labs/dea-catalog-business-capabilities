@@ -19,6 +19,8 @@ ecf:
     stage: operate
 related_capabilities:
 - capabilities:capability-financial-resource-management-cd3c7c
+- capabilities:capability-enterprise-performance-management-5fxren
+
 evidence:
   sources:
   - SRC-001

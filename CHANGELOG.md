@@ -89,6 +89,28 @@ regime) and `v<N>.<M>` semver from v2 onward. See
 - **ADR-ES-021** status `proposed` -> `ratified (2026-09-30)`; user ratification timestamp recorded.
 - **Capability map** regenerated (28 entities, 31 cells; cell `enablement-operations x operate` now shows Insight Management).
 
+**Major** (CR-DEA-BC-23). Admits Enterprise Performance Management (CAND-037) as the 29th first-order canonical capability.
+
+- **`dea:candidate-epm-5fxren` -> `capabilities:capability-enterprise-performance-management-5fxren`.** Admitted (N-023 verdict admitted; TER-EPM-001 evidence-pending -> admitted). New id under the post-mv1 id system. Version 1.0.0 (admission is the first release). metamodel_pin 1.0.0 (org-wide pin). The capability was carried at E3 from BC-19 (Track B research-CR; SRC-020 Kaplan & Norton Balanced Scorecard; SRC-021 OKR framework; SRC-022 OMG Business Performance Management via OCEB 2 -- three-source convergence). Enterprise-generality demonstrated across B2B, B2C, G2C archetypes; foundation-grade under BC-SR-A001 §17.
+- **Cell populated**: `strategy-direction x operate` (primary); `strategy-direction x improve` + `finance-accounting x operate` (secondaries). ECF placement per CR-DEA-BC-13 §D.2 + CR-DEA-BC-19 (BC-23 carries the placement forward unchanged).
+- **Direction loop closure (BC-SR-A001 §16)**: Strategy Formulation -> Strategic Planning -> Performance Management (EPM) -> Insight Management -> Adaptation. EPM and Insight Management are the governance/measurement and insight halves respectively; together they complete the loop that Strategy Formulation opens. Loop-closure narrative recorded on the entity's `boundary.loop_role` field.
+- **H8 noun-as-ability**: Management gerund passes cleanly. H3 (rule 4 outcome-free) was firing on the word "Performance"; N-024 records the review-retained verdict (the marker is the noun-of-product of a recognized governance ability, parallel to Risk Management's Risk; the linter's OUTCOME_MARKERS regex is the known false-positive source and the BC-25 follow-on linter patch is the right fix). The linter's H3 outcome-marker path was extended in this commit to read the review-retained exemption registry (N-024), bringing the linter into parity with H8.
+- **Sourcing and Procurement business_object Acquisition Cycle** (BC-20 N-020) and **Sourcing and Procurement** (BC-20) are unaffected.
+- **Siblings updated**: Strategy Formulation, Strategic Planning, Insight Management, Financial Resource Management, Financial Stewardship, Organizational Design (related_capabilities + boundary prose). view-telecom-mcsp.yaml inherited[] updated; VIEW-TELECOM-MCSP.md coverage section updated.
+- **reconciliation/migration-id-map.yaml** extended (v2 -> v3): 3 new id_map entries (`dea:candidate-epm-5fxren` -> canonical, `dea:capability-enterprise-performance-management` -> canonical, `dea:capability-epm` -> canonical). 1 new known_residual for the pre-admission candidate id.
+- **CATALOG.yaml regenerated**: 32 entities (29 canonical + 3 candidates). Capability map regenerated.
+- **Distinctness sweep** v0.6.0: Track B (EPM) admitted; 4 -> 8 peers; sweep-completed-as-admitted.
+- **Evidence register** v0.9.0: TER-EPM-001 admitted; CAND-037 E3 confirmed; loop_closure_status closed; status field updated.
+- **Candidates** v0.5.2: CAND-037 evidence_strength E1 -> E3; canonical true; admitted 2026-10-12; admitted_cr CR-DEA-BC-23.
+- **Normalization** v0.7.0: N-023 (admission verdict); N-024 (review-retained verdict for H3 outcome-marker false positive on the word "Performance" in the canonical name). 22 decisions total.
+
+### Affected entries (BC-23)
+
+- **Admitted (Major; first release)**: Enterprise Performance Management 1.0.0 at `capabilities:capability-enterprise-performance-management-5fxren`.
+- **Sibling cross-references updated**: 6 entries (Strategy Formulation, Strategic Planning, Insight Management, Financial Resource Management, Financial Stewardship, Organizational Design).
+- **Catalog count**: 28 -> 29 first-order canonical capabilities.
+- **All 7 structural gates PASS post-commit**: check_naming (29 entries, 4 advisories -- unchanged); check_versions (29); check_ecf_conformance (29 + MCSP view); check_view_refs (clean); check_visual_domain_labels (9 visuals); check_catalog_index (32 entities); check_id_system (IDM-001..007 CONFORMANT).
+
 **Major** (CR-DEA-BC-mv1). Org-wide id system migration (Wave 2): all 31 records (28 canonical capabilities + 3 candidates) move from the legacy `dea:*` family to `capabilities:capability-<slug>-<hash>` / `capabilities:candidate-<slug>-<hash>`; entity dirs move to `entities/v1-alpha/<slug>-<hash>/` (flat layout); every structured cross-reference rewritten; README.md per entity dir (IDM-007); new blocking gate `scripts/check_id_system.py` (IDM-001..007 + IDM-008 PR-scoped) wired into catalog-conformance CI; vendored STRUCT tools and catalog-index schema ported to the dual-family id system (upstream: dea-metaframework PR #34); `ecf_rationale` maxLength 1000 -> 1280 in the entity schema (namespaced ids are longer); 36 historical artifacts bannered with the CR-DEA-BC-mv1 layout note (content verbatim; see `reconciliation/cross-check-mv1.md`); migration id map at `reconciliation/migration-id-map.yaml` with 7 documented known residuals.
 
 

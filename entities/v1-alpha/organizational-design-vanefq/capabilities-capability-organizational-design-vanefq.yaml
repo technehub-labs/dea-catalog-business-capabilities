@@ -30,6 +30,8 @@ related_capabilities:
 - capabilities:capability-change-management-hukdeq
 - capabilities:capability-technology-management-maus5n
 - capabilities:capability-technology-enablement-y6nkws
+- capabilities:capability-enterprise-performance-management-5fxren
+
 evidence:
   sources:
   - SRC-017

@@ -1,11 +1,11 @@
 catalog:
   abbreviation: BC
   counts:
-    candidates: 31
+    candidates: 32
     canonical: 0
-    entities: 31
-    open_change_requests: 25
-    research_files: 0
+    entities: 32
+    open_change_requests: 26
+    research_files: 2
     retired: 0
   cross_cutting:
     change_requests: change-requests/
@@ -107,6 +107,17 @@ catalog:
     version: 1.0.2
   - candidate_count: 1
     canonical_count: 1
+    id: capabilities:capability-enterprise-performance-management-5fxren
+    last_modified: '2026-10-12'
+    lifecycle_status: active
+    path: entities/v1-alpha/enterprise-performance-management-5fxren/capabilities-capability-enterprise-performance-management-5fxren.yaml
+    research_count: 2
+    retired_count: 1
+    state: candidate
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 1
+    canonical_count: 1
     id: capabilities:capability-facility-management-tx73hb
     last_modified: '2026-09-21'
     lifecycle_status: active
@@ -152,7 +163,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-information-management-6vjgdh
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-12'
     lifecycle_status: active
     path: entities/v1-alpha/information-management-6vjgdh/capabilities-capability-information-management-6vjgdh.yaml
     research_count: 0
@@ -388,6 +399,11 @@ catalog:
   - entity_id: capabilities:capability-enterprise-governance-uas48u
     files: []
     path: entities/v1-alpha/enterprise-governance-uas48u/research/
+  - entity_id: capabilities:capability-enterprise-performance-management-5fxren
+    files:
+    - .gitkeep
+    - README.md
+    path: entities/v1-alpha/enterprise-performance-management-5fxren/research/
   - entity_id: capabilities:capability-facility-management-tx73hb
     files: []
     path: entities/v1-alpha/facility-management-tx73hb/research/
