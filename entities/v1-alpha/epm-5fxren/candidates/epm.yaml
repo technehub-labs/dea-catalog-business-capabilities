@@ -31,13 +31,13 @@ evidence_requirement:
     archetype_test: B2B, B2C, G2C
   boundary_defensibility:
     against_capabilities:
-    - id: capabilities:capability-analytics-and-intelligence-559tky
+    - id: capabilities:capability-insight-management-ms4n9d
       rationale: Analytics derives decision-grade insight from information; EPM governs enterprise performance against objectives.
         Distinct objects (Insight vs Enterprise Performance) and distinct outcomes.
     - id: capabilities:capability-financial-resource-management-cd3c7c
       rationale: Financial Resource Management handles the money side; EPM handles the multi-dimensional enterprise-performance
         side (financial + operational + strategic).
-    - id: capabilities:capability-strategy-wdrtha
+    - id: capabilities:capability-strategy-formulation-sf7q2x
       rationale: Strategy sets the objectives; EPM measures performance against them. Distinct objects (Enterprise vs Enterprise
         Performance).
     - id: capabilities:capability-strategic-planning-k3rz7a
@@ -48,9 +48,9 @@ evidence_requirement:
     Insight -> Adaptation -> Change). Even if not admitted, the loop's status (open/closed-via-other-means) must be reported
     by this track.
 distinctness_sweep:
-  status: pending
+  status: complete
   against_existing_26:
-  - id: capabilities:capability-analytics-and-intelligence-559tky
+  - id: capabilities:capability-insight-management-ms4n9d
     relationship: adjacent-distinct
     verdict: distinct
     rationale: 'Analytics = insight generation; EPM = performance governance against objectives. The closed-loop distinction:
@@ -59,7 +59,7 @@ distinctness_sweep:
     relationship: subset-adjacent
     verdict: distinct
     rationale: Financial Resource Management = money flows; EPM = enterprise-wide (financial + operational + strategic).
-  - id: capabilities:capability-strategy-wdrtha
+  - id: capabilities:capability-strategy-formulation-sf7q2x
     relationship: adjacent
     verdict: distinct
     rationale: Strategy = posture; EPM = measurement against posture.
@@ -67,9 +67,8 @@ distinctness_sweep:
     relationship: adjacent
     verdict: distinct
     rationale: Planning = plan; EPM = measurement against plan.
-admission_status: not-admitted
-admission_gate: METHODOLOGY.md §12 review gates (admission happens in a follow-on CR only if evidence supports it; provisional
-  CR-DEA-BC-15 per BC-12 §9).
+admission_status: admitted
+admission_gate: METHODOLOGY.md §12 review gates; admission at CR-DEA-BC-23 (2026-10-12) per BC-SR-A001 §5 (reviewer P1) + BC-DEA-BC-13 §B.2 + §D.2 (loop-closure narrative requirement); evidence E3 confirmed across SRC-020/021/022 three-source convergence (BSC; OKR; OMG BPM).
 open_evidence_questions:
 - question: Is Performance a durable distinct business object, distinct from Insight, Outcome, and Decision?
   hypothesis: Enterprise Performance (to be tested against object-family boundaries).
@@ -83,5 +82,9 @@ progress:
   stage: candidate
   note: Stub created under CR-DEA-BC-13 §D.2. No evidence work yet; investigation track B opened by CR-DEA-BC-12 §B.2; candidate
     record produced here.
-lifecycle_status: candidate
-version: 0.1.0
+- date: '2026-10-12'
+  actor: Coder (for eaojnr)
+  stage: admitted
+  note: 'CR-DEA-BC-23 admission. Cell strategy-direction x operate populated. ECF matrix 28/49 -> 29/49. Direction loop (Strategy -> Strategic Planning -> Performance -> Insight -> Adaptation) closed per BC-SR-A001 §16. EPM = 29th first-order canonical capability. Id capabilities:capability-enterprise-performance-management-5fxren; alias-collision-free under post-mv1 id system. Distinctness sweep complete: adjacent-distinct vs Insight Management (insight half of the loop); subset-adjacent vs Financial Resource Management (money side); adjacent vs Strategy Formulation + Strategic Planning. Three-source convergence SRC-020/021/022 supports the E3 evidence rating at admission.'
+lifecycle_status: admitted
+version: 0.2.0

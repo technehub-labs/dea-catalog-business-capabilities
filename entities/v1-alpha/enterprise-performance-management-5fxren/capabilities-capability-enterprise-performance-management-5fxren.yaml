@@ -1,0 +1,162 @@
+id: capabilities:capability-enterprise-performance-management-5fxren
+type: BusinessCapability
+name: Enterprise Performance Management
+definition: The ability to define, measure, monitor, evaluate, govern, and improve enterprise-wide
+  performance against intended objectives and targets, completing the direction loop that links
+  strategy to adaptation.
+version: 1.0.0
+metamodel_pin: 1.0.0
+lifecycle_status: active
+capability_layer: strategic
+outcome: Enterprise performance is defined, measured, evaluated, governed, and adapted against
+  objectives, closing the direction loop that links strategy to insight to change.
+business_object: Enterprise Performance
+ecf:
+  primary:
+    domain: strategy-direction
+    stage: operate
+  secondary:
+  - domain: strategy-direction
+    stage: improve
+  - domain: finance-accounting
+    stage: operate
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: mapped
+  canonicalReferences:
+  - kind: coordinate
+    domain: StrategyAndDirection
+    stage: Operate
+    identifier: ecf:strategyDirection.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: primary
+  - kind: coordinate
+    domain: StrategyAndDirection
+    stage: Improve
+    identifier: ecf:strategyDirection.improve
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  - kind: coordinate
+    domain: FinanceAndAccounting
+    stage: Operate
+    identifier: ecf:financeAccounting.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  extensions:
+  - name: kebab-case-domain-vocabulary
+    kind: display-vocabulary
+    description: 'Catalog-side kebab-case labels for the seven ECF Domains and seven ECF Stages (see mapping). Display-only; resolves to canonical PascalCase enums for the gate.'
+    doesNotRedefine: true
+    mapping:
+      governance-existence: GovernanceAndExistence
+      strategy-direction: StrategyAndDirection
+      agency-organization: AgencyAndOrganization
+      party-relationship: PartyAndRelationship
+      product-value: ProductAndValue
+      enablement-operations: EnablementAndOperations
+      finance-accounting: FinanceAndAccounting
+      _stage_conceive: Conceive
+      _stage_design: Design
+      _stage_build: Build
+      _stage_activate: Activate
+      _stage_operate: Operate
+      _stage_improve: Improve
+      _stage_retire: Retire
+  - name: multiple-contextual-coordinates
+    kind: catalog-specific-relation
+    description: A capability may have one primary and zero-or-more secondary canonical coordinates without identity duplication (CG-003 5).
+    doesNotRedefine: true
+related_capabilities:
+- capabilities:capability-strategy-formulation-sf7q2x
+- capabilities:capability-strategic-planning-k3rz7a
+- capabilities:capability-insight-management-ms4n9d
+- capabilities:capability-financial-resource-management-cd3c7c
+- capabilities:capability-financial-stewardship-c7xtfk
+- capabilities:capability-organizational-design-vanefq
+evidence:
+  sources:
+  - SRC-020
+  - SRC-021
+  - SRC-022
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  rationale: 'Admission per CR-DEA-BC-23 (Track B of CR-DEA-BC-13 B.2 + BC-SR-A001 §5 P1). Evidence
+    trail: TER-EPM-001 (admitted; 2026-10-12); three-source convergence across business-architecture
+    (SRC-020 Kaplan & Norton Balanced Scorecard), commercial-capability-models (SRC-021 OKR framework
+    per Andy Grove / John Doerr), standards-body (SRC-022 OMG Business Performance Management via OCEB 2);
+    E3 at admission. Enterprise-generality demonstrated across B2B, B2C, G2C archetypes; foundation-grade
+    under BC-SR-A001 §17. Closes the direction loop (BC-SR-A001 §16): Strategy Formulation -> Strategic
+    Planning -> Performance Management -> Insight Management -> Adaptation. ECF placement per CR-DEA-BC-13
+    §D.2 + CR-DEA-BC-19: strategy-direction/operate primary; strategy-direction/improve + finance-accounting/operate
+    secondaries. H8 noun-as-ability: Management gerund passes cleanly. No review-retained exemption needed.
+    Prior research artifacts preserved at entities/v1-alpha/epm-5fxren/candidates/epm.yaml per BC-09 §8
+    provenance discipline; research/ subdirectory inherited for new artifacts at this canonical id.'
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-09-10'
+    actor: 'Coder (for eaojnr), under CR-DEA-BC-13 §D.2 (investigation Track B; BC-SR-A001 §5 P1)'
+  - stage: observed
+    date: '2026-09-11'
+    actor: 'Coder (for eaojnr), evidence register v0.7 (PR #72, CR-DEA-BC-19)'
+  - stage: corroborated
+    date: '2026-09-11'
+    actor: 'Coder (for eaojnr), enterprise-generality matrix v0.3 + distinctness sweep v0.5'
+  - stage: normalized
+    date: '2026-09-11'
+    actor: 'Coder (for eaojnr), normalization register v0.5 + distinctness sweep v0.5'
+  - stage: ecf-mapped
+    date: '2026-09-11'
+    actor: 'Coder (for eaojnr), CR-DEA-BC-19 ECF overlay hypothesis (strategy-direction/operate primary)'
+  - stage: reviewed
+    date: '2026-09-11'
+    actor: 'BC-SR-A001 §5 (reviewer P1; loop-closure narrative required per §D.2)'
+  - stage: evidence-seeded
+    date: '2026-09-11'
+    actor: 'Coder (for eaojnr), TER-EPM-001 evidence-seeded; CAND-037 E1 -> E3'
+  - stage: admitted
+    date: '2026-10-12'
+    actor: 'Coder (for eaojnr), CR-DEA-BC-23 admission; 29th first-order canonical capability'
+  migration:
+    from_id: dea:candidate-epm
+    migration_map_ref: reconciliation/migration-id-map.yaml (post-mv1 id system; CR-DEA-BC-mv1)
+    migration_cr: CR-DEA-BC-mv1 (id system migration Wave 2; 2026-09-21)
+  admission_cr: CR-DEA-BC-23
+  evidence_seed_cr: CR-DEA-BC-19
+boundary:
+  against_capabilities:
+  - id: capabilities:capability-insight-management-ms4n9d
+    rationale: Insight Management derives decision-grade insight from information; EPM governs enterprise
+      performance against objectives. Distinct objects (Insight vs Enterprise Performance) and complementary
+      outcomes. EPM is the measurement/governance half of the direction loop; Insight Management is the
+      insight half. They are complementary, not overlapping.
+  - id: capabilities:capability-financial-resource-management-cd3c7c
+    rationale: Financial Resource Management handles the money side (operating cycle; budgeting; accounting);
+      EPM handles the multi-dimensional enterprise-performance side (financial + operational + strategic).
+      Distinct objects (Financial Resource vs Enterprise Performance).
+  - id: capabilities:capability-strategy-formulation-sf7q2x
+    rationale: Strategy Formulation sets the objectives (posture); EPM measures performance against them.
+      Distinct objects (Enterprise direction vs Enterprise Performance against direction).
+  - id: capabilities:capability-strategic-planning-k3rz7a
+    rationale: Strategic Planning is the plan; EPM is the measurement against the plan. Distinct objects
+      (Plan vs Enterprise Performance).
+  - id: capabilities:capability-financial-stewardship-c7xtfk
+    rationale: Financial Stewardship is the long-horizon financial position; EPM is the multi-dimensional
+      performance measurement. Distinct objects (Financial Position vs Enterprise Performance) and distinct
+      horizons.
+  - id: capabilities:capability-organizational-design-vanefq
+    rationale: Organizational Design structures the enterprise; EPM measures how the structured enterprise
+      performs. Distinct objects (Organization Structure vs Enterprise Performance).
+  loop_role: 'Direction loop closure (BC-SR-A001 §16): Strategy Formulation -> Strategic Planning -> Performance
+    Management (EPM) -> Insight Management -> Adaptation -> Strategy. EPM and Insight Management are the
+    governance/measurement and insight halves respectively; together they complete the loop that Strategy
+    Formulation opens.'
+loop_closure_narrative: 'BC-SR-A001 §16 explicitly requires this loop to be closed (or its open status
+    to be reported) by Track B. CR-DEA-BC-23 closes the loop by admitting EPM as the 29th first-order canonical
+    capability. The open question on loop closure (TER-EPM-001) is resolved at admission.'
