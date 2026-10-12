@@ -1,0 +1,119 @@
+---
+adr_id: ADR-ES-021
+title: "Analytics and Intelligence: rename to Insight Management under TAXONOMY rule 7"
+status: ratified (2026-09-30; user ratified V-A Insight Management on 2026-09-30; CR-DEA-BC-22 applies the rename on 2026-09-30)
+date: "2026-09-30"
+cr: "CR-DEA-BC-21 (companion to CR-DEA-BC-20)"
+inventory: "INV-AI-v0.1 (catalog-research/recon/INV-AI-v0.1.yaml)"
+candidate: "CAND-018"
+
+context: |
+  CR-DEA-BC-20 deferred the noun-as-ability naming question on
+  Analytics and Intelligence (CAND-018) to dedicated ADR recon per
+  user DP-E: the user observed that "Analytics" and "Intelligence"
+  are two disciplines with common and unique ability characteristics,
+  and that the catalog needed a dedicated ADR to research the rename
+  direction.
+
+problem_statement: |
+  The current canonical name "Analytics and Intelligence" reads as a
+  noun-of-discourse (H8 hard fail at CR-DEA-BC-20). The entry is in the
+  BC-09 advisory set; the user wanted a deliberate, source-grounded
+  decision rather than an opportunistic rename.
+
+options_considered:
+  - vector: V-A
+    name: Insight Management
+    proposed_id: capabilities:capability-insight-management-ms4n9d
+    proposed_name: Insight Management
+    proposed_business_object: Insight (unchanged)
+    proposed_version: 2.0.0
+    aliases_retained:
+      - Analytics and Intelligence
+      - Data and Analytics
+      - Insight
+      - Intelligence
+      - Business Intelligence
+    recommendation: CHOSEN (PRIMARY)
+    rationale: |
+      Three source classes (BABOK v3, BIZBOK v14, DMBOK 2nd ed. plus
+      OMG DMN and APQC PCF 7.4) converge on "insight" as the
+      noun-of-product. The Management gerund matches the recognized
+      noun-as-ability pattern. All five sibling distinctness neighbors
+      (information-management, knowledge-management, strategic-planning,
+      enterprise-performance-management, technology-enablement) are
+      partition-distinct. ECF placement at enablement-operations x
+      operate is preserved. The user-vocabulary test passes.
+  - vector: V-B
+    name: Intelligence Management
+    recommendation: DEPRECATED
+    rationale: |
+      "Intelligence" as head noun collapses to "Analytics" under DMBOK
+      2nd ed. and Forrester Wave; one source class only; distinctness
+      from the historical "BI" term is muddy.
+  - vector: V-C
+    name: Decision Intelligence Management
+    recommendation: DEPRECATED
+    rationale: |
+      Gartner Decision Intelligence is a vendor-class market category,
+      not an enterprise-generic ability. APQC PCF 7.4 does not use
+      the DI arity.
+  - vector: V-D
+    name: Analytics and Intelligence reviewed-retained
+    recommendation: DEPRECATED
+    rationale: |
+      H8 hard fail; the only legal override is a verdict review-retained
+      decision. CR-DEA-BC-20 deferred to BC-21 ADR for resolution;
+      V-A supersedes with a clean rename that passes H8.
+
+decision: V-A
+renames:
+  from:
+    id: dea:capability-analytics-and-intelligence
+    name: Analytics and Intelligence
+    version: 1.0.0
+    business_object: Insight
+    aliases: []
+  to:
+    id: capabilities:capability-insight-management-ms4n9d
+    name: Insight Management
+    version: 2.0.0
+    business_object: Insight
+    aliases:
+      - Analytics and Intelligence
+      - Data and Analytics
+      - Insight
+      - Intelligence
+      - Business Intelligence
+
+cross_references:
+  - BC-09 advisory set
+  - CR-DEA-BC-20 (section 6; the noun-as-ability rule 7 + H8 + advisory set; DP-E deferred item)
+  - CR-DEA-BC-21 (the recon CR; this ADR)
+  - CR-DEA-BC-22 (follow-on rename CR; applies the rename)
+  - ADR-ES-021 itself (this record)
+  - N-022 (catalog-research/normalization.yaml verdict rename-applied on user ratification)
+  - INV-AI-v0.1 (catalog-research/recon/INV-AI-v0.1.yaml)
+  - cand_018_vectors (catalog-research/candidates.yaml extension)
+  - SRC-023/024/025 (catalog-research/evidence-register.yaml new sources)
+  - G11 (catalog-research/evidence-register.yaml new gap)
+
+follow_on:
+  - "CR-DEA-BC-22: applies the rename on 2026-09-30; entities/v1-alpha/dea:capability-analytics-and-intelligence -> dea:capability-insight-management; aliases appended; version 1.0.0 -> 2.0.0; cross-references in information-management and technology-enablement updated; CATALOG.yaml + README + CHANGELOG + capability map updated; reconciliation/migration-id-map.yaml extended (3 new id_map entries; 1 new known_residual for the pre-rename slug)."
+  - "N-022 closure: verdict review-retained-pending-ADR -> rename-applied."
+  - "Linter state: H8 advisory count drops from 5 to 4 (the Analytics and Intelligence advisory is gone; the renamed entry passes cleanly). The remaining 4 advisories are rule-2 axis (semantic-review territory; unchanged from BC-20)."
+
+consequences:
+  positive:
+    - "H8 conformance for the third of the three BC-09 advisory-set bare-noun entries; the catalog is now clean of H8 failures under the noun-as-ability hard gate."
+    - "The noun-of-product Insight is consistent across three source classes; the rename aligns the name to the documented object."
+    - "Aliases preserve all colloquial forms (Analytics and Intelligence, Business Intelligence, Data and Analytics) for downstream discoverability."
+  negative:
+    - "Semver-incompatible name change; downstream callers referencing the old id must update. Aliases preserve the colloquial name; the migration-id-map entry records the lineage."
+    - "Five sibling cross-references in information-management, technology-enablement, technology-management, strategic-planning, and the offering-management view require update to the new id. (Done under CR-DEA-BC-22.)"
+  neutral:
+    - "The ECF placement at enablement-operations x operate is unchanged; the cell-by-cell ECF grid is unaffected."
+    - "The Capability Map visualization regenerates with the new name in the same cell; no visual change to the cell membership."
+
+ratified_by: eaojnr (Discord message id 1554690132228051015; 2026-09-30)
+ratified_at: "2026-09-30"

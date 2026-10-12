@@ -1,0 +1,213 @@
+---
+inventory_id: INV-AI-v0.1
+title: "Analytics and Intelligence recon: pre-rename evidence and distinctness inventory"
+cr: "CR-DEA-BC-21 (companion to CR-DEA-BC-20)"
+candidate: "CAND-018"
+status: "ratified (2026-09-30); recommendation forwarded to ADR-ES-021; rename applied under CR-DEA-BC-22"
+date: "2026-09-30"
+author: "Coder (for eaojnr)"
+carrier_recon: "R-AI-2026-09-30 (catalog-research/recon/)"
+
+purpose: |
+  Recon procedure for the noun-as-ability naming question on
+  Analytics and Intelligence (CAND-018) that was deferred from CR-DEA-BC-20
+  per DP-E. The procedure takes the BC-09 advisory-set entry through five
+  distinctness and conformance tests, evaluates four candidate vectors, and
+  forwards a recommendation to ADR-ES-021 for user ratification.
+
+scope: |
+  In scope: the four noun-as-ability candidate names for the
+  Analytics and Intelligence ability (CAND-018), evaluated against the
+  post-mv1 id system, the ECF cell (enablement-operations x operate), and
+  the existing distinctness sweep neighbors (information-management,
+  knowledge-management, strategic-planning, enterprise-performance-management,
+  technology-enablement).
+
+  Out of scope: a rename to anything outside the four vectors below. A
+  fifth vector (a synthetic acronym) was considered and rejected at the
+  scope-design step on the basis that acronym-shaped names are explicitly
+  disqualified by TAXONOMY rule 3 (implementation-free, plain vocabulary).
+
+procedure:
+  - step: 1
+    name: three-class source sweep
+    description: |
+      Enumerate the recognized source classes for the Analytics and
+      Intelligence ability across the source corpus; require three
+      independent classes to observe the same name-shape pattern. The
+      three source classes surveyed:
+        - standards-body: BABOK v3 (IIBA, knowledge/insights/recommendations
+          chapter), DMBOK 2nd ed. (DAMA, insights-from-data chapter), OMG
+          DMN (decision-model and notation; decision insight as noun-of-product).
+        - business-architecture: BIZBOK v14 (ABPMP, insight lifecycle
+          practice area), Forrester Wave -- Enterprise Insight Platforms
+          (vendor-class survey, not corpus).
+        - cross-industry-process: APQC PCF 7.4 (process 20959
+          "Develop, manage, and deliver analytics"; process 7.7.8.2
+          "Develop insights into workforce analytics outcomes"; process
+          3.1.1 "Perform customer and market intelligence analysis").
+      Note: APQC PCF 7.4 carries NO process named "Business Intelligence"
+      -- the PCF has moved past that label.
+  - step: 2
+    name: distinctness sweep
+    description: |
+      Verify the candidate name does not collide with a sibling entry
+      on the same ECF cell or on a contiguous cell. Siblings evaluated:
+        - information-management (enablement-operations x operate, secondary):
+          the new name must partition from Information Management by object
+          (Insight vs Information) and outcome (insight-derived vs
+          information-stewarded).
+        - knowledge-management (cross-domain): the new name must NOT use
+          Knowledge, which is the BIZBOK Knowledge Management practice.
+        - strategic-planning (strategy-direction x conceive): no collision;
+          different cell.
+        - enterprise-performance-management (currently CAND-018 sibling
+          candidate EPM, governance-existence x conceive): the new name
+          must NOT imply performance measurement (which is EPM's object).
+        - technology-enablement (enablement-operations x operate, primary):
+          the new name must NOT be technology-led; it concerns the
+          ability to derive insight from information, not the IT
+          delivery function.
+      All five siblings are partition-distinct from the recommended
+      candidate (see step 3).
+  - step: 3
+    name: semantic-center-of-gravity test
+    description: |
+      Identify the noun-of-product the ability concerns. Across the
+      three source classes surveyed, the recurring noun-of-product is
+      INSIGHT (BABOK v3 "insights" and "recommendations"; BIZBOK v14
+      "insight lifecycle"; DMBOK 2nd ed. "insights from data"; OMG DMN
+      "decision insight"; APQC PCF 7.4 process 7.7.8.2 "Develop insights
+      into workforce analytics outcomes"). Note: the verb-led practice
+      names use the gerund "Develop... analytics" or the noun "insights" --
+      the noun-of-product is consistently "insight", not "intelligence"
+      or "analytics" as a head noun.
+  - step: 4
+    name: ECF placement audit
+    description: |
+      Verify the current ECF placement (enablement-operations x operate,
+      primary) is preserved by the candidate name. The current placement
+      reflects the span of analytics across domains (it is a property of
+      the Insight object; R-003 parity). All four vectors preserve
+      placement; the cell is the same.
+  - step: 5
+    name: user vocabulary test
+    description: |
+      Apply the TAXONOMY rule 6 (plain business vocabulary) and rule 7
+      (noun-as-ability) tests to each vector. Verify the candidate
+      name is the plain-vocabulary term a modern digital enterprise
+      would use for this ability.
+
+vectors_evaluated:
+  - vector: V-A
+    name: Insight Management
+    slug: insight-management
+    proposed_id: capabilities:capability-insight-management-ms4n9d
+    evidence_strength: E4
+    source_classes_observed: 3
+    noun_as_ability_pass: true (Management gerund)
+    distinctness_preserved: true (5 siblings partition-distinct)
+    ecf_placement_preserved: true (enablement-operations x operate, primary)
+    user_vocabulary_clear: true (BABOK, BIZBOK, DMBOK, DMN, APQC all use "insight" as noun-of-product)
+    recommendation: PRIMARY
+    aliases_retained:
+      - Analytics and Intelligence
+      - Data and Analytics
+      - Insight
+      - Intelligence
+      - Business Intelligence
+    rationale: |
+      Three source classes converge on "insight" as the noun-of-product.
+      The Management gerund matches the recognized noun-as-ability pattern
+      library (TAXONOMY rule 7). Sibling distinctness preserved. ECF
+      placement preserved. User-vocabulary test passes: "Insight Management"
+      is the plain term a digital enterprise uses for the ability to derive
+      decision-grade insight from information.
+  - vector: V-B
+    name: Intelligence Management
+    slug: intelligence-management
+    proposed_id: (not assigned; deprecated)
+    evidence_strength: E2
+    source_classes_observed: 1
+    noun_as_ability_pass: true (Management gerund)
+    distinctness_preserved: false (collides with the historical "business intelligence" term which DMBOK 2nd ed. notes is moving toward the insight-object reading)
+    ecf_placement_preserved: true
+    user_vocabulary_clear: false (intelligence as the head noun reads as the act of gathering, not the ability to derive insight)
+    recommendation: DEPRECATED
+    rationale: |
+      "Intelligence" as head noun collapses to "Analytics" under DMBOK
+      2nd ed. and Forrester Wave, both of which note the move toward
+      "insight-led" terminology. APQC PCF 7.4 reserves "intelligence"
+      for market-research and competitive-intelligence contexts (process
+      3.1.1 "Perform customer and market intelligence analysis"), not
+      for the cross-domain ability to derive insight from information.
+      One source class only; distinctness from the historical "BI" term
+      is muddy.
+  - vector: V-C
+    name: Decision Intelligence Management
+    slug: decision-intelligence-management
+    proposed_id: (not assigned; deprecated)
+    evidence_strength: E2
+    source_classes_observed: 1
+    noun_as_ability_pass: true (Management gerund)
+    distinctness_preserved: true
+    ecf_placement_preserved: true
+    user_vocabulary_clear: false (Gartner Decision Intelligence (DI) is an emerging market category; not enterprise-generic; arity would be DI-shaped, not insight-shaped)
+    recommendation: DEPRECATED
+    rationale: |
+      Gartner Decision Intelligence (DI) is a vendor-class market
+      category, not an enterprise-generic ability. Adopting the DI
+      arity would scope the entry to the AI/decision-automation
+      intersection, which is narrower than the cross-domain ability
+      to derive insight from information. Cross-industry process
+      support (APQC PCF 7.4) does not use the DI arity.
+  - vector: V-D
+    name: Analytics and Intelligence reviewed-retained
+    slug: analytics-and-intelligence
+    proposed_id: (existing; reviewed-retained)
+    evidence_strength: E3
+    source_classes_observed: 3
+    noun_as_ability_pass: false (bare noun-of-discourse; H8 fail)
+    distinctness_preserved: true
+    ecf_placement_preserved: true
+    user_vocabulary_clear: false (the bare-noun reading fails the noun-as-ability test; H8 hard gate requires either a rename or a registered N-NNN review-retained exemption)
+    recommendation: DEPRECATED
+    rationale: |
+      The current name fails H8 (TAXONOMY rule 7). The only legal
+      override is a verdict: review-retained decision in
+      catalog-research/normalization.yaml. CR-DEA-BC-20 deferred
+      this entry to BC-21 recon for ADR-driven resolution; V-A
+      supersedes this vector with a clean rename that passes H8
+      without an exemption.
+
+recommendation:
+  vector: V-A
+  proposed_id: capabilities:capability-insight-management-ms4n9d
+  proposed_name: Insight Management
+  proposed_business_object: Insight (unchanged)
+  proposed_version: 2.0.0 (semver-incompatible name change)
+  aliases_retained:
+    - Analytics and Intelligence
+    - Data and Analytics
+    - Insight
+    - Intelligence
+    - Business Intelligence
+  rationale_summary: |
+    Three source classes (BABOK v3, BIZBOK v14, DMBOK 2nd ed. plus
+    OMG DMN and APQC PCF 7.4) converge on "insight" as the noun-of-product.
+    The Management gerund matches the recognized noun-as-ability pattern.
+    All five sibling distinctness neighbors are partition-distinct. ECF
+    placement at enablement-operations x operate is preserved. The
+    user-vocabulary test passes.
+
+follow_on:
+  - carrier: ADR-ES-021
+    description: Recommendation forwarded as a structured ADR; user ratification gates CR-DEA-BC-22.
+  - carrier: N-022
+    description: Appended to catalog-research/normalization.yaml as review-retained-pending-ADR; closes to rename-applied on user ratification of V-A.
+  - carrier: cand_018_vectors
+    description: Appended to catalog-research/candidates.yaml as a vectors extension (V-A/B/C/D).
+  - carrier: SRC-023/024/025
+    description: New sources added to catalog-research/evidence-register.yaml -- APQC PCF 7.4 (cross-industry-process class); Forrester / BIZBOK v14 (business-architecture class); DMBOK 2nd ed. / OMG DMN / BABOK v3 (standards-body class).
+  - carrier: G11
+    description: New gap entry G11 in the evidence register (BC-21 recon results; deferred items rolled forward).

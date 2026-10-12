@@ -1,4 +1,4 @@
-universe_version: 0.5.0
+universe_version: 0.5.1
 cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C stubs) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; CAND-036 admitted)
 compiled: '2026-09-11 (v0.5: CAND-037 Enterprise Performance Management added under CR-DEA-BC-19 Track B research-CR; E1 pending evidence work; canonical false; admission remains a separate CR per BC-SR-A001 §5 P1)'
 status: active
@@ -946,3 +946,54 @@ candidates:
       date: '2026-09-11'
       evidence_strength: E4
       basis: 'EVIDENCE.md §3 admission promotion rule (E3 + admission gate; all 10 criteria met per admission-gate-precheck.yaml v0.7)'
+
+
+# cand_018_vectors: BC-21 recon extension (CR-DEA-BC-21)
+# Appended 2026-09-30; the four candidate vectors evaluated for the
+# Analytics and Intelligence noun-as-ability naming question.
+# V-A chosen (PRIMARY); V-B/C/D deprecated.
+cand_018_vectors:
+- vector: V-A
+  name: Insight Management
+  slug: insight-management
+  proposed_id: capabilities:capability-insight-management-ms4n9d
+  evidence_strength: E4
+  recommendation: PRIMARY
+  aliases_retained:
+  - Analytics and Intelligence
+  - Data and Analytics
+  - Insight
+  - Intelligence
+  - Business Intelligence
+  source_classes_observed: 3 (cross-industry-process SRC-023; business-architecture SRC-024; standards-body SRC-025)
+  rationale: |
+    Three source classes converge on insight as the noun-of-product. The
+    Management gerund matches the recognized noun-as-ability pattern. All
+    five sibling distinctness neighbors are partition-distinct. ECF
+    placement at enablement-operations x operate is preserved. The
+    user-vocabulary test passes.
+- vector: V-B
+  name: Intelligence Management
+  slug: intelligence-management
+  evidence_strength: E2
+  recommendation: DEPRECATED
+  rationale: |
+    "Intelligence" as head noun collapses to "Analytics" under DMBOK 2nd
+    ed. and Forrester Wave. APQC PCF 7.4 reserves "intelligence" for
+    market-research contexts. One source class only.
+- vector: V-C
+  name: Decision Intelligence Management
+  slug: decision-intelligence-management
+  evidence_strength: E2
+  recommendation: DEPRECATED
+  rationale: |
+    Gartner Decision Intelligence is a vendor-class market category, not
+    an enterprise-generic ability.
+- vector: V-D
+  name: Analytics and Intelligence reviewed-retained
+  slug: analytics-and-intelligence
+  evidence_strength: E3
+  recommendation: DEPRECATED
+  rationale: |
+    Bare-noun reading fails H8. The only legal override is a verdict
+    review-retained decision. V-A supersedes with a clean rename.
