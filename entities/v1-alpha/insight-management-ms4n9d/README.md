@@ -1,7 +1,7 @@
-# Analytics and Intelligence
+# Insight Management
 
 **Level**: BusinessCapability (canonical)
-**Record id**: `capabilities:capability-analytics-and-intelligence-559tky`
+**Record id**: `capabilities:capability-insight-management-ms4n9d`
 
 **ECF primary coordinate**: enablement-operations / operate
 

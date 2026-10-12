@@ -1,14 +1,20 @@
-id: capabilities:capability-analytics-and-intelligence-559tky
+id: capabilities:capability-insight-management-ms4n9d
 type: BusinessCapability
-name: Analytics and Intelligence
+name: Insight Management
 definition: The ability to derive decision-grade insight from information the enterprise
   stewards or acquires.
-version: 1.0.0
+version: 2.0.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
 outcome: Decisions are informed by derived intelligence.
 business_object: Insight
+aliases:
+- Analytics and Intelligence
+- Data and Analytics
+- Insight
+- Intelligence
+- Business Intelligence
 ecf:
   primary:
     domain: enablement-operations
