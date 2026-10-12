@@ -715,6 +715,67 @@ sources:
     supports:
     - CAND-018 recon vector V-A (Insight Management)
 
+- id: SRC-026
+  name: TOGAF Government Reference Model (GRM)
+  class: standards-body
+  reference: 'The Open Group, TOGAF Series Guide: Government Reference Model (GRM);
+    three-level public-sector taxonomy (Sectors, Functions, Services) across 11 sectors.'
+  retrieval: 'secondary (official Open Group pubs page access-restricted; structure and
+    sector vocabulary corroborated via two independent secondary renderings retrieved
+    2026-10-12: Ardoq GRM framework documentation and practitioner walkthrough)'
+  observations:
+  - observation: 'GRM sector "General Government (Customer Service, Customer Operations)
+      and Local Services" uses the CUSTOMER vocabulary for the government-to-citizen
+      service interface: registrations, licensing, applications, social services.'
+    implication: 'The public-sector reference model absorbs citizen-facing relationship
+      work under the general customer-service vocabulary; it does not posit a distinct
+      citizen-relationship capability.'
+    supports:
+    - CAND-006 unification into CAND-005 (Customer Management)
+  - observation: 'GRM capability workspace is described as "business capabilities
+      required to deliver value to citizens and stakeholders" -- citizen is the
+      beneficiary of capability outcomes, not the object of a separate relationship
+      capability.'
+    implication: 'Citizen/Member is a party-type specialization of the Customer
+      object in the government sector, not a distinct first-order capability.'
+    supports:
+    - CAND-006 unification into CAND-005 (Customer Management)
+- id: SRC-027
+  name: Government of Canada Government Service Reference Model (GSRM)
+  class: government-reference-model
+  reference: 'Government of Canada, Business Transformation Enablement Program (BTEP):
+    Government Service Reference Model, circa 2006; all federal services distilled
+    into ~17 service types with a common description lexicon and per-type pattern
+    libraries. Succeeded in-part by the Whole of Government Framework.'
+  retrieval: 'secondary (original BTEP/GSRM documents archived (Library and Archives
+    Canada web archive; Treasury Board Secretariat page under migration); structure
+    and service-type count corroborated via practitioner account retrieved 2026-10-12)'
+  observations:
+  - observation: 'GSRM types services by pattern (17 service types), not by party type;
+      no distinct citizen-relationship service type exists in the model.'
+    implication: 'Citizen-facing service delivery is a specialization of generic service
+      patterns; the party distinction (citizen vs customer) does not generate a
+      separate capability class.'
+    supports:
+    - CAND-006 unification into CAND-005 (Customer Management)
+- id: SRC-028
+  name: FEA Consolidated Reference Model v2.3 (US OMB)
+  class: government-reference-model
+  reference: 'US Office of Management and Budget, FEA Consolidated Reference Model
+    Document Version 2.3, October 2007; Business Reference Model (BRM) plus Service
+    Component Reference Model (SRM) and three siblings.'
+  retrieval: 'direct (PDF publicly accessible at reginfo.gov; full text retrieved 2026-10-12)'
+  observations:
+  - observation: 'BRM business area "Services for Citizens" names the citizen as the
+      service beneficiary; the SRM service domain is named "Customer Services Domain"
+      (section 5.1) -- the service-delivery machinery uses CUSTOMER vocabulary even
+      where the beneficiary is the citizen.'
+    implication: 'The US federal reference model pair confirms the GRM reading: citizen
+      is the object-of-service specialization; customer-services is the capability
+      vocabulary. No distinct citizen-relationship capability is posited.'
+    supports:
+    - CAND-006 unification into CAND-005 (Customer Management)
+
 register_gaps:
 - id: G11
   gap: 'CR-DEA-BC-21 recon results: BC-09 advisory set bare-noun entries are now fully addressed
@@ -746,8 +807,11 @@ register_gaps:
   status: closed-by-decision
 - id: G5
   gap: government reference models (GRM, GSRM) not yet retrieved
-  action: add for the section 8 government diversity arm
-  status: open
+  action: 'closed 2026-10-12 (CR-DEA-BC-30): GRM (SRC-026, TOGAF Government Reference
+    Model), GSRM (SRC-027, Government of Canada BTEP GSRM), and FEA CRM v2.3 (SRC-028,
+    US OMB) retrieved; all three converge on customer-service vocabulary for the
+    citizen interface; CAND-006 unification resolved per N-029'
+  status: closed-by-evidence
 corpus_assessment:
   source_classes_covered: 9 of 9
   independent_definition_sources: 4 (SRC-001 BIZBOK via citation, SRC-002 TOGAF via citation, SRC-003

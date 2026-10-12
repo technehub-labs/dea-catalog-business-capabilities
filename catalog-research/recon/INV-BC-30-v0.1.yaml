@@ -1,0 +1,106 @@
+id: INV-BC-30-v0.1
+cr: CR-DEA-BC-30
+date: '2026-10-12'
+author: Coder (for eaojnr)
+trigger: gap G5 closure
+related_normalization_decisions:
+- N-029
+status: applied
+scope: close gap G5 (government reference models); re-evaluate CAND-006 (Citizen / Member Relationship) unification
+  vs CAND-005 (Customer Management)
+out_of_scope: dea-catalog-business-processes (sibling repo); CAND-007/008 (other Relationship Management children);
+  admission of new first-order canonical capabilities
+background: 'Gap G5 was logged in catalog-research/evidence-register.yaml at CR-DEA-BC-13 (the initial evidence
+  register v0.7; 2026-09-30): the section 8 government diversity arm had no retrieved sources. G5 was tagged ''open''
+  and carried the trigger for the CAND-006 vs CAND-005 unification deferral. The deferral was carried forward through
+  CR-DEA-BC-27 (N-026, 2026-10-12) and the Backlog card 311. CAND-006 (Citizen / Member Relationship) was at evidence_strength
+  E2 with confidence ''low'' (2 sources: CAND-004 parent; SRC-008). N-018 had reclassified CAND-004 (Relationship
+  Management) to grouping_parent, so the unification question on CAND-006 was the live question: separate canonical
+  vs absorbed into CAND-005.'
+retrieval_2026_10_12:
+  src_026_TOGAF_GRM: 'TOGAF Government Reference Model (GRM). The Open Group, TOGAF Series Guide: GRM; 11 sectors,
+    3-level taxonomy (Sectors, Functions, Services). Primary source at pubs.opengroup.org access-restricted; structure
+    corroborated via Ardoq framework documentation and a practitioner walkthrough.'
+  src_027_GoC_BTEP_GSRM: Government of Canada BTEP Government Service Reference Model (GSRM). Government of Canada,
+    Business Transformation Enablement Program, circa 2006; all federal services distilled into ~17 service types
+    with a common description lexicon. Original documents archived at Library and Archives Canada web archive; structure
+    corroborated via a 2018 practitioner account.
+  src_028_US_FEA_CRM: FEA Consolidated Reference Model v2.3. US OMB FEA CRM, October 2007; BRM + SRM + 3 siblings.
+    Direct PDF retrieved (reginfo.gov, public, full text).
+  note: All three are independent of the BIZBOK/TOGAF/SAP LeanIX/IF4IT/APQC corpus that drove the baseline admission
+    of CAND-005. They represent the public-sector reference-model class (a source class the baseline corpus did
+    not sample from, which is why G5 was logged).
+findings:
+  F1:
+    title: All three GRM-class sources use customer vocabulary for the citizen interface
+    evidence:
+    - TOGAF GRM sector 'General Government (Customer Service, Customer Operations) and Local Services' defines the
+      sector as 'The provision of general customer services and operations including registrations, licensing, applications,
+      workforce planning, social services, management of labor rights, and local services.' CUSTOMER is the noun
+      used; Citizen is not the sector's own capability noun.
+    - 'GoC BTEP GSRM types services by pattern (17 service types: e.g., ''Account Management'', ''Issue Management'',
+      ''Application Processing''). No distinct ''Citizen Relationship'' or ''Member Relationship'' service type
+      exists; the model uses generic service-pattern vocabulary.'
+    - US FEA CRM v2.3 BRM names the business area 'Services for Citizens' (citizen-as-beneficiary framing), but
+      the SRM section 5.1 is titled 'Customer Services Domain' and the model treats the citizen as a customer of
+      federal services for service delivery. The machinery uses CUSTOMER vocabulary even where the beneficiary is
+      the citizen.
+  F2:
+    title: Cross-source convergence is on party-type specialization, not on a separate first-order capability
+    evidence:
+    - 'The three government reference models agree: no distinct Citizen/Member Relationship capability posited by
+      any of them.'
+    - The relationship-to-citizen work is captured under the general customer-service vocabulary (TOGAF GRM, US
+      FEA CRM v2.3 SRM) and the generic service-pattern vocabulary (GoC BTEP GSRM).
+    - The party-type distinction (citizen vs customer vs member) is a specialization of the Customer object in the
+      government sector, captured downstream as a customer-segment specialization, not as a separate first-order
+      capability class.
+  F3:
+    title: Evidence rises E2 -> E4
+    baseline: 2 sources (CAND-004 parent, SRC-008)
+    new_sources: 3 government reference models (SRC-026, SRC-027, SRC-028)
+    corpus_continuity: 5 corpus sources (SRC-001 BIZBOK, SRC-002 TOGAF, SRC-003 SAP LeanIX, SRC-005 IF4IT, plus
+      the implicit baseline 4-of-9 source-class coverage)
+    evidence_strength: E4 (3 independent new sources + 5 corpus sources; cross-source agreement)
+  F4:
+    title: CAND-004 (Relationship Management) grouping_parent status is now stronger
+    evidence:
+    - N-018 (2026-09-30) reclassified CAND-004 from a first-order candidate to grouping_parent for the 4 children
+      (CAND-005 Customer Management, CAND-006 Citizen/Member Relationship, CAND-007 Partner Relationship (not yet
+      investigated), CAND-008 Member Relationship (not yet investigated)).
+    - 'The BC-30 finding supports N-018: no separate Relationship Management first-order capability; the children
+      are either absorbed into existing first-order capabilities (CAND-005, CAND-006) or are themselves the same
+      customer-relationship work with a different object specialization (CAND-007 partner = B2B; CAND-008 member
+      = membership-org).'
+    - The CAND-004 grouping_parent status is the correct resolution of the original 'Is there a Relationship Management
+      capability?' question.
+  F5:
+    title: Gap G5 is closed
+    evidence:
+    - All three government reference models retrieved. The government-diversity arm of the corpus now has independent
+      corroboration on the customer-vocabulary question.
+    - Gap G5 status changes from 'open' to 'closed-by-evidence'.
+decision:
+  id: N-029
+  verdict: merged-into-CAND-005
+  summary: CAND-006 (Citizen / Member Relationship) is merged into CAND-005 (Customer Management). No separate first-order
+    canonical capability is admitted. The 29-count is unchanged. The business_object specialization (Customer vs
+    Citizen vs Member) is captured downstream as a customer-segment specialization under the admitted CAND-005 (Customer
+    Management). The relationship-management mechanism (the work) is unchanged; only the capability classification
+    changes.
+follow_ons:
+  CAND-007_Partner_Relationship: Not investigated. Likely a B2B-specialization of CAND-005; same evidence path would
+    apply (B2B reference models, B2B trade-association frameworks). Defer to a future recon when B2B evidence is
+    needed.
+  CAND-008_Member_Relationship: 'Not investigated. Likely a membership-organization-specialization of CAND-005;
+    same evidence path would apply (membership-association frameworks: ASAE, AMC, etc.). Defer to a future recon.'
+  TER_RELMGMT_001_retirement: The original TER is now resolved at the structural level (N-018 grouping_parent +
+    N-029 CAND-006 merge + CAND-005 admission pre-existing). The TER can be retired; evidence_track_records section
+    should add a resolution note. Out of scope for this CR (TERs are a separate update).
+cross_references:
+- catalog-research/evidence-register.yaml (SRC-026/027/028 added; G5 closed)
+- catalog-research/candidates.yaml (CAND-006 marked MERGED-INTO-CAND-005; universe_version 0.5.4)
+- catalog-research/normalization.yaml (N-029 added; register_version 0.10.0)
+- change-requests/CR-DEA-BC-30.md (this CR)
+- 'submittal-reviews/BC-SR-A001.md (section 6: P1-P2 Relationship Management; reclassified to P2 at N-027)'
+- submittal-reviews/TER-RELMGMT-001 (the original TER; to be retired in a follow-on)
