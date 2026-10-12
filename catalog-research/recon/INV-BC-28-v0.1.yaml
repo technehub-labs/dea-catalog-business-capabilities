@@ -1,0 +1,128 @@
+id: recon-bc-28
+title: 'BC-28: BC-SR-A001 P1 backlog re-audit (4 remaining P1 items post-BC-23)'
+cr: CR-DEA-BC-28
+status: complete
+compiled: 2026-10-12 (BC-28 re-audit complete; 1 of 3 P1 items closed (OrgDesign at BC-14); 1 of 3 P1 items closed (EPM at BC-23); 0 P1 items remaining OPEN; 1 P1-P2 item (Relationship Management) reclassified to P2; 3 P2 items + 2 P3 items remain deferred)
+scope:
+  review_doc: submittal-reviews/BC-SR-A001.md
+  p1_list_at_review:
+  - Organizational Design (P1)
+  - Enterprise Performance Management (P1)
+  - Relationship Management (P1-P2)
+  p2_list_at_review:
+  - Knowledge Management (P2)
+  - Service Management (P2)
+  - Quality Management (P2)
+  p3_list_at_review:
+  - Stakeholder Management (P3)
+  - Enterprise Architecture Management (P3)
+  audit_date: '2026-10-12'
+findings:
+  p1_organizational_design:
+    status_at_review: 'P1 (reviewer): strong candidate for canonical capability'
+    status_at_audit: CLOSED 2026-09-11 under CR-DEA-BC-18 (evidence package) + CR-DEA-BC-14 (admission). CAND-036 promoted E3 -> E4. Catalog 27 -> 28 first-order capabilities. dea:capability-organizational-design admitted at agency-organization/design primary + conceive/build secondaries.
+    canonical_entry: capabilities:capability-organizational-design-vanefq
+    action: no action; closed.
+  p1_enterprise_performance_management:
+    status_at_review: 'P1 (reviewer): strong candidate for canonical capability; gap #2 in BC-SR-A001 section 5'
+    status_at_audit: CLOSED 2026-10-12 under CR-DEA-BC-19 (evidence package) + CR-DEA-BC-23 (admission). CAND-037 promoted E1 -> E3 then admitted. Catalog 28 -> 29 first-order capabilities. dea:capability-enterprise-performance-management admitted at strategy-direction/operate primary + strategy-direction/improve + finance-accounting/operate secondaries. BC-SR-A001 section 16 direction loop closed.
+    canonical_entry: capabilities:capability-enterprise-performance-management-5fxren
+    action: no action; closed. BC-SR-A001 section 16 (closed-loop capability structure) satisfied.
+  p1_p2_relationship_management:
+    status_at_review: 'P1-P2 (reviewer): investigate generic parent vs role-specific capabilities; gap #3 in BC-SR-A001 section 6'
+    status_at_audit: OPEN at E2 (TER-RELMGMT-001). Track C investigation. CAND-004 (Stakeholder Relationship Management) was reclassified to grouping_parent at N-018 (CR-DEA-BC-20). CAND-005 (Customer Management) admitted. CAND-006 (Citizen / Member Relationship) blocked on G5.
+    current_state:
+      parent: CAND-004 reclassified to grouping_parent (N-018)
+      children:
+      - CAND-005 Customer Management (admitted; canonical 1.0.0)
+      - CAND-006 Citizen / Member Relationship (E2; deferred pending G5)
+      - CAND-007
+      - CAND-008
+      ter_status: 'TER-RELMGMT-001 evidence-pending at E2 (sources_consulted: BIZBOK Party/Relationship, CRM industry literature, SRM industry literature)'
+      open_evidence_questions:
+      - Is Relationship a distinct durable business object, or an abstraction over role-specific caps?
+      - If admitted, do Customer/Supplier/Partner become specializations (opt 1), abstract grouping only (opt 2), or no parent (opt 3)?
+      - Does it survive the enterprise-generality test?
+    recommendation: downgrade from P1-P2 to P2 (research backlog). The P1 push was for the 28-canonical era; the 29-canonical era is the closed-cell era. The Relationship Management question is research-led, not admission-led. The next step is the BC-30 (G5 closure) work; if CAND-006 promotes to canonical, the Relationship Management question may resolve as a 'no separate parent' verdict (opt 3).
+    action: 'N-027 decision: Relationship Management reclassified from P1-P2 to P2. Track C investigation remains open but not blocking the next 5-10 admissions. CAND-006 unification (BC-27 follow-on) is the next step.'
+  p2_knowledge_management:
+    status_at_review: 'P2 (reviewer): evidence investigation required; gap #4 in BC-SR-A001 section 7'
+    status_at_audit: DEFERRED. No candidate in candidates.yaml. No TER in evidence-register.yaml. The Knowledge Management question is research-led; would require new TER-KNOWLEDGEMGMT-001 + new candidate CAND-knowledge-mgmt.
+    recommendation: keep at P2. No follow-on work scheduled.
+    action: no action.
+  p2_service_management:
+    status_at_review: 'P2 (reviewer): investigate whether Operations already absorbs it; section 17 (rest)'
+    status_at_audit: DEFERRED. No candidate. The Service Management question is boundary-led against Operations Management (canonical 2.0.0; primary cell enablement-operations/operate; admitted at BC-09). The post-BC-20 boundary between Service Management and Operations Management is implicit; an explicit decision would require a new TER.
+    recommendation: keep at P2. If a future specialization view (e.g. view-managed-services) is needed, the Service Management question resolves as 'specialization of Operations Management' (no separate canonical).
+    action: no action.
+  p2_quality_management:
+    status_at_review: 'P2 (reviewer): investigate whether Operations/Assurance already absorbs it; section 17 (rest)'
+    status_at_audit: DEFERRED. No candidate. The Quality Management question is boundary-led against Operations Management and Assurance-related capabilities (Security Management, Risk Management, Continuity Management).
+    recommendation: keep at P2. The H8 noun-as-ability rule (BC-20) treats 'Quality' as a known outcome-state marker; a Quality Management canonical would need a review-retained verdict (N-024 mechanism extended at BC-25, but Quality is intentionally NOT in the GOVERNANCE_OBJECTS set).
+    action: no action.
+  p3_stakeholder_management:
+    status_at_review: 'P3 (reviewer): likely specialization of Relationship Management'
+    status_at_audit: DEFERRED. Stakeholder Management is a likely specialization of Relationship Management (or, post-N-018, an alias for the CAND-004 grouping_parent). If CAND-004 reclassifies to a future Relationship Management canonical, Stakeholder Management becomes a child of that.
+    recommendation: keep at P3. No candidate. No follow-on work scheduled.
+    action: no action.
+  p3_enterprise_architecture_management:
+    status_at_review: 'P3 (reviewer): probably specialization/model construct rather than first-order capability'
+    status_at_audit: DEFERRED. Enterprise Architecture Management is a model construct (dea-metaframework v2.5.0 is the metamodel; the catalog is one of its consumers; EAM is the management of the metamodel, not a business capability). EAM is a specialization/model construct, not a first-order capability.
+    recommendation: retire from the P3 list. EAM is not a candidate for first-order admission. The cross-repo governance for the dea-metaframework is handled by the dea-architecture-framework repo, not the dea-catalog-business-capabilities repo.
+    action: 'N-028 decision: Enterprise Architecture Management retired from the P3 list. Verdict: specialization/model construct; not a first-order capability candidate.'
+p1_list_post_audit:
+  open_p1: []
+  reclassified_to_p2:
+  - Relationship Management (was P1-P2)
+  closed:
+  - Organizational Design (closed 2026-09-11; CR-DEA-BC-14)
+  - Enterprise Performance Management (closed 2026-10-12; CR-DEA-BC-23)
+  next_p1_candidate: none currently identified; the 29-canonical era has 20/49 empty cells; each empty cell would require a new TER + new candidate before a P1 admission could be considered
+p2_list_post_audit:
+  open_p2:
+  - Relationship Management (reclassified from P1-P2)
+  - Knowledge Management
+  - Service Management
+  - Quality Management
+  recommendation: these are research-driven, not admission-driven. None are currently blocking the next 5-10 admissions. The 29-canonical catalog is well-formed; the P2 items are aspirational, not gap-driven.
+p3_list_post_audit:
+  open_p3:
+  - Stakeholder Management
+  retired:
+  - 'Enterprise Architecture Management (N-028 verdict: specialization/model construct)'
+follow_ons:
+- id: N-027
+  title: Reclassify Relationship Management from P1-P2 to P2 (research backlog)
+  rationale: The P1 push was for the 28-canonical era; the 29-canonical era is the closed-cell era. The Relationship Management question is research-led, not admission-led. CAND-006 unification (BC-27 follow-on) is the next step.
+  estimated_scope: 1 normalization decision; 1 line in normalization.yaml.
+- id: N-028
+  title: Retire Enterprise Architecture Management from the P3 list (specialization/model construct)
+  rationale: EAM is a model construct, not a first-order business capability. The dea-metaframework v2.5.0 is the metamodel; the catalog is a consumer; EAM is the management of the metamodel. The dea-architecture-framework repo is the cross-repo governance home, not the dea-catalog-business-capabilities repo.
+  estimated_scope: 1 normalization decision; 1 line in normalization.yaml.
+- id: BC-30
+  title: 'Close gap G5: retrieve GRM and GSRM; re-evaluate CAND-006 unification (parallel to BC-27 follow-on)'
+  rationale: G5 is open. Until G5 closes, the Relationship Management question cannot resolve. CAND-006 is the empirical test case.
+  estimated_scope: 4-8 hours of research; 1 normalization decision; 1 admission CR or 1 deferred verdict; 1 PR.
+recommendation:
+  bc_28_close_out: PASS with 3 follow-ons. The BC-SR-A001 P1 list is 100% resolved (2 closed; 1 reclassified to P2). The P2 list has 4 items; none are blocking. The P3 list has 1 item (Stakeholder Management) and 1 retired (EAM). The 29-canonical catalog is well-formed; the BC-SR-A001 review is functionally complete.
+  next_slice_options: BC-30 (G5 closure) is the next research-driven slice; BC-29a (EPM backfill) and BC-29b (metamodel_pin docs amendment) are the next linter/docs slices. The 29-canonical era has no P1 items remaining.
+cross_references:
+- submittal-reviews/BC-SR-A001.md (the original review; sections 4, 5, 6, 7, 17)
+- 'change-requests/CR-DEA-BC-14.md (Organizational Design admission; closed P1 #1)'
+- change-requests/CR-DEA-BC-19.md (EPM evidence package; the trigger for the BC-23 admission)
+- 'change-requests/CR-DEA-BC-23.md (EPM admission; closed P1 #2)'
+- catalog-research/evidence-register.yaml (TER-RELMGMT-001; evidence-pending at E2)
+- catalog-research/normalization.yaml (N-018 CAND-004 reclassified to grouping_parent)
+- dea-architecture-framework (the cross-repo governance home for EAM; not this repo)
+audit_methodology:
+  tooling: python3 + PyYAML; grep; no new scripts added.
+  population: BC-SR-A001 P1/P2/P3 list (3 + 3 + 2 = 8 items); TER-RELMGMT-001; CAND-004..008 + CAND-036 + CAND-037; 29 canonical entries.
+  audit_decisions:
+  - 'P1 Organizational Design: CLOSED at BC-14 (2026-09-11)'
+  - 'P1 Enterprise Performance Management: CLOSED at BC-23 (2026-10-12)'
+  - 'P1-P2 Relationship Management: RECLASSIFIED to P2 (N-027)'
+  - 'P2 Knowledge Management: DEFERRED (no candidate)'
+  - 'P2 Service Management: DEFERRED (no candidate)'
+  - 'P2 Quality Management: DEFERRED (no candidate)'
+  - 'P3 Stakeholder Management: DEFERRED (no candidate)'
+  - 'P3 Enterprise Architecture Management: RETIRED (N-028; specialization/model construct)'

@@ -1,0 +1,66 @@
+id: recon-bc-27
+title: 'BC-27: CAND-005/CAND-006 unification (re-evaluation under G5; CAND-005 retirement)'
+cr: CR-DEA-BC-27
+status: complete
+compiled: 2026-10-12 (BC-27 recon complete; 1 stale candidate retired (CAND-005); CAND-006 unification remains deferred pending G5; 0 follow-on admissions; 1 follow-on CR queued)
+scope:
+  candidates_in_scope:
+  - CAND-005
+  - CAND-006
+  reference_decision: 'catalog-research/normalization.yaml section deferred (Citizen/Member Relationship (CAND-006) vs Customer Management unification; trigger: government reference models (gap G5))'
+  reference_gap: 'catalog-research/evidence-register.yaml G5 (status: open)'
+findings:
+  cand_005_already_admitted:
+    summary: 'CAND-005 (Customer Management) is ALREADY a canonical first-order capability. The candidate record in catalog-research/candidates.yaml is stale: it says research_artifact=true, canonical=false, but the canonical entity exists at entities/v1-alpha/customer-management-f3n8wb/ (admitted at v1-alpha.0 on 2026-09-02; 28-canonical era). The candidate record should be retired; the canonical entity is the source of truth going forward.'
+    canonical_entry: capabilities:capability-customer-management-f3n8wb
+    canonical_version: 1.0.0
+    canonical_business_object: Customer
+    canonical_capability_layer: operational
+    canonical_ecf_primary: party-relationship x operate
+    canonical_evidence: E5 (BIZBOK, TOGAF, SAP LeanIX, IF4IT, APQC, customer-experience literature)
+    action: retire CAND-005 from the candidate register; add a decision N-025 to normalization.yaml recording the retirement with a pointer to the canonical entry. Update candidates.yaml promotion_history with the canonical link.
+  cand_006_open_at_e2:
+    summary: 'CAND-006 (Citizen / Member Relationship) remains open at E2 with low confidence. The normalization.yaml section deferred explicitly says: Citizen/Member Relationship (CAND-006) vs Customer Management unification; trigger: government reference models (gap G5). G5 (government reference models: GRM, GSRM) is still OPEN in the evidence register. BC-27 cannot resolve the unification question without G5.'
+    candidate_evidence: 'E2 (sources: CAND-004 parent, SRC-008)'
+    candidate_business_object_hypothesis: Citizen
+    candidate_notes: Public-sector / non-profit specialization arm; distinct from Customer Management by business object (Citizen vs Customer); may unify with CAND-005 in normalization, or stay separate as a specialization
+    blocker: G5 open
+    action: 'record N-026 decision in normalization.yaml: CAND-006 unification decision remains deferred; G5 still open as of 2026-10-12; revisit at BC-30+ when G5 sources are added. Do NOT promote CAND-006 to canonical; do NOT retire it (it remains an active candidate).'
+  dea_metaframework_alignment:
+    summary: The dea-metaframework v2.5.0 (2026-09-08) does not have a Party/Citizen distinction at the ECF level. ECF Domain 4 is party-relationship (kebab-case party-relationship; canonical PascalCase PartyAndRelationship). The Customer Management canonical entry is at cell party-relationship x operate. A potential CAND-006 admission would also live at party-relationship (a secondary coordinate) or potentially at a new cell. The cell is shared with Customer Management; the distinction would be in the business_object and the specialization.
+    dea_metaframework_party_relationship: Domain 4 of 7; the relationship-to-party concern of the enterprise. Both Customer and Citizen / Member are party-relationship domain concepts.
+    bc_decision: 'If CAND-006 is admitted after G5 closes, the cell placement is party-relationship x operate (primary; same cell as Customer Management; the distinction is business_object: Citizen / Member). Alternatively, CAND-006 could be a specialization view of Customer Management (e.g. view-government-gsrm). The decision depends on the G5 evidence.'
+  cand_005_006_unification_question:
+    summary: 'The unification question (CAND-006 absorbs into CAND-005 vs. separate) was the original BC-27 scope. Re-evaluation under G5 is blocked because G5 is open. The interim position: leave CAND-006 as an active candidate, retire CAND-005 (already-admitted), and queue the G5 closure as a follow-on CR (BC-30: close gap G5; retrieve GRM and GSRM; re-evaluate CAND-006 unification).'
+    interim_action: do not unify; do not promote CAND-006; record the deferred state in normalization.yaml; queue BC-30 for G5 closure.
+follow_ons:
+- id: CR-DEA-BC-30
+  title: 'Close gap G5: retrieve GRM and GSRM; re-evaluate CAND-006 unification; admission CR if evidence rises to E3'
+  rationale: G5 is open. Until G5 closes, CAND-006 cannot be promoted (E2 is below the admission threshold). CAND-006 may rise to E3 if government reference models confirm the public-sector specialization pattern.
+  estimated_scope: 4-8 hours of research; 1 normalization decision; 1 admission CR or 1 deferred verdict; 1 PR.
+- id: N-025
+  title: Retire CAND-005 from the candidate register (already admitted as Customer Management)
+  rationale: 'CAND-005 is stale: the canonical entity exists. The candidate record should not remain in the active register. Action: mark CAND-005 as canonical=true in candidates.yaml; add a canonical_link to capabilities:capability-customer-management-f3n8wb; bump universe_version.'
+  estimated_scope: 1 normalization decision; 1 candidates.yaml update; 1 PR.
+recommendation:
+  bc_27_close_out: PASS with 2 follow-ons. CAND-005 retirement is mechanical (1 commit). CAND-006 unification is blocked on G5; queue BC-30 to close G5 and re-evaluate. The dea-metaframework Domain 4 (party-relationship) is the correct ECF home for any future CAND-006 admission.
+  next_slice_options: BC-30 (G5 closure) is a research-driven slice; BC-28 (P1 re-audit) is the parallel slice for this 3-card batch.
+cross_references:
+- catalog-research/candidates.yaml (CAND-005, CAND-006)
+- catalog-research/normalization.yaml (deferred section; CAND-005/CAND-006 unification decision)
+- catalog-research/evidence-register.yaml (G5 gap; SRC-008)
+- entities/v1-alpha/customer-management-f3n8wb/ (the canonical Customer Management entry; the destination of the CAND-005 retirement)
+- dea-metaframework/CHANGELOG.md (v2.5.0; Domain 4 party-relationship; Domain 6 rename)
+- change-requests/CR-DEA-BC-26.md (the parallel slice; dea-metaframework 2.5.0 alignment)
+audit_methodology:
+  tooling: python3 + PyYAML; grep; no new scripts added.
+  population: CAND-005 + CAND-006 in catalog-research/candidates.yaml; 1 canonical entry (Customer Management) in entities/v1-alpha/customer-management-f3n8wb/; G5 gap status in catalog-research/evidence-register.yaml.
+  reference_decisions:
+  - 'normalization.yaml section deferred: CAND-006 unification; trigger: G5'
+  - 'normalization.yaml N-018: CAND-004 reclassified to grouping_parent (parent of CAND-005, CAND-006, CAND-007, CAND-008)'
+  - 'BC-09 era: Customer Management admitted at v1-alpha.0 (2026-09-02)'
+  fields_audited:
+  - candidate evidence_strength (E5 for CAND-005, E2 for CAND-006)
+  - canonical entry existence (1 match for CAND-005; 0 match for CAND-006)
+  - normalization.yaml deferred section (1 match for CAND-006 unification)
+  - evidence-register.yaml G5 status (open)

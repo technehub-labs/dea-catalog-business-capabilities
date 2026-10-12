@@ -2,7 +2,7 @@
 # against the pre-migration layout and the legacy dea:* id family. Ids cited
 # below are historical; see reconciliation/migration-id-map.yaml for the
 # old-to-new id mapping.
-register_version: 0.8.0
+register_version: 0.9.0
 cr: CR-DEA-BC-02 (section 20; deliverable section 33 item 5); CR-DEA-BC-09 (naming conformance refresh; N-010..N-015);
   CR-DEA-BC-20 (noun-as-ability rule 7; N-015 verdict formalized; N-016, N-018, N-019, N-020 appended;
   N-017 deferred to CR-DEA-BC-21 recon); CR-DEA-BC-21 (N-022 - Analytics and Intelligence recon;
@@ -14,7 +14,7 @@ compiled: '2026-09-01 (v0.2: aggregate decisions N-007/N-008; N-003 re-test clos
   CR-DEA-BC-20 noun-as-ability naming conformance; N-017 deferred to CR-DEA-BC-21 recon; applied under
   the post-mv1 id system capabilities:capability-*); 2026-09-30 (v0.4: N-022 appended:
   CR-DEA-BC-21 Analytics and Intelligence recon; review-retained-pending-ADR; recommendation V-A Insight
-  Management under TAXONOMY rule 7); 2026-10-12 (v0.8: CR-DEA-BC-19 evidence package for EPM; CR-DEA-BC-23 EPM admission with N-023 verdict admitted; CR-DEA-BC-25 linter patch -- H3 outcome-marker path governance-object-aware; N-024 review-retained verdict for EPM retired; 22 -> 21 decisions; register_version 0.7.0 -> 0.8.0)' 
+  Management under TAXONOMY rule 7); 2026-10-12 (v0.8: CR-DEA-BC-19 evidence package for EPM; CR-DEA-BC-23 EPM admission with N-023 verdict admitted; CR-DEA-BC-25 linter patch -- H3 outcome-marker path governance-object-aware; N-024 review-retained verdict for EPM retired; 22 -> 21 decisions; register_version 0.7.0 -> 0.8.0); 2026-10-12 (v0.9: CR-DEA-BC-26 metamodel re-pinning audit complete (no blocking drift; 2 follow-ons queued); CR-DEA-BC-27 CAND-005 retired, CAND-006 deferred pending G5; CR-DEA-BC-28 P1 re-audit complete (1 P1 item reclassified to P2; 1 P3 item retired); 21 -> 25 decisions; N-025, N-026, N-027, N-028 added)' 
 status: candidate-not-canonical; decisions are research decisions, subject to review
 inputs:
   candidates: docs/research/candidates.yaml
@@ -382,31 +382,117 @@ decisions:
 
 
 
+- id: N-025
+  question: 'CAND-005 (Customer Management) is already a canonical first-order capability
+    (capabilities:capability-customer-management-f3n8wb, admitted at v1-alpha.0 on 2026-09-02).
+    The candidate record in catalog-research/candidates.yaml is stale (research_artifact=true,
+    canonical=false). Retire the candidate record from the active register; the canonical
+    entity is the source of truth.'
+  question_kind: candidate-retirement
+  cr: CR-DEA-BC-27
+  affected_entry: capabilities:capability-customer-management-f3n8wb
+  candidates:
+  - CAND-005
+  sources:
+  - catalog-research/candidates.yaml (CAND-005 stale record)
+  - entities/v1-alpha/customer-management-f3n8wb/ (the canonical entity)
+  evidence:
+  - evidence_strength: E5
+    basis: 'BIZBOK, TOGAF, SAP LeanIX, IF4IT, APQC, customer-experience literature all converge
+      on Customer Management as a first-order capability. CAND-005 is the candidate record for
+      the 2026-08-31 research phase; the canonical entity was admitted at v1-alpha.0 on
+      2026-09-02 with E5 evidence.'
+  verdict: retired
+  decision_basis: 'The canonical entity exists; the candidate record is stale. BC-27 recon (INV-BC-27-v0.1)
+    recommends retiring the candidate record. Mark CAND-005 as canonical=true in candidates.yaml;
+    add a canonical_link to capabilities:capability-customer-management-f3n8wb; bump universe_version
+    0.5.2 -> 0.5.3.'
+  confidence: high
+
+- id: N-026
+  question: 'CAND-006 (Citizen / Member Relationship) unification vs CAND-005 (Customer Management)
+    is explicitly deferred pending gap G5 (government reference models: GRM, GSRM). G5 is
+    still OPEN in evidence-register.yaml. BC-27 cannot resolve the unification question
+    without G5.'
+  question_kind: deferral-continuation
+  cr: CR-DEA-BC-27
+  affected_entry: capabilities:candidate-citizen-member-relationship
+  candidates:
+  - CAND-006
+  sources:
+  - catalog-research/evidence-register.yaml G5 (status: open)
+  - catalog-research/candidates.yaml (CAND-006 E2; low confidence)
+  evidence:
+  - evidence_strength: E2
+    basis: 'Two sources only: CAND-004 (parent) and SRC-008. E2 is below the admission threshold (E3+).
+      The unification question (CAND-006 absorbs into CAND-005 vs separate) is the open question
+      that G5 would inform. G5 sources (GRM, GSRM) are not yet retrieved.'
+  verdict: deferred
+  decision_basis: 'G5 is open. The CAND-006 unification decision cannot be made without the
+    government reference model evidence. Interim action: do not unify; do not promote CAND-006;
+    record the deferred state. Follow-on: BC-30 (close gap G5; retrieve GRM and GSRM; re-evaluate
+    CAND-006 unification; admission CR if evidence rises to E3).'
+  confidence: medium
+
+- id: N-027
+  question: 'Reclassify Relationship Management from P1-P2 (BC-SR-A001 section 6) to P2
+    (research backlog). The P1 push was for the 28-canonical era; the 29-canonical era is
+    the closed-cell era. The Relationship Management question is research-led, not
+    admission-led.'
+  question_kind: priority-reclassification
+  cr: CR-DEA-BC-28
+  affected_entry: null
+  candidates:
+  - CAND-004
+  - CAND-005
+  - CAND-006
+  - CAND-007
+  - CAND-008
+  sources:
+  - submittal-reviews/BC-SR-A001.md (section 6: P1-P2 Relationship Management)
+  - catalog-research/evidence-register.yaml (TER-RELMGMT-001 evidence-pending at E2)
+  - catalog-research/normalization.yaml (N-018 CAND-004 reclassified to grouping_parent)
+  evidence:
+  - evidence_strength: E2
+    basis: 'TER-RELMGMT-001 is evidence-pending at E2. CAND-004 was reclassified to grouping_parent
+      (N-018); the 4 children (CAND-005, CAND-006, CAND-007, CAND-008) remain candidates. CAND-005
+      is admitted (Customer Management); CAND-006 is deferred pending G5; CAND-007 and CAND-008
+      are not yet investigated. The Relationship Management question is research-led, not
+      admission-led.'
+  verdict: reclassified
+  decision_basis: 'P1 -> P2 reclassification. The BC-SR-A001 P1 list is 100% resolved (OrgDesign
+    at BC-14; EPM at BC-23). The Relationship Management question does not block the next 5-10
+    admissions. The next step is BC-30 (G5 closure); if CAND-006 promotes to canonical, the
+    Relationship Management question may resolve as a no separate parent verdict (opt 3 in
+    TER-RELMGMT-001).'
+  confidence: high
+
+- id: N-028
+  question: 'Retire Enterprise Architecture Management from the BC-SR-A001 P3 list. EAM is
+    a model construct, not a first-order business capability. The dea-metaframework v2.5.0 is
+    the metamodel; the catalog is a consumer; EAM is the management of the metamodel.'
+  question_kind: candidate-retirement
+  cr: CR-DEA-BC-28
+  affected_entry: null
+  candidates: []
+  sources:
+  - submittal-reviews/BC-SR-A001.md (section 17 rest: P3 Enterprise Architecture Management)
+  - dea-metaframework/CHANGELOG.md (v2.5.0; the metamodel)
+  - dea-architecture-framework (the cross-repo governance home for EAM)
+  evidence:
+  - evidence_strength: not-applicable
+    basis: 'EAM is a model construct. The metamodel is the dea-metaframework; the catalog is one
+      of its consumers; EAM is the management of the metamodel. EAM is not a business capability
+      in the same sense as Customer Management or Operations Management. The cross-repo governance
+      for the dea-metaframework is handled by the dea-architecture-framework repo, not the
+      dea-catalog-business-capabilities repo.'
+  verdict: retired
+  decision_basis: 'EAM is not a candidate for first-order admission. Retired from the P3 list.
+    The dea-architecture-framework repo is the cross-repo governance home for the metamodel; that
+    is where EAM lives (if anywhere) -- as a model-management capability, not a business
+    capability.'
+  confidence: high
+
 deferred:
 - item: Citizen/Member Relationship (CAND-006) vs Customer Management unification
   trigger: government reference models (gap G5)
-
-
-- id: N-023
-  question: CR-DEA-BC-23 admission of Enterprise Performance Management (CAND-037) as 29th first-order canonical capability
-  question_kind: admission
-  cr: CR-DEA-BC-23
-  affected_entry: capabilities:capability-enterprise-performance-management-5fxren
-  prior_affected_entry: capabilities:candidate-epm-5fxren
-  candidates:
-  - CAND-037
-  sources:
-  - SRC-020 (Kaplan & Norton Balanced Scorecard 1992+; business-architecture class)
-  - SRC-021 (OKR framework per Andy Grove / John Doerr; commercial-capability-models class)
-  - SRC-022 (OMG Business Performance Management standards; standards-body class)
-  - SRC-001
-  - SRC-002
-  - SRC-004
-  - SRC-005
-  - SRC-006
-  evidence:
-  - evidence_strength: E3
-    basis: three-source convergence across business-architecture (SRC-020 BSC), commercial-capability-models (SRC-021 OKR), standards-body (SRC-022 OMG BPM); enterprise-generality demonstrated across B2B, B2C, G2C archetypes; foundation-grade under BC-SR-A001 §17
-    rating_target_for_admission: E3 met
-  verdict: admitted
-  decision_basis: 'Cell strategy-direction x operate is the only cell on the strategy-direction edge of the 7x7 ECF matrix without a canonical entry. CAND-037 closes the direction loop (BC-SR-A001 §16): Strategy Formulation -> Strategic Planning -> Performance Management -> Insight Management -> Adaptation. EPM is the governance and measurement side; Insight Management is the insight side. They are complementary, not overlapping. Distinct from Financial Resource Management (money side), Strategy Formulation (posture), Strategic Planning (plan). ECF placement per CR-DEA-BC-13 §D.2 + CR-DEA-BC-19: strategy-direction/operate primary; strategy-direction/improve + finance-accounting/operate secondaries. H8 noun-as-ability: Management gerund passes cleanly. No review-retained exemption needed. Version 1.0.0 (admission is the first release). metamodel_pin 1.0.0 (org-wide pin).'
