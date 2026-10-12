@@ -2,7 +2,7 @@ view_id: view-telecom-mcsp
 name: Mobile Communications Service Provider
 level: L3
 sector: Telecommunications (mobile services)
-catalog_baseline: v1-alpha admission set of 2026-09-02 (26 canonical first-order capabilities; PR #32 added CAND-018 Analytics and Intelligence, CAND-023 Resilience, CAND-029 Innovation)
+catalog_baseline: v1-alpha admission set of 2026-09-02 (26 canonical first-order capabilities; PR #32 added CAND-018 Insight Management (formerly Analytics and Intelligence, renamed at CR-DEA-BC-22 on 2026-09-30), CAND-023 Resilience, CAND-029 Innovation)
 specializations:
 - id: SPEC-001
   parent: capabilities:capability-customer-management-f3n8wb
@@ -70,18 +70,18 @@ specializations:
     rating: E3
   status: admitted
 inherited:
-- capabilities:capability-strategy-wdrtha
+- capabilities:capability-strategy-formulation-sf7q2x
 - capabilities:capability-strategic-planning-k3rz7a
 - capabilities:capability-enterprise-governance-uas48u
 - capabilities:capability-supplier-management-d6fuj4
 - capabilities:capability-marketing-xmc539
-- capabilities:capability-operations-vm39fm
+- capabilities:capability-operations-management-pm3w8k
 - capabilities:capability-financial-stewardship-c7xtfk
 - capabilities:capability-financial-resource-management-cd3c7c
 - capabilities:capability-workforce-management-9e8d8s
 - capabilities:capability-workforce-planning-b43rhm
 - capabilities:capability-information-management-6vjgdh
-- capabilities:capability-analytics-and-intelligence-559tky
+- capabilities:capability-insight-management-ms4n9d
 - capabilities:capability-technology-management-maus5n
 - capabilities:capability-risk-management-h9uxdw
 - capabilities:capability-legal-matter-management-zzbd2u

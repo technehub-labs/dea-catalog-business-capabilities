@@ -21,9 +21,9 @@ ecf:
     stage: improve
 related_capabilities:
 - capabilities:capability-technology-management-maus5n
-- capabilities:capability-operations-vm39fm
+- capabilities:capability-operations-management-pm3w8k
 - capabilities:capability-information-management-6vjgdh
-- capabilities:capability-analytics-and-intelligence-559tky
+- capabilities:capability-insight-management-ms4n9d
 - capabilities:capability-organizational-design-vanefq
 evidence:
   sources:
@@ -78,8 +78,8 @@ ecf_rationale: 'Admitted 2026-09-10 under CR-DEA-BC-17. Under the new semantic-c
   which is exactly the enablement-operations domain and the operate stage.'
 boundary: 'Runs technology services, platforms, automation, and observability for the rest of the enterprise.
   DOES NOT build/acquire the technology estate (Technology Management: strategic posture and acquisition);
-  DOES NOT derive insight from information (Analytics and Intelligence); DOES NOT steward information
-  lifecycles (Information Management); DOES NOT run business operations (Operations: value delivery),
+  DOES NOT derive insight from information (Insight Management); DOES NOT steward information
+  lifecycles (Information Management); DOES NOT run business operations (Operations Management: value delivery),
   or design the IT organization structure (Organizational Design: IT org design is a sub-concern). The
   defining distinction: Technology Enablement is the IT delivery function; Technology Management is the
   IT direction function.'

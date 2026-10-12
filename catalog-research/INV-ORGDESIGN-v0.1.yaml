@@ -59,7 +59,7 @@ distinctness_sweep:
   - against: capabilities:capability-workforce-planning-b43rhm
     verdict: Distinct
     rationale: 'Agent capacity vs Organization Structure - different business objects'
-  - against: capabilities:capability-strategy-wdrtha
+  - against: capabilities:capability-strategy-formulation-sf7q2x
     verdict: Distinct (parent-child)
     rationale: 'Enterprise vs Organization Structure - Org Design implements Strategy; not overlap'
   - against: capabilities:capability-strategic-planning-k3rz7a

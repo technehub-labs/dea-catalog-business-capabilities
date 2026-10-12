@@ -4,8 +4,8 @@ catalog:
     candidates: 31
     canonical: 0
     entities: 31
-    open_change_requests: 24
-    research_files: 3
+    open_change_requests: 25
+    research_files: 0
     retired: 0
   cross_cutting:
     change_requests: change-requests/
@@ -50,17 +50,6 @@ catalog:
     state: candidate
     type: unknown
     version: 0.0.0
-  - candidate_count: 1
-    canonical_count: 1
-    id: capabilities:capability-analytics-and-intelligence-559tky
-    last_modified: '2026-09-21'
-    lifecycle_status: active
-    path: entities/v1-alpha/analytics-and-intelligence-559tky/capabilities-capability-analytics-and-intelligence-559tky.yaml
-    research_count: 3
-    retired_count: 1
-    state: candidate
-    type: BusinessCapability
-    version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-asset-management-judtwr
@@ -108,14 +97,14 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-enterprise-governance-uas48u
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-12'
     lifecycle_status: active
     path: entities/v1-alpha/enterprise-governance-uas48u/capabilities-capability-enterprise-governance-uas48u.yaml
     research_count: 0
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.1
+    version: 1.0.2
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-facility-management-tx73hb
@@ -173,6 +162,17 @@ catalog:
     version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
+    id: capabilities:capability-insight-management-ms4n9d
+    last_modified: '2026-10-12'
+    lifecycle_status: active
+    path: entities/v1-alpha/insight-management-ms4n9d/capabilities-capability-insight-management-ms4n9d.yaml
+    research_count: 0
+    retired_count: 1
+    state: candidate
+    type: BusinessCapability
+    version: 2.0.0
+  - candidate_count: 1
+    canonical_count: 1
     id: capabilities:capability-legal-matter-management-zzbd2u
     last_modified: '2026-09-21'
     lifecycle_status: active
@@ -196,7 +196,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-offering-management-6egkc8
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-12'
     lifecycle_status: active
     path: entities/v1-alpha/offering-management-6egkc8/capabilities-capability-offering-management-6egkc8.yaml
     research_count: 0
@@ -206,19 +206,19 @@ catalog:
     version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
-    id: capabilities:capability-operations-vm39fm
-    last_modified: '2026-09-21'
+    id: capabilities:capability-operations-management-pm3w8k
+    last_modified: '2026-10-12'
     lifecycle_status: active
-    path: entities/v1-alpha/operations-vm39fm/capabilities-capability-operations-vm39fm.yaml
+    path: entities/v1-alpha/operations-management-pm3w8k/capabilities-capability-operations-management-pm3w8k.yaml
     research_count: 0
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.1
+    version: 2.0.0
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-organizational-design-vanefq
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-12'
     lifecycle_status: active
     path: entities/v1-alpha/organizational-design-vanefq/capabilities-capability-organizational-design-vanefq.yaml
     research_count: 0
@@ -273,18 +273,18 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-sourcing-and-procurement-esucp4
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-12'
     lifecycle_status: active
     path: entities/v1-alpha/sourcing-and-procurement-esucp4/capabilities-capability-sourcing-and-procurement-esucp4.yaml
     research_count: 0
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.2.0
+    version: 1.3.0
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-strategic-planning-k3rz7a
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-12'
     lifecycle_status: active
     path: entities/v1-alpha/strategic-planning-k3rz7a/capabilities-capability-strategic-planning-k3rz7a.yaml
     research_count: 0
@@ -294,15 +294,15 @@ catalog:
     version: 1.1.1
   - candidate_count: 1
     canonical_count: 1
-    id: capabilities:capability-strategy-wdrtha
-    last_modified: '2026-09-21'
+    id: capabilities:capability-strategy-formulation-sf7q2x
+    last_modified: '2026-10-12'
     lifecycle_status: active
-    path: entities/v1-alpha/strategy-wdrtha/capabilities-capability-strategy-wdrtha.yaml
+    path: entities/v1-alpha/strategy-formulation-sf7q2x/capabilities-capability-strategy-formulation-sf7q2x.yaml
     research_count: 0
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.1.1
+    version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-supplier-management-d6fuj4
@@ -317,7 +317,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-technology-enablement-y6nkws
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-12'
     lifecycle_status: active
     path: entities/v1-alpha/technology-enablement-y6nkws/capabilities-capability-technology-enablement-y6nkws.yaml
     research_count: 0
@@ -373,12 +373,6 @@ catalog:
   - entity_id: capabilities:candidate-relmgmt-nu73v9
     files: []
     path: entities/v1-alpha/relmgmt-nu73v9/candidates/research/
-  - entity_id: capabilities:capability-analytics-and-intelligence-559tky
-    files:
-    - BOUNDARY-DECISION-CAND-018.md
-    - README.md
-    - boundary-decision-cand-018.yaml
-    path: entities/v1-alpha/analytics-and-intelligence-559tky/research/
   - entity_id: capabilities:capability-asset-management-judtwr
     files: []
     path: entities/v1-alpha/asset-management-judtwr/research/
@@ -409,6 +403,9 @@ catalog:
   - entity_id: capabilities:capability-information-management-6vjgdh
     files: []
     path: entities/v1-alpha/information-management-6vjgdh/research/
+  - entity_id: capabilities:capability-insight-management-ms4n9d
+    files: []
+    path: entities/v1-alpha/insight-management-ms4n9d/research/
   - entity_id: capabilities:capability-legal-matter-management-zzbd2u
     files: []
     path: entities/v1-alpha/legal-matter-management-zzbd2u/research/
@@ -418,9 +415,9 @@ catalog:
   - entity_id: capabilities:capability-offering-management-6egkc8
     files: []
     path: entities/v1-alpha/offering-management-6egkc8/research/
-  - entity_id: capabilities:capability-operations-vm39fm
+  - entity_id: capabilities:capability-operations-management-pm3w8k
     files: []
-    path: entities/v1-alpha/operations-vm39fm/research/
+    path: entities/v1-alpha/operations-management-pm3w8k/research/
   - entity_id: capabilities:capability-organizational-design-vanefq
     files: []
     path: entities/v1-alpha/organizational-design-vanefq/research/
@@ -442,9 +439,9 @@ catalog:
   - entity_id: capabilities:capability-strategic-planning-k3rz7a
     files: []
     path: entities/v1-alpha/strategic-planning-k3rz7a/research/
-  - entity_id: capabilities:capability-strategy-wdrtha
+  - entity_id: capabilities:capability-strategy-formulation-sf7q2x
     files: []
-    path: entities/v1-alpha/strategy-wdrtha/research/
+    path: entities/v1-alpha/strategy-formulation-sf7q2x/research/
   - entity_id: capabilities:capability-supplier-management-d6fuj4
     files: []
     path: entities/v1-alpha/supplier-management-d6fuj4/research/

@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Enterprise Governance
 definition: 'The ability to direct and control the enterprise: decision rights, accountability, oversight,
   and policy across the whole.'
-version: 1.0.1
+version: 1.0.2
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
@@ -20,7 +20,7 @@ ecf:
   - domain: governance-existence
     stage: improve
 related_capabilities:
-- capabilities:capability-strategy-wdrtha
+- capabilities:capability-strategy-formulation-sf7q2x
 - capabilities:capability-risk-management-h9uxdw
 - capabilities:capability-organizational-design-vanefq
 evidence:

@@ -1,10 +1,10 @@
 # View: Mobile Communications Service Provider (MCSP)
 
-CR-DEA-BC-04 proving instance. Machine form: `view-telecom-mcsp.yaml`. Baseline: the v1-alpha admission set of 2026-09-02 (26 canonical first-order capabilities; PR #32 added CAND-018 Analytics and Intelligence, CAND-023 Resilience, CAND-029 Innovation).
+CR-DEA-BC-04 proving instance. Machine form: `view-telecom-mcsp.yaml`. Baseline: the v1-alpha admission set of 2026-09-02 (28 canonical first-order capabilities; PR #32 added CAND-018 Analytics and Intelligence (renamed to Insight Management at CR-DEA-BC-22 on 2026-09-30), CAND-023 Resilience (admitted as Resilience Management, renamed to Continuity Management at CR-DEA-BC-09), CAND-029 Innovation (admitted as Innovation Management, renamed to Idea Management at CR-DEA-BC-09); 27 (Technology Enablement, CR-DEA-BC-17); 28 (Organizational Design, CR-DEA-BC-14)).
 
 ## Coverage
 
-**26 of 26 canonical capabilities accounted for**: 4 admitted specializations, 22 inherited unchanged. The 3 entries added at PR #32 (resilience, innovation, analytics-and-intelligence) are inherited unchanged: they are sector-agnostic, the telecom view adds no specialization for them, and they participate via their canonical coordinates (governance-existence × design + operate, product-value × conceive + design, enablement-operations × operate).
+**28 of 28 canonical capabilities accounted for**: 4 admitted specializations, 22 inherited unchanged. The 3 entries added at PR #32 (resilience, innovation, analytics-and-intelligence [renamed to insight-management at CR-DEA-BC-22]) are inherited unchanged: they are sector-agnostic, the telecom view adds no specialization for them, and they participate via their canonical coordinates (governance-existence × design + operate, product-value × conceive + design, enablement-operations × operate).
 
 ## Admitted specializations
 

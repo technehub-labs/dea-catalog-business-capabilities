@@ -56,7 +56,9 @@ why_capability: 'E4; span across domains resolved at review (R-003): the span is
 ecf_rationale: 'R-003: primary enablement-operations x operate; secondaries deliberately
   empty (honest-not-exhaustive). CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).'
 boundary: Manages information; does not manage the technology that carries it (Technology
-  Management) or produce analytics from it (Analytics and Intelligence, deferred).
+  Management) or produce analytics from it (Insight Management, formerly Analytics
+  and Intelligence; renamed under CR-DEA-BC-22 on 2026-09-30 after ADR-ES-021
+  ratification of V-A).
   Information platforms and data infrastructure that information management depends
   on are operated by `capabilities:capability-technology-enablement-y6nkws` (admitted 2026-09-10
   under CR-DEA-BC-17).

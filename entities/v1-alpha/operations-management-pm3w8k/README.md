@@ -1,7 +1,7 @@
-# Operations
+# Operations Management
 
 **Level**: BusinessCapability (canonical)
-**Record id**: `capabilities:capability-operations-vm39fm`
+**Record id**: `capabilities:capability-operations-management-pm3w8k`
 
 **ECF primary coordinate**: enablement-operations / operate
 

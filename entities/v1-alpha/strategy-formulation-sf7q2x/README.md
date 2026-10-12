@@ -1,7 +1,7 @@
-# Strategy
+# Strategy Formulation
 
 **Level**: BusinessCapability (canonical)
-**Record id**: `capabilities:capability-strategy-wdrtha`
+**Record id**: `capabilities:capability-strategy-formulation-sf7q2x`
 
 **ECF primary coordinate**: strategy-direction / conceive
 

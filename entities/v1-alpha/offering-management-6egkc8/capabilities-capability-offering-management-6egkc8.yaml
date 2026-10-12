@@ -24,7 +24,7 @@ ecf:
     stage: retire
 related_capabilities:
 - capabilities:capability-marketing-xmc539
-- capabilities:capability-operations-vm39fm
+- capabilities:capability-operations-management-pm3w8k
 evidence:
   sources:
   - SRC-001
@@ -59,11 +59,11 @@ specialization:
   allowed: true
   industry_examples: []
 why_capability: Enterprise-general; distinct from Marketing (demand creation) and
-  Operations (delivery) by the sweep.
+  Operations Management (delivery) by the sweep.
 ecf_rationale: Primary conceive in product-value; participates through the full
   offering lifecycle (design, build, improve, retire).  CR-DEA-BC-13 §A re-evaluation 2026-09-10 under the new semantic-center-of-gravity rule, placement confirmed (no coordinate change).
 boundary: Manages the offering; does not create demand for it (Marketing) or operate
-  its delivery (Operations).
+  its delivery (Operations Management).
 non_examples:
 - A product backlog (an artifact)
 - A product team (an organization)

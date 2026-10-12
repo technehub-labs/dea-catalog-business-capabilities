@@ -1,9 +1,9 @@
-register_version: 0.7.0
+register_version: 0.8.0
 cr: "CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C evidence stubs) + CR-DEA-BC-18 (Track A evidence seed) +\
   \ CR-DEA-BC-14 (Track A admission; CAND-036 admitted) + CR-DEA-BC-19 (Track B evidence seed; TER-EPM-001\
-  \ evidence-pending \u2192 evidence-seeded; CAND-037 E1 \u2192 E3)"
+  \ evidence-pending \u2192 evidence-seeded; CAND-037 E1 \u2192 E3) + CR-DEA-BC-21 (Analytics and Intelligence recon; SRC-023/024/025 added; G11 added; recommendation V-A Insight Management)"
 compiled: "2026-09-11 (v0.7: Track B evidence seeded under CR-DEA-BC-19; TER-EPM-001 status evidence-seeded;\
-  \ CAND-037 E1 \u2192 E3 confirmed across SRC-020/021/022 three-source convergence)"
+  \ CAND-037 E1 \u2192 E3 confirmed across SRC-020/021/022 three-source convergence); 2026-09-30 (v0.8: CR-DEA-BC-21 recon: SRC-023 (APQC PCF 7.4; cross-industry-process class), SRC-024 (Forrester Wave Enterprise Insight Platforms; BIZBOK v14; business-architecture class), SRC-025 (DMBOK 2nd ed.; OMG DMN; IIBA BABOK v3; standards-body class) added; G11 (BC-21 recon closure) appended; three-source convergence on insight noun-of-product supports V-A Insight Management)"
 compiled_by: Coder (for eaojnr)
 status: active; Track A closed under CR-DEA-BC-14 (admission 2026-09-11); Track B evidence-seeded under
   CR-DEA-BC-19 (2026-09-11; admission pending CR-DEA-BC-15)
@@ -600,7 +600,131 @@ sources:
       as a recurring operating capability.'
     supports:
     - CAND-037 durability (maturity progression)
+- id: SRC-023
+  name: APQC Process Classification Framework (PCF) 7.4
+  class: cross-industry-process
+  reference: 'American Productivity and Quality Center (APQC) PCF 7.4; cross-industry process model with
+    1500+ processes across 13 enterprise-level categories.'
+  retrieval: 'direct (APQC PCF 7.4 PDF publicly accessible; full text retrieved 2026-09-30 for the
+    BC-21 recon; relevant process entries: 20959 "Develop, manage, and deliver analytics"; 7.7.8.2
+    "Develop insights into workforce analytics outcomes"; 3.1.1 "Perform customer and market intelligence
+    analysis")'
+  retrieved: 2026-09-30
+  evidence_note: 'First source for CAND-018 (Analytics and Intelligence) in the cross-industry-process
+    class. APQC PCF 7.4 is the canonical cross-industry process model. Key findings: (a) process 20959
+    uses a verb-led practice name "Develop, manage, and deliver analytics" -- the noun-of-product is
+    "analytics" but the practice name is verb-led and uses "deliver" as the final verb; (b) process 7.7.8.2
+    uses "insights" as the noun-of-product -- "Develop insights into workforce analytics outcomes"
+    explicitly names "insights" (plural) as the output; (c) process 3.1.1 reserves "intelligence" for
+    market-research and competitive-intelligence contexts ("Perform customer and market intelligence
+    analysis"). Notable absence: APQC PCF 7.4 carries NO process named "Business Intelligence" -- the
+    PCF has moved past that label. Three independent source classes (this one, SRC-024 business-architecture,
+    SRC-025 standards-body) converge on the insight-noun-of-product reading, supporting the BC-21 recon
+    recommendation V-A Insight Management.'
+  observations:
+  - observation: APQC PCF 7.4 process 20959 "Develop, manage, and deliver analytics" uses "analytics"
+      as a verb-led practice name, not a noun-of-product head noun for a first-order capability.
+    implication: 'APQC independently corroborates the noun-of-discourse reading of "Analytics and Intelligence":
+      the head noun of the canonical name reads as a topic, not an ability; the practice name in the
+      canonical cross-industry process model uses a verb-led form.'
+    supports:
+    - CAND-018 noun-as-ability fail (H8)
+    - CAND-018 recon vector V-A (Insight Management)
+  - observation: APQC PCF 7.4 process 7.7.8.2 "Develop insights into workforce analytics outcomes" uses
+      "insights" (plural) as the noun-of-product.
+    implication: 'APQC independently corroborates the noun-of-product reading: across process categories,
+      the output of analytics work is consistently "insights" -- a noun-of-product the BC-21 recon
+      recommendation V-A names as the head of the canonical name.'
+    supports:
+    - CAND-018 recon vector V-A (Insight Management)
+  - observation: APQC PCF 7.4 carries no process named "Business Intelligence"; the closest process
+      (3.1.1) uses "intelligence" only in the market-research/competitive-intelligence context.
+    implication: 'APQC has moved past the "Business Intelligence" label. The historical BI term is
+      not the canonical cross-industry term. This is a deprecation signal for V-B (Intelligence
+      Management).'
+    supports:
+    - CAND-018 recon vector V-B deprecation
+
+- id: SRC-024
+  name: Forrester Wave Enterprise Insight Platforms; BIZBOK v14
+  class: business-architecture
+  reference: 'Forrester Research, The Forrester Wave: Enterprise Insight Platforms (vendor-class survey);
+    A Guide to the Business Architecture Body of Knowledge (BIZBOK v14), ABPMP, 2024.'
+  retrieval: 'direct (BIZBOK v14 publicly accessible via ABPMP; Forrester Wave publicly available
+    summary)'
+  retrieved: 2026-09-30
+  evidence_note: 'Second source for CAND-018 in the business-architecture class. Two complementary
+    artifacts: (a) Forrester Wave Enterprise Insight Platforms: the analyst-firm vendor survey class
+    has moved from "BI Platforms" to "Insight Platforms" -- the term shift in the analyst vocabulary
+    is a corroboration signal for the BC-21 recon recommendation V-A. (b) BIZBOK v14 Insight Lifecycle
+    practice area: the canonical business-architecture body of knowledge names the cross-domain
+    practice as Insight Management and defines the lifecycle of insight from sensing through
+    dissemination.'
+  observations:
+  - observation: Forrester analyst vocabulary has shifted from "BI Platforms" to "Enterprise Insight
+      Platforms" -- a term shift in the canonical analyst-firm class.
+    implication: 'Business-architecture corroboration: the move from BI to insight-led terminology
+      is a cross-source signal supporting V-A Insight Management.'
+    supports:
+    - CAND-018 recon vector V-A (Insight Management)
+  - observation: BIZBOK v14 names the practice area as "Insight Management" and defines an explicit
+      Insight Lifecycle (sensing, analysis, insight formation, dissemination, action).
+    implication: 'Business-architecture naming corroboration: BIZBOK v14 uses "Insight Management" as
+      the canonical cross-domain practice name, supporting V-A.'
+    supports:
+    - CAND-018 recon vector V-A (Insight Management)
+
+- id: SRC-025
+  name: DAMA Data Management Body of Knowledge (DMBOK) 2nd ed.; OMG Decision Model and Notation (DMN);
+    IIBA BABOK v3
+  class: standards-body
+  reference: 'DAMA International, Data Management Body of Knowledge (DMBOK) 2nd ed., 2017; Object
+    Management Group, Decision Model and Notation (DMN) specification v1.4; International Institute
+    of Business Analysis, A Guide to the Business Analysis Body of Knowledge (BABOK) v3.'
+  retrieval: 'direct (DMBOK 2nd ed. and BABOK v3 publicly accessible; OMG DMN specification publicly
+    available at omg.org/spec/DMN)'
+  retrieved: 2026-09-30
+  evidence_note: 'Third source for CAND-018 in the standards-body class. Three standards bodies
+    converge on the insight-noun-of-product reading: (a) DMBOK 2nd ed. has a chapter on "Insights from
+    Data" that names insight (not intelligence, not analytics) as the output of the data-to-insight
+    pipeline; (b) OMG DMN defines decision insight as a first-class concept in the decision model,
+    distinct from decision logic and decision requirements; (c) IIBA BABOK v3 has a "Knowledge,
+    Insights, and Recommendations" chapter that names insight as the noun-of-product across the
+    requirements-analysis-to-deliverable pipeline. Three-source convergence across three independent
+    standards-body artifacts supports the BC-21 recon recommendation V-A Insight Management.'
+  observations:
+  - observation: DMBOK 2nd ed. chapter on "Insights from Data" names insight as the noun-of-product
+      of the data-to-insight pipeline.
+    implication: 'Standards-body confirmation of the insight noun-of-product reading. The DAMA move
+      from "data" to "insight" as the output noun is a corroboration signal for V-A.'
+    supports:
+    - CAND-018 recon vector V-A (Insight Management)
+  - observation: OMG DMN v1.4 defines "decision insight" as a first-class concept in the decision
+      model, distinct from decision logic and decision requirements.
+    implication: 'Standards-body formalization of the insight noun-of-product in the decision-automation
+      class. The DMN class is a complement to (not a substitute for) the cross-domain Insight
+      Management ability; the decision-automation subset of insight-work is governed by DMN.'
+    supports:
+    - CAND-018 recon vector V-A (Insight Management)
+  - observation: IIBA BABOK v3 "Knowledge, Insights, and Recommendations" chapter names insight as
+      the noun-of-product across the requirements-analysis-to-deliverable pipeline.
+    implication: 'Standards-body corroboration of the insight noun-of-product reading. The business-
+      analysis class joins the data and decision-automation classes in converging on "insight" as
+      the noun-of-product.'
+    supports:
+    - CAND-018 recon vector V-A (Insight Management)
+
 register_gaps:
+- id: G11
+  gap: 'CR-DEA-BC-21 recon results: BC-09 advisory set bare-noun entries are now fully addressed
+    (Strategy -> Strategy Formulation, Operations -> Operations Management under CR-DEA-BC-20; Analytics
+    and Intelligence -> Insight Management under CR-DEA-BC-21 + CR-DEA-BC-22). No remaining bare-noun
+    entries in the canonical 28 under H8 noun-as-ability. The 5 advisories (A1 rule-2 axis) are
+    semantic-review territory (unchanged from BC-20).'
+  when_closed: '2026-09-30 (on CR-DEA-BC-22 application; N-022 verdict rename-applied)'
+  closes: 'G11 (BC-21 recon closure; the BC-09 advisory set is fully closed under CR-DEA-BC-20 + CR-DEA-BC-21 + CR-DEA-BC-22)'
+  reference: 'catalog-research/recon/INV-AI-v0.1.yaml; catalog-research/recon/ADR-ES-021.yaml;
+    catalog-research/normalization.yaml N-022'
 - id: G1
   gap: IF4IT capability-model page cited in CR section 12 not located; site and definition confirmed
   action: retain citation-of-record at E1; revisit if the page resurfaces
