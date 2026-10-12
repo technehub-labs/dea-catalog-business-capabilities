@@ -4,7 +4,7 @@ catalog:
     candidates: 32
     canonical: 0
     entities: 32
-    open_change_requests: 26
+    open_change_requests: 28
     research_files: 2
     retired: 0
   cross_cutting:
@@ -20,7 +20,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 0
     id: capabilities:candidate-epm-5fxren
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-12'
     lifecycle_status: candidate
     path: entities/v1-alpha/epm-5fxren/candidates/epm.yaml
     research_count: 0
@@ -130,7 +130,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-financial-resource-management-cd3c7c
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-12'
     lifecycle_status: active
     path: entities/v1-alpha/financial-resource-management-cd3c7c/capabilities-capability-financial-resource-management-cd3c7c.yaml
     research_count: 0
@@ -141,7 +141,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-financial-stewardship-c7xtfk
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-12'
     lifecycle_status: active
     path: entities/v1-alpha/financial-stewardship-c7xtfk/capabilities-capability-financial-stewardship-c7xtfk.yaml
     research_count: 0

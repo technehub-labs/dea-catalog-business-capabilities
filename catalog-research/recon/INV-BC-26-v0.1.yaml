@@ -1,0 +1,109 @@
+id: recon-bc-26
+title: 'BC-26: OpenDEA metamodel re-pinning audit (catalog v1-alpha)'
+cr: CR-DEA-BC-26
+status: complete
+compiled: '2026-10-12 (BC-26 audit complete; findings below; 0 schema-breaking drift; 1 entry-shape drift
+  (EPM missing the 5 legacy narrative fields); 1 docs ambiguity (metamodel_pin semantics); 2 follow-on
+  CRs queued)'
+scope:
+  population: '29 canonical first-order capability entries in entities/v1-alpha/'
+  reference_schema: 'schemas/entity.schema.json (catalog-local; 30 properties)'
+  reference_framework: 'dea-metaframework at v2.5.0 (2026-09-08); CITATION.cff'
+  reference_pins: 'docs/VERSIONING.md section 1.4 (metamodel_pin); section 1.5 (ECF contract pin)'
+
+findings:
+  shape_conformance:
+    summary: 'All 29 entries pass the 16-field required shape check; metamodel_pin 1.0.0 and ecfConformance.profile dea:ecf@1.0.0 are uniform across the 29 entries.'
+    pass: 29
+    fail: 0
+    field_audit:
+      id: '29/29 present and well-formed'
+      name: '29/29 present'
+      version: '29/29 semver-conformant (values: 1.0.0, 1.0.1, 1.0.2, 1.1.0, 1.1.1, 1.2.0, 1.3.0, 1.3.1, 2.0.0)'
+      metamodel_pin: '29/29 == 1.0.0'
+      ecfConformance_profile: '29/29 == dea:ecf@1.0.0'
+      capability_layer: '29/29 in the governed enum (strategic | operational | support)'
+      lifecycle_status: '29/29 == active'
+      business_object: '29/29 non-empty; 28 distinct values; 1 shared (the "Enterprise" and "Asset" duplicates are intentional reuses across cells)'
+      ecf_primary: '29/29 well-formed (domain + stage present)'
+      ecf_canonicalReferences: '29/29 have at least the primary coordinate; 17/29 also carry secondary coordinates in canonicalReferences (the rest carry secondaries only in the simple ecf block)'
+
+  legacy_field_drift:
+    summary: '28 of 29 entries carry the 5 "rich-narrative" fields (non_examples, specialization, specialization_boundary, ecf_rationale, why_capability). 1 entry (EPM, BC-23) does NOT carry them. EPM is the post-mv1 pattern; the other 28 are the BC-09 era pattern. The schema (schemas/entity.schema.json) declares all 5 fields as optional. The drift is benign: EPM was admitted at BC-23 with the simpler shape, the other 28 carry the rich-narrative shape. No consumer breaks either way.'
+    affected_entries:
+    - id: capabilities:capability-enterprise-performance-management-5fxren
+      name: Enterprise Performance Management
+      missing_fields: [non_examples, specialization, specialization_boundary, ecf_rationale, why_capability]
+      extra_field: loop_closure_narrative
+      bc_decision: 'backfill EPM with the 5 legacy fields to restore shape consistency; OR declare EPM as the new pattern and deprecate the 5 fields from the 28 others. Recommended: backfill (CR-DEA-BC-29a).'
+    pattern_summary:
+      with_all_5: 28
+      with_aliases_also: 9
+      without_any_of_5: 1
+      extra_loop_closure_narrative: 1
+
+  metamodel_pin_semantics:
+    summary: 'The metamodel_pin: 1.0.0 field is documented in docs/VERSIONING.md section 1.4 as pinning the catalog to a specific metamodel version. The actual value 1.0.0 is not a dea-metaframework version (which went 2.0.0 -> 2.1.0 -> 2.2.0 -> 2.3.0 -> 2.4.0 -> 2.5.0 from 2026-07-27 onward; no 1.x ever released). The 1.0.0 is a catalog-internal pin to the v1-alpha shape contract. The docs are ambiguous; the actual usage is consistent (every entry pins to 1.0.0 = the catalog-internal shape contract).'
+    ambiguity: 'docs/VERSIONING.md section 1.4 says: "the catalog pins to a specific metamodel version via the top-level metamodel_pin: 1.0.0 field on every entry. When the metamodel releases a new major version (e.g., 2.0.0), the catalog must either upgrade its pin ...". The example "2.0.0" matches the dea-metaframework release pattern, but no dea-metaframework 1.0.0 exists. The value 1.0.0 is a catalog-internal pin to the v1-alpha shape contract.'
+    bc_decision: 'Clarify the docs: the metamodel_pin is the catalog-internal shape contract version (current: 1.0.0 = v1-alpha shape). It is NOT a pin to a specific dea-metaframework release; the ECF contract pin (ecfConformance.profile) is the separate, hard pin to the ECF profile. The dea-metaframework release version is tracked separately in the changelog. (CR-DEA-BC-29b: docs amendment.)'
+
+  dea_metaframework_drift:
+    summary: 'dea-metaframework is at 2.5.0 (2026-09-08). The catalog''s metamodel_pin is 1.0.0 (catalog-internal). The catalog does NOT explicitly pin to a dea-metaframework version, despite the docs implying it should. The 5 minor versions and 1 major version of dea-metaframework changes since the catalog''s 1.0.0 pin (2026-07-27) are: 2.0.0 (initial public release), 2.1.0, 2.2.0, 2.3.0, 2.4.0, 2.5.0. The major change is the EnablementAndOperations rename (2.5.0).'
+    dea_metaframework_releases_since_pin:
+    - version: 2.0.0
+      date: 2026-07-27
+      summary: 'Initial public release of the Enterprise Concept Framework (axiom-derived 7x7 matrix).'
+    - version: 2.1.0
+      date: 2026-09-01
+      summary: 'Minor release.'
+    - version: 2.2.0
+      date: 2026-09-07
+      summary: 'Minor release.'
+    - version: 2.3.0
+      date: 2026-09-07
+      summary: 'Minor release.'
+    - version: 2.4.0
+      date: 2026-09-07
+      summary: 'Minor release.'
+    - version: 2.5.0
+      date: 2026-09-08
+      summary: 'Domain 6 rename: OperationsAndEnablement -> EnablementAndOperations (kebab-case operations-enablement -> enablement-operations). This is a major-bump-eligible change; under CR-ECF-008, the rename is backward-compatible (5 deprecated aliases are mapped to the canonical value).'
+    impact_on_catalog: 'The catalog already uses the kebab-case label enablement-operations (post-mv1 era), which is one of the 5 deprecated aliases in dea-metaframework 2.5.0. The deprecated alias resolution function resolve_domain_alias() in dea-metaframework/tools/ecf_coordinates.py maps enablement-operations to EnablementAndOperations. The catalog is therefore dea-metaframework-2.5.0-compatible at the ECF level, even though the metamodel_pin is 1.0.0. The ambiguity is in the docs, not in the data.'
+    bc_decision: 'No re-pin needed. The catalog''s metamodel_pin: 1.0.0 is correctly interpreted as the catalog-internal v1-alpha shape contract. The dea-metaframework 2.5.0 compatibility is confirmed at the ECF level (kebab-case aliases work). The docs need clarification (CR-DEA-BC-29b).'
+
+follow_ons:
+- id: CR-DEA-BC-29a
+  title: 'EPM backfill: add the 5 legacy narrative fields (non_examples, specialization, specialization_boundary, ecf_rationale, why_capability) to capability-enterprise-performance-management-5fxren'
+  rationale: 'Restore shape consistency across the 29 canonical entries. EPM was admitted at BC-23 with the simpler shape; the other 28 entries carry the rich-narrative shape. The schema allows both. Backfill is the conservative move.'
+  estimated_scope: '1 entity YAML update; 0 schema changes; ~50-100 lines of content (mostly the narrative fields).'
+- id: CR-DEA-BC-29b
+  title: 'docs/VERSIONING.md amendment: clarify metamodel_pin semantics (catalog-internal shape contract, not dea-metaframework release pin)'
+  rationale: 'The docs are ambiguous and the actual usage is consistent. Clarify that metamodel_pin is a catalog-internal pin, and the ECF contract pin is the hard pin to the ECF profile. The dea-metaframework release version is tracked separately in the changelog.'
+  estimated_scope: '1 docs section update; no schema or catalog changes.'
+
+audit_methodology:
+  tooling: 'python3 + PyYAML; no new scripts added (the audit is reproducible from the data in this recon file).'
+  population: '29 canonical entries, found by glob: entities/v1-alpha/**/capabilities-capability-*.yaml (excluding /candidates/, /research/, /retired/).'
+  reference_schemas:
+  - 'schemas/entity.schema.json (catalog-local; 30 properties)'
+  - 'dea-metaframework/schemas/capability.schema.json (DEA-metamodel; required: id, name, cell, actors)'
+  - 'dea-metaframework/schemas/entity.schema.json (DEA-metamodel; required: id, name, domain, stage, version)'
+  fields_audited:
+  - id, name, version (semver), metamodel_pin, lifecycle_status, capability_layer (enum), business_object (non-empty), ecf (primary well-formed), ecfConformance.profile, ecfConformance.canonicalReferences (>=1)
+  - legacy 5 fields: non_examples, specialization, specialization_boundary, ecf_rationale, why_capability
+  - extra 1: loop_closure_narrative
+  - aliases (9 entries carry aliases; the rest do not)
+
+recommendation:
+  bc_26_close_out: 'PASS with 2 follow-ons. No blocking drift. The catalog is at v1-alpha with metamodel_pin 1.0.0 and ECF profile dea:ecf@1.0.0; 29 canonical entries are shape-conformant; the 1 entry-shape drift (EPM) and the 1 docs ambiguity are non-blocking and have queued follow-ons.'
+  next_slice_options: 'BC-29a (EPM backfill) + BC-29b (docs amendment) are small, surgical follow-ons; estimated 30 minutes for both combined. OR: BC-27 (CAND-005/006 unification) or BC-28 (BC-SR-A001 P1 re-audit) are the parallel slices for this 3-card batch.'
+
+cross_references:
+- docs/VERSIONING.md (section 1.4 metamodel_pin; section 1.5 ECF contract pin)
+- schemas/entity.schema.json (catalog-local; 30 properties)
+- dea-metaframework/CHANGELOG.md (v2.0.0..v2.5.0 history)
+- dea-metaframework/CITATION.cff (v2.5.0 release metadata)
+- catalog-research/normalization.yaml (N-024 retired at BC-25)
+- catalog-research/evidence-register.yaml (TER-EPM-001 admitted at BC-23)
+- change-requests/CR-DEA-BC-23.md (EPM admission; the EPM backfill trigger)
+- change-requests/CR-DEA-BC-25.md (linter patch; the BC-26 follow-on context)
