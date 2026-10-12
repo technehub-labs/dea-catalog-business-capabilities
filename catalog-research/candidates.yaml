@@ -1,6 +1,6 @@
-universe_version: 0.5.1
+universe_version: 0.5.2
 cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C stubs) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14 (Track A admission; CAND-036 admitted)
-compiled: '2026-09-11 (v0.5: CAND-037 Enterprise Performance Management added under CR-DEA-BC-19 Track B research-CR; E1 pending evidence work; canonical false; admission remains a separate CR per BC-SR-A001 §5 P1)'
+compiled: '2026-09-11 (v0.5: CAND-037 Enterprise Performance Management added under CR-DEA-BC-19 Track B research-CR; E1 pending evidence work; canonical false; admission remains a separate CR per BC-SR-A001 §5 P1) + 2026-10-12 (v0.5.2: CR-DEA-BC-23 EPM admission; CAND-037 E1 -> E3; 29th first-order canonical capability; cell strategy-direction x operate populated)'
 status: active
 evidence_register: docs/research/evidence-register.yaml
 classification_taxonomy:
@@ -913,7 +913,7 @@ candidates:
   name: Enterprise Performance Management
   classification: CAPABILITY
   confidence: medium
-  evidence_strength: E1
+  evidence_strength: E3
   business_object_hypothesis: Performance
   parent_candidates: []
   child_candidates:
@@ -928,10 +928,12 @@ candidates:
   notes: 'Track B investigation (CR-DEA-BC-19; this CR). Seeded by BC-SR-A001 §5 (reviewer P1) and BC-DEA-BC-13 §B.2 + §D.2 (hypothesis + loop-closure narrative requirement). Three source classes seeded: strategy (SRC-020 Kaplan & Norton Balanced Scorecard 1992+), framework/people-ops-management (SRC-021 OKR framework per Andy Grove + John Doerr), standards-body (SRC-022 OMG Business Performance Management standards via OCEB 2). Promotion from E1 (review recommendation only) to E3 requires independent corpus corroboration across the three source classes (this CR deliverable). Loop-closure narrative required regardless of admission per BC-DEA-BC-13 §D.2 explicit decision: even if EPM is not admitted, the Direction Loop status must be reported.'
   provenance:
     research_artifact: true
-    canonical: false
+    canonical: true
     added: '2026-09-11'
-    evidence_register: docs/research/evidence-register.yaml
-    track: Track B (BC-DEA-BC-13 §B.2 + §D.2; CR-DEA-BC-19 research-CR)
+    evidence_register: catalog-research/evidence-register.yaml
+    track: Track B (BC-DEA-BC-13 §B.2 + §D.2; CR-DEA-BC-19 research-CR; CR-DEA-BC-23 admission)
+    admitted: '2026-10-12'
+    admitted_cr: CR-DEA-BC-23
     sources_seeded_by:
     - BC-SR-A001 §4 (reviewer P1)
     - BC-DEA-BC-13 §B.1
@@ -939,12 +941,12 @@ candidates:
     - CR-DEA-BC-18 (research-CR; evidence package)
     - CR-DEA-BC-14 (admission-CR; this CR)
     promotion_history:
-    - stage: research-CR (CR-DEA-BC-18)
+    - stage: research-CR (CR-DEA-BC-19)
       date: '2026-09-11'
       evidence_strength: E3
-    - stage: admission (CR-DEA-BC-14)
-      date: '2026-09-11'
-      evidence_strength: E4
+    - stage: admission (CR-DEA-BC-23)
+      date: '2026-10-12'
+      evidence_strength: E3
       basis: 'EVIDENCE.md §3 admission promotion rule (E3 + admission gate; all 10 criteria met per admission-gate-precheck.yaml v0.7)'
 
 

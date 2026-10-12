@@ -209,9 +209,17 @@ def check_entry(
         )
     m = OUTCOME_MARKERS.search(name)
     if m:
-        errors.append(
-            f"{cid}: name '{name}' carries outcome/state marker '{m.group(0)}' (TAXONOMY 1.4)"
-        )
+        # Gate: review-retained entries may carry outcome-marker words when
+        # the marker is the noun-of-product of a recognized governance ability
+        # (e.g. Performance in 'Enterprise Performance Management', Quality
+        # in 'Quality Management'). N-024 records the BC-23 verdict; N-015
+        # records the Security Management case. Default-deny; explicit verdict
+        # required to exempt.
+        is_retained_outcome = review_retained is not None and cid in review_retained
+        if not is_retained_outcome:
+            errors.append(
+                f"{cid}: name '{name}' carries outcome/state marker '{m.group(0)}' (TAXONOMY 1.4)"
+            )
     m = INDUSTRY_QUALIFIERS.search(name)
     if m:
         errors.append(

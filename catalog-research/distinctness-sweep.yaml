@@ -2,7 +2,7 @@
 # against the pre-migration layout and the legacy dea:* id family. Ids cited
 # below are historical; see reconciliation/migration-id-map.yaml for the
 # old-to-new id mapping.
-sweep_version: 0.5.0
+sweep_version: 0.6.0
 cr: CR-DEA-BC-02 (initial 26) + CR-DEA-BC-13 (track A/B/C sweeps) + CR-DEA-BC-18 (Track A evidence seed;
   expanded against-list incl. capabilities:capability-technology-management-maus5n and dea:capability-technology-enability)
   + CR-DEA-BC-14 (Track A admission; sweep-completed-as-admitted for OrgDesign) + CR-DEA-BC-19 (Track
@@ -10,8 +10,8 @@ cr: CR-DEA-BC-02 (initial 26) + CR-DEA-BC-13 (track A/B/C sweeps) + CR-DEA-BC-18
   organizational-design)
 compiled: "2026-09-11 (v0.5: Track A admitted under CR-DEA-BC-14; OrgDesign sweep 6 \u2192 8 peers; sweep-completed-as-admitted)\
   \ + Track B evidence-seeded under CR-DEA-BC-19 (EPM sweep 4 \u2192 8 peers; sweep-completed-as-evidence-seeded)"
-status: active; Track A closed under CR-DEA-BC-14 (admission 2026-09-11); Track B evidence-seeded under
-  CR-DEA-BC-19 (2026-09-11)
+status: active; Track A closed under CR-DEA-BC-14 (admission 2026-09-11); Track B admitted under
+  CR-DEA-BC-23 (2026-10-12; CAND-037 admitted; 29th first-order canonical capability)
 inputs:
   candidates: docs/research/candidates.yaml (v0.5.0)
   normalization: docs/research/normalization.yaml (v0.2.0)

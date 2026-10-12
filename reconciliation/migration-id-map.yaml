@@ -1,11 +1,15 @@
-version: 2
+version: 3
 namespace: capabilities
 migrated_at: '2026-09-21'
-extended_at: '2026-09-30'
-extension_cr: CR-DEA-BC-20 (Strategy -> Strategy Formulation; Operations -> Operations Management; Sourcing and Procurement business_object Acquisition Cycle); CR-DEA-BC-22 (Analytics and Intelligence -> Insight Management)
+extended_at: '2026-10-12'
+extension_cr: CR-DEA-BC-20 (Strategy -> Strategy Formulation; Operations -> Operations Management; Sourcing and Procurement business_object Acquisition Cycle); CR-DEA-BC-22 (Analytics and Intelligence -> Insight Management); CR-DEA-BC-23 (Enterprise Performance Management admitted as 29th first-order canonical capability; candidate id capabilities:candidate-epm-5fxren -> canonical id capabilities:capability-enterprise-performance-management-5fxren; cell strategy-direction x operate populated; direction loop closed per BC-SR-A001 §16)
 carrier_cr: CR-DEA-BC-mv1
 id_map:
   dea:candidate-epm: capabilities:candidate-epm-5fxren
+  capabilities:candidate-epm-5fxren: dea:candidate-epm
+  dea:candidate-epm-5fxren: capabilities:capability-enterprise-performance-management-5fxren
+  dea:capability-enterprise-performance-management: capabilities:capability-enterprise-performance-management-5fxren
+  dea:capability-epm: capabilities:capability-enterprise-performance-management-5fxren
   dea:candidate-orgdesign: capabilities:candidate-orgdesign-a7s8bf
   dea:candidate-relmgmt: capabilities:candidate-relmgmt-nu73v9
   dea:capability-analytics-and-intelligence: capabilities:capability-analytics-and-intelligence-559tky
@@ -80,3 +84,6 @@ known_residuals:
 - legacy_value: dea:capability-technology-enability
   where: catalog-research/distinctness-sweep.yaml
   reason: Historical typo variant cited in a research note; not a record id.
+- legacy_value: dea:candidate-epm-5fxren
+  where: catalog-research/candidates.yaml (CAND-037 provenance; recorded at the post-mv1 candidate id), catalog-research/evidence-register.yaml (TER-EPM-001), catalog-research/normalization.yaml (N-023 affected_entry), entities/v1-alpha/epm-5fxren/candidates/epm.yaml (research artifact; BC-09 section 8 provenance preservation)
+  reason: Pre-admission candidate id; admission at CR-DEA-BC-23 (2026-10-12) promoted the record to the canonical id capabilities:capability-enterprise-performance-management-5fxren (29th first-order canonical capability). The candidate research artifact at entities/v1-alpha/epm-5fxren/ is preserved per BC-09 section 8; the alias-projection under dea:capability-epm (used in pre-2026-09-21 narrative) is recorded as a known_residual for audit trail.
