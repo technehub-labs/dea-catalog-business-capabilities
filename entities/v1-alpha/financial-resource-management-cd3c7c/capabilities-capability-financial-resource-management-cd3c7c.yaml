@@ -21,6 +21,8 @@ ecf:
     stage: conceive
 related_capabilities:
 - capabilities:capability-financial-stewardship-c7xtfk
+- capabilities:capability-enterprise-performance-management-5fxren
+
 evidence:
   sources:
   - SRC-001

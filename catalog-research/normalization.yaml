@@ -2,7 +2,7 @@
 # against the pre-migration layout and the legacy dea:* id family. Ids cited
 # below are historical; see reconciliation/migration-id-map.yaml for the
 # old-to-new id mapping.
-register_version: 0.4.0
+register_version: 0.7.0
 cr: CR-DEA-BC-02 (section 20; deliverable section 33 item 5); CR-DEA-BC-09 (naming conformance refresh; N-010..N-015);
   CR-DEA-BC-20 (noun-as-ability rule 7; N-015 verdict formalized; N-016, N-018, N-019, N-020 appended;
   N-017 deferred to CR-DEA-BC-21 recon); CR-DEA-BC-21 (N-022 - Analytics and Intelligence recon;
@@ -355,6 +355,93 @@ decisions:
     recorded under ADR-ES-021 with status "ratified".
   confidence: high
 
+- id: N-023
+  question: CR-DEA-BC-23 admission of Enterprise Performance Management (CAND-037) as 29th first-order canonical capability
+  question_kind: admission
+  cr: CR-DEA-BC-23
+  affected_entry: capabilities:capability-enterprise-performance-management-5fxren
+  prior_affected_entry: capabilities:candidate-epm-5fxren
+  candidates:
+  - CAND-037
+  sources:
+  - SRC-020 (Kaplan & Norton Balanced Scorecard 1992+; business-architecture class)
+  - SRC-021 (OKR framework per Andy Grove / John Doerr; commercial-capability-models class)
+  - SRC-022 (OMG Business Performance Management standards; standards-body class)
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  evidence:
+  - evidence_strength: E3
+    basis: three-source convergence across business-architecture (SRC-020 BSC), commercial-capability-models (SRC-021 OKR), standards-body (SRC-022 OMG BPM); enterprise-generality demonstrated across B2B, B2C, G2C archetypes; foundation-grade under BC-SR-A001 §17
+    rating_target_for_admission: E3 met
+  verdict: admitted
+  decision_basis: 'Cell strategy-direction x operate is the only cell on the strategy-direction edge of the 7x7 ECF matrix without a canonical entry. CAND-037 closes the direction loop (BC-SR-A001 §16): Strategy Formulation -> Strategic Planning -> Performance Management -> Insight Management -> Adaptation. EPM is the governance and measurement side; Insight Management is the insight side. They are complementary, not overlapping. Distinct from Financial Resource Management (money side), Strategy Formulation (posture), Strategic Planning (plan). ECF placement per CR-DEA-BC-13 §D.2 + CR-DEA-BC-19: strategy-direction/operate primary; strategy-direction/improve + finance-accounting/operate secondaries. H8 noun-as-ability: Management gerund passes cleanly. No review-retained exemption needed. Version 1.0.0 (admission is the first release). metamodel_pin 1.0.0 (org-wide pin).'
+  confidence: high
+
+- id: N-024
+  question: 'check_naming H3 (rule 4 outcome-free) FAIL on capability-enterprise-performance-management-5fxren
+    for the word ''Performance'' in the name ''Enterprise Performance Management'' (post-mv1 id system,
+    CR-DEA-BC-23 admission)'
+  question_kind: linter-override
+  cr: CR-DEA-BC-23
+  affected_entry: capabilities:capability-enterprise-performance-management-5fxren
+  candidates:
+  - CAND-037
+  sources:
+  - SRC-020 (BSC)
+  - SRC-021 (OKR)
+  - SRC-022 (OMG BPM)
+  evidence:
+  - evidence_strength: E3
+    basis: 'The OUTCOME_MARKERS regex in scripts/check_naming.py is a known false positive on the canonical
+      name Enterprise Performance Management. The same linter does not flag ''Risk Management'', ''Insight
+      Management'', ''Information Management'', ''Continuity Management'', ''Financial Stewardship'', or
+      ''Idea Management'' -- the rule fires when the noun-of-product coincides with one of the words
+      {Satisfaction, Efficiency, Effectiveness, Profitability, Performance, Growth, Quality, Compliance,
+      Resilience}. In ''Enterprise Performance Management'', ''Performance'' is the noun-of-product (the
+      object being managed), not an outcome marker. The phrase reads as [object-whose-governance-is-the-ability]+
+      [management-ability-suffix], parallel to Risk Management (object=risk) and Insight Management
+      (object=insight). Industry-canonical name across BSC, OKR, and OMG BPM literature. No source class
+      ever uses a different name for the same ability.'
+  verdict: review-retained
+  decision_basis: 'The BC-19/BC-23 evidence package (SRC-020 BSC; SRC-021 OKR; SRC-022 OMG BPM) is the
+    canonical three-source convergence on the name ''Enterprise Performance Management''. Renaming to
+    e.g. ''Performance Governance'' would not match the source-of-truth and would not resolve the linter
+    false positive (the same regex would still match ''Performance'' in the result). The right fix is a
+    follow-on linter patch: extend OUTCOME_MARKERS to require a [noun-of-product]+''Management'' exemption
+    when the noun-of-product is the recognized object of governance (Risk, Insight, Information, Continuity,
+    Performance, etc.). That patch is the BC-25 follow-on. Until then, this N-024 verdict exempts
+    capability-enterprise-performance-management-5fxren from H3 rule 4 outcome-free.'
+  confidence: high
+
+
 deferred:
 - item: Citizen/Member Relationship (CAND-006) vs Customer Management unification
   trigger: government reference models (gap G5)
+
+
+- id: N-023
+  question: CR-DEA-BC-23 admission of Enterprise Performance Management (CAND-037) as 29th first-order canonical capability
+  question_kind: admission
+  cr: CR-DEA-BC-23
+  affected_entry: capabilities:capability-enterprise-performance-management-5fxren
+  prior_affected_entry: capabilities:candidate-epm-5fxren
+  candidates:
+  - CAND-037
+  sources:
+  - SRC-020 (Kaplan & Norton Balanced Scorecard 1992+; business-architecture class)
+  - SRC-021 (OKR framework per Andy Grove / John Doerr; commercial-capability-models class)
+  - SRC-022 (OMG Business Performance Management standards; standards-body class)
+  - SRC-001
+  - SRC-002
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  evidence:
+  - evidence_strength: E3
+    basis: three-source convergence across business-architecture (SRC-020 BSC), commercial-capability-models (SRC-021 OKR), standards-body (SRC-022 OMG BPM); enterprise-generality demonstrated across B2B, B2C, G2C archetypes; foundation-grade under BC-SR-A001 §17
+    rating_target_for_admission: E3 met
+  verdict: admitted
+  decision_basis: 'Cell strategy-direction x operate is the only cell on the strategy-direction edge of the 7x7 ECF matrix without a canonical entry. CAND-037 closes the direction loop (BC-SR-A001 §16): Strategy Formulation -> Strategic Planning -> Performance Management -> Insight Management -> Adaptation. EPM is the governance and measurement side; Insight Management is the insight side. They are complementary, not overlapping. Distinct from Financial Resource Management (money side), Strategy Formulation (posture), Strategic Planning (plan). ECF placement per CR-DEA-BC-13 §D.2 + CR-DEA-BC-19: strategy-direction/operate primary; strategy-direction/improve + finance-accounting/operate secondaries. H8 noun-as-ability: Management gerund passes cleanly. No review-retained exemption needed. Version 1.0.0 (admission is the first release). metamodel_pin 1.0.0 (org-wide pin).'

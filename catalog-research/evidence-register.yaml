@@ -1,12 +1,13 @@
-register_version: 0.8.0
+register_version: 0.9.0
 cr: "CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C evidence stubs) + CR-DEA-BC-18 (Track A evidence seed) +\
   \ CR-DEA-BC-14 (Track A admission; CAND-036 admitted) + CR-DEA-BC-19 (Track B evidence seed; TER-EPM-001\
   \ evidence-pending \u2192 evidence-seeded; CAND-037 E1 \u2192 E3) + CR-DEA-BC-21 (Analytics and Intelligence recon; SRC-023/024/025 added; G11 added; recommendation V-A Insight Management)"
 compiled: "2026-09-11 (v0.7: Track B evidence seeded under CR-DEA-BC-19; TER-EPM-001 status evidence-seeded;\
-  \ CAND-037 E1 \u2192 E3 confirmed across SRC-020/021/022 three-source convergence); 2026-09-30 (v0.8: CR-DEA-BC-21 recon: SRC-023 (APQC PCF 7.4; cross-industry-process class), SRC-024 (Forrester Wave Enterprise Insight Platforms; BIZBOK v14; business-architecture class), SRC-025 (DMBOK 2nd ed.; OMG DMN; IIBA BABOK v3; standards-body class) added; G11 (BC-21 recon closure) appended; three-source convergence on insight noun-of-product supports V-A Insight Management)"
+  \ CAND-037 E1 \u2192 E3 confirmed across SRC-020/021/022 three-source convergence); 2026-09-30 (v0.8: CR-DEA-BC-21 recon: SRC-023 (APQC PCF 7.4; cross-industry-process class), SRC-024 (Forrester Wave Enterprise Insight Platforms; BIZBOK v14; business-architecture class), SRC-025 (DMBOK 2nd ed.; OMG DMN; IIBA BABOK v3; standards-body class) added; G11 (BC-21 recon closure) appended; three-source convergence on insight noun-of-product supports V-A Insight Management); 2026-10-12 (v0.9: CR-DEA-BC-23 EPM admission; TER-EPM-001 evidence-seeded -> admitted; CAND-037 E3 confirmed at admission; cell strategy-direction x operate populated; 29th first-order canonical capability; direction loop closed per BC-SR-A001 §16)"
 compiled_by: Coder (for eaojnr)
-status: active; Track A closed under CR-DEA-BC-14 (admission 2026-09-11); Track B evidence-seeded under
-  CR-DEA-BC-19 (2026-09-11; admission pending CR-DEA-BC-15)
+status: active; Track A closed under CR-DEA-BC-14 (admission 2026-09-11); Track B admitted under
+  CR-DEA-BC-23 (2026-10-12; CAND-037 admitted as 29th first-order canonical capability; cell
+  strategy-direction x operate populated; loop closed)
 source_classes:
 - business-architecture
 - enterprise-architecture
@@ -797,37 +798,31 @@ track_evidence_records:
   - "Direct retrieval of ISO 9001:2015 \xA75.3 normative text via institutional access (currently summary-level)"
 - id: TER-EPM-001
   track: B (Enterprise Performance Management)
-  candidate_id: capabilities:candidate-epm-5fxren (CAND-037)
+  candidate_id: capabilities:capability-enterprise-performance-management-5fxren (CAND-037)
+  prior_candidate_id: capabilities:candidate-epm-5fxren
   evidence_strength: E3 (confirmed by CR-DEA-BC-19 research-CR evidence package; independent corroboration
     across 3 source classes)
   registered_on: '2026-09-10'
-  registered_by: "Coder (for eaojnr) under CR-DEA-BC-13 \xA7D.2"
+  registered_by: "Coder (for eaojnr) under CR-DEA-BC-13 §D.2"
   sources_consulted:
   - SRC-020
   - SRC-021
   - SRC-022
   loop_closure_investigation_required: true
+  loop_closure_status: 'closed (BC-SR-A001 §16; CR-DEA-BC-23 admission completes the direction loop: Strategy
+    Formulation -> Strategic Planning -> Performance Management -> Insight Management -> Adaptation)'
   open_evidence_questions:
-  - "Is Performance a durable distinct business object (distinct from Insight, Outcome, Decision)? PARTIALLY\
-    \ ANSWERED by BC-SR-A001 \xA716 and CR-DEA-BC-19 \xA73.2; the object is Performance, distinct from\
-    \ Insight (Analytics) per OMG BPM and BSC; full answer remains a methodology question."
-  - "Does EPM close the direction loop without collapsing into Analytics? PARTIALLY ANSWERED by CR-DEA-BC-19\
-    \ \xA76 (loop-closure narrative); the loop closes if admitted; the answer remains an open CR question\
-    \ for admission."
+  - 'Is Performance a durable distinct business object (distinct from Insight, Outcome, Decision)? ANSWERED by
+    CR-DEA-BC-23; the object is Performance (Enterprise Performance), distinct from Insight (Analytics) per
+    OMG BPM and BSC; full answer resolved at admission.'
+  - 'Does EPM close the direction loop without collapsing into Analytics? ANSWERED by CR-DEA-BC-23 admission;
+    the loop is closed by EPM''s governance/measurement half plus Insight Management''s insight half --
+    complementary, not overlapping.'
   - Does it survive the enterprise-generality test? CONFIRMED by SRC-020/021/022 cross-industry adoption
     (manufacturing, financial services, healthcare, government, technology).
-  status: evidence-seeded (research-CR; no admission in CR-DEA-BC-19; admission pending separate CR-DEA-BC-15)
-  evidence_seed_cr: CR-DEA-BC-19 (this CR; research-CR; no admission)
-  provisional_admission_cr: CR-DEA-BC-15 (Track B admission; triggers on user acceptance of evidence package)
-  notes: "Three independent source classes seeded by CR-DEA-BC-19: SRC-020 (business-architecture: Kaplan\
-    \ and Norton Balanced Scorecard 1992+; Strategy Maps 2000+); SRC-021 (commercial-capability-models:\
-    \ OKR framework via Andy Grove / John Doerr); SRC-022 (standards-body: OMG Business Performance Management\
-    \ standards via BPM CBOK and OCEB 2). Three-source convergence across three independent classes supports\
-    \ E3 evidence rating per EVIDENCE.md \xA73. Retrieval honesty: SRC-020 indirect (HBR paywalled; corpus\
-    \ knowledge + secondary summaries); SRC-021 indirect (Doerr 2018 corpus knowledge); SRC-022 direct\
-    \ (OMG OCEB 2 page publicly accessible; BPM CBOK content from public OMG documentation). Promotion\
-    \ to E4 contingent on admission in separate CR (CR-DEA-BC-15 provisional). Loop-closure narrative\
-    \ required regardless of admission per BC-DEA-BC-13 \xA7D.2 explicit decision."
+  status: admitted (CR-DEA-BC-23; 2026-10-12; 29th first-order canonical capability)
+  evidence_seed_cr: CR-DEA-BC-19
+  admission_cr: CR-DEA-BC-23
 - id: TER-RELMGMT-001
   track: C (Relationship Management generic parent)
   candidate_id: capabilities:candidate-relmgmt-nu73v9

@@ -22,6 +22,8 @@ ecf:
   secondary: []
 related_capabilities:
 - capabilities:capability-information-management-6vjgdh
+- capabilities:capability-enterprise-performance-management-5fxren
+
 evidence:
   sources:
   - SRC-002

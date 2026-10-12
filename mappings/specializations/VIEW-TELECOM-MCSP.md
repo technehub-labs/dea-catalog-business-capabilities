@@ -1,10 +1,12 @@
 # View: Mobile Communications Service Provider (MCSP)
 
-CR-DEA-BC-04 proving instance. Machine form: `view-telecom-mcsp.yaml`. Baseline: the v1-alpha admission set of 2026-09-02 (28 canonical first-order capabilities; PR #32 added CAND-018 Analytics and Intelligence (renamed to Insight Management at CR-DEA-BC-22 on 2026-09-30), CAND-023 Resilience (admitted as Resilience Management, renamed to Continuity Management at CR-DEA-BC-09), CAND-029 Innovation (admitted as Innovation Management, renamed to Idea Management at CR-DEA-BC-09); 27 (Technology Enablement, CR-DEA-BC-17); 28 (Organizational Design, CR-DEA-BC-14)).
+CR-DEA-BC-04 proving instance. Machine form: `view-telecom-mcsp.yaml`. Baseline: the v1-alpha admission set of 2026-09-02 (29 canonical first-order capabilities as of CR-DEA-BC-23; PR #32 added CAND-018 Analytics and Intelligence (renamed to Insight Management at CR-DEA-BC-22 on 2026-09-30), CAND-023 Resilience (admitted as Resilience Management, renamed to Continuity Management at CR-DEA-BC-09), CAND-029 Innovation (admitted as Innovation Management, renamed to Idea Management at CR-DEA-BC-09); 27 (Technology Enablement, CR-DEA-BC-17); 28 (Organizational Design, CR-DEA-BC-14); 29 (Enterprise Performance Management, CR-DEA-BC-23, admitted 2026-10-12)).
 
 ## Coverage
 
-**28 of 28 canonical capabilities accounted for**: 4 admitted specializations, 22 inherited unchanged. The 3 entries added at PR #32 (resilience, innovation, analytics-and-intelligence [renamed to insight-management at CR-DEA-BC-22]) are inherited unchanged: they are sector-agnostic, the telecom view adds no specialization for them, and they participate via their canonical coordinates (governance-existence × design + operate, product-value × conceive + design, enablement-operations × operate).
+**Enterprise Performance Management (EPM, 29th canonical):** admitted at CR-DEA-BC-23 (2026-10-12); cell strategy-direction x operate; closes the direction loop per BC-SR-A001 §16 (Strategy Formulation -> Strategic Planning -> Performance Management -> Insight Management -> Adaptation). MCSP relevance: performance SLAs (M7) and capacity planning (M4) are key telecom-specialized instantiations of EPM. Sibling cross-references: Operations Management (delivery performance), Information Management (performance data), Strategy Formulation (objectives).
+
+**29 of 29 canonical capabilities accounted for**: 4 admitted specializations, 23 inherited unchanged (added EPM to the inherited list). The 3 entries added at PR #32 (resilience, innovation, analytics-and-intelligence [renamed to insight-management at CR-DEA-BC-22]) are inherited unchanged: they are sector-agnostic, the telecom view adds no specialization for them, and they participate via their canonical coordinates (governance-existence × design + operate, product-value × conceive + design, enablement-operations × operate).
 
 ## Admitted specializations
 
