@@ -66,10 +66,42 @@ DISQUALIFYING = re.compile(
 
 # H3: outcome markers (rule 4). Results, states, and qualities the enterprise
 # has are not names of abilities.
+#
+# The OUTCOME_MARKERS regex lists words that, when present in a name, signal
+# that the name describes an outcome (state the enterprise is in) rather
+# than an ability. The rule fires by default; the [noun-of-product]+Management
+# governance-object exemption (CR-DEA-BC-25) narrows it for the specific case
+# where the marker is the head noun of a recognized governance-ability name
+# (e.g. Performance in "Enterprise Performance Management").
+#
+# The exemption set is conservative: only words that, as the head noun of
+# "[Word] Management", are unambiguously the object being managed (not an
+# outcome state). Quality and Resilience are NOT in the set: "Quality
+# Management" is a recognized pattern, but "Quality" alone is also a
+# recognized outcome state ("Quality Improvement"). Default-deny on those
+# unless an explicit review-retained verdict is recorded in
+# normalization.yaml.
 OUTCOME_MARKERS = re.compile(
     r"\b(Satisfaction|Efficiency|Effectiveness|Profitability|Performance|"
     r"Growth|Quality|Compliance|Resilience)\b",
     re.I,
+)
+
+# H3 governance-object exemption (CR-DEA-BC-25). When the marker word is the
+# head noun of a "[Word] Management" name, the marker is the noun-of-product
+# of a recognized governance ability, not an outcome-state marker. Examples:
+# - Performance in "Enterprise Performance Management" (BC-23; SRC-020/021/022)
+# - Risk in "Risk Management" (existing entry; passes H3 today)
+# - Insight in "Insight Management" (BC-22; passes H3 today)
+# - Information in "Information Management" (existing entry; passes H3 today)
+# - Continuity in "Continuity Management" (existing entry; passes H3 today)
+# The exemption emits a WARN, not an error. The H3 review-retained path
+# remains as a safety net for entries not in this set.
+GOVERNANCE_OBJECTS = frozenset(
+    {"Risk", "Insight", "Information", "Continuity", "Performance"}
+)
+GOVERNANCE_OBJECT_NAME_RE = re.compile(
+    r"^([A-Z][A-Za-z]*(?:\s+[A-Z][A-Za-z]*)*)\s+Management$"
 )
 
 # H4: industry qualifiers (rule 5). First-order names are industry-free.
@@ -209,17 +241,38 @@ def check_entry(
         )
     m = OUTCOME_MARKERS.search(name)
     if m:
-        # Gate: review-retained entries may carry outcome-marker words when
-        # the marker is the noun-of-product of a recognized governance ability
-        # (e.g. Performance in 'Enterprise Performance Management', Quality
-        # in 'Quality Management'). N-024 records the BC-23 verdict; N-015
-        # records the Security Management case. Default-deny; explicit verdict
-        # required to exempt.
-        is_retained_outcome = review_retained is not None and cid in review_retained
-        if not is_retained_outcome:
-            errors.append(
-                f"{cid}: name '{name}' carries outcome/state marker '{m.group(0)}' (TAXONOMY 1.4)"
+        # Gate 1: governance-object exemption (CR-DEA-BC-25). When the marker
+        # is the last word of the head noun of a "[Word(s)] Management" name
+        # and Word is a recognized governance object, the marker is the
+        # noun-of-product of the ability, not an outcome-state marker. Emit
+        # WARN, not error.
+        # Examples: "Performance Management" -> head "Performance" -> GO; OK
+        #           "Enterprise Performance Management" -> head "Enterprise Performance" -> last word "Performance" -> GO; OK
+        #           "Risk Management" -> head "Risk" -> GO; OK
+        #           "Performance Improvement" -> not a Management-suffix name; not a GO; error
+        #           "Quality Management" -> head "Quality" -> Quality is NOT in GOVERNANCE_OBJECTS; not a GO; error (default-deny)
+        go_match = GOVERNANCE_OBJECT_NAME_RE.match(name.strip())
+        is_governance_object = (
+            go_match is not None and go_match.group(1).split()[-1] in GOVERNANCE_OBJECTS
+        )
+        if is_governance_object:
+            warnings.append(
+                f"{cid}: name '{name}' carries outcome/state marker '{m.group(0)}' "
+                f"but the marker is the last word of the head noun of a recognized governance-object "
+                f"Management name (TAXONOMY 1.4 governance-object exemption; CR-DEA-BC-25)"
             )
+        else:
+            # Gate 2: review-retained entries may carry outcome-marker words
+            # when the marker is the noun-of-product of a recognized
+            # governance ability not in the GOVERNANCE_OBJECTS set (e.g.
+            # Quality in 'Quality Management'). N-015 records the Security
+            # Management case. Default-deny; explicit verdict required to
+            # exempt.
+            is_retained_outcome = review_retained is not None and cid in review_retained
+            if not is_retained_outcome:
+                errors.append(
+                    f"{cid}: name '{name}' carries outcome/state marker '{m.group(0)}' (TAXONOMY 1.4)"
+                )
     m = INDUSTRY_QUALIFIERS.search(name)
     if m:
         errors.append(
