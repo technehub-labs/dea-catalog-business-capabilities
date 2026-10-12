@@ -3,13 +3,13 @@ type: BusinessCapability
 name: Sourcing and Procurement
 definition: 'The ability to acquire goods and services: sourcing choices, purchasing,
   and receipt.'
-version: 1.2.0
+version: 1.3.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
 outcome: The enterprise obtains what it needs, at deliberate terms, with a clean acquisition
   record.
-business_object: Purchase Order
+business_object: Acquisition Cycle
 ecf:
   primary:
     domain: enablement-operations

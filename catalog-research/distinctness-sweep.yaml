@@ -1737,7 +1737,7 @@ track_sweeps:
       agent capacity (CAND-014); Organizational Design concerns the structural design choices that define
       role hierarchies, authority allocation, and coordination patterns. Different business object: Agent
       capacity vs Organization Structure.'
-  - id: capabilities:capability-strategy-wdrtha
+  - id: capabilities:capability-strategy-formulation-sf7q2x
     verdict: Distinct
     rationale: 'posture vs operationalization: Strategy concerns the enterprise posture at the strategic
       level (CAND-001; business object: Enterprise); Organizational Design operationalizes the structural
@@ -1792,7 +1792,7 @@ track_sweeps:
       \ outcomes across all four BSC perspectives (financial, customer, internal process, learning and\
       \ growth). The financial dimension is one cell of EPM scope, not the whole. Different business object."
     verdict: Distinct
-  - id: capabilities:capability-strategy-wdrtha
+  - id: capabilities:capability-strategy-formulation-sf7q2x
     rationale: 'posture vs measurement of posture: Strategy concerns the enterprise posture at the strategic
       level (CAND-001; business object: Enterprise Posture); EPM measures performance against the chosen
       posture. Different business object; the relationship is parent-child (Strategy sets posture; EPM
@@ -1862,7 +1862,7 @@ sweeps:
     distinct_because: TM stewards the estate (what technology the enterprise has); TE runs the services
       (how that technology operates for others). Different business object (Technology vs Technology Service)
       and different ECF cell (strategy-direction/build vs enablement-operations/operate).
-  - id: capabilities:capability-operations-vm39fm
+  - id: capabilities:capability-operations-management-pm3w8k
     distinct_because: Operations delivers value (production, delivery, fulfillment of offerings); TE delivers
       technology services for value delivery. Different business object (Operation vs Technology Service);
       same domain (enablement-operations) but TE is the peer capability that services value delivery,

@@ -1,15 +1,19 @@
-id: capabilities:capability-operations-vm39fm
+id: capabilities:capability-operations-management-pm3w8k
 type: BusinessCapability
-name: Operations
+name: Operations Management
 definition: The ability to run the enterprise's day-to-day production and delivery
   of value.
-version: 1.0.1
+version: 2.0.0
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
 outcome: Offerings are delivered, continuously, at the quality the enterprise commits
   to.
-business_object: Operation
+business_object: Operations
+aliases:
+- Operations
+- Production Management
+- Service Delivery Management
 ecf:
   primary:
     domain: enablement-operations

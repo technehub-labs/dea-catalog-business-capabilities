@@ -204,17 +204,17 @@ catalog:
     state: candidate
     type: BusinessCapability
     version: 1.0.0
-  - candidate_count: 1
+  - candidate_count: 0
     canonical_count: 1
-    id: capabilities:capability-operations-vm39fm
-    last_modified: '2026-09-21'
+    id: capabilities:capability-operations-management-pm3w8k
+    last_modified: '2026-10-12'
     lifecycle_status: active
-    path: entities/v1-alpha/operations-vm39fm/capabilities-capability-operations-vm39fm.yaml
+    path: entities/v1-alpha/operations-management-pm3w8k/capabilities-capability-operations-management-pm3w8k.yaml
     research_count: 0
-    retired_count: 1
+    retired_count: 0
     state: candidate
     type: BusinessCapability
-    version: 1.0.1
+    version: 2.0.0
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-organizational-design-vanefq
@@ -292,17 +292,17 @@ catalog:
     state: candidate
     type: BusinessCapability
     version: 1.1.1
-  - candidate_count: 1
+  - candidate_count: 0
     canonical_count: 1
-    id: capabilities:capability-strategy-wdrtha
-    last_modified: '2026-09-21'
+    id: capabilities:capability-strategy-formulation-sf7q2x
+    last_modified: '2026-10-12'
     lifecycle_status: active
-    path: entities/v1-alpha/strategy-wdrtha/capabilities-capability-strategy-wdrtha.yaml
+    path: entities/v1-alpha/strategy-formulation-sf7q2x/capabilities-capability-strategy-formulation-sf7q2x.yaml
     research_count: 0
-    retired_count: 1
+    retired_count: 0
     state: candidate
     type: BusinessCapability
-    version: 1.1.1
+    version: 2.0.0
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-supplier-management-d6fuj4
@@ -418,9 +418,9 @@ catalog:
   - entity_id: capabilities:capability-offering-management-6egkc8
     files: []
     path: entities/v1-alpha/offering-management-6egkc8/research/
-  - entity_id: capabilities:capability-operations-vm39fm
+  - entity_id: capabilities:capability-operations-management-pm3w8k
     files: []
-    path: entities/v1-alpha/operations-vm39fm/research/
+    path: entities/v1-alpha/operations-management-pm3w8k/research/
   - entity_id: capabilities:capability-organizational-design-vanefq
     files: []
     path: entities/v1-alpha/organizational-design-vanefq/research/
@@ -442,9 +442,9 @@ catalog:
   - entity_id: capabilities:capability-strategic-planning-k3rz7a
     files: []
     path: entities/v1-alpha/strategic-planning-k3rz7a/research/
-  - entity_id: capabilities:capability-strategy-wdrtha
+  - entity_id: capabilities:capability-strategy-formulation-sf7q2x
     files: []
-    path: entities/v1-alpha/strategy-wdrtha/research/
+    path: entities/v1-alpha/strategy-formulation-sf7q2x/research/
   - entity_id: capabilities:capability-supplier-management-d6fuj4
     files: []
     path: entities/v1-alpha/supplier-management-d6fuj4/research/

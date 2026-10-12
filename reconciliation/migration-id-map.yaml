@@ -1,12 +1,15 @@
-version: 1
+version: 2
 namespace: capabilities
 migrated_at: '2026-09-21'
+extended_at: '2026-09-30'
+extension_cr: CR-DEA-BC-20 (Strategy -> Strategy Formulation; Operations -> Operations Management; Sourcing and Procurement business_object Acquisition Cycle); CR-DEA-BC-22 (Analytics and Intelligence -> Insight Management)
 carrier_cr: CR-DEA-BC-mv1
 id_map:
   dea:candidate-epm: capabilities:candidate-epm-5fxren
   dea:candidate-orgdesign: capabilities:candidate-orgdesign-a7s8bf
   dea:candidate-relmgmt: capabilities:candidate-relmgmt-nu73v9
   dea:capability-analytics-and-intelligence: capabilities:capability-analytics-and-intelligence-559tky
+  dea:capability-insight-management: capabilities:capability-insight-management-ms4n9d
   dea:capability-asset-management: capabilities:capability-asset-management-judtwr
   dea:capability-change-management: capabilities:capability-change-management-hukdeq
   dea:capability-continuity-management: capabilities:capability-continuity-management-v3rn6u
@@ -21,6 +24,7 @@ id_map:
   dea:capability-marketing: capabilities:capability-marketing-xmc539
   dea:capability-offering-management: capabilities:capability-offering-management-6egkc8
   dea:capability-operations: capabilities:capability-operations-vm39fm
+  dea:capability-operations-management: capabilities:capability-operations-management-pm3w8k
   dea:capability-organizational-design: capabilities:capability-organizational-design-vanefq
   dea:capability-partner-management: capabilities:capability-partner-management-cp3vdb
   dea:capability-regulation-management: capabilities:capability-regulation-management-gya4d8
@@ -29,12 +33,25 @@ id_map:
   dea:capability-sourcing-and-procurement: capabilities:capability-sourcing-and-procurement-esucp4
   dea:capability-strategic-planning: capabilities:capability-strategic-planning-k3rz7a
   dea:capability-strategy: capabilities:capability-strategy-wdrtha
+  dea:capability-strategy-formulation: capabilities:capability-strategy-formulation-sf7q2x
   dea:capability-supplier-management: capabilities:capability-supplier-management-d6fuj4
   dea:capability-technology-enablement: capabilities:capability-technology-enablement-y6nkws
   dea:capability-technology-management: capabilities:capability-technology-management-maus5n
   dea:capability-workforce-management: capabilities:capability-workforce-management-9e8d8s
   dea:capability-workforce-planning: capabilities:capability-workforce-planning-b43rhm
 known_residuals:
+- legacy_value: dea:capability-strategy
+  where: catalog-research/INV-ORGDESIGN-v0.1.yaml, catalog-research/INV-EPM-v0.1.yaml, catalog-research/distinctness-sweep.yaml
+  reason: Pre-rename id cited in research artifacts (renamed to
+    dea:capability-strategy-formulation at CR-DEA-BC-20; audit trail verbatim).
+- legacy_value: dea:capability-operations
+  where: catalog-research/distinctness-sweep.yaml
+  reason: Pre-rename id cited in historical distinctness sweep (renamed to
+    dea:capability-operations-management at CR-DEA-BC-20; audit trail verbatim).
+- legacy_value: dea:capability-analytics-and-intelligence
+  where: catalog-research/recon/INV-AI-v0.1.yaml, catalog-research/recon/ADR-ES-021.yaml, catalog-research/normalization.yaml (N-022)
+  reason: Pre-rename id cited in BC-21 recon artifacts (renamed to
+    dea:capability-insight-management at CR-DEA-BC-22; audit trail verbatim).
 - legacy_value: dea:candidate-technology-enablement
   where: catalog-research/preliminary-ecf-overlay.yaml, catalog-research/distinctness-sweep.yaml
   reason: Retired candidate cited in historical research registers (promoted to

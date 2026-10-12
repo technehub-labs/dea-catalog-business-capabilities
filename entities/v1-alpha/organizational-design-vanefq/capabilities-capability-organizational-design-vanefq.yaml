@@ -22,7 +22,7 @@ ecf:
   - domain: agency-organization
     stage: build
 related_capabilities:
-- capabilities:capability-strategy-wdrtha
+- capabilities:capability-strategy-formulation-sf7q2x
 - capabilities:capability-strategic-planning-k3rz7a
 - capabilities:capability-enterprise-governance-uas48u
 - capabilities:capability-workforce-planning-b43rhm
