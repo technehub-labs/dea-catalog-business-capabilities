@@ -57,11 +57,27 @@ independently of the catalog label.
 
 ### 1.4 Metamodel pin
 
-The catalog pins to a specific metamodel version via the top-level
-`metamodel_pin: 1.0.0` field on every entry. When the metamodel releases a
-new major version (e.g., 2.0.0), the catalog must either upgrade its pin
-(minor or major catalog bump depending on breaking changes) or document
-incompatibility and refuse the upgrade until the catalog is ready.
+Every entry carries a top-level `metamodel_pin: 1.0.0` field. This pin is a
+**catalog-internal shape contract**, not a pin to a dea-metaframework release
+version: it asserts that the entry conforms to the catalog's v1-alpha entry
+shape (the 16-field required structure and its governed field semantics, as
+enforced by the conformance gates in `scripts/`). The `1.0.0` value denotes
+the first stable revision of that shape contract.
+
+This distinction matters because the dea-metaframework release line is
+independent: the framework went 2.0.0 -> 2.5.0 with no 1.x release, so a
+`metamodel_pin` value of `1.0.0` cannot be read as a framework version. The
+catalog's compatibility with a given dea-metaframework release is asserted
+at the ECF contract level (§1.5), not by this field.
+
+When the catalog's entry shape contract itself changes in a breaking way
+(e.g., a required field is added, removed, or re-typed across all entries),
+the pin advances (e.g., to `2.0.0`) as part of the catalog-level migration CR,
+and every entry is re-pinned in the same change. Compatibility with a new
+dea-metaframework major version is assessed separately: if the framework
+change breaks the ECF contract, §1.5 governs (catalog-level major bump); if
+it does not, no `metamodel_pin` change is implied by the framework release
+alone.
 
 ### 1.5 ECF contract pin
 

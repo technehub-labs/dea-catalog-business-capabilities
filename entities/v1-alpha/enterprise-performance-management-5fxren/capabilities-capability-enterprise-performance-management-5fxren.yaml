@@ -4,7 +4,7 @@ name: Enterprise Performance Management
 definition: The ability to define, measure, monitor, evaluate, govern, and improve enterprise-wide
   performance against intended objectives and targets, completing the direction loop that links
   strategy to adaptation.
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
@@ -160,3 +160,28 @@ boundary:
 loop_closure_narrative: 'BC-SR-A001 §16 explicitly requires this loop to be closed (or its open status
     to be reported) by Track B. CR-DEA-BC-23 closes the loop by admitting EPM as the 29th first-order canonical
     capability. The open question on loop closure (TER-EPM-001) is resolved at admission.'
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: 'Performance measurement against objectives is exercised by every enterprise regardless
+  of industry or implementation (B2B, B2C, G2C demonstrated at admission); identifiable by its outcome
+  (performance known, evaluated, and adapted); passes the anti-invention test via three-source convergence
+  (SRC-020 Kaplan & Norton Balanced Scorecard; SRC-021 OKR framework; SRC-022 OMG Business Performance
+  Management via OCEB 2). The object and outcome tests carry the decision: Enterprise Performance is a
+  governed thing with its own lifecycle (defined, measured, evaluated, improved), and the outcome (the
+  direction loop closed) is distinct from the plan (Strategic Planning), the direction (Strategy
+  Formulation), and the insight derived from measurement (Insight Management).'
+ecf_rationale: 'Admitted 2026-10-12 (CR-DEA-BC-23; overlay hypothesis per CR-DEA-BC-19): the ECF
+  Strategy & Direction domain owns objectives-and-targets and strategic adaptation; performance governance
+  against those objectives is the operate-stage half of the direction loop (BC-SR-A001 §16). Primary
+  strategy-direction/operate; secondaries strategy-direction/improve (performance feeds adaptation) and
+  finance-accounting/operate (financial performance measurement interlocks with the operating cycle).
+  Placement reviewed under the BC-13 semantic-center-of-gravity rule at admission; no re-evaluation
+  needed post-admission.'
+non_examples:
+- A Balanced Scorecard dashboard (a system artifact)
+- A KPI catalogue (a measurement artifact)
+- An annual performance-review cycle (a process instance)
+specialization_boundary: 'Sector performance regimes (clinical quality metrics, regulatory capital
+  adequacy, safety-critical KPI frameworks) are specialization; the ability to define, measure, and
+  govern enterprise performance against objectives is not.'
