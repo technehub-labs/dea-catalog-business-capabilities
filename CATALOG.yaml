@@ -4,7 +4,7 @@ catalog:
     candidates: 32
     canonical: 0
     entities: 32
-    open_change_requests: 28
+    open_change_requests: 32
     research_files: 2
     retired: 0
   cross_cutting:
@@ -115,7 +115,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-facility-management-tx73hb
