@@ -2,19 +2,19 @@
 # against the pre-migration layout and the legacy dea:* id family. Ids cited
 # below are historical; see reconciliation/migration-id-map.yaml for the
 # old-to-new id mapping.
-register_version: 0.10.0
+register_version: 0.11.0
 cr: CR-DEA-BC-02 (section 20; deliverable section 33 item 5); CR-DEA-BC-09 (naming conformance refresh; N-010..N-015);
   CR-DEA-BC-20 (noun-as-ability rule 7; N-015 verdict formalized; N-016, N-018, N-019, N-020 appended;
   N-017 deferred to CR-DEA-BC-21 recon); CR-DEA-BC-21 (N-022 - Analytics and Intelligence recon;
   review-retained-pending-ADR; recommendation V-A Insight Management; pending CR-DEA-BC-22
-  follow-on rename CR); applied under the post-mv1 id system capabilities:capability-*); CR-DEA-BC-19 (EPM evidence package; SRC-020/021/022 three-source convergence); CR-DEA-BC-23 (EPM admission; N-023 verdict admitted; 29th first-order canonical capability; cell strategy-direction x operate populated; direction loop closed per BC-SR-A001 §16; H3 outcome-marker false positive on the word 'Performance' in the canonical name -- N-024 review-retained verdict recorded as a bridge, retired at CR-DEA-BC-25); CR-DEA-BC-25 (linter patch; H3 outcome-marker path extended with governance-object exemption for the [noun-of-product]+Management pattern; N-024 retired; GOVERNANCE_OBJECTS = {Risk, Insight, Information, Continuity, Performance}; 21 decisions)
+  follow-on rename CR); applied under the post-mv1 id system capabilities:capability-*); CR-DEA-BC-19 (EPM evidence package; SRC-020/021/022 three-source convergence); CR-DEA-BC-23 (EPM admission; N-023 verdict admitted; 29th first-order canonical capability; cell strategy-direction x operate populated; direction loop closed per BC-SR-A001 §16; H3 outcome-marker false positive on the word 'Performance' in the canonical name -- N-024 review-retained verdict recorded as a bridge, retired at CR-DEA-BC-25); CR-DEA-BC-25 (linter patch; H3 outcome-marker path extended with governance-object exemption for the [noun-of-product]+Management pattern; N-024 retired; GOVERNANCE_OBJECTS = {Risk, Insight, Information, Continuity, Performance}; 21 decisions); CR-DEA-BC-26 (OpenDEA metamodel re-pinning audit complete (no blocking drift; 2 follow-ons queued)); CR-DEA-BC-27 (CAND-005 retired, CAND-006 deferred pending G5; N-025 verdict retired, N-026 verdict deferred); CR-DEA-BC-28 (P1 re-audit complete (1 P1 item reclassified to P2; 1 P3 item retired); N-027 reclassified, N-028 retired; 21 -> 25 decisions); CR-DEA-BC-29 (EPM backfill + VERSIONING.md amendment; all 29 entries carry the full narrative set); CR-DEA-BC-30 (G5 closure -- SRC-026/027/028 retrieved; CAND-006 merged into CAND-005; N-029 verdict merged-into-CAND-005; gap G5 closed; 25 -> 26 decisions); CR-DEA-BC-31 (TER-RELMGMT-001 retired as resolved -- opt 2 abstract grouping only; N-030 verdict resolved-retired; 26 -> 27 decisions)
 compiled: '2026-09-01 (v0.2: aggregate decisions N-007/N-008; N-003 re-test closed as N-009); 2026-09-08
   (N-010..N-015 appended: CR-DEA-BC-09 naming conformance renames and the Security Management retention);
   2026-09-30 (v0.3: N-015 verdict review-retained formalized; N-016, N-018, N-019, N-020 appended:
   CR-DEA-BC-20 noun-as-ability naming conformance; N-017 deferred to CR-DEA-BC-21 recon; applied under
   the post-mv1 id system capabilities:capability-*); 2026-09-30 (v0.4: N-022 appended:
   CR-DEA-BC-21 Analytics and Intelligence recon; review-retained-pending-ADR; recommendation V-A Insight
-  Management under TAXONOMY rule 7); 2026-10-12 (v0.8: CR-DEA-BC-19 evidence package for EPM; CR-DEA-BC-23 EPM admission with N-023 verdict admitted; CR-DEA-BC-25 linter patch -- H3 outcome-marker path governance-object-aware; N-024 review-retained verdict for EPM retired; 22 -> 21 decisions; register_version 0.7.0 -> 0.8.0); 2026-10-12 (v0.9: CR-DEA-BC-26 metamodel re-pinning audit complete (no blocking drift; 2 follow-ons queued); CR-DEA-BC-27 CAND-005 retired, CAND-006 deferred pending G5; CR-DEA-BC-28 P1 re-audit complete (1 P1 item reclassified to P2; 1 P3 item retired); 21 -> 25 decisions; N-025, N-026, N-027, N-028 added); 2026-10-12 (v0.10: CR-DEA-BC-30 G5 closure -- SRC-026/027/028 retrieved; CAND-006 merged into CAND-005; N-029 verdict merged-into-CAND-005; gap G5 closed; 25 -> 26 decisions; register_version 0.9.0 -> 0.10.0)' 
+  Management under TAXONOMY rule 7); 2026-10-12 (v0.8: CR-DEA-BC-19 evidence package for EPM; CR-DEA-BC-23 EPM admission with N-023 verdict admitted; CR-DEA-BC-25 linter patch -- H3 outcome-marker path governance-object-aware; N-024 review-retained verdict for EPM retired; 22 -> 21 decisions; register_version 0.7.0 -> 0.8.0); 2026-10-12 (v0.9: CR-DEA-BC-26 metamodel re-pinning audit complete (no blocking drift; 2 follow-ons queued); CR-DEA-BC-27 CAND-005 retired, CAND-006 deferred pending G5; CR-DEA-BC-28 P1 re-audit complete (1 P1 item reclassified to P2; 1 P3 item retired); 21 -> 25 decisions; N-025, N-026, N-027, N-028 added); 2026-10-12 (v0.10: CR-DEA-BC-30 G5 closure -- SRC-026/027/028 retrieved; CAND-006 merged into CAND-005; N-029 verdict merged-into-CAND-005; gap G5 closed; 25 -> 26 decisions; register_version 0.9.0 -> 0.10.0); 2026-10-12 (v0.11: CR-DEA-BC-31 TER-RELMGMT-001 retired as resolved -- opt 2 abstract grouping only; N-030 added; 26 -> 27 decisions; register_version 0.10.0 -> 0.11.0)' 
 status: candidate-not-canonical; decisions are research decisions, subject to review
 inputs:
   candidates: docs/research/candidates.yaml
@@ -534,6 +534,41 @@ decisions:
     as a customer-segment specialization under CAND-005 (Customer Management); the
     relationship-management mechanism is unchanged. CAND-006 is merged into CAND-005;
     no separate canonical entry is admitted. The 29-count is unchanged.'
+  confidence: high
+
+- id: N-030
+  question: 'TER-RELMGMT-001 (Relationship Management generic parent, Track C) retirement:
+    are the TER open evidence questions answered by the completed decision chain, permitting
+    the TER to be retired as resolved?'
+  question_kind: ter-retirement
+  cr: CR-DEA-BC-31
+  affected_entry: null
+  candidates:
+  - CAND-004
+  - CAND-005
+  - CAND-006
+  - CAND-007
+  - CAND-008
+  sources:
+  - catalog-research/evidence-register.yaml (TER-RELMGMT-001; SRC-026/027/028 closure evidence)
+  - catalog-research/normalization.yaml (N-018, N-025, N-029)
+  evidence:
+  - evidence_strength: E4
+    basis: 'The three open evidence questions are answered by the completed chain: (1) Relationship
+      is not a distinct durable business object at the first-order level -- CAND-004 reclassified
+      to grouping_parent per N-018; (2) opt 2 (abstract grouping only) applied -- children handled
+      individually, CAND-005 admitted at v1-alpha.0 (N-025 retired the stale candidate record),
+      CAND-006 merged into CAND-005 (N-029, E2 -> E4 via SRC-026/027/028); (3) the generic parent
+      did not survive the enterprise-generality test as a capability; the object-specific child
+      did. Government reference-model class independently confirms the customer-vocabulary
+      convergence.'
+  verdict: 'resolved-retired (opt 2: abstract grouping only; no separate first-order Relationship
+    Management capability)'
+  decision_basis: 'All TER-RELMGMT-001 open questions are answered by N-018, N-025, and N-029.
+    No further evidence-gathering is required on the generic-parent question. CAND-007 and
+    CAND-008 remain uninvestigated candidates under the grouping parent; their recon, when
+    scheduled, opens new TERs if evidence is non-trivial. TER-RELMGMT-001 marked
+    resolved-retired in evidence-register.yaml.'
   confidence: high
 
 deferred: []

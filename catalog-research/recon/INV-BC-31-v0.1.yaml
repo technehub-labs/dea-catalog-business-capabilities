@@ -1,0 +1,64 @@
+id: INV-BC-31-v0.1
+cr: CR-DEA-BC-31
+date: '2026-10-12'
+author: Coder (for eaojnr)
+trigger: TER-RELMGMT-001 retirement; structurally resolvable at the completion of the N-018 / N-025 / N-029 decision
+  chain
+related_normalization_decisions:
+- N-030
+status: applied
+scope: retire TER-RELMGMT-001 (Track C; Relationship Management generic parent) as resolved; record the opt-2 verdict
+  (abstract grouping only) and the evidence chain that supports it
+out_of_scope: CAND-007 (Partner Relationship) and CAND-008 (Member Relationship) recon -- still uninvestigated;
+  per-card re-evaluation
+background: TER-RELMGMT-001 was registered 2026-09-10 under CR-DEA-BC-13 D.3 with three open evidence questions
+  on the generic-parent question (is Relationship a distinct durable business object; what is the parent-child relationship;
+  does it survive the enterprise-generality test). It was at E2 (early) and carried evidence-pending status. The
+  TER was carried through BC-20 (N-015 formalization), BC-28 (N-027 P1->P2 reclassification), and BC-30 (N-029 CAND-006
+  merge into CAND-005, E2->E4 via three government reference models). With the N-029 closure, all three open questions
+  are now answered.
+open_questions_resolution:
+  Q1_is_relationship_a_distinct_object:
+    answer: 'No. CAND-004 (Relationship Management) was reclassified to grouping_parent per N-018 (2026-09-30):
+      the admission-gate boundary test fails -- no boundary can be drawn for the generic parent that is not exactly
+      the union of its children. Relationship is an abstraction over role-specific capabilities (customer-relationship,
+      supplier-relationship, partner-relationship, citizen-relationship), not a distinct durable business object
+      at the first-order level.'
+  Q2_parent_child_relationship_opt:
+    answer: opt 2 (abstract grouping only). CAND-004 persists as an abstract grouping parent in the research register
+      only; no canonical parent capability exists. Children are handled individually. CAND-005 (Customer Management)
+      was admitted at v1-alpha.0 (2026-09-02; E5 evidence) -- the stale candidate record was retired per N-025 (CR-DEA-BC-27,
+      2026-10-12). CAND-006 (Citizen / Member Relationship) was merged into CAND-005 per N-029 (CR-DEA-BC-30, 2026-10-12;
+      evidence E2->E4 via three government reference models). CAND-007 (Partner Relationship) and CAND-008 (Member
+      Relationship) remain uninvestigated candidates under the grouping parent; their recon, when scheduled, opens
+      new TERs if evidence is non-trivial.
+  Q3_enterprise_generality:
+    answer: 'The generic parent did not survive the enterprise-generality test as a capability. No corpus source
+      posits a first-order Relationship Management capability distinct from its object-specific children. The object-specific
+      child (Customer Management) did survive: BIZBOK, TOGAF, SAP LeanIX, IF4IT, APQC, and now the government reference-model
+      class (TOGAF GRM, GoC BTEP GSRM, US FEA CRM v2.3) all converge on Customer Management as a first-order capability,
+      with the party-type specialization (Customer vs Citizen vs Member vs Partner) captured downstream as a customer-segment
+      specialization.'
+decision:
+  id: N-030
+  verdict: 'resolved-retired (opt 2: abstract grouping only; no separate first-order Relationship Management capability)'
+  summary: TER-RELMGMT-001 retired as resolved. All three open evidence questions are answered by the completed
+    N-018 / N-025 / N-029 decision chain. No further evidence-gathering is required on the generic-parent question.
+    CAND-007 and CAND-008 remain uninvestigated candidates under the grouping parent; their recon, when scheduled,
+    opens new TERs if evidence is non-trivial.
+follow_ons:
+  CAND-007_Partner_Relationship_recon: Not part of this CR. Likely a B2B-specialization of CAND-005; same evidence
+    path as CAND-006 (corporate-trading reference models; B2B trade-association frameworks). Open when the B2B evidence
+    question is on the schedule.
+  CAND-008_Member_Relationship_recon: Not part of this CR. Likely a membership-organization-specialization of CAND-005;
+    ASAE / AMC frameworks would inform. Open when the membership-org evidence question is on the schedule.
+  no_further_action_on_TER: TER-RELMGMT-001 closes; no further evidence-gathering on the generic-parent question.
+    New TERs (TER-PARTNER-001, TER-MEMBER-001) open only when CAND-007 or CAND-008 recon finds non-trivial evidence.
+cross_references:
+- 'catalog-research/evidence-register.yaml (TER-RELMGMT-001 resolution block added; status: resolved-retired)'
+- catalog-research/normalization.yaml (N-030 added; register_version 0.11.0)
+- catalog-research/recon/INV-BC-30-v0.1.yaml (G5 closure; the SRC-026/027/028 evidence that answered Q3)
+- change-requests/CR-DEA-BC-30.md (N-029; CAND-006 merge)
+- change-requests/CR-DEA-BC-27.md (N-025; CAND-005 stale-record retirement)
+- change-requests/CR-DEA-BC-18.md or equivalent (N-018; CAND-004 reclassification to grouping_parent)
+- 'submittal-reviews/BC-SR-A001.md (section 6: P1-P2 Relationship Management; reclassified P1->P2 at N-027)'
