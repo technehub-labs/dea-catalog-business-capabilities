@@ -3,7 +3,7 @@ type: BusinessCapability
 name: Supplier Management
 definition: The ability to establish, maintain, and end relationships with those who
   supply the enterprise.
-version: 1.2.0
+version: 1.2.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
@@ -57,7 +57,7 @@ specialization:
   industry_examples: []
 why_capability: Enterprise-general across all corpus classes; distinct from Sourcing
   and Procurement (the act of acquiring) by the sweep.
-ecf_rationale: 'Re-mapped 2026-09-10 under CR-DEA-BC-13 §A new rule (semantic center of gravity). The defining activity of Supplier Management is sustained management of the supply base (operate); the conceive event (initial supplier on-boarding) and the improve stage participate but are not where the capability is defined. Originally mapped at strategy-direction/build under the pre-CR-13 "earliest initiation" rule; re-mapped to party-relationship/conceive under CR-DEA-BC-12 §A.5; re-mapped again here from conceive to operate under the CR-13 rule. Independent of Investigation Track C (Relationship Management generic parent); if Track C admits a parent, this entry may become a specialization in a follow-on migration CR.'
+ecf_rationale: 'Re-mapped 2026-09-10 under CR-DEA-BC-13 §A new rule (semantic center of gravity). The defining activity of Supplier Management is sustained management of the supply base (operate); the conceive event (initial supplier on-boarding) and the improve stage participate but are not where the capability is defined. Originally mapped at strategy-direction/build under the pre-CR-13 "earliest initiation" rule; re-mapped to party-relationship/conceive under CR-DEA-BC-12 §A.5; re-mapped again here from conceive to operate under the CR-13 rule. Independent of Investigation Track C (Relationship Management generic parent); Track C closed 2026-10-12 at N-030 (opt 2: no parent admitted); no specialization migration applies.'
 boundary: Manages the supplier relationship; does not execute acquisition (Sourcing
   and Procurement) or manage alliances of equals (Partner Management).
 non_examples:

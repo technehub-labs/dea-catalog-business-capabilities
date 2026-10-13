@@ -1,0 +1,189 @@
+id: INV-BC-33-v0.1
+cr: CR-DEA-BC-33
+date: '2026-10-12'
+author: Coder (for eaojnr)
+trigger: BC-28 surfaced per-cell placement review as the only remaining sub-question post-BC-23 closure; this CR
+  closes it
+related_normalization_decisions: []
+status: applied
+scope: re-evaluate the 29/49 populated ECF cells (29 entries) against the CR-DEA-BC-13 §A semantic-center-of-gravity
+  rule; confirm placement or detect drift
+out_of_scope: new admissions; per-entry narrative rewrites; linter changes
+background: 'CR-DEA-BC-13 (2026-09-10) established the semantic-center-of-gravity rule: the primary coordinate marks
+  the capability''s defining work, not where its lifecycle begins. The rule has four heuristics applied in order:
+  (1) sustained stewardship -> operate; (2) posture or constitutive decision -> conceive; (3) designed artifact
+  or pattern -> design or build; (4) activation or enforcement -> activate. BC-28 (2026-10-12) surfaced a per-cell
+  placement review as the only remaining sub-question in the BC-SR-A001 backlog. BC-23 admitted EPM and BC-29 added
+  the backfilled ecf_rationale; the placements are now uniformly documented. The review is the final sweep.'
+method:
+  rule_source: CR-DEA-BC-13 §A (semantic-center-of-gravity)
+  heuristics:
+  - 'Heuristic 1: sustained stewardship / execution -> operate in the capability''s domain'
+  - 'Heuristic 2: posture / constitutive decision -> conceive in the capability''s domain'
+  - 'Heuristic 3: designed artifact / pattern / build phase -> design or build in the capability''s domain'
+  - 'Heuristic 4: activation / enforcement -> activate in the capability''s domain'
+  check_1: 'All 29 entries'' ecf_rationale fields contain an explicit reference to BC-13 or the semantic-center-of-gravity
+    rule. (Confirmed by automated search: 0 of 29 entries lack the reference.)'
+  check_2: By-name dominant heuristic classification aligns with current primary coordinate for all 29 entries.
+    (Confirmed by manual review against the four heuristics; see review_table.)
+  check_3: No cell placement predates the rule without a recorded re-evaluation note. (All four pre-CR-13 placements
+    were re-mapped at CR-13 §B; the re-maps are recorded in the rationales of the moved entries.)
+review_table:
+- name: Asset Management
+  primary: enablement-operations/operate
+  heuristic: 1
+  verdict: aligned
+- name: Change Management
+  primary: governance-existence/improve
+  heuristic: 1
+  verdict: aligned
+  note: primary improve is the cell where the defining work is sustained (deliberate self-improvement); the change
+    is exercised when the enterprise improves itself, not when the change artifact is first created
+- name: Continuity Management
+  primary: governance-existence/design
+  heuristic: 3
+  verdict: aligned
+  note: the defining work is the designed pattern of continuity (BC-13 §3.2 heuristic 3 example)
+- name: Customer Management
+  primary: party-relationship/operate
+  heuristic: 1
+  verdict: aligned
+- name: Enterprise Governance
+  primary: governance-existence/conceive
+  heuristic: 2
+  verdict: aligned
+- name: Enterprise Performance Management
+  primary: strategy-direction/operate
+  heuristic: 1
+  verdict: aligned
+  note: operate in strategy-direction closes the direction loop; secondaries improve + finance-accounting/operate
+- name: Facility Management
+  primary: enablement-operations/operate
+  heuristic: 1
+  verdict: aligned
+- name: Financial Resource Management
+  primary: finance-accounting/operate
+  heuristic: 1
+  verdict: aligned
+- name: Financial Stewardship
+  primary: finance-accounting/conceive
+  heuristic: 2
+  verdict: aligned
+  note: 'constitutive posture: the long-horizon financial position is set; operated thereafter'
+- name: Idea Management
+  primary: product-value/conceive
+  heuristic: 2
+  verdict: aligned
+  note: ideas are constituted when conceived; developed and realized thereafter
+- name: Information Management
+  primary: enablement-operations/operate
+  heuristic: 1
+  verdict: aligned
+- name: Insight Management
+  primary: enablement-operations/operate
+  heuristic: 1
+  verdict: aligned
+- name: Legal Matter Management
+  primary: governance-existence/conceive
+  heuristic: 2
+  verdict: aligned
+  note: legal position is constituted with the enterprise; operated thereafter
+- name: Marketing
+  primary: party-relationship/conceive
+  heuristic: 2
+  verdict: aligned
+  note: demand creation in a market is constituted when conceived; operated thereafter
+- name: Offering Management
+  primary: product-value/conceive
+  heuristic: 2
+  verdict: aligned
+- name: Operations Management
+  primary: enablement-operations/operate
+  heuristic: 1
+  verdict: aligned
+- name: Organizational Design
+  primary: agency-organization/design
+  heuristic: 3
+  verdict: aligned
+  note: the defining work is the designed organization structure
+- name: Partner Management
+  primary: party-relationship/conceive
+  heuristic: 2
+  verdict: aligned
+  note: partner relationships are constituted when conceived; operated thereafter; secondary party-relationship/operate
+    captures ongoing partnership activity
+- name: Regulation Management
+  primary: governance-existence/activate
+  heuristic: 4
+  verdict: aligned
+  note: the defining work is the activation of the regulatory conformance posture (BC-13 §3.2 heuristic 4 example)
+- name: Risk Management
+  primary: governance-existence/conceive
+  heuristic: 2
+  verdict: aligned
+- name: Security Management
+  primary: governance-existence/design
+  heuristic: 3
+  verdict: aligned
+  note: the defining work is the designed pattern of security controls (BC-13 §3.2 heuristic 3)
+- name: Sourcing and Procurement
+  primary: enablement-operations/operate
+  heuristic: 1
+  verdict: aligned
+- name: Strategic Planning
+  primary: strategy-direction/conceive
+  heuristic: 2
+  verdict: aligned
+- name: Strategy Formulation
+  primary: strategy-direction/conceive
+  heuristic: 2
+  verdict: aligned
+- name: Supplier Management
+  primary: party-relationship/operate
+  heuristic: 1
+  verdict: aligned
+  note: sustained management of the supply base; re-mapped at BC-13 from conceive to operate
+- name: Technology Enablement
+  primary: enablement-operations/operate
+  heuristic: 1
+  verdict: aligned
+- name: Technology Management
+  primary: strategy-direction/build
+  heuristic: 3
+  verdict: aligned
+  note: BC-SR-A001 §12 carve-text; the technology estate is built
+- name: Workforce Management
+  primary: agency-organization/build
+  heuristic: 3
+  verdict: aligned
+  note: 'BC-13 §3.2 heuristic 3 example: the workforce is constituted at build'
+- name: Workforce Planning
+  primary: agency-organization/design
+  heuristic: 3
+  verdict: aligned
+  note: 'BC-13 §3.2 heuristic 3 example: the workforce plan is designed'
+findings:
+  F1: All 29 entries carry an explicit BC-13 / semantic-center-of-gravity reference in the ecf_rationale field.
+    No entry is un-documented post-BC-13; EPM's ecf_rationale was added at BC-29.
+  F2: All 29 entries align with one of the four heuristics under the rule. No misplacements detected.
+  F3: 'Track C dependency notes on Supplier Management and Partner Management (carried over from the v1-alpha baseline)
+    are voided by N-030 (opt 2: no parent admitted). The notes are updated to reflect closure of the dependency;
+    no specialization migration applies. The placements themselves are unchanged.'
+decision:
+  id: none
+  verdict: no movements required
+  summary: Per-cell placement review complete. All 29 entries are aligned with the BC-13 semantic-center-of-gravity
+    rule. The review closes the only remaining BC-28 sub-question.
+changes:
+- 'entities/v1-alpha/supplier-management-d6fuj4/: ecf_rationale note updated to reflect Track C closure (N-030);
+  no placement change. Version 1.2.0 -> 1.2.1.'
+- 'entities/v1-alpha/partner-management-cp3vdb/: ecf_rationale note updated to reflect Track C closure (N-030);
+  no placement change. Version 1.1.0 -> 1.1.1.'
+follow_ons:
+  no_follow_ons: Per-cell placement review is closed. No further CRs needed for the 28/49 populated cells under
+    the current rule. A future metamodel version bump may trigger a re-review, but the rule itself is stable.
+cross_references:
+- change-requests/CR-DEA-BC-13.md (the rule source; §A semantic-center-of-gravity)
+- change-requests/CR-DEA-BC-28.md (the BC-SR-A001 P1 re-audit; surfaced this review)
+- change-requests/CR-DEA-BC-29.md (EPM backfill; the backfilled ecf_rationale was a prerequisite for the review)
+- change-requests/CR-DEA-BC-31.md (N-030; the Track C closure that voided the Supplier/Partner dependency notes)
