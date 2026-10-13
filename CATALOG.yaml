@@ -4,7 +4,7 @@ catalog:
     candidates: 32
     canonical: 0
     entities: 32
-    open_change_requests: 35
+    open_change_requests: 36
     research_files: 2
     retired: 0
   cross_cutting:
@@ -247,7 +247,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.1.0
+    version: 1.1.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-regulation-management-gya4d8
@@ -324,7 +324,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.2.0
+    version: 1.2.1
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-technology-enablement-y6nkws
