@@ -890,13 +890,16 @@ track_evidence_records:
 - id: TER-RELMGMT-001
   track: C (Relationship Management generic parent)
   candidate_id: capabilities:candidate-relmgmt-nu73v9
-  evidence_strength: E2 (early)
+  evidence_strength: E2 (early; at registration)
   registered_on: '2026-09-10'
   registered_by: "Coder (for eaojnr) under CR-DEA-BC-13 \xA7D.3"
   sources_consulted:
   - BIZBOK Party / Relationship sub-area (preliminary)
   - CRM industry literature (CRM as the Customer-side specialization)
   - SRM industry literature (SRM as the Supplier-side specialization)
+  - TOGAF Government Reference Model (SRC-026; closure evidence)
+  - Government of Canada BTEP GSRM (SRC-027; closure evidence)
+  - US OMB FEA Consolidated Reference Model v2.3 (SRC-028; closure evidence)
   decision_options_to_evaluate:
   - 1
   - 2
@@ -906,7 +909,31 @@ track_evidence_records:
   - If admitted, do Customer/Supplier/Partner become specializations (opt 1), abstract grouping only (opt
     2), or no parent (opt 3)?
   - Does it survive the enterprise-generality test?
-  status: evidence-pending; not yet admitted
+  resolution:
+    closed_on: '2026-10-12'
+    closing_cr: CR-DEA-BC-31
+    verdict: opt 2 (abstract grouping only); no separate first-order Relationship Management capability
+    answers:
+    - 'Relationship is NOT a distinct durable business object at the first-order level: it is an
+      abstraction over role-specific capabilities. CAND-004 reclassified to grouping_parent per N-018
+      (2026-09-30).'
+    - 'opt 2 applied: CAND-004 persists as an abstract grouping parent in the research register only;
+      no canonical parent capability exists. Children are handled individually: CAND-005 (Customer
+      Management) admitted as a first-order capability at v1-alpha.0 (stale candidate record retired
+      per N-025, CR-DEA-BC-27); CAND-006 (Citizen / Member Relationship) merged into CAND-005 per
+      N-029 (CR-DEA-BC-30, evidence E2 -> E4 via three government reference models); CAND-007 and
+      CAND-008 remain uninvestigated candidates under the grouping parent (expected to resolve as
+      B2B / membership-organization specializations of CAND-005 on the same evidence path).'
+    - 'Enterprise-generality test: the generic parent did not survive as a capability (no corpus
+      source posits a first-order Relationship Management capability distinct from its
+      object-specific children); the object-specific child (Customer Management) did survive and
+      is admitted. The government reference-model class (SRC-026/027/028) independently confirms
+      the customer-vocabulary convergence.'
+    status: resolved-retired
+    note: 'Retired at CR-DEA-BC-31 (N-030). The TER open questions are all answered by the
+      completed N-018 / N-025 / N-029 decision chain; no further evidence-gathering is required
+      on the generic-parent question. CAND-007 / CAND-008 recon, when scheduled, opens new TERs
+      if evidence is non-trivial.'
 - track_id: TER-TECHENABLEMENT-001
   track_label: Technology Enablement
   track_source: "BC-SR-A001 \xA712 + CR-DEA-BC-13 \xA7C carve-text + CR-DEA-BC-17 admission"
