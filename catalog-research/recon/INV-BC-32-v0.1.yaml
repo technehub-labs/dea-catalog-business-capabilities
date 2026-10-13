@@ -1,0 +1,53 @@
+id: INV-BC-32-v0.1
+cr: CR-DEA-BC-32
+date: '2026-10-12'
+author: Coder (for eaojnr)
+trigger: completion of the CAND-004 child-resolution chain (N-025 CAND-005; N-029 CAND-006; this CR CAND-007/008)
+related_normalization_decisions:
+- N-031
+- N-032
+status: applied
+scope: 'recon on CAND-007 (Supplier Relationship) and CAND-008 (Partner Relationship): retire the stale candidate
+  records; record the canonical linkage; close the CAND-004 grouping-parent cell'
+out_of_scope: new admissions (none needed); per-cell placement review (a separate slice)
+background: 'CAND-004 (Stakeholder Relationship Management) was retained as a grouping_parent per N-018 (2026-09-30)
+  for its 4 children: CAND-005 Customer Management, CAND-006 Citizen / Member Relationship, CAND-007 Supplier Management,
+  CAND-008 Partner Management. By 2026-10-12: CAND-005 was admitted at v1-alpha.0 (2026-09-02; N-025 retired the
+  stale candidate record); CAND-006 was merged into CAND-005 per N-029 (CR-DEA-BC-30). CAND-007 and CAND-008 remained
+  as open children. On inspection, both are already canonical: CAND-007 maps to capabilities:capability-supplier-management-d6fuj4
+  (admitted 2026-09-01 at v1-alpha baseline), and CAND-008 maps to capabilities:capability-partner-management-cp3vdb
+  (admitted 2026-09-01 at v1-alpha baseline). The candidate records are stale in the same way CAND-005 was stale:
+  they are the pre-admission research records for capabilities that are now canonical.'
+findings:
+  F1: 'CAND-007 (Supplier Management) was admitted at the v1-alpha baseline on 2026-09-01 with the full ladder passage
+    (candidate -> observed -> corroborated -> normalized -> ecf-mapped -> reviewed -> canonical). evidence_strength
+    E4 at registration. The canonical entry carries a Track C dependency note (''if Track C admits a parent, this
+    entry may become a specialization in a follow-on migration CR''); Track C is closed at N-030 (opt 2: no parent
+    admitted), so the note is void -- no follow-on migration CR applies.'
+  F2: CAND-008 (Partner Management) was admitted at the v1-alpha baseline on 2026-09-01 with the full ladder passage.
+    evidence_strength E3 at registration. Distinct from Supplier Management (supply base) and Customer Management
+    (demand side) per the canonical boundary.
+  F3: 'CAND-004 (grouping_parent) is now complete: all four children are resolved. CAND-005 admitted (canonical).
+    CAND-006 merged into CAND-005 (N-029). CAND-007 retired (already canonical). CAND-008 retired (already canonical).
+    The grouping_parent record is retained as the research-register structural artifact per N-007 / N-018; no live
+    candidate children remain. The research cell for Relationship Management is closed.'
+  F4: No new admissions. The 29 first-order canonical count is unchanged. This CR is register hygiene only (same
+    pattern as CR-DEA-BC-27 N-025 for CAND-005).
+decisions:
+- id: N-031
+  verdict: retired
+  subject: CAND-007 (Supplier Management) stale candidate record; canonical entity exists at capabilities:capability-supplier-management-d6fuj4
+- id: N-032
+  verdict: retired
+  subject: CAND-008 (Partner Management) stale candidate record; canonical entity exists at capabilities:capability-partner-management-cp3vdb
+follow_ons:
+  no_follow_ons_from_this_CR: CAND-004 grouping_parent cell is closed; no new TERs; no new CRs; the Relationship
+    Management research question is fully resolved.
+  per_cell_placement_review: A separate slice. BC-28 surfaced it; a 1-session re-evaluation of the 28 populated
+    ECF cells against the BC-13 semantic-center-of-gravity rule.
+cross_references:
+- catalog-research/candidates.yaml (CAND-007, CAND-008 marked CAPABILITY-CANONICAL; universe_version 0.5.4 -> 0.5.5)
+- catalog-research/normalization.yaml (N-031, N-032 added; register_version 0.12.0)
+- change-requests/CR-DEA-BC-27.md (N-025; the CAND-005 stale-record precedent)
+- change-requests/CR-DEA-BC-30.md (N-029; the CAND-006 merge)
+- change-requests/CR-DEA-BC-31.md (N-030; the TER-RELMGMT-001 retirement that closes Track C)

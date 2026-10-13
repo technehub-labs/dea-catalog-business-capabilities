@@ -1,4 +1,4 @@
-universe_version: 0.5.4
+universe_version: 0.5.5
 cr: CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C stubs) + CR-DEA-BC-18 (Track A evidence seed) + CR-DEA-BC-14
   (Track A admission; CAND-036 admitted)
 compiled: '2026-09-11 (v0.5: CAND-037 Enterprise Performance Management added under CR-DEA-BC-19 Track
@@ -131,8 +131,13 @@ candidates:
   - SRC-006
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 Stakeholder Relationship; grouping parent only (normalization N-007); withdrawn
-    from the first-order admission track
+  notes: 'Theme section 30 Stakeholder Relationship; grouping parent only (normalization N-007); withdrawn
+    from the first-order admission track. 2026-10-12 (CR-DEA-BC-32): all four children now resolved --
+    CAND-005 admitted (Customer Management; N-025), CAND-006 merged into CAND-005 (N-029), CAND-007 retired
+    as already-canonical (Supplier Management; N-031), CAND-008 retired as already-canonical (Partner
+    Management; N-032). The grouping_parent record is retained as the research-register structural artifact
+    per N-007/N-018; no live candidate children remain. TER-RELMGMT-001 resolved-retired at N-030 (opt
+    2).'
   rationale: Aggregation over customers, citizens, partners, suppliers, regulators; carries the business-object
     focus on the relationship itself. No boundary independent of the union of children; retained for the
     common relationship pattern and the deferred CAND-005/CAND-006 unification decision
@@ -222,7 +227,7 @@ candidates:
       distinct first-order capability
 - id: CAND-007
   name: Supplier Management
-  classification: CAPABILITY
+  classification: CAPABILITY-CANONICAL
   confidence: medium
   evidence_strength: E4
   business_object_hypothesis: Supplier
@@ -236,16 +241,30 @@ candidates:
   - SRC-005
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 Supplier
+  notes: 'ADMITTED at v1-alpha baseline (2026-09-01); canonical_id: capabilities:capability-supplier-management-d6fuj4.
+    Research candidate record retired per N-031 (CR-DEA-BC-32). The canonical entity is the source of
+    truth. Parent chain: was grouped under CAND-004 (grouping_parent per N-018); with this retirement,
+    all four CAND-004 children are resolved (CAND-005 admitted, CAND-006 merged into CAND-005, CAND-007
+    and CAND-008 retired as already-canonical).'
   rationale: Distinct business object (Supplier vs Customer); common across manufacturing, retail, healthcare
   provenance:
     research_artifact: true
-    canonical: false
+    canonical: true
     added: '2026-08-31'
     evidence_register: docs/research/evidence-register.yaml
+    canonical_id: capabilities:capability-supplier-management-d6fuj4
+    admitted: '2026-09-01'
+    admission_cr: v1-alpha baseline (admitted 2026-09-01; admission PR under eaojnr)
+    retired_from_research_register: 2026-10-12 (N-031; CR-DEA-BC-32)
+  promotion_history:
+  - stage: retired-from-research-register
+    date: '2026-10-12'
+    actor: Coder (for eaojnr); CR-DEA-BC-32 N-031
+    reason: Canonical entity already exists at capabilities:capability-supplier-management-d6fuj4 (admitted
+      2026-09-01); research candidate record retired per N-031
 - id: CAND-008
   name: Partner Management
-  classification: CAPABILITY
+  classification: CAPABILITY-CANONICAL
   confidence: medium
   evidence_strength: E3
   business_object_hypothesis: Partner
@@ -258,14 +277,28 @@ candidates:
   - SRC-004
   durable: demonstrated
   implementation_independent: demonstrated
-  notes: Theme section 30 Partner
+  notes: 'ADMITTED at v1-alpha baseline (2026-09-01); canonical_id: capabilities:capability-partner-management-cp3vdb.
+    Research candidate record retired per N-032 (CR-DEA-BC-32). The canonical entity is the source of
+    truth. Parent chain: was grouped under CAND-004 (grouping_parent per N-018); with this retirement,
+    all four CAND-004 children are resolved (CAND-005 admitted, CAND-006 merged into CAND-005, CAND-007
+    and CAND-008 retired as already-canonical).'
   rationale: Lower convergence than Supplier/Customer; partner relationship is structurally different
     from supply relationships
   provenance:
     research_artifact: true
-    canonical: false
+    canonical: true
     added: '2026-08-31'
     evidence_register: docs/research/evidence-register.yaml
+    canonical_id: capabilities:capability-partner-management-cp3vdb
+    admitted: '2026-09-01'
+    admission_cr: v1-alpha baseline (admitted 2026-09-01; admission PR under eaojnr)
+    retired_from_research_register: 2026-10-12 (N-032; CR-DEA-BC-32)
+  promotion_history:
+  - stage: retired-from-research-register
+    date: '2026-10-12'
+    actor: Coder (for eaojnr); CR-DEA-BC-32 N-032
+    reason: Canonical entity already exists at capabilities:capability-partner-management-cp3vdb (admitted
+      2026-09-01); research candidate record retired per N-032
 - id: CAND-009
   name: Offering Management
   classification: CAPABILITY
