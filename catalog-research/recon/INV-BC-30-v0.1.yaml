@@ -1,7 +1,7 @@
 id: INV-BC-30-v0.1
 cr: CR-DEA-BC-30
 date: '2026-10-12'
-author: Coder (for eaojnr)
+author: Emmanuel A. Otchere
 trigger: gap G5 closure
 related_normalization_decisions:
 - N-029

@@ -8,7 +8,7 @@
 
 **Status**: Proposed
 **Layer**: Catalog (business capabilities)
-**Owner**: Coder (for eaojnr)
+**Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-11
 **Depends on**: CR-DEA-BC-01 (method, landed); CR-DEA-BC-02 (evidence investigation, landed); CR-DEA-BC-05 (versioning, landed); CR-DEA-BC-12 (BC-SR-A001 carrier, landed 2026-09-10); CR-DEA-BC-13 (method rule + Tech-mgmt carve + Track A/B/C stubs, landed 2026-09-10); CR-DEA-BC-18 (Track A evidence package, landed 2026-09-11); BC-SR-A001 §4 (reviewer P1)
 **Related**: dea-metaframework ADR-ECF-003 (agency-organization/design definition); dea-metamodel ADR-015 (agency-organization domain)

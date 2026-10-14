@@ -3,7 +3,7 @@
 **Status**: Applied (2026-10-12); CAND-037 admitted; cell `strategy-direction x operate` populated; direction loop closed per BC-SR-A001 §16; catalog count 28 -> 29
 
 **Filed**: 2026-10-12
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Depends on**: CR-DEA-BC-01 (method), CR-DEA-BC-13 (semantic-center-of-gravity rule; Track B), CR-DEA-BC-19 (EPM evidence package; research-CR), BC-SR-A001 §5 (reviewer P1), CR-DEA-BC-mv1 (post-mv1 id system), CR-DEA-BC-20 (noun-as-ability rule; H8 linter)
 **Carrier documents**: `catalog-research/normalization.yaml` N-023/N-024, `catalog-research/evidence-register.yaml` TER-EPM-001, `catalog-research/candidates.yaml` CAND-037, `catalog-research/distinctness-sweep.yaml` v0.6.0
 **Follow-on**: BC-25 linter patch (extend `OUTCOME_MARKERS` to require a `[noun-of-product]+Management` exemption when the noun-of-product is a recognized governance object; the H3 false positive on "Performance" in the canonical name is the BC-23 trigger for that patch)

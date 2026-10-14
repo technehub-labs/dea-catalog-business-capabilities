@@ -2,7 +2,7 @@
 
 **Status**: Applied (2026-10-12)
 **Filed**: 2026-10-12
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Recon**: `catalog-research/recon/INV-BC-33-v0.1.yaml`
 **Trigger**: BC-28 surfaced the per-cell placement review as the only remaining BC-SR-A001 sub-question; this CR closes it
 **Carrier documents**: this CR; `catalog-research/recon/INV-BC-33-v0.1.yaml`; updated `ecf_rationale` notes on Supplier Management and Partner Management

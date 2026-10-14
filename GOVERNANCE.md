@@ -28,7 +28,7 @@ Catalog governance established by **CR-DEA-BC-01** (components 17 and 18). Norma
 
 | Role | Responsibility |
 |---|---|
-| Catalog steward | Owns the method documents, the CR pipeline, and promotion decisions. Currently: eaojnr, with Coder as engineering agent. |
+| Catalog steward | Owns the method documents, the CR pipeline, and promotion decisions. Currently: eaojnr. |
 | Research compiler | Executes evidence gathering and candidate analysis under CR-DEA-BC-02; compiles registers with honest retrieval notes. |
 | Semantic reviewer | Gate 1 (METHODOLOGY.md §12): definitions, distinctions, hard gates, anti-invention classification, naming conformance. |
 | Architectural reviewer | Gate 2 (METHODOLOGY.md §12): ECF mapping, realization links, record shape, layering boundaries. |

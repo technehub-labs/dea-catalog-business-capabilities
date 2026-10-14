@@ -26,22 +26,22 @@ provenance:
   ladder_passage:
   - stage: candidate
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), candidate universe v0.1 (PR #6)'
+    actor: 'Emmanuel A. Otchere, candidate universe v0.1 (PR #6)'
   - stage: observed
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), evidence register (PRs #5, #7)'
+    actor: 'Emmanuel A. Otchere, evidence register (PRs #5, #7)'
   - stage: corroborated
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), enterprise-generality matrix (PR #11)'
+    actor: 'Emmanuel A. Otchere, enterprise-generality matrix (PR #11)'
   - stage: normalized
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), normalization register + distinctness sweep (PRs #8, #12)'
+    actor: 'Emmanuel A. Otchere, normalization register + distinctness sweep (PRs #8, #12)'
   - stage: ecf-mapped
     date: '2026-08-31'
-    actor: 'Coder (for eaojnr), preliminary ECF overlay (PR #7)'
+    actor: 'Emmanuel A. Otchere, preliminary ECF overlay (PR #7)'
   - stage: reviewed
     date: '2026-09-01'
-    actor: 'Coder (for eaojnr), admission review v0.1 (PR #24)'
+    actor: 'Emmanuel A. Otchere, admission review v0.1 (PR #24)'
   - stage: canonical
     date: '2026-09-01'
     actor: eaojnr, admission PR (this change)

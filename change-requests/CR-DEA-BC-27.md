@@ -3,7 +3,7 @@
 **Status**: Applied (2026-10-12); CAND-005 retired (N-025); CAND-006 unification remains deferred (N-026); 1 follow-on CR queued (BC-30)
 **Recon**: `catalog-research/recon/INV-BC-27-v0.1.yaml`
 **Filed**: 2026-10-12
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Carrier documents**: `catalog-research/recon/INV-BC-27-v0.1.yaml`, `catalog-research/normalization.yaml` (N-025/N-026/N-027/N-028 added), `catalog-research/candidates.yaml` (CAND-005 retired)
 
 ## Summary

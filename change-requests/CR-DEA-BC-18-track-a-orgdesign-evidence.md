@@ -8,7 +8,7 @@
 
 **Status:** Draft for review (research-CR; no admission in this revision)
 **Date:** 2026-09-11
-**Carrier:** Coder (for eaojnr)
+**Carrier:** Emmanuel A. Otchere
 **Branch:** `feat/CR-DEA-BC-18-track-a-orgdesign-evidence`
 **Closes:** BC-13 §B.1 (Track A investigation opened); BC-SR-A001 §4 evidence work
 **Blocks:** CR-DEA-BC-14 (provisional; Track A admission CR: pending user acceptance)

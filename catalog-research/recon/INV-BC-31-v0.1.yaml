@@ -1,7 +1,7 @@
 id: INV-BC-31-v0.1
 cr: CR-DEA-BC-31
 date: '2026-10-12'
-author: Coder (for eaojnr)
+author: Emmanuel A. Otchere
 trigger: TER-RELMGMT-001 retirement; structurally resolvable at the completion of the N-018 / N-025 / N-029 decision
   chain
 related_normalization_decisions:

@@ -40,22 +40,22 @@ provenance:
   ladder_passage:
   - stage: candidate
     date: '2026-09-10'
-    actor: Coder (for eaojnr), BC-17 candidate record derived from BC-13 carve
+    actor: Emmanuel A. Otchere, BC-17 candidate record derived from BC-13 carve
   - stage: observed
     date: '2026-09-10'
-    actor: Coder (for eaojnr), BC-SR-A001 §12 + carve-text evidence
+    actor: Emmanuel A. Otchere, BC-SR-A001 §12 + carve-text evidence
   - stage: corroborated
     date: '2026-09-10'
-    actor: Coder (for eaojnr), enterprise-generality matrix (B2B/B2C/G2C sweep)
+    actor: Emmanuel A. Otchere, enterprise-generality matrix (B2B/B2C/G2C sweep)
   - stage: normalized
     date: '2026-09-10'
-    actor: Coder (for eaojnr), distinctness sweep vs Operations / Tech Mgmt / IM / A&I
+    actor: Emmanuel A. Otchere, distinctness sweep vs Operations / Tech Mgmt / IM / A&I
   - stage: ecf-mapped
     date: '2026-09-10'
-    actor: 'Coder (for eaojnr), ECF overlay hypothesis: enablement-operations/operate (primary)'
+    actor: 'Emmanuel A. Otchere, ECF overlay hypothesis: enablement-operations/operate (primary)'
   - stage: reviewed
     date: '2026-09-10'
-    actor: Coder (for eaojnr), CR-DEA-BC-17 §3 (semantic review) + §4 (architectural review)
+    actor: Emmanuel A. Otchere, CR-DEA-BC-17 §3 (semantic review) + §4 (architectural review)
   - stage: canonical
     date: '2026-09-10'
     actor: eaojnr, admission PR (this change)

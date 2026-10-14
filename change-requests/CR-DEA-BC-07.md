@@ -8,7 +8,7 @@
 
 **Status**: Accepted
 **Layer**: Catalog (business capabilities)
-**Owner**: Coder (for eaojnr)
+**Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-07
 **Depends on**: CR-CATALOG-STRUCT-09 (v2.4.0 enum migration); dea-metaframework CR-ECF-007; dea-metaframework ADR-ECF-002
 **Related**: CR-DEA-BC-02 (N-001 normalization decision); CR-DEA-BC-05 (versioning and change procedure)

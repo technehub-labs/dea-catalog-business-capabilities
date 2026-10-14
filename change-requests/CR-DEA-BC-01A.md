@@ -6,7 +6,7 @@
 | **Title** | Reconcile the catalog record shape with dea-metamodel ADR-015/CR-016: kind by entity specialization, governed capability_layer, capability_type deprecated |
 | **Status** | Proposed |
 | **Date** | 2026-08-31 |
-| **Author** | Coder (for eaojnr) |
+| **Author** | Emmanuel A. Otchere |
 | **Depends on** | dea-metamodel ADR-015 (capability classification by specialization), dea-metamodel CR-016 (implementation, merged), CR-DEA-BC-01 (catalog method; this CR constrains one record field, not the method) |
 | **Scope** | Docs-only reconciliation: update the conceptual record shape in `docs/FOUNDATIONS.md` §12 and record migration guidance for the deprecated `capability_type` field |
 | **Out of scope** | Catalog population; schema files and CI (follow CR-DEA-BC-01); any change to ECF overlay rules; creation of non-business capability catalogs |
