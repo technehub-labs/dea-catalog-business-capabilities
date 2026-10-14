@@ -2,7 +2,7 @@
 
 **Status**: Applied (2026-10-12)
 **Filed**: 2026-10-12
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Recon**: `catalog-research/recon/INV-BC-31-v0.1.yaml`
 **Trigger**: TER-RELMGMT-001 (Track C; Relationship Management generic parent) is now structurally resolvable at the completion of the N-018 / N-025 / N-029 decision chain
 **Carrier documents**: this CR; `catalog-research/recon/INV-BC-31-v0.1.yaml`; `catalog-research/evidence-register.yaml` (TER-RELMGMT-001 resolution block); `catalog-research/normalization.yaml` (N-030; register_version 0.11.0)

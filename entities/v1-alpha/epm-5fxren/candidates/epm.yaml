@@ -78,12 +78,12 @@ open_evidence_questions:
   hypothesis: Likely yes - Balanced Scorecard, OKR frameworks, and regulatory performance regimes are all enterprise-general.
 progress:
 - date: '2026-09-10'
-  actor: Coder (for eaojnr)
+  actor: Emmanuel A. Otchere
   stage: candidate
   note: Stub created under CR-DEA-BC-13 §D.2. No evidence work yet; investigation track B opened by CR-DEA-BC-12 §B.2; candidate
     record produced here.
 - date: '2026-10-12'
-  actor: Coder (for eaojnr)
+  actor: Emmanuel A. Otchere
   stage: admitted
   note: 'CR-DEA-BC-23 admission. Cell strategy-direction x operate populated. ECF matrix 28/49 -> 29/49. Direction loop (Strategy -> Strategic Planning -> Performance -> Insight -> Adaptation) closed per BC-SR-A001 §16. EPM = 29th first-order canonical capability. Id capabilities:capability-enterprise-performance-management-5fxren; alias-collision-free under post-mv1 id system. Distinctness sweep complete: adjacent-distinct vs Insight Management (insight half of the loop); subset-adjacent vs Financial Resource Management (money side); adjacent vs Strategy Formulation + Strategic Planning. Three-source convergence SRC-020/021/022 supports the E3 evidence rating at admission.'
 lifecycle_status: admitted

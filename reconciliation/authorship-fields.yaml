@@ -1,0 +1,84 @@
+# CR-BP-118 / CR-BP-118b -- Authorship Cardinal Rule (BC repo)
+# Data-driven registry consumed by scripts/check_authorship.py.
+# Adding a new authorship field is itself a CR-level change.
+#
+# The cardinal rule (R1): every authorship-bearing field must carry a value
+# from the allowlist. Denied values are agent/tool names. Prose-content
+# occurrences of denied words in record name/definition/description fields
+# are out of scope for the AUT-001..003 gate; they are inventoried for
+# the 118c follow-on.
+
+allowlist:
+  - "Emmanuel A. Otchere"
+  - "TechNeHub Labs"
+
+# Agent / tool names that may never appear in an authorship-bearing field.
+# `eaojnr` is allowed as a historical record (user handle alone, no agent prefix).
+denylist:
+  - "Coder"
+  - "Agent"
+  - "Hermes"
+  - "Claude"
+  - "GPT"
+  - "Cline"
+  - "OpenAI"
+  - "MiniMax"
+  - "MiniMax-M3"
+
+# Authorship-bearing fields, by file path. Each entry declares a
+# single value-bearing line shape. Field paths:
+#   - "**Key**"   -> markdown CR doc metadata (e.g. **Owner**)
+#   - "key"        -> YAML key: value (top-level or list-of-maps, value column)
+#
+# The bounded-glob walker (CR-BP-118a fix at 956fe8f9) is in
+# scripts/check_authorship.py; each field's file_glob is bounded to
+# the literal path prefix so vendored content is invisible.
+
+fields:
+
+  # CR doc metadata (markdown bold-key form)
+  - path: "**Owner**"           # change-request owner
+    file_glob: "change-requests/CR-*.md"
+
+  - path: "**Author**"          # change-request author
+    file_glob: "change-requests/CR-*.md"
+
+  # Catalog-research YAML fields (BC-specific). Values are scalar strings.
+  # actor: a person/role who performed the step. The actor value is
+  # often followed by a comma and a context string (e.g. "Emmanuel A.
+  # Otchere, BC-13 B.1 Track A candidate seeded"), so this field opts
+  # into prefix-matching.
+  - path: "actor"
+    file_glob: "catalog-research/candidates.yaml"
+    prefix_match: true
+
+  # reviewer: a person/role who reviewed the candidate. Same shape
+  # as actor (canonical name + comma + context).
+  - path: "reviewer"
+    file_glob: "catalog-research/admission-review*.yaml"
+    prefix_match: true
+
+  # compiled_by, registered_by, evidence_seeded_by, admitted_by: the
+  # evidence-register author/owner chain. Values may be quoted or bare
+  # and may include trailing context (e.g. "Emmanuel A. Otchere under
+  # CR-DEA-BC-18 (research-CR; no admission)").
+  - path: "compiled_by"
+    file_glob: "catalog-research/evidence-register.yaml"
+    prefix_match: true
+
+  - path: "registered_by"
+    file_glob: "catalog-research/evidence-register.yaml"
+    prefix_match: true
+
+  - path: "evidence_seeded_by"
+    file_glob: "catalog-research/evidence-register.yaml"
+    prefix_match: true
+
+  - path: "admitted_by"
+    file_glob: "catalog-research/evidence-register.yaml"
+    prefix_match: true
+
+  # Lowercase author in catalog-research YAML (rare; same shape as actor)
+  - path: "author"
+    file_glob: "catalog-research/*.yaml"
+    prefix_match: true

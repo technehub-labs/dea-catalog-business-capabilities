@@ -2,7 +2,7 @@
 
 **Status**: Accepted
 **Layer**: Catalog (business capabilities)
-**Owner**: Coder (for eaojnr)
+**Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-07
 **Depends on**: CR-CATALOG-STRUCT-08 (v2.3.0 migration carrier); dea-metaframework CR-ECF-007; dea-metamodel CR-MM-ECF-02
 **Related**: dea-metaframework ADR-ECF-002; dea-catalog-processes CR-BP-18

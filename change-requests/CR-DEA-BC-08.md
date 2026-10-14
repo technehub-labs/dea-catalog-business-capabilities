@@ -8,7 +8,7 @@
 
 **Status**: Accepted
 **Layer**: Catalog (business capabilities)
-**Owner**: Coder (for eaojnr)
+**Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-08
 **Depends on**: CR-DEA-BC-02 (N-006 normalization decision); CR-DEA-BC-04 (overlay v0.2); CR-ECF-CG-003 (catalog conformance gate)
 **Related**: CR-DEA-BC-07 (substrate-neutral re-statement); `dea-metaframework` CR-ECF-006 (Strategy & Direction rename from Supply & Resources)

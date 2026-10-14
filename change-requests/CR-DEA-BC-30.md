@@ -2,7 +2,7 @@
 
 **Status**: Applied (2026-10-12)
 **Filed**: 2026-10-12
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Recon**: `catalog-research/recon/INV-BC-30-v0.1.yaml`
 **Trigger**: gap G5 closure; re-evaluation of the CAND-006 vs CAND-005 unification question carried forward from CR-DEA-BC-27 (N-026)
 **Carrier documents**: this CR; `catalog-research/recon/INV-BC-30-v0.1.yaml`; `catalog-research/evidence-register.yaml` (SRC-026/027/028 + G5 closed); `catalog-research/candidates.yaml` (CAND-006 marked MERGED-INTO-CAND-005; universe_version 0.5.4); `catalog-research/normalization.yaml` (N-029; register_version 0.10.0)

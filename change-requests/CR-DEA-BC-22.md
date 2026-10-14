@@ -2,7 +2,7 @@
 
 **Status**: Applied (2026-09-30); user ratified V-A Insight Management on 2026-09-30; rename applied with id, name, version 1.0.0 to 2.0.0, aliases retained, N-022 verdict rename-applied, ADR-ES-021 ratified
 **Filed**: 2026-09-30
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Depends on**: CR-DEA-BC-01 (method), CR-DEA-BC-09 (naming advisory set), CR-DEA-BC-12 (noun-as-ability advisory), CR-DEA-BC-20 (rule 7 + H8 hard gate), CR-DEA-BC-21 (recon + ADR-ES-021)
 **Carrier documents**: `catalog-research/recon/INV-AI-v0.1.yaml`, `catalog-research/recon/ADR-ES-021.yaml`
 

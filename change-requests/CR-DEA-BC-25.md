@@ -3,7 +3,7 @@
 **Status**: Applied (2026-10-12); 5 advisories (1 new EPM governance-object advisory + 4 pre-existing business-object anchoring advisories); N-024 review-retained verdict retired; linter parity restored
 
 **Filed**: 2026-10-12
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Depends on**: CR-DEA-BC-23 (EPM admission; the trigger), CR-DEA-BC-09 (the original review-retained mechanism for Security Management N-015), CR-DEA-BC-20 (H8 noun-as-ability rule 7; the linter already has the review-retained exemption wired for H8)
 **Carrier documents**: `scripts/check_naming.py` (linter patch), `catalog-research/normalization.yaml` (N-024 retired; register_version 0.7.0 -> 0.8.0; cr + compiled lines extended)
 

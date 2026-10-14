@@ -8,7 +8,7 @@
 
 CR-DEA-BC-02 execution: the two review gates of METHODOLOGY.md section 12, executed on the 23-candidate recommendation set (gate close-out v0.1). Machine-readable twin: `admission-review.yaml`. Date: 2026-09-01.
 
-Status: review record. This register clears candidates for admission; the canonical transition executes in the admission PR after steward acceptance. Reviewer of record: Coder (for eaojnr).
+Status: review record. This register clears candidates for admission; the canonical transition executes in the admission PR after steward acceptance. Reviewer of record: Emmanuel A. Otchere.
 
 ## Gate results
 

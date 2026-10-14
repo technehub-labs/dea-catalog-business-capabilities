@@ -2,7 +2,7 @@
 
 **Status**: Applied (2026-10-12)
 **Filed**: 2026-10-12
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Recon**: `catalog-research/recon/INV-BC-32-v0.1.yaml`
 **Carrier documents**: this CR; `catalog-research/candidates.yaml` (CAND-007, CAND-008 marked CAPABILITY-CANONICAL); `catalog-research/normalization.yaml` (N-031, N-032; register_version 0.12.0)
 

@@ -58,7 +58,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-023
   name: Resilience Management
@@ -76,7 +76,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-029
   name: Innovation Management
@@ -94,7 +94,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 summary:
   reviewed: 3

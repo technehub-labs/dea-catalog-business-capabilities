@@ -2,7 +2,7 @@
 
 **Status**: Applied (2026-09-30); recommendation V-A Insight Management; forwarded to ADR-ES-021; user ratified V-A on 2026-09-30; CR-DEA-BC-22 applies the rename
 **Filed**: 2026-09-30
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Depends on**: CR-DEA-BC-01 (method), CR-DEA-BC-09 (naming advisory set), CR-DEA-BC-12 (noun-as-ability advisory), CR-DEA-BC-20 (rule 7 + H8 hard gate; this CR resolves the DP-E deferred item)
 **Carrier documents**: `catalog-research/recon/INV-AI-v0.1.yaml`, `catalog-research/recon/ADR-ES-021.yaml`
 **Follow-on**: CR-DEA-BC-22 (rename CR; applied 2026-09-30 on user ratification)

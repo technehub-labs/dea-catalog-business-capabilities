@@ -42,22 +42,22 @@ provenance:
   ladder_passage:
   - stage: candidate
     date: "2026-09-10"
-    actor: "Coder (for eaojnr), BC-13 B.1 Track A candidate seeded (BC-13 carrier)"
+    actor: "Emmanuel A. Otchere, BC-13 B.1 Track A candidate seeded (BC-13 carrier)"
   - stage: observed
     date: "2026-09-10"
-    actor: "Coder (for eaojnr), BC-SR-A001 4 + Galbraith/APQC/ISO 9001 evidence seeding"
+    actor: "Emmanuel A. Otchere, BC-SR-A001 4 + Galbraith/APQC/ISO 9001 evidence seeding"
   - stage: corroborated
     date: "2026-09-11"
-    actor: "Coder (for eaojnr), CR-DEA-BC-18 enterprise-generality matrix (B2B/B2C/G2C sweep)"
+    actor: "Emmanuel A. Otchere, CR-DEA-BC-18 enterprise-generality matrix (B2B/B2C/G2C sweep)"
   - stage: normalized
     date: "2026-09-11"
-    actor: "Coder (for eaojnr), CR-DEA-BC-18 distinctness sweep vs Strategy / Strategic Planning / Workforce Planning / Workforce Management / Tech Mgmt / Tech Enablement"
+    actor: "Emmanuel A. Otchere, CR-DEA-BC-18 distinctness sweep vs Strategy / Strategic Planning / Workforce Planning / Workforce Management / Tech Mgmt / Tech Enablement"
   - stage: ecf-mapped
     date: "2026-09-11"
-    actor: "Coder (for eaojnr), ECF overlay hypothesis: agency-organization/design (primary); conceive + build secondaries"
+    actor: "Emmanuel A. Otchere, ECF overlay hypothesis: agency-organization/design (primary); conceive + build secondaries"
   - stage: reviewed
     date: "2026-09-11"
-    actor: "Coder (for eaojnr), CR-DEA-BC-14 3 (semantic review gate 1) + 4 (architectural review gate 2)"
+    actor: "Emmanuel A. Otchere, CR-DEA-BC-14 3 (semantic review gate 1) + 4 (architectural review gate 2)"
   - stage: canonical
     date: "2026-09-11"
     actor: "eaojnr, admission PR (this change)"

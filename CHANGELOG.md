@@ -15,6 +15,28 @@ The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
 [`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
 
+## [Unreleased]
+
+### CR-DEA-BC-34: Authorship Cardinal Rule (R1, R2) - Org-Wide Propagation Slice
+
+User directive 2026-10-13: "no `Coder` / `Agent` / agent or tool names in any
+authorship field of any published artifact". The CR-BP-118 cardinal rules (R1
+and R2) are propagated to this repo. New blocking gate
+`scripts/check_authorship.py` (CR-BP-118 / AUT-001..003), data-driven from
+`reconciliation/authorship-fields.yaml` (allowlist
+`{Emmanuel A. Otchere, TechNeHub Labs}`; denylist
+`{Coder, Agent, Hermes, Claude, GPT, Cline, OpenAI, MiniMax, MiniMax-M3}`).
+A retroactive sweep rewrites every authorship-metadata hit in the repo:
+73 files, ~93 textual replacements. 0 entity content changes; 0 id changes;
+0 cross-reference changes. The gate's `prefix_match: true` opt-in is new for
+this repo: actor / reviewer values are routinely followed by rich context
+(e.g. `actor: "Emmanuel A. Otchere, BC-13 B.1 Track A candidate seeded"`),
+and exact-match AUT-003 would false-positive on the trailing context. CI
+wiring: new workflow `.github/workflows/validate-authorship.yml` runs the
+gate in `--strict` mode on every push and PR. 21/21 `test_check_authorship`
+pass on this repo's tree. Carrier:
+`change-requests/CR-DEA-BC-34-authorship-cardinal-rule.md`.
+
 ## [v1-alpha.8] - 2026-09-11
 
 **Minor** (CR-DEA-BC-14, PR pending). Admission-CR closing the BC-SR-A001 §4 evidence work (reviewer P1: "the catalog had Strategy + Strategic Planning + Workforce Planning + Workforce Management but not the structural-design capability the ECF positions in `agency-organization/design`"). Admits `dea:capability-organizational-design` as the **28th first-order canonical capability** at `agency-organization/design` (primary), with `agency-organization/{conceive, build}` as secondaries. OrgDesign is the structural-design function (roles, units, reporting lines, authorities, coordination patterns that fit the work the enterprise must do); it is the peer of Workforce Planning (same primary coordinate `agency-organization/design`, distinct by business-object partition: Organization Structure vs Workforce Plan). Track A of CR-DEA-BC-13 §B.1 closed.
