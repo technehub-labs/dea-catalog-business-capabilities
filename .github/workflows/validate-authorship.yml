@@ -24,6 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
       - name: Run Authorship Cardinal Rule gate (CR-BP-118; AUT-001..003)
         run: |
           python3 scripts/check_authorship.py --strict
@@ -31,4 +35,5 @@ jobs:
       - name: Run authorship gate unit tests
         if: always()
         run: |
+          python3 -m pip install --quiet pytest
           python3 -m pytest tests/test_check_authorship.py -q
