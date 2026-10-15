@@ -19,9 +19,17 @@ release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
+
 ### CR-DEA-BC-36: Release-History Reset (Path B) + Release-Discipline Extensions
 
 Withdraws the nine v1-alpha.x tag set (v1-alpha.0 .. v1-alpha.8) as pre-mature, plus the three pre-tag abandoned sections (STRUCT-03a, STRUCT-03b, v1-alpha.0-pipeline-live). Cross-repo dependency sweep: 0 hits across the 8 sibling repos. Extension set A+B+D+F adopted: pre-release CI verification contract, prior-cut history table (empty post-reset), GPG-signing procedure, doc split to docs/release-cut-procedure.md. Recovery appendix captured in change-requests/CR-DEA-BC-36-release-history-reset-and-discipline.md section 2; fossilised record at docs/release-history-archive.md. No entity records, ids, or gate counts change. PR #88.
+
+
+
+### CR-DEA-BC-35: Entity System Stage 5-6 (BC Slice)
+
+BC slice of the General Entity System institutionalisation (cross-repo cascade T7 of the umbrella programme). New `reconciliation/entity-system-registry.yaml` (BC-specific: 1 profile `BusinessCapability` with required fields `id, type, name, definition, version, metamodel_pin, lifecycle_status`; BC id pattern `^capabilities:capability-[a-z0-9-]+-[a-z2-9]{6}$`; BC lifecycle ladder states `candidate -> observed -> corroborated -> normalized -> ecf-mapped -> reviewed -> canonical -> active -> retired`; per-type gate delegation to `scripts/check_business_capability.py`). New `scripts/check_entity_system.py` (5-rule umbrella gate; copied verbatim from `dea-catalog-processes`). New `scripts/check_business_capability.py` (per-type gate stub; ES-005 existence check only; full per-type validation lives in the conformance rollup). New `tests/test_check_entity_system.py` (32 tests; all pass; copied verbatim). New `.github/workflows/validate-entity-system.yml` (runs gate under `--strict` on every PR). Live posture: 32/32 admitted `BusinessCapability` records pass ES-001..ES-005; 3 pre-admission candidate records (`capabilities:candidate-relmgmt-nu73v9`, `capabilities:candidate-epm-5fxren`, `capabilities:candidate-orgdesign-a7s8bf`) carry advisory ES-001 + ES-002 findings (documented as class-level disposition). No entity, schema, or id changes. D-004 clean. 118a/118b/118c authorship gates remain CONFORMANT.
+ 1414f50 (feat: CR-DEA-BC-35 entity-system BC slice)
 
 ### CR-DEA-BC-34: Authorship Cardinal Rule (R1, R2) - Org-Wide Propagation Slice
 

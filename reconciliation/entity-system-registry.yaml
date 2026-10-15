@@ -1,0 +1,115 @@
+# Entity System Registry (CR-DEA-BC-35; per the Conformance Standard CS-011)
+# Per-repo BC slice of the General Entity System. Data-driven configuration
+# for the entity-system gate. Changing the gate's behavior is a YAML edit,
+# not a code change.
+
+# ES-002: Entity Contract (the common envelope + type-specific profiles)
+envelope:
+  file_globs:
+    - "entities/**/*.yaml"
+  type_field: type
+  # Per-type profiles. The common envelope is the union of all
+  # required fields across the active types; type-specific profiles
+  # add / substitute fields appropriate to the type's purpose.
+  profiles:
+    BusinessCapability:
+      # BC uses a bespoke lifecycle field (lifecycle_status as a flat
+      # string) rather than the standard 5-state machine. The ES-004
+      # gate skips records whose profile lacks a `lifecycle_state_field`
+      # (the script splits on "." and requires a nested block path),
+      # so BC records are exempt from ES-004 by construction.
+      required_fields:
+        - id
+        - type
+        - name
+        - definition
+        - version
+        - metamodel_pin
+        - lifecycle_status
+
+# ES-001: Identity
+identity:
+  id_field: id
+  canonical_prefix: "capabilities:"
+  # Canonical pattern matches the BC id form: capability-<slug>-<6-char
+  # base32 hash>. Same hash alphabet as the processes pattern.
+  canonical_pattern: "^capabilities:capability-[a-z0-9-]+-[a-z2-9]{6}$"
+  legacy_prefix: "dea:"
+  legacy_pattern: "^dea:capability-[a-z0-9-]+$"
+  legacy_migration_map: "reconciliation/migration-id-map.yaml"
+
+# ES-003: Relationship
+relationships:
+  field: related_capabilities
+  canonical_types:
+    - depends-on
+    - realizes
+    - specializes
+  forbidden_types:
+    - part-of
+  cross_catalog_field: identity_scope
+
+# ES-004: Lifecycle (applies to types with a lifecycle_state_field)
+# BC declares lifecycle_status as a flat field with the BC ladder
+# states (candidate -> observed -> corroborated -> normalized ->
+# ecf-mapped -> reviewed -> canonical -> active -> retired). The
+# BC profile omits `lifecycle_state_field` so ES-004 skips BC
+# records by construction (per the BP-123 design).
+lifecycle:
+  field: lifecycle_status
+  status_field: lifecycle_status
+  valid_states:
+    - candidate
+    - observed
+    - corroborated
+    - normalized
+    - ecf-mapped
+    - reviewed
+    - canonical
+    - active
+    - retired
+  terminal_states:
+    - retired
+  # Simplified BC ladder passage. Records with a `provenance.ladder_passage`
+  # block (carrying the stage / date / actor keys below) document the
+  # transition. The BC profile does not enforce this in ES-004; the
+  # ladder is informational and audited via per-CR review.
+  transition_table:
+    candidate:
+      - observed
+    observed:
+      - corroborated
+    corroborated:
+      - normalized
+    normalized:
+      - ecf-mapped
+    ecf-mapped:
+      - reviewed
+    reviewed:
+      - canonical
+    canonical:
+      - active
+    active:
+      - retired
+    retired: []
+  provenance_field: provenance.ladder_passage
+  provenance_required_keys:
+    - stage
+    - date
+    - actor
+
+# ES-005: Per-type gate delegation
+per_type_gates:
+  - type: BusinessCapability
+    gate: scripts/check_business_capability.py
+    args: "--strict"
+
+# CS-008 / CS-009: Exception mechanism (the EGV-011 escape hatch)
+exceptions:
+  registry_path: reconciliation/normalization.yaml
+  verdict_key: verdict
+  verdict_value: review-retained
+  cr_key: cr
+  expiry_key: expiry
+  reviewer_key: reviewed_by
+  excepted_rules_key: excepted_rules
