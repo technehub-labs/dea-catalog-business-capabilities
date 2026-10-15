@@ -1,7 +1,7 @@
 id: INV-BC-33-v0.1
 cr: CR-DEA-BC-33
 date: '2026-10-12'
-author: Coder (for eaojnr)
+author: Emmanuel A. Otchere
 trigger: BC-28 surfaced per-cell placement review as the only remaining sub-question post-BC-23 closure; this CR
   closes it
 related_normalization_decisions: []

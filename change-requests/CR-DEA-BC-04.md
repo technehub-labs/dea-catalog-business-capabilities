@@ -5,7 +5,7 @@
 | **CR** | CR-DEA-BC-04 |
 | **Title** | Industry Specialization Framework and First View: Mobile Communications Service Provider |
 | **Status** | Draft: awaiting review, then "Proceed" to land as proposal PR |
-| **Author** | Coder (for eaojnr) |
+| **Author** | Emmanuel A. Otchere |
 | **Date** | 2026-09-01 |
 | **Depends on** | CR-DEA-BC-01 (method, accepted), CR-DEA-BC-02 (specialization register v0.1, landed), CR-DEA-BC-03 (schema + CI, landed), the canonical 23 (admitted 2026-09-01) |
 | **Boundary** | This catalog only. L1 entries are immutable to views; L4 organization-specific capability instances (OTCHERE and others) live downstream with adopters and never enter this repository. |

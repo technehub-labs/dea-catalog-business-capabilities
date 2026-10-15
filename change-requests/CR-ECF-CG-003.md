@@ -9,7 +9,7 @@
 | **Repository** | technehub-labs/dea-catalog-business-capabilities |
 | **Implements** | CR-ECF-CG-001 |
 | **Depends On** | CR-ECF-005, CR-ECF-CG-002 |
-| **Author** | Coder (for eaojnr) |
+| **Author** | Emmanuel A. Otchere |
 | **Date** | 2026-09-01 |
 | **Landing commit** | `d3031aa49acc88e01d765d60e72e410f45047047` (PR #34, 2026-09-01) |
 

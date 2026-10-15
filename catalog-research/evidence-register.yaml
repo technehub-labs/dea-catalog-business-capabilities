@@ -4,7 +4,7 @@ cr: "CR-DEA-BC-02 + CR-DEA-BC-13 (track A/B/C evidence stubs) + CR-DEA-BC-18 (Tr
   \ evidence-pending \u2192 evidence-seeded; CAND-037 E1 \u2192 E3) + CR-DEA-BC-21 (Analytics and Intelligence recon; SRC-023/024/025 added; G11 added; recommendation V-A Insight Management)"
 compiled: "2026-09-11 (v0.7: Track B evidence seeded under CR-DEA-BC-19; TER-EPM-001 status evidence-seeded;\
   \ CAND-037 E1 \u2192 E3 confirmed across SRC-020/021/022 three-source convergence); 2026-09-30 (v0.8: CR-DEA-BC-21 recon: SRC-023 (APQC PCF 7.4; cross-industry-process class), SRC-024 (Forrester Wave Enterprise Insight Platforms; BIZBOK v14; business-architecture class), SRC-025 (DMBOK 2nd ed.; OMG DMN; IIBA BABOK v3; standards-body class) added; G11 (BC-21 recon closure) appended; three-source convergence on insight noun-of-product supports V-A Insight Management); 2026-10-12 (v0.9: CR-DEA-BC-23 EPM admission; TER-EPM-001 evidence-seeded -> admitted; CAND-037 E3 confirmed at admission; cell strategy-direction x operate populated; 29th first-order canonical capability; direction loop closed per BC-SR-A001 §16)"
-compiled_by: Coder (for eaojnr)
+compiled_by: Emmanuel A. Otchere
 status: active; Track A closed under CR-DEA-BC-14 (admission 2026-09-11); Track B admitted under
   CR-DEA-BC-23 (2026-10-12; CAND-037 admitted as 29th first-order canonical capability; cell
   strategy-direction x operate populated; loop closed)
@@ -832,11 +832,11 @@ track_evidence_records:
     \ + standards-body source classes)"
   status: closed (admitted 2026-09-11)
   registered_on: '2026-09-10'
-  registered_by: "Coder (for eaojnr) under CR-DEA-BC-13 \xA7D.1"
+  registered_by: "Emmanuel A. Otchere under CR-DEA-BC-13 \xA7D.1"
   evidence_seeded_on: '2026-09-11'
-  evidence_seeded_by: Coder (for eaojnr) under CR-DEA-BC-18 (research-CR; no admission)
+  evidence_seeded_by: Emmanuel A. Otchere under CR-DEA-BC-18 (research-CR; no admission)
   admitted_on: '2026-09-11'
-  admitted_by: Coder (for eaojnr) under CR-DEA-BC-14 (admission-CR)
+  admitted_by: Emmanuel A. Otchere under CR-DEA-BC-14 (admission-CR)
   sources_consulted:
   - SRC-017 Galbraith Star Model and organization-design literature (business-architecture class; indirect
     retrieval pending direct text)
@@ -867,7 +867,7 @@ track_evidence_records:
   evidence_strength: E3 (confirmed by CR-DEA-BC-19 research-CR evidence package; independent corroboration
     across 3 source classes)
   registered_on: '2026-09-10'
-  registered_by: "Coder (for eaojnr) under CR-DEA-BC-13 §D.2"
+  registered_by: "Emmanuel A. Otchere under CR-DEA-BC-13 §D.2"
   sources_consulted:
   - SRC-020
   - SRC-021
@@ -892,7 +892,7 @@ track_evidence_records:
   candidate_id: capabilities:candidate-relmgmt-nu73v9
   evidence_strength: E2 (early; at registration)
   registered_on: '2026-09-10'
-  registered_by: "Coder (for eaojnr) under CR-DEA-BC-13 \xA7D.3"
+  registered_by: "Emmanuel A. Otchere under CR-DEA-BC-13 \xA7D.3"
   sources_consulted:
   - BIZBOK Party / Relationship sub-area (preliminary)
   - CRM industry literature (CRM as the Customer-side specialization)

@@ -101,28 +101,28 @@ provenance:
   ladder_passage:
   - stage: candidate
     date: '2026-09-10'
-    actor: 'Coder (for eaojnr), under CR-DEA-BC-13 §D.2 (investigation Track B; BC-SR-A001 §5 P1)'
+    actor: 'Emmanuel A. Otchere, under CR-DEA-BC-13 §D.2 (investigation Track B; BC-SR-A001 §5 P1)'
   - stage: observed
     date: '2026-09-11'
-    actor: 'Coder (for eaojnr), evidence register v0.7 (PR #72, CR-DEA-BC-19)'
+    actor: 'Emmanuel A. Otchere, evidence register v0.7 (PR #72, CR-DEA-BC-19)'
   - stage: corroborated
     date: '2026-09-11'
-    actor: 'Coder (for eaojnr), enterprise-generality matrix v0.3 + distinctness sweep v0.5'
+    actor: 'Emmanuel A. Otchere, enterprise-generality matrix v0.3 + distinctness sweep v0.5'
   - stage: normalized
     date: '2026-09-11'
-    actor: 'Coder (for eaojnr), normalization register v0.5 + distinctness sweep v0.5'
+    actor: 'Emmanuel A. Otchere, normalization register v0.5 + distinctness sweep v0.5'
   - stage: ecf-mapped
     date: '2026-09-11'
-    actor: 'Coder (for eaojnr), CR-DEA-BC-19 ECF overlay hypothesis (strategy-direction/operate primary)'
+    actor: 'Emmanuel A. Otchere, CR-DEA-BC-19 ECF overlay hypothesis (strategy-direction/operate primary)'
   - stage: reviewed
     date: '2026-09-11'
     actor: 'BC-SR-A001 §5 (reviewer P1; loop-closure narrative required per §D.2)'
   - stage: evidence-seeded
     date: '2026-09-11'
-    actor: 'Coder (for eaojnr), TER-EPM-001 evidence-seeded; CAND-037 E1 -> E3'
+    actor: 'Emmanuel A. Otchere, TER-EPM-001 evidence-seeded; CAND-037 E1 -> E3'
   - stage: admitted
     date: '2026-10-12'
-    actor: 'Coder (for eaojnr), CR-DEA-BC-23 admission; 29th first-order canonical capability'
+    actor: 'Emmanuel A. Otchere, CR-DEA-BC-23 admission; 29th first-order canonical capability'
   migration:
     from_id: dea:candidate-epm
     migration_map_ref: reconciliation/migration-id-map.yaml (post-mv1 id system; CR-DEA-BC-mv1)

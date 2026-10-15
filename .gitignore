@@ -7,6 +7,8 @@ node_modules/
 # Test artifacts
 coverage/
 *.log
+__pycache__/
+*.pyc
 
 # Editor / OS
 .DS_Store

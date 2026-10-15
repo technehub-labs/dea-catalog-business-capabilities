@@ -13,18 +13,40 @@ patch), the scope, the rationale, the PR that landed it, and any tag.
 
 The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
-[`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure.
+[`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure and
+[`docs/release-cut-procedure.md`](release-cut-procedure.md) for the
+release-cut procedure (gated by the pre-release CI verification contract;
+GPG-signed; documented in the prior-cut history table).
+## [Unreleased]
 
+### CR-DEA-BC-36: Release-History Reset (Path B) + Release-Discipline Extensions
 
-## Unreleased
+Withdraws the nine v1-alpha.x tag set (v1-alpha.0 .. v1-alpha.8) as pre-mature, plus the three pre-tag abandoned sections (STRUCT-03a, STRUCT-03b, v1-alpha.0-pipeline-live). Cross-repo dependency sweep: 0 hits across the 8 sibling repos. Extension set A+B+D+F adopted: pre-release CI verification contract, prior-cut history table (empty post-reset), GPG-signing procedure, doc split to docs/release-cut-procedure.md. Recovery appendix captured in change-requests/CR-DEA-BC-36-release-history-reset-and-discipline.md section 2; fossilised record at docs/release-history-archive.md. No entity records, ids, or gate counts change. PR #88.
 
-**Major** (CR-DEA-BC-34, 2026-10-13). Release-History Reset (Path B) + Release-Discipline Extensions. Withdraws the nine v1-alpha.x tags (v1-alpha.0 .. v1-alpha.8) as pre-mature, the three pre-tag v1-alpha.0-pipeline-live / STRUCT-03a / STRUCT-03b abandoned sections, and the three v1-alpha.0 .. v1-alpha.7 abandoned carrier CRs. Recovery appendix captured in `change-requests/CR-DEA-BC-34-release-history-reset-and-discipline.md` section 2; fossilised record at `docs/release-history-archive.md`. Extension set A+B+D+F adopted: pre-release CI verification contract, prior-cut history table (empty post-reset), GPG-signing procedure, doc split to `docs/release-cut-procedure.md`. The cross-repo coordination note is added to the `dea-catalog-release-cut` skill. No entity records, ids, or gate counts change.
+### CR-DEA-BC-34: Authorship Cardinal Rule (R1, R2) - Org-Wide Propagation Slice
+
+User directive 2026-10-13: "no `Coder` / `Agent` / agent or tool names in any
+authorship field of any published artifact". The CR-BP-118 cardinal rules (R1
+and R2) are propagated to this repo. New blocking gate
+`scripts/check_authorship.py` (CR-BP-118 / AUT-001..003), data-driven from
+`reconciliation/authorship-fields.yaml` (allowlist
+`{Emmanuel A. Otchere, TechNeHub Labs}`; denylist
+`{Coder, Agent, Hermes, Claude, GPT, Cline, OpenAI, MiniMax, MiniMax-M3}`).
+A retroactive sweep rewrites every authorship-metadata hit in the repo:
+73 files, ~93 textual replacements. 0 entity content changes; 0 id changes;
+0 cross-reference changes. The gate's `prefix_match: true` opt-in is new for
+this repo: actor / reviewer values are routinely followed by rich context
+(e.g. `actor: "Emmanuel A. Otchere, BC-13 B.1 Track A candidate seeded"`),
+and exact-match AUT-003 would false-positive on the trailing context. CI
+wiring: new workflow `.github/workflows/validate-authorship.yml` runs the
+gate in `--strict` mode on every push and PR. 21/21 `test_check_authorship`
+pass on this repo's tree. Carrier:
+`change-requests/CR-DEA-BC-34-authorship-cardinal-rule.md`.
+
 
 ## Unreleased (historical)
 
-The following block records the work done between v1-alpha.8 and CR-DEA-BC-34. It is the only `Unreleased` content the repo retains through the reset; future work appends to the new `## Unreleased` at the top of the file. The next release cut moves the head `Unreleased` to a dated `[vN.M.P]` heading and adds a fresh empty `## Unreleased` block on top.
-
-**Major** (CR-DEA-BC-20). Renames two entries that fail the noun-as-ability rule (TAXONOMY section 1 rule 7) under the post-mv1 id system.
+DEA-BC-20). Renames two entries that fail the noun-as-ability rule (TAXONOMY section 1 rule 7) under the post-mv1 id system.
 
 - **`dea:capability-strategy` -> `dea:capability-strategy-formulation`.** Renamed (N-016). New id `capabilities:capability-strategy-formulation-sf7q2x`. Version 1.1.1 -> **2.0.0** (Major per VERSIONING section 1.1: name change is a breaking identity change for callers; `aliases: [Strategy]` preserves the colloquial reference). The new name reads as an ability rather than as a noun-of-discourse; parallels Strategic Planning (kept; passes noun-as-ability with the Planning suffix). Related entries updated: Organizational Design, Enterprise Governance, Strategic Planning, Technology Enablement (related_capabilities + boundary prose).
 - **`dea:capability-operations` -> `dea:capability-operations-management`.** Renamed (N-018). New id `capabilities:capability-operations-management-pm3w8k`. Version 1.0.1 -> **2.0.0** (Major). `business_object: Operation` (singular) -> `business_object: Operations` (plural) per DP-D (top-level concept retained; semantic breakdown of Production and Service Delivery added to the definition prose). `aliases: [Operations, Production Management, Service Delivery Management]` added for discoverability. The naming change parallels Customer Management, Asset Management, Risk Management. Related entries updated: Technology Enablement, Offering Management (related_capabilities + boundary prose).
@@ -177,4 +199,3 @@ metamodel, and the process catalog).
 - `scripts/check_versions.py`: **PASS** (26 entries conform to
   CR-DEA-BC-05 version discipline).
 - `scripts/check_view_refs.py`: runs as expected.
-

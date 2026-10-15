@@ -3,7 +3,7 @@
 **Status**: Applied (2026-10-12); 2 of 3 P1 items closed (OrgDesign at BC-14; EPM at BC-23); 1 P1-P2 item reclassified to P2 (N-027); 1 P3 item retired (N-028); 1 follow-on CR queued (BC-30)
 **Recon**: `catalog-research/recon/INV-BC-28-v0.1.yaml`
 **Filed**: 2026-10-12
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Carrier documents**: `catalog-research/recon/INV-BC-28-v0.1.yaml`, `catalog-research/normalization.yaml` (N-025/N-026/N-027/N-028 added), `catalog-research/candidates.yaml` (CAND-005 retired)
 
 ## Summary

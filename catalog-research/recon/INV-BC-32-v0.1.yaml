@@ -1,7 +1,7 @@
 id: INV-BC-32-v0.1
 cr: CR-DEA-BC-32
 date: '2026-10-12'
-author: Coder (for eaojnr)
+author: Emmanuel A. Otchere
 trigger: completion of the CAND-004 child-resolution chain (N-025 CAND-005; N-029 CAND-006; this CR CAND-007/008)
 related_normalization_decisions:
 - N-031

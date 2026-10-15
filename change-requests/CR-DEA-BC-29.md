@@ -2,7 +2,7 @@
 
 **Status**: Applied (2026-10-12)
 **Filed**: 2026-10-12
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Source**: CR-DEA-BC-26 follow-ons (recon INV-BC-26-v0.1 findings 6 and 7)
 **Carrier documents**: this CR; `entities/v1-alpha/enterprise-performance-management-5fxren/` (backfill); `docs/VERSIONING.md` (§1.4 amendment)
 

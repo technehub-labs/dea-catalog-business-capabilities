@@ -75,7 +75,7 @@ open_evidence_questions:
 - question: Does the candidate close any architectural loop that is currently open (per BC-SR-A001 §16 closed-loop structure)?
 progress:
 - date: '2026-09-10'
-  actor: Coder (for eaojnr)
+  actor: Emmanuel A. Otchere
   stage: candidate
   note: Stub created under CR-DEA-BC-13 §D.1. No evidence work yet; investigation track A opened by CR-DEA-BC-12 §B.1; candidate
     record produced here.

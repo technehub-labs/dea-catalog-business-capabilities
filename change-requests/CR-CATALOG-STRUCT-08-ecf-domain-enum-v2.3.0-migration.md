@@ -7,7 +7,7 @@
 **Related**: CR-CATALOG-STRUCT-03a/b (the research distribution slice that introduced the v0.2 overlay; pre-existing overlay re-derivation is parked as a follow-up); CR-DEA-BC-04 (the admission tranche; the v0.2 overlay that needs re-derivation)
 **Supersedes**: nothing; the v0.2 overlay remains valid (the underlying work is unchanged; only the names shifted)
 **Companion to**: CR-BP-17 (parallel migration in dea-catalog-processes; same v2.3.0 scope)
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Date**: 2026-09-07
 
 ## What this CR is

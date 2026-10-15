@@ -8,7 +8,7 @@
 
 **Status**: Proposed
 **Layer**: Catalog (business capabilities)
-**Owner**: Coder (for eaojnr)
+**Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-11
 **Track**: B (Enterprise Performance Management)
 **Reviewer seed**: BC-SR-A001 §5 (P1) + BC-SR-A001 §16 (Direction Loop narrative)

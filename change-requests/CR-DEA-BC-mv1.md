@@ -2,7 +2,7 @@
 
 **Status**: Proposed
 **Layer**: Catalog (business capabilities)
-**Owner**: Coder (for eaojnr)
+**Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-21
 **Depends on**: dea-metaframework docs (`id-system.md`, `entity-storage-layout.md`, PR #31); Wave 1 (dea-catalog-business-processes PR #149); Wave 2 decision review (eaojnr 2026-09-21: D2-1..D2-5 confirmed)
 

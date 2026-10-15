@@ -3,7 +3,7 @@
 **Status**: Applied (2026-10-12); recon complete; 0 blocking drift; 2 follow-ons queued (BC-29a, BC-29b)
 **Recon**: `catalog-research/recon/INV-BC-26-v0.1.yaml`
 **Filed**: 2026-10-12
-**Author**: Coder (for eaojnr)
+**Author**: Emmanuel A. Otchere
 **Carrier documents**: `catalog-research/recon/INV-BC-26-v0.1.yaml`, `catalog-research/normalization.yaml` (N-025/N-026/N-027/N-028 added), `catalog-research/candidates.yaml` (CAND-005 retired)
 
 ## Summary

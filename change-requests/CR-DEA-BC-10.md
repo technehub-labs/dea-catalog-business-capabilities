@@ -2,7 +2,7 @@
 
 **Status**: Superseded
 **Layer**: Catalog (business capabilities)
-**Owner**: Coder (for eaojnr)
+**Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-09
 **Landing commit**: `4d5067ea041efa824b1cc079b915dfaa4be87e28` (PR #52)
 **Depends on**: CR-DEA-BC-06 (publication pipeline, accepted 2026-09-04); CR-DEA-BC-07 (v1-alpha.1 release, 2026-09-07)

@@ -8,7 +8,7 @@
 
 **Status**: Landed; release withdrawn 2026-10-13, see CR-DEA-BC-34.
 **Layer**: Catalog (business capabilities)
-**Owner**: Coder (for eaojnr)
+**Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-08
 **Landing commit**: `04945946ff85a66c29c5bda4ba4a762762e6964e` (PR #54)
 **Tag**: `v1-alpha.3`

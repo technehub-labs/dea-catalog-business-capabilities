@@ -61,7 +61,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-002
   name: Strategic Planning
@@ -79,7 +79,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-003
   name: Enterprise Governance
@@ -97,7 +97,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-005
   name: Customer Management
@@ -115,7 +115,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-007
   name: Supplier Management
@@ -133,7 +133,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-008
   name: Partner Management
@@ -151,7 +151,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-009
   name: Offering Management
@@ -169,7 +169,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-010
   name: Marketing
@@ -187,7 +187,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-012
   name: Operations
@@ -205,7 +205,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-013
   name: Financial Stewardship
@@ -223,7 +223,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-014
   name: Financial Management
@@ -241,7 +241,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-015
   name: Workforce Management
@@ -259,7 +259,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-016
   name: Workforce Planning
@@ -277,7 +277,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-017
   name: Information Management
@@ -295,7 +295,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-019
   name: Technology Management
@@ -313,7 +313,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-020
   name: Risk Management
@@ -331,7 +331,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-021
   name: Compliance Management
@@ -349,7 +349,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-022
   name: Legal Management
@@ -367,7 +367,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-024
   name: Security Management
@@ -385,7 +385,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-025
   name: Sourcing and Procurement
@@ -403,7 +403,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-026
   name: Asset Management
@@ -421,7 +421,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-027
   name: Facility Management
@@ -439,7 +439,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 - candidate: CAND-028
   name: Change Management
@@ -457,7 +457,7 @@ reviews:
     record_shape: conforms to schemas/entity.schema.json (CR-DEA-BC-03; BC-01A shape)
     layering: no WSF/metaframework/metamodel boundary violation
   overall: cleared_for_admission
-  reviewer: Coder (for eaojnr)
+  reviewer: Emmanuel A. Otchere
   acceptance: pending steward review of this register; canonical transition executes in the admission PR
 summary:
   reviewed: 23

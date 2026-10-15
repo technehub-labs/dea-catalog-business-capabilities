@@ -182,7 +182,7 @@ candidates:
   promotion_history:
   - stage: retired-from-research-register
     date: '2026-10-12'
-    actor: Coder (for eaojnr); CR-DEA-BC-27 N-025
+    actor: Emmanuel A. Otchere; CR-DEA-BC-27 N-025
     reason: Canonical entity already exists at capabilities:capability-customer-management-f3n8wb; research
       candidate record retired per N-025
 - id: CAND-006
@@ -221,7 +221,7 @@ candidates:
   promotion_history:
   - stage: merged-into-CAND-005
     date: '2026-10-12'
-    actor: Coder (for eaojnr); CR-DEA-BC-30 N-029
+    actor: Emmanuel A. Otchere; CR-DEA-BC-30 N-029
     reason: Three government reference models (TOGAF GRM, GoC BTEP GSRM, US FEA CRM v2.3) converge on
       customer-service vocabulary for citizen interface; citizen is a party-type specialization, not a
       distinct first-order capability
@@ -259,7 +259,7 @@ candidates:
   promotion_history:
   - stage: retired-from-research-register
     date: '2026-10-12'
-    actor: Coder (for eaojnr); CR-DEA-BC-32 N-031
+    actor: Emmanuel A. Otchere; CR-DEA-BC-32 N-031
     reason: Canonical entity already exists at capabilities:capability-supplier-management-d6fuj4 (admitted
       2026-09-01); research candidate record retired per N-031
 - id: CAND-008
@@ -296,7 +296,7 @@ candidates:
   promotion_history:
   - stage: retired-from-research-register
     date: '2026-10-12'
-    actor: Coder (for eaojnr); CR-DEA-BC-32 N-032
+    actor: Emmanuel A. Otchere; CR-DEA-BC-32 N-032
     reason: Canonical entity already exists at capabilities:capability-partner-management-cp3vdb (admitted
       2026-09-01); research candidate record retired per N-032
 - id: CAND-009
