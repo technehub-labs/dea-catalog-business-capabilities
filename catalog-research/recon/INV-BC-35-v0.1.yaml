@@ -1,0 +1,73 @@
+id: INV-BC-35-v0.1
+cr: CR-DEA-BC-35
+date: '2026-10-13'
+author: Coder (for eaojnr)
+trigger: 'user directive 2026-10-13: confirm whether the business-capability id system can leverage the org-wide
+  id system implemented; seed card, review plan of work; user ratified 2026-10-13 with ''go'''
+related_normalization_decisions: []
+status: applied
+scope: confirmation audit of the business-capability id system against the org-wide id system; documentation of
+  the posture in docs/; minor catalog-index extension
+out_of_scope: id-system migration (already landed at CR-DEA-BC-mv1); new admissions; reconciliation of legacy pre-mv1
+  bannered artifacts (those are intentional historical)
+background: 'CR-DEA-BC-mv1 (2026-09-21) migrated the business-capability catalog to the org-wide id system and flat
+  storage layout. The migration was: 31 records rewritten to capabilities:capability-<slug>-<hash> / capabilities:candidate-<slug>-<hash>;
+  entity dirs to entities/v1-alpha/<slug>-<hash>/ (flat layout); every structured cross-reference rewritten through
+  reconciliation/migration-id-map.yaml (7 documented known residuals for dead pre-rename/retired-candidate ids in
+  research registers); READMEs per entity dir; new blocking scripts/check_id_system.py gate (IDM-001..007 + IDM-008
+  PR-scoped) wired into CI; vendored STRUCT tools + catalog-index schema ported; entity schema ecf_rationale maxLength
+  1000 -> 1280; 36 historical artifacts bannered with the CR-DEA-BC-mv1 layout note. The user directive 2026-10-13
+  asks: ''confirm if the ID system for business capabilities can leverage the orgwide id system implemented.'' The
+  audit is the deliverable; no migration is needed.'
+audit_findings:
+  F1_canonical_id_format: 'All 29 canonical entries use the post-mv1 id format (capabilities:capability-<slug>-<hash>,
+    hash per dea-metaframework/docs/id-system.md section 2.5). Confirmed by full-tree glob and regex match: 29/29
+    PASS.'
+  F2_candidate_id_format: 'The candidates register (catalog-research/candidates.yaml) has 37 records: 27 active
+    CAPABILITY candidates, 3 CAPABILITY-CANONICAL (CAND-005, CAND-007, CAND-008 retired as already-canonical at
+    CR-DEA-BC-27 and CR-DEA-BC-32 respectively), 1 MERGED-INTO-CAND-005 (CAND-006 retired as merged at CR-DEA-BC-30),
+    and 5 non-CAPABILITY (ORGANIZATION, PROCESS, SYSTEM, ACTOR, SPECIALIZATION, UNRESOLVED). The CAPABILITY-CANONICAL
+    records carry canonical_id pointers to the admitted entities; the MERGED-INTO-CAND-005 record carries a merged_into_canonical_id
+    pointer.'
+  F3_structured_cross_references: '0 legacy ''dea:capability-*'' references in structured cross-reference fields
+    (related_capabilities, ecf, aliases, non_examples, specialization) across all 29 canonical entity YAMLs. The
+    only legacy references that remain are in the 36 historical artifacts that are bannered with the CR-DEA-BC-mv1
+    layout note (content verbatim; per the audit at reconciliation/cross-check-mv1.md: 52 scanned, 16 CLEAN, 36
+    HISTORICAL-ONLY, 0 NEEDS-FRAMING).'
+  F4_id_system_gate: 'scripts/check_id_system.py is present (12235 bytes) and references IDM-001..008 (all 8). Local
+    run: exit 0; ''ID System (CR-DEA-BC-mv1 IDM-001..007): CONFORMANT; Records checked: 29; Findings: 0''. The CI
+    workflow validate (CR-DEA-BC-mv1) runs the gate in --strict mode on every PR.'
+  F5_migration_id_map: 'reconciliation/migration-id-map.yaml is at version 3, namespace ''capabilities'', with 38
+    id_map entries and 11 known_residuals. The map is idempotent: new admissions add entries; new known_residuals
+    append. The map has been extended at CR-DEA-BC-20 (3 entries: Strategy/Operations/Insight renames), CR-DEA-BC-22
+    (3 entries: Analytics/Insight/AI renames), CR-DEA-BC-23 (3 entries: EPM admission + candidate promotion), and
+    was last extended at 2026-10-12 (CR-DEA-BC-32/BC-30/BC-27 batch).'
+  F6_idm_008_pr_scoped: 'IDM-008 (PR-scoped coherence mode) is the live check used at the PR review surface. The
+    dea-catalog-release-cut skill (CR-DEA-BC-36 §11) records the cross-repo coordination pitfall that any release
+    of this catalog that lands a capabilities:* id set change or moves the ECF version triggers the sweep at CR-DEA-BC-36
+    §3 for the next cut cycle. The id-system posture is therefore end-to-end: catalog content (IDM-001..007), PR
+    review (IDM-008), and release-cut procedure (cross-repo sweep).'
+decision:
+  id: no-new-normalization-decision
+  verdict: confirmation-no-migration
+  summary: The business-capability catalog's id system is already on the org-wide id system. CR-DEA-BC-mv1 (2026-09-21)
+    implemented the migration; all 6 audit findings are positive. No new id changes are needed. The deliverable
+    is a 1-doc addition (docs/ORG-WIDE-ID-SYSTEM.md) that captures the current posture explicitly so that future
+    waves land on the documented system.
+follow_ons:
+  F_a_docs_org_wide_id_system: Add docs/ORG-WIDE-ID-SYSTEM.md to capture the org-wide id-system posture explicitly.
+    1-doc deliverable; ~80 lines; provides a single point of reference for the next wave of id-system work (e.g.,
+    the dea-catalog-business-objects / dea-catalog-organizational-units wave 3-4 work).
+  F_b_no_stragglers: 0 stragglers in the structured cross-reference fields. The 36 bannered historical artifacts
+    are intentional and per the CR-DEA-BC-mv1 audit.
+  F_c_no_new_admission: No new admissions. 29 first-order canonical count is unchanged.
+cross_references:
+- change-requests/CR-DEA-BC-mv1.md (the migration; the source of the post-mv1 id format; the source of the 7 known
+  residuals)
+- reconciliation/migration-id-map.yaml (v3; 38 id_map entries; 11 known_residuals)
+- reconciliation/cross-check-mv1.md (the 52-artifact audit; 16 CLEAN; 36 HISTORICAL-ONLY; 0 NEEDS-FRAMING)
+- scripts/check_id_system.py (IDM-001..007 + IDM-008 PR-scoped)
+- dea-metaframework/docs/id-system.md (the upstream org-wide spec)
+- dea-metaframework/docs/entity-storage-layout.md (the upstream flat-layout spec)
+- change-requests/CR-DEA-BC-36-release-history-reset-and-discipline.md §11 (the cross-repo coordination pitfall
+  for id-set changes)
