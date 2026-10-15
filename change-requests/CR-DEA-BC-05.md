@@ -23,6 +23,8 @@ related:
 
 # CR-DEA-BC-05: Catalogue Versioning and Change Procedure
 
+**Status**: Landed (PR #39); release withdrawn 2026-10-13, see CR-DEA-BC-34.
+
 ## 1. Problem
 
 The catalog has run through five CRs (BC-01, BC-01A, BC-02, BC-03, BC-04) plus the

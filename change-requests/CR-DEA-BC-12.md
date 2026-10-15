@@ -6,7 +6,7 @@
 > for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
 > the current layout.
 
-**Status**: Landed
+**Status**: Landed; release withdrawn 2026-10-13, see CR-DEA-BC-34.
 **Layer**: Catalog (business capabilities)
 **Owner**: Coder (for eaojnr)
 **Date**: 2026-09-10

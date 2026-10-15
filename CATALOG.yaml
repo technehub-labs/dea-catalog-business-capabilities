@@ -4,7 +4,7 @@ catalog:
     candidates: 32
     canonical: 0
     entities: 32
-    open_change_requests: 36
+    open_change_requests: 37
     research_files: 2
     retired: 0
   cross_cutting:
@@ -240,7 +240,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-partner-management-cp3vdb
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-13'
     lifecycle_status: active
     path: entities/v1-alpha/partner-management-cp3vdb/capabilities-capability-partner-management-cp3vdb.yaml
     research_count: 0
@@ -317,7 +317,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-supplier-management-d6fuj4
-    last_modified: '2026-09-21'
+    last_modified: '2026-10-13'
     lifecycle_status: active
     path: entities/v1-alpha/supplier-management-d6fuj4/capabilities-capability-supplier-management-d6fuj4.yaml
     research_count: 0
