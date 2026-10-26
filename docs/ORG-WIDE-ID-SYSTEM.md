@@ -1,6 +1,6 @@
 # Org-Wide ID System (dea-catalog-business-capabilities)
 
-**Status**: Confirmed (CR-DEA-BC-35, 2026-10-13)
+**Status**: Confirmed (CR-DEA-BC-35A, 2026-10-13)
 **Owner**: Coder (for eaojnr)
 **Depends on**: `change-requests/CR-DEA-BC-mv1.md` (the migration); `dea-metaframework/docs/id-system.md` (the upstream spec); `dea-metaframework/docs/entity-storage-layout.md` (the upstream flat-layout spec)
 
@@ -122,7 +122,7 @@ The sweep is the audit record for any future id-set change.
 ## 9. References
 
 - `change-requests/CR-DEA-BC-mv1.md` (the migration; the source of the post-mv1 id format)
-- `change-requests/CR-DEA-BC-35-org-wide-id-system-confirmation.md` (this confirmation audit; the recon `catalog-research/recon/INV-BC-35-v0.1.yaml`)
+- `change-requests/CR-DEA-BC-35A-org-wide-id-system-confirmation.md` (this confirmation audit; the recon `catalog-research/recon/INV-BC-35-v0.1.yaml`)
 - `reconciliation/migration-id-map.yaml` (v3; 38 id_map entries; 11 known_residuals)
 - `reconciliation/cross-check-mv1.md` (the 52-artifact audit at CR-DEA-BC-mv1)
 - `scripts/check_id_system.py` (IDM-001..007 + IDM-008)

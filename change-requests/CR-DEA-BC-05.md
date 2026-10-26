@@ -23,7 +23,7 @@ related:
 
 # CR-DEA-BC-05: Catalogue Versioning and Change Procedure
 
-**Status**: Landed (PR #39); release withdrawn 2026-10-13, see CR-DEA-BC-34.
+**Status**: Landed (PR #39); release withdrawn 2026-10-13, see CR-DEA-BC-36.
 
 ## 1. Problem
 

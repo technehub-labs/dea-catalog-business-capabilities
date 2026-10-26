@@ -22,39 +22,39 @@ CR-DEA-BC-02 section 35: nine visuals derived from the landed research registers
 
 ## 1. Evidence to Candidate Pipeline
 
-![Evidence to Candidate Pipeline](visuals/v01-evidence-candidate-pipeline.svg)
+![Evidence to Candidate Pipeline](../visuals/v01-evidence-candidate-pipeline.svg)
 
 ## 2. Candidate Universe Map
 
-![Candidate Universe Map](visuals/v02-candidate-universe-map.svg)
+![Candidate Universe Map](../visuals/v02-candidate-universe-map.svg)
 
 ## 3. Enterprise Comparison Matrix
 
-![Enterprise Comparison Matrix](visuals/v03-enterprise-comparison-matrix.svg)
+![Enterprise Comparison Matrix](../visuals/v03-enterprise-comparison-matrix.svg)
 
 ## 4. Capability / Process Boundary
 
-![Capability / Process Boundary](visuals/v04-capability-process-boundary.svg)
+![Capability / Process Boundary](../visuals/v04-capability-process-boundary.svg)
 
 ## 5. Capability / Outcome Relationship
 
-![Capability / Outcome Relationship](visuals/v05-capability-outcome-relationship.svg)
+![Capability / Outcome Relationship](../visuals/v05-capability-outcome-relationship.svg)
 
 ## 6. Capability / Business Object Relationship
 
-![Capability / Business Object Relationship](visuals/v06-capability-business-object.svg)
+![Capability / Business Object Relationship](../visuals/v06-capability-business-object.svg)
 
 ## 7. First-Order / Specialization Pyramid
 
-![First-Order / Specialization Pyramid](visuals/v07-first-order-specialization-pyramid.svg)
+![First-Order / Specialization Pyramid](../visuals/v07-first-order-specialization-pyramid.svg)
 
 ## 8. Capability to ECF Overlay
 
-![Capability to ECF Overlay](visuals/v08-capability-ecf-overlay.svg)
+![Capability to ECF Overlay](../visuals/v08-capability-ecf-overlay.svg)
 
 ## 9. ECF Coverage Map
 
-![ECF Coverage Map](visuals/v09-ecf-coverage-map.svg)
+![ECF Coverage Map](../visuals/v09-ecf-coverage-map.svg)
 
 ## Fidelity notes
 

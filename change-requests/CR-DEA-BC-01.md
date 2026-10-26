@@ -1,5 +1,7 @@
 # CR-DEA-BC-01: First-Order Business Capability Method
 
+**Status**: Landed (status backfill 2026-10-27, CR-DEA-BC-39 §4; landing evidence: PR #13; method docs PR #14)
+
 ## Status
 
 - **State:** Draft: awaiting review, then "Proceed" to land as proposal PR.

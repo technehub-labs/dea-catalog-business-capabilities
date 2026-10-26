@@ -10,7 +10,7 @@
 |-------|-------|
 | **CR** | CR-DEA-BC-03 |
 | **Title** | Establish `schemas/entity.schema.json` and entry-validation CI for the Business Capability catalog, reconciled with dea-metamodel (ADR-015 lineage) and catalog-wide CI conventions |
-| **Status** | Draft: awaiting review, then "Proceed" to land as proposal PR |
+| **Status** | Landed (PR #21; status backfill 2026-10-27, CR-DEA-BC-39 §4): awaiting review, then "Proceed" to land as proposal PR |
 | **Date** | 2026-09-01 |
 | **Author** | Emmanuel A. Otchere |
 | **Depends on** | CR-DEA-BC-01 (method, landed), CR-DEA-BC-01A (record shape, landed), CR-DEA-BC-02 (evidence investigation, execution complete), dea-metamodel ADR-015 / CR-016 (capability classification by specialization), numbering decision 2026-09-01 (change-requests/README.md) |

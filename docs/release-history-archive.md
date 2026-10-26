@@ -1,9 +1,9 @@
 # Release History Archive (dea-catalog-business-capabilities)
 
-**Status**: Fossilised record (CR-DEA-BC-34, 2026-10-13)
+**Status**: Fossilised record (CR-DEA-BC-36, 2026-10-13)
 **Owner**: Coder (for eaojnr)
 
-This file is the audit record for the v1-alpha.x cuts that were withdrawn by CR-DEA-BC-34 on 2026-10-13. The v1-alpha.x tag set was immature; the carrier CRs and the tag bodies are preserved here in full so that the history is not silently destroyed. The active prior-cut history table is in `docs/VERSIONING.md`; that table records *successful* cuts, not withdrawals.
+This file is the audit record for the v1-alpha.x cuts that were withdrawn by CR-DEA-BC-36 on 2026-10-13. The v1-alpha.x tag set was immature; the carrier CRs and the tag bodies are preserved here in full so that the history is not silently destroyed. The active prior-cut history table is in `docs/VERSIONING.md`; that table records *successful* cuts, not withdrawals.
 
 ## v1-alpha.0 (cut 2026-09-02)
 
@@ -90,4 +90,4 @@ These were pre-tag state markers; no tags were ever cut on top of them. Withdraw
 
 ## Cross-reference
 
-The active prior-cut history table is in `docs/VERSIONING.md` (it is empty post-reset; future successful cuts append rows). The reset procedure that produced this archive is documented in `change-requests/CR-DEA-BC-34-release-history-reset-and-discipline.md`. The companion process-repo reset (CR-BP-116) is the reference procedure.
+The active prior-cut history table is in `docs/VERSIONING.md` (it is empty post-reset; future successful cuts append rows). The reset procedure that produced this archive is documented in `change-requests/CR-DEA-BC-36-release-history-reset-and-discipline.md`. The companion process-repo reset (CR-BP-116) is the reference procedure.

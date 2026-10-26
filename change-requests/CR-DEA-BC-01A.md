@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-DEA-BC-01A (renumbered from CR-DEA-BC-02, 2026-08-31: number yielded to the evidence-investigation CR) |
 | **Title** | Reconcile the catalog record shape with dea-metamodel ADR-015/CR-016: kind by entity specialization, governed capability_layer, capability_type deprecated |
-| **Status** | Proposed |
+| **Status** | Landed (PR #3; status backfill 2026-10-27, CR-DEA-BC-39 §4) |
 | **Date** | 2026-08-31 |
 | **Author** | Emmanuel A. Otchere |
 | **Depends on** | dea-metamodel ADR-015 (capability classification by specialization), dea-metamodel CR-016 (implementation, merged), CR-DEA-BC-01 (catalog method; this CR constrains one record field, not the method) |

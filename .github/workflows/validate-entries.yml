@@ -139,3 +139,9 @@ jobs:
 
       - name: Run naming and definition-shape lint (CR-DEA-BC-09; TAXONOMY sections 1, 1A)
         run: python scripts/check_naming.py
+
+      - name: Check documentation links (CR-DEA-BC-39; DL-001)
+        run: python scripts/check_doc_links.py --strict
+
+      - name: Check CR index discipline (CR-DEA-BC-39; CR-001..005)
+        run: python scripts/check_cr_index.py --strict

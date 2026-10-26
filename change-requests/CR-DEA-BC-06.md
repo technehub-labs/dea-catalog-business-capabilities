@@ -37,6 +37,8 @@ related:
 - CR-DEA-MM-02 (upstream capability schema hygiene)
 ---
 
+**Status**: Superseded (status backfill 2026-10-27, CR-DEA-BC-39 §4; landing evidence: PR #42; frontmatter `status: superseded` stands)
+
 # CR-DEA-BC-06: Publication Pipeline and Versioned Artifacts
 
 ## 1. Problem

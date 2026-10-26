@@ -6,7 +6,7 @@
 > for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
 > the current layout.
 
-**Status**: Proposed
+**Status**: Landed (status backfill 2026-10-27, CR-DEA-BC-39 §4; landing evidence: PR #72).
 **Layer**: Catalog (business capabilities)
 **Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-11

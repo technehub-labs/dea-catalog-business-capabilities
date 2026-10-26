@@ -14,14 +14,14 @@ Catalog governance established by **CR-DEA-BC-01** (components 17 and 18). Norma
 | `metamodel-pointer.yaml` | Regenerated from the OpenDEAM root model fan-out only; never hand-edited |
 | ECF definition | Owned by `dea-metaframework`; this catalog references, never modifies |
 | Record shape | Owned by `dea-metamodel` (ADR-015 lineage); reconciled here via CR (CR-DEA-BC-01A precedent) |
-| Catalog version + change procedure | Owned by [`docs/VERSIONING.md`](docs/VERSIONING.md) (CR-DEA-BC-05); bump tier (major/minor/patch), three-tier consumer pin scheme, change procedure, tag format `v<N>-<word>.<P>`. The current posture (`v1-alpha.0`, 26 canonical entries) is recorded in `CHANGELOG.md` and `dependencies.yaml`. |
+| Catalog version + change procedure | Owned by [`docs/VERSIONING.md`](docs/VERSIONING.md) (CR-DEA-BC-05); bump tier (major/minor/patch), three-tier consumer pin scheme, change procedure, tag format `v<N>-<word>.<P>`. The current posture (post-reset v1-alpha baseline, 29 canonical entries, no tag until the first post-reset cut per CR-DEA-BC-36) is recorded in `CHANGELOG.md` and `dependencies.yaml`. |
 
 ## 2. Change Request conventions
 
 1. **Series tag.** `CR-DEA-BC` (DEA Business Capability). Numbers are sequential; renumbering is recorded on the CR itself (CR-DEA-BC-01A precedent).
 2. **Land as authored.** An accepted CR ships verbatim to `change-requests/CR-DEA-BC-NN.md`, md5-verified against the reviewed source. No silent rewrites; status changes are recorded by later PRs, not by editing the landed CR.
 3. **Proposal PR shape.** A CR proposal PR ships exactly: the CR document, the `change-requests/README.md` index row, and the README pointer. Nothing else.
-4. **Sequential execution.** One CR (or CR phase) at a time; the next is parked until the current ships. Parked successors: CR-DEA-BC-03 (schema + CI), CR-DEA-BC-04 (industry specialization framework).
+4. **Sequential execution.** One CR (or CR phase) at a time; the next is parked until the current ships. Parked successors: none (the 2026-10-27 remediation sequence CR-DEA-BC-37 -> BC-38 -> BC-39 lands in that order).
 5. **One phase per PR.** Each phase ships a visible, checked-in deliverable; the PR body states deliverables, verification, and live URLs.
 
 ## 3. Roles

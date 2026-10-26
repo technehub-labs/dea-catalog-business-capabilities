@@ -1,5 +1,7 @@
 # CR-DEA-BC-18: Track A (Organizational Design) Evidence Package
 
+**Status**: Landed (status backfill 2026-10-27, CR-DEA-BC-39 §4; landing evidence: PR #68)
+
 > **Layout note (CR-DEA-BC-mv1, 2026-09-21):** This document was authored against the
 > pre-migration catalog layout (`entities/v1-alpha/dea:*`) and the legacy `dea:*` id
 > family. Ids and paths cited below are historical; see `reconciliation/migration-id-map.yaml`
@@ -182,13 +184,13 @@ CR-DEA-BC-14 (Track A admission) when admitted.
 
 ## 11. See also
 
-- [METHODOLOGY.md](../../METHODOLOGY.md) §12 review workflow; §5 anti-invention
+- [METHODOLOGY.md](../METHODOLOGY.md) §12 review workflow; §5 anti-invention
   test; §6 ladder passage; §8 ECF mapping rule; §4 admission tests.
-- [EVIDENCE.md](../../EVIDENCE.md) §2 source classes; §3 E0:E5 ratings; §5
+- [EVIDENCE.md](../EVIDENCE.md) §2 source classes; §3 E0:E5 ratings; §5
   retrieval honesty; §6 dual-delivery.
-- [INV-ORGDESIGN-v0.2.md](../../catalog-research/INV-ORGDESIGN-v0.2.md): full
+- [INV-ORGDESIGN-v0.2.md](../catalog-research/INV-ORGDESIGN-v0.2.md): full
   investigation report.
-- [INV-ORGDESIGN-v0.1.yaml](../../catalog-research/INV-ORGDESIGN-v0.1.yaml):
+- [INV-ORGDESIGN-v0.1.yaml](../catalog-research/INV-ORGDESIGN-v0.1.yaml):
   YAML twin.
 - [BC-SR-A001 §4](../submittal-reviews/BC-SR-A001.md): reviewer seed (P1).
 - [CR-DEA-BC-12 §B.1](./CR-DEA-BC-12.md): investigation opened.

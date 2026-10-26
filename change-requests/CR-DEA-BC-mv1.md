@@ -1,6 +1,6 @@
 # CR-DEA-BC-mv1: ID System Migration (org-wide Wave 2, capabilities)
 
-**Status**: Proposed
+**Status**: Landed (status backfill 2026-10-27, CR-DEA-BC-39 §4; landing evidence: PR #73).
 **Layer**: Catalog (business capabilities)
 **Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-21
