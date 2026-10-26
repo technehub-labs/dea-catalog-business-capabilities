@@ -497,12 +497,19 @@ def build_research_registers(entities: list[dict[str, Any]], catalog_root: Path)
 
 
 def count_open_change_requests(catalog_root: Path) -> int:
-    """Count CR-*.md files in change-requests/ whose status is not 'Merged'.
+    """Count CR-*.md files in change-requests/ whose status is open.
 
-    Heuristic: look for the word 'Merged' on the line immediately following
-    the '# CR-...' heading. Files without a status line are conservatively
-    counted as open.
+    Status is read from the first 30 lines, in either metadata shape this
+    repo uses: bold-line (``**Status**: X``) or table-row
+    (``| **Status** | X |``). Closed statuses (CR-DEA-BC-38): Merged,
+    Landed, Applied, Accepted, Rejected, Superseded, Withdrawn. Proposed
+    and Draft are open. Files without a parseable status line are
+    conservatively counted as open.
     """
+    closed_statuses = {
+        "Merged", "Landed", "Applied", "Accepted",
+        "Rejected", "Superseded", "Withdrawn",
+    }
     cr_dir = catalog_root / "change-requests"
     if not cr_dir.is_dir():
         return 0
@@ -515,16 +522,17 @@ def count_open_change_requests(catalog_root: Path) -> int:
             continue
         # Take the first 30 lines; look for a status line.
         head = "\n".join(text.splitlines()[:30])
-        if "Status**: Merged" in head or "Status**: Merged" in head:
+        status: str | None = None
+        m = re.search(r"\*\*Status\*\*:\s*([A-Za-z]+)", head)
+        if m:
+            status = m.group(1)
+        else:
+            m = re.search(r"\|\s*\*\*Status\*\*\s*\|\s*([A-Za-z]+)", head)
+            if m:
+                status = m.group(1)
+        if status is not None and status in closed_statuses:
             continue
-        if "Status**: Proposed" in head or "Status**: Draft" in head:
-            open_count += 1
-            continue
-        if "Status**:" in head:
-            # Some other status (Accepted, Superseded, etc.): conservative: open.
-            open_count += 1
-            continue
-        # No status line found: conservative open.
+        # Proposed, Draft, unknown, or missing: conservative open.
         open_count += 1
     return open_count
 

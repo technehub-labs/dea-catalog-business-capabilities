@@ -654,3 +654,37 @@ def test_live_catalog_walker_skips_registry_file():
     for path, record, _ in recs:
         assert "entity-system-registry.yaml" not in str(path), \
             f"walker should skip the registry file, got: {path}"
+
+
+def test_walker_skips_state_directories(tmp_path: Path):
+    """CR-DEA-BC-38 §4 regression: per-entity state directories (research/,
+    candidates/, retired/) are excluded from the walk — files there are
+    research artifacts, candidate records, and retired copies, not catalog
+    entries (CR-CATALOG-STRUCT-01 §5, the same exclusion validate-entries.yml
+    applies). A candidate-shaped record under candidates/ must not be swept
+    (no ES-001/ES-002 findings for it)."""
+    mod = _load_module()
+    reg = _write_registry(tmp_path)
+    # A valid canonical record at the subtree root: must be swept and pass.
+    (tmp_path / "f.yaml").write_text(
+        "id: processes:process-test-foo-f3n8wb\n"
+        "type: Process\nname: x\ndefinition: x.\n"
+        "lifecycle:\n  status: admitted\n"
+        "provenance:\n  change_history:\n    - cr: x\n      date: '2026-08-15'\n      change: x\n"
+    )
+    # A candidate-shaped record under candidates/: must NOT be swept.
+    cand_dir = tmp_path / "candidates"
+    cand_dir.mkdir()
+    (cand_dir / "cand.yaml").write_text(
+        "id: processes:candidate-foo-a1b2c3\n"
+        "type: Candidate\nname: cand\ndefinition: cand.\n"
+    )
+    mod.REGISTRY_PATH = reg
+    mod.EXCEPTIONS_PATH = tmp_path / "n.yaml"
+    findings = mod.evaluate(tmp_path)
+    es_001_002 = [f for f in findings if f["rule"] in ("ES-001", "ES-002")]
+    assert es_001_002 == [], f"state-dir records must not produce findings, got: {es_001_002}"
+    # And the walker itself never returns files under a state directory.
+    recs = mod._walk_records(tmp_path, mod._load_registry())
+    swept = [str(p) for p, _, _ in recs]
+    assert not any("candidates" in Path(s).parts for s in swept), swept

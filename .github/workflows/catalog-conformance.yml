@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml jsonschema pytest
 
+      - name: Run test suite (tests/) (CR-DEA-BC-38)
+        run: python -m pytest tests/ -q
+
       - name: Fetch catalog index machinery from dea-metaframework (if not vendored)
         uses: actions/checkout@v4
         with:
