@@ -19,6 +19,9 @@ release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
+### CR-DEA-BC-37: Main-Red Remediation (Authorship Backfill + CATALOG Freshness + CST Pinning)
+
+Returns `main` to green after PRs #88/#89 merged with red gates. Three AUT-001 authorship corrections, recorded per GOVERNANCE §2.2 (`**Owner**`/`author` values `Coder (for eaojnr)` -> `Emmanuel A. Otchere` in the release-history CR, the org-wide id confirmation CR, and `catalog-research/recon/INV-BC-35-v0.1.yaml`); the fields regressed after the CR-DEA-BC-34 retro-sweep. `CATALOG.yaml` regenerated (committed `open_change_requests: 39` lagged the computed 40; blocking freshness check). The `dea-metaframework` checkout in `catalog-conformance.yml` pinned to release tag `v2.6.0`, satisfying CST-013/CST-014 (reproducible toolchain). No entity, id, schema, or gate-logic changes.
 
 ### CR-DEA-BC-36: Release-History Reset (Path B) + Release-Discipline Extensions
 

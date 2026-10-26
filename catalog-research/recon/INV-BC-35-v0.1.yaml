@@ -1,7 +1,7 @@
 id: INV-BC-35-v0.1
 cr: CR-DEA-BC-35
 date: '2026-10-13'
-author: Coder (for eaojnr)
+author: Emmanuel A. Otchere
 trigger: 'user directive 2026-10-13: confirm whether the business-capability id system can leverage the org-wide
   id system implemented; seed card, review plan of work; user ratified 2026-10-13 with ''go'''
 related_normalization_decisions: []
