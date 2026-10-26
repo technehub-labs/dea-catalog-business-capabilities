@@ -2,7 +2,7 @@
 
 **Status**: Applied (2026-10-13)
 **Layer**: Cross-cutting (catalog governance) + release discipline
-**Owner**: Coder (for eaojnr)
+**Owner**: Emmanuel A. Otchere
 **Date**: 2026-10-13
 **Trigger**: User directive 2026-10-13, eaojnr: "Refer to CR-BP-116 release-history reset; and let adopt same reset rationale for the business capability releases. In addition, i'd like to confirm if the ID system for business capabilities can leverage the orgwide id system implemented. As a rule, seed these as cards to work on and then let's review the plan of work." User ratified 2026-10-13: "proceed the sequence A to F" (the A+B+D+F extension set from CR-BP-116's candidate list).
 **Carrier**: Single PR on feature branch `feat/CR-DEA-BC-34-release-history-reset`. Recovery appendix (§2) is captured into this CR file before any destructive operation runs. PR review (not direct-push) per CR-BP-116 pattern.

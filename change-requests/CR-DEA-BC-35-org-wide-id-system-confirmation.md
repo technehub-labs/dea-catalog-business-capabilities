@@ -2,7 +2,7 @@
 
 **Status**: Applied (2026-10-13)
 **Layer**: Catalog (business capabilities); id-system governance
-**Owner**: Coder (for eaojnr)
+**Owner**: Emmanuel A. Otchere
 **Date**: 2026-10-13
 **Trigger**: User directive 2026-10-13, eaojnr: "i'd like to confirm if the ID system for business capabilities can leverage the orgwide id system implemented. As a rule, seed these as cards to work on and then let's review the plan of work." User ratified 2026-10-13 with "go".
 **Recon**: `catalog-research/recon/INV-BC-35-v0.1.yaml`

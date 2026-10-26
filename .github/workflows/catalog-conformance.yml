@@ -34,6 +34,10 @@ jobs:
         with:
           repository: technehub-labs/dea-metaframework
           path: .metaframework
+          # CR-DEA-BC-37: pin to a release tag so the toolchain is
+          # reproducible (CST-013/CST-014). Bump deliberately; re-verify
+          # the CST suite locally against the new tag before bumping.
+          ref: v2.6.0
 
       - name: Install regenerator + gate + schema (prefer vendored copies)
         run: |
