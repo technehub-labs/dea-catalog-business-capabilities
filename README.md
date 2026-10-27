@@ -39,6 +39,8 @@ Guiding principles and decision points: [`docs/FOUNDATIONS.md`](docs/FOUNDATIONS
 
 Documentation standard for canonical capability entities (normative from CR-DEA-BC-41): [`docs/BUSINESS-CAPABILITY-DOCUMENTATION-STANDARD.md`](docs/BUSINESS-CAPABILITY-DOCUMENTATION-STANDARD.md).
 
+Entity README contract (CR-DEA-BC-44): [`docs/BUSINESS-CAPABILITY-README-STANDARD.md`](docs/BUSINESS-CAPABILITY-README-STANDARD.md) · [template](docs/templates/BUSINESS-CAPABILITY-README-TEMPLATE.md). Record model: [`docs/BUSINESS-CAPABILITY-RECORD-MODEL.md`](docs/BUSINESS-CAPABILITY-RECORD-MODEL.md) (CR-DEA-BC-43) · [gap analysis](docs/BUSINESS-CAPABILITY-RECORD-MODEL-GAP-ANALYSIS.md) (CR-DEA-BC-42).
+
 **ECF Conformance Profile**: `dea:ecf@1.0.0`. The catalog declares CONFORMANT-WITH-EXTENSION status (CG-001 §4) because it specializes ECF semantics for its own classification domain (kebab-case display vocabulary, multiple contextual coordinates, held-unmapped state). The extensions do not redefine any ECF Domain, Stage, or Coordinate (CG-003 §6). Conformance gate: `scripts/check_ecf_conformance.py` (CR-ECF-CG-003).
 
 **ECF Conformance CI (consumer side)**: `.github/workflows/ecf-conformance-consumer.yml` (CR-ECF-CG-006). On every PR and push to `main`, the workflow clones `dea-metamodel` and `dea-metaframework`, then runs `scripts/detect_drift.py` from the metamodel against this catalog. The metamodel-side workflow owns the consolidated conformance report; this hook owns the per-consumer drift verdict.
