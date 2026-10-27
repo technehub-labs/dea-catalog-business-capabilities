@@ -38,7 +38,11 @@
       "maxLength": 2000,
       "description": "Durable-ability definition per METHODOLOGY.md section 1."
     },
-    "purpose": { "type": "string", "maxLength": 2000 },
+    "purpose": {
+      "type": "string",
+      "maxLength": 2000,
+      "description": "Why the capability exists, distinct from definition (what it is) and outcome (what it contributes to). Recommended (CR-DEA-BC-43 M-1): populate only with authored, evidence-backed narrative -- never bulk-generated -- per the remediation policy in docs/BUSINESS-CAPABILITY-RECORD-MODEL.md."
+    },
     "outcome": {
       "type": "string",
       "maxLength": 2000,
@@ -109,11 +113,15 @@
       "additionalProperties": false,
       "description": "Links to constructs in sibling catalogs; realization never redefines the capability (METHODOLOGY.md section 3).",
       "properties": {
-        "processes": { "type": "array", "items": { "type": "string" } },
-        "actors": { "type": "array", "items": { "type": "string" } },
-        "resources": { "type": "array", "items": { "type": "string" } },
-        "systems": { "type": "array", "items": { "type": "string" } },
-        "information": { "type": "array", "items": { "type": "string" } }
+        "processes": {
+          "type": "array",
+          "description": "Realizing processes. When populated (CR-DEA-BC-43 M-2), entries carry canonical ids of the sibling processes catalog (processes:*); prose entries are not accepted.",
+          "items": { "type": "string", "pattern": "^processes:" }
+        },
+        "actors": { "type": "array", "items": { "type": "string" }, "description": "Realizing actors; canonical sibling-catalog ids when available (id scheme pending U-2)." },
+        "resources": { "type": "array", "items": { "type": "string" }, "description": "Realizing resources; canonical sibling-catalog ids when available (id scheme pending U-2)." },
+        "systems": { "type": "array", "items": { "type": "string" }, "description": "Realizing systems; canonical sibling-catalog ids when available (id scheme pending U-2)." },
+        "information": { "type": "array", "items": { "type": "string" }, "description": "Realizing information entities; canonical sibling-catalog ids when available (id scheme pending U-2)." }
       }
     },
     "evidence": {
@@ -217,7 +225,7 @@
         },
         {
           "type": "object",
-          "description": "Structured boundary (CR-DEA-BC-29 rich-narrative form).",
+          "description": "Structured boundary (CR-DEA-BC-29 rich-narrative form). Applicability (CR-DEA-BC-43 M-3): use the structured form only where a rich-narrative justification exists (e.g. governance-object distinctions or closed-loop contexts); the plain string remains the default.",
           "additionalProperties": false,
           "required": ["against_capabilities"],
           "properties": {
