@@ -90,3 +90,6 @@ jobs:
 
       - name: Check visual domain labels (CR-DEA-BC-07 §5 guard)
         run: python scripts/check_visual_domain_labels.py
+
+      - name: Discovery views freshness (CR-DEA-BC-47)
+        run: python scripts/generate_discovery_views.py --check
