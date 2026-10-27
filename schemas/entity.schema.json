@@ -148,7 +148,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": ["ladder_passage"],
-      "description": "Recorded passage through the seven-stage evidence ladder (METHODOLOGY.md section 6); admission goes through the review gates (section 12).",
+      "description": "Recorded passage through the seven-stage evidence ladder (METHODOLOGY.md section 6); admission goes through the review gates (section 12). The post-mv1 admission flow appends the evidence-seeded and admitted checkpoints after reviewed (CR-DEA-BC-23; schema-reconciled by CR-DEA-BC-40).",
       "properties": {
         "ladder_passage": {
           "type": "array",
@@ -160,7 +160,7 @@
             "properties": {
               "stage": {
                 "type": "string",
-                "enum": ["candidate", "observed", "corroborated", "normalized", "ecf-mapped", "reviewed", "canonical"]
+                "enum": ["candidate", "observed", "corroborated", "normalized", "ecf-mapped", "reviewed", "canonical", "evidence-seeded", "admitted"]
               },
               "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
               "actor": { "type": "string" }
@@ -175,6 +175,22 @@
         "normalization_refs": {
           "type": "array",
           "items": { "type": "string", "pattern": "^N-[0-9]{3}$" }
+        },
+        "admission_cr": {
+          "type": "string",
+          "description": "CR that admitted the capability (post-mv1 admissions; CR-DEA-BC-23)."
+        },
+        "evidence_seed_cr": {
+          "type": "string",
+          "description": "Research-CR that seeded the evidence track (post-mv1; CR-DEA-BC-19)."
+        },
+        "migration": {
+          "type": "object",
+          "description": "Id-migration provenance (mv1).",
+          "properties": {
+            "from_id": { "type": "string" },
+            "migration_map_ref": { "type": "string" }
+          }
         }
       }
     },
@@ -183,15 +199,44 @@
       "maxLength": 2000,
       "description": "Why this is a durable ability rather than a process, unit, or technology (METHODOLOGY.md section 11)."
     },
+    "loop_closure_narrative": {
+      "type": "string",
+      "description": "Narrative recording an explicitly-closed loop obligation (e.g. BC-SR-A001 section 16 direction loop; CR-DEA-BC-23)."
+    },
     "ecf_rationale": {
       "type": "string",
       "maxLength": 1280,
       "description": "Why the primary coordinate is what it is. (CR-DEA-BC-mv1: 1000 -> 1280; namespaced ids are up to ~20 chars longer than legacy dea:* ids and rationale prose cites them inline.)"
     },
     "boundary": {
-      "type": "string",
-      "maxLength": 2000,
-      "description": "What the capability includes and excludes."
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 2000,
+          "description": "What the capability includes and excludes (plain form)."
+        },
+        {
+          "type": "object",
+          "description": "Structured boundary (CR-DEA-BC-29 rich-narrative form).",
+          "additionalProperties": false,
+          "required": ["against_capabilities"],
+          "properties": {
+            "against_capabilities": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["id", "rationale"],
+                "properties": {
+                  "id": { "type": "string" },
+                  "rationale": { "type": "string" }
+                }
+              }
+            },
+            "loop_role": { "type": "string" }
+          }
+        }
+      ]
     },
     "non_examples": {
       "type": "array",
