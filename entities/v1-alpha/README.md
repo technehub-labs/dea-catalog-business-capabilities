@@ -64,9 +64,9 @@ ECF coordinates (Domain, Stage, Level) live in the record's `ecf_coordinate` fie
 
 | Level | Count |
 | :--- | ---: |
-| L1 (Business Capability) | 31 |
+| L1 (Business Capability) | 29 |
 | Candidates | 3 |
-| **Total** | **34** *(31 capabilities + 3 candidates)* |
+| **Total** | **32** *(29 capabilities + 3 candidates)* |
 
 The L1 vs Candidate split is the canonical two-lane progression: an admission starts as a `candidate`, is ratified by CR, and migrates to a `capability` subtree on acceptance.
 
@@ -131,7 +131,7 @@ This catalog is one of seven in the DEA ecosystem. Records reference other catal
 | `orgunits:` | `technehub-labs/dea-catalog-organizational-units` | Wave 3 scaffold |
 | `objects:` | `technehub-labs/dea-catalog-business-objects` | Wave 3 scaffold |
 | `stakeholders:` | `technehub-labs/dea-catalog-stakeholders` | Wave 3 scaffold |
-| `capabilities:` | `technehub-labs/dea-catalog-business-capabilities` | This catalog (31 records) |
+| `capabilities:` | `technehub-labs/dea-catalog-business-capabilities` | This catalog (29 canonical records) |
 | `services:` | `technehub-labs/dea-catalog-business-services` | Populated (18 records, Wave 2b) |
 | `processes:` | `technehub-labs/dea-catalog-business-processes` | Populated (3,598 records) |
 

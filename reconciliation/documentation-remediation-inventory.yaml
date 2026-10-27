@@ -1,0 +1,472 @@
+cr: CR-DEA-BC-46
+generated: '2026-10-28'
+scope: all canonical BusinessCapability entities under entities/v1-alpha (29)
+baseline:
+  source: 'CR-DEA-BC-45 advisory run at PR #98'
+  blocking: 523
+  warnings: 87
+entities:
+- entity_id: capabilities:capability-asset-management-judtwr
+  entity_name: Asset Management
+  readme_path: entities/v1-alpha/asset-management-judtwr/README.md
+  record_path: entities/v1-alpha/asset-management-judtwr/capabilities-capability-asset-management-judtwr.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-change-management-hukdeq
+  entity_name: Change Management
+  readme_path: entities/v1-alpha/change-management-hukdeq/README.md
+  record_path: entities/v1-alpha/change-management-hukdeq/capabilities-capability-change-management-hukdeq.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-continuity-management-v3rn6u
+  entity_name: Continuity Management
+  readme_path: entities/v1-alpha/continuity-management-v3rn6u/README.md
+  record_path: entities/v1-alpha/continuity-management-v3rn6u/capabilities-capability-continuity-management-v3rn6u.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-customer-management-f3n8wb
+  entity_name: Customer Management
+  readme_path: entities/v1-alpha/customer-management-f3n8wb/README.md
+  record_path: entities/v1-alpha/customer-management-f3n8wb/capabilities-capability-customer-management-f3n8wb.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-enterprise-governance-uas48u
+  entity_name: Enterprise Governance
+  readme_path: entities/v1-alpha/enterprise-governance-uas48u/README.md
+  record_path: entities/v1-alpha/enterprise-governance-uas48u/capabilities-capability-enterprise-governance-uas48u.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-enterprise-performance-management-5fxren
+  entity_name: Enterprise Performance Management
+  readme_path: entities/v1-alpha/enterprise-performance-management-5fxren/README.md
+  record_path: entities/v1-alpha/enterprise-performance-management-5fxren/capabilities-capability-enterprise-performance-management-5fxren.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-facility-management-tx73hb
+  entity_name: Facility Management
+  readme_path: entities/v1-alpha/facility-management-tx73hb/README.md
+  record_path: entities/v1-alpha/facility-management-tx73hb/capabilities-capability-facility-management-tx73hb.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-financial-resource-management-cd3c7c
+  entity_name: Financial Resource Management
+  readme_path: entities/v1-alpha/financial-resource-management-cd3c7c/README.md
+  record_path: entities/v1-alpha/financial-resource-management-cd3c7c/capabilities-capability-financial-resource-management-cd3c7c.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-financial-stewardship-c7xtfk
+  entity_name: Financial Stewardship
+  readme_path: entities/v1-alpha/financial-stewardship-c7xtfk/README.md
+  record_path: entities/v1-alpha/financial-stewardship-c7xtfk/capabilities-capability-financial-stewardship-c7xtfk.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-idea-management-86dckf
+  entity_name: Idea Management
+  readme_path: entities/v1-alpha/idea-management-86dckf/README.md
+  record_path: entities/v1-alpha/idea-management-86dckf/capabilities-capability-idea-management-86dckf.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-information-management-6vjgdh
+  entity_name: Information Management
+  readme_path: entities/v1-alpha/information-management-6vjgdh/README.md
+  record_path: entities/v1-alpha/information-management-6vjgdh/capabilities-capability-information-management-6vjgdh.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-insight-management-ms4n9d
+  entity_name: Insight Management
+  readme_path: entities/v1-alpha/insight-management-ms4n9d/README.md
+  record_path: entities/v1-alpha/insight-management-ms4n9d/capabilities-capability-insight-management-ms4n9d.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-legal-matter-management-zzbd2u
+  entity_name: Legal Matter Management
+  readme_path: entities/v1-alpha/legal-matter-management-zzbd2u/README.md
+  record_path: entities/v1-alpha/legal-matter-management-zzbd2u/capabilities-capability-legal-matter-management-zzbd2u.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-marketing-xmc539
+  entity_name: Marketing
+  readme_path: entities/v1-alpha/marketing-xmc539/README.md
+  record_path: entities/v1-alpha/marketing-xmc539/capabilities-capability-marketing-xmc539.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-offering-management-6egkc8
+  entity_name: Offering Management
+  readme_path: entities/v1-alpha/offering-management-6egkc8/README.md
+  record_path: entities/v1-alpha/offering-management-6egkc8/capabilities-capability-offering-management-6egkc8.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-operations-management-pm3w8k
+  entity_name: Operations Management
+  readme_path: entities/v1-alpha/operations-management-pm3w8k/README.md
+  record_path: entities/v1-alpha/operations-management-pm3w8k/capabilities-capability-operations-management-pm3w8k.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-organizational-design-vanefq
+  entity_name: Organizational Design
+  readme_path: entities/v1-alpha/organizational-design-vanefq/README.md
+  record_path: entities/v1-alpha/organizational-design-vanefq/capabilities-capability-organizational-design-vanefq.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-partner-management-cp3vdb
+  entity_name: Partner Management
+  readme_path: entities/v1-alpha/partner-management-cp3vdb/README.md
+  record_path: entities/v1-alpha/partner-management-cp3vdb/capabilities-capability-partner-management-cp3vdb.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-regulation-management-gya4d8
+  entity_name: Regulation Management
+  readme_path: entities/v1-alpha/regulation-management-gya4d8/README.md
+  record_path: entities/v1-alpha/regulation-management-gya4d8/capabilities-capability-regulation-management-gya4d8.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-risk-management-h9uxdw
+  entity_name: Risk Management
+  readme_path: entities/v1-alpha/risk-management-h9uxdw/README.md
+  record_path: entities/v1-alpha/risk-management-h9uxdw/capabilities-capability-risk-management-h9uxdw.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-security-management-wmzc7c
+  entity_name: Security Management
+  readme_path: entities/v1-alpha/security-management-wmzc7c/README.md
+  record_path: entities/v1-alpha/security-management-wmzc7c/capabilities-capability-security-management-wmzc7c.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-sourcing-and-procurement-esucp4
+  entity_name: Sourcing and Procurement
+  readme_path: entities/v1-alpha/sourcing-and-procurement-esucp4/README.md
+  record_path: entities/v1-alpha/sourcing-and-procurement-esucp4/capabilities-capability-sourcing-and-procurement-esucp4.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-strategic-planning-k3rz7a
+  entity_name: Strategic Planning
+  readme_path: entities/v1-alpha/strategic-planning-k3rz7a/README.md
+  record_path: entities/v1-alpha/strategic-planning-k3rz7a/capabilities-capability-strategic-planning-k3rz7a.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-strategy-formulation-sf7q2x
+  entity_name: Strategy Formulation
+  readme_path: entities/v1-alpha/strategy-formulation-sf7q2x/README.md
+  record_path: entities/v1-alpha/strategy-formulation-sf7q2x/capabilities-capability-strategy-formulation-sf7q2x.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-supplier-management-d6fuj4
+  entity_name: Supplier Management
+  readme_path: entities/v1-alpha/supplier-management-d6fuj4/README.md
+  record_path: entities/v1-alpha/supplier-management-d6fuj4/capabilities-capability-supplier-management-d6fuj4.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-technology-enablement-y6nkws
+  entity_name: Technology Enablement
+  readme_path: entities/v1-alpha/technology-enablement-y6nkws/README.md
+  record_path: entities/v1-alpha/technology-enablement-y6nkws/capabilities-capability-technology-enablement-y6nkws.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-technology-management-maus5n
+  entity_name: Technology Management
+  readme_path: entities/v1-alpha/technology-management-maus5n/README.md
+  record_path: entities/v1-alpha/technology-management-maus5n/capabilities-capability-technology-management-maus5n.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-workforce-management-9e8d8s
+  entity_name: Workforce Management
+  readme_path: entities/v1-alpha/workforce-management-9e8d8s/README.md
+  record_path: entities/v1-alpha/workforce-management-9e8d8s/capabilities-capability-workforce-management-9e8d8s.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
+- entity_id: capabilities:capability-workforce-planning-b43rhm
+  entity_name: Workforce Planning
+  readme_path: entities/v1-alpha/workforce-planning-b43rhm/README.md
+  record_path: entities/v1-alpha/workforce-planning-b43rhm/capabilities-capability-workforce-planning-b43rhm.yaml
+  assessment_status: remediated
+  conformance_result: 'DCV-001..010: 0 blocking, 0 warnings (check_doc_conformance --strict, 2026-10-28)'
+  findings: 'stub-README class (BC-44 assessment basis): 14 contract sections absent; identity partial;
+    definition unmarked'
+  remediation_classification: documentation-only (deterministic render from record)
+  authorized_changes: README rewritten from canonical record; honest states for purpose/realization/assessment;
+    no record content changed
+  verification_evidence: check_doc_conformance --strict exit 0; check_doc_links --strict CONFORMANT
+  outstanding_dependencies:
+  - R-1 relationship typing (S7 rendered untyped)
+  - U-2 realization id schemes (S8 honest state)
+  - purpose backfill per M-1 on substantive touch (S3 honest state)
