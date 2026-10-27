@@ -145,3 +145,8 @@ jobs:
 
       - name: Check CR index discipline (CR-DEA-BC-39; CR-001..005)
         run: python scripts/check_cr_index.py --strict
+
+      - name: Documentation conformance (CR-DEA-BC-45; DCV-001..010)
+        # Advisory until CR-DEA-BC-46 lands the catalog-wide README
+        # remediation and flips this step to --strict.
+        run: python scripts/check_doc_conformance.py
