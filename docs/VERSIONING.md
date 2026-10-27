@@ -204,7 +204,7 @@ is responsible for step 6. Consumers are responsible for step 7.
 
 A numbered, append-only table of every release tag ever cut on this
 catalog. Starts empty post-reset (the v1-alpha.x withdrawals of
-CR-DEA-BC-34 deliberately do not appear here; this table records
+CR-DEA-BC-36 deliberately do not appear here; this table records
 *successful* cuts; the recovery appendix in CR-DEA-BC-36 section 2 +
 `docs/release-history-archive.md` are the audit records for those).
 
