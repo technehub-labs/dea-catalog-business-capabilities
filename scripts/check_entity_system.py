@@ -23,6 +23,14 @@ Staging (per the Conformance Standard CS-010): advisory in Stage 3-4
 (CR-BP-123) and Stage 5 (CR-BP-124); blocking in Stage 6 (CR-BP-125).
 
 Run: python3 scripts/check_entity_system.py [--strict] [--json]
+
+Divergence from the dea-catalog-processes original (CR-DEA-BC-38 §4): this
+copy excludes the per-entity state directories (research/, candidates/,
+retired/) from the record walk, mirroring validate-entries.yml and
+CR-CATALOG-STRUCT-01 §5 — files there are research artifacts, candidate
+records, and retired copies, not catalog entries. If propagating this script
+cross-repo again, port the exclusion (or verify the target repo's walk already
+has it) rather than copying verbatim.
 """
 from __future__ import annotations
 
@@ -370,6 +378,10 @@ def _walk_records(repo_root: Path, registry: dict) -> list:
     if EXCEPTIONS_PATH is not None:
         skip_basenames.add(EXCEPTIONS_PATH.name)
     skip_dirs = {".git", "node_modules", "__pycache__", ".github", "scripts", "tests"}
+    # CR-DEA-BC-38 §4: per-entity state directories hold research artifacts,
+    # candidate records, and retired copies — not catalog entries (per
+    # CR-CATALOG-STRUCT-01 §5, the same exclusion validate-entries.yml applies).
+    skip_dirs.update({"research", "candidates", "retired"})
 
     for path_glob in file_globs:
         literal_prefix = path_glob.split("*", 1)[0]
