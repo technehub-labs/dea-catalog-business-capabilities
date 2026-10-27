@@ -321,7 +321,7 @@ carved-out sub-concern as a separate first-order cap.
 
 ### v1-alpha.7 addendum: BC-SR-A001 §4 evidence work in progress (no admission)
 
-**Sub-CARRIER:** [CR-DEA-BC-18](../../change-requests/CR-DEA-BC-18-track-a-orgdesign-evidence.md)
+**Sub-CARRIER:** [CR-DEA-BC-18](../change-requests/CR-DEA-BC-18-track-a-orgdesign-evidence.md)
 (research-CR; no canonical change; same release cycle).
 
 **Review scope:** Evidence package for BC-SR-A001 §4 (reviewer P1:
@@ -381,7 +381,7 @@ boundaries; final record-shape conformance happens in the admission CR.
 
 ## v1-alpha.8: 2026-09-11 (BC-SR-A001 §4 closure)
 
-**CARRIER:** [CR-DEA-BC-14](../../change-requests/CR-DEA-BC-14-track-a-orgdesign-admission.md) (admission-CR; canonical entity added; 27 → 28 first-order caps).
+**CARRIER:** [CR-DEA-BC-14](../change-requests/CR-DEA-BC-14-track-a-orgdesign-admission.md) (admission-CR; canonical entity added; 27 → 28 first-order caps).
 
 **Review scope:** Track A admission of `dea:capability-organizational-design` at `agency-organization/design` (primary) + `conceive/build` secondaries. Closes BC-SR-A001 §4 (reviewer P1), BC-13 §B.1 (Track A investigation opened), CR-DEA-BC-18 (research-CR evidence package), TER-ORGDESIGN-001 (open → closed), CAND-036 (E3 → E4 per EVIDENCE.md §3 admission promotion rule).
 
@@ -425,7 +425,7 @@ The EVIDENCE.md §3 E3 threshold is "partial independence". SRC-017/018/019 are 
 
 ## v1-alpha.8 (continued): 2026-09-11 (BC-SR-A001 §5 Track B evidence work)
 
-**CARRIER:** [CR-DEA-BC-19](../../change-requests/CR-DEA-BC-19-track-b-epm-evidence.md) (research-CR; Track B evidence package; no admission in this CR).
+**CARRIER:** [CR-DEA-BC-19](../change-requests/CR-DEA-BC-19-track-b-epm-evidence.md) (research-CR; Track B evidence package; no admission in this CR).
 
 **Review scope:** Track B evidence work for `dea:candidate-epm` (CAND-037). Closes TER-EPM-001 (evidence-pending → evidence-seeded). Adds CAND-037 to the candidate universe (E1 → E3 confirmed). Adds SRC-020/021/022 across three independent source classes (business-architecture; commercial-capability-models; standards-body). Expands distinctness sweep from 4 → 8 peers. Records Direction Loop closure narrative required by BC-DEA-BC-13 §D.2 explicit decision.
 

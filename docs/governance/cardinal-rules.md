@@ -16,7 +16,7 @@ any published artifact.
 
 - `**Owner**` in CR doc headers (`change-requests/CR-*.md`)
 - `**Author**` in CR doc headers
-- `audit.author` in entity record YAML (`entities/v1-alpha/**/processes-*.yaml`)
+- `audit.author` in entity record YAML (`entities/v1-alpha/**/capabilities-*.yaml`)
 - `authors[].name`, `authors[].given-names`, `authors[].family-names` in
   `CITATION.cff`
 

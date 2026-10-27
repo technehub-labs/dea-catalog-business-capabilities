@@ -26,4 +26,6 @@ metamodel_pin: 1.0.0
 catalogs:
 - id: dea:catalog/business-capabilities
   version: v1-alpha
-  ref: v1-alpha.4
+  # No git-ref pin: the v1-alpha.0..v1-alpha.8 tag set was withdrawn 2026-10-13
+  # (CR-DEA-BC-36). The tag pin returns at the first post-reset release cut
+  # (docs/release-cut-procedure.md). Tier-2 version pin above stays authoritative.

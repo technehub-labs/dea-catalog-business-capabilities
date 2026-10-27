@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-DEA-BC-35 |
 | **Title** | Entity System Stage 5-6 (Catalog Adoption + Institutionalisation) - BC Slice |
-| **Status** | Proposed (this PR) |
+| **Status** | Landed (PR #86; status backfill 2026-10-27, CR-DEA-BC-39 §4) |
 | **Layer** | L1 (Business Capability Catalog) |
 | **Depends on** | CR-BP-121..125 (the 6-stage institutionalisation in dea-catalog-processes) |
 | **Author** | Emmanuel A. Otchere |

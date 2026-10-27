@@ -520,8 +520,10 @@ def count_open_change_requests(catalog_root: Path) -> int:
         except OSError:
             open_count += 1
             continue
-        # Take the first 30 lines; look for a status line.
-        head = "\n".join(text.splitlines()[:30])
+        # Take the first 80 lines; look for a status line. (CR-DEA-BC-39 §4:
+        # 80, not 30 — CR-DEA-BC-06 carries a long YAML frontmatter, so its
+        # bold status line sits deeper than a 30-line window.)
+        head = "\n".join(text.splitlines()[:80])
         status: str | None = None
         m = re.search(r"\*\*Status\*\*:\s*([A-Za-z]+)", head)
         if m:

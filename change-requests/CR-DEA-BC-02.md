@@ -1,6 +1,6 @@
 CR-DEA-BC-02: Evidence-Based First-Order Capability Investigation
 
-Status: Proposed
+**Status**: Landed (status backfill 2026-10-27, CR-DEA-BC-39 §4; landing evidence: PR #4; close-out PR #19)
 Revision: 1
 Type: Research / Catalog Construction
 Target Repository: technehub-labs/dea-catalog-business-capabilities

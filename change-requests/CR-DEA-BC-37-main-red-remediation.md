@@ -26,7 +26,7 @@ GOVERNANCE §2.2: landed CRs are immutable; corrections are recorded by later PR
 | File | Line | Field | Current value | Corrected value |
 |---|---|---|---|---|
 | `change-requests/CR-DEA-BC-34-release-history-reset-and-discipline.md` | 5 | `**Owner**` | `Coder (for eaojnr)` | `Emmanuel A. Otchere` |
-| `change-requests/CR-DEA-BC-35-org-wide-id-system-confirmation.md` | 5 | `**Owner**` | `Coder (for eaojnr)` | `Emmanuel A. Otchere` |
+| `change-requests/CR-DEA-BC-35A-org-wide-id-system-confirmation.md` (renumbered from `-35-` by CR-DEA-BC-39 §2) | 5 | `**Owner**` | `Coder (for eaojnr)` | `Emmanuel A. Otchere` |
 | `catalog-research/recon/INV-BC-35-v0.1.yaml` | 4 | `author` | `Coder (for eaojnr)` | `Emmanuel A. Otchere` |
 
 The agency narrative is preserved in prose (each affected document already records the 2026-10-13 user directive and ratification in its Trigger/body); only the authorship-of-record value changes. The corrections are also summarized under "Corrections to landed CRs" in `change-requests/README.md`.

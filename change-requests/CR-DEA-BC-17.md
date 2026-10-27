@@ -6,7 +6,7 @@
 > for the old-to-new id mapping and dea-metaframework `docs/entity-storage-layout.md` for
 > the current layout.
 
-**Status**: Proposed; release withdrawn 2026-10-13, see CR-DEA-BC-34.
+**Status**: Landed (status backfill 2026-10-27, CR-DEA-BC-39 §4; landing evidence: PR #67); release withdrawn 2026-10-13, see CR-DEA-BC-36.
 **Layer**: Catalog (business capabilities)
 **Owner**: Emmanuel A. Otchere
 **Date**: 2026-09-10
@@ -250,7 +250,7 @@ Per `docs/VERSIONING.md §1.2`:
 
 - [CR-DEA-BC-13](CR-DEA-BC-13.md): the BC-13 method-CR that carved this admission out (§C).
 - [BC-SR-A001 §12](../submittal-reviews/BC-SR-A001.md#12-technology-management-deserves-special-treatment): the reviewer's recommendation this admission closes.
-- [`dea:capability-technology-management`](../entities/v1-alpha/dea:capability-technology-management/dea:capability-technology-management.yaml): the paired entry (IT direction function).
+- [`dea:capability-technology-management`](../entities/v1-alpha/technology-management-maus5n/capabilities-capability-technology-management-maus5n.yaml): the paired entry (IT direction function).
 - [`METHODOLOGY.md §12`](../METHODOLOGY.md): the two review gates (semantic + architectural) this admission passes.
 - [`docs/VERSIONING.md §1.2`](../docs/VERSIONING.md): version semantics for the affected entries.
 - [CHANGELOG.md](../CHANGELOG.md): v1-alpha.7 entry.

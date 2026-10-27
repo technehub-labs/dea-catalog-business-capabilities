@@ -1,4 +1,6 @@
-# CR-DEA-BC-34: Release-History Reset (Path B) + Release-Discipline Extensions
+# CR-DEA-BC-36: Release-History Reset (Path B) + Release-Discipline Extensions
+
+> **Renumbering (2026-10-27, CR-DEA-BC-39 §2):** this CR was authored and landed (PR #88) under the number CR-DEA-BC-34, colliding with the Authorship Cardinal Rule CR that landed earlier in the same cycle (PR #85) and owns that number. This CR's CHANGELOG entry and landing PR identify it as CR-DEA-BC-36; the file, heading, and self-references are renumbered to match, recorded per GOVERNANCE §2.1 (the CR-DEA-BC-01A precedent). The historical branch name in the Carrier narrative is preserved verbatim.
 
 **Status**: Applied (2026-10-13)
 **Layer**: Cross-cutting (catalog governance) + release discipline
@@ -20,7 +22,7 @@ A cross-repo dependency sweep (§3) and a sister-repo coordination note in the `
 
 **Out of scope (deferred)**:
 - CITATION.cff reset: no CITATION.cff exists in this repo (CR-BP-116 had one). The next real release cut will create CITATION.cff.
-- The CR-DEA-BC-35 org-wide id-system confirmation work: that is its own CR; it does not depend on the release-history reset.
+- The CR-DEA-BC-35A org-wide id-system confirmation work: that is its own CR; it does not depend on the release-history reset.
 
 ## 2. Recovery appendix (captured BEFORE any destructive operation)
 
@@ -180,7 +182,7 @@ The full release-cut procedure, including the extensions A + D:
 12. `git push --tags` to `origin`.
 13. `gh release create vN.M.P --repo technehub-labs/dea-catalog-business-capabilities --title "vN.M.P" --notes-file release-notes/vN.M.P.md` (if the first release is not a GitHub release, omit this step; record the rationale in the carrier CR).
 14. Update the prior-cut history table in `docs/VERSIONING.md` (§8) with the new row.
-15. Cross-repo coordination: any release that lands a `capabilities:*` id set change or moves the ECF version triggers the sweep in §3 of CR-DEA-BC-34 for the next cut cycle.
+15. Cross-repo coordination: any release that lands a `capabilities:*` id set change or moves the ECF version triggers the sweep in §3 of CR-DEA-BC-36 for the next cut cycle.
 
 The carrier PR is merged only after step 10 verification. The tag is cut only after the carrier PR is on main.
 
@@ -193,7 +195,7 @@ A new table, immediately below the version-trigger table:
 | ------- | ---- | --------- | ---------- | ------------------------------------ | ----------- |
 ```
 
-Starts empty. Append one row per future cut when the release lands. The post-mortem column is optional; if a cut later gets a retrospective, link it. (The v1-alpha.x withdrawals of CR-DEA-BC-34 deliberately do not appear here — this table records *successful* cuts, not withdrawals; the recovery appendix in §2 is the audit record for those.)
+Starts empty. Append one row per future cut when the release lands. The post-mortem column is optional; if a cut later gets a retrospective, link it. (The v1-alpha.x withdrawals of CR-DEA-BC-36 deliberately do not appear here — this table records *successful* cuts, not withdrawals; the recovery appendix in §2 is the audit record for those.)
 
 ## 8. docs/release-history-archive.md (new, from F)
 
@@ -201,19 +203,19 @@ Fossilised record of the 9 withdrawn v1-alpha.x cuts and the 3 abandoned pre-tag
 
 ## 9. Carrier CR relabel (release-cut rows + Status headers)
 
-`change-requests/README.md` rows for CR-DEA-BC-05, -07, -08, -09, -11, -12, -13, -14, -17 get a `[WITHDRAWN 2026-10-13 — see CR-DEA-BC-34]` suffix in the title cell. The Status cell stays `**Merged**` (the PR did merge; the release it carried was later withdrawn — these are two different facts).
+`change-requests/README.md` rows for CR-DEA-BC-05, -07, -08, -09, -11, -12, -13, -14, -17 get a `[WITHDRAWN 2026-10-13 — see CR-DEA-BC-36]` suffix in the title cell. The Status cell stays `**Merged**` (the PR did merge; the release it carried was later withdrawn — these are two different facts).
 
 The carrier CR doc Status header on each of those nine files gets a one-line addendum:
 
 ```
-**Status**: Merged (PR #N); release withdrawn 2026-10-13, see CR-DEA-BC-34.
+**Status**: Merged (PR #N); release withdrawn 2026-10-13, see CR-DEA-BC-36.
 ```
 
 Body text otherwise untouched. The body is the historical truth at the time of writing and rewriting it is silent history destruction.
 
-## 10. CHANGELOG entry for CR-DEA-BC-34 + CATALOG.yaml posture
+## 10. CHANGELOG entry for CR-DEA-BC-36 + CATALOG.yaml posture
 
-CHANGELOG `[Unreleased]` gains a CR-DEA-BC-34 entry summarizing the withdrawal + the discipline extensions. CATALOG.yaml regenerated to include CR-DEA-BC-34 in `open_change_requests` (N -> N+1). All other counts unchanged.
+CHANGELOG `[Unreleased]` gains a CR-DEA-BC-36 entry summarizing the withdrawal + the discipline extensions. CATALOG.yaml regenerated to include CR-DEA-BC-36 in `open_change_requests` (N -> N+1). All other counts unchanged.
 
 ## 11. Cross-repo coordination note (E, light, from candidate list)
 
@@ -221,7 +223,7 @@ The `dea-catalog-release-cut` skill gains one new pitfall line: any release of `
 
 ## 12. Conformance + Test Posture
 
-- 7-gate rollup CONFORMANT (no gate-count change; CR-DEA-BC-34 touches CHANGELOG, docs, and the skill; the validator scripts are unchanged).
+- 7-gate rollup CONFORMANT (no gate-count change; CR-DEA-BC-36 touches CHANGELOG, docs, and the skill; the validator scripts are unchanged).
 - `python3 scripts/check_naming.py` exit 0.
 - `python3 scripts/check_versions.py` exit 0.
 - `python3 scripts/check_ecf_conformance.py` exit 0.
@@ -236,12 +238,12 @@ The `dea-catalog-release-cut` skill gains one new pitfall line: any release of `
 
 - No record-content changes. Entity records are untouched.
 - No id changes. The repo's current `capabilities:*` id set is the source of truth for the first real cut.
-- No gate-count changes. CR-DEA-BC-34 is doc + discipline + tag/release layer only.
+- No gate-count changes. CR-DEA-BC-36 is doc + discipline + tag/release layer only.
 - No cross-repo scope. Sibling repos are notified via the cross-repo coordination note (§11) but no sibling repo state is changed in this CR.
 - No new release tag cut. The first real release is its own CR after this reset lands.
 - C (pre-cut admission discipline) and G (tag-signing commit message template) deferred to their own CRs.
 - CITATION.cff does not exist; no reset needed. The first real release cut will create CITATION.cff.
-- CR-DEA-BC-35 (org-wide id system confirmation) is a separate CR; it does not depend on this CR.
+- CR-DEA-BC-35A (org-wide id system confirmation) is a separate CR; it does not depend on this CR.
 
 ## 14. Acceptance Criteria
 
@@ -252,8 +254,8 @@ The `dea-catalog-release-cut` skill gains one new pitfall line: any release of `
 - `docs/release-cut-procedure.md` exists and contains the full procedure with steps A and D inlined.
 - `docs/release-history-archive.md` exists and contains the fossilised record of the 9 withdrawn cuts.
 - The nine carrier CRs (CR-DEA-BC-05/-07/-08/-09/-11/-12/-13/-14/-17) carry the withdrawal addendum on their Status header and the row title in `change-requests/README.md`.
-- CHANGELOG.md has a single `[Unreleased]` at the top, no v1-alpha version sections, no STRUCT-03 sections, and the CR-DEA-BC-34 entry.
-- `CATALOG.yaml` regenerated; `open_change_requests` reflects CR-DEA-BC-34.
+- CHANGELOG.md has a single `[Unreleased]` at the top, no v1-alpha version sections, no STRUCT-03 sections, and the CR-DEA-BC-36 entry.
+- `CATALOG.yaml` regenerated; `open_change_requests` reflects CR-DEA-BC-36.
 - 7-gate rollup CONFORMANT; CI green on the merged PR.
 - `dea-catalog-release-cut` skill has the cross-repo coordination pitfall line.
 

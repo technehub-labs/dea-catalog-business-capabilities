@@ -4,7 +4,7 @@
 |-------|-------|
 | **CR** | CR-DEA-BC-04 |
 | **Title** | Industry Specialization Framework and First View: Mobile Communications Service Provider |
-| **Status** | Draft: awaiting review, then "Proceed" to land as proposal PR |
+| **Status** | Landed (PR #27; status backfill 2026-10-27, CR-DEA-BC-39 §4): awaiting review, then "Proceed" to land as proposal PR |
 | **Author** | Emmanuel A. Otchere |
 | **Date** | 2026-09-01 |
 | **Depends on** | CR-DEA-BC-01 (method, accepted), CR-DEA-BC-02 (specialization register v0.1, landed), CR-DEA-BC-03 (schema + CI, landed), the canonical 23 (admitted 2026-09-01) |

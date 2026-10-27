@@ -13,13 +13,17 @@ patch), the scope, the rationale, the PR that landed it, and any tag.
 
 The catalog uses `v<N>-<word>` versioning while in v1 (lettered-suffix
 regime) and `v<N>.<M>` semver from v2 onward. See
-[`docs/VERSIONING.md`](VERSIONING.md) for the normative procedure and
-[`docs/release-cut-procedure.md`](release-cut-procedure.md) for the
+[`docs/VERSIONING.md`](docs/VERSIONING.md) for the normative procedure and
+[`docs/release-cut-procedure.md`](docs/release-cut-procedure.md) for the
 release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
-### CR-DEA-BC-38: CI Test Wiring + Gate Honesty
+### CR-DEA-BC-39: Index, Numbering, and Doc-Truth Restoration (+ Recurrence Gates)
+
+Restores the CR series' records to truth and adds gates so the drift cannot silently recur. Numbering: the release-history reset CR is renumbered to its CHANGELOG/PR identity CR-DEA-BC-36 (file renamed; heading + self-references amended; renumbering note appended; recorded in the index Numbering section per the BC-01A precedent), and the org-wide id confirmation CR to CR-DEA-BC-35A (collision with the entity-system slice). Index: 16 backfilled rows (BC-20..33, BC-34, BC-35A, BC-36); BC-20 is recorded as a documented gap (no standalone CR file landed; the rename shipped in PR #76); the BC-05 malformed row repaired; legacy rows linkified. Status truth: backfill across 12 CR files with landing-PR evidence — `open_change_requests` steps 12 -> 0. Docs: 23 broken relative hrefs fixed (CHANGELOG, README, CR-DEA-BC-17/18, docs/REVIEWS.md, docs/publication-pipeline.md, catalog-research/VISUALS-v0.1.md); README repository-structure section rewritten for the populated catalog and its header typo fixed; GOVERNANCE §1/§2.4 posture updated; `dependencies.yaml` withdrawn-tag pin dropped; `docs/governance/cardinal-rules.md` processes-repo glob corrected to `capabilities-*.yaml`. New blocking gates wired into `validate-entries.yml`: `scripts/check_doc_links.py` (DL-001) and `scripts/check_cr_index.py` (CR-001..005), each with self-test fixtures and pytest modules (66 tests total).
+
+### CR-DEA-BC-38: CI Test Wiring + Gate Honesty: CI Test Wiring + Gate Honesty
 
 `count_open_change_requests` in `scripts/regenerate_catalog.py` now parses both metadata shapes (bold-line and table-row) and closes on the status vocabulary this repo actually uses (`Merged/Landed/Applied/Accepted/Rejected/Superseded/Withdrawn`); previously only `Merged` counted closed, so every CR counted open (`open_change_requests: 40`). The duplicated condition at the old line 518 is gone. `open_change_requests` steps 41 -> 12 at this landing. The full test suite (`python -m pytest tests/ -q`) now runs as a named CI step in `catalog-conformance.yml` (pytest was installed but never run; `tests/test_check_entity_system.py` ran nowhere). The entity-system gate's record walk now excludes the per-entity state directories (`research/`, `candidates/`, `retired/`) per CR-CATALOG-STRUCT-01 §5 — parity with `validate-entries.yml` — and `validate-entity-system.yml` drops `continue-on-error: true`, so the strict gate blocks; divergence from the `dea-catalog-processes` original is recorded in the script header for future propagators. New regression test for the state-dir exclusion (54 tests total).
 

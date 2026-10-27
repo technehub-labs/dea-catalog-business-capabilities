@@ -166,9 +166,9 @@ in a follow-up CR.
 
 ## References
 
-- CR-DEA-BC-06 (retired): [`change-requests/CR-DEA-BC-06.md`](../../change-requests/CR-DEA-BC-06.md)
-- CR-DEA-BC-10 (retired): [`change-requests/CR-DEA-BC-10.md`](../../change-requests/CR-DEA-BC-10.md)
-- CR-DEA-BC-05 (versioning): [`change-requests/CR-DEA-BC-05.md`](../../change-requests/CR-DEA-BC-05.md)
+- CR-DEA-BC-06 (retired): [`change-requests/CR-DEA-BC-06.md`](../change-requests/CR-DEA-BC-06.md)
+- CR-DEA-BC-10 (retired): [`change-requests/CR-DEA-BC-10.md`](../change-requests/CR-DEA-BC-10.md)
+- CR-DEA-BC-05 (versioning): [`change-requests/CR-DEA-BC-05.md`](../change-requests/CR-DEA-BC-05.md)
 - Framework reference: `doc_50b584c18547_generate_opendea_nested_cap_map_by_release_v1.py`
   (saved under the agent cache; the in-repo edition is
   `scripts/generate_capability_map.py`)

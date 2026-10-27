@@ -1,4 +1,6 @@
-# CR-DEA-BC-35: Org-Wide ID System Confirmation (BC-mv1 follow-up audit)
+# CR-DEA-BC-35A: Org-Wide ID System Confirmation (BC-mv1 follow-up audit)
+
+> **Renumbering (2026-10-27, CR-DEA-BC-39 §2):** this CR was authored and landed (PR #89) as CR-DEA-BC-35, colliding with the Entity System Stage 5-6 BC slice (PR #86), which owns that number per its index row and CHANGELOG entry. Renumbered to CR-DEA-BC-35A per the CR-DEA-BC-01A suffix precedent; recorded in the index Numbering section. The historical branch name in the Carrier narrative is preserved verbatim.
 
 **Status**: Applied (2026-10-13)
 **Layer**: Catalog (business capabilities); id-system governance

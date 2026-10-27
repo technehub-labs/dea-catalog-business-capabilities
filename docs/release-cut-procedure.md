@@ -1,10 +1,10 @@
 # Release-Cut Procedure (dea-catalog-business-capabilities)
 
-**Status**: Active (CR-DEA-BC-34, 2026-10-13)
+**Status**: Active (CR-DEA-BC-36, 2026-10-13)
 **Owner**: Coder (for eaojnr)
 **Depends on**: `docs/VERSIONING.md` (version-trigger table; prior-cut history table); the 7 catalog validators in `scripts/`
 
-The release-cut procedure governs the gate from "main is green" to "a new release tag is pushed to origin and a GitHub Release is created (optional)". Every step is mandatory; no shortcuts; the pre-release CI verification contract (A) and the GPG-signing procedure (D) are the two extensions from the CR-BP-116 candidate list that were adopted by CR-DEA-BC-34 (sequence A to F).
+The release-cut procedure governs the gate from "main is green" to "a new release tag is pushed to origin and a GitHub Release is created (optional)". Every step is mandatory; no shortcuts; the pre-release CI verification contract (A) and the GPG-signing procedure (D) are the two extensions from the CR-BP-116 candidate list that were adopted by CR-DEA-BC-36 (sequence A to F).
 
 ## 1. Decide the target version
 
@@ -142,4 +142,4 @@ If a cut is later found to be pre-mature (the v0.x / v1-alpha.x class of inciden
 9. CATALOG.yaml regen: `open_change_requests` count +1; all other counts unchanged.
 10. 7-gate rollup CONFORMANT; CI green on the merged PR.
 
-The procedure in `change-requests/CR-DEA-BC-34-release-history-reset-and-discipline.md` is the worked example of steps 1-10 for the v1-alpha.x class of cuts; reference it for any future reset.
+The procedure in `change-requests/CR-DEA-BC-36-release-history-reset-and-discipline.md` is the worked example of steps 1-10 for the v1-alpha.x class of cuts; reference it for any future reset.
