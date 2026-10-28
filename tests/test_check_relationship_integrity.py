@@ -66,3 +66,24 @@ def test_cli_self_test():
     r = subprocess.run([sys.executable, str(SCRIPT), "--self-test"],
                        capture_output=True, text=True, cwd=str(REPO_ROOT))
     assert r.returncode == 0, r.stdout + r.stderr
+
+
+def test_typed_assertions_ri005(tmp_path: Path):
+    mod = _load()
+    b = _entity(tmp_path, "cap-b-bbbbbb")
+    # the registry is the type authority; provide a minimal one in the fixture tree
+    reg = tmp_path / "reconciliation"
+    reg.mkdir()
+    (reg / "entity-system-registry.yaml").write_text(
+        "relationships:\n  field: related_capabilities\n  type_field: type\n"
+        "  canonical_types: [depends-on, realizes, specializes]\n")
+    _entity(tmp_path, "cap-a-aaaaaa", rel=[
+        {"id": b, "type": "depends-on", "rationale": "A relies on B"},
+        {"id": "capabilities:capability-ghost-zzzzzz", "type": "depends-on", "rationale": "r"},
+        {"id": b, "type": "wobbles", "rationale": "r"},
+        {"id": b, "type": "realizes"},
+        b,  # duplicate of typed target in bare form
+    ])
+    findings, _ = mod.evaluate(tmp_path)
+    rules = [f["rule"] for f in findings]
+    assert rules.count("RI-005") == 4, rules  # unresolved target, bad type, missing rationale, dual form

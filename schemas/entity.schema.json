@@ -106,7 +106,22 @@
     },
     "related_capabilities": {
       "type": "array",
-      "items": { "type": "string", "pattern": "^capabilities:capability-[a-z0-9-]+-[a-z2-9]{6}$" }
+      "description": "Recorded associations between canonical capabilities. Two forms (CR-DEA-BC-53): a bare canonical id (legacy/untyped association -- semantics unresolved pending evidence-led typing), or a typed assertion {id, type, rationale}. Types are governed by the entity-system registry (ES-003 canonical_types); an id must not appear in both forms within one record.",
+      "items": {
+        "oneOf": [
+          { "type": "string", "pattern": "^capabilities:capability-[a-z0-9-]+-[a-z2-9]{6}$" },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "type", "rationale"],
+            "properties": {
+              "id": { "type": "string", "pattern": "^capabilities:capability-[a-z0-9-]+-[a-z2-9]{6}$" },
+              "type": { "type": "string", "enum": ["depends-on", "realizes", "specializes"] },
+              "rationale": { "type": "string", "minLength": 1 }
+            }
+          }
+        ]
+      }
     },
     "realization": {
       "type": "object",

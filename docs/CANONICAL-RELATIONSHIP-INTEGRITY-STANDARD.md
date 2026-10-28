@@ -25,6 +25,21 @@
 
 **Distinguished from these**: ECF co-location (classification, never relationship); view links (navigation, CR-47 contracts); evidence source refs (provenance, not semantics).
 
+## 2a. Typed relationship semantics (CR-DEA-BC-53)
+
+`related_capabilities` accepts typed assertions `{id, type, rationale}` alongside legacy bare ids. The registry (ES-003) is the type authority; the schema enum mirrors it and must never lead it.
+
+| Attribute | `depends-on` | `realizes` | `specializes` |
+|---|---|---|---|
+| Definition (registry authority; prose normative only to the registry) | a capability's functioning relies on another | a capability's effect is delivered through another (cross-catalog direction per upstream semantics) | a capability refines another within the specialization boundary rules |
+| Source / target kinds | BusinessCapability → BusinessCapability (as configured) | per registry `type_constraints` (none declared for BC — unresolved) | per registry (none declared — unresolved) |
+| Cardinality | unresolved (no authority) | unresolved | unresolved |
+| Reciprocity | not specified | not specified | not specified |
+| Evidence per assertion | `type` from the registry set + non-empty `rationale` (RI-005) | same | same |
+| Validation | RI-005 + ES-003 canonical-type membership | same | same |
+
+Unresolved attributes (cardinality, reciprocity, constraint tables) are recorded as unresolved — recorded here, not invented. **Population status: zero typed assertions at landing** — the 72 legacy associations remain bare pending per-assertion evidence; a future CR may propose typings with dispositions.
+
 ## 3. Integrity rules (RI-*)
 
 | Rule | Check | Severity | Basis |
@@ -33,6 +48,7 @@
 | RI-002 | every structured `boundary.against_capabilities[].id` resolves | blocking | CR-29 governance-grade rationale pairs |
 | RI-003 | structured-boundary entries carry non-empty `rationale` | blocking | same |
 | RI-004 | registry-declared relationship types are expressible in the schema | finding (reported, not failing) | the R-1 gap — recorded, never silently converted into a rule |
+| RI-005 | typed assertions: type within the registry canonical set; rationale non-empty; id resolves; no target asserted in both forms in one record | blocking | CR-DEA-BC-53 typed form |
 
 Deliberately **not** imposed (no authority): universal acyclicity; reciprocity; prohibition of self-reference (none exists; if one appears it is a semantic-review item, not an automatic failure — recorded as a warning-level observation).
 
@@ -40,7 +56,7 @@ Deliberately **not** imposed (no authority): universal acyclicity; reciprocity; 
 
 | Finding | Status | Disposition |
 |---|---|---|
-| Registry ES-003 types not expressible (bare-list pattern) | Open | R-1 Relationship Semantics CR (registry-aligned schema oneOf + ES-003 enforcement); every landing since BC-47 renders the references explicitly untyped |
+| Registry ES-003 types not expressible (bare-list pattern) | **Resolved 2026-10-28 (CR-DEA-BC-53)** — schema oneOf + registry `type_field` + ES-003 config fix | Residual: population evidence (72 associations untyped; typing requires per-assertion evidence via future CR) |
 | Reciprocity gap: 40 of 72 directed references lack a recorded reverse reference | Observed, not a defect | The model does not require reciprocity; semantic review may assess case-by-case; no action without a model decision |
 
 ## 5. Generated views

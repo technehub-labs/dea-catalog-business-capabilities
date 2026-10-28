@@ -31,6 +31,12 @@ CR-CATALOG-STRUCT-01 §5 — files there are research artifacts, candidate
 records, and retired copies, not catalog entries. If propagating this script
 cross-repo again, port the exclusion (or verify the target repo's walk already
 has it) rather than copying verbatim.
+
+Divergence 2 (CR-DEA-BC-53): ES-003 reads the registry-configured carrier
+field (`relationships.field`, defaulting to the historical `relationships` key)
+and the configured type key (`relationships.type_field`, defaulting to
+`relationship_type`) instead of hardcoded keys. The BC registry declares
+`field: related_capabilities` + `type_field: type`.
 """
 from __future__ import annotations
 
@@ -212,7 +218,13 @@ def _check_es_002_contract(record: dict, registry: dict, record_id: str, excepti
 def _check_es_003_relationship(record: dict, registry: dict, record_id: str, exceptions: dict) -> list:
     """ES-003: canonical types, source/target constraints, cross-catalog (per RS-001..RS-005)."""
     findings = []
-    relationships = record.get("relationships", [])
+    # CR-DEA-BC-53: honor the registry-configured carrier field (the BC registry
+    # declares related_capabilities) and the configured type key (default
+    # relationship_type). Fixes the latent hardcode that read `relationships`
+    # regardless of the registry declaration.
+    rel_field = registry["relationships"].get("field", "relationships")
+    type_key = registry["relationships"].get("type_field", "relationship_type")
+    relationships = record.get(rel_field, [])
     if isinstance(relationships, str):
         # Inline shorthand; not expected in this catalog
         return findings
@@ -224,7 +236,7 @@ def _check_es_003_relationship(record: dict, registry: dict, record_id: str, exc
     for i, rel in enumerate(relationships):
         if not isinstance(rel, dict):
             continue
-        rel_type = rel.get("relationship_type", "")
+        rel_type = rel.get(type_key, "")
 
         if rel_type in forbidden_types:
             if not _is_excepted(record_id, "ES-003", exceptions):

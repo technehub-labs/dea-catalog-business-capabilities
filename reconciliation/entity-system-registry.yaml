@@ -41,6 +41,9 @@ identity:
 # ES-003: Relationship
 relationships:
   field: related_capabilities
+  # CR-DEA-BC-53: typed assertions carry the type in `type` (with id + rationale);
+  # legacy entries remain bare ids (untyped associations).
+  type_field: type
   canonical_types:
     - depends-on
     - realizes

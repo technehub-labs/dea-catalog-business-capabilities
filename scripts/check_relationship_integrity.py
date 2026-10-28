@@ -49,13 +49,35 @@ def evaluate(root: Path) -> tuple[list[dict], list[str]]:
     def add(rule: str, entity: str, msg: str):
         findings.append({"rule": rule, "entity": entity, "message": msg})
 
+    reg = {}
+    reg_path = root / "reconciliation" / "entity-system-registry.yaml"
+    if reg_path.is_file():
+        reg = yaml.safe_load(reg_path.read_text(encoding="utf-8")) or {}
+    canonical_types = ((reg.get("relationships") or {}).get("canonical_types")) or []
+
     for r in recs:
         rid = r.get("id", "?")
+        bare_seen = set()
         for rel in r.get("related_capabilities") or []:
-            if rel not in ids:
-                add("RI-001", rid, f"related capability {rel!r} does not resolve")
-            elif rel == rid:
-                observations.append(f"self-reference observed at {rid} (semantic-review item; not auto-failed)")
+            if isinstance(rel, dict):
+                # RI-005 (CR-DEA-BC-53): typed assertions
+                tid = rel.get("id")
+                if tid not in ids:
+                    add("RI-005", rid, f"typed assertion target {tid!r} does not resolve")
+                if canonical_types and rel.get("type") not in canonical_types:
+                    add("RI-005", rid, f"typed assertion type {rel.get('type')!r} not in registry canonical types")
+                if not str(rel.get("rationale") or "").strip():
+                    add("RI-005", rid, f"typed assertion target {tid!r} lacks rationale")
+            else:
+                if rel not in ids:
+                    add("RI-001", rid, f"related capability {rel!r} does not resolve")
+                elif rel == rid:
+                    observations.append(f"self-reference observed at {rid} (semantic-review item; not auto-failed)")
+                bare_seen.add(rel)
+        # no duplicate assertion of the same target in both forms
+        typed_ids = {rel.get("id") for rel in (r.get("related_capabilities") or []) if isinstance(rel, dict)}
+        for dup in bare_seen & typed_ids:
+            add("RI-005", rid, f"target {dup!r} asserted in both bare and typed forms")
         b = r.get("boundary")
         if isinstance(b, dict):
             for a in b.get("against_capabilities") or []:
@@ -77,7 +99,7 @@ def evaluate(root: Path) -> tuple[list[dict], list[str]]:
         if types and not typed_expressible:
             observations.append(
                 "RI-004: registry declares relationship types " + ", ".join(types)
-                + " but the related_capabilities schema items accept only bare ids (open R-1 gap)")
+                + " but is now expressible since CR-DEA-BC-53; population evidence outstanding (R-1 implementation phase)")
     return findings, observations
 
 
@@ -111,7 +133,7 @@ def main(argv: list[str] | None = None) -> int:
         return self_test()
 
     findings, observations = evaluate(REPO_ROOT)
-    print(f"Relationship Integrity (CR-DEA-BC-48; RI-001..004): "
+    print(f"Relationship Integrity (CR-DEA-BC-48/53; RI-001..005): "
           f"{len(findings)} finding(s), {len(observations)} observation(s)")
     for f in findings:
         print(f"  [{f['rule']}] {f['entity']}: {f['message']}")
