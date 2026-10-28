@@ -146,6 +146,9 @@ jobs:
       - name: Check CR index discipline (CR-DEA-BC-39; CR-001..005)
         run: python scripts/check_cr_index.py --strict
 
+      - name: Relationship integrity (CR-DEA-BC-48; RI-001..004)
+        run: python scripts/check_relationship_integrity.py --strict
+
       - name: Documentation conformance (CR-DEA-BC-45; DCV-001..010)
         # Blocking since CR-DEA-BC-46 landed the catalog-wide README remediation.
         run: python scripts/check_doc_conformance.py --strict
