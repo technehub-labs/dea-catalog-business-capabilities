@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Offering Management
 definition: The ability to conceive, design, build, evolve, and retire what the enterprise
   offers.
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
+purpose: "The enterprise requires Offering Management so what it offers is conceived, designed, built, evolved, and retired as a deliberate, end-to-end managed portfolio."
 outcome: A deliberate offering portfolio whose lifecycle is managed end to end.
 business_object: Offering
 ecf:

@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Insight Management
 definition: The ability to derive decision-grade insight from information the enterprise
   stewards or acquires.
-version: 2.0.0
+version: 2.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Insight Management so decisions are informed by decision-grade insight derived from the information it stewards or acquires."
 outcome: Decisions are informed by derived intelligence.
 business_object: Insight
 aliases:

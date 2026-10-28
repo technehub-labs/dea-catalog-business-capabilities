@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Risk Management
 definition: The ability to identify, assess, treat, and monitor what could prevent
   the enterprise from achieving its outcomes.
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Risk Management so what could prevent its outcomes is identified, assessed, treated to appetite, owned, and monitored."
 outcome: Exposures are known, owned, treated to appetite, and monitored.
 business_object: Risk
 ecf:

@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Strategy Formulation
 definition: 'The ability to set the enterprise''s direction: where it will compete, what it will become,
   and what it will not do.'
-version: 2.0.0
+version: 2.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
+purpose: "The enterprise requires Strategy Formulation so the enterprise's direction is set explicitly \u2014 where it competes, what it becomes, what it declines \u2014 constraining and guiding every other capability."
 outcome: An explicit, current statement of enterprise direction that constrains and guides every other
   capability.
 business_object: Enterprise

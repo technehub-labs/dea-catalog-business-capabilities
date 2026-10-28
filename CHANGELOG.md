@@ -19,6 +19,10 @@ release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
+### CR-DEA-BC-55: Evidence-Led Business Purpose Population
+
+Completion tranche Batch A step 3. `purpose` populated on all 29 canonical records, each value landing verbatim from the accepted BC-54 evidence register (disposition: supported — derivation from the record's admitted definition and outcome, E-level per why_capability); every record takes a patch-tier version bump and no other record content changes. Entity READMEs' Purpose section re-rendered from the record (replacing the not-yet-established state); discovery views and CATALOG.yaml regenerated. Population report at `docs/BUSINESS-CAPABILITY-PURPOSE-POPULATION-REPORT.md`: 29 populated, 0 unsupported/conflicted, 0 not assessed. The M-1 no-bulk-generation policy is honored — this is execution of an accepted per-capability evidence register, not wholesale text generation.
+
 ### CR-DEA-BC-54: Business Purpose Evidence Reconciliation
 
 Completion tranche Batch A step 2 — investigation only; zero record changes. All 29 canonical capabilities assessed for purpose populability under explicit semantic discipline (definition = what; purpose = why the enterprise requires it; outcome = contributed result; why_capability = capability-hood rationale — kept distinct). Dispositions: 29/29 **supported**, each by derivation from admitted record evidence (the record's definition plus its evidence-ladder-admitted outcome, E-level per why_capability) — no inference from names, ECF coordinates, or generic enterprise assumptions, and no mechanical copying between fields. Deliverables: `docs/BUSINESS-CAPABILITY-PURPOSE-RECONCILIATION.md` and the machine-readable per-capability register `reconciliation/purpose-reconciliation-register.yaml` (evidence chains, proposed purpose statements, BC-55 eligibility: 29/29, contingent on acceptance of the findings).

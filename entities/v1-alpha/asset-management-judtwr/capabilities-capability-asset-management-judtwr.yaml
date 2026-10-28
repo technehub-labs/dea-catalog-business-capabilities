@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Asset Management
 definition: The ability to steward the enterprise's non-financial, non-workforce assets
   across their lifecycle.
-version: 1.2.0
+version: 1.2.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Asset Management so its non-financial, non-workforce asset base stays governed and usable: known, maintained, deliberately utilized, and deliberately retired."
 outcome: Assets are known, maintained, utilized, and retired deliberately.
 business_object: Asset
 ecf:

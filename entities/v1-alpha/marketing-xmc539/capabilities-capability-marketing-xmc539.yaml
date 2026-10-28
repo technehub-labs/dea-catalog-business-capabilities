@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Marketing
 definition: The ability to understand markets and create demand for the enterprise's
   offerings.
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
+purpose: "The enterprise requires Marketing so demand for its offerings exists and is measurable, and the enterprise is known to those it intends to serve."
 outcome: Demand exists and is measurable; the enterprise is known to those it intends
   to serve.
 business_object: Market/Customer

@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Customer Management
 definition: The ability to establish, develop, and end relationships with those the
   enterprise serves.
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
+purpose: "The enterprise requires Customer Management so its relationships with those it serves are established, developed, and ended deliberately, yielding a known, managed customer base."
 outcome: A known, managed customer base whose lifecycle is deliberate rather than
   accidental.
 business_object: Customer

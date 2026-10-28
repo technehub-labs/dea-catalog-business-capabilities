@@ -5,10 +5,11 @@ aliases:
 - Financial Management
 definition: The ability to plan, record, control, and report the enterprise's financial
   resources in the operating cycle.
-version: 2.0.0
+version: 2.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
+purpose: "The enterprise requires Financial Resource Management so money in the operating cycle is planned, recorded, controlled, and reported: accounted for, within budget, and reported accurately and on time."
 outcome: Money is accounted for, budgets hold, and financial reporting is accurate
   and timely.
 business_object: Financial Resource

@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Security Management
 definition: The ability to protect the enterprise's people, assets, and information
   from harm.
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Security Management so its people, assets, and information are protected by a deliberate, proportionate, demonstrably operating posture."
 outcome: Protective posture is deliberate, proportionate, and demonstrably operating.
 business_object: Asset/Information
 ecf:

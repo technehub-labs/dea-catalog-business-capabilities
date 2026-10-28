@@ -60,7 +60,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.2.0
+    version: 1.2.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-change-management-hukdeq
@@ -71,7 +71,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.1
+    version: 1.0.2
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-continuity-management-v3rn6u
@@ -82,7 +82,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 2.0.0
+    version: 2.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-customer-management-f3n8wb
@@ -93,7 +93,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-enterprise-governance-uas48u
@@ -104,7 +104,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.2
+    version: 1.0.3
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-enterprise-performance-management-5fxren
@@ -115,7 +115,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.1
+    version: 1.0.2
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-facility-management-tx73hb
@@ -126,7 +126,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.2.0
+    version: 1.2.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-financial-resource-management-cd3c7c
@@ -137,7 +137,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 2.0.0
+    version: 2.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-financial-stewardship-c7xtfk
@@ -148,7 +148,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-idea-management-86dckf
@@ -159,7 +159,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 2.0.0
+    version: 2.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-information-management-6vjgdh
@@ -170,7 +170,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.1
+    version: 1.0.2
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-insight-management-ms4n9d
@@ -181,7 +181,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 2.0.0
+    version: 2.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-legal-matter-management-zzbd2u
@@ -192,7 +192,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 2.0.0
+    version: 2.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-marketing-xmc539
@@ -203,7 +203,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-offering-management-6egkc8
@@ -214,7 +214,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-operations-management-pm3w8k
@@ -225,7 +225,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 2.0.0
+    version: 2.0.1
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-organizational-design-vanefq
@@ -236,7 +236,7 @@ catalog:
     retired_count: 0
     state: candidate
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-partner-management-cp3vdb
@@ -247,7 +247,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.1.1
+    version: 1.1.2
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-regulation-management-gya4d8
@@ -258,7 +258,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 2.0.0
+    version: 2.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-risk-management-h9uxdw
@@ -269,7 +269,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-security-management-wmzc7c
@@ -280,7 +280,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.0.0
+    version: 1.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-sourcing-and-procurement-esucp4
@@ -291,7 +291,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.3.0
+    version: 1.3.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-strategic-planning-k3rz7a
@@ -302,7 +302,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.1.1
+    version: 1.1.2
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-strategy-formulation-sf7q2x
@@ -313,7 +313,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 2.0.0
+    version: 2.0.1
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-supplier-management-d6fuj4
@@ -324,7 +324,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.2.1
+    version: 1.2.2
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-technology-enablement-y6nkws
@@ -335,7 +335,7 @@ catalog:
     retired_count: 0
     state: candidate
     type: BusinessCapability
-    version: 1.0.1
+    version: 1.0.2
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-technology-management-maus5n
@@ -346,7 +346,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.3.1
+    version: 1.3.2
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-workforce-management-9e8d8s
@@ -357,7 +357,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.1.1
+    version: 1.1.2
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-workforce-planning-b43rhm
@@ -368,7 +368,7 @@ catalog:
     retired_count: 1
     state: candidate
     type: BusinessCapability
-    version: 1.1.1
+    version: 1.1.2
   id: dea:catalog-business-capabilities
   metamodel_version: 1.0.0
   name: Business Capability

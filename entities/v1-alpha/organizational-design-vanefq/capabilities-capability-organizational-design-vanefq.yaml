@@ -4,10 +4,11 @@ name: Organizational Design
 definition: The ability to structure the enterprise into roles, units, reporting
   lines, authorities, and coordination patterns that fit the work the enterprise
   must do, and to revise that structure when the work changes.
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
+purpose: "The enterprise requires Organizational Design so its structure \u2014 roles, units, authorities, coordination patterns \u2014 fits the work it must do and is revised deliberately rather than drifting."
 outcome: The enterprise has a structure whose roles, authorities, and
   coordination patterns align with its strategy and operating context, and
   can be revised deliberately rather than drifting.

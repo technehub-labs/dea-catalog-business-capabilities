@@ -6,7 +6,7 @@
 |---|---|
 | Canonical ID | `capabilities:capability-technology-management-maus5n` |
 | Entity type | BusinessCapability |
-| Version / status | 1.3.1 · active |
+| Version / status | 1.3.2 · active |
 | Record | [capabilities-capability-technology-management-maus5n.yaml](capabilities-capability-technology-management-maus5n.yaml) — authoritative |
 | Layer | support |
 
@@ -24,7 +24,9 @@ The interpretation above renders record content; scope distinctions from neighbo
 
 ## 3. Purpose and value contribution
 
-Not yet established: `purpose` is unpopulated in the record. Per the population policy (CR-DEA-BC-43 M-1) it will be authored with evidence on substantive record change — never bulk-generated. The intended outcome the capability contributes to is recorded in §9.
+**Purpose** (from the record; populated per CR-DEA-BC-55 from the accepted BC-54 evidence register):
+
+> The enterprise requires Technology Management so its technology estate is directed, invested in, and stewarded deliberately: choices funded, lifecycle-managed, answerable to strategy.
 
 ## 4. Scope and boundaries
 
@@ -110,7 +112,7 @@ Not applicable — no assessment authority or model is established for this cata
 
 ## 13. Lifecycle and change history
 
-Current: `v1.3.1` · `active`. Entity content changes land via CR and are cited in the repository record of change requests; the ladder above records the admission history.
+Current: `v1.3.2` · `active`. Entity content changes land via CR and are cited in the repository record of change requests; the ladder above records the admission history.
 
 ## 14. Conformance
 

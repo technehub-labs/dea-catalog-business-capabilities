@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Workforce Management
 definition: The ability to acquire, develop, deploy, and release the enterprise's workforce of human and
   artificial agents.
-version: 1.1.1
+version: 1.1.2
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Workforce Management so it has the human and artificial agents it needs \u2014 acquired, developed, deployed, released with deliberate entry and exit."
 outcome: The enterprise has the agents it needs, human and artificial, developing, with deliberate entry
   and exit.
 business_object: Workforce
