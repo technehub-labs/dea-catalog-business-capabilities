@@ -1,0 +1,118 @@
+cr: CR-DEA-BC-58
+generated: '2026-10-28'
+upstream_status: 'dea-catalog-business-objects: Wave 3 scaffold, 0 entities (GitHub API inspection)'
+disposition: U-1 blocked upstream
+values:
+- value: Acquisition Cycle
+  used_by:
+  - Sourcing and Procurement
+  class: single descriptive value, no canonical target yet
+- value: Asset
+  used_by:
+  - Asset Management
+  class: single descriptive value, no canonical target yet
+- value: Asset/Information
+  used_by:
+  - Security Management
+  class: compound-expression (semantic review at upstream first admissions)
+- value: Change
+  used_by:
+  - Change Management
+  class: single descriptive value, no canonical target yet
+- value: Continuity
+  used_by:
+  - Continuity Management
+  class: single descriptive value, no canonical target yet
+- value: Customer
+  used_by:
+  - Customer Management
+  class: single descriptive value, no canonical target yet
+- value: Decision
+  used_by:
+  - Enterprise Governance
+  class: single descriptive value, no canonical target yet
+- value: Enterprise
+  used_by:
+  - Strategy Formulation
+  class: single descriptive value, no canonical target yet
+- value: Enterprise Performance
+  used_by:
+  - Enterprise Performance Management
+  class: single descriptive value, no canonical target yet
+- value: Facility
+  used_by:
+  - Facility Management
+  class: single descriptive value, no canonical target yet
+- value: Financial Resource
+  used_by:
+  - Financial Resource Management
+  - Financial Stewardship
+  class: single descriptive value, no canonical target yet
+- value: Idea
+  used_by:
+  - Idea Management
+  class: single descriptive value, no canonical target yet
+- value: Information
+  used_by:
+  - Information Management
+  class: single descriptive value, no canonical target yet
+- value: Insight
+  used_by:
+  - Insight Management
+  class: single descriptive value, no canonical target yet
+- value: Legal Matter
+  used_by:
+  - Legal Matter Management
+  class: single descriptive value, no canonical target yet
+- value: Market/Customer
+  used_by:
+  - Marketing
+  class: compound-expression (semantic review at upstream first admissions)
+- value: Offering
+  used_by:
+  - Offering Management
+  class: single descriptive value, no canonical target yet
+- value: Operations
+  used_by:
+  - Operations Management
+  class: single descriptive value, no canonical target yet
+- value: Organization Structure
+  used_by:
+  - Organizational Design
+  class: single descriptive value, no canonical target yet
+- value: Partner
+  used_by:
+  - Partner Management
+  class: single descriptive value, no canonical target yet
+- value: Plan
+  used_by:
+  - Strategic Planning
+  class: single descriptive value, no canonical target yet
+- value: Regulation
+  used_by:
+  - Regulation Management
+  class: single descriptive value, no canonical target yet
+- value: Risk
+  used_by:
+  - Risk Management
+  class: single descriptive value, no canonical target yet
+- value: Supplier
+  used_by:
+  - Supplier Management
+  class: single descriptive value, no canonical target yet
+- value: Technology
+  used_by:
+  - Technology Management
+  class: single descriptive value, no canonical target yet
+- value: Technology Service
+  used_by:
+  - Technology Enablement
+  class: single descriptive value, no canonical target yet
+- value: Workforce
+  used_by:
+  - Workforce Management
+  class: single descriptive value, no canonical target yet
+- value: Workforce Plan
+  used_by:
+  - Workforce Planning
+  class: single descriptive value, no canonical target yet
