@@ -19,7 +19,11 @@ ecf:
     stage: improve
 parents: []
 children: []
-related_capabilities: []
+related_capabilities:
+- capabilities:capability-cap-x-aaaaaa
+- id: capabilities:capability-cap-y-bbbbbb
+  type: depends-on
+  rationale: 'fixture: functioning relies on Y (illustrative)'
 realization:
   processes:
   - processes:process-asset-lifecycle-planning-a1b2c3

@@ -112,22 +112,24 @@ def view_related(ents: list[dict], root: Path) -> str:
     by_id = {e["rec"]["id"]: e for e in ents}
     lines = [HEADER, "", "# Related Capability References", "",
              "Recorded `related_capabilities` references between canonical capabilities. "
-             "**These are untyped references until the Relationship Semantics CR (R-1) "
-             "lands** — presented here as recorded associations, not typed semantic "
-             "relationships; no graph is emitted for that reason (CR-47 §6.3).",
-             "| From | References |", "|---|---|"]
+             "Typed assertions (CR-DEA-BC-53: depends-on / realizes / specializes, with rationale) "
+             "are rendered with their type; legacy bare entries are untyped associations whose "
+             "semantics remain unresolved. No graph is emitted (CR-47 §6.3).",
+             "| From | Reference | Type |", "|---|---|---|"]
     for e in sorted(ents, key=lambda e: e["rec"]["name"]):
         rec = e["rec"]
         rels = rec.get("related_capabilities") or []
         if not rels:
             continue
-        cells = []
         for r in rels:
-            if r in by_id:
-                cells.append(f"[{by_id[r]['rec']['name']}]({rel_link_from_views(by_id[r]['dir'] / 'README.md', root)})")
+            if isinstance(r, dict):
+                tgt = r.get("id")
+                label = f"[{by_id[tgt]['rec']['name']}]({rel_link_from_views(by_id[tgt]['dir'] / 'README.md', root)})" if tgt in by_id else f"`{tgt}` (unresolved)"
+                lines.append(f"| [{rec['name']}]({rel_link_from_views(e['dir'] / 'README.md', root)}) | {label} | `{r.get('type','')}` |")
+            elif r in by_id:
+                lines.append(f"| [{rec['name']}]({rel_link_from_views(e['dir'] / 'README.md', root)}) | [{by_id[r]['rec']['name']}]({rel_link_from_views(by_id[r]['dir'] / 'README.md', root)}) | — (untyped) |")
             else:
-                cells.append(f"`{r}` (unresolved)")
-        lines.append(f"| [{rec['name']}]({rel_link_from_views(e['dir'] / 'README.md', root)}) | {', '.join(cells)} |")
+                lines.append(f"| [{rec['name']}]({rel_link_from_views(e['dir'] / 'README.md', root)}) | `{r}` (unresolved) | — (untyped) |")
     return "\n".join(lines) + "\n"
 
 

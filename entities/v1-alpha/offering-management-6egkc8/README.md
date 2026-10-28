@@ -72,7 +72,7 @@ A specialization refines scope or context; it never redefines the parent capabil
 | [Marketing](../marketing-xmc539/capabilities-capability-marketing-xmc539.yaml) | recorded in `related_capabilities`; see the boundary in §4 of both records |
 | [Operations Management](../operations-management-pm3w8k/capabilities-capability-operations-management-pm3w8k.yaml) | recorded in `related_capabilities`; see the boundary in §4 of both records |
 
-Until the Relationship Semantics CR (R-1) lands, these entries are untyped references recorded in the canonical data — not typed semantic relationships.
+Typed relationship assertions (CR-DEA-BC-53: depends-on / realizes / specializes, with rationale) are representable in the canonical data; the associations listed above remain untyped pending evidence-led typing.
 
 ## 8. Realization and operational context
 
