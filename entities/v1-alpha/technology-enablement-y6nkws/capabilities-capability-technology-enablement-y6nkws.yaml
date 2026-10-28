@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Technology Enablement
 definition: The ability to run and continuously adapt the technology services, platforms, and automation
   that other capabilities depend on, sustaining operational technology delivery across the enterprise.
-version: 1.0.1
+version: 1.0.2
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Technology Enablement so the technology services, platforms, and automation other capabilities depend on are run and continuously adapted: reliable, available, performant, responsive to demand."
 outcome: Technology services and platforms are reliable, available, performant, and adapted to changing
   demand from the capabilities that depend on them.
 business_object: Technology Service

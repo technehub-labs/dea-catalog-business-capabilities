@@ -5,10 +5,11 @@ aliases:
 - Legal Management
 definition: 'The ability to conduct the enterprise''s legal work: counsel, contracts,
   disputes, and legal position.'
-version: 2.0.0
+version: 2.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Legal Matter Management so its legal work \u2014 counsel, contracts, disputes, position \u2014 is conducted deliberately with its legal position known."
 outcome: The enterprise's legal matters are conducted deliberately and its legal position
   is known.
 business_object: Legal Matter

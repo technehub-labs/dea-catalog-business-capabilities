@@ -4,10 +4,11 @@ name: Enterprise Performance Management
 definition: The ability to define, measure, monitor, evaluate, govern, and improve enterprise-wide
   performance against intended objectives and targets, completing the direction loop that links
   strategy to adaptation.
-version: 1.0.1
+version: 1.0.2
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
+purpose: "The enterprise requires Enterprise Performance Management so performance against intended objectives is defined, measured, evaluated, governed, and adapted \u2014 closing the direction loop from strategy through insight to change."
 outcome: Enterprise performance is defined, measured, evaluated, governed, and adapted against
   objectives, closing the direction loop that links strategy to insight to change.
 business_object: Enterprise Performance

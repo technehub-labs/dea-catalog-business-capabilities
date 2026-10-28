@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Information Management
 definition: The ability to govern, structure, and steward the enterprise's information
   across its lifecycle.
-version: 1.0.1
+version: 1.0.2
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Information Management so its information is governed, structured, and stewarded across lifecycle: findable, trustworthy, correctly retained, and deliberately disposed."
 outcome: Information is findable, trustworthy, retained correctly, and disposed of
   deliberately.
 business_object: Information

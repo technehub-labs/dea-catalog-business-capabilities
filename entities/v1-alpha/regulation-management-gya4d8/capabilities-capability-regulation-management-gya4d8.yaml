@@ -5,10 +5,11 @@ aliases:
 - Compliance Management
 definition: The ability to know the enterprise's obligations and to conform to them
   demonstrably.
-version: 2.0.0
+version: 2.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Regulation Management so its obligations are identified, interpreted, met, and the conformance demonstrably provable."
 outcome: Obligations are identified, interpreted, met, and the conformance is provable.
 business_object: Regulation
 ecf:

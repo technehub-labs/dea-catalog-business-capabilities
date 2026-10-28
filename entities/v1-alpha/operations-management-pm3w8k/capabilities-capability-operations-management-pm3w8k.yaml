@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Operations Management
 definition: The ability to run the enterprise's day-to-day production and delivery
   of value.
-version: 2.0.0
+version: 2.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
+purpose: "The enterprise requires Operations Management so day-to-day production and delivery of value runs continuously at the quality the enterprise commits to."
 outcome: Offerings are delivered, continuously, at the quality the enterprise commits
   to.
 business_object: Operations

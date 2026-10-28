@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Financial Stewardship
 definition: 'The ability to hold the enterprise''s financial resources in trust: policy,
   structure, and long-horizon financial position.'
-version: 1.0.0
+version: 1.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
+purpose: "The enterprise requires Financial Stewardship so its financial position is held in trust beyond the operating cycle: deliberate, funded, and answerable over the long horizon."
 outcome: The enterprise's financial position is deliberate, funded, and answerable
   over horizons beyond the operating cycle.
 business_object: Financial Resource

@@ -2,10 +2,11 @@ id: capabilities:capability-facility-management-tx73hb
 type: BusinessCapability
 name: Facility Management
 definition: The ability to provide and operate the enterprise's physical places.
-version: 1.2.0
+version: 1.2.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Facility Management so its physical places are provided and operated: available, safe, fit for purpose, and cost-deliberate."
 outcome: Places are available, safe, fit for purpose, and cost-deliberate.
 business_object: Facility
 ecf:

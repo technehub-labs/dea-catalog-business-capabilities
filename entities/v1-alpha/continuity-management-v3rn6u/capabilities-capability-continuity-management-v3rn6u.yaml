@@ -5,10 +5,11 @@ aliases:
 - Resilience Management
 definition: The ability to maintain continuity of product and service delivery at
   an acceptable predefined capacity during disruption, and to recover.
-version: 2.0.0
+version: 2.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Continuity Management so product and service delivery survives disruption at an acceptable predefined capacity, with prepared, exercised, and validated response and recovery."
 outcome: Delivery continues at acceptable predefined capacity through disruption;
   response and recovery are prepared, exercised, and validated.
 business_object: Continuity

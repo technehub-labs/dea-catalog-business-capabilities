@@ -5,10 +5,11 @@ aliases:
 - Innovation Management
 definition: The ability to originate, develop, and realize ideas into new or improved
   products, services, processes, and models.
-version: 2.0.0
+version: 2.0.1
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
+purpose: "The enterprise requires Idea Management so ideas are originated, developed, and realized into products, services, processes, and models actually introduced to use \u2014 not merely ideated."
 outcome: Innovations are introduced to the market or brought into use, not merely
   ideated.
 business_object: Idea

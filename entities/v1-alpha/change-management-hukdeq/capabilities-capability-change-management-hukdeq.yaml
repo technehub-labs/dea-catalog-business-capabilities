@@ -2,10 +2,11 @@ id: capabilities:capability-change-management-hukdeq
 type: BusinessCapability
 name: Change Management
 definition: The ability to move the enterprise deliberately from one state to another.
-version: 1.0.1
+version: 1.0.2
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
+purpose: "The enterprise requires Change Management so movement from one state to another happens deliberately \u2014 initiated, sequenced, landed, and verified \u2014 instead of merely happening to it."
 outcome: Change is initiated, sequenced, landed, and its effects verified, rather than merely happening.
 business_object: Change
 ecf:

@@ -2,10 +2,11 @@ id: capabilities:capability-technology-management-maus5n
 type: BusinessCapability
 name: Technology Management
 definition: The ability to direct, invest in, and steward the enterprise's technology estate.
-version: 1.3.1
+version: 1.3.2
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: support
+purpose: "The enterprise requires Technology Management so its technology estate is directed, invested in, and stewarded deliberately: choices funded, lifecycle-managed, answerable to strategy."
 outcome: Technology choices are deliberate, funded, lifecycle-managed, and answerable to strategy.
 business_object: Technology
 ecf:

@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Partner Management
 definition: The ability to establish and maintain relationships with entities the
   enterprise cooperates with as peers.
-version: 1.1.1
+version: 1.1.2
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: operational
+purpose: "The enterprise requires Partner Management so its peer-cooperation relationships form a deliberate portfolio of alliances, channels, and ecosystem ties."
 outcome: A deliberate portfolio of alliances, channels, and ecosystem relationships.
 business_object: Partner
 ecf:

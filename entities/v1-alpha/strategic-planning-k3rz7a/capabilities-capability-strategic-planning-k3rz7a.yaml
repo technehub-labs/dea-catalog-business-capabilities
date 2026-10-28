@@ -3,10 +3,11 @@ type: BusinessCapability
 name: Strategic Planning
 definition: The ability to translate enterprise direction into an ordered set of intents, horizons, and
   resource postures.
-version: 1.1.1
+version: 1.1.2
 metamodel_pin: 1.0.0
 lifecycle_status: active
 capability_layer: strategic
+purpose: "The enterprise requires Strategic Planning so enterprise direction is translated into an ordered, maintained set of intents, horizons, and resource postures it can govern and fund."
 outcome: A maintained plan that operationalizes strategy into choices the enterprise can govern and fund.
 business_object: Plan
 ecf:
