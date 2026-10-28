@@ -19,6 +19,10 @@ release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
+### CR-DEA-BC-49: Capability Lifecycle Governance
+
+Governance tranche step 2. `docs/CAPABILITY-LIFECYCLE-GOVERNANCE-STANDARD.md` formalizes the existing two-axis lifecycle: the append-only admission ladder (provenance; 9 registry states, retired terminal) distinct from the record `lifecycle_status` (upstream vocabulary proposed/planned/active/deprecated/retired; 29/29 records currently active). Defines state meanings, entry conditions, permitted and prohibited transitions (deprecation precedes retirement unless a CR explicitly combines them with rationale + reference sweep), evidence and approval authority per transition, effects on references and discovery views (deprecated marked; retired terminal, excluded from the active set, never deleted), the six-way supersession/retirement distinction (correction, revision, split, merge, supersession, retirement-without-replacement), identity survival, and conformance mapping. No new status values, schema changes, or gates.
+
 ### CR-DEA-BC-48: Canonical Relationship Integrity
 
 Governance tranche step 1. Inventory of all relationship representations with evidence (72 directed related_capabilities references across 29 records, 32 reciprocal pairs — reciprocity observed, not required; 6 structured-boundary references, all resolving; parents/children and realization declared but unused; the registry's ES-003 types declared but not expressible — the R-1 gap). New gate `scripts/check_relationship_integrity.py`: RI-001..003 blocking (related-id and structured-boundary resolution, boundary rationale presence), RI-004 reporting the R-1 gap as an observation that never fails the build; no acyclicity, reciprocity, or self-reference rules imposed (no semantic authority). Standard at `docs/CANONICAL-RELATIONSHIP-INTEGRITY-STANDARD.md` with the findings register (R-1 open; reciprocity gap recorded as observed-not-defect). Wired into `validate-entries.yml`; self-test + 4 pytest modules (80 tests). No new relationship types or upstream changes.
