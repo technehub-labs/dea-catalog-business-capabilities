@@ -19,6 +19,10 @@ release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
+### CR-DEA-BC-56: Realization Target Scheme Reconciliation
+
+Completion tranche Batch B step 1 — investigation; no population. `docs/REALIZATION-TARGET-SCHEME-RECONCILIATION.md` inventories all five realization target categories against the actual org catalog landscape: `processes` is supported under the existing contract (populated sibling catalog, `processes:*` scheme per CR-43 M-2, and the processes catalog's own `realizes` + identity_scope relationship contract — the capability-side view of a governed upstream relationship, whose assertions BC-57 will mine as evidence); `services` would require a model change (outside the declared realization arrays — not authorized); `actors`, `resources`, `systems`, and `information` are blocked upstream (empty scaffold or no owning catalog; schemes unexercised — recorded, with no local identity schemes invented). Semantics discipline: realization is distinguished from enabling systems, used information, and enabled outcomes; population is evidence-gated.
+
 ### CR-DEA-BC-55: Evidence-Led Business Purpose Population
 
 Completion tranche Batch A step 3. `purpose` populated on all 29 canonical records, each value landing verbatim from the accepted BC-54 evidence register (disposition: supported — derivation from the record's admitted definition and outcome, E-level per why_capability); every record takes a patch-tier version bump and no other record content changes. Entity READMEs' Purpose section re-rendered from the record (replacing the not-yet-established state); discovery views and CATALOG.yaml regenerated. Population report at `docs/BUSINESS-CAPABILITY-PURPOSE-POPULATION-REPORT.md`: 29 populated, 0 unsupported/conflicted, 0 not assessed. The M-1 no-bulk-generation policy is honored — this is execution of an accepted per-capability evidence register, not wholesale text generation.
