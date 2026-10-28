@@ -1,0 +1,582 @@
+cr: CR-DEA-BC-54
+generated: '2026-10-28'
+method: per-capability derivation from admitted record evidence (definition + outcome; E-level per why_capability);
+  four concepts kept distinct; no inference from name/coordinate/generic assumptions
+counts:
+  in_scope: 29
+  supported: 29
+  partially_supported: 0
+  unsupported: 0
+  conflicted: 0
+  not_assessed: 0
+  eligible_for_bc55: 29
+entities:
+- entity_id: capabilities:capability-asset-management-judtwr
+  entity_name: Asset Management
+  record_path: entities/v1-alpha/asset-management-judtwr/capabilities-capability-asset-management-judtwr.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to steward the enterprise''s non-financial, non-workforce assets across their lifecycle.'
+  - 'outcome: Assets are known, maintained, utilized, and retired deliberately.'
+  - 'why_capability: E3; parent of Facility Management per the sweep (facilities are the asset class large enough
+    to warrant its own first-order capability).'
+  proposed_purpose: 'The enterprise requires Asset Management so its non-financial, non-workforce asset base stays
+    governed and usable: known, maintained, deliberately utilized, and deliberately retired.'
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-change-management-hukdeq
+  entity_name: Change Management
+  record_path: entities/v1-alpha/change-management-hukdeq/capabilities-capability-change-management-hukdeq.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to move the enterprise deliberately from one state to another.'
+  - 'outcome: Change is initiated, sequenced, landed, and its effects verified, rather than merely happening.'
+  - 'why_capability: E3; stage-anchored at improve; cross-domain applicability resolved at review (R-005) as an
+    object property, not a mapping defect.'
+  proposed_purpose: The enterprise requires Change Management so movement from one state to another happens deliberately
+    — initiated, sequenced, landed, and verified — instead of merely happening to it.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-continuity-management-v3rn6u
+  entity_name: Continuity Management
+  record_path: entities/v1-alpha/continuity-management-v3rn6u/capabilities-capability-continuity-management-v3rn6u.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to maintain continuity of product and service delivery at an acceptable predefined
+    capacity during disruption, and to recover.'
+  - 'outcome: Delivery continues at acceptable predefined capacity through disruption; response and recovery are
+    prepared, exercised, and validated.'
+  - 'why_capability: E4; the continuity business object and the boundary against Risk and Security are drawn by
+    ISO 22301, not by assertion; BCI GPG 7.0 carries an explicit all-sect'
+  proposed_purpose: The enterprise requires Continuity Management so product and service delivery survives disruption
+    at an acceptable predefined capacity, with prepared, exercised, and validated response and recovery.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-customer-management-f3n8wb
+  entity_name: Customer Management
+  record_path: entities/v1-alpha/customer-management-f3n8wb/capabilities-capability-customer-management-f3n8wb.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to establish, develop, and end relationships with those the enterprise serves.'
+  - 'outcome: A known, managed customer base whose lifecycle is deliberate rather than accidental.'
+  - 'why_capability: The strongest-converged capability in the corpus (E5): every source class carries it under
+    various names.'
+  proposed_purpose: The enterprise requires Customer Management so its relationships with those it serves are established,
+    developed, and ended deliberately, yielding a known, managed customer base.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-enterprise-governance-uas48u
+  entity_name: Enterprise Governance
+  record_path: entities/v1-alpha/enterprise-governance-uas48u/capabilities-capability-enterprise-governance-uas48u.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to direct and control the enterprise: decision rights, accountability, oversight, and
+    policy across the whole.'
+  - 'outcome: Decisions are made by the right authority, recorded, and enforced; the enterprise remains answerable
+    to its principals.'
+  - 'why_capability: Governance of the enterprise-as-a-whole is enterprise-general and implementation-independent;
+    distinct from Risk, Compliance, and Legal by the distinctness swee'
+  proposed_purpose: 'The enterprise requires Enterprise Governance so it is directed and controlled as a whole:
+    decisions made by the right authority, recorded, enforced, and answerable to its principals.'
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-enterprise-performance-management-5fxren
+  entity_name: Enterprise Performance Management
+  record_path: entities/v1-alpha/enterprise-performance-management-5fxren/capabilities-capability-enterprise-performance-management-5fxren.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to define, measure, monitor, evaluate, govern, and improve enterprise-wide performance
+    against intended objectives and targets, completing the direction loop that links strategy to adaptation.'
+  - 'outcome: Enterprise performance is defined, measured, evaluated, governed, and adapted against objectives,
+    closing the direction loop that links strategy to insight to change.'
+  - 'why_capability: Performance measurement against objectives is exercised by every enterprise regardless of industry
+    or implementation (B2B, B2C, G2C demonstrated at admission); '
+  proposed_purpose: The enterprise requires Enterprise Performance Management so performance against intended objectives
+    is defined, measured, evaluated, governed, and adapted — closing the direction loop from strategy through insight
+    to change.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-facility-management-tx73hb
+  entity_name: Facility Management
+  record_path: entities/v1-alpha/facility-management-tx73hb/capabilities-capability-facility-management-tx73hb.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to provide and operate the enterprise''s physical places.'
+  - 'outcome: Places are available, safe, fit for purpose, and cost-deliberate.'
+  - 'why_capability: E3; distinct child-level capability standing at first order per the sweep (facilities warrant
+    their own ability; Asset Management remains the general case).'
+  proposed_purpose: 'The enterprise requires Facility Management so its physical places are provided and operated:
+    available, safe, fit for purpose, and cost-deliberate.'
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-financial-resource-management-cd3c7c
+  entity_name: Financial Resource Management
+  record_path: entities/v1-alpha/financial-resource-management-cd3c7c/capabilities-capability-financial-resource-management-cd3c7c.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to plan, record, control, and report the enterprise''s financial resources in the operating
+    cycle.'
+  - 'outcome: Money is accounted for, budgets hold, and financial reporting is accurate and timely.'
+  - 'why_capability: E4; the operating-cycle counterpart to Financial Stewardship (E5), distinct per the sweep.'
+  proposed_purpose: 'The enterprise requires Financial Resource Management so money in the operating cycle is planned,
+    recorded, controlled, and reported: accounted for, within budget, and reported accurately and on time.'
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-financial-stewardship-c7xtfk
+  entity_name: Financial Stewardship
+  record_path: entities/v1-alpha/financial-stewardship-c7xtfk/capabilities-capability-financial-stewardship-c7xtfk.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to hold the enterprise''s financial resources in trust: policy, structure, and long-horizon
+    financial position.'
+  - 'outcome: The enterprise''s financial position is deliberate, funded, and answerable over horizons beyond the
+    operating cycle.'
+  - 'why_capability: E5; distinct from Financial Resource Management (the operating cycle) by the sweep: stewardship
+    sets the financial constitution, management runs it.'
+  proposed_purpose: 'The enterprise requires Financial Stewardship so its financial position is held in trust beyond
+    the operating cycle: deliberate, funded, and answerable over the long horizon.'
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-idea-management-86dckf
+  entity_name: Idea Management
+  record_path: entities/v1-alpha/idea-management-86dckf/capabilities-capability-idea-management-86dckf.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to originate, develop, and realize ideas into new or improved products, services, processes,
+    and models.'
+  - 'outcome: Innovations are introduced to the market or brought into use, not merely ideated.'
+  - 'why_capability: E4; repeatable organization-wide idea-to-value ability (ISO 56002); the outcome is identifiable
+    and measured by national statistical agencies (Oslo Manual 2018 '
+  proposed_purpose: The enterprise requires Idea Management so ideas are originated, developed, and realized into
+    products, services, processes, and models actually introduced to use — not merely ideated.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-information-management-6vjgdh
+  entity_name: Information Management
+  record_path: entities/v1-alpha/information-management-6vjgdh/capabilities-capability-information-management-6vjgdh.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to govern, structure, and steward the enterprise''s information across its lifecycle.'
+  - 'outcome: Information is findable, trustworthy, retained correctly, and disposed of deliberately.'
+  - 'why_capability: E4; span across domains resolved at review (R-003): the span is a property of the business
+    object, not of initiation.'
+  proposed_purpose: 'The enterprise requires Information Management so its information is governed, structured,
+    and stewarded across lifecycle: findable, trustworthy, correctly retained, and deliberately disposed.'
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-insight-management-ms4n9d
+  entity_name: Insight Management
+  record_path: entities/v1-alpha/insight-management-ms4n9d/capabilities-capability-insight-management-ms4n9d.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to derive decision-grade insight from information the enterprise stewards or acquires.'
+  - 'outcome: Decisions are informed by derived intelligence.'
+  - 'why_capability: E3; the object and outcome tests carry the decision (Insight is a produced thing with its own
+    lifecycle; decisions informed is an outcome distinct from informat'
+  proposed_purpose: The enterprise requires Insight Management so decisions are informed by decision-grade insight
+    derived from the information it stewards or acquires.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-legal-matter-management-zzbd2u
+  entity_name: Legal Matter Management
+  record_path: entities/v1-alpha/legal-matter-management-zzbd2u/capabilities-capability-legal-matter-management-zzbd2u.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to conduct the enterprise''s legal work: counsel, contracts, disputes, and legal position.'
+  - 'outcome: The enterprise''s legal matters are conducted deliberately and its legal position is known.'
+  - 'why_capability: E3; distinct from Compliance (conformance to obligations) per the sweep.'
+  proposed_purpose: The enterprise requires Legal Matter Management so its legal work — counsel, contracts, disputes,
+    position — is conducted deliberately with its legal position known.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-marketing-xmc539
+  entity_name: Marketing
+  record_path: entities/v1-alpha/marketing-xmc539/capabilities-capability-marketing-xmc539.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to understand markets and create demand for the enterprise''s offerings.'
+  - 'outcome: Demand exists and is measurable; the enterprise is known to those it intends to serve.'
+  - 'why_capability: E4; N-002 settled placement: Marketing stands distinct from Customer Management and Offering
+    Management.'
+  proposed_purpose: The enterprise requires Marketing so demand for its offerings exists and is measurable, and
+    the enterprise is known to those it intends to serve.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-offering-management-6egkc8
+  entity_name: Offering Management
+  record_path: entities/v1-alpha/offering-management-6egkc8/capabilities-capability-offering-management-6egkc8.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to conceive, design, build, evolve, and retire what the enterprise offers.'
+  - 'outcome: A deliberate offering portfolio whose lifecycle is managed end to end.'
+  - 'why_capability: Enterprise-general; distinct from Marketing (demand creation) and Operations Management (delivery)
+    by the sweep.'
+  proposed_purpose: The enterprise requires Offering Management so what it offers is conceived, designed, built,
+    evolved, and retired as a deliberate, end-to-end managed portfolio.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-operations-management-pm3w8k
+  entity_name: Operations Management
+  record_path: entities/v1-alpha/operations-management-pm3w8k/capabilities-capability-operations-management-pm3w8k.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to run the enterprise''s day-to-day production and delivery of value.'
+  - 'outcome: Offerings are delivered, continuously, at the quality the enterprise commits to.'
+  - 'why_capability: E4; N-008 dissolved Value Delivery as a separate first-order capability and re-rooted Operations
+    as the value-execution capability.'
+  proposed_purpose: The enterprise requires Operations Management so day-to-day production and delivery of value
+    runs continuously at the quality the enterprise commits to.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-organizational-design-vanefq
+  entity_name: Organizational Design
+  record_path: entities/v1-alpha/organizational-design-vanefq/capabilities-capability-organizational-design-vanefq.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to structure the enterprise into roles, units, reporting lines, authorities, and coordination
+    patterns that fit the work the enterprise must do, and to revise that structure when the work changes.'
+  - 'outcome: The enterprise has a structure whose roles, authorities, and coordination patterns align with its
+    strategy and operating context, and can be revised deliberately rather than drifting.'
+  - 'why_capability: E4 (foundation-grade per A+B+C gate; promotion from E3 at admission per EVIDENCE.md 3 admission
+    promotion rule). BC-SR-A001 4 explicitly recommended this admiss'
+  proposed_purpose: The enterprise requires Organizational Design so its structure — roles, units, authorities,
+    coordination patterns — fits the work it must do and is revised deliberately rather than drifting.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-partner-management-cp3vdb
+  entity_name: Partner Management
+  record_path: entities/v1-alpha/partner-management-cp3vdb/capabilities-capability-partner-management-cp3vdb.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to establish and maintain relationships with entities the enterprise cooperates with
+    as peers.'
+  - 'outcome: A deliberate portfolio of alliances, channels, and ecosystem relationships.'
+  - 'why_capability: Enterprise-general (E3); the dual-home ECF tension was resolved at review (R-001): the tension
+    is inherent to partnering and is expressed, not smoothed.'
+  proposed_purpose: The enterprise requires Partner Management so its peer-cooperation relationships form a deliberate
+    portfolio of alliances, channels, and ecosystem ties.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-regulation-management-gya4d8
+  entity_name: Regulation Management
+  record_path: entities/v1-alpha/regulation-management-gya4d8/capabilities-capability-regulation-management-gya4d8.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to know the enterprise''s obligations and to conform to them demonstrably.'
+  - 'outcome: Obligations are identified, interpreted, met, and the conformance is provable.'
+  - 'why_capability: E4; distinct from Risk (exposure) and Legal (counsel) per the sweep.'
+  proposed_purpose: The enterprise requires Regulation Management so its obligations are identified, interpreted,
+    met, and the conformance demonstrably provable.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-risk-management-h9uxdw
+  entity_name: Risk Management
+  record_path: entities/v1-alpha/risk-management-h9uxdw/capabilities-capability-risk-management-h9uxdw.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to identify, assess, treat, and monitor what could prevent the enterprise from achieving
+    its outcomes.'
+  - 'outcome: Exposures are known, owned, treated to appetite, and monitored.'
+  - 'why_capability: E4; parent of the governance triad relationship set (Compliance, Legal, Security relate through
+    it) per the sweep.'
+  proposed_purpose: The enterprise requires Risk Management so what could prevent its outcomes is identified, assessed,
+    treated to appetite, owned, and monitored.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-security-management-wmzc7c
+  entity_name: Security Management
+  record_path: entities/v1-alpha/security-management-wmzc7c/capabilities-capability-security-management-wmzc7c.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to protect the enterprise''s people, assets, and information from harm.'
+  - 'outcome: Protective posture is deliberate, proportionate, and demonstrably operating.'
+  - 'why_capability: E3; object spans Asset and Information; distinct from Risk (exposure assessment) per the sweep.'
+  proposed_purpose: The enterprise requires Security Management so its people, assets, and information are protected
+    by a deliberate, proportionate, demonstrably operating posture.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-sourcing-and-procurement-esucp4
+  entity_name: Sourcing and Procurement
+  record_path: entities/v1-alpha/sourcing-and-procurement-esucp4/capabilities-capability-sourcing-and-procurement-esucp4.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to acquire goods and services: sourcing choices, purchasing, and receipt.'
+  - 'outcome: The enterprise obtains what it needs, at deliberate terms, with a clean acquisition record.'
+  - 'why_capability: E4; distinct from Supplier Management (the relationship) per the sweep; object is the Purchase
+    Order.'
+  proposed_purpose: The enterprise requires Sourcing and Procurement so goods and services are acquired through
+    deliberate sourcing choices, purchasing, and receipt, with a clean acquisition record.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-strategic-planning-k3rz7a
+  entity_name: Strategic Planning
+  record_path: entities/v1-alpha/strategic-planning-k3rz7a/capabilities-capability-strategic-planning-k3rz7a.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to translate enterprise direction into an ordered set of intents, horizons, and resource
+    postures.'
+  - 'outcome: A maintained plan that operationalizes strategy into choices the enterprise can govern and fund.'
+  - 'why_capability: Distinct from Strategy (the sweep demonstrated partition: Strategy sets direction, Strategic
+    Planning sequences its pursuit); recorded in every strategy-bearing'
+  proposed_purpose: The enterprise requires Strategic Planning so enterprise direction is translated into an ordered,
+    maintained set of intents, horizons, and resource postures it can govern and fund.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-strategy-formulation-sf7q2x
+  entity_name: Strategy Formulation
+  record_path: entities/v1-alpha/strategy-formulation-sf7q2x/capabilities-capability-strategy-formulation-sf7q2x.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to set the enterprise''s direction: where it will compete, what it will become, and
+    what it will not do.'
+  - 'outcome: An explicit, current statement of enterprise direction that constrains and guides every other capability.'
+  - 'why_capability: Direction-setting is exercised by every enterprise regardless of industry or implementation,
+    is identifiable by its outcome, and passes the anti-invention test:'
+  proposed_purpose: The enterprise requires Strategy Formulation so the enterprise's direction is set explicitly
+    — where it competes, what it becomes, what it declines — constraining and guiding every other capability.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-supplier-management-d6fuj4
+  entity_name: Supplier Management
+  record_path: entities/v1-alpha/supplier-management-d6fuj4/capabilities-capability-supplier-management-d6fuj4.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to establish, maintain, and end relationships with those who supply the enterprise.'
+  - 'outcome: A managed supply base whose performance, risk, and lifecycle are deliberate.'
+  - 'why_capability: Enterprise-general across all corpus classes; distinct from Sourcing and Procurement (the act
+    of acquiring) by the sweep.'
+  proposed_purpose: 'The enterprise requires Supplier Management so its supply base is managed deliberately: performance,
+    risk, and lifecycle of supplier relationships.'
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-technology-enablement-y6nkws
+  entity_name: Technology Enablement
+  record_path: entities/v1-alpha/technology-enablement-y6nkws/capabilities-capability-technology-enablement-y6nkws.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to run and continuously adapt the technology services, platforms, and automation that
+    other capabilities depend on, sustaining operational technology delivery across the enterprise.'
+  - 'outcome: Technology services and platforms are reliable, available, performant, and adapted to changing demand
+    from the capabilities that depend on them.'
+  - 'why_capability: E3 (foundation-grade per A+B+C gate). BC-SR-A001 §12 explicitly recommended this admission.
+    CR-DEA-BC-13 §C carved out the Technology-as-Enabler sub-concern; th'
+  proposed_purpose: 'The enterprise requires Technology Enablement so the technology services, platforms, and automation
+    other capabilities depend on are run and continuously adapted: reliable, available, performant, responsive to
+    demand.'
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-technology-management-maus5n
+  entity_name: Technology Management
+  record_path: entities/v1-alpha/technology-management-maus5n/capabilities-capability-technology-management-maus5n.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to direct, invest in, and steward the enterprise''s technology estate.'
+  - 'outcome: Technology choices are deliberate, funded, lifecycle-managed, and answerable to strategy.'
+  - 'why_capability: E4; N-006R resolved at BC-08: a business capability whose object is Technology, not a cross-cutting
+    concern. The technology estate is a stable subject with life'
+  proposed_purpose: 'The enterprise requires Technology Management so its technology estate is directed, invested
+    in, and stewarded deliberately: choices funded, lifecycle-managed, answerable to strategy.'
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-workforce-management-9e8d8s
+  entity_name: Workforce Management
+  record_path: entities/v1-alpha/workforce-management-9e8d8s/capabilities-capability-workforce-management-9e8d8s.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to acquire, develop, deploy, and release the enterprise''s workforce of human and artificial
+    agents.'
+  - 'outcome: The enterprise has the agents it needs, human and artificial, developing, with deliberate entry and
+    exit.'
+  - 'why_capability: E5; N-001 settled the name (Workforce Management; "People Management" carried as alias).'
+  proposed_purpose: The enterprise requires Workforce Management so it has the human and artificial agents it needs
+    — acquired, developed, deployed, released with deliberate entry and exit.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
+- entity_id: capabilities:capability-workforce-planning-b43rhm
+  entity_name: Workforce Planning
+  record_path: entities/v1-alpha/workforce-planning-b43rhm/capabilities-capability-workforce-planning-b43rhm.yaml
+  current_purpose: null
+  disposition: supported
+  disposition_basis: 'derivation from admitted record evidence: definition (what) + outcome (contributed result,
+    admitted through the evidence ladder) bridge into a why-statement; E-level per why_capability'
+  evidence_reviewed:
+  - 'definition: The ability to determine what workforce, human and artificial, the enterprise will need and when.'
+  - 'outcome: A maintained view of future demand and supply across the human and artificial workforce, feeding Workforce
+    Management.'
+  - 'why_capability: E3; distinct from Workforce Management (execution) per the sweep; planning object is the Workforce
+    Plan.'
+  proposed_purpose: The enterprise requires Workforce Planning so it knows what human and artificial workforce it
+    will need and when, maintained as a future demand-and-supply view that feeds Workforce Management.
+  human_review: acceptance of BC-54 findings (user, as CR authority); no further per-record semantic review required
+    — statement introduces no new claims beyond the record's admitted fields
+  conflicts_or_gaps: 'none identified: outcome and why_capability are admitted evidence; no source disagreement
+    recorded'
+  eligible_for_bc55: true
