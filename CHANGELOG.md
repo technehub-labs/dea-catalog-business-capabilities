@@ -19,6 +19,10 @@ release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
+### CR-DEA-BC-50: Canonical Entity Change Impact Management
+
+Governance tranche step 3. `docs/ENTITY-CHANGE-IMPACT-STANDARD.md` establishes the impact-assessment practice: seven change categories with review floors (identity changes always escalate to org-wide governance); ten impact dimensions — semantic, identity, relationships, documentation, evidence, validation, lifecycle, derived views, consumers, migration — each requiring the impact or an explicit reasoned no-impact (unknowns recorded, never assumed absent); escalation conditions; and a retrospective worked example (the CR-DEA-BC-23 EPM admission) demonstrating that a validation-dimension assessment would have caught the schema gap later repaired by BC-40 before landing. Reusable assessment template at `docs/templates/ENTITY-CHANGE-IMPACT-ASSESSMENT.md`. Integrates with existing CR governance; no new automation or platform.
+
 ### CR-DEA-BC-49: Capability Lifecycle Governance
 
 Governance tranche step 2. `docs/CAPABILITY-LIFECYCLE-GOVERNANCE-STANDARD.md` formalizes the existing two-axis lifecycle: the append-only admission ladder (provenance; 9 registry states, retired terminal) distinct from the record `lifecycle_status` (upstream vocabulary proposed/planned/active/deprecated/retired; 29/29 records currently active). Defines state meanings, entry conditions, permitted and prohibited transitions (deprecation precedes retirement unless a CR explicitly combines them with rationale + reference sweep), evidence and approval authority per transition, effects on references and discovery views (deprecated marked; retired terminal, excluded from the active set, never deleted), the six-way supersession/retirement distinction (correction, revision, split, merge, supersession, retirement-without-replacement), identity survival, and conformance mapping. No new status values, schema changes, or gates.
