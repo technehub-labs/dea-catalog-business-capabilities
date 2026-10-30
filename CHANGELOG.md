@@ -19,6 +19,10 @@ release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
+### CR-DEA-BC-62: Coverage-Gap Candidate Register and Tranche Method
+
+Three-signal coverage analysis (15/49 ECF cells occupied; 70/74 canonical business objects referenced by no capability per new SRC-026; the processes catalog's 7x7 process structure as the mirror signal) identifies candidate capabilities C-01..C-11, with C-12 deferred to an industry-specialization decision. Register landed at catalog-research/COVERAGE-GAP-REGISTER.md (with an erratum correcting the workspace draft's cell arithmetic); SRC-026/SRC-027 added to the evidence register; tranche sequence fixed (CR-DEA-BC-63..66: T1 billing/revenue + subscription/service + talent; T2 order + learning + portfolio; T3 product + policy + privacy; T4 audit + incident). No records admitted in this CR.
+
 ### CR-DEA-BC-61: Candidate Misclassification Correction (Regenerator infer_state)
 
 The vendored regenerator's infer_state canonical-file lookup checked only the colon-form id filename; the mv1 migration (CR-DEA-BC-mv1) renamed every record file to the normalized hyphen form, so all 29 populated records were counted as candidates since the migration - the committed index even pointed each record's path at candidates/.gitkeep. CI stayed green throughout because --check deterministically reproduces the same misclassification. Regenerator re-vendored from dea-metaframework (PR #58, with regression test); index regenerated: 29 canonical / 3 candidates (epm, orgdesign, relmgmt remain candidates correctly) / 0 retired. No record content changes. Downstream corrections: metamodel dea:BusinessCapability lifecycle, governance register v5. Named follow-up: CR-DEA-BC-06's YAML-frontmatter status shape is invisible to the status-token parser (conservative open count 1).
