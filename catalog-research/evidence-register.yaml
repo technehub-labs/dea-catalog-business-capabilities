@@ -948,3 +948,26 @@ track_evidence_records:
     \ SRE, platform engineering treat IT delivery as a distinct organizational function). Enterprise-generality\
     \ confirmed at the A+B+C foundation inclusion criteria gate (cross-industry universality of the IT\
     \ delivery function)."
+
+- id: SRC-026
+  name: DEA Business Object Catalog (internal baseline)
+  class: internal-baseline
+  reference: technehub-labs/dea-catalog-business-objects CATALOG.yaml (74 canonical objects; verified 2026-11-02)
+  retrieved: 2026-11-02
+  retrieval: direct (canonical record store, freshness-gated index)
+  observations:
+  - observation: '70 of 74 canonical business objects are referenced by no capability business_object value'
+    supports:
+    - CR-DEA-BC-62 coverage-gap register
+    implication: Object-cluster density is direct demand evidence for candidate capability identification
+- id: SRC-027
+  name: Coverage-gap register (internal analysis)
+  class: internal-baseline
+  reference: catalog-research/COVERAGE-GAP-REGISTER.md (CR-DEA-BC-62)
+  retrieved: 2026-11-02
+  retrieval: direct
+  observations:
+  - observation: 'Three-signal convergence: 15/49 ECF cells occupied, 70/74 objects unreferenced, processes catalog assumes full 49-cell process coverage'
+    supports:
+    - CR-DEA-BC-62 tranche sequencing
+    implication: The capability layer is the thin layer; candidate identification rests on converging independent signals rather than any single one
