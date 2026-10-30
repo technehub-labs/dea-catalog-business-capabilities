@@ -6,6 +6,9 @@ Recorded `related_capabilities` references between canonical capabilities. Typed
 | From | Reference | Type |
 |---|---|---|
 | [Asset Management](../../entities/v1-alpha/asset-management-judtwr/README.md) | [Facility Management](../../entities/v1-alpha/facility-management-tx73hb/README.md) | — (untyped) |
+| [Billing and Revenue Management](../../entities/v1-alpha/billing-and-revenue-management-k7mwq2/README.md) | [Customer Management](../../entities/v1-alpha/customer-management-f3n8wb/README.md) | — (untyped) |
+| [Billing and Revenue Management](../../entities/v1-alpha/billing-and-revenue-management-k7mwq2/README.md) | [Financial Resource Management](../../entities/v1-alpha/financial-resource-management-cd3c7c/README.md) | — (untyped) |
+| [Billing and Revenue Management](../../entities/v1-alpha/billing-and-revenue-management-k7mwq2/README.md) | [Sourcing and Procurement](../../entities/v1-alpha/sourcing-and-procurement-esucp4/README.md) | — (untyped) |
 | [Change Management](../../entities/v1-alpha/change-management-hukdeq/README.md) | [Enterprise Governance](../../entities/v1-alpha/enterprise-governance-uas48u/README.md) | — (untyped) |
 | [Change Management](../../entities/v1-alpha/change-management-hukdeq/README.md) | [Organizational Design](../../entities/v1-alpha/organizational-design-vanefq/README.md) | — (untyped) |
 | [Continuity Management](../../entities/v1-alpha/continuity-management-v3rn6u/README.md) | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | — (untyped) |
@@ -63,8 +66,14 @@ Recorded `related_capabilities` references between canonical capabilities. Typed
 | [Strategy Formulation](../../entities/v1-alpha/strategy-formulation-sf7q2x/README.md) | [Enterprise Governance](../../entities/v1-alpha/enterprise-governance-uas48u/README.md) | — (untyped) |
 | [Strategy Formulation](../../entities/v1-alpha/strategy-formulation-sf7q2x/README.md) | [Organizational Design](../../entities/v1-alpha/organizational-design-vanefq/README.md) | — (untyped) |
 | [Strategy Formulation](../../entities/v1-alpha/strategy-formulation-sf7q2x/README.md) | [Enterprise Performance Management](../../entities/v1-alpha/enterprise-performance-management-5fxren/README.md) | — (untyped) |
+| [Subscription and Service Management](../../entities/v1-alpha/subscription-and-service-management-p3n8rt/README.md) | [Customer Management](../../entities/v1-alpha/customer-management-f3n8wb/README.md) | — (untyped) |
+| [Subscription and Service Management](../../entities/v1-alpha/subscription-and-service-management-p3n8rt/README.md) | [Offering Management](../../entities/v1-alpha/offering-management-6egkc8/README.md) | — (untyped) |
+| [Subscription and Service Management](../../entities/v1-alpha/subscription-and-service-management-p3n8rt/README.md) | [Billing and Revenue Management](../../entities/v1-alpha/billing-and-revenue-management-k7mwq2/README.md) | — (untyped) |
 | [Supplier Management](../../entities/v1-alpha/supplier-management-d6fuj4/README.md) | [Partner Management](../../entities/v1-alpha/partner-management-cp3vdb/README.md) | — (untyped) |
 | [Supplier Management](../../entities/v1-alpha/supplier-management-d6fuj4/README.md) | [Sourcing and Procurement](../../entities/v1-alpha/sourcing-and-procurement-esucp4/README.md) | — (untyped) |
+| [Talent Management](../../entities/v1-alpha/talent-management-v2qw9c/README.md) | [Workforce Management](../../entities/v1-alpha/workforce-management-9e8d8s/README.md) | — (untyped) |
+| [Talent Management](../../entities/v1-alpha/talent-management-v2qw9c/README.md) | [Workforce Planning](../../entities/v1-alpha/workforce-planning-b43rhm/README.md) | — (untyped) |
+| [Talent Management](../../entities/v1-alpha/talent-management-v2qw9c/README.md) | [Organizational Design](../../entities/v1-alpha/organizational-design-vanefq/README.md) | — (untyped) |
 | [Technology Enablement](../../entities/v1-alpha/technology-enablement-y6nkws/README.md) | [Technology Management](../../entities/v1-alpha/technology-management-maus5n/README.md) | — (untyped) |
 | [Technology Enablement](../../entities/v1-alpha/technology-enablement-y6nkws/README.md) | [Operations Management](../../entities/v1-alpha/operations-management-pm3w8k/README.md) | — (untyped) |
 | [Technology Enablement](../../entities/v1-alpha/technology-enablement-y6nkws/README.md) | [Information Management](../../entities/v1-alpha/information-management-6vjgdh/README.md) | — (untyped) |

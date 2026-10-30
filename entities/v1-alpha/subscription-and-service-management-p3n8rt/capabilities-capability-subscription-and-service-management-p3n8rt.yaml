@@ -1,0 +1,126 @@
+id: capabilities:capability-subscription-and-service-management-p3n8rt
+type: BusinessCapability
+name: Subscription and Service Management
+definition: The ability to manage the subscriber and service-instance lifecycle from order through activation,
+  change, suspension, and retirement across commercial service offerings.
+version: 1.0.0
+metamodel_pin: 1.0.0
+lifecycle_status: active
+capability_layer: operational
+purpose: The enterprise requires Subscription and Service Management so each subscriber's services and
+  entitlements stay accurate from acquisition through retirement.
+outcome: Subscribers and service instances are accurate, active, and retired deliberately.
+business_object: Subscriber
+ecf:
+  primary:
+    domain: party-relationship
+    stage: operate
+  secondary:
+  - domain: product-value
+    stage: operate
+  - domain: enablement-operations
+    stage: operate
+related_capabilities:
+- capabilities:capability-customer-management-f3n8wb
+- capabilities:capability-offering-management-6egkc8
+- capabilities:capability-billing-and-revenue-management-k7mwq2
+evidence:
+  sources:
+  - SRC-023
+  - SRC-026
+  - SRC-027
+  rationale: 'Business-object demand: 8 canonical objects in the cluster (subscriber, subscription, service-instance,
+    service-number, sim-profile, tariff-plan, usage-record, prepaid-balance; SRC-026) reference no capability
+    - the densest uncovered cluster; cross-signal convergence recorded in the coverage-gap register (SRC-027);
+    ability class corroborated against cross-industry process classification (SRC-023).'
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-10-31'
+    actor: Emmanuel A. Otchere, coverage-gap candidate register C-02 (CR-DEA-BC-62)
+  - stage: observed
+    date: '2026-10-31'
+    actor: 'Emmanuel A. Otchere, business-object demand scan (SRC-026): 8 canonical objects in the cluster
+      reference no capability'
+  - stage: corroborated
+    date: '2026-10-31'
+    actor: 'Emmanuel A. Otchere, cross-signal convergence in the coverage-gap register (SRC-027): ECF
+      cell + object cluster + process-mirror signals agree'
+  - stage: normalized
+    date: '2026-10-31'
+    actor: Emmanuel A. Otchere, distinctness pass against neighbouring capabilities recorded in boundary
+  - stage: ecf-mapped
+    date: '2026-10-31'
+    actor: Emmanuel A. Otchere, ECF overlay (party-relationship / operate)
+  - stage: reviewed
+    date: '2026-10-31'
+    actor: Emmanuel A. Otchere, admission review under the CR-DEA-BC-62 tranche method
+  - stage: canonical
+    date: '2026-10-31'
+    actor: Emmanuel A. Otchere, admission PR (tranche T1)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: Object-demand evidence at density 8 (SRC-026 cluster; the catalog's multi-industry corpus
+  carries a full commercial-services flavor) with no owning capability; distinct from Customer Management
+  (the relationship) and Offering Management (the offer, not the provisioned instance). Enterprise-generality
+  level pending the next generality-matrix refresh (CR-DEA-BC-62 method).
+ecf_rationale: 'Mapped at admission under the CR-DEA-BC-13 semantic-center-of-gravity rule. The defining
+  activity of Subscription and Service Management is sustained subscriber and service-instance stewardship
+  (party-relationship/operate); entitlement realization (product-value/operate) and the service-delivery
+  interface (enablement-operations/operate) participate but do not define it. Cell occupancy: party-relationship/operate
+  (deepened), product-value/operate, enablement-operations/operate (deepened).'
+boundary: Governs the subscriber and service-instance lifecycle; does not design offerings (Offering Management),
+  bill (Billing and Revenue Management), or operate the platforms that deliver the service (Technology
+  Enablement).
+non_examples:
+- A subscriber database (an artifact)
+- A CRM (a system)
+specialization_boundary: Service families (mobile, fixed, content) are specialization; the subscriber
+  lifecycle ability is not.
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: mapped
+  canonicalReferences:
+  - kind: coordinate
+    domain: PartyAndRelationship
+    stage: Operate
+    identifier: ecf:partyAndRelationship.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: primary
+  - kind: coordinate
+    domain: ProductAndValue
+    stage: Operate
+    identifier: ecf:productAndValue.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  - kind: coordinate
+    domain: EnablementAndOperations
+    stage: Operate
+    identifier: ecf:enablementAndOperations.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  extensions:
+  - name: kebab-case-domain-vocabulary
+    kind: display-vocabulary
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven ECF Stages (see mapping).
+      Display-only; resolves to canonical PascalCase enums for the gate.
+    doesNotRedefine: true
+    mapping:
+      governance-existence: GovernanceAndExistence
+      strategy-direction: StrategyAndDirection
+      agency-organization: AgencyAndOrganization
+      party-relationship: PartyAndRelationship
+      product-value: ProductAndValue
+      enablement-operations: EnablementAndOperations
+      finance-accounting: FinanceAndAccounting
+      _stage_conceive: Conceive
+      _stage_design: Design
+      _stage_build: Build
+      _stage_activate: Activate
+      _stage_operate: Operate
+      _stage_improve: Improve
+      _stage_retire: Retire

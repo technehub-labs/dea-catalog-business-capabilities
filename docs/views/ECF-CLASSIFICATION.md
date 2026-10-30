@@ -13,6 +13,10 @@ Grouped by each capability's governed primary ECF coordinate (semantic center of
 - Organizational Design
 - Workforce Planning
 
+## agency-organization / operate
+
+- Talent Management
+
 ## enablement-operations / operate
 
 - Asset Management
@@ -29,6 +33,7 @@ Grouped by each capability's governed primary ECF coordinate (semantic center of
 
 ## finance-accounting / operate
 
+- Billing and Revenue Management
 - Financial Resource Management
 
 ## governance-existence / activate
@@ -58,6 +63,7 @@ Grouped by each capability's governed primary ECF coordinate (semantic center of
 ## party-relationship / operate
 
 - Customer Management
+- Subscription and Service Management
 - Supplier Management
 
 ## product-value / conceive

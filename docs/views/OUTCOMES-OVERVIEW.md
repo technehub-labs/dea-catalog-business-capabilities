@@ -6,6 +6,7 @@ Outcome (intended contribution, never a guarantee) and business-object focus per
 | Capability | Outcome | Business object |
 |---|---|---|
 | [Asset Management](../../entities/v1-alpha/asset-management-judtwr/README.md) | Assets are known, maintained, utilized, and retired deliberately. | Asset |
+| [Billing and Revenue Management](../../entities/v1-alpha/billing-and-revenue-management-k7mwq2/README.md) | Charges are billed accurately, collected on time, and reconciled to revenue. | Invoice |
 | [Change Management](../../entities/v1-alpha/change-management-hukdeq/README.md) | Change is initiated, sequenced, landed, and its effects verified, rather than merely happening. | Change |
 | [Continuity Management](../../entities/v1-alpha/continuity-management-v3rn6u/README.md) | Delivery continues at acceptable predefined capacity through disruption; response and recovery are prepared, exercised, and validated. | Continuity |
 | [Customer Management](../../entities/v1-alpha/customer-management-f3n8wb/README.md) | A known, managed customer base whose lifecycle is deliberate rather than accidental. | Customer |
@@ -29,7 +30,9 @@ Outcome (intended contribution, never a guarantee) and business-object focus per
 | [Sourcing and Procurement](../../entities/v1-alpha/sourcing-and-procurement-esucp4/README.md) | The enterprise obtains what it needs, at deliberate terms, with a clean acquisition record. | Acquisition Cycle |
 | [Strategic Planning](../../entities/v1-alpha/strategic-planning-k3rz7a/README.md) | A maintained plan that operationalizes strategy into choices the enterprise can govern and fund. | Plan |
 | [Strategy Formulation](../../entities/v1-alpha/strategy-formulation-sf7q2x/README.md) | An explicit, current statement of enterprise direction that constrains and guides every other capability. | Enterprise |
+| [Subscription and Service Management](../../entities/v1-alpha/subscription-and-service-management-p3n8rt/README.md) | Subscribers and service instances are accurate, active, and retired deliberately. | Subscriber |
 | [Supplier Management](../../entities/v1-alpha/supplier-management-d6fuj4/README.md) | A managed supply base whose performance, risk, and lifecycle are deliberate. | Supplier |
+| [Talent Management](../../entities/v1-alpha/talent-management-v2qw9c/README.md) | Employees are onboarded, developed, reviewed, and separated deliberately. | Employee |
 | [Technology Enablement](../../entities/v1-alpha/technology-enablement-y6nkws/README.md) | Technology services and platforms are reliable, available, performant, and adapted to changing demand from the capabilities that depend on them. | Technology Service |
 | [Technology Management](../../entities/v1-alpha/technology-management-maus5n/README.md) | Technology choices are deliberate, funded, lifecycle-managed, and answerable to strategy. | Technology |
 | [Workforce Management](../../entities/v1-alpha/workforce-management-9e8d8s/README.md) | The enterprise has the agents it needs, human and artificial, developing, with deliberate entry and exit. | Workforce |
