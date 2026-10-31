@@ -2,8 +2,8 @@ catalog:
   abbreviation: BC
   counts:
     candidates: 3
-    canonical: 38
-    entities: 41
+    canonical: 40
+    entities: 43
     open_change_requests: 1
     research_files: 2
     retired: 0
@@ -61,6 +61,17 @@ catalog:
     state: canonical
     type: BusinessCapability
     version: 1.2.1
+  - candidate_count: 0
+    canonical_count: 1
+    id: capabilities:capability-audit-and-assurance-management-n7qv25
+    last_modified: '2026-10-31'
+    lifecycle_status: active
+    path: entities/v1-alpha/audit-and-assurance-management-n7qv25/capabilities-capability-audit-and-assurance-management-n7qv25.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-billing-and-revenue-management-k7mwq2
@@ -171,6 +182,17 @@ catalog:
     state: canonical
     type: BusinessCapability
     version: 2.0.1
+  - candidate_count: 0
+    canonical_count: 1
+    id: capabilities:capability-incident-and-problem-management-c2wk96
+    last_modified: '2026-10-31'
+    lifecycle_status: active
+    path: entities/v1-alpha/incident-and-problem-management-c2wk96/capabilities-capability-incident-and-problem-management-c2wk96.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-information-management-6vjgdh
@@ -486,6 +508,9 @@ catalog:
   - entity_id: capabilities:capability-asset-management-judtwr
     files: []
     path: entities/v1-alpha/asset-management-judtwr/research/
+  - entity_id: capabilities:capability-audit-and-assurance-management-n7qv25
+    files: []
+    path: entities/v1-alpha/audit-and-assurance-management-n7qv25/research/
   - entity_id: capabilities:capability-billing-and-revenue-management-k7mwq2
     files: []
     path: entities/v1-alpha/billing-and-revenue-management-k7mwq2/research/
@@ -518,6 +543,9 @@ catalog:
   - entity_id: capabilities:capability-idea-management-86dckf
     files: []
     path: entities/v1-alpha/idea-management-86dckf/research/
+  - entity_id: capabilities:capability-incident-and-problem-management-c2wk96
+    files: []
+    path: entities/v1-alpha/incident-and-problem-management-c2wk96/research/
   - entity_id: capabilities:capability-information-management-6vjgdh
     files: []
     path: entities/v1-alpha/information-management-6vjgdh/research/

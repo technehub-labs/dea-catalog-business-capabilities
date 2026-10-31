@@ -6,6 +6,9 @@ Recorded `related_capabilities` references between canonical capabilities. Typed
 | From | Reference | Type |
 |---|---|---|
 | [Asset Management](../../entities/v1-alpha/asset-management-judtwr/README.md) | [Facility Management](../../entities/v1-alpha/facility-management-tx73hb/README.md) | — (untyped) |
+| [Audit and Assurance Management](../../entities/v1-alpha/audit-and-assurance-management-n7qv25/README.md) | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | — (untyped) |
+| [Audit and Assurance Management](../../entities/v1-alpha/audit-and-assurance-management-n7qv25/README.md) | [Enterprise Governance](../../entities/v1-alpha/enterprise-governance-uas48u/README.md) | — (untyped) |
+| [Audit and Assurance Management](../../entities/v1-alpha/audit-and-assurance-management-n7qv25/README.md) | [Change Management](../../entities/v1-alpha/change-management-hukdeq/README.md) | — (untyped) |
 | [Billing and Revenue Management](../../entities/v1-alpha/billing-and-revenue-management-k7mwq2/README.md) | [Customer Management](../../entities/v1-alpha/customer-management-f3n8wb/README.md) | — (untyped) |
 | [Billing and Revenue Management](../../entities/v1-alpha/billing-and-revenue-management-k7mwq2/README.md) | [Financial Resource Management](../../entities/v1-alpha/financial-resource-management-cd3c7c/README.md) | — (untyped) |
 | [Billing and Revenue Management](../../entities/v1-alpha/billing-and-revenue-management-k7mwq2/README.md) | [Sourcing and Procurement](../../entities/v1-alpha/sourcing-and-procurement-esucp4/README.md) | — (untyped) |
@@ -31,6 +34,9 @@ Recorded `related_capabilities` references between canonical capabilities. Typed
 | [Financial Stewardship](../../entities/v1-alpha/financial-stewardship-c7xtfk/README.md) | [Enterprise Performance Management](../../entities/v1-alpha/enterprise-performance-management-5fxren/README.md) | — (untyped) |
 | [Idea Management](../../entities/v1-alpha/idea-management-86dckf/README.md) | [Change Management](../../entities/v1-alpha/change-management-hukdeq/README.md) | — (untyped) |
 | [Idea Management](../../entities/v1-alpha/idea-management-86dckf/README.md) | [Offering Management](../../entities/v1-alpha/offering-management-6egkc8/README.md) | — (untyped) |
+| [Incident and Problem Management](../../entities/v1-alpha/incident-and-problem-management-c2wk96/README.md) | [Operations Management](../../entities/v1-alpha/operations-management-pm3w8k/README.md) | — (untyped) |
+| [Incident and Problem Management](../../entities/v1-alpha/incident-and-problem-management-c2wk96/README.md) | [Technology Enablement](../../entities/v1-alpha/technology-enablement-y6nkws/README.md) | — (untyped) |
+| [Incident and Problem Management](../../entities/v1-alpha/incident-and-problem-management-c2wk96/README.md) | [Continuity Management](../../entities/v1-alpha/continuity-management-v3rn6u/README.md) | — (untyped) |
 | [Information Management](../../entities/v1-alpha/information-management-6vjgdh/README.md) | [Technology Management](../../entities/v1-alpha/technology-management-maus5n/README.md) | — (untyped) |
 | [Information Management](../../entities/v1-alpha/information-management-6vjgdh/README.md) | [Technology Enablement](../../entities/v1-alpha/technology-enablement-y6nkws/README.md) | — (untyped) |
 | [Insight Management](../../entities/v1-alpha/insight-management-ms4n9d/README.md) | [Information Management](../../entities/v1-alpha/information-management-6vjgdh/README.md) | — (untyped) |

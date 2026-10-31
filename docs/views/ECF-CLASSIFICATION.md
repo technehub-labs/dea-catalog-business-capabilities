@@ -18,6 +18,10 @@ Grouped by each capability's governed primary ECF coordinate (semantic center of
 
 - Talent Management
 
+## enablement-operations / improve
+
+- Incident and Problem Management
+
 ## enablement-operations / operate
 
 - Asset Management
@@ -56,6 +60,7 @@ Grouped by each capability's governed primary ECF coordinate (semantic center of
 
 ## governance-existence / improve
 
+- Audit and Assurance Management
 - Change Management
 
 ## party-relationship / conceive
