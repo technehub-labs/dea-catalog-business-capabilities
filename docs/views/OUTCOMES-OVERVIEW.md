@@ -18,12 +18,15 @@ Outcome (intended contribution, never a guarantee) and business-object focus per
 | [Idea Management](../../entities/v1-alpha/idea-management-86dckf/README.md) | Innovations are introduced to the market or brought into use, not merely ideated. | Idea |
 | [Information Management](../../entities/v1-alpha/information-management-6vjgdh/README.md) | Information is findable, trustworthy, retained correctly, and disposed of deliberately. | Information |
 | [Insight Management](../../entities/v1-alpha/insight-management-ms4n9d/README.md) | Decisions are informed by derived intelligence. | Insight |
+| [Learning and Development](../../entities/v1-alpha/learning-and-development-b8qw5n/README.md) | Workforce skills close the gap to need through governed programs. | Training Program |
 | [Legal Matter Management](../../entities/v1-alpha/legal-matter-management-zzbd2u/README.md) | The enterprise's legal matters are conducted deliberately and its legal position is known. | Legal Matter |
 | [Marketing](../../entities/v1-alpha/marketing-xmc539/README.md) | Demand exists and is measurable; the enterprise is known to those it intends to serve. | Market/Customer |
 | [Offering Management](../../entities/v1-alpha/offering-management-6egkc8/README.md) | A deliberate offering portfolio whose lifecycle is managed end to end. | Offering |
 | [Operations Management](../../entities/v1-alpha/operations-management-pm3w8k/README.md) | Offerings are delivered, continuously, at the quality the enterprise commits to. | Operations |
+| [Order Management](../../entities/v1-alpha/order-management-t6wm3h/README.md) | Orders are fulfilled completely, accurately, and on time. | Order |
 | [Organizational Design](../../entities/v1-alpha/organizational-design-vanefq/README.md) | The enterprise has a structure whose roles, authorities, and coordination patterns align with its strategy and operating context, and can be revised deliberately rather than drifting. | Organization Structure |
 | [Partner Management](../../entities/v1-alpha/partner-management-cp3vdb/README.md) | A deliberate portfolio of alliances, channels, and ecosystem relationships. | Partner |
+| [Portfolio and Investment Management](../../entities/v1-alpha/portfolio-and-investment-management-m4kw72/README.md) | The initiative portfolio traces to strategy and earns its funding. | Project |
 | [Regulation Management](../../entities/v1-alpha/regulation-management-gya4d8/README.md) | Obligations are identified, interpreted, met, and the conformance is provable. | Regulation |
 | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | Exposures are known, owned, treated to appetite, and monitored. | Risk |
 | [Security Management](../../entities/v1-alpha/security-management-wmzc7c/README.md) | Protective posture is deliberate, proportionate, and demonstrably operating. | Asset/Information |

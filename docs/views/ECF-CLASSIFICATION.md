@@ -6,6 +6,7 @@ Grouped by each capability's governed primary ECF coordinate (semantic center of
 
 ## agency-organization / build
 
+- Learning and Development
 - Workforce Management
 
 ## agency-organization / design
@@ -63,6 +64,7 @@ Grouped by each capability's governed primary ECF coordinate (semantic center of
 ## party-relationship / operate
 
 - Customer Management
+- Order Management
 - Subscription and Service Management
 - Supplier Management
 
@@ -79,6 +81,10 @@ Grouped by each capability's governed primary ECF coordinate (semantic center of
 
 - Strategic Planning
 - Strategy Formulation
+
+## strategy-direction / design
+
+- Portfolio and Investment Management
 
 ## strategy-direction / operate
 

@@ -35,6 +35,8 @@ Recorded `related_capabilities` references between canonical capabilities. Typed
 | [Information Management](../../entities/v1-alpha/information-management-6vjgdh/README.md) | [Technology Enablement](../../entities/v1-alpha/technology-enablement-y6nkws/README.md) | — (untyped) |
 | [Insight Management](../../entities/v1-alpha/insight-management-ms4n9d/README.md) | [Information Management](../../entities/v1-alpha/information-management-6vjgdh/README.md) | — (untyped) |
 | [Insight Management](../../entities/v1-alpha/insight-management-ms4n9d/README.md) | [Enterprise Performance Management](../../entities/v1-alpha/enterprise-performance-management-5fxren/README.md) | — (untyped) |
+| [Learning and Development](../../entities/v1-alpha/learning-and-development-b8qw5n/README.md) | [Talent Management](../../entities/v1-alpha/talent-management-v2qw9c/README.md) | — (untyped) |
+| [Learning and Development](../../entities/v1-alpha/learning-and-development-b8qw5n/README.md) | [Workforce Management](../../entities/v1-alpha/workforce-management-9e8d8s/README.md) | — (untyped) |
 | [Legal Matter Management](../../entities/v1-alpha/legal-matter-management-zzbd2u/README.md) | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | — (untyped) |
 | [Marketing](../../entities/v1-alpha/marketing-xmc539/README.md) | [Customer Management](../../entities/v1-alpha/customer-management-f3n8wb/README.md) | — (untyped) |
 | [Marketing](../../entities/v1-alpha/marketing-xmc539/README.md) | [Offering Management](../../entities/v1-alpha/offering-management-6egkc8/README.md) | — (untyped) |
@@ -42,6 +44,9 @@ Recorded `related_capabilities` references between canonical capabilities. Typed
 | [Offering Management](../../entities/v1-alpha/offering-management-6egkc8/README.md) | [Operations Management](../../entities/v1-alpha/operations-management-pm3w8k/README.md) | — (untyped) |
 | [Operations Management](../../entities/v1-alpha/operations-management-pm3w8k/README.md) | [Offering Management](../../entities/v1-alpha/offering-management-6egkc8/README.md) | — (untyped) |
 | [Operations Management](../../entities/v1-alpha/operations-management-pm3w8k/README.md) | [Technology Enablement](../../entities/v1-alpha/technology-enablement-y6nkws/README.md) | — (untyped) |
+| [Order Management](../../entities/v1-alpha/order-management-t6wm3h/README.md) | [Customer Management](../../entities/v1-alpha/customer-management-f3n8wb/README.md) | — (untyped) |
+| [Order Management](../../entities/v1-alpha/order-management-t6wm3h/README.md) | [Billing and Revenue Management](../../entities/v1-alpha/billing-and-revenue-management-k7mwq2/README.md) | — (untyped) |
+| [Order Management](../../entities/v1-alpha/order-management-t6wm3h/README.md) | [Supplier Management](../../entities/v1-alpha/supplier-management-d6fuj4/README.md) | — (untyped) |
 | [Organizational Design](../../entities/v1-alpha/organizational-design-vanefq/README.md) | [Strategy Formulation](../../entities/v1-alpha/strategy-formulation-sf7q2x/README.md) | — (untyped) |
 | [Organizational Design](../../entities/v1-alpha/organizational-design-vanefq/README.md) | [Strategic Planning](../../entities/v1-alpha/strategic-planning-k3rz7a/README.md) | — (untyped) |
 | [Organizational Design](../../entities/v1-alpha/organizational-design-vanefq/README.md) | [Enterprise Governance](../../entities/v1-alpha/enterprise-governance-uas48u/README.md) | — (untyped) |
@@ -53,6 +58,9 @@ Recorded `related_capabilities` references between canonical capabilities. Typed
 | [Organizational Design](../../entities/v1-alpha/organizational-design-vanefq/README.md) | [Enterprise Performance Management](../../entities/v1-alpha/enterprise-performance-management-5fxren/README.md) | — (untyped) |
 | [Partner Management](../../entities/v1-alpha/partner-management-cp3vdb/README.md) | [Customer Management](../../entities/v1-alpha/customer-management-f3n8wb/README.md) | — (untyped) |
 | [Partner Management](../../entities/v1-alpha/partner-management-cp3vdb/README.md) | [Supplier Management](../../entities/v1-alpha/supplier-management-d6fuj4/README.md) | — (untyped) |
+| [Portfolio and Investment Management](../../entities/v1-alpha/portfolio-and-investment-management-m4kw72/README.md) | [Strategic Planning](../../entities/v1-alpha/strategic-planning-k3rz7a/README.md) | — (untyped) |
+| [Portfolio and Investment Management](../../entities/v1-alpha/portfolio-and-investment-management-m4kw72/README.md) | [Enterprise Performance Management](../../entities/v1-alpha/enterprise-performance-management-5fxren/README.md) | — (untyped) |
+| [Portfolio and Investment Management](../../entities/v1-alpha/portfolio-and-investment-management-m4kw72/README.md) | [Technology Management](../../entities/v1-alpha/technology-management-maus5n/README.md) | — (untyped) |
 | [Regulation Management](../../entities/v1-alpha/regulation-management-gya4d8/README.md) | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | — (untyped) |
 | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | [Regulation Management](../../entities/v1-alpha/regulation-management-gya4d8/README.md) | — (untyped) |
 | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | [Legal Matter Management](../../entities/v1-alpha/legal-matter-management-zzbd2u/README.md) | — (untyped) |
