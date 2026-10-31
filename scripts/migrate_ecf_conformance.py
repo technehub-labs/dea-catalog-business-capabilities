@@ -42,7 +42,7 @@ DOMAIN_ID = {
     'agency-organization': 'agencyOrganization',
     'party-relationship': 'partyRelationship',
     'product-value': 'productValue',
-    'enablement-operations': 'operationsEnablement',
+    'enablement-operations': 'enablementAndOperations',
     'finance-accounting': 'financeAccounting',
 }
 STAGE_MAP = {

@@ -19,6 +19,10 @@ release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
+### CR-DEA-BC-67: CR-006 Admission-Linkage Gate
+
+check_cr_index.py gains the --base-ref PR-scoped mode (mirroring IDM-008): a PR that adds canonical records without a change-requests/CR-*.md referencing each new record id now fails CI (blocking; report artifact). Motivating incident: the T1-T3 admissions needed retrospective CR files (CR-DEA-BC-66 section 3) - this gate makes that landing shape impossible to repeat. Incidental: migrate_ecf_conformance.py DOMAIN_MAP deprecated identifier form fixed per CR-ECF-012. Test suite extended with the org's first two-commit git fixture (12/12).
+
 ### CR-DEA-BC-66: T4 Admission and Coverage-Gap Programme Closure
 
 Final tranche: C-10 Audit and Assurance Management (governance-existence/improve) and C-11 Incident and Problem Management (enablement-operations/improve) admitted with full evidence ladders. Programme closed: 40 canonical capabilities (29 + 11); mechanically verified primary-cell occupancy 12/49 -> 19/49 (correcting the register's estimated base); open items recorded (candidate subtrees, C-12 specialization decision, generality-matrix refresh, typed relationships, realization). Index + discovery views regenerated (43 entities).

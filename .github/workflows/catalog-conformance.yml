@@ -80,6 +80,11 @@ jobs:
           git fetch origin main --depth=1 || true
           python scripts/check_id_system.py --base-ref origin/main \
               --report-path id-system-coherence-report.md
+      - name: Run CR admission-linkage gate (CR-DEA-BC-67; CR-006, PR-scoped)
+        run: |
+          git fetch origin main --depth=1 || true
+          python scripts/check_cr_index.py --base-ref origin/main \
+              --report-path cr-admission-linkage-report.md
 
       - name: Upload ID System coherence report
         uses: actions/upload-artifact@v4

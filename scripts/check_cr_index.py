@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import subprocess
 import sys
 import tempfile
 from pathlib import Path
@@ -144,16 +145,149 @@ def self_test() -> int:
     return 0
 
 
+# ---------------------------------------------------------------------------
+# CR-006: admission-CR linkage (PR-scoped; CR-DEA-BC-67)
+# ---------------------------------------------------------------------------
+
+CANONICAL_RECORD_DIR = "entities/v1-alpha/"
+CR_DIR_PREFIX = "change-requests/"
+CR_FILE_RE = re.compile(r"^CR-[A-Za-z]+-[A-Za-z0-9._-]+\.md$")
+
+
+def _changed_files(root: Path, base_ref: str) -> tuple[list[str], list[str]]:
+    """Return (added_files, all_changed_files) between base_ref and HEAD.
+
+    Mirrors check_id_system.py's IDM-008 diff acquisition (three-dot first,
+    two-dot fallback, empty on failure so a non-git context degrades to a
+    skip rather than a false block).
+    """
+    added: list[str] = []
+    for argv in (
+        ["git", "diff", "--name-only", "--diff-filter=A", f"{base_ref}...HEAD"],
+        ["git", "diff", "--name-only", "--diff-filter=A", base_ref, "HEAD"],
+    ):
+        res = subprocess.run(argv, cwd=str(root), capture_output=True, text=True)
+        if res.returncode == 0:
+            added = [ln.strip() for ln in res.stdout.splitlines() if ln.strip()]
+            break
+    res = subprocess.run(
+        ["git", "diff", "--name-only", f"{base_ref}...HEAD"],
+        cwd=str(root), capture_output=True, text=True,
+    )
+    changed = [ln.strip() for ln in res.stdout.splitlines() if ln.strip()] if res.returncode == 0 else []
+    return added, changed
+
+
+def _record_id_from_path(root: Path, rel: str) -> str | None:
+    """Canonical record id from a changed file path, or None.
+
+    The IDM-008 filter: entities/v1-alpha/<subtree>/<namespace>-*.yaml at
+    the subtree root (four path parts). State dirs (research/candidates/
+    retired) never sit at the subtree root, so they are excluded by
+    construction. The id is read from the file's own `id:` field.
+    """
+    if not rel.startswith(CANONICAL_RECORD_DIR) or not rel.endswith(".yaml"):
+        return None
+    parts = Path(rel).parts
+    if len(parts) != 4 or parts[1] != "v1-alpha":
+        return None
+    body = (root / rel).read_text(encoding="utf-8", errors="replace")
+    for line in body.splitlines()[:10]:
+        m = re.match(r"^id:\s*(\S+)\s*$", line)
+        if m:
+            return m.group(1)
+    return None
+
+
+def check_admission_linkage(root: Path, base_ref: str) -> list[dict]:
+    """CR-006: every added canonical record must be covered by a CR file
+    in the same diff that references the record's id.
+
+    Motivating incident (CR-DEA-BC-67): three admission PRs (#117/#118/#119)
+    landed eleven canonical records without CR documents; the retrospective
+    CR files were carried by a later PR. This rule makes that landing shape
+    fail CI in the PR that creates it.
+    """
+    added, changed = _changed_files(root, base_ref)
+    if not added and not changed:
+        return findings_empty()  # non-git or empty diff: degrade to skip
+
+    new_records: dict[str, str] = {}
+    for rel in added:
+        rid = _record_id_from_path(root, rel)
+        if rid:
+            new_records[rid] = rel
+    if not new_records:
+        return []
+
+    cr_bodies: list[str] = []
+    for rel in changed:
+        if rel.startswith(CR_DIR_PREFIX) and CR_FILE_RE.match(Path(rel).name):
+            p = root / rel
+            if p.exists():
+                cr_bodies.append(p.read_text(encoding="utf-8", errors="replace"))
+
+    findings: list[dict] = []
+    for rid, rel in sorted(new_records.items()):
+        if not any(rid in body for body in cr_bodies):
+            findings.append({
+                "rule": "CR-006",
+                "file": rel,
+                "diagnostic": (
+                    f"new canonical record {rid} has no change-request document in this PR "
+                    f"(no added change-requests/CR-*.md references it); every admission lands "
+                    f"with its CR file (house discipline; motivating incident CR-DEA-BC-67)"
+                ),
+            })
+    return findings
+
+
+def findings_empty() -> list[dict]:
+    return []
+
+
+def main_pr_mode(root: Path, base_ref: str, report_path: str | None) -> int:
+    findings = check_admission_linkage(root, base_ref)
+    if report_path:
+        added, changed = _changed_files(root, base_ref)
+        lines = [
+            "# CR Admission-Linkage Report (CR-006)",
+            "",
+            f"Base ref: `{base_ref}`",
+            f"Changed files: {len(changed)}; added files: {len(added)}",
+            f"Findings: {len(findings)} (all blocking)",
+            "",
+            "## Findings",
+            "",
+        ]
+        lines += ([f"- [{f['rule']}] `{f['file']}`: {f['diagnostic']}" for f in findings]
+                  if findings else ["None."])
+        Path(report_path).write_text("\n".join(lines) + "\n")
+    for f in findings:
+        print(f"[{f['rule']}] {f['file']}: {f['diagnostic']}")
+    verdict = "NON-CONFORMANT" if findings else "CONFORMANT"
+    print(f"CR Admission-Linkage (CR-DEA-BC-67; CR-006): {verdict}")
+    print(f"  blocking finding(s): {len(findings)}")
+    return 1 if findings else 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--strict", action="store_true",
                         help="exit non-zero on any finding (findings always exit non-zero)")
     parser.add_argument("--self-test", action="store_true",
                         help="run the embedded self-test fixtures")
+    parser.add_argument("--base-ref", default=None,
+                        help="CR-006 mode: admission-linkage check on files changed vs this ref")
+    parser.add_argument("--report-path", default=None,
+                        help="CR-006 mode: write the linkage report here")
     args = parser.parse_args(argv)
 
     if args.self_test:
         return self_test()
+
+    if args.base_ref:
+        return main_pr_mode(REPO_ROOT, args.base_ref, args.report_path)
 
     findings = evaluate(REPO_ROOT)
     if findings:
