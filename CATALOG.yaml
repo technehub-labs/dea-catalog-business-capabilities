@@ -64,7 +64,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-billing-and-revenue-management-k7mwq2
-    last_modified: '2026-10-30'
+    last_modified: '2026-10-31'
     lifecycle_status: active
     path: entities/v1-alpha/billing-and-revenue-management-k7mwq2/capabilities-capability-billing-and-revenue-management-k7mwq2.yaml
     research_count: 0
@@ -328,7 +328,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-subscription-and-service-management-p3n8rt
-    last_modified: '2026-10-30'
+    last_modified: '2026-10-31'
     lifecycle_status: active
     path: entities/v1-alpha/subscription-and-service-management-p3n8rt/capabilities-capability-subscription-and-service-management-p3n8rt.yaml
     research_count: 0
@@ -350,7 +350,7 @@ catalog:
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-talent-management-v2qw9c
-    last_modified: '2026-10-30'
+    last_modified: '2026-10-31'
     lifecycle_status: active
     path: entities/v1-alpha/talent-management-v2qw9c/capabilities-capability-talent-management-v2qw9c.yaml
     research_count: 0
