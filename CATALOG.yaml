@@ -2,8 +2,8 @@ catalog:
   abbreviation: BC
   counts:
     candidates: 3
-    canonical: 32
-    entities: 35
+    canonical: 35
+    entities: 38
     open_change_requests: 1
     research_files: 2
     retired: 0
@@ -193,6 +193,17 @@ catalog:
     state: canonical
     type: BusinessCapability
     version: 2.0.1
+  - candidate_count: 0
+    canonical_count: 1
+    id: capabilities:capability-learning-and-development-b8qw5n
+    last_modified: '2026-10-31'
+    lifecycle_status: active
+    path: entities/v1-alpha/learning-and-development-b8qw5n/capabilities-capability-learning-and-development-b8qw5n.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-legal-matter-management-zzbd2u
@@ -239,6 +250,17 @@ catalog:
     version: 2.0.1
   - candidate_count: 0
     canonical_count: 1
+    id: capabilities:capability-order-management-t6wm3h
+    last_modified: '2026-10-31'
+    lifecycle_status: active
+    path: entities/v1-alpha/order-management-t6wm3h/capabilities-capability-order-management-t6wm3h.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
+  - candidate_count: 0
+    canonical_count: 1
     id: capabilities:capability-organizational-design-vanefq
     last_modified: '2026-10-28'
     lifecycle_status: active
@@ -259,6 +281,17 @@ catalog:
     state: canonical
     type: BusinessCapability
     version: 1.1.2
+  - candidate_count: 0
+    canonical_count: 1
+    id: capabilities:capability-portfolio-and-investment-management-m4kw72
+    last_modified: '2026-10-31'
+    lifecycle_status: active
+    path: entities/v1-alpha/portfolio-and-investment-management-m4kw72/capabilities-capability-portfolio-and-investment-management-m4kw72.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-regulation-management-gya4d8
@@ -458,6 +491,9 @@ catalog:
   - entity_id: capabilities:capability-insight-management-ms4n9d
     files: []
     path: entities/v1-alpha/insight-management-ms4n9d/research/
+  - entity_id: capabilities:capability-learning-and-development-b8qw5n
+    files: []
+    path: entities/v1-alpha/learning-and-development-b8qw5n/research/
   - entity_id: capabilities:capability-legal-matter-management-zzbd2u
     files: []
     path: entities/v1-alpha/legal-matter-management-zzbd2u/research/
@@ -470,12 +506,18 @@ catalog:
   - entity_id: capabilities:capability-operations-management-pm3w8k
     files: []
     path: entities/v1-alpha/operations-management-pm3w8k/research/
+  - entity_id: capabilities:capability-order-management-t6wm3h
+    files: []
+    path: entities/v1-alpha/order-management-t6wm3h/research/
   - entity_id: capabilities:capability-organizational-design-vanefq
     files: []
     path: entities/v1-alpha/organizational-design-vanefq/research/
   - entity_id: capabilities:capability-partner-management-cp3vdb
     files: []
     path: entities/v1-alpha/partner-management-cp3vdb/research/
+  - entity_id: capabilities:capability-portfolio-and-investment-management-m4kw72
+    files: []
+    path: entities/v1-alpha/portfolio-and-investment-management-m4kw72/research/
   - entity_id: capabilities:capability-regulation-management-gya4d8
     files: []
     path: entities/v1-alpha/regulation-management-gya4d8/research/
