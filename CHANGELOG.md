@@ -19,6 +19,10 @@ release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
+### CR-DEA-BC-68: Candidate-Register Reconciliation
+
+The three CR-DEA-BC-13 investigation records carry their closure verdicts: epm-5fxren closed-admitted (canonical EPM, CR-DEA-BC-23), orgdesign-a7s8bf closed-admitted (canonical Organizational Design, CR-DEA-BC-14), relmgmt-nu73v9 closed-not-admitted per the Track C evidence-register verdict (abstract grouping only). Zero open investigations remain; the index's 3 candidate-state subtrees are closed investigations preserved per BC-09 section 8, not pending work. Coverage fully closed at 40 canonical.
+
 ### CR-DEA-BC-67: CR-006 Admission-Linkage Gate
 
 check_cr_index.py gains the --base-ref PR-scoped mode (mirroring IDM-008): a PR that adds canonical records without a change-requests/CR-*.md referencing each new record id now fails CI (blocking; report artifact). Motivating incident: the T1-T3 admissions needed retrospective CR files (CR-DEA-BC-66 section 3) - this gate makes that landing shape impossible to repeat. Incidental: migrate_ecf_conformance.py DOMAIN_MAP deprecated identifier form fixed per CR-ECF-012. Test suite extended with the org's first two-commit git fixture (12/12).

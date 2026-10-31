@@ -20,7 +20,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 0
     id: capabilities:candidate-epm-5fxren
-    last_modified: '2026-10-14'
+    last_modified: '2026-10-31'
     lifecycle_status: candidate
     path: entities/v1-alpha/epm-5fxren/candidates/epm.yaml
     research_count: 0
@@ -31,7 +31,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 0
     id: capabilities:candidate-orgdesign-a7s8bf
-    last_modified: '2026-10-14'
+    last_modified: '2026-10-31'
     lifecycle_status: candidate
     path: entities/v1-alpha/orgdesign-a7s8bf/candidates/orgdesign.yaml
     research_count: 0
@@ -42,7 +42,7 @@ catalog:
   - candidate_count: 1
     canonical_count: 0
     id: capabilities:candidate-relmgmt-nu73v9
-    last_modified: '2026-10-14'
+    last_modified: '2026-10-31'
     lifecycle_status: candidate
     path: entities/v1-alpha/relmgmt-nu73v9/candidates/relmgmt.yaml
     research_count: 0
