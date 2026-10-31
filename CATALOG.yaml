@@ -2,8 +2,8 @@ catalog:
   abbreviation: BC
   counts:
     candidates: 3
-    canonical: 29
-    entities: 32
+    canonical: 32
+    entities: 35
     open_change_requests: 1
     research_files: 2
     retired: 0
@@ -61,6 +61,17 @@ catalog:
     state: canonical
     type: BusinessCapability
     version: 1.2.1
+  - candidate_count: 0
+    canonical_count: 1
+    id: capabilities:capability-billing-and-revenue-management-k7mwq2
+    last_modified: '2026-10-31'
+    lifecycle_status: active
+    path: entities/v1-alpha/billing-and-revenue-management-k7mwq2/capabilities-capability-billing-and-revenue-management-k7mwq2.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-change-management-hukdeq
@@ -314,6 +325,17 @@ catalog:
     state: canonical
     type: BusinessCapability
     version: 2.0.1
+  - candidate_count: 0
+    canonical_count: 1
+    id: capabilities:capability-subscription-and-service-management-p3n8rt
+    last_modified: '2026-10-31'
+    lifecycle_status: active
+    path: entities/v1-alpha/subscription-and-service-management-p3n8rt/capabilities-capability-subscription-and-service-management-p3n8rt.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
   - candidate_count: 1
     canonical_count: 1
     id: capabilities:capability-supplier-management-d6fuj4
@@ -325,6 +347,17 @@ catalog:
     state: canonical
     type: BusinessCapability
     version: 1.2.2
+  - candidate_count: 0
+    canonical_count: 1
+    id: capabilities:capability-talent-management-v2qw9c
+    last_modified: '2026-10-31'
+    lifecycle_status: active
+    path: entities/v1-alpha/talent-management-v2qw9c/capabilities-capability-talent-management-v2qw9c.yaml
+    research_count: 0
+    retired_count: 0
+    state: canonical
+    type: BusinessCapability
+    version: 1.0.0
   - candidate_count: 0
     canonical_count: 1
     id: capabilities:capability-technology-enablement-y6nkws
@@ -387,6 +420,9 @@ catalog:
   - entity_id: capabilities:capability-asset-management-judtwr
     files: []
     path: entities/v1-alpha/asset-management-judtwr/research/
+  - entity_id: capabilities:capability-billing-and-revenue-management-k7mwq2
+    files: []
+    path: entities/v1-alpha/billing-and-revenue-management-k7mwq2/research/
   - entity_id: capabilities:capability-change-management-hukdeq
     files: []
     path: entities/v1-alpha/change-management-hukdeq/research/
@@ -458,9 +494,15 @@ catalog:
   - entity_id: capabilities:capability-strategy-formulation-sf7q2x
     files: []
     path: entities/v1-alpha/strategy-formulation-sf7q2x/research/
+  - entity_id: capabilities:capability-subscription-and-service-management-p3n8rt
+    files: []
+    path: entities/v1-alpha/subscription-and-service-management-p3n8rt/research/
   - entity_id: capabilities:capability-supplier-management-d6fuj4
     files: []
     path: entities/v1-alpha/supplier-management-d6fuj4/research/
+  - entity_id: capabilities:capability-talent-management-v2qw9c
+    files: []
+    path: entities/v1-alpha/talent-management-v2qw9c/research/
   - entity_id: capabilities:capability-technology-enablement-y6nkws
     files: []
     path: entities/v1-alpha/technology-enablement-y6nkws/research/
