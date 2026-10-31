@@ -26,7 +26,10 @@ Outcome (intended contribution, never a guarantee) and business-object focus per
 | [Order Management](../../entities/v1-alpha/order-management-t6wm3h/README.md) | Orders are fulfilled completely, accurately, and on time. | Order |
 | [Organizational Design](../../entities/v1-alpha/organizational-design-vanefq/README.md) | The enterprise has a structure whose roles, authorities, and coordination patterns align with its strategy and operating context, and can be revised deliberately rather than drifting. | Organization Structure |
 | [Partner Management](../../entities/v1-alpha/partner-management-cp3vdb/README.md) | A deliberate portfolio of alliances, channels, and ecosystem relationships. | Partner |
+| [Policy Management](../../entities/v1-alpha/policy-management-w5qb87/README.md) | Conduct is policy-governed and policies are current and observable. | Policy |
 | [Portfolio and Investment Management](../../entities/v1-alpha/portfolio-and-investment-management-m4kw72/README.md) | The initiative portfolio traces to strategy and earns its funding. | Project |
+| [Privacy and Consent Management](../../entities/v1-alpha/privacy-and-consent-management-h3mw69/README.md) | Personal data is processed lawfully on a consented basis. | Consent Record |
+| [Product Development](../../entities/v1-alpha/product-development-q9nv34/README.md) | Products reach release with requirements validated and defects managed. | Product |
 | [Regulation Management](../../entities/v1-alpha/regulation-management-gya4d8/README.md) | Obligations are identified, interpreted, met, and the conformance is provable. | Regulation |
 | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | Exposures are known, owned, treated to appetite, and monitored. | Risk |
 | [Security Management](../../entities/v1-alpha/security-management-wmzc7c/README.md) | Protective posture is deliberate, proportionate, and demonstrably operating. | Asset/Information |

@@ -45,11 +45,13 @@ Grouped by each capability's governed primary ECF coordinate (semantic center of
 
 - Enterprise Governance
 - Legal Matter Management
+- Policy Management
 - Risk Management
 
 ## governance-existence / design
 
 - Continuity Management
+- Privacy and Consent Management
 - Security Management
 
 ## governance-existence / improve
@@ -72,6 +74,10 @@ Grouped by each capability's governed primary ECF coordinate (semantic center of
 
 - Idea Management
 - Offering Management
+
+## product-value / design
+
+- Product Development
 
 ## strategy-direction / build
 
