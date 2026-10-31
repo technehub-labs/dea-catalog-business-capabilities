@@ -29,7 +29,11 @@ All eleven register candidates C-01..C-11 are admitted canonical: the catalog no
 
 **Verified cell arithmetic (mechanical, replacing the register's estimates):** primary-cell occupancy is **19 of 49** post-programme, up from a mechanically verified **12 of 49** pre-programme — seven new primary cells (finance-accounting/operate, agency-organization/{operate, build}, strategy-direction/design, product-value/design, governance-existence/improve, enablement-operations/improve). This corrects the COVERAGE-GAP-REGISTER erratum (which restated the draft's 15-cell base); the estimates relied on hand-tallying where the mechanical extraction is authoritative. Secondary-coordinate occupancy deepens party-relationship/operate, finance-accounting/operate, governance-existence/{conceive, operate}, and enablement-operations/operate beyond the primary-cell count.
 
-## 3. Open items recorded (not fixed here)
+## 3. Process correction carried by this CR
+
+T1-T3 (CR-DEA-BC-63/64/65) landed as admissions but without their own CR documents or register rows - the tranche commit messages carried the CR numbers while the documents were deferred. This CR lands the three retrospective CR files (Status Landed, with their verified squash SHAs) and the four register rows. The correction is recorded here rather than by rewriting the landed PRs (landed CRs are immutable; the register's Notes fields carry the pointer).
+
+## 4. Open items recorded (not fixed here)
 
 1. The three candidate-only subtrees (their promotion is their own research thread).
 2. C-12 Network and Production Asset Operations (industry-specialization decision per FOUNDATIONS D7).
@@ -37,13 +41,13 @@ All eleven register candidates C-01..C-11 are admitted canonical: the catalog no
 4. Typed-relationship population for the new records' `related_capabilities` (RES-1 family, per-assertion evidence).
 5. `realization` blocks remain unpopulated (processes scheme exercisable; `information` unblockable against `dea:information-asset-*`).
 
-## 4. Acceptance criteria
+## 5. Acceptance criteria
 
 1. Gates 1-15 green with 43 entities (40 canonical / 3 candidates).
 2. Discovery views regenerated.
 3. Register row + CHANGELOG entry.
 
-## 5. NOT-list
+## 6. NOT-list
 
 1. No further admissions in this programme.
 2. No schema, vocabulary, or ECF changes.
