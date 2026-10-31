@@ -1,0 +1,126 @@
+id: capabilities:capability-privacy-and-consent-management-h3mw69
+type: BusinessCapability
+name: Privacy and Consent Management
+definition: The ability to govern personal-data processing and consent so privacy obligations are met
+  across the information lifecycle.
+version: 1.0.0
+metamodel_pin: 1.0.0
+lifecycle_status: active
+capability_layer: support
+purpose: The enterprise requires Privacy and Consent Management so personal data is processed on a lawful,
+  consented basis across its lifecycle.
+outcome: Personal data is processed lawfully on a consented basis.
+business_object: Consent Record
+ecf:
+  primary:
+    domain: governance-existence
+    stage: design
+  secondary:
+  - domain: governance-existence
+    stage: operate
+  - domain: party-relationship
+    stage: operate
+related_capabilities:
+- capabilities:capability-regulation-management-gya4d8
+- capabilities:capability-information-management-6vjgdh
+- capabilities:capability-security-management-wmzc7c
+evidence:
+  sources:
+  - SRC-023
+  - SRC-026
+  - SRC-027
+  rationale: 'Business-object demand: 2 canonical objects in the cluster (consent-record, party-credential;
+    SRC-026) reference no capability; the information-classes catalog binds PII to lawful-basis and data-subject-rights
+    controls (dea-catalog-controls records) with no owning capability; cross-signal convergence recorded
+    in the coverage-gap register (SRC-027); ability class corroborated against cross-industry process
+    classification (SRC-023).'
+provenance:
+  ladder_passage:
+  - stage: candidate
+    date: '2026-10-31'
+    actor: Emmanuel A. Otchere, coverage-gap candidate register C-09 (CR-DEA-BC-62)
+  - stage: observed
+    date: '2026-10-31'
+    actor: 'Emmanuel A. Otchere, business-object demand scan (SRC-026): 2 canonical objects in the cluster
+      reference no capability'
+  - stage: corroborated
+    date: '2026-10-31'
+    actor: 'Emmanuel A. Otchere, cross-signal convergence in the coverage-gap register (SRC-027): ECF
+      cell + object cluster + process-mirror signals agree'
+  - stage: normalized
+    date: '2026-10-31'
+    actor: Emmanuel A. Otchere, distinctness pass against neighbouring capabilities recorded in boundary
+  - stage: ecf-mapped
+    date: '2026-10-31'
+    actor: Emmanuel A. Otchere, ECF overlay (governance-existence / design)
+  - stage: reviewed
+    date: '2026-10-31'
+    actor: Emmanuel A. Otchere, admission review under the CR-DEA-BC-62 tranche method
+  - stage: canonical
+    date: '2026-10-31'
+    actor: Emmanuel A. Otchere, admission PR (tranche T3)
+specialization:
+  allowed: true
+  industry_examples: []
+why_capability: 'Object-demand evidence (SRC-026 cluster) plus the cross-catalog control pull: the PII
+  information class mandates lawful-basis and data-subject-rights controls whose obligations need an owning
+  capability; distinct from Regulation Management (external obligation intake) and Security Management
+  (threat-based protection). Enterprise-generality level pending the next generality-matrix refresh (CR-DEA-BC-62
+  method).'
+ecf_rationale: 'Mapped at admission under the CR-DEA-BC-13 semantic-center-of-gravity rule. The defining
+  activity of Privacy and Consent Management is privacy-by-design shaping (design); consent operations
+  (governance operate) and the party interface (party-relationship/operate) participate but do not define
+  it. Cell occupancy: governance-existence/{design, operate}, party-relationship/operate (deepened).'
+boundary: Governs personal-data processing and consent; does not manage security events (Security Management)
+  or the information estate (Information Management).
+non_examples:
+- A consent form (an artifact)
+- A consent-management platform (a system)
+specialization_boundary: Privacy regimes (GDPR, CCPA) are specialization; the privacy-governance ability
+  is not.
+ecfConformance:
+  framework: EnterpriseConceptFramework
+  contractVersion: 1.0.0
+  profile: dea:ecf@1.0.0
+  status: conformant-with-extension
+  affiliation: mapped
+  canonicalReferences:
+  - kind: coordinate
+    domain: GovernanceAndExistence
+    stage: Design
+    identifier: ecf:governanceExistence.design
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: primary
+  - kind: coordinate
+    domain: GovernanceAndExistence
+    stage: Operate
+    identifier: ecf:governanceExistence.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  - kind: coordinate
+    domain: PartyAndRelationship
+    stage: Operate
+    identifier: ecf:partyRelationship.operate
+    schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
+    role: secondary
+  extensions:
+  - name: kebab-case-domain-vocabulary
+    kind: display-vocabulary
+    description: Catalog-side kebab-case labels for the seven ECF Domains and seven ECF Stages (see mapping).
+      Display-only; resolves to canonical PascalCase enums for the gate.
+    doesNotRedefine: true
+    mapping:
+      governance-existence: GovernanceAndExistence
+      strategy-direction: StrategyAndDirection
+      agency-organization: AgencyAndOrganization
+      party-relationship: PartyAndRelationship
+      product-value: ProductAndValue
+      enablement-operations: EnablementAndOperations
+      finance-accounting: FinanceAndAccounting
+      _stage_conceive: Conceive
+      _stage_design: Design
+      _stage_build: Build
+      _stage_activate: Activate
+      _stage_operate: Operate
+      _stage_improve: Improve
+      _stage_retire: Retire

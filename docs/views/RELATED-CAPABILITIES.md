@@ -58,9 +58,18 @@ Recorded `related_capabilities` references between canonical capabilities. Typed
 | [Organizational Design](../../entities/v1-alpha/organizational-design-vanefq/README.md) | [Enterprise Performance Management](../../entities/v1-alpha/enterprise-performance-management-5fxren/README.md) | — (untyped) |
 | [Partner Management](../../entities/v1-alpha/partner-management-cp3vdb/README.md) | [Customer Management](../../entities/v1-alpha/customer-management-f3n8wb/README.md) | — (untyped) |
 | [Partner Management](../../entities/v1-alpha/partner-management-cp3vdb/README.md) | [Supplier Management](../../entities/v1-alpha/supplier-management-d6fuj4/README.md) | — (untyped) |
+| [Policy Management](../../entities/v1-alpha/policy-management-w5qb87/README.md) | [Enterprise Governance](../../entities/v1-alpha/enterprise-governance-uas48u/README.md) | — (untyped) |
+| [Policy Management](../../entities/v1-alpha/policy-management-w5qb87/README.md) | [Regulation Management](../../entities/v1-alpha/regulation-management-gya4d8/README.md) | — (untyped) |
+| [Policy Management](../../entities/v1-alpha/policy-management-w5qb87/README.md) | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | — (untyped) |
 | [Portfolio and Investment Management](../../entities/v1-alpha/portfolio-and-investment-management-m4kw72/README.md) | [Strategic Planning](../../entities/v1-alpha/strategic-planning-k3rz7a/README.md) | — (untyped) |
 | [Portfolio and Investment Management](../../entities/v1-alpha/portfolio-and-investment-management-m4kw72/README.md) | [Enterprise Performance Management](../../entities/v1-alpha/enterprise-performance-management-5fxren/README.md) | — (untyped) |
 | [Portfolio and Investment Management](../../entities/v1-alpha/portfolio-and-investment-management-m4kw72/README.md) | [Technology Management](../../entities/v1-alpha/technology-management-maus5n/README.md) | — (untyped) |
+| [Privacy and Consent Management](../../entities/v1-alpha/privacy-and-consent-management-h3mw69/README.md) | [Regulation Management](../../entities/v1-alpha/regulation-management-gya4d8/README.md) | — (untyped) |
+| [Privacy and Consent Management](../../entities/v1-alpha/privacy-and-consent-management-h3mw69/README.md) | [Information Management](../../entities/v1-alpha/information-management-6vjgdh/README.md) | — (untyped) |
+| [Privacy and Consent Management](../../entities/v1-alpha/privacy-and-consent-management-h3mw69/README.md) | [Security Management](../../entities/v1-alpha/security-management-wmzc7c/README.md) | — (untyped) |
+| [Product Development](../../entities/v1-alpha/product-development-q9nv34/README.md) | [Offering Management](../../entities/v1-alpha/offering-management-6egkc8/README.md) | — (untyped) |
+| [Product Development](../../entities/v1-alpha/product-development-q9nv34/README.md) | [Idea Management](../../entities/v1-alpha/idea-management-86dckf/README.md) | — (untyped) |
+| [Product Development](../../entities/v1-alpha/product-development-q9nv34/README.md) | [Marketing](../../entities/v1-alpha/marketing-xmc539/README.md) | — (untyped) |
 | [Regulation Management](../../entities/v1-alpha/regulation-management-gya4d8/README.md) | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | — (untyped) |
 | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | [Regulation Management](../../entities/v1-alpha/regulation-management-gya4d8/README.md) | — (untyped) |
 | [Risk Management](../../entities/v1-alpha/risk-management-h9uxdw/README.md) | [Legal Matter Management](../../entities/v1-alpha/legal-matter-management-zzbd2u/README.md) | — (untyped) |
