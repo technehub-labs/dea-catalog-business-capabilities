@@ -117,3 +117,4 @@ Landed CRs are immutable; corrections are recorded here.
 ## Ordering note
 
 CR-DEA-BC-02 executes ahead of CR-DEA-BC-01 by design: the investigation produces raw material; the method CR defines how that material is judged. Acceptance of CR-DEA-BC-01 does not retro-invalidate the research artifacts; it gates their promotion. Nothing becomes canonical until it passes the method.
+| [CR-DEA-BC-66](CR-DEA-BC-66-t4-admission-and-programme-closure.md) | T4 admission and programme closure | Landed (this PR) | C-10 Audit and Assurance Management + C-11 Incident and Problem Management admitted (governance and enablement improve cells). Programme closure: 40 canonical capabilities; verified primary-cell occupancy 12/49 -> 19/49 (mechanical; corrects the register's 15-base estimate). Open items recorded: candidate subtrees, C-12 specialization decision, generality-matrix refresh, typed relationships, realization blocks. |

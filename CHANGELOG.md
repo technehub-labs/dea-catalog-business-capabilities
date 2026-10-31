@@ -19,6 +19,10 @@ release-cut procedure (gated by the pre-release CI verification contract;
 GPG-signed; documented in the prior-cut history table).
 ## [Unreleased]
 
+### CR-DEA-BC-66: T4 Admission and Coverage-Gap Programme Closure
+
+Final tranche: C-10 Audit and Assurance Management (governance-existence/improve) and C-11 Incident and Problem Management (enablement-operations/improve) admitted with full evidence ladders. Programme closed: 40 canonical capabilities (29 + 11); mechanically verified primary-cell occupancy 12/49 -> 19/49 (correcting the register's estimated base); open items recorded (candidate subtrees, C-12 specialization decision, generality-matrix refresh, typed relationships, realization). Index + discovery views regenerated (43 entities).
+
 ### CR-DEA-BC-62: Coverage-Gap Candidate Register and Tranche Method
 
 Three-signal coverage analysis (15/49 ECF cells occupied; 70/74 canonical business objects referenced by no capability per new SRC-026; the processes catalog's 7x7 process structure as the mirror signal) identifies candidate capabilities C-01..C-11, with C-12 deferred to an industry-specialization decision. Register landed at catalog-research/COVERAGE-GAP-REGISTER.md (with an erratum correcting the workspace draft's cell arithmetic); SRC-026/SRC-027 added to the evidence register; tranche sequence fixed (CR-DEA-BC-63..66: T1 billing/revenue + subscription/service + talent; T2 order + learning + portfolio; T3 product + policy + privacy; T4 audit + incident). No records admitted in this CR.

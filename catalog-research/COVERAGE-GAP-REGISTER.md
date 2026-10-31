@@ -1,6 +1,8 @@
 # CR-DEA-BC-GAP-000: Capability Coverage Gap Analysis (Candidate Identification)
 
-**Date:** 2026-11-02 · **Landed by:** CR-DEA-BC-62 · **Status:** Adopted register (candidate identification; admission proceeds tranche-by-tranche under the evidence ladder)
+**Date:** 2026-11-02 · **Landed by:** CR-DEA-BC-62 · **Status:** Programme COMPLETE (CR-DEA-BC-63..66; all eleven candidates admitted; closure arithmetic in CR-DEA-BC-66 §2)
+
+> **Second correction (CR-DEA-BC-66 §2, mechanical):** the pre-programme primary-cell base was **12 of 49**, not 15 (the erratum below relied on hand-tallying; the mechanical extraction is authoritative). Post-programme occupancy is **19 of 49** primary cells across 40 canonical capabilities.
 
 > **Erratum against the workspace draft (CR-DEA-BC-GAP-000):** the draft said 17 of 49 cells occupied; the correct count from the same extraction is **15 of 49** (2 agency + 1 enablement + 2 finance + 4 governance + 2 party + 1 product + 3 strategy). Post-admission arithmetic below is restated on the corrected base: admitting C-01..C-11 fills 7 new cells (finance-accounting/operate is deepened by C-01, not newly filled), taking coverage to **22 of 49**.
 

@@ -6,6 +6,7 @@ Outcome (intended contribution, never a guarantee) and business-object focus per
 | Capability | Outcome | Business object |
 |---|---|---|
 | [Asset Management](../../entities/v1-alpha/asset-management-judtwr/README.md) | Assets are known, maintained, utilized, and retired deliberately. | Asset |
+| [Audit and Assurance Management](../../entities/v1-alpha/audit-and-assurance-management-n7qv25/README.md) | Findings are independent, material, and remediated to closure. | Audit Finding |
 | [Billing and Revenue Management](../../entities/v1-alpha/billing-and-revenue-management-k7mwq2/README.md) | Charges are billed accurately, collected on time, and reconciled to revenue. | Invoice |
 | [Change Management](../../entities/v1-alpha/change-management-hukdeq/README.md) | Change is initiated, sequenced, landed, and its effects verified, rather than merely happening. | Change |
 | [Continuity Management](../../entities/v1-alpha/continuity-management-v3rn6u/README.md) | Delivery continues at acceptable predefined capacity through disruption; response and recovery are prepared, exercised, and validated. | Continuity |
@@ -16,6 +17,7 @@ Outcome (intended contribution, never a guarantee) and business-object focus per
 | [Financial Resource Management](../../entities/v1-alpha/financial-resource-management-cd3c7c/README.md) | Money is accounted for, budgets hold, and financial reporting is accurate and timely. | Financial Resource |
 | [Financial Stewardship](../../entities/v1-alpha/financial-stewardship-c7xtfk/README.md) | The enterprise's financial position is deliberate, funded, and answerable over horizons beyond the operating cycle. | Financial Resource |
 | [Idea Management](../../entities/v1-alpha/idea-management-86dckf/README.md) | Innovations are introduced to the market or brought into use, not merely ideated. | Idea |
+| [Incident and Problem Management](../../entities/v1-alpha/incident-and-problem-management-c2wk96/README.md) | Incidents are resolved fast and problems do not recur. | Incident |
 | [Information Management](../../entities/v1-alpha/information-management-6vjgdh/README.md) | Information is findable, trustworthy, retained correctly, and disposed of deliberately. | Information |
 | [Insight Management](../../entities/v1-alpha/insight-management-ms4n9d/README.md) | Decisions are informed by derived intelligence. | Insight |
 | [Learning and Development](../../entities/v1-alpha/learning-and-development-b8qw5n/README.md) | Workforce skills close the gap to need through governed programs. | Training Program |
