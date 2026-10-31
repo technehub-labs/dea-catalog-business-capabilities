@@ -86,19 +86,19 @@ ecfConformance:
   - kind: coordinate
     domain: FinanceAndAccounting
     stage: Operate
-    identifier: ecf:financeAndAccounting.operate
+    identifier: ecf:financeAccounting.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
     domain: FinanceAndAccounting
     stage: Improve
-    identifier: ecf:financeAndAccounting.improve
+    identifier: ecf:financeAccounting.improve
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   - kind: coordinate
     domain: PartyAndRelationship
     stage: Operate
-    identifier: ecf:partyAndRelationship.operate
+    identifier: ecf:partyRelationship.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:

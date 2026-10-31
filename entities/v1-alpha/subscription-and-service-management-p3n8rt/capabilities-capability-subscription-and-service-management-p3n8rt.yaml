@@ -88,13 +88,13 @@ ecfConformance:
   - kind: coordinate
     domain: PartyAndRelationship
     stage: Operate
-    identifier: ecf:partyAndRelationship.operate
+    identifier: ecf:partyRelationship.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
     domain: ProductAndValue
     stage: Operate
-    identifier: ecf:productAndValue.operate
+    identifier: ecf:productValue.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   - kind: coordinate

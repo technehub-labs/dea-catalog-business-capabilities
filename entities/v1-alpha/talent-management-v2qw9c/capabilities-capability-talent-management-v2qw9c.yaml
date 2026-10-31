@@ -86,19 +86,19 @@ ecfConformance:
   - kind: coordinate
     domain: AgencyAndOrganization
     stage: Operate
-    identifier: ecf:agencyAndOrganization.operate
+    identifier: ecf:agencyOrganization.operate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: primary
   - kind: coordinate
     domain: AgencyAndOrganization
     stage: Activate
-    identifier: ecf:agencyAndOrganization.activate
+    identifier: ecf:agencyOrganization.activate
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   - kind: coordinate
     domain: AgencyAndOrganization
     stage: Retire
-    identifier: ecf:agencyAndOrganization.retire
+    identifier: ecf:agencyOrganization.retire
     schema: https://github.com/technehub-labs/dea-metaframework/schemas/ecf-coordinate.schema.json
     role: secondary
   extensions:
