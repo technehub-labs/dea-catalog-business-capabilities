@@ -14,7 +14,7 @@ Catalog governance established by **CR-DEA-BC-01** (components 17 and 18). Norma
 | `metamodel-pointer.yaml` | Regenerated from the OpenDEAM root model fan-out only; never hand-edited |
 | ECF definition | Owned by `dea-metaframework`; this catalog references, never modifies |
 | Record shape | Owned by `dea-metamodel` (ADR-015 lineage); reconciled here via CR (CR-DEA-BC-01A precedent) |
-| Catalog version + change procedure | Owned by [`docs/VERSIONING.md`](docs/VERSIONING.md) (CR-DEA-BC-05); bump tier (major/minor/patch), three-tier consumer pin scheme, change procedure, tag format `v<N>-<word>.<P>`. The current posture (post-reset v1-alpha baseline, 29 canonical entries, no tag until the first post-reset cut per CR-DEA-BC-36) is recorded in `CHANGELOG.md` and `dependencies.yaml`. |
+| Catalog version + change procedure | Owned by [`docs/VERSIONING.md`](docs/VERSIONING.md) (CR-DEA-BC-05); bump tier (major/minor/patch), three-tier consumer pin scheme, change procedure, tag format `v<N>-<word>.<P>`. The current posture (post-reset v1-alpha baseline, 40 canonical entries, no tag until the first post-reset cut per CR-DEA-BC-36) is recorded in `CHANGELOG.md` and `dependencies.yaml`. |
 
 ## 2. Change Request conventions
 
