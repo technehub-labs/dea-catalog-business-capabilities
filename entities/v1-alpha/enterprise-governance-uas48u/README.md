@@ -77,7 +77,7 @@ Typed relationship assertions (CR-DEA-BC-53: depends-on / realizes / specializes
 
 ## 8. Realization and operational context
 
-Not yet established: the record's `realization` block is unpopulated. Realization links will carry canonical sibling-catalog ids (the `processes` scheme `processes:*` is confirmed; others await U-2). The capability itself is implementation-independent by definition (§2).
+Not yet established: the record's `realization` block is unpopulated. Realization links will carry canonical sibling-catalog ids (the `processes` scheme `processes:*` is confirmed; `information` is now unblockable against `dea:information-asset-*` ids (the information-assets catalog is populated, CR-IA-CAT-04..06)). The capability itself is implementation-independent by definition (§2).
 
 ## 9. Outcomes and traceability
 
